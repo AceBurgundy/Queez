@@ -1,0 +1,358 @@
+/* Common Design Tokens (Shapes, Elevation, Typography, and Dimensions) */
+:root {
+  /* Error Tokens */
+  --md-sys-color-error: #B3261E;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #F9DEDC;
+  --md-sys-color-on-error-container: #410E0B;
+
+  /* Shape Tokens */
+  --md-sys-shape-corner-extra-small: 0.25rem;
+  --md-sys-shape-corner-small: 0.5rem;
+  --md-sys-shape-corner-medium: 0.75rem;
+  --md-sys-shape-corner-large: 1rem;
+  --md-sys-shape-corner-extra-large: 1.75rem;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* Layout Dimensions */
+  --sidebar-width: 16.875rem;
+  --content-pane-width: 68%;
+  --table-of-contents-rail-width: 18%;
+  --toc-rail-width: 18%;
+  --layout-gap: 3rem;
+
+  /* Typography Families */
+  --md-sys-typescale-font-display: 'Google Sans', sans-serif;
+  --md-sys-typescale-font-headline: 'Google Sans', sans-serif;
+  --md-sys-typescale-font-title: 'Google Sans', sans-serif;
+  --md-sys-typescale-font-body: 'Google Sans Text', 'Roboto', sans-serif;
+  --md-sys-typescale-font-label: 'Google Sans Text', 'Roboto', sans-serif;
+  --md-sys-typescale-font-code: 'Google Sans Code Variable', 'Google Sans Code', 'Roboto Mono', monospace;
+
+  /* Transitions */
+  --md-sys-motion-duration-short: 0.15s;
+  --md-sys-motion-duration-medium: 0.25s;
+  --md-sys-motion-duration-long: 0.4s;
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.05, 0.7, 0.1, 1);
+
+  /* Accent aliases mapped to tertiary MD3 accent tokens */
+  --md-sys-color-accent: var(--md-sys-color-tertiary);
+  --md-sys-color-on-accent: var(--md-sys-color-on-tertiary);
+  --md-sys-color-accent-container: var(--md-sys-color-tertiary-container);
+  --md-sys-color-on-accent-container: var(--md-sys-color-on-tertiary-container);
+}
+
+/* ==========================================================================
+   Bright Squircle Action Button
+   - Icon square button (no text label, 1:1 aspect ratio)
+   - Strong squircle border radius (1.125rem / 18px), distinctly not a circle/pill
+   - Resting: primary background & on-primary icon
+   - Hovered: shifts from primary to accent / tertiary background & on-tertiary icon
+   - Tooltip support via [data-tooltip]
+   ========================================================================== */
+.bright-squircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 1.125rem;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: background-color 0.25s cubic-bezier(0.2, 0, 0, 1),
+              color 0.25s cubic-bezier(0.2, 0, 0, 1);
+  position: relative;
+  user-select: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Hover: ZERO button displacement / movement, shifts from primary to accent */
+.bright-squircle:hover:not(:disabled) {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+  box-shadow: none !important;
+}
+
+.bright-squircle:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.bright-squircle:disabled {
+  opacity: 0.38;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none !important;
+}
+
+/* Strictly no box shadows on all buttons (resting, hover, active) */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.button,
+.button,
+.bright-squircle,
+[role="button"] {
+  box-shadow: none !important;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+.button:hover,
+.button:hover,
+.bright-squircle:hover,
+[role="button"]:hover {
+  box-shadow: none !important;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+.button:active,
+.button:active,
+.bright-squircle:active,
+[role="button"]:active {
+  box-shadow: none !important;
+}
+
+.bright-squircle .google-symbols,
+.bright-squircle svg {
+  font-size: 2.125rem;
+  width: 2.125rem;
+  height: 2.125rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+/* ==========================================================================
+   Icon Animations on Hover (Clock full cycle, play slide through, arrow nudge, etc.)
+   ========================================================================== */
+
+/* 1. Clock Arms & Full Cycle Hover Animation (starts at current date time, runs 360 turn back to current time) */
+.clock-hand {
+  transform-origin: 12px 12px;
+}
+
+.clock-hand--hour {
+  transform: rotate(var(--hour-angle, 0deg));
+}
+
+.clock-hand--minute {
+  transform: rotate(var(--minute-angle, 0deg));
+}
+
+.bright-squircle:hover .clock-hand--minute,
+.quiz-action-bar__clock-button:hover .clock-hand--minute,
+.quiz-action-bar__timer-pill:hover .clock-hand--minute {
+  animation: clockMinuteFullCycle 0.65s cubic-bezier(0.4, 0, 0.2, 1) 1 forwards;
+}
+
+.bright-squircle:hover .clock-hand--hour,
+.quiz-action-bar__clock-button:hover .clock-hand--hour,
+.quiz-action-bar__timer-pill:hover .clock-hand--hour {
+  animation: clockHourFullCycle 1.5s cubic-bezier(0.35, 0, 0.2, 1) 1 forwards;
+}
+
+@keyframes clockMinuteFullCycle {
+  0% { transform: rotate(var(--minute-angle, 0deg)); }
+  100% { transform: rotate(calc(var(--minute-angle, 0deg) + 360deg)); }
+}
+
+@keyframes clockHourFullCycle {
+  0% { transform: rotate(var(--hour-angle, 0deg)); }
+  100% { transform: rotate(calc(var(--hour-angle, 0deg) + 360deg)); }
+}
+
+/* 2. Play Icon Animation (Moves right, then incoming icon moves from left to center) */
+.bright-squircle__icon-slot--play {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.squircle-play-svg {
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+  display: block;
+}
+
+.squircle-play-svg--main {
+  position: relative;
+  display: block;
+}
+
+.squircle-play-svg--incoming {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-2.5rem);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 601px) {
+  /* 2-Icon tandem animation: main slides out right, incoming slides in from left to center */
+  .bright-squircle:hover .squircle-play-svg--main,
+  .quiz-action-bar__play-button:hover .squircle-play-svg--main,
+  .quiz-action-bar__play-card:hover .squircle-play-svg--main,
+  .quiz-engine__transition-play-button:hover .squircle-play-svg--main {
+    animation: playIconSlideOutRight 0.42s cubic-bezier(0.3, 0, 0.2, 1) 1 forwards;
+  }
+
+  .bright-squircle:hover .squircle-play-svg--incoming,
+  .quiz-action-bar__play-button:hover .squircle-play-svg--incoming,
+  .quiz-action-bar__play-card:hover .squircle-play-svg--incoming,
+  .quiz-engine__transition-play-button:hover .squircle-play-svg--incoming {
+    animation: playIconSlideInLeft 0.45s cubic-bezier(0.2, 0, 0.1, 1) 0.04s 1 forwards;
+  }
+
+  /* Single-icon fallback: moves right, disappears, reappears from left to center */
+  .bright-squircle:hover .squircle-play-svg:not(.squircle-play-svg--main):not(.squircle-play-svg--incoming),
+  .quiz-action-bar__play-button:hover .squircle-play-svg:not(.squircle-play-svg--main):not(.squircle-play-svg--incoming),
+  .quiz-action-bar__play-card:hover .squircle-play-svg:not(.squircle-play-svg--main):not(.squircle-play-svg--incoming),
+  .quiz-engine__transition-play-button:hover .squircle-play-svg:not(.squircle-play-svg--main):not(.squircle-play-svg--incoming) {
+    animation: playSquircleSlideThrough 0.65s cubic-bezier(0.2, 0, 0.1, 1) 1 forwards;
+  }
+}
+
+@keyframes playIconSlideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(2.5rem);
+    opacity: 0;
+  }
+}
+
+@keyframes playIconSlideInLeft {
+  0% {
+    transform: translateX(-2.5rem);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes playSquircleSlideThrough {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  38% {
+    transform: translateX(3.5rem);
+    opacity: 0;
+  }
+  42% {
+    transform: translateX(-3.5rem);
+    opacity: 0;
+  }
+  52% {
+    transform: translateX(-3.5rem);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 3. Arrow Nudge Animations */
+.bright-squircle:hover .icon--arrow-back {
+  animation: arrowBackNudge 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrowBackNudge {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-4px); }
+}
+
+.bright-squircle:hover .icon--arrow-forward {
+  animation: arrowForwardNudge 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrowForwardNudge {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(4px); }
+}
+
+/* 4. Download Bounce */
+.bright-squircle:hover .icon--download {
+  animation: downloadIconBounce 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes downloadIconBounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(4px); }
+}
+
+/* 5. Retake Spin */
+.bright-squircle:hover .icon--refresh {
+  animation: retakeSpin360 0.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes retakeSpin360 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 6. Checkmark Pop */
+.bright-squircle:hover .icon--check {
+  animation: checkPop 0.4s cubic-bezier(0.2, 0, 0, 1) infinite alternate;
+}
+
+@keyframes checkPop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.25) rotate(-5deg); }
+}
+
+/* Tooltip on Bright Squircle */
+.bright-squircle[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -2.35rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--md-sys-typescale-font-label);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 0.625rem;
+  border-radius: var(--md-sys-shape-corner-small);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 25;
+}
+
+.bright-squircle[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
