@@ -1,0 +1,160 @@
+/* =============================================================================
+   Mini Sidebar Styles (Persistent Material Design 3 Icon Rail)
+   ============================================================================= */
+
+.mini-sidebar {
+  width: 4rem;
+  height: 100%;
+  flex-shrink: 0;
+  background-color: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  box-sizing: border-box;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 100;
+}
+
+/* Nav groups inside sidebar */
+.mini-sidebar__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.875rem;
+  width: 100%;
+}
+
+/* Nav Item Container */
+.mini-sidebar__nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 0.35rem;
+}
+
+/* Standard Icon Buttons (e.g. Light/Dark theme toggle) */
+.mini-sidebar__button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+  position: relative;
+  text-decoration: none;
+  box-shadow: none !important;
+}
+
+.mini-sidebar__button .google-symbols,
+.mini-sidebar__emoji-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.mini-sidebar__button:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  transform: scale(1.08);
+}
+
+.mini-sidebar__button:active {
+  transform: scale(0.95);
+}
+
+.mini-sidebar__button:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+/* Tooltip on hover */
+.mini-sidebar__button[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: calc(100% + 0.625rem);
+  top: 50%;
+  transform: translateY(-50%) scale(0.9);
+  background-color: var(--md-sys-color-inverse-surface);
+  color: var(--md-sys-color-inverse-on-surface);
+  font-family: var(--md-sys-typescale-font-label);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--md-sys-shape-corner-small);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.15s ease;
+  box-shadow: none !important;
+  z-index: 1001;
+}
+
+.mini-sidebar__button[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* App Icon ImageButton custom adjustments inside sidebar */
+.mini-sidebar__app-image-button {
+  border-radius: var(--md-sys-shape-corner-medium, 0.75rem);
+  transition: transform 0.2s ease;
+  box-shadow: none !important;
+}
+
+.mini-sidebar__app-image-button:hover {
+  transform: scale(1.08);
+}
+
+/* Strictly remove rounded colors border from active state */
+.mini-sidebar__app-image-button--active {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Active State for Icon Buttons: keep clean, indicator handled by mini pill */
+.mini-sidebar__button--active {
+  color: var(--md-sys-color-primary);
+  background-color: transparent;
+  box-shadow: none !important;
+}
+
+/* =============================================================================
+   Bottom Mini Pill Active Indicator
+   A small, rounded div located at the bottom of the active nav item.
+   Its background is subtly brighter than the parent mini-sidebar surface.
+   ============================================================================= */
+.mini-sidebar__active-pill {
+  width: 1.125rem;
+  height: 3.5px;
+  border-radius: 9999px;
+  background-color: var(--md-sys-color-surface-container-highest);
+  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 32%, var(--md-sys-color-surface-container-low));
+  opacity: 0;
+  transform: scaleX(0.3);
+  transition: opacity 0.22s cubic-bezier(0.2, 0, 0, 1),
+              transform 0.22s cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+  box-shadow: none !important;
+}
+
+/* When the parent nav item is active, reveal the mini pill */
+.mini-sidebar__nav-item--active .mini-sidebar__active-pill,
+.mini-sidebar__active-pill--visible {
+  opacity: 1;
+  transform: scaleX(1);
+}
