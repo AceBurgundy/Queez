@@ -1,0 +1,34 @@
+/* =============================================================================
+   ImageButton Widget Styles
+   Literally a clickable image (<img>), not a <button> containing an <img>
+   ============================================================================= */
+
+.image-button {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  cursor: pointer;
+  user-select: none;
+  border-radius: var(--md-sys-shape-corner-medium, 0.75rem);
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1),
+              filter 0.2s ease;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  flex-shrink: 0;
+}
+
+/* Hover & Active States */
+.image-button:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
+}
+
+.image-button:active {
+  transform: scale(0.95);
+}
+
+.image-button:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
