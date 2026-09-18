@@ -1,0 +1,460 @@
+/* =============================================================================
+   Quiz Action Bar Styles (Extendable Bright Squircle Controls)
+   ============================================================================= */
+
+/* Container */
+.quiz-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* Banner Variant: Left-aligned, compact margin, fits inside banner hero */
+.quiz-action-bar--banner {
+  justify-content: flex-start;
+  margin: 0.25rem 0 0 0;
+  width: auto;
+}
+
+/* =============================================================================
+   Play Card (Composite: Bright Squircle Button overlapping Text Card Widget)
+   ============================================================================= */
+.quiz-action-bar__play-card {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 1.125rem;
+  transition: transform 0.18s cubic-bezier(0.2, 0, 0, 1);
+  text-decoration: none;
+}
+
+.quiz-action-bar__play-card:active {
+  transform: scale(0.97);
+}
+
+/* Play Button: The button is still the same as before (Untouched Bright Squircle) */
+.quiz-action-bar__play-button {
+  position: relative;
+  z-index: 2;
+  width: 3.75rem;
+  height: 3.75rem;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  border-radius: 1.125rem;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: background-color 0.25s cubic-bezier(0.2, 0, 0, 1),
+              color 0.25s cubic-bezier(0.2, 0, 0, 1);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Hovering the Play Card shifts the Squircle button to accent/tertiary */
+.quiz-action-bar__play-card:hover .quiz-action-bar__play-button {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+  box-shadow: none !important;
+}
+
+/* Icon slot inside squircle */
+.bright-squircle__icon-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Text Widget: Overlapped by the button on the left; Non-bright background */
+.quiz-action-bar__play-text-widget {
+  position: relative;
+  z-index: 1;
+  margin-left: -1.125rem; /* Button overlaps this widget at the right */
+  padding: 0 1.375rem 0 1.875rem; /* Extra left padding to clear overlapping button curvature */
+  height: 3.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--md-sys-color-surface-container-high); /* Non-bright surface card background */
+  border: 1.5px solid var(--md-sys-color-outline-variant);
+  border-radius: 1.125rem;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+.quiz-action-bar__play-card:hover .quiz-action-bar__play-text-widget {
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-color: var(--md-sys-color-outline);
+  box-shadow: none !important;
+}
+
+/* Text Label inside text widget */
+.quiz-action-bar__play-label {
+  font-family: var(--md-sys-typescale-font-label, sans-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--md-sys-color-on-surface); /* Clean, high-contrast readable text */
+  white-space: nowrap;
+  max-width: 24rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =============================================================================
+   Exposed Timer Component (Card Component - separate timer button removed)
+   ============================================================================= */
+.quiz-action-bar__timer-card {
+  display: inline-flex;
+  align-items: center;
+  height: 3.75rem;
+  background-color: var(--md-sys-color-surface-container-high);
+  border: 1.5px solid var(--md-sys-color-outline-variant);
+  border-radius: 1.125rem;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  padding: 0 0.875rem 0 1rem;
+  gap: 1rem;
+  position: relative;
+  transition: border-color 0.2s ease,
+              background-color 0.2s ease;
+}
+
+.quiz-action-bar__timer-card:hover {
+  border-color: var(--md-sys-color-outline);
+  box-shadow: none !important;
+}
+
+.quiz-action-bar__timer-card:focus-within {
+  border-color: var(--md-sys-color-primary);
+  outline: 2px solid var(--md-sys-color-primary);
+  box-shadow: none !important;
+}
+
+/* Clock icon trigger inside the timer card */
+.quiz-action-bar__timer-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface-variant);
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.quiz-action-bar__timer-icon-button:hover,
+.quiz-action-bar__timer-card:hover .quiz-action-bar__timer-icon-button {
+  color: var(--md-sys-color-primary);
+}
+
+/* Time Input inside timer card */
+.quiz-action-bar__time-input {
+  width: 5.5rem;
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--md-sys-typescale-font-label, monospace);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--md-sys-color-on-surface);
+  text-align: center;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  padding: 0;
+}
+
+/* Clear / Reset Button */
+.quiz-action-bar__clear-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: color 0.2s ease, background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.quiz-action-bar__clear-button .google-symbols {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.quiz-action-bar__clear-button:hover {
+  color: var(--md-sys-color-error);
+  background-color: rgba(255, 0, 0, 0.08);
+}
+
+/* =============================================================================
+   Mobile Responsiveness (< 601px)
+   ============================================================================= */
+@media (max-width: 600px) {
+  .quiz-action-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 1.25rem 0 1.75rem 0;
+  }
+
+  .quiz-action-bar--banner {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* Play Card extends on mobile */
+  .quiz-action-bar__play-card {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .quiz-action-bar__play-text-widget {
+    flex: 1;
+    min-width: 0;
+    padding-right: 1rem;
+    padding-left: 1.625rem;
+  }
+
+  .quiz-action-bar__play-label {
+    font-size: 1.0625rem;
+    max-width: 100%;
+  }
+
+  /* Timer Card on mobile */
+  .quiz-action-bar__timer-card {
+    padding: 0 0.5rem 0 0.75rem;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .quiz-action-bar__time-input {
+    width: 4.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* =============================================================================
+   Material Design 3 / Flutter-inspired TimePicker Dialog Modal
+   ============================================================================= */
+
+.time-picker-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.time-picker-scrim--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.time-picker-dialog {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  border-radius: 1.75rem;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.5rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  transform: translateY(20px) scale(0.97);
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+  box-sizing: border-box;
+}
+
+.time-picker-scrim--visible .time-picker-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.time-picker-dialog__header {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.time-picker-dialog__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.875rem;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  flex-shrink: 0;
+}
+
+.time-picker-dialog__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.2;
+}
+
+.time-picker-dialog__subtitle {
+  margin: 0.15rem 0 0 0;
+  font-size: 0.8125rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.time-picker-dialog__time-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin: 1.25rem 0;
+}
+
+.time-picker-dialog__input-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.time-picker-dialog__label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.time-picker-dialog__input-box {
+  width: 5rem;
+  height: 4.5rem;
+  background-color: var(--md-sys-color-surface-container-highest);
+  border: 2px solid transparent;
+  border-radius: 0.875rem;
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--md-sys-color-primary);
+  outline: none;
+  font-family: var(--md-sys-typescale-font-label);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+}
+
+.time-picker-dialog__input-box::-webkit-inner-spin-button,
+.time-picker-dialog__input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.time-picker-dialog__input-box:focus {
+  border-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-container);
+}
+
+.time-picker-dialog__colon {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--md-sys-color-on-surface);
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+.time-picker-dialog__presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.time-picker-dialog__chip {
+  background-color: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.time-picker-dialog__chip:hover {
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+}
+
+.time-picker-dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.time-picker-dialog__button {
+  font-family: var(--md-sys-typescale-font-label);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.time-picker-dialog__button--cancel {
+  background: transparent;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.time-picker-dialog__button--cancel:hover {
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface);
+}
+
+.time-picker-dialog__button--confirm {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.time-picker-dialog__button--confirm:hover {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
