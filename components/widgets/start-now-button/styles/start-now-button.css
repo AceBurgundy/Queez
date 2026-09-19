@@ -1,0 +1,149 @@
+/* =============================================================================
+   Start Now Button Styles (Dashboard Hero Banner Action Card)
+   Strictly no box shadows. Cohesive with Bright Squircle design language.
+   ============================================================================= */
+
+   .start-now-card {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 1.125rem;
+    transition: transform 0.18s cubic-bezier(0.2, 0, 0, 1);
+    text-decoration: none;
+    box-shadow: none !important;
+    margin-top: 0.5rem;
+    outline: none;
+  }
+  
+  .start-now-card:focus-visible {
+    outline: 2px solid var(--md-sys-color-primary);
+    outline-offset: 4px;
+  }
+  
+  /* Squircle Button (Left slot) */
+  .start-now-card__button {
+    position: relative;
+    z-index: 2;
+    width: 3.75rem;
+    height: 3.75rem;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    border-radius: 1.125rem;
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+    border: none;
+    cursor: pointer;
+    box-shadow: none !important;
+    transition: background-color 0.25s cubic-bezier(0.2, 0, 0, 1),
+                color 0.25s cubic-bezier(0.2, 0, 0, 1);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  
+  .start-now-card:hover .start-now-card__button {
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+    box-shadow: none !important;
+  }
+  
+  /* Bind global slide-through animations to card hover */
+  @media (min-width: 601px) {
+    .start-now-card:hover .squircle-play-svg--main {
+      animation: playIconSlideOutRight 0.42s cubic-bezier(0.3, 0, 0.2, 1) 1 forwards;
+    }
+  
+    .start-now-card:hover .squircle-play-svg--incoming {
+      animation: playIconSlideInLeft 0.45s cubic-bezier(0.2, 0, 0.1, 1) 0.04s 1 forwards;
+    }
+  }
+  
+  /* Text Widget (Overlapped at the right, non-bright surface background) */
+  .start-now-card__text-widget {
+    position: relative;
+    z-index: 1;
+    margin-left: -1.125rem;
+    padding: 0 1.5rem 0 1.875rem;
+    height: 3.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background-color: var(--md-sys-color-surface-container-high);
+    border: 1.5px solid var(--md-sys-color-outline-variant);
+    border-radius: 1.125rem;
+    box-shadow: none !important;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+  }
+  
+  .start-now-card:hover .start-now-card__text-widget {
+    background-color: var(--md-sys-color-surface-container-highest);
+    border-color: var(--md-sys-color-outline);
+    box-shadow: none !important;
+  }
+  
+  /* Label text */
+  .start-now-card__label {
+    font-family: var(--md-sys-typescale-font-label, sans-serif);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--md-sys-color-on-surface);
+    white-space: nowrap;
+  }
+  
+  /* Trailing arrow */
+  .start-now-card__arrow {
+    font-size: 1.35rem;
+    color: var(--md-sys-color-primary);
+    transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1);
+  }
+  
+  .start-now-card:hover .start-now-card__arrow {
+    transform: translateX(4px);
+    color: var(--md-sys-color-tertiary);
+  }
+  
+  /* Tooltip on hover */
+  .start-now-card[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 0.625rem);
+    transform: translateX(-50%) scale(0.9);
+    background-color: var(--md-sys-color-inverse-surface);
+    color: var(--md-sys-color-inverse-on-surface);
+    font-family: var(--md-sys-typescale-font-label);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.3rem 0.65rem;
+    border-radius: var(--md-sys-shape-corner-small);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.15s ease;
+    z-index: 1000;
+    box-shadow: none !important;
+  }
+  
+  .start-now-card[data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  
+  @media (max-width: 600px) {
+    .start-now-card {
+      width: 100%;
+    }
+  
+    .start-now-card__text-widget {
+      flex: 1;
+      justify-content: space-between;
+    }
+  }
