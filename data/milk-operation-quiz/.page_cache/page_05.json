@@ -1,0 +1,150 @@
+{
+  "page": 5,
+  "title": "History of Dairy Farming (1500 - 1900)",
+  "text": "1500\n> Cheddar and parmesan cheese was created.\n\n1700-1800\n> Gouda and camembert cheese was created.\n\n1900\n> Modern dairy farming began.\n> Louis Pasture originated the process of pasteurization.\n\nDairysquare - Dairy Farming Module\nPage 5",
+  "images": [
+    {
+      "id": "p05_img1",
+      "bbox": [
+        88,
+        423,
+        209,
+        584
+      ],
+      "label": "Cheddar cheese",
+      "description": "Block and pieces of cheddar cheese displayed on a wooden board."
+    },
+    {
+      "id": "p05_img2",
+      "bbox": [
+        88,
+        624,
+        209,
+        796
+      ],
+      "label": "Parmesan cheese",
+      "description": "Whole rounded wheels of parmesan cheese stacked together."
+    },
+    {
+      "id": "p05_img3",
+      "bbox": [
+        263,
+        417,
+        384,
+        592
+      ],
+      "label": "Gouda cheese",
+      "description": "Wheel of yellow Gouda cheese with a cut wedge and a knife."
+    },
+    {
+      "id": "p05_img4",
+      "bbox": [
+        262,
+        638,
+        385,
+        799
+      ],
+      "label": "Camembert cheese",
+      "description": "Wheel of soft white-rinded Camembert cheese with wedges sliced out."
+    },
+    {
+      "id": "p05_img5",
+      "bbox": [
+        478,
+        285,
+        650,
+        915
+      ],
+      "label": "Louis Pasteur in laboratory",
+      "description": "Illustration of Louis Pasteur examining glassware and working with scientific equipment in his laboratory."
+    }
+  ],
+  "facts": [
+    "Around 1500, cheddar and parmesan cheese were created.",
+    "During the period 1700-1800, gouda and camembert cheese were created.",
+    "By 1900, modern dairy farming began.",
+    "Louis Pasture (Pasteur) originated the process of pasteurization (associated with the 1900 timeline entry).",
+    "This document page is part of the Dairysquare Dairy Farming Module, Page 5."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "According to the historical timeline, which cheeses were created around the year 1500?",
+      "options": {
+        "A": "Gouda and Camembert",
+        "B": "Cheddar and Parmesan",
+        "C": "Brie and Mozzarella",
+        "D": "Feta and Roquefort"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Between 1700 and 1800, which two types of cheese were created?",
+      "options": {
+        "A": "Cheddar and Parmesan",
+        "B": "Ricotta and Provolone",
+        "C": "Gouda and Camembert",
+        "D": "Swiss and Blue cheese"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "What significant development in the dairy industry began around 1900 according to the module?",
+      "options": {
+        "A": "Modern dairy farming began",
+        "B": "First domestication of cattle",
+        "C": "Invention of commercial cheese rind wax",
+        "D": "Introduction of artificial cow breeding"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Who is credited on this timeline with originating the process of pasteurization?",
+      "options": {
+        "A": "Alexander Fleming",
+        "B": "Gregor Mendel",
+        "C": "Louis Pasture (Pasteur)",
+        "D": "Robert Koch"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Is the following statement true or false? 'Gouda and Camembert cheese were created around the year 1500.'",
+      "options": {
+        "A": "True, both originated in 1500 alongside Cheddar.",
+        "B": "False, Cheddar and Parmesan were created around 1500, while Gouda and Camembert were created in 1700-1800.",
+        "C": "False, they were created in 1900 when modern dairy farming began.",
+        "D": "True, all major cheeses shown were created in the 1500s."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which cheese shown in the diagram under the 1700-1800 entry is characterized by a soft white bloomy rind and creamy interior?",
+      "options": {
+        "A": "Parmesan",
+        "B": "Cheddar",
+        "C": "Camembert",
+        "D": "Gouda"
+      },
+      "answer": "C",
+      "image_id": "p05_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "The illustration labeled under the year 1900 depicts which scientist working in a laboratory?",
+      "options": {
+        "A": "Louis Pasture (Pasteur)",
+        "B": "Charles Darwin",
+        "C": "Edward Jenner",
+        "D": "Joseph Lister"
+      },
+      "answer": "A",
+      "image_id": "p05_img5"
+    }
+  ]
+}
