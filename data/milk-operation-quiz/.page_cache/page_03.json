@@ -1,0 +1,154 @@
+{
+  "page": 3,
+  "title": "DAIRY FARMING",
+  "text": "DAIRY FARMING\n\nObjectives:\n1. To learn what is dairy farming and the history of dairying.\n2. To know the economic importance of dairying.\n\nDairy Farming or Dairying:\n- is a branch of agriculture that encompasses the breeding, raising and utilization of dairy animals for the production of milk and various dairy products processed from it.\n\nExamples of dairy animals are the following:\n[Photo of black and white dairy cow: Holstein Friesian]\n[Photo of white dairy goat: Saanen goat]\n[Photo of dairy sheep: East Friesian sheep]\n[Photo of black dairy buffalo: Murrah buffalo]\n\nHolstein Friesian\nSaanen goat\nEast Friesian sheep\nMurrah buffalo\n\nDairysquare \u2013 Dairy Farming Module\nPage 3",
+  "images": [
+    {
+      "id": "p03_img1",
+      "bbox": [
+        346,
+        67,
+        566,
+        448
+      ],
+      "label": "Holstein Friesian",
+      "description": "A black-and-white Holstein Friesian dairy cow standing in a grassy pasture."
+    },
+    {
+      "id": "p03_img2",
+      "bbox": [
+        344,
+        535,
+        568,
+        915
+      ],
+      "label": "Saanen goat",
+      "description": "A white Saanen dairy goat standing in a grassy field."
+    },
+    {
+      "id": "p03_img3",
+      "bbox": [
+        614,
+        67,
+        810,
+        451
+      ],
+      "label": "East Friesian sheep",
+      "description": "East Friesian dairy sheep standing in a green field."
+    },
+    {
+      "id": "p03_img4",
+      "bbox": [
+        610,
+        524,
+        810,
+        919
+      ],
+      "label": "Murrah buffalo",
+      "description": "A dark Murrah dairy buffalo standing on display."
+    }
+  ],
+  "facts": [
+    "The learning objectives of this section are to learn what dairy farming is and the history of dairying, and to know the economic importance of dairying.",
+    "Dairy farming (or dairying) is defined as a branch of agriculture that encompasses the breeding, raising, and utilization of dairy animals for the production of milk and various dairy products processed from it.",
+    "The Holstein Friesian is an example of a dairy animal (specifically dairy cattle).",
+    "The Saanen goat is an example of a dairy animal (dairy goat breed).",
+    "The East Friesian sheep is an example of a dairy animal (dairy sheep breed).",
+    "The Murrah buffalo is an example of a dairy animal (dairy buffalo breed).",
+    "The source module is titled 'Dairysquare \u2013 Dairy Farming Module' and this content is on Page 3."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What branch of agriculture encompasses the breeding, raising, and utilization of dairy animals for the production of milk and various dairy products processed from it?",
+      "options": {
+        "A": "Dairy farming or dairying",
+        "B": "Agronomy",
+        "C": "Horticulture",
+        "D": "Silviculture"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is explicitly listed as an objective on this page?",
+      "options": {
+        "A": "To know the economic importance of dairying",
+        "B": "To construct high-capacity automated milking parlors",
+        "C": "To diagnose acute viral diseases in cattle",
+        "D": "To pasteurize raw milk at commercial scales"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which breed of dairy goat is featured on Page 3 as an example of a dairy animal?",
+      "options": {
+        "A": "Boer goat",
+        "B": "Saanen goat",
+        "C": "Nubian goat",
+        "D": "Alpine goat"
+      },
+      "answer": "B",
+      "image_id": "p03_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which breed of buffalo is illustrated on this page as a dairy animal?",
+      "options": {
+        "A": "Murrah buffalo",
+        "B": "Surti buffalo",
+        "C": "Nili-Ravi buffalo",
+        "D": "Jafarabadi buffalo"
+      },
+      "answer": "A",
+      "image_id": "p03_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which dairy sheep breed is shown as an example of a dairy animal?",
+      "options": {
+        "A": "East Friesian sheep",
+        "B": "Merino sheep",
+        "C": "Dorper sheep",
+        "D": "Suffolk sheep"
+      },
+      "answer": "A",
+      "image_id": "p03_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which popular dairy cattle breed with distinctive black-and-white markings is pictured in image p03_img1?",
+      "options": {
+        "A": "Jersey",
+        "B": "Holstein Friesian",
+        "C": "Guernsey",
+        "D": "Brown Swiss"
+      },
+      "answer": "B",
+      "image_id": "p03_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the definition and scope of dairy farming is TRUE according to the module?",
+      "options": {
+        "A": "Dairy farming includes the breeding, raising, and utilization of dairy animals for milk and processed dairy products.",
+        "B": "Dairy farming exclusively involves cattle and strictly excludes sheep, goats, or buffaloes.",
+        "C": "Dairying refers only to the commercial bottling of retail milk, not the breeding or raising of animals.",
+        "D": "Dairy farming is defined purely as a branch of aquaculture focused on marine mammals."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to Page 3, dairy farming encompasses which three main activities regarding dairy animals?",
+      "options": {
+        "A": "Breeding, raising, and utilization",
+        "B": "Hunting, capturing, and domestication",
+        "C": "Slaughtering, butchering, and freezing",
+        "D": "Purchasing, reselling, and exporting"
+      },
+      "answer": "A"
+    }
+  ]
+}
