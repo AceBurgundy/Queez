@@ -1,0 +1,134 @@
+{
+  "page": 4,
+  "title": "History of Dairy Farming:",
+  "text": "History of Dairy Farming:\n\nYEAR | EVENTS\n9000 | \u2022 A person who drinks milk will experience extreme physical reaction like bloating, painful cramps, diarrhea, nausea and vomiting.\n\u2022 First dairy animal domesticated was the sheep followed by the goats and cattle in the next thousand years.\n\u2022 Milk from donkeys were once used as replacement for mother's milk and was given to sick or orphaned infants.\n\u2022 Other animals raised for milk are water buffaloes, reindeers, yak, camel and horse.\n\n8000 | \u2022 Started the domestication of Aurochs. It is believed that all modern cattle originated from wild Aurochs.\n[Illustration of an early human herding horned Aurochs / cattle] [Illustration of a wild Auroch]\n\n7000 | \u2022 In the early years of dairying, cheese, yogurt, and other fermented products were the only milk people ever consumed.\n\u2022 People in the Europe, Middle East and Africa started to getting used in drinking milk. Many cultures worldwide consume fermented milk such as kefir and cheese.\n\u2022 Genetic mutation appeared that enabled the body to continue producing lactase into adulthood.\n\u2022 Despite the benefits from drinking milk, close contact between people and animals causes many new diseases transmitted to human beings.\n\u2022 Over time, populations developed tolerance and the benefits of dairying outweighed the risks.\n\nDairysquare - Dairy Farming Module\nPage 4",
+  "images": [
+    {
+      "id": "p04_img1",
+      "bbox": [
+        390,
+        282,
+        560,
+        634
+      ],
+      "label": "Early human herding domesticated Aurochs",
+      "description": "Historical illustration depicting an early human figure herding large, horned wild oxen (Aurochs)."
+    },
+    {
+      "id": "p04_img2",
+      "bbox": [
+        390,
+        633,
+        564,
+        935
+      ],
+      "label": "Wild Auroch illustration",
+      "description": "Engraving/illustration showing a solitary wild Auroch standing in a natural landscape."
+    }
+  ],
+  "facts": [
+    "Around 9000 BC, drinking fresh milk caused extreme physical reactions in humans, such as bloating, painful cramps, diarrhea, nausea, and vomiting.",
+    "The first dairy animal domesticated was the sheep, followed by goats and cattle over the next thousand years.",
+    "Milk from donkeys was once used as a replacement for mother's milk and given to sick or orphaned infants.",
+    "Other animals historically raised for milk include water buffaloes, reindeers, yak, camel, and horse.",
+    "Around 8000 BC, the domestication of Aurochs began.",
+    "It is believed that all modern cattle originated from wild Aurochs.",
+    "Around 7000 BC, in the early years of dairying, cheese, yogurt, and other fermented products were the only milk forms people ever consumed.",
+    "Around 7000 BC, people in Europe, the Middle East, and Africa started getting used to drinking milk.",
+    "Fermented milk products consumed by many cultures worldwide include kefir and cheese.",
+    "Around 7000 BC, a genetic mutation appeared that enabled the human body to continue producing lactase into adulthood.",
+    "Close contact between humans and dairy animals caused many new zoonotic diseases to be transmitted to human beings.",
+    "Over time, human populations developed tolerance to dairying and milk consumption, and the benefits outweighed the risks."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "According to the historical timeline around 9000 BC, which animal was the first dairy animal to be domesticated?",
+      "options": {
+        "A": "Sheep",
+        "B": "Goats",
+        "C": "Cattle",
+        "D": "Water buffaloes"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Milk from which animal was historically used as a replacement for mother's milk and provided to sick or orphaned infants?",
+      "options": {
+        "A": "Reindeer",
+        "B": "Donkey",
+        "C": "Camel",
+        "D": "Yak"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What wild ancestor, whose domestication started around 8000 BC, is believed to be the origin of all modern cattle?",
+      "options": {
+        "A": "Bison",
+        "B": "Aurochs",
+        "C": "Water buffalo",
+        "D": "Yak"
+      },
+      "answer": "B",
+      "image_id": "p04_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the early years of dairying (around 7000 BC), what form of milk products were the only ones people consumed?",
+      "options": {
+        "A": "Fresh unpasteurized whole milk",
+        "B": "Fermented products like cheese and yogurt",
+        "C": "Powdered and dried milk curds",
+        "D": "Boiled and skimmed liquid milk"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What biological event around 7000 BC allowed human bodies to tolerate and digest fresh milk into adulthood?",
+      "options": {
+        "A": "A genetic mutation enabling continued lactase production",
+        "B": "An adaptation allowing the stomach to bypass galactose digestion",
+        "C": "The complete elimination of gut bacteria",
+        "D": "A hormonal change induced by high-protein diets"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement accurately describes human milk consumption and health around 9000 BC?",
+      "options": {
+        "A": "Adults could easily digest raw cow milk without any adverse digestive issues.",
+        "B": "Drinking milk caused severe reactions including bloating, cramps, diarrhea, nausea, and vomiting.",
+        "C": "Fermented kefir was the only dairy product known to cause stomach illness.",
+        "D": "People were completely immune to all animal-borne diseases transmitted through milk."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Following the domestication of sheep around 9000 BC, which dairy animals were domesticated in the next thousand years?",
+      "options": {
+        "A": "Goats and cattle",
+        "B": "Camels and donkeys",
+        "C": "Reindeers and horses",
+        "D": "Yaks and water buffaloes"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Around 7000 BC, populations in which regions began getting used to drinking milk?",
+      "options": {
+        "A": "Europe, Middle East, and Africa",
+        "B": "East Asia, Australia, and North America",
+        "C": "South America, Scandinavia, and India",
+        "D": "Southeast Asia, Siberia, and Mesoamerica"
+      },
+      "answer": "A"
+    }
+  ]
+}
