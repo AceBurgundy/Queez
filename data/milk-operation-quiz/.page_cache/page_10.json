@@ -1,0 +1,153 @@
+{
+  "page": 10,
+  "title": "Dairy Cattle Breeds: Red & White Holstein, Gyr/Gir, and Red Sindhi",
+  "text": "RED & WHITE HOLSTEIN\nOrigin: Netherlands\nMarkings: Red & white\nDesirable Characteristics:\n\u2713 Strong immune system\n\u2713 Resistant to heat\n\u2713 High quality udder and strong legs\nPerformance:\n\u2713 680-770kg\n\nGYR/GIR\nOrigin: Gujarat, India\nMarkings: mottled color red, yellow and white\nDesirable Characteristics:\n\u2713 Heat resistant\n\u2713 Tolerant to tropical diseases\n\u2713 Udder conformation\nPerformance:\n\u2713 385kg\n\u2713 1590kg milk/year\n\nRED SINDHI\nOrigin: Pakistan & India\nMarkings: Reddish brown to deep red\nDesirable Characteristics:\n\u2713 Heat tolerance\n\u2713 Tick resistance\n\u2713 Disease resistance\nPerformance:\n\u2713 350kg\n\u2713 3,500kg milk/year\n\nDairysquare - Dairy Farming Module\nPage 10",
+  "images": [
+    {
+      "id": "p10_img1",
+      "bbox": [
+        50,
+        68,
+        256,
+        444
+      ],
+      "label": "RED & WHITE HOLSTEIN",
+      "description": "A Red & White Holstein dairy cow standing in a pasture field."
+    },
+    {
+      "id": "p10_img2",
+      "bbox": [
+        308,
+        68,
+        502,
+        452
+      ],
+      "label": "GYR/GIR",
+      "description": "A Gyr (Gir) zebu dairy cow with distinctive hump and drooping ears, exhibiting mottled red, yellow, and white coloring."
+    },
+    {
+      "id": "p10_img3",
+      "bbox": [
+        559,
+        67,
+        764,
+        450
+      ],
+      "label": "RED SINDHI",
+      "description": "A Red Sindhi dairy cow with a prominent hump and reddish-brown coat standing outdoors."
+    }
+  ],
+  "facts": [
+    "Red & White Holstein originates from the Netherlands.",
+    "Red & White Holstein markings are red and white.",
+    "Desirable characteristics of Red & White Holstein include a strong immune system, resistance to heat, high quality udder, and strong legs.",
+    "Performance weight of Red & White Holstein is 680-770 kg.",
+    "Gyr/Gir originates from Gujarat, India.",
+    "Gyr/Gir markings are mottled color red, yellow, and white.",
+    "Desirable characteristics of Gyr/Gir include being heat resistant, tolerant to tropical diseases, and having desirable udder conformation.",
+    "Performance weight of Gyr/Gir is 385 kg.",
+    "Annual milk production of Gyr/Gir is 1,590 kg milk/year.",
+    "Red Sindhi originates from Pakistan & India.",
+    "Red Sindhi markings range from reddish brown to deep red.",
+    "Desirable characteristics of Red Sindhi include heat tolerance, tick resistance, and disease resistance.",
+    "Performance weight of Red Sindhi is 350 kg.",
+    "Annual milk production of Red Sindhi is 3,500 kg milk/year."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the country of origin of the Red & White Holstein breed?",
+      "options": {
+        "A": "Netherlands",
+        "B": "Switzerland",
+        "C": "India",
+        "D": "Pakistan"
+      },
+      "answer": "A",
+      "image_id": "p10_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the typical body weight range for a Red & White Holstein according to the module?",
+      "options": {
+        "A": "350-385 kg",
+        "B": "500-600 kg",
+        "C": "680-770 kg",
+        "D": "800-900 kg"
+      },
+      "answer": "C",
+      "image_id": "p10_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which breed originates specifically from Gujarat, India and has markings described as 'mottled color red, yellow and white'?",
+      "options": {
+        "A": "Red Sindhi",
+        "B": "Gyr/Gir",
+        "C": "Sahiwal",
+        "D": "Red & White Holstein"
+      },
+      "answer": "B",
+      "image_id": "p10_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the annual milk production recorded for the Gyr/Gir breed?",
+      "options": {
+        "A": "1,200 kg milk/year",
+        "B": "1,590 kg milk/year",
+        "C": "2,500 kg milk/year",
+        "D": "3,500 kg milk/year"
+      },
+      "answer": "B",
+      "image_id": "p10_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the annual milk yield and body weight of the Red Sindhi breed?",
+      "options": {
+        "A": "3,500 kg milk/year and 350 kg",
+        "B": "1,590 kg milk/year and 385 kg",
+        "C": "3,500 kg milk/year and 680-770 kg",
+        "D": "1,590 kg milk/year and 350 kg"
+      },
+      "answer": "A",
+      "image_id": "p10_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Tick resistance is specifically highlighted as a desirable characteristic of which breed?",
+      "options": {
+        "A": "Red & White Holstein",
+        "B": "Gyr/Gir",
+        "C": "Red Sindhi",
+        "D": "Jersey"
+      },
+      "answer": "C",
+      "image_id": "p10_img3"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the origins of these cattle breeds is TRUE?",
+      "options": {
+        "A": "Red Sindhi originates from Pakistan & India, while Gyr/Gir originates from Gujarat, India.",
+        "B": "Red & White Holstein originates from Germany and Pakistan.",
+        "C": "Gyr/Gir originates exclusively from the Netherlands.",
+        "D": "Red Sindhi originates exclusively from Gujarat, India."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Which breed shown on this page is characterized by 'Reddish brown to deep red' markings?",
+      "options": {
+        "A": "Red & White Holstein",
+        "B": "Red Sindhi",
+        "C": "Gyr/Gir",
+        "D": "Brown Swiss"
+      },
+      "answer": "B",
+      "image_id": "p10_img3"
+    }
+  ]
+}
