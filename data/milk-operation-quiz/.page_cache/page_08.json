@@ -1,0 +1,168 @@
+{
+  "page": 8,
+  "title": "Different Breeds of Dairy Cattle:",
+  "text": "Different Breeds of Dairy Cattle:\n\nBREEDS | CHARACTERISTICS\n\nGUERNSEY\nOrigin: Isle of Guernsey, France\nMarkings: Yellow to reddish-brown & white\nDesirable Characteristics:\n\u2713 Very efficient converters\n\u2713 Adaptable to different management systems\n\u2713 Heat tolerance\n\u2713 Docile temperament\n\u2713 Calving ease\nPerformance:\n\u2713 500-700kg\n\u2713 6000kg/lactation (305days)\n\u2713 Fat: 4.7%\n\u2713 Protein: 3.4%\n\nDAIRY SHORTHORN\nOrigin: Great Britain\nPurpose: Milk & beef\nMarkings: White & roan\nDesirable Characteristics:\n\u2713 High protein-to-fat ratio\n\u2713 Quiet temperament\n\u2713 Efficient converter\n\u2713 Strong legs and improved longevity\nPerformance:\n\u2713 640-680kg\n\u2713 7000kg/lactation\n\u2713 Fat: 4.0%\n\u2713 Protein: 3.5%\n\nARYSHIRE\nOrigin: County of Ayr, Scotland\nMarkings: Red & white, brindle & roan (rare)\nDesirable Characteristics:\n\u2713 Efficient converter\n\u2713 Strong legs & excellent udder conformation\n\u2713 Vigorous calves\n\u2713 Free from genetic disease\nPerformance:\n\u2713 450-600kg\n\u2713 7700kg/lactation\n\u2713 Fat: 3.9%\n\u2713 Protein: 3.3%\n\nDairysquare - Dairy Farming Module Page 8",
+  "images": [
+    {
+      "id": "p08_img1",
+      "bbox": [
+        128,
+        67,
+        329,
+        455
+      ],
+      "label": "Guernsey cow",
+      "description": "A side view photograph of a Guernsey dairy cow with yellow to reddish-brown and white coat markings standing in a green pasture."
+    },
+    {
+      "id": "p08_img2",
+      "bbox": [
+        370,
+        68,
+        584,
+        455
+      ],
+      "label": "Dairy Shorthorn cow",
+      "description": "A side view photograph of a Dairy Shorthorn cow with white and roan markings standing in a pasture."
+    },
+    {
+      "id": "p08_img3",
+      "bbox": [
+        647,
+        69,
+        852,
+        447
+      ],
+      "label": "Ayrshire cow (labeled Aryshire)",
+      "description": "A side view photograph of an Ayrshire dairy cow with red and white markings standing in front of hills."
+    }
+  ],
+  "facts": [
+    "The Guernsey breed originates from Isle of Guernsey, France.",
+    "Guernsey cattle markings are yellow to reddish-brown and white.",
+    "Desirable characteristics of Guernsey include: very efficient converters, adaptable to different management systems, heat tolerance, docile temperament, and calving ease.",
+    "Performance specifications of Guernsey: weight is 500-700 kg, milk yield is 6000 kg/lactation (305 days), fat content is 4.7%, and protein content is 3.4%.",
+    "Dairy Shorthorn originates from Great Britain.",
+    "Dairy Shorthorn is dual-purpose: used for both milk and beef.",
+    "Dairy Shorthorn markings are white and roan.",
+    "Desirable characteristics of Dairy Shorthorn include: high protein-to-fat ratio, quiet temperament, efficient converter, strong legs, and improved longevity.",
+    "Performance specifications of Dairy Shorthorn: weight is 640-680 kg, milk yield is 7000 kg/lactation, fat content is 4.0%, and protein content is 3.5%.",
+    "Ayrshire (spelled ARYSHIRE on page) originates from County of Ayr, Scotland.",
+    "Ayrshire markings are red & white, with brindle & roan being rare.",
+    "Desirable characteristics of Ayrshire include: efficient converter, strong legs & excellent udder conformation, vigorous calves, and free from genetic disease.",
+    "Performance specifications of Ayrshire: weight is 450-600 kg, milk yield is 7700 kg/lactation, fat content is 3.9%, and protein content is 3.3%."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the geographic origin of the Guernsey dairy cattle breed according to the chart?",
+      "options": {
+        "A": "County of Ayr, Scotland",
+        "B": "Isle of Guernsey, France",
+        "C": "Great Britain",
+        "D": "Friesland, Netherlands"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which dairy cattle breed is specifically noted as dual-purpose for both milk and beef?",
+      "options": {
+        "A": "Guernsey",
+        "B": "Ayrshire",
+        "C": "Dairy Shorthorn",
+        "D": "Jersey"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which breed on this page produces milk with the highest milk fat percentage at 4.7%?",
+      "options": {
+        "A": "Dairy Shorthorn",
+        "B": "Guernsey",
+        "C": "Ayrshire",
+        "D": "Holstein"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the performance metrics, which breed produces the highest milk yield at 7700 kg/lactation?",
+      "options": {
+        "A": "Ayrshire",
+        "B": "Guernsey",
+        "C": "Dairy Shorthorn",
+        "D": "Brown Swiss"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the coat markings of the Ayrshire breed is TRUE according to the text?",
+      "options": {
+        "A": "Ayrshire markings are yellow to reddish-brown & white.",
+        "B": "Ayrshire cattle only have pure black & white patterns.",
+        "C": "Ayrshire markings are red & white, with brindle & roan being rare.",
+        "D": "Dairy Shorthorn cattle are exclusively solid red with no white or roan markings."
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the typical body weight range for a Dairy Shorthorn as stated on the page?",
+      "options": {
+        "A": "450-600kg",
+        "B": "500-700kg",
+        "C": "640-680kg",
+        "D": "700-850kg"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which desirable trait is specifically listed under the Ayrshire breed?",
+      "options": {
+        "A": "Heat tolerance",
+        "B": "Calving ease",
+        "C": "Free from genetic disease",
+        "D": "High protein-to-fat ratio"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the performance statistics for Guernsey cattle, what lactation duration is specified for the 6000 kg yield?",
+      "options": {
+        "A": "270 days",
+        "B": "300 days",
+        "C": "305 days",
+        "D": "365 days"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Refer to the image labeled p08_img2 showing a cow with white & roan coat markings used for both milk and beef. Which breed is this?",
+      "options": {
+        "A": "Guernsey",
+        "B": "Dairy Shorthorn",
+        "C": "Ayrshire",
+        "D": "Hereford"
+      },
+      "answer": "B",
+      "image_id": "p08_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the milk protein content of the Dairy Shorthorn breed?",
+      "options": {
+        "A": "3.3%",
+        "B": "3.4%",
+        "C": "3.5%",
+        "D": "4.0%"
+      },
+      "answer": "C"
+    }
+  ]
+}
