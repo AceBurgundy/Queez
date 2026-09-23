@@ -1,0 +1,153 @@
+{
+  "page": 9,
+  "title": "Dairy Cattle Breeds: Jersey, Brown Swiss, and Holstein Friesian",
+  "text": "JERSEY\nOrigin: Jersey Island, France\nMarkings: light brown color\nDesirable Characteristics:\n\u2713 Breeding profoundness\n\u2713 Longevity\n\u2713 Milk best used for cheese\n\u2713 Less susceptible to lameness\nPerformance:\n\u2713 400-450kg (smallest)\n\u2713 9,000kg milk/year\n\u2713 Fat: 4.8%\n\u2713 Protein: 3.7%\n\nBROWN SWISS\nOrigin: Switzerland\nPurpose: Milk and beef\nMarkings: Brown, light gray\nDesirable Characteristics:\n\u2713 Resist extreme solar radiation\n\u2713 Quiet temperament and longevity\n\u2713 Strength and hybrid vigor\nPerformance:\n\u2713 580-630kg\n\u2713 9,900kg milk/year\n\u2713 Fat: 4.0%\n\u2713 Protein: 3.5%\n\nHOLSTEIN FRIESIAN\nOrigin: Netherlands\nMarkings: Black & white\nDesirable Characteristics:\n\u2713 Can adapt to different management and utilization system.\n\u2713 Breeding profoundness\nUndesirable traits:\n\u2713 Not resistant to heat and susceptible to diseases.\nPerformance:\n\u2713 680-770kg (largest)\n\u2713 10,220kg milk/year\n\u2713 Fat: 3.65%\n\u2713 Protein: 3.2%\n\nDairysquare \u2013 Dairy Farming Module\nPage 9",
+  "images": [
+    {
+      "id": "p09_img1",
+      "bbox": [
+        51,
+        69,
+        255,
+        447
+      ],
+      "label": "Jersey Cow",
+      "description": "Photograph of a light brown Jersey dairy cow standing in a pasture."
+    },
+    {
+      "id": "p09_img2",
+      "bbox": [
+        310,
+        69,
+        513,
+        440
+      ],
+      "label": "Brown Swiss Cow",
+      "description": "Photograph of a brownish-gray Brown Swiss dairy cow standing in a grassy field."
+    },
+    {
+      "id": "p09_img3",
+      "bbox": [
+        569,
+        69,
+        773,
+        444
+      ],
+      "label": "Holstein Friesian Cow",
+      "description": "Photograph of a black-and-white patched Holstein Friesian dairy cow in a pasture."
+    }
+  ],
+  "facts": [
+    "Jersey cattle originate from Jersey Island, France.",
+    "Jersey cattle markings are light brown in color.",
+    "Desirable characteristics of Jersey cattle include breeding profoundness, longevity, milk best used for cheese, and being less susceptible to lameness.",
+    "Jersey cattle have an adult weight of 400-450 kg, making them the smallest among the listed breeds.",
+    "Jersey cattle produce approximately 9,000 kg of milk per year with 4.8% fat and 3.7% protein.",
+    "Brown Swiss cattle originate from Switzerland.",
+    "Brown Swiss cattle are a dual-purpose breed utilized for both milk and beef.",
+    "Brown Swiss markings are brown and light gray.",
+    "Desirable characteristics of Brown Swiss cattle include resistance to extreme solar radiation, quiet temperament, longevity, and strength and hybrid vigor.",
+    "Brown Swiss cattle have an adult weight of 580-630 kg.",
+    "Brown Swiss cattle produce approximately 9,900 kg of milk per year with 4.0% fat and 3.5% protein.",
+    "Holstein Friesian cattle originate from the Netherlands.",
+    "Holstein Friesian markings are black and white.",
+    "Desirable characteristics of Holstein Friesian include adaptability to different management and utilization systems and breeding profoundness.",
+    "Undesirable traits of Holstein Friesian include not being resistant to heat and being susceptible to diseases.",
+    "Holstein Friesian cattle weigh 680-770 kg, making them the largest among the listed breeds.",
+    "Holstein Friesian cattle produce approximately 10,220 kg of milk per year with 3.65% fat and 3.2% protein."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which dairy breed produces milk that has the highest milk fat content (4.8%) and is best used for cheese?",
+      "options": {
+        "A": "Brown Swiss",
+        "B": "Jersey",
+        "C": "Holstein Friesian",
+        "D": "Ayrshire"
+      },
+      "answer": "B",
+      "image_id": "p09_img1"
+    },
+    {
+      "type": "identification",
+      "question": "What is the country of origin and dual purpose of the Brown Swiss breed?",
+      "options": {
+        "A": "Origin: Switzerland; Purpose: Milk and beef",
+        "B": "Origin: Jersey Island; Purpose: Milk only",
+        "C": "Origin: Netherlands; Purpose: Milk and draft",
+        "D": "Origin: France; Purpose: Beef only"
+      },
+      "answer": "A",
+      "image_id": "p09_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are the undesirable traits explicitly listed for the Holstein Friesian breed?",
+      "options": {
+        "A": "High susceptibility to lameness and low milk yield",
+        "B": "Aggressive temperament and low hybrid vigor",
+        "C": "Not resistant to heat and susceptible to diseases",
+        "D": "Inability to adapt to different management systems"
+      },
+      "answer": "C",
+      "image_id": "p09_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following breeds has the highest annual milk yield at 10,220 kg/year?",
+      "options": {
+        "A": "Jersey",
+        "B": "Brown Swiss",
+        "C": "Holstein Friesian",
+        "D": "Guernsey"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement accurately describes the size and performance of the Jersey cow compared to Holstein Friesian?",
+      "options": {
+        "A": "Jersey is the smallest breed (400-450kg) with higher fat (4.8%) than Holstein Friesian (3.65%)",
+        "B": "Jersey is the largest breed (680-770kg) with lower fat than Holstein Friesian",
+        "C": "Jersey yields more total milk per year than Holstein Friesian",
+        "D": "Jersey weighs 580-630kg and has a lower protein percentage than Holstein Friesian"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A dairy farmer farming in an area with extreme solar radiation would most benefit from the natural resistance of which breed?",
+      "options": {
+        "A": "Holstein Friesian",
+        "B": "Brown Swiss",
+        "C": "Jersey",
+        "D": "Dutch Belted"
+      },
+      "answer": "B",
+      "image_id": "p09_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the typical body weight range of the Brown Swiss cattle?",
+      "options": {
+        "A": "400-450 kg",
+        "B": "580-630 kg",
+        "C": "680-770 kg",
+        "D": "750-850 kg"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which desirable characteristic is shared between both Jersey and Holstein Friesian breeds?",
+      "options": {
+        "A": "Resistance to extreme solar radiation",
+        "B": "Milk best used for cheese",
+        "C": "Dual purpose utilization",
+        "D": "Breeding profoundness"
+      },
+      "answer": "D"
+    }
+  ]
+}
