@@ -1,0 +1,160 @@
+{
+  "page": 7,
+  "title": "DIFFERENT BREEDS OF DAIRY CATTLE",
+  "text": "DIFFERENT BREEDS OF DAIRY CATTLE\n\nObjectives:\n1. To learn the characterization of dairy breeds.\n2. To familiarize the different breeds of dairy cattle.\n\nCharacterization of Breeds:\n\nBos taurus\nCHARACTERISTICS\n\u27a2 Widely distributed in temperate countries\n\u27a2 Horns are shorter and broad, generally polled\n\u27a2 Without humps, large body especially in the head and neck, broad rump\n\u27a2 Short legged\n\u27a2 Long productive period\n\u27a2 Susceptible to genetic diseases and parasites\n\u27a2 High nutritional requirements\n\u27a2 Highly developed milk production\n\nBos indicus\nCHARACTERISTICS\n\u27a2 Widely distributed in tropical countries\n\u27a2 With horn, known for their humps, narrow body with sloping rump\n\u27a2 Long legged\n\u27a2 Shorter productive period\n\u27a2 Shows tolerance to diseases and parasites\n\u27a2 Heat resistant\n\u27a2 Low nutritional requirements\n\u27a2 Low milk production\n\nDairysquare \u2013 Dairy Farming Module\nPage 7",
+  "images": [
+    {
+      "id": "p07_img1",
+      "bbox": [
+        426,
+        314,
+        571,
+        646
+      ],
+      "label": "Bos taurus bull",
+      "description": "A brown Bos taurus bull standing in a field showing humpless back, large neck and head, and shorter legs."
+    },
+    {
+      "id": "p07_img2",
+      "bbox": [
+        431,
+        655,
+        572,
+        915
+      ],
+      "label": "Bos taurus cow resting",
+      "description": "A brown and white Bos taurus cow lying down on green pasture."
+    },
+    {
+      "id": "p07_img3",
+      "bbox": [
+        730,
+        345,
+        922,
+        720
+      ],
+      "label": "Bos indicus bull in pasture",
+      "description": "A Bos indicus bull standing near trees with a distinct prominent hump, large horns, and long legs."
+    },
+    {
+      "id": "p07_img4",
+      "bbox": [
+        723,
+        722,
+        915,
+        887
+      ],
+      "label": "Bos indicus cow with calf",
+      "description": "A Bos indicus cow and small calf standing together in an open grassy area with prominent ears and hump."
+    }
+  ],
+  "facts": [
+    "The learning objectives of the section are to learn the characterization of dairy breeds and to familiarize the different breeds of dairy cattle.",
+    "Bos taurus cattle are widely distributed in temperate countries.",
+    "Bos taurus have horns that are shorter and broad, and are generally polled.",
+    "Bos taurus lack humps, have a large body especially in the head and neck, and feature a broad rump.",
+    "Bos taurus cattle are short legged.",
+    "Bos taurus have a long productive period.",
+    "Bos taurus cattle are susceptible to genetic diseases and parasites.",
+    "Bos taurus cattle have high nutritional requirements.",
+    "Bos taurus cattle have highly developed milk production.",
+    "Bos indicus cattle are widely distributed in tropical countries.",
+    "Bos indicus have horns, are known for their humps, and have a narrow body with a sloping rump.",
+    "Bos indicus cattle are long legged.",
+    "Bos indicus have a shorter productive period compared to Bos taurus.",
+    "Bos indicus cattle show tolerance to diseases and parasites.",
+    "Bos indicus cattle are heat resistant.",
+    "Bos indicus cattle have low nutritional requirements.",
+    "Bos indicus cattle have low milk production."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which cattle species is characterized by being widely distributed in temperate countries, having no humps, and having highly developed milk production?",
+      "options": {
+        "A": "Bos indicus",
+        "B": "Bos taurus",
+        "C": "Bubalus bubalis",
+        "D": "Capra hircus"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following physical characteristics is typical of Bos indicus cattle?",
+      "options": {
+        "A": "Without humps and broad rump",
+        "B": "Short legged with generally polled heads",
+        "C": "Known for prominent humps, long legs, and sloping rump",
+        "D": "Large body especially in the head and neck without horns"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement correctly compares the nutritional requirements of Bos taurus and Bos indicus?",
+      "options": {
+        "A": "Bos taurus has high nutritional requirements, whereas Bos indicus has low nutritional requirements.",
+        "B": "Both Bos taurus and Bos indicus have identical high nutritional requirements.",
+        "C": "Bos indicus requires higher nutrition due to heat stress in tropical regions.",
+        "D": "Bos taurus has low nutritional requirements because of temperate grazing."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Regarding disease and parasite tolerance, how does Bos taurus differ from Bos indicus?",
+      "options": {
+        "A": "Bos taurus is immune to all diseases, while Bos indicus is susceptible.",
+        "B": "Bos taurus is susceptible to genetic diseases and parasites, while Bos indicus shows tolerance.",
+        "C": "Both species have equal susceptibility to parasites.",
+        "D": "Bos indicus is highly vulnerable to tropical parasites compared to Bos taurus."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How do the productive periods of Bos taurus and Bos indicus compare?",
+      "options": {
+        "A": "Bos taurus has a shorter productive period than Bos indicus",
+        "B": "Bos indicus has a long productive period, while Bos taurus is short",
+        "C": "Bos taurus has a long productive period, whereas Bos indicus has a shorter productive period",
+        "D": "Neither breed has a productive period exceeding two years"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Which environmental adaptation is explicitly listed as a characteristic of tropical Bos indicus cattle?",
+      "options": {
+        "A": "Heat resistant",
+        "B": "Cold resistant",
+        "C": "Frost tolerance",
+        "D": "High altitude adaptation"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How are the horns of Bos taurus typically described in the breed characterization table?",
+      "options": {
+        "A": "Long and pointed upward",
+        "B": "Shorter and broad, generally polled",
+        "C": "Always absent in all individuals",
+        "D": "Extremely spiral and curving backward"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following describes the leg length and body shape of Bos taurus compared to Bos indicus?",
+      "options": {
+        "A": "Bos taurus is short legged with broad rump; Bos indicus is long legged with sloping rump",
+        "B": "Bos taurus is long legged with narrow body; Bos indicus is short legged with broad body",
+        "C": "Both breeds have identically long legs and narrow chests",
+        "D": "Bos taurus has sloping rump with long legs; Bos indicus has broad rump with short legs"
+      },
+      "answer": "A"
+    }
+  ]
+}
