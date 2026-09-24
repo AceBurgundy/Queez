@@ -1,0 +1,120 @@
+{
+  "page": 13,
+  "title": "Types of breeding:",
+  "text": "Types of breeding:\n\n1. Inbreeding \u2013 breeding of related animals.\n2. Outbreeding \u2013 breeding of unrelated animals.\n   a. Cross breeding \u2013 mating of two animals of different breeds. Superior traits that result in the crossbred progeny from crossbreeding are called hybrid vigor or heterosis.\n\nBull of breed A (100%)\nCow of breed B (100%)\nF1 crossbred progeny 50% A and 50% B\n\nb. Upgrading - is the breeding of animals of two different breeds where the animals of an indigenous breed/genetic group is mated by an improved pure breed for several generations towards attaining the superior traits of the improved breed.\n\nImported breed\nNative breed\nUpgraded\n\nDairysquare \u2013 Dairy Farming Module\nPage 13",
+  "images": [
+    {
+      "id": "p13_img1",
+      "bbox": [
+        206,
+        206,
+        477,
+        770
+      ],
+      "label": "Cross breeding diagram",
+      "description": "Diagram illustrating crossbreeding between Bull of breed A (100%) and Cow of breed B (100%), producing F1 crossbred progeny containing 50% A and 50% B genetic composition."
+    },
+    {
+      "id": "p13_img2",
+      "bbox": [
+        599,
+        210,
+        874,
+        775
+      ],
+      "label": "Upgrading breeding diagram",
+      "description": "Diagram illustrating the upgrading breeding method where an Imported breed is mated with a Native breed to produce an Upgraded animal."
+    }
+  ],
+  "facts": [
+    "Inbreeding is defined as the breeding of related animals.",
+    "Outbreeding is defined as the breeding of unrelated animals.",
+    "Cross breeding is the mating of two animals of different breeds.",
+    "Superior traits that result in crossbred progeny from crossbreeding are referred to as hybrid vigor or heterosis.",
+    "Mating a Bull of breed A (100%) with a Cow of breed B (100%) yields F1 crossbred progeny with 50% breed A and 50% breed B.",
+    "Upgrading is the breeding of animals of two different breeds where animals of an indigenous breed or genetic group are mated to an improved pure breed for several generations.",
+    "The primary goal of upgrading is attaining the superior traits of the improved breed in the resulting stock.",
+    "In upgrading, an imported or improved pure breed is bred with a native or indigenous breed to produce an upgraded animal."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What is the term for the breeding of related animals?",
+      "options": {
+        "A": "Outbreeding",
+        "B": "Inbreeding",
+        "C": "Crossbreeding",
+        "D": "Upgrading"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What term defines the breeding of unrelated animals?",
+      "options": {
+        "A": "Inbreeding",
+        "B": "Pedigree breeding",
+        "C": "Outbreeding",
+        "D": "Linebreeding"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Superior traits that result in the crossbred progeny from crossbreeding are referred to as:",
+      "options": {
+        "A": "Hybrid vigor or heterosis",
+        "B": "Genetic drift or mutation",
+        "C": "Inbreeding depression",
+        "D": "Artificial selection"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the genetic composition of an F1 crossbred progeny resulting from the mating of a pure Bull of breed A (100%) and a pure Cow of breed B (100%)?",
+      "options": {
+        "A": "75% Breed A and 25% Breed B",
+        "B": "100% Breed A",
+        "C": "50% Breed A and 50% Breed B",
+        "D": "25% Breed A and 75% Breed B"
+      },
+      "answer": "C",
+      "image_id": "p13_img1"
+    },
+    {
+      "type": "identification",
+      "question": "What breeding method involves mating an indigenous breed or genetic group with an improved pure breed for several generations to attain superior traits?",
+      "options": {
+        "A": "Cross breeding",
+        "B": "Upgrading",
+        "C": "Inbreeding",
+        "D": "Selfing"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding crossbreeding and upgrading is correct according to the module?",
+      "options": {
+        "A": "Crossbreeding always involves mating animals of the exact same breed and lineage.",
+        "B": "In upgrading, native or indigenous animals are mated with an improved pure breed over several generations.",
+        "C": "Heterosis refers to inferior health traits resulting from close inbreeding.",
+        "D": "Upgrading requires mating two closely related individuals from the same family tree."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the upgrading illustration, which two animal types are mated to produce an upgraded animal?",
+      "options": {
+        "A": "Imported breed and Native breed",
+        "B": "Two native breeds of the same region",
+        "C": "Two identical crossbred F1 progeny",
+        "D": "Imported sire and Imported dam"
+      },
+      "answer": "A",
+      "image_id": "p13_img2"
+    }
+  ]
+}
