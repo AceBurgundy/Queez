@@ -1,0 +1,131 @@
+{
+  "page": 14,
+  "title": "BASIC BODY PARTS OF DAIRY CATTLE",
+  "text": "BASIC BODY PARTS OF DAIRY CATTLE\n\nObjectives:\n1. To familiarize the basic parts of a dairy cow.\n2. To learn the digestive physiology of dairy cow.\n\nBody Parts of Cattle:\n[Diagram of dairy cattle body parts]\nLabels indicated:\n- Tail head\n- Pin\n- Hook\n- Paralumbar fossa\n- Loin\n- Shoulder\n- Crest\n- Poll\n- Forehead\n- Muzzle\n- Switch\n- Hock\n- Dewclaw\n- Heel\n- Teat\n- Udder\n- Stifle\n- Heart girth\n- Knee\n- Brisket\n- Dewlap\n- Elbow\n- Hoof\n\nDairysquare - Dairy Farming Module Page 14",
+  "images": [
+    {
+      "id": "p14_img1",
+      "bbox": [
+        287,
+        6,
+        686,
+        995
+      ],
+      "label": "Body Parts of Cattle anatomical diagram",
+      "description": "An anatomical illustration of a dairy cow with directional callout lines labeling key exterior body parts, including poll, crest, shoulder, loin, paralumbar fossa, hook, pin, tail head, switch, hock, stifle, udder, teat, dewclaw, heel, hoof, knee, brisket, dewlap, elbow, heart girth, muzzle, and forehead."
+    }
+  ],
+  "facts": [
+    "The module section is titled 'BASIC BODY PARTS OF DAIRY CATTLE'.",
+    "Objective 1 of this module is to familiarize the basic parts of a dairy cow.",
+    "Objective 2 of this module is to learn the digestive physiology of dairy cow.",
+    "The paralumbar fossa is represented by a triangular depression area on the flank/lumbar region of the cow.",
+    "The loin refers to the dorsal region along the top of the cow bordered anteriorly toward the shoulder and posteriorly near the hip.",
+    "The crest and poll are located dorsally near the head and neck; the poll is situated at the top of the head.",
+    "The anterior facial features labeled include the forehead and the muzzle.",
+    "The lower neck and chest parts include the dewlap, brisket, and elbow.",
+    "The front leg anatomy includes the knee and hoof.",
+    "The circumference measurement around the chest just behind the front legs is indicated as the heart girth.",
+    "The hindquarters include the hook (tuber coxae), pin (tuber ischii), and tail head.",
+    "The tail ends with the tuft of hair known as the switch.",
+    "The hind leg joints and structures labeled include the stifle, hock, dewclaw, heel, and hoof.",
+    "The mammary system labeled on the cow consists of the udder and teat."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What are the two stated objectives on page 14 of the Dairy Farming Module?",
+      "options": {
+        "A": "To familiarize the basic parts of a dairy cow and to learn the digestive physiology of dairy cow",
+        "B": "To calculate daily feed rations and to construct milking parlor facilities",
+        "C": "To diagnose mastitis infections and to measure milk somatic cell count",
+        "D": "To operate mechanical milking machines and to pasteurize raw milk"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Which anatomical structure refers to the prominent pelvic bone located nearest to the tail head at the rear of the dairy cow?",
+      "options": {
+        "A": "Pin",
+        "B": "Hook",
+        "C": "Stifle",
+        "D": "Withers"
+      },
+      "answer": "A",
+      "image_id": "p14_img1"
+    },
+    {
+      "type": "identification",
+      "question": "Which triangular depressed area on the flank of the dairy cow is specifically highlighted with dashed lines in the diagram?",
+      "options": {
+        "A": "Heart girth",
+        "B": "Paralumbar fossa",
+        "C": "Brisket",
+        "D": "Dewlap"
+      },
+      "answer": "B",
+      "image_id": "p14_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which labeled body part represents the tuft of long hair at the distal end of the dairy cow's tail?",
+      "options": {
+        "A": "Switch",
+        "B": "Hock",
+        "C": "Crest",
+        "D": "Pin"
+      },
+      "answer": "A",
+      "image_id": "p14_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which anatomical term designates the highest point of the dairy cow's head situated between or behind the horns/ears?",
+      "options": {
+        "A": "Poll",
+        "B": "Muzzle",
+        "C": "Forehead",
+        "D": "Crest"
+      },
+      "answer": "A",
+      "image_id": "p14_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following parts is located on the ventral thoracic area of the dairy cow between the forelegs and dewlap?",
+      "options": {
+        "A": "Brisket",
+        "B": "Stifle",
+        "C": "Loin",
+        "D": "Hock"
+      },
+      "answer": "A",
+      "image_id": "p14_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding the anatomical diagram on Page 14 is TRUE?",
+      "options": {
+        "A": "The hock and stifle are joints situated on the hind leg of the dairy cow.",
+        "B": "The knee is located on the hind leg directly above the heel.",
+        "C": "The dewlap refers to the ridge running along the spine between the hook and pin.",
+        "D": "The heart girth is measured around the abdomen directly behind the udder."
+      },
+      "answer": "A",
+      "image_id": "p14_img1"
+    },
+    {
+      "type": "identification",
+      "question": "What is the small supplementary hoof-like digit found above the hoof on the lower leg labeled as in the diagram?",
+      "options": {
+        "A": "Dewclaw",
+        "B": "Dewlap",
+        "C": "Switch",
+        "D": "Hook"
+      },
+      "answer": "A",
+      "image_id": "p14_img1"
+    }
+  ]
+}
