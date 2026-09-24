@@ -1,0 +1,149 @@
+{
+  "page": 12,
+  "title": "DAIRY CATTLE BREEDING",
+  "text": "DAIRY CATTLE BREEDING\n\nObjectives:\n1. To know the definition and purpose of breeding dairy cattle\n2. To familiarize the different breeding system\n\nBreeding - the mating and production of offspring by animals.\n\nBreeding system:\n1. Natural breeding - mating of animals by natural means.\n2. Artificial breeding - is done through artificial means by collecting semen from male and inseminating the females using an AI gun.\n\n[Photo: Natural breeding]\nNatural breeding\n\n[Photo: Artificial insemination]\nArtificial insemination\n\nNatural breeding vs. Artificial breeding:\n| Feature | Natural breeding | Artificial breeding |\n|---|---|---|\n| Heat detection | \u2022 Reduces the need of detecting heat detection.\n\u2022 Bulls will detect the cows in heat. | \u2022 Requires skilful personnel on heat detection.\n\u2022 Cows in heat must be detected in order to be inseminated. |\n| Bull maintenance | \u2022 Need to invest in bull maintenance | \u2022 Does not need a bull |\n| Breeding Facility | \u2022 Low cost breeding facility | \u2022 High cost breeding facility, especially in semen storage and examination. |\n| Breeding related injuries | \u2022 High risk especially in bigger bulls bred to small cows. | \u2022 Very low risk |\n| Transmission of venereal disease | \u2022 Very high due to direct contact during mating. | \u2022 Very low risk, bull's semen is strictly evaluated. Bulls undergo screening and tests. |\n| Semen quality | \u2022 Is not checked | \u2022 Semen motility and concentration. |\n| Breeding record | \u2022 Difficult to monitor | \u2022 Easy monitoring |\n\nDairysquare - Dairy Farming Module Page 12",
+  "images": [
+    {
+      "id": "p12_img1",
+      "bbox": [
+        369,
+        68,
+        580,
+        492
+      ],
+      "label": "Natural breeding",
+      "description": "A photograph showing a bull naturally mounting and mating with a cow in an open area."
+    },
+    {
+      "id": "p12_img2",
+      "bbox": [
+        376,
+        510,
+        580,
+        915
+      ],
+      "label": "Artificial insemination",
+      "description": "A technician wearing protective gear and blue gloves performing artificial insemination on a dairy cow inside a barn using an AI tool/gun."
+    }
+  ],
+  "facts": [
+    "Breeding is defined as the mating and production of offspring by animals.",
+    "The objectives of the module are to know the definition and purpose of breeding dairy cattle, and to familiarize the different breeding systems.",
+    "Natural breeding is the mating of animals by natural means.",
+    "Artificial breeding is done through artificial means by collecting semen from the male and inseminating the females using an AI gun.",
+    "In natural breeding, bulls detect cows in heat, reducing the need for human heat detection.",
+    "In artificial breeding, skilful personnel are required for heat detection, and cows in heat must be detected in order to be inseminated.",
+    "Natural breeding requires investment in bull maintenance, whereas artificial breeding does not need a bull on the farm.",
+    "Natural breeding utilizes a low cost breeding facility.",
+    "Artificial breeding requires a high cost breeding facility, especially for semen storage and examination.",
+    "Breeding-related injuries carry a high risk in natural breeding, particularly when bigger bulls are bred to small cows.",
+    "Breeding-related injuries have a very low risk in artificial breeding.",
+    "Transmission of venereal disease is very high in natural breeding due to direct contact during mating.",
+    "Transmission of venereal disease is very low risk in artificial breeding because the bull's semen is strictly evaluated and bulls undergo screening and tests.",
+    "Semen quality is not checked in natural breeding.",
+    "In artificial breeding, semen quality is evaluated for semen motility and concentration.",
+    "Breeding records are difficult to monitor in natural breeding but easy to monitor in artificial breeding."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What instrument is used in artificial breeding to inseminate the female after collecting semen from the male?",
+      "options": {
+        "A": "Burdizzo castrator",
+        "B": "AI gun",
+        "C": "Trocar and cannula",
+        "D": "Drenching syringe"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is the risk of transmitting venereal disease very high in natural breeding compared to artificial breeding?",
+      "options": {
+        "A": "Due to direct physical contact during mating",
+        "B": "Because bulls produce contaminated semen in outdoor pastures",
+        "C": "Due to poor sanitation of AI equipment",
+        "D": "Because female cows reject natural mating"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which specific semen quality parameters are evaluated in artificial breeding according to the comparison chart?",
+      "options": {
+        "A": "Color and temperature",
+        "B": "Volume and pH level",
+        "C": "Motility and concentration",
+        "D": "Viscosity and odor"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a major advantage of natural breeding regarding heat detection?",
+      "options": {
+        "A": "It eliminates the need for any female reproductive cycling",
+        "B": "Bulls detect the cows in heat, reducing the need for farmer heat detection",
+        "C": "It automatically records the exact ovulation time on computers",
+        "D": "It requires highly trained personnel to inspect the cows daily"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding breeding facility costs is TRUE according to the module?",
+      "options": {
+        "A": "Natural breeding has a high facility cost due to liquid nitrogen tanks.",
+        "B": "Artificial breeding has a high cost breeding facility, especially in semen storage and examination.",
+        "C": "Both natural and artificial breeding have identical low facility costs.",
+        "D": "Artificial breeding eliminates facility costs entirely."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When does natural breeding pose the highest risk of breeding-related injuries?",
+      "options": {
+        "A": "When heifers are mated with small calves",
+        "B": "When bigger bulls are bred to small cows",
+        "C": "When cows are inseminated using an AI gun",
+        "D": "When multiple bulls are kept in separate pens"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does record keeping compare between natural breeding and artificial breeding?",
+      "options": {
+        "A": "Natural breeding is easy to monitor, whereas artificial breeding is impossible to monitor",
+        "B": "Both breeding systems are equally difficult to monitor",
+        "C": "Natural breeding is difficult to monitor, while artificial breeding allows easy monitoring",
+        "D": "Artificial breeding records are only kept for disease screening"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the comparison table, why is the risk of venereal disease transmission classified as 'very low' in artificial breeding?",
+      "options": {
+        "A": "Bulls are given daily antibiotics and kept isolated from cows",
+        "B": "Bulls undergo screening and tests, and semen is strictly evaluated",
+        "C": "Cows are immune to venereal diseases during artificial insemination",
+        "D": "Semen is boiled prior to insemination"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "Look at the image labeled 'p12_img2'. What dairy farming procedure is being depicted in this photograph?",
+      "options": {
+        "A": "Hoof trimming",
+        "B": "Natural breeding",
+        "C": "Artificial insemination",
+        "D": "Teat dipping"
+      },
+      "answer": "C",
+      "image_id": "p12_img2"
+    }
+  ]
+}
