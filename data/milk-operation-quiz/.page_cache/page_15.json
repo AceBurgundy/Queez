@@ -1,0 +1,128 @@
+{
+  "page": 15,
+  "title": "Muzzle and Eyes",
+  "text": "Muzzle\n\u2022 Protruding part of an animal's head which includes the nose, mouth and jaw.\n\u2022 Cows have an excellent sense of smell. They can detect odor from 5 miles away.\n\nHalter - a rope or strap used for head restraining techniques in animals.\n\nEyes\n\u2022 Cows have an excellent sense of sight. Cows can see colors except black, white and red.\n\u2022 Field of vision \u2013 cow can almost see in 360-degree panoramic vision, useful in detecting predators.\n\nDairysquare \u2013 Dairy Farming Module\nPage 15",
+  "images": [
+    {
+      "id": "p15_img1",
+      "bbox": [
+        165,
+        103,
+        368,
+        477
+      ],
+      "label": "Cow head handling/muzzle examination",
+      "description": "Person holding and examining the muzzle and head of a black-and-white dairy cow."
+    },
+    {
+      "id": "p15_img2",
+      "bbox": [
+        165,
+        497,
+        366,
+        897
+      ],
+      "label": "Cow muzzle close-up",
+      "description": "Close-up photograph showing the nostrils, wet nose pad, and whiskers of a cow's muzzle."
+    },
+    {
+      "id": "p15_img3",
+      "bbox": [
+        416,
+        319,
+        617,
+        676
+      ],
+      "label": "Restrained cow with halter",
+      "description": "A cow restrained in a stanchion or metal stall using a rope halter tied to the side gate."
+    }
+  ],
+  "facts": [
+    "The muzzle is the protruding part of an animal's head which includes the nose, mouth, and jaw.",
+    "Cows have an excellent sense of smell and can detect odor from 5 miles away.",
+    "A halter is a rope or strap used for head restraining techniques in animals.",
+    "Cows have an excellent sense of sight.",
+    "Cows can see colors except black, white, and red.",
+    "Cows have an almost 360-degree panoramic field of vision, which is useful in detecting predators."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which anatomical components make up the protruding part of an animal's head known as the muzzle?",
+      "options": {
+        "A": "Nose, mouth, and jaw",
+        "B": "Eyes, ears, and forehead",
+        "C": "Horns, poll, and neck",
+        "D": "Chin, throat, and dewlap"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How far away can cows detect odors using their excellent sense of smell?",
+      "options": {
+        "A": "Up to 1 mile away",
+        "B": "Up to 3 miles away",
+        "C": "Up to 5 miles away",
+        "D": "Up to 10 miles away"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "What is the term for a rope or strap used specifically for head restraining techniques in animals?",
+      "options": {
+        "A": "Halter",
+        "B": "Hobble",
+        "C": "Nose ring",
+        "D": "Stanchion"
+      },
+      "answer": "A",
+      "image_id": "p15_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, which colors are cows unable to see?",
+      "options": {
+        "A": "Blue, yellow, and green",
+        "B": "Black, white, and red",
+        "C": "Purple, orange, and brown",
+        "D": "Green, violet, and grey"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What type of vision do cows have that allows them to detect predators effectively?",
+      "options": {
+        "A": "Narrow binocular vision of 90 degrees",
+        "B": "Almost 180-degree overhead vision",
+        "C": "Almost 360-degree panoramic vision",
+        "D": "Infrared night-adapted vision"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements correctly describes a cow's sensory capabilities as outlined on this page?",
+      "options": {
+        "A": "Cows have poor smell and rely only on hearing to find food.",
+        "B": "Cows have an excellent sense of smell and can detect odors from 5 miles away.",
+        "C": "Cows cannot detect odors farther than 500 meters.",
+        "D": "Cows can perceive all colors including black, white, and red perfectly."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding a cow's field of vision is accurate?",
+      "options": {
+        "A": "A cow has an almost 360-degree panoramic field of vision useful in detecting predators.",
+        "B": "A cow's field of vision is strictly limited to 120 degrees directly in front of it.",
+        "C": "A cow cannot see to the sides without turning its whole body completely.",
+        "D": "A cow's panoramic vision is primarily specialized for pinpoint depth perception rather than predator detection."
+      },
+      "answer": "A"
+    }
+  ]
+}
