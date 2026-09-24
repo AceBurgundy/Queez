@@ -1,0 +1,222 @@
+{
+  "page": 11,
+  "title": "SAHIWAL / BODY CONDITION SCORING",
+  "text": "SAHIWAL\nOrigin: Pakistan & India\nMarkings: Reddish brown to predominant red\nDesirable Characteristics:\n\u2713 Good maternal traits\n\u2713 High resistance to parasites\n\u2713 Well-developed udder\nPerformance:\n\u2713 425kg\n\u2713 4,000kg milk/year\n\nBODY CONDITION SCORING\n\n1 - Emaciated\nThe individual vertebrae of the spine are prominent. The short ribs are sharp to the touch and give a shelf-like appearance to the loin. The hook and pin bones of the pelvis are well defined. The anal area of the cow is receded displaying a prominent vulva. Considered unfit to travel.\n\n2 - Thin\nThe short ribs can be felt but are less outstanding. The hook and pin bones are still well-defined, though the area around the anus is less sunken and the vulva is prominent.\n\n3 - Average\nThe short ribs are palpable with slight pressure. There is no shelf-like appearance to this area. The spine and hook and pin bones are all rounded and smoothed over. The anal area is filled out, and there is no evidence of fat deposits.\n\n4 - Heavy\nThe short ribs are rounded over with no evidence of a shelf-like appearance and may only be felt with firm palpation. The ridge of the backbone is flattened over the loin and rump areas. The hook bones are smoothed over and the area around the pin bones shows some fat deposits.\n\n5 - Fat\nThe bone structures of the spine, hook and pin bones, and short ribs are not discernible. There are fat deposits around the tailhead and over ribs. The thighs curve out and the brisket and flanks appear to be very full and heavy.\n\nDairysquare \u2013 Dairy Farming Module\nPage 11",
+  "images": [
+    {
+      "id": "p11_img1",
+      "bbox": [
+        53,
+        67,
+        252,
+        442
+      ],
+      "label": "Sahiwal cow photo",
+      "description": "Photograph of a reddish brown Sahiwal cow standing in an enclosure."
+    },
+    {
+      "id": "p11_img2",
+      "bbox": [
+        415,
+        54,
+        502,
+        219
+      ],
+      "label": "BCS 1 Rear View",
+      "description": "Rear view photo of an emaciated dairy cow with prominent pelvis, spine, and sunken anal region."
+    },
+    {
+      "id": "p11_img3",
+      "bbox": [
+        502,
+        54,
+        587,
+        218
+      ],
+      "label": "BCS 2 Rear View",
+      "description": "Rear view photo of a thin dairy cow with visible hook and pin bones."
+    },
+    {
+      "id": "p11_img4",
+      "bbox": [
+        587,
+        54,
+        674,
+        218
+      ],
+      "label": "BCS 3 Rear View",
+      "description": "Rear view photo of an average body condition dairy cow showing rounded, smoothed over bones."
+    },
+    {
+      "id": "p11_img5",
+      "bbox": [
+        674,
+        54,
+        760,
+        219
+      ],
+      "label": "BCS 4 Rear View",
+      "description": "Rear view photo of a heavy dairy cow showing smooth hips and fat deposits."
+    },
+    {
+      "id": "p11_img6",
+      "bbox": [
+        760,
+        56,
+        843,
+        220
+      ],
+      "label": "BCS 5 Rear View",
+      "description": "Rear view photo of an obese/fat dairy cow showing indiscernible bone structures and thick fat deposits."
+    },
+    {
+      "id": "p11_img7",
+      "bbox": [
+        416,
+        725,
+        538,
+        998
+      ],
+      "label": "BCS 1 Pelvic Profile Diagram",
+      "description": "Profile view diagram of BCS 1 cow highlighting the sharp spine, shelf-like loin, and deep cavity under tailhead."
+    },
+    {
+      "id": "p11_img8",
+      "bbox": [
+        542,
+        727,
+        666,
+        998
+      ],
+      "label": "BCS 2-3 Pelvic Profile Diagram",
+      "description": "Profile view diagram of a cow illustrating pelvic lines and moderate body condition contour."
+    },
+    {
+      "id": "p11_img9",
+      "bbox": [
+        669,
+        729,
+        785,
+        999
+      ],
+      "label": "BCS 4 Pelvic Profile Diagram",
+      "description": "Profile view diagram illustrating smoothed over hook bones and flat backbone ridge in a BCS 4 cow."
+    },
+    {
+      "id": "p11_img10",
+      "bbox": [
+        788,
+        727,
+        900,
+        998
+      ],
+      "label": "BCS 5 Pelvic Profile Diagram",
+      "description": "Side/rear anatomical diagram showing a fat cow with heavy brisket, rounded flanks, and completely obscured bone points."
+    }
+  ],
+  "facts": [
+    "The Sahiwal breed originates from Pakistan & India.",
+    "The coat markings of the Sahiwal breed range from reddish brown to predominant red.",
+    "Desirable characteristics of Sahiwal include good maternal traits, high resistance to parasites, and a well-developed udder.",
+    "The typical weight performance of a Sahiwal cow is 425 kg.",
+    "The annual milk production performance of a Sahiwal cow is 4,000 kg milk/year.",
+    "In Body Condition Score (BCS) 1 (Emaciated), individual vertebrae of the spine are prominent, short ribs are sharp to the touch giving a shelf-like appearance to the loin, hook and pin bones are well defined, and the anal area is receded displaying a prominent vulva.",
+    "A cow with BCS 1 (Emaciated) is considered unfit to travel.",
+    "In BCS 2 (Thin), short ribs can be felt but are less outstanding, hook and pin bones are still well-defined, the area around the anus is less sunken, and the vulva is prominent.",
+    "In BCS 3 (Average), short ribs are palpable with slight pressure with no shelf-like appearance, spine and hook and pin bones are rounded and smoothed over, the anal area is filled out, and there is no evidence of fat deposits.",
+    "In BCS 4 (Heavy), short ribs are rounded over with no shelf-like appearance and felt only with firm palpation; the backbone ridge is flattened over loin and rump; hook bones are smoothed over and area around pin bones shows fat deposits.",
+    "In BCS 5 (Fat), bone structures of spine, hook and pin bones, and short ribs are not discernible; fat deposits exist around tailhead and over ribs; thighs curve out, and brisket and flanks appear very full and heavy."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What is the geographic origin of the Sahiwal cattle breed according to the module?",
+      "options": {
+        "A": "Pakistan & India",
+        "B": "Switzerland & Austria",
+        "C": "Jersey Island & England",
+        "D": "Netherlands & Germany"
+      },
+      "answer": "A",
+      "image_id": "p11_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the expected body weight and annual milk yield performance recorded for the Sahiwal breed?",
+      "options": {
+        "A": "350 kg and 2,500 kg milk/year",
+        "B": "425 kg and 4,000 kg milk/year",
+        "C": "550 kg and 6,000 kg milk/year",
+        "D": "650 kg and 8,000 kg milk/year"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is listed as a desirable characteristic of the Sahiwal breed?",
+      "options": {
+        "A": "Polled head trait",
+        "B": "High resistance to parasites",
+        "C": "Double muscling gene",
+        "D": "Extreme cold tolerance"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement accurately describes the travel fitness of a cow evaluated at Body Condition Score (BCS) 1 (Emaciated)?",
+      "options": {
+        "A": "The cow is considered unfit to travel.",
+        "B": "The cow is fit to travel without restrictions.",
+        "C": "The cow can travel only if transported in open trailers.",
+        "D": "The cow is recommended for long-distance transport before feeding."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Under which Body Condition Score (BCS) are the spine and hook and pin bones rounded and smoothed over, the short ribs palpable with slight pressure, and the anal area filled out with no evidence of fat deposits?",
+      "options": {
+        "A": "1 - Emaciated",
+        "B": "2 - Thin",
+        "C": "3 - Average",
+        "D": "4 - Heavy"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In Body Condition Score (BCS) 4 (Heavy), how do the short ribs feel upon examination?",
+      "options": {
+        "A": "They are sharp to the touch and give a shelf-like appearance.",
+        "B": "They are rounded over with no shelf-like appearance and may only be felt with firm palpation.",
+        "C": "They are completely indiscernible under thick subcutaneous fat.",
+        "D": "They can be easily felt with no pressure applied."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Body Condition Score is characterized by thighs curving out, brisket and flanks appearing very full and heavy, and bone structures of the spine, hook, and pin bones being not discernible?",
+      "options": {
+        "A": "BCS 2 - Thin",
+        "B": "BCS 3 - Average",
+        "C": "BCS 4 - Heavy",
+        "D": "BCS 5 - Fat"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the typical coat marking described for Sahiwal cattle?",
+      "options": {
+        "A": "Black and white patched",
+        "B": "Fawn with white spots",
+        "C": "Reddish brown to predominant red",
+        "D": "Solid charcoal grey to black"
+      },
+      "answer": "C",
+      "image_id": "p11_img1"
+    }
+  ]
+}
