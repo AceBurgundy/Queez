@@ -1,0 +1,145 @@
+{
+  "page": 19,
+  "title": "Udder & Digestive Physiology of Ruminants",
+  "text": "Lameness in a cow hoof problem called digital dermatitis\n\nUdder:\no a large pendulous organ consisting of two or more mammary gland enclosed in a common envelope and each provided with a single teat.\n\nAlveoli\nLobule containing alveoli\nConnective tissue\nMajor duct\nDucts\nGland cistern\nTeat cistern\nTeat meatus\nLobe\n\nDIGESTIVE PHYSIOLOGY OF RUMINANTS\n\nObjectives:\n1. To compare the digestive physiology of ruminants and non-ruminants.\n2. To learn the digestive physiology of ruminants.\n\nRuminants vs. Non-ruminants\n\nRUMINANTS NON-RUMINANTS\n\nDairysquare - Dairy Farming Module Page 19",
+  "images": [
+    {
+      "id": "p19_img1",
+      "bbox": [
+        51,
+        134,
+        233,
+        529
+      ],
+      "label": "Lameness in a cow",
+      "description": "A black-and-white dairy cow standing with a circle highlighting lameness in its hind foot or leg."
+    },
+    {
+      "id": "p19_img2",
+      "bbox": [
+        53,
+        541,
+        234,
+        898
+      ],
+      "label": "hoof problem called digital dermatitis",
+      "description": "Close-up photograph showing a cow's hoof affected by digital dermatitis, displaying lesion and inflammation."
+    },
+    {
+      "id": "p19_img3",
+      "bbox": [
+        376,
+        191,
+        664,
+        808
+      ],
+      "label": "Diagram of Udder and Mammary Gland Anatomy",
+      "description": "Anatomical cross-section diagram of the udder showing internal structures labeled: Alveoli, Lobule containing alveoli, Lobe, Connective tissue, Major duct, Ducts, Gland cistern, Teat cistern, and Teat meatus."
+    }
+  ],
+  "facts": [
+    "Lameness in a cow can be associated with hoof problems such as digital dermatitis.",
+    "Digital dermatitis is a specific hoof problem causing lesions in cattle.",
+    "An udder is defined as a large pendulous organ consisting of two or more mammary glands enclosed in a common envelope, with each provided with a single teat.",
+    "The internal anatomy of the mammary gland/udder includes alveoli, lobules containing alveoli, lobes, connective tissue, major ducts, ducts, gland cistern, teat cistern, and teat meatus.",
+    "The teat meatus is the terminal opening of the teat canal through which milk exits.",
+    "Milk flows from the duct system into the gland cistern, then into the teat cistern, and exits via the teat meatus.",
+    "The section titled 'DIGESTIVE PHYSIOLOGY OF RUMINANTS' has two stated objectives: 1. To compare the digestive physiology of ruminants and non-ruminants, and 2. To learn the digestive physiology of ruminants.",
+    "A comparative topic introduced on this page is 'Ruminants vs. Non-ruminants'."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What is defined as a large pendulous organ consisting of two or more mammary glands enclosed in a common envelope, each provided with a single teat?",
+      "options": {
+        "A": "Rumen",
+        "B": "Udder",
+        "C": "Abomasum",
+        "D": "Pelvis"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which specific hoof condition is shown as an example causing lameness in a cow?",
+      "options": {
+        "A": "Digital dermatitis",
+        "B": "Sole ulcer",
+        "C": "White line disease",
+        "D": "Foot rot"
+      },
+      "answer": "A",
+      "image_id": "p19_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the anatomical diagram of the udder, which structure is the external opening at the tip of the teat through which milk is discharged?",
+      "options": {
+        "A": "Gland cistern",
+        "B": "Teat meatus",
+        "C": "Major duct",
+        "D": "Alveolar duct"
+      },
+      "answer": "B",
+      "image_id": "p19_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following correctly traces the flow of milk downwards according to the udder diagram labels?",
+      "options": {
+        "A": "Teat cistern -> Gland cistern -> Ducts -> Alveoli",
+        "B": "Lobule/Alveoli -> Ducts -> Gland cistern -> Teat cistern -> Teat meatus",
+        "C": "Teat meatus -> Teat cistern -> Gland cistern -> Lobule",
+        "D": "Gland cistern -> Ducts -> Lobule -> Teat meatus"
+      },
+      "answer": "B",
+      "image_id": "p19_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What structure in the udder anatomy directly stores milk right above the teat cistern before it enters the teat?",
+      "options": {
+        "A": "Gland cistern",
+        "B": "Teat meatus",
+        "C": "Lobe",
+        "D": "Connective tissue"
+      },
+      "answer": "A",
+      "image_id": "p19_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is explicitly listed as Objective 1 under 'DIGESTIVE PHYSIOLOGY OF RUMINANTS'?",
+      "options": {
+        "A": "To treat digital dermatitis in dairy cattle",
+        "B": "To compare the digestive physiology of ruminants and non-ruminants",
+        "C": "To describe the milking machine operation",
+        "D": "To analyze milk secretion pathways"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "According to the definition on the page, is the udder enclosed in separate loose envelopes for each mammary gland?",
+      "options": {
+        "A": "True, each gland has an entirely separate outer body envelope.",
+        "B": "False, it consists of two or more mammary glands enclosed in a common envelope.",
+        "C": "True, but only during lactation cycles.",
+        "D": "False, the udder contains only a single mammary gland."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What smaller structures are clustered inside a lobule as shown in the mammary gland diagram?",
+      "options": {
+        "A": "Teat meati",
+        "B": "Alveoli",
+        "C": "Teat cisterns",
+        "D": "Gland cisterns"
+      },
+      "answer": "B",
+      "image_id": "p19_img3"
+    }
+  ]
+}
