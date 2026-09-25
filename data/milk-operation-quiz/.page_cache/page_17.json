@@ -1,0 +1,141 @@
+{
+  "page": 17,
+  "title": "Dewlap & Hoof",
+  "text": "Dewlap - a fold or flap of skin on the neck of a cow.\n\nFunction of the dewlap is unknown but it was hypothesize for:\n1. Sexual signalling\n2. To appear bigger\n3. To dissipate heat\n\nHoof\n\u2022 Cattle are cloven-footed animals, meaning that the hoof consists of two digits, instead of a solid part like that of a horse.\n\nDairysquare - Dairy Farming Module\nPage 17",
+  "images": [
+    {
+      "id": "p17_img1",
+      "bbox": [
+        88,
+        307,
+        307,
+        691
+      ],
+      "label": "Cow with dewlap highlighted",
+      "description": "Full-body photograph of a humped bovine standing in a pasture, with a yellow arrow pointing to the dewlap (a fold/flap of skin hanging beneath the neck and chest)."
+    },
+    {
+      "id": "p17_img2",
+      "bbox": [
+        421,
+        68,
+        620,
+        335
+      ],
+      "label": "Cattle head and neck profile showing moderate dewlap",
+      "description": "Side-profile photograph focusing on the head, neck, and dewlap folds of a brown cow."
+    },
+    {
+      "id": "p17_img3",
+      "bbox": [
+        421,
+        338,
+        620,
+        624
+      ],
+      "label": "Red cattle profile showing prominent dewlap",
+      "description": "Side-profile photograph of a reddish humped cow displaying extensive, prominent dewlap folds hanging beneath the neck."
+    },
+    {
+      "id": "p17_img4",
+      "bbox": [
+        420,
+        629,
+        620,
+        927
+      ],
+      "label": "Cattle showing extensive pendulous dewlap",
+      "description": "Close-up photograph showing a cow with very deep, pendulous folds of dewlap skin under its neck."
+    }
+  ],
+  "facts": [
+    "A dewlap is defined as a fold or flap of skin on the neck of a cow.",
+    "The exact function of the dewlap is officially unknown.",
+    "One hypothesized function of the dewlap is sexual signalling.",
+    "Another hypothesized function of the dewlap is to appear bigger.",
+    "A third hypothesized function of the dewlap is to dissipate heat.",
+    "Cattle are cloven-footed animals.",
+    "Being cloven-footed means that the cattle hoof consists of two digits rather than a single solid part.",
+    "A horse's hoof consists of a solid part, in contrast to the two-digit cloven hoof of cattle."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What is the anatomical term for the fold or flap of skin found on the neck of a cow?",
+      "options": {
+        "A": "Dewlap",
+        "B": "Withers",
+        "C": "Hump",
+        "D": "Flank"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a hypothesized function of the cow's dewlap?",
+      "options": {
+        "A": "Sexual signalling",
+        "B": "To appear bigger",
+        "C": "To store fat and water",
+        "D": "To dissipate heat"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are cattle classified as cloven-footed animals?",
+      "options": {
+        "A": "Their hoof consists of two digits instead of a solid part",
+        "B": "Their hoof contains four fully functional digits for walking",
+        "C": "Their hoof forms a single solid round structure",
+        "D": "Their hoof possesses sharp retractable claws"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the hoof structure of cattle versus horses is true?",
+      "options": {
+        "A": "Cattle have a solid undivided hoof, whereas horses have two digits.",
+        "B": "Cattle hooves consist of two digits, whereas a horse's hoof consists of a solid part.",
+        "C": "Both cattle and horses are cloven-footed animals with two functional digits.",
+        "D": "Neither cattle nor horses have digits in their hoof structures."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, what is the status of scientific knowledge regarding the function of the dewlap?",
+      "options": {
+        "A": "It is proven exclusively to filter toxins from blood circulation.",
+        "B": "Its exact function is unknown, but several functions are hypothesized.",
+        "C": "It serves solely to produce milk precursors during lactation.",
+        "D": "It acts primarily as an organ of hearing and balance."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the top illustration (p17_img1), what anatomical feature is indicated by the yellow arrow?",
+      "options": {
+        "A": "The brisket bone",
+        "B": "The dewlap",
+        "C": "The shoulder blade",
+        "D": "The chest whorl"
+      },
+      "answer": "B",
+      "image_id": "p17_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following accurately describes the dewlap's hypothesized role in thermoregulation?",
+      "options": {
+        "A": "To trap body heat during cold weather",
+        "B": "To dissipate heat from the body",
+        "C": "To insulate the throat against wind chill",
+        "D": "To cool the body through water evaporation from sweat glands inside the mouth"
+      },
+      "answer": "B"
+    }
+  ]
+}
