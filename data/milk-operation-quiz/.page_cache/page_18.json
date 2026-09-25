@@ -1,0 +1,121 @@
+{
+  "page": 18,
+  "title": "Lameness",
+  "text": "Accessory digit\nBulb of heel\nInterdigital claw\nMedial claw\nLateral claw\nAbaxial wall\nWhite line\nSole\nWall\nAxial wall\n\nLameness\n\u2022 Refers to the inability to properly use one or more limbs.\n\u2022 One of the most economic problems in dairying.\nCauses:\n1. Infectious \u2013 causes by bacteria specially Fusobacterium necrophorum.\n2. Nutritional \u2013 foot rot is common in zinc, selenium and copper deficient cows.\n3. Injuries \u2013 sharp objects such as stones or hardware may penetrate the hoof wall that may lead to entry of pathogens that may result to infection.\n4. Genetics \u2013 some breed are prone to hoof problems\n\nDairysquare \u2013 Dairy Farming Module\nPage 18",
+  "images": [
+    {
+      "id": "p18_img1",
+      "bbox": [
+        55,
+        230,
+        497,
+        834
+      ],
+      "label": "Bovine Hoof Anatomy Diagram",
+      "description": "Anatomical sketch of the solar surface and lower bovine limb showing the claws, labeled with Accessory digit, Bulb of heel, Interdigital claw, Medial claw, Lateral claw, Abaxial wall, White line, Sole, Wall, and Axial wall."
+    }
+  ],
+  "facts": [
+    "Lameness refers to the inability of a cow to properly use one or more limbs.",
+    "Lameness is one of the most significant economic problems in dairy farming.",
+    "Infectious lameness is caused by bacteria, especially Fusobacterium necrophorum.",
+    "Nutritional lameness and foot rot are common in cows deficient in zinc, selenium, and copper.",
+    "Injuries from sharp objects such as stones or hardware can penetrate the hoof wall, allowing pathogens to enter and cause infection.",
+    "Genetics can cause lameness as some cattle breeds are predisposed or prone to hoof problems.",
+    "Bovine foot anatomy includes the medial claw, lateral claw, interdigital space/claw, and accessory digits (dewclaws).",
+    "Structures of the bovine claw include the bulb of heel, sole, white line, axial wall, abaxial wall, and outer wall."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What condition in dairy cattle refers to the inability to properly use one or more limbs?",
+      "options": {
+        "A": "Lameness",
+        "B": "Mastitis",
+        "C": "Ketosis",
+        "D": "Milk fever"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which specific bacterium is noted as a primary infectious cause of lameness?",
+      "options": {
+        "A": "Fusobacterium necrophorum",
+        "B": "Staphylococcus aureus",
+        "C": "Escherichia coli",
+        "D": "Streptococcus agalactiae"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Foot rot is commonly associated with nutritional deficiencies in which group of trace minerals?",
+      "options": {
+        "A": "Zinc, selenium, and copper",
+        "B": "Calcium, phosphorus, and potassium",
+        "C": "Iron, magnesium, and sodium",
+        "D": "Iodine, cobalt, and manganese"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How do physical injuries contribute to the development of lameness in dairy cows?",
+      "options": {
+        "A": "Sharp objects like stones or hardware penetrate the hoof wall, allowing pathogens to enter and cause infection",
+        "B": "Excessive moisture wears down the accessory digits directly",
+        "C": "Trauma reduces calcium absorption in the small intestine",
+        "D": "Physical impact causes rapid genetic mutations in claw structure"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the genetic factor in lameness is TRUE according to the module?",
+      "options": {
+        "A": "Some breeds are genetically prone to hoof problems",
+        "B": "Hoof problems have no genetic or breed predisposition whatsoever",
+        "C": "All breeds of dairy cows share the exact same susceptibility to foot rot",
+        "D": "Genetic factors only affect the accessory digits, never the claws"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the bovine hoof diagram, which junction connects the sole to the hoof wall?",
+      "options": {
+        "A": "White line",
+        "B": "Bulb of heel",
+        "C": "Accessory digit",
+        "D": "Interdigital claw"
+      },
+      "answer": "A",
+      "image_id": "p18_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the anatomy diagram of the bovine hoof, what are the two main weight-bearing claws designated as?",
+      "options": {
+        "A": "Medial claw and lateral claw",
+        "B": "Proximal claw and distal claw",
+        "C": "Axial claw and abaxial claw",
+        "D": "Dorsal claw and ventral claw"
+      },
+      "answer": "A",
+      "image_id": "p18_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which part of the claw wall is situated towards the inner space between the two claws?",
+      "options": {
+        "A": "Axial wall",
+        "B": "Abaxial wall",
+        "C": "Accessory digit",
+        "D": "Sole"
+      },
+      "answer": "A",
+      "image_id": "p18_img1"
+    }
+  ]
+}
