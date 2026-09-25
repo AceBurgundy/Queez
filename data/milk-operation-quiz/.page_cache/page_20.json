@@ -1,0 +1,121 @@
+{
+  "page": 20,
+  "title": "Ruminant digestive system",
+  "text": "Nutrition | Mostly dependent on forages. | Mostly from concentrates, meat by-products.\nAnimal classification | Cattle, goat, sheep, deer, buffalo | Dogs, cats, pigs, horses and poultry\nStomach | Complex stomach consist of four compartments | Simple stomach\n\n[Illustration: Ruminant digestive system]\nLabels in diagram:\n- ESOPHAGUS\n- RETICULUM\n- RUMEN\n- OMASUM\n- ABOMASUM\n- SMALL INTESTINE\n- LARGE INTESTINE\n\nRuminant digestive system\n\nDairysquare - Dairy Farming Module\nPage 20",
+  "images": [
+    {
+      "id": "p20_img1",
+      "bbox": [
+        193,
+        168,
+        558,
+        832
+      ],
+      "label": "Ruminant digestive system diagram",
+      "description": "Anatomical diagram of a cow showing the internal pathway of the ruminant digestive system including the esophagus, rumen, reticulum, omasum, abomasum, small intestine, and large intestine."
+    }
+  ],
+  "facts": [
+    "Ruminant nutrition is mostly dependent on forages.",
+    "Non-ruminant/monogastric nutrition is mostly from concentrates and meat by-products.",
+    "Animals classified under ruminants include cattle, goat, sheep, deer, and buffalo.",
+    "Animals classified under simple-stomached (non-ruminant) animals include dogs, cats, pigs, horses, and poultry.",
+    "The ruminant stomach is a complex stomach consisting of four compartments.",
+    "Non-ruminants have a simple stomach.",
+    "The four compartments of the ruminant stomach shown in the digestive system diagram are the Rumen, Reticulum, Omasum, and Abomasum.",
+    "The pathway of the ruminant digestive tract includes the Esophagus, Rumen, Reticulum, Omasum, Abomasum, Small Intestine, and Large Intestine."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "According to the comparison table, what is the primary nutritional source that ruminants mostly depend on?",
+      "options": {
+        "A": "Concentrates and meat by-products",
+        "B": "Forages",
+        "C": "Processed grains exclusively",
+        "D": "Animal fats and fishmeal"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which group of animals is classified as having a complex stomach consisting of four compartments?",
+      "options": {
+        "A": "Dogs, cats, pigs, horses, and poultry",
+        "B": "Pigs, horses, and poultry only",
+        "C": "Cattle, goat, sheep, deer, and buffalo",
+        "D": "Dogs, cattle, horses, and cats"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How is the stomach of animals like dogs, cats, pigs, horses, and poultry described?",
+      "options": {
+        "A": "Complex stomach consisting of four compartments",
+        "B": "Simple stomach",
+        "C": "Two-chambered gizzard",
+        "D": "Three-compartment pseudoruminant stomach"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the table, which class of animals obtains nutrition mostly from concentrates and meat by-products?",
+      "options": {
+        "A": "Simple-stomached animals (such as dogs, cats, pigs, horses, and poultry)",
+        "B": "Ruminants (such as cattle, goat, and sheep)",
+        "C": "Buffalo and deer",
+        "D": "Only cattle and goats"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Based on the anatomical diagram of the ruminant digestive system, which of the following is NOT one of the four stomach compartments labeled?",
+      "options": {
+        "A": "Abomasum",
+        "B": "Omasum",
+        "C": "Large Intestine",
+        "D": "Reticulum"
+      },
+      "answer": "C",
+      "image_id": "p20_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the diagram of the ruminant digestive system, what structure connects the mouth/throat region directly to the stomach compartments?",
+      "options": {
+        "A": "Large intestine",
+        "B": "Small intestine",
+        "C": "Esophagus",
+        "D": "Abomasum"
+      },
+      "answer": "C",
+      "image_id": "p20_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding animal classifications on this page is TRUE?",
+      "options": {
+        "A": "Horses and pigs are classified as animals with a complex four-compartment stomach.",
+        "B": "Sheep, goats, and deer are classified as ruminants having a complex stomach.",
+        "C": "Poultry and dogs depend mostly on forages for their nutrition.",
+        "D": "Cattle and buffalo possess a simple stomach."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What are the four compartments that constitute the complex ruminant stomach as identified on this page?",
+      "options": {
+        "A": "Esophagus, Rumen, Small Intestine, Large Intestine",
+        "B": "Rumen, Reticulum, Omasum, Abomasum",
+        "C": "Crop, Proventriculus, Gizzard, Intestine",
+        "D": "Duodenum, Jejunum, Ileum, Colon"
+      },
+      "answer": "B",
+      "image_id": "p20_img1"
+    }
+  ]
+}
