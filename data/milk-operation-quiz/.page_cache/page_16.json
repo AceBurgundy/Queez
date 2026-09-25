@@ -1,0 +1,169 @@
+{
+  "page": 16,
+  "title": "Poll and Vision",
+  "text": "BLIND SPOT (BACK)\nMONOCULAR VISION\nMONOCULAR VISION\nBINOCULAR VISION\n\nPoll\n* Polled Livestock \u2013 refers to livestock without horns in species which are normally have horns.\n* Some breeds of cattle are naturally polled through selective breeding.\n\nPolled cattle\nHorned cattle\n\n* Disbudding and dehorning is done to horned animals and can be done as early as 1 month old.\n\nDesbudding using an electric dehorner\nA hot iron rod can be used to dehorn calves\n\nDewlap\n\nDairysquare - Dairy Farming Module\nPage 16",
+  "images": [
+    {
+      "id": "p16_img1",
+      "bbox": [
+        51,
+        206,
+        289,
+        826
+      ],
+      "label": "Cattle Field of Vision Diagram",
+      "description": "Diagram illustrating a cow's visual field showing binocular vision in front, wide monocular vision on the sides, and a blind spot directly behind its back."
+    },
+    {
+      "id": "p16_img2",
+      "bbox": [
+        403,
+        187,
+        603,
+        467
+      ],
+      "label": "Polled cattle",
+      "description": "Photograph of a polled (hornless) black cattle held with a halter."
+    },
+    {
+      "id": "p16_img3",
+      "bbox": [
+        399,
+        560,
+        603,
+        843
+      ],
+      "label": "Horned cattle",
+      "description": "Photograph of a horned black and white dairy cattle showing curved horns."
+    },
+    {
+      "id": "p16_img4",
+      "bbox": [
+        672,
+        131,
+        876,
+        508
+      ],
+      "label": "Desbudding using an electric dehorner",
+      "description": "Close-up photograph showing a person performing disbudding on a young calf using an electric dehorner tool."
+    },
+    {
+      "id": "p16_img5",
+      "bbox": [
+        671,
+        610,
+        876,
+        868
+      ],
+      "label": "Hot iron rod dehorning",
+      "description": "Photograph showing the use of a hot iron rod with rising smoke applied to a calf's horn bud area for dehorning."
+    }
+  ],
+  "facts": [
+    "A cow's field of vision includes binocular vision directly in front of its head.",
+    "A cow's field of vision includes wide monocular vision on both sides of its head.",
+    "A cow has a visual blind spot located directly behind it (at its back).",
+    "Polled livestock refers to livestock without horns in species that normally have horns.",
+    "Some breeds of cattle are naturally polled through selective breeding.",
+    "Disbudding and dehorning is performed on horned animals.",
+    "Disbudding and dehorning can be performed as early as 1 month of age.",
+    "An electric dehorner is an instrument used for disbudding calves.",
+    "A hot iron rod can be used to dehorn calves.",
+    "Dewlap is introduced as an anatomical term/topic following the section on poll."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What term refers to livestock without horns in species that normally possess horns?",
+      "options": {
+        "A": "Polled livestock",
+        "B": "Dewlap livestock",
+        "C": "Castrated livestock",
+        "D": "Feral livestock"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Through what process are some breeds of cattle naturally hornless (polled)?",
+      "options": {
+        "A": "Selective breeding",
+        "B": "Chemical disbudding",
+        "C": "Hormone therapy",
+        "D": "Nutritional restriction"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, as early as what age can disbudding and dehorning be performed on calves?",
+      "options": {
+        "A": "1 week old",
+        "B": "1 month old",
+        "C": "6 months old",
+        "D": "1 year old"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following tools is shown on the page being used specifically for disbudding a calf?",
+      "options": {
+        "A": "Electric dehorner",
+        "B": "Burdizzo clamp",
+        "C": "Barnes dehorner",
+        "D": "Elastrator band"
+      },
+      "answer": "A",
+      "image_id": "p16_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Based on the cattle vision diagram at the top of the page, where is a cow's blind spot located?",
+      "options": {
+        "A": "Directly in front of its nose",
+        "B": "Directly behind its back",
+        "C": "Directly above its forehead",
+        "D": "Along its left shoulder"
+      },
+      "answer": "B",
+      "image_id": "p16_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What type of vision does cattle have directly in front of their face according to the visual field diagram?",
+      "options": {
+        "A": "Binocular vision",
+        "B": "Monocular vision",
+        "C": "Panoramic vision only",
+        "D": "Blind spot"
+      },
+      "answer": "A",
+      "image_id": "p16_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement accurately describes the vision on the lateral sides of a cow?",
+      "options": {
+        "A": "The cow relies on monocular vision on both sides.",
+        "B": "The cow possesses binocular vision extending 360 degrees.",
+        "C": "Both sides represent blind spots.",
+        "D": "The lateral areas cannot detect moving objects."
+      },
+      "answer": "A",
+      "image_id": "p16_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What method is demonstrated in the lower right photograph to dehorn calves?",
+      "options": {
+        "A": "Using a hot iron rod",
+        "B": "Applying caustic dehorning paste",
+        "C": "Cutting with a wire saw",
+        "D": "Using a guillotine dehorner"
+      },
+      "answer": "A",
+      "image_id": "p16_img5"
+    }
+  ]
+}
