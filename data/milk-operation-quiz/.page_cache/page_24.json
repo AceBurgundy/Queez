@@ -1,0 +1,145 @@
+{
+  "page": 24,
+  "title": "Abomasum, Lower Digestive Tract, and Accessory Organs",
+  "text": "Abomasum \"true stomach\"\n\u25cb True, glandular stomach\n\u25cb Similar function to monogastric stomach that secretes gastric juices which aid in digestion.\n\nAbomasum of a cow\n\nLower digestive tract\n\u25cb Small intestine - is where proteins, fats, and carbohydrates that leave the abomasum are absorbed.\n\u25cb Large intestine - is where water primarily absorbed.\n\nAccessory organs\n\u25cb Liver - is a major site for metabolism of nutrients and also produces bile which is stored in the gall bladder.\n\u25cb Pancreas - secretes buffers and enzymes into the small intestine.\n\nDairysquare - Dairy Farming Module\nPage 24",
+  "images": [
+    {
+      "id": "p24_img1",
+      "bbox": [
+        134,
+        377,
+        314,
+        693
+      ],
+      "label": "Abomasum of a cow",
+      "description": "Internal glandular mucosal folds and lining of the bovine abomasum."
+    },
+    {
+      "id": "p24_img2",
+      "bbox": [
+        525,
+        404,
+        680,
+        658
+      ],
+      "label": "Liver",
+      "description": "Anatomical specimen photograph of a ruminant liver showing its lobes."
+    },
+    {
+      "id": "p24_img3",
+      "bbox": [
+        719,
+        415,
+        874,
+        700
+      ],
+      "label": "Pancreas",
+      "description": "Dissected tissue specimen of a cow pancreas."
+    }
+  ],
+  "facts": [
+    "The abomasum is known as the \"true stomach\".",
+    "The abomasum is a true, glandular stomach.",
+    "The abomasum has a similar function to a monogastric stomach, secreting gastric juices that aid in digestion.",
+    "The lower digestive tract includes the small intestine and large intestine.",
+    "The small intestine is where proteins, fats, and carbohydrates that leave the abomasum are absorbed.",
+    "The large intestine is where water is primarily absorbed.",
+    "Accessory organs of the digestive system include the liver and pancreas.",
+    "The liver is a major site for nutrient metabolism.",
+    "The liver produces bile, which is stored in the gall bladder.",
+    "The pancreas secretes buffers and enzymes into the small intestine."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "Which compartment of the ruminant stomach is referred to as the 'true stomach'?",
+      "options": {
+        "A": "Rumen",
+        "B": "Reticulum",
+        "C": "Omasum",
+        "D": "Abomasum"
+      },
+      "answer": "D",
+      "image_id": "p24_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is the abomasum described as having a similar function to a monogastric stomach?",
+      "options": {
+        "A": "It secretes gastric juices that aid in digestion",
+        "B": "It utilizes microbial fermentation to digest cellulose",
+        "C": "It primarily absorbs volatile fatty acids",
+        "D": "It grinds roughage through heavy muscular contractions"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In which part of the lower digestive tract are proteins, fats, and carbohydrates primarily absorbed after leaving the abomasum?",
+      "options": {
+        "A": "Rumen",
+        "B": "Small intestine",
+        "C": "Large intestine",
+        "D": "Gall bladder"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary function of the large intestine according to the text?",
+      "options": {
+        "A": "Metabolism of fat-soluble vitamins",
+        "B": "Absorption of water",
+        "C": "Production of bile salts",
+        "D": "Secretion of digestive enzymes and buffers"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Where is bile stored after being produced by the liver?",
+      "options": {
+        "A": "Pancreas",
+        "B": "Abomasum",
+        "C": "Gall bladder",
+        "D": "Duodenum"
+      },
+      "answer": "C",
+      "image_id": "p24_img2"
+    },
+    {
+      "type": "identification",
+      "question": "Which accessory organ secretes buffers and enzymes directly into the small intestine?",
+      "options": {
+        "A": "Pancreas",
+        "B": "Liver",
+        "C": "Gall bladder",
+        "D": "Spleen"
+      },
+      "answer": "A",
+      "image_id": "p24_img3"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the bovine digestive system is TRUE?",
+      "options": {
+        "A": "The abomasum is non-glandular and relies exclusively on mechanical grinding.",
+        "B": "The liver is a major site for the metabolism of nutrients.",
+        "C": "Proteins, fats, and carbohydrates are primarily absorbed in the large intestine.",
+        "D": "The pancreas produces and stores bile before releasing it into the rumen."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What secretions does the pancreas provide to aid digestive processes in the small intestine?",
+      "options": {
+        "A": "Hydrochloric acid and bile",
+        "B": "Buffers and enzymes",
+        "C": "Gastric juices and bile salts",
+        "D": "Mucus and microbial flora"
+      },
+      "answer": "B"
+    }
+  ]
+}
