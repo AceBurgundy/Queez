@@ -1,0 +1,166 @@
+{
+  "page": 25,
+  "title": "BASIC DAIRY NUTRITION",
+  "text": "BASIC DAIRY NUTRITION\n\nObjectives:\n1. To know the importance of good nutrition in dairy cattle.\n2. To learn the basic feed nutrients.\n\nImportance of improved nutrition in dairy animals:\n1. for breeding efficiency and reproduction\n- A well-nourished cattle increases libido in bulls and improves fertility of heifers and cows. Good nutrition also speeds up the recovery of the uterus after calving.\n2. for body maintenance\n- Nutrient requirements of animals are different and it is primarily impacted by weight, age, breed, physiological status, activity and environment.\n\nAge (Months) | 3 | 6 | 9 | 15 | 20\n% Mature Weight | 20% | 30% | 40% | 60% | 90%\nMature Weight (kg) | Target weight (kg) at different ages\n450 (Jersey) | 90 | 135 | 180 | 270 | 405\n500 (Holstein x Jersey) | 100 | 150 | 200 | 300 | 450\n550 (Holstein) | 110 | 165 | 220 | 330 | 495\n\n3. for higher milk yield.\n- High producing dairy cow requires a diet that supplies the nutrient needs for high milk production.\n\nCategory / Lactation period | Milk yield (L/day) | CP req | MjME/KgDM | First limiting factor | Best Feed\nEarly lactation | 15-22 | 18% | 11.0 | Protein | Forage plus high protein concentrate\nMid lactation | 12-15 | 16% | 10.8 | Protein & Energy | Forage plus high protein concentrate\nLate lactation | 8-12 | 14% | 10.6 | Energy & Protein | Forage/Roughage plus low volume of concentrate\nDry cow 12% | 0 | 12% | 10.4 | Energy | Forage/Roughage\nYoung Stock | 0 | 16-18% | 11.0 | Protein & Energy | Pasture/Forage plus high protein concentrate\n\nDairysquare - Dairy Farming Module Page 25",
+  "images": [
+    {
+      "id": "p25_img1",
+      "bbox": [
+        353,
+        230,
+        574,
+        769
+      ],
+      "label": "Target Weight at Different Ages Table",
+      "description": "Table detailing target body weights across various ages (3, 6, 9, 15, and 20 months) and percentage of mature weight (20% to 90%) for Jersey (450 kg mature weight), Holstein x Jersey (500 kg mature weight), and Holstein (550 kg mature weight)."
+    },
+    {
+      "id": "p25_img2",
+      "bbox": [
+        676,
+        12,
+        946,
+        988
+      ],
+      "label": "Nutritional Requirements and Feed Guidelines by Lactation Period",
+      "description": "Table showing dairy cattle categories and lactation periods with their corresponding milk yield (L/day), crude protein requirements (CP req), metabolizable energy (MjME/KgDM), first limiting factor, and recommended best feed."
+    }
+  ],
+  "facts": [
+    "The learning objectives of the section are to know the importance of good nutrition in dairy cattle and to learn the basic feed nutrients.",
+    "Improved nutrition is important for breeding efficiency and reproduction: it increases libido in bulls, improves fertility in heifers and cows, and speeds up uterine recovery after calving.",
+    "Nutrient requirements for body maintenance are primarily impacted by weight, age, breed, physiological status, activity, and environment.",
+    "At 3 months of age, cattle target weight is 20% of mature weight (90 kg for Jersey, 100 kg for Holstein x Jersey, 110 kg for Holstein).",
+    "At 6 months of age, cattle target weight is 30% of mature weight (135 kg for Jersey, 150 kg for Holstein x Jersey, 165 kg for Holstein).",
+    "At 9 months of age, cattle target weight is 40% of mature weight (180 kg for Jersey, 200 kg for Holstein x Jersey, 220 kg for Holstein).",
+    "At 15 months of age, cattle target weight is 60% of mature weight (270 kg for Jersey, 300 kg for Holstein x Jersey, 330 kg for Holstein).",
+    "At 20 months of age, cattle target weight is 90% of mature weight (405 kg for Jersey, 450 kg for Holstein x Jersey, 495 kg for Holstein).",
+    "Assumed mature weights are 450 kg for Jersey, 500 kg for Holstein x Jersey cross, and 550 kg for Holstein.",
+    "Improved nutrition is essential for higher milk yield because high-producing cows require diets supplying specific high-yield nutrient needs.",
+    "During early lactation, milk yield is 15-22 L/day, crude protein requirement is 18%, energy density is 11.0 MjME/KgDM, the first limiting factor is protein, and the best feed is forage plus high protein concentrate.",
+    "During mid lactation, milk yield is 12-15 L/day, crude protein requirement is 16%, energy density is 10.8 MjME/KgDM, the first limiting factors are protein & energy, and the best feed is forage plus high protein concentrate.",
+    "During late lactation, milk yield is 8-12 L/day, crude protein requirement is 14%, energy density is 10.6 MjME/KgDM, the first limiting factors are energy & protein, and the best feed is forage/roughage plus low volume of concentrate.",
+    "For a dry cow, milk yield is 0 L/day, crude protein requirement is 12%, energy density is 10.4 MjME/KgDM, the first limiting factor is energy, and the best feed is forage/roughage.",
+    "For young stock, milk yield is 0 L/day, crude protein requirement is 16-18%, energy density is 11.0 MjME/KgDM, the first limiting factors are protein & energy, and the best feed is pasture/forage plus high protein concentrate."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the crude protein (CP) requirement for a dairy cow in early lactation producing 15-22 L/day?",
+      "options": {
+        "A": "12%",
+        "B": "14%",
+        "C": "16%",
+        "D": "18%"
+      },
+      "answer": "D",
+      "image_id": "p25_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is identified as the first limiting factor in the diet of an early lactation dairy cow?",
+      "options": {
+        "A": "Protein",
+        "B": "Energy",
+        "C": "Fiber",
+        "D": "Calcium"
+      },
+      "answer": "A",
+      "image_id": "p25_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "At 15 months of age, what percentage of mature body weight should a dairy heifer reach?",
+      "options": {
+        "A": "30%",
+        "B": "40%",
+        "C": "60%",
+        "D": "90%"
+      },
+      "answer": "C",
+      "image_id": "p25_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the target weight for a purebred Holstein heifer (550 kg mature weight) at 9 months of age?",
+      "options": {
+        "A": "180 kg",
+        "B": "200 kg",
+        "C": "220 kg",
+        "D": "330 kg"
+      },
+      "answer": "C",
+      "image_id": "p25_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended 'Best Feed' for a dry cow according to the general feeding rules table?",
+      "options": {
+        "A": "Forage plus high protein concentrate",
+        "B": "Forage/Roughage",
+        "C": "Forage plus low volume of concentrate",
+        "D": "Pasture plus grain supplement"
+      },
+      "answer": "B",
+      "image_id": "p25_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the energy requirement (in MjME/KgDM) for Young Stock?",
+      "options": {
+        "A": "10.4",
+        "B": "10.6",
+        "C": "10.8",
+        "D": "11.0"
+      },
+      "answer": "D",
+      "image_id": "p25_img2"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the reproductive benefits of improved nutrition is TRUE?",
+      "options": {
+        "A": "Good nutrition delays uterine involution to conserve body energy.",
+        "B": "A well-nourished cattle increases libido in bulls and improves fertility of heifers and cows.",
+        "C": "Nutrient requirements are identical across all breeds and environments.",
+        "D": "Nutrition only affects milk yield and has no impact on breeding efficiency."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For a late lactation cow yielding 8-12 L/day, what is the required metabolizable energy density and the recommended feed?",
+      "options": {
+        "A": "11.0 MjME/KgDM; Forage plus high protein concentrate",
+        "B": "10.8 MjME/KgDM; Pasture only",
+        "C": "10.6 MjME/KgDM; Forage/Roughage plus low volume of concentrate",
+        "D": "10.4 MjME/KgDM; Forage/Roughage exclusively"
+      },
+      "answer": "C",
+      "image_id": "p25_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "At 20 months of age, what is the target body weight of a Jersey heifer with a mature weight of 450 kg?",
+      "options": {
+        "A": "270 kg",
+        "B": "405 kg",
+        "C": "450 kg",
+        "D": "495 kg"
+      },
+      "answer": "B",
+      "image_id": "p25_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which factors are stated as primarily impacting the nutrient requirements of dairy animals for body maintenance?",
+      "options": {
+        "A": "Weight, age, breed, physiological status, activity, and environment",
+        "B": "Coat color, horn length, and milking parlor design",
+        "C": "Only milk yield and lactation stage",
+        "D": "Time of calving and geographical altitude only"
+      },
+      "answer": "A"
+    }
+  ]
+}
