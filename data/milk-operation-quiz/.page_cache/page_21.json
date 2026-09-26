@@ -1,0 +1,129 @@
+{
+  "page": 21,
+  "title": "Digestion process of ruminants:",
+  "text": "ESOPHAGUS\nANUS\nCECUM\nSTOMACH\nSMALL INTESTINE\nLARGE INTESTINE\n\nNon-ruminant digestive system\n\nDigestion process of ruminants:\n\n1. Prehension and mastication\n  o Prehension is the act of gathering food using the tongue and lips and moves it into the mouth.\n  o Mastication is the chewing and grinding of the food into smaller particles.\n\nPrehension\nMastication\n\n2. Swallowing\n  o Ruminants swallow feed rapidly without chewing food adequately.\n  o Tongue helps guide the feed to the esophagus.\n  o Saliva of ruminants does not have enzymes unlike monogastrics.\n\nDairysquare - Dairy Farming Module Page 21",
+  "images": [
+    {
+      "id": "p21_img1",
+      "bbox": [
+        51,
+        69,
+        307,
+        934
+      ],
+      "label": "Non-ruminant digestive system",
+      "description": "Anatomical diagram of a non-ruminant digestive tract using the outline of a pig, showing the esophagus, stomach, small intestine, cecum, large intestine, and anus."
+    },
+    {
+      "id": "p21_img2",
+      "bbox": [
+        492,
+        142,
+        695,
+        497
+      ],
+      "label": "Prehension",
+      "description": "Photograph of a cow using its tongue to grasp and gather green forage."
+    },
+    {
+      "id": "p21_img3",
+      "bbox": [
+        493,
+        569,
+        694,
+        856
+      ],
+      "label": "Mastication",
+      "description": "Photograph of a cow chewing grass/feed in its mouth."
+    }
+  ],
+  "facts": [
+    "The non-ruminant digestive system diagram depicts the esophagus, stomach, small intestine, cecum, large intestine, and anus in a monogastric animal (pig).",
+    "Prehension is the act of gathering food using the tongue and lips and moving it into the mouth.",
+    "Mastication is the chewing and grinding of food into smaller particles.",
+    "During initial feeding, ruminants swallow feed rapidly without chewing food adequately.",
+    "The tongue helps guide feed into the esophagus during swallowing.",
+    "The saliva of ruminants does not contain enzymes, unlike that of monogastrics."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What term defines the act of gathering food using the tongue and lips and moving it into the mouth?",
+      "options": {
+        "A": "Mastication",
+        "B": "Prehension",
+        "C": "Deglutition",
+        "D": "Rumination"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What is the process of chewing and grinding food into smaller particles called?",
+      "options": {
+        "A": "Mastication",
+        "B": "Prehension",
+        "C": "Peristalsis",
+        "D": "Regurgitation"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does the saliva of ruminants fundamentally differ from the saliva of monogastrics?",
+      "options": {
+        "A": "Ruminant saliva contains high levels of salivary amylase.",
+        "B": "Ruminant saliva does not contain digestive enzymes.",
+        "C": "Ruminant saliva is highly acidic compared to monogastrics.",
+        "D": "Ruminants do not produce saliva during feeding."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which organ or anatomical structure assists in guiding feed directly to the esophagus during swallowing in ruminants?",
+      "options": {
+        "A": "Teeth",
+        "B": "Tongue",
+        "C": "Cecum",
+        "D": "Rumen"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding initial swallowing in ruminants is TRUE?",
+      "options": {
+        "A": "Ruminants chew feed completely and thoroughly before the first swallow.",
+        "B": "Ruminants swallow feed rapidly without chewing food adequately.",
+        "C": "Enzymes in ruminant saliva begin carbohydrate breakdown before swallowing.",
+        "D": "Feed bypasses the esophagus completely during swallowing."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the diagram labeled 'Non-ruminant digestive system', which organ is located immediately between the stomach and the cecum/large intestine?",
+      "options": {
+        "A": "Esophagus",
+        "B": "Small intestine",
+        "C": "Anus",
+        "D": "Rumen"
+      },
+      "answer": "B",
+      "image_id": "p21_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which animal outline is depicted in the diagram at the top of the page representing a non-ruminant digestive tract?",
+      "options": {
+        "A": "A cow",
+        "B": "A sheep",
+        "C": "A pig",
+        "D": "A goat"
+      },
+      "answer": "C",
+      "image_id": "p21_img1"
+    }
+  ]
+}
