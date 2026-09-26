@@ -1,0 +1,195 @@
+{
+  "page": 23,
+  "title": "Ruminant Stomach Compartments: Rumen, Reticulum, and Omasum",
+  "text": "Rumen \"paunch\"\no The first and largest part of the stomach of ruminants, which receives food or cud from the esophagus, partly digests it with the aid of bacteria, and passes it to the reticulum.\n\nThe rumen is lined with millions of papillae which houses billions of microorganisms\n\nReticulum \"honeycomb\"\no The reticulum is a pouch-like structure with tissues form a network similar to a honeycomb.\no Considered one organ with the rumen because of their similar functions and separated only by a small muscular fold of tissue.\no Trap foreign objects and collect small feed particles and move them into the omasum.\n\nMagnet is swallowed by cows to attract metal objects to prevent injuries in the reticulum.\n\nOmasum \"book\"\no A heavy, hard organ that has many folds or leaves.\no Main function is to grind further feed particles and absorb moisture.\n\nDairysquare - Dairy Farming Module\nPage 23",
+  "images": [
+    {
+      "id": "p23_img1",
+      "bbox": [
+        128,
+        246,
+        278,
+        510
+      ],
+      "label": "Rumen Wall Papillae Surface",
+      "description": "Macroscopic surface view showing carpet-like lining composed of millions of papillae on the rumen wall."
+    },
+    {
+      "id": "p23_img2",
+      "bbox": [
+        128,
+        574,
+        279,
+        755
+      ],
+      "label": "Microscopic View of Rumen Papillae",
+      "description": "Histological section showing cross-sections of papillae pointing into the rumen lumen where microorganisms reside."
+    },
+    {
+      "id": "p23_img3",
+      "bbox": [
+        450,
+        269,
+        593,
+        508
+      ],
+      "label": "Reticulum Honeycomb Lining",
+      "description": "Gross anatomical photograph showing the distinctive polygonal, honeycomb-like reticular mucosal folds."
+    },
+    {
+      "id": "p23_img4",
+      "bbox": [
+        492,
+        558,
+        577,
+        775
+      ],
+      "label": "Rumen/Reticular Magnet",
+      "description": "Cylindrical cow magnet used to attract ingested metal wire and nails to protect the reticulum."
+    },
+    {
+      "id": "p23_img5",
+      "bbox": [
+        725,
+        250,
+        924,
+        467
+      ],
+      "label": "Intact Omasum with Folds",
+      "description": "Gross specimen of the omasum showing its spherical, compact structure packed with internal leaf-like laminae."
+    },
+    {
+      "id": "p23_img6",
+      "bbox": [
+        774,
+        521,
+        923,
+        819
+      ],
+      "label": "Omasal Leaves / Folds",
+      "description": "Close-up photograph showing the multiple layered, book-like folds (leaves) of the omasum."
+    }
+  ],
+  "facts": [
+    "The rumen is commonly known as the 'paunch'.",
+    "The rumen is the first and largest compartment of the ruminant stomach.",
+    "The rumen receives food or cud directly from the esophagus.",
+    "The rumen partly digests food with the aid of bacteria and passes it to the reticulum.",
+    "The rumen is lined with millions of papillae.",
+    "The papillae of the rumen house billions of microorganisms.",
+    "The reticulum is commonly known as the 'honeycomb'.",
+    "The reticulum is a pouch-like structure with tissues forming a network resembling a honeycomb.",
+    "The reticulum is considered one organ with the rumen due to their similar functions.",
+    "The rumen and reticulum are separated only by a small muscular fold of tissue.",
+    "Functions of the reticulum include trapping foreign objects, collecting small feed particles, and moving them into the omasum.",
+    "A magnet is administered (swallowed) to cows to attract metal objects and prevent traumatic injuries (hardware disease) in the reticulum.",
+    "The omasum is commonly known as the 'book'.",
+    "The omasum is a heavy, hard organ characterized by many internal folds or leaves.",
+    "The main functions of the omasum are to grind feed particles further and absorb moisture."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "Which compartment of the ruminant stomach is known as the 'paunch' and constitutes the first and largest part?",
+      "options": {
+        "A": "Rumen",
+        "B": "Reticulum",
+        "C": "Omasum",
+        "D": "Abomasum"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What structures line the rumen in their millions to provide a habitat for billions of microorganisms?",
+      "options": {
+        "A": "Cilia",
+        "B": "Papillae",
+        "C": "Honeycomb ridges",
+        "D": "Omasal laminae"
+      },
+      "answer": "B",
+      "image_id": "p23_img1"
+    },
+    {
+      "type": "identification",
+      "question": "Which ruminant stomach compartment has a tissue network that visually resembles a honeycomb?",
+      "options": {
+        "A": "Abomasum",
+        "B": "Omasum",
+        "C": "Reticulum",
+        "D": "Duodenum"
+      },
+      "answer": "C",
+      "image_id": "p23_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What separates the rumen from the reticulum despite their shared functions?",
+      "options": {
+        "A": "A large cartilaginous valve",
+        "B": "The pyloric sphincter",
+        "C": "A small muscular fold of tissue",
+        "D": "A thick fibrous septum"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is a cylindrical magnet swallowed by cows?",
+      "options": {
+        "A": "To stimulate peristaltic contraction in the rumen",
+        "B": "To attract ingested metal objects and prevent injuries in the reticulum",
+        "C": "To grind coarse feed particles inside the omasum",
+        "D": "To increase microbial fermentation efficiency in the paunch"
+      },
+      "answer": "B",
+      "image_id": "p23_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are the primary functions of the reticulum regarding ingested feed?",
+      "options": {
+        "A": "Secreting gastric enzymes and hydrochloric acid",
+        "B": "Absorbing large amounts of volatile fatty acids only",
+        "C": "Trapping foreign objects, collecting small feed particles, and moving them into the omasum",
+        "D": "Grinding hard grains and removing all fluid content"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Which stomach compartment is commonly nicknamed the 'book' due to its numerous internal folds or leaves?",
+      "options": {
+        "A": "Rumen",
+        "B": "Reticulum",
+        "C": "Omasum",
+        "D": "Abomasum"
+      },
+      "answer": "C",
+      "image_id": "p23_img6"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are the two main physiological functions of the omasum?",
+      "options": {
+        "A": "Digesting food via hydrochloric acid and passing it to the duodenum",
+        "B": "Grinding feed particles further and absorbing moisture",
+        "C": "Fermenting fiber using anaerobic bacteria and regurgitating cud",
+        "D": "Trapping hardware and filtering liquid into the reticulum"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the rumen and reticulum is TRUE according to the module?",
+      "options": {
+        "A": "The rumen and reticulum are considered one organ because of their similar functions.",
+        "B": "The reticulum receives unchewed feed directly from the esophagus before the rumen.",
+        "C": "The rumen is a hard, heavy organ characterized by numerous leaves.",
+        "D": "The reticulum is completely isolated from the rumen by a thick bone plate."
+      },
+      "answer": "A"
+    }
+  ]
+}
