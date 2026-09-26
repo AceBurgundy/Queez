@@ -1,0 +1,141 @@
+{
+  "page": 22,
+  "title": "Rumen-reticulum junction, Rumination, and Four stomach compartments",
+  "text": "3. Rumen-reticulum junction\n\u25cb Main function is to prevent large feed particles to pass through the 3rd chamber.\n\u25cb Helps in pushing the food back to the esophagus for rumination.\n\u25cb Reticulum traps foreign objects such as nails and other hardware.\n\n4. Rumination\n\u25cb Once the cow is done eating, it lies down and begins to ruminate.\n\u25cb Rumination or cud-chewing is the process by which the cow regurgitates previously consumed feed and chews further.\n\u25cb Regurgitation - is a normal physiological process for cows for digesting food.\n\u25cb Cud - partly digested food returned from the first stomach of ruminants to the mouth for further chewing.\n\n[Photo: Appearance of cud]\n[Photo: Cows ruminating]\n\nFour stomach compartments:\n[Anatomical illustration of a cow showing the four stomach compartments: Rumen, Reticulum, Omasum, Abomasum]\n\nDairysquare - Dairy Farming Module Page 22",
+  "images": [
+    {
+      "id": "p22_img1",
+      "bbox": [
+        318,
+        112,
+        518,
+        518
+      ],
+      "label": "Appearance of cud",
+      "description": "A close-up photograph showing a gloved hand holding a clump of chewed, fibrous regurgitated feed (cud) near the muzzle of a cow."
+    },
+    {
+      "id": "p22_img2",
+      "bbox": [
+        318,
+        521,
+        518,
+        920
+      ],
+      "label": "Cows ruminating",
+      "description": "A photograph of cows lying down in a green pasture ruminating (chewing their cud)."
+    },
+    {
+      "id": "p22_img3",
+      "bbox": [
+        595,
+        161,
+        920,
+        835
+      ],
+      "label": "Four stomach compartments",
+      "description": "An anatomical illustration of a dairy cow showing the internal arrangement and labels of the four stomach compartments: Rumen, Reticulum, Omasum, and Abomasum."
+    }
+  ],
+  "facts": [
+    "The main function of the rumen-reticulum junction is to prevent large feed particles from passing through to the 3rd chamber.",
+    "The rumen-reticulum junction helps in pushing food back to the esophagus for rumination.",
+    "The reticulum traps foreign objects such as nails and other hardware.",
+    "Once a cow is done eating, it lies down and begins to ruminate.",
+    "Rumination or cud-chewing is the process by which a cow regurgitates previously consumed feed and chews it further.",
+    "Regurgitation is a normal physiological process for cows for digesting food.",
+    "Cud is defined as partly digested food returned from the first stomach of ruminants to the mouth for further chewing.",
+    "The four stomach compartments of a cow are the Rumen, Reticulum, Omasum, and Abomasum."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary function of the rumen-reticulum junction?",
+      "options": {
+        "A": "To secrete hydrochloric acid and gastric enzymes",
+        "B": "To absorb all remaining moisture and volatile fatty acids",
+        "C": "To prevent large feed particles from passing through to the 3rd chamber",
+        "D": "To permanently store foreign hardware such as stones and metal objects"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Which compartment of the ruminant stomach is responsible for trapping foreign objects such as nails and hardware?",
+      "options": {
+        "A": "Abomasum",
+        "B": "Reticulum",
+        "C": "Omasum",
+        "D": "Rumen"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What behavior does a cow typically exhibit once it is done eating?",
+      "options": {
+        "A": "It stands under direct sunlight and drinks large amounts of water immediately",
+        "B": "It runs around the pasture to stimulate intestinal peristalsis",
+        "C": "It lies down and begins to ruminate",
+        "D": "It falls into deep sleep without chewing or regurgitating"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "What is the technical definition of 'cud' according to the module?",
+      "options": {
+        "A": "Completely digested fecal matter ready for excretion",
+        "B": "Fresh unchewed feed stored temporarily in the abomasum",
+        "C": "Enzymatically broken-down liquid passing into the small intestine",
+        "D": "Partly digested food returned from the first stomach of ruminants to the mouth for further chewing"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding regurgitation in dairy cows is correct?",
+      "options": {
+        "A": "Regurgitation is a normal physiological process for cows for digesting food.",
+        "B": "Regurgitation indicates acute digestive illness and requires immediate veterinary intervention.",
+        "C": "Regurgitation only happens when hardware pierces the reticulum.",
+        "D": "Regurgitation prevents nutrients from entering the first stomach chamber."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Besides preventing large feed particles from passing to the 3rd chamber, how does the rumen-reticulum junction assist in rumination?",
+      "options": {
+        "A": "It secretes saliva directly into the mouth",
+        "B": "It helps in pushing the food back to the esophagus for rumination",
+        "C": "It grinds hardware into fine dust particles",
+        "D": "It rapidly cools down the ingested feed"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Based on the diagram titled 'Four stomach compartments', which of the following lists all four labeled compartments?",
+      "options": {
+        "A": "Rumen, Reticulum, Cecum, Colon",
+        "B": "Rumen, Reticulum, Omasum, Abomasum",
+        "C": "Cardia, Fundus, Pylorus, Duodenum",
+        "D": "Crop, Proventriculus, Gizzard, Rumen"
+      },
+      "answer": "B",
+      "image_id": "p22_img3"
+    },
+    {
+      "type": "identification",
+      "question": "What is the alternate common term used for rumination?",
+      "options": {
+        "A": "Hardware trapping",
+        "B": "Salivation",
+        "C": "Acidosis",
+        "D": "Cud-chewing"
+      },
+      "answer": "D"
+    }
+  ]
+}
