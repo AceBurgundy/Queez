@@ -1,0 +1,153 @@
+{
+  "page": 28,
+  "title": "FORAGE AND PASUTE ESTABLISHMENT",
+  "text": "FORAGE AND PASUTE ESTABLISHMENT\n\nObjectives\n1. Identify and familiarize the recommended forage species in dairy farming;\n2. Learn the technical propagation methods of grasses and legumes;\n3. Identify noxious weeds in tropical pasture;\n4. Identify other application of forage.\n\nRecommended grasses for dairy cattle:\n1. Mulatto II (Brachiaria decumbens x B. ruziziensis x B. brizantha)\n2. Napier (Pennisetum purpureum)\n3. Corn (Zea mays)\n\nRecommended grasses for dairy cattle:\n1. Rensonii (Desmodium cinereum)\n2. Madre de cacao (Gliricidia sepium)\n3. Ipil-ipil (Leucaena leucocephala)\n\nFeed Quality | Mainly old grass: Low | Mainly young grass: Medium | Young grass & legume: High\nDigestibility of Feed | Mainly old grass: Low | Mainly young grass: Moderate | Young grass & legume: High\nBreakdown rate in the rumen | Mainly old grass: Slow | Mainly young grass: Moderate | Young grass & legume: Fast\nDaily DM feed intake as % of body weight | Mainly old grass: Less than 1.5% | Mainly young grass: 1.5%- 2.5% | Young grass & legume: 2.5%- 3.5%\nWhich will give..... | Mainly old grass: POOR animal production | Mainly young grass: MODERATE animal production | Young grass & legume: GOOD animal production\n\nHow to establish forages?\nA. Land Preparation\n1. Plowing - helps loosen the soil and eliminate weeds and most of the residues of the previous crop.\n\nDairysquare \u2013 Dairy Farming Module\nPage 28",
+  "images": [
+    {
+      "id": "p28_img1",
+      "bbox": [
+        773,
+        220,
+        928,
+        510
+      ],
+      "label": "Walking tractor / power tiller plowing soil",
+      "description": "A walk-behind mechanical cultivator or power tiller being operated in a field to plow and loosen the soil."
+    },
+    {
+      "id": "p28_img2",
+      "bbox": [
+        774,
+        555,
+        930,
+        783
+      ],
+      "label": "Tractor plowing field with agricultural implement",
+      "description": "A green farm tractor pulling a multi-disc or harrow plow implement across an open agricultural field for land preparation."
+    }
+  ],
+  "facts": [
+    "The chapter or section title on Page 28 is 'FORAGE AND PASUTE ESTABLISHMENT'.",
+    "The four learning objectives are: 1. Identify and familiarize recommended forage species in dairy farming; 2. Learn technical propagation methods of grasses and legumes; 3. Identify noxious weeds in tropical pasture; 4. Identify other application of forage.",
+    "Recommended grasses for dairy cattle include Mulatto II (Brachiaria decumbens x B. ruziziensis x B. brizantha), Napier (Pennisetum purpureum), and Corn (Zea mays).",
+    "The page lists forage legumes/trees (under the heading 'Recommended grasses for dairy cattle'): Rensonii (Desmodium cinereum), Madre de cacao (Gliricidia sepium), and Ipil-ipil (Leucaena leucocephala).",
+    "Mainly old grass has low feed quality, low digestibility, slow rumen breakdown rate, daily dry matter (DM) feed intake of less than 1.5% of body weight, and results in poor animal production.",
+    "Mainly young grass has medium feed quality, moderate digestibility, moderate rumen breakdown rate, daily dry matter (DM) feed intake of 1.5% to 2.5% of body weight, and results in moderate animal production.",
+    "A combination of young grass & legume provides high feed quality, high digestibility, fast breakdown rate in the rumen, daily dry matter (DM) feed intake of 2.5% to 3.5% of body weight, and results in good animal production.",
+    "The first step of forage establishment under Land Preparation is plowing.",
+    "Plowing helps loosen the soil and eliminate weeds as well as most residues of the previous crop."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the scientific name of Napier grass as listed on the page?",
+      "options": {
+        "A": "Pennisetum purpureum",
+        "B": "Zea mays",
+        "C": "Desmodium cinereum",
+        "D": "Gliricidia sepium"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Mulatto II is a hybrid derived from which botanical cross?",
+      "options": {
+        "A": "Pennisetum purpureum x Pennisetum glaucum",
+        "B": "Brachiaria decumbens x B. ruziziensis x B. brizantha",
+        "C": "Desmodium cinereum x Leucaena leucocephala",
+        "D": "Gliricidia sepium x Zea mays"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the feed comparison table, what is the expected daily dry matter (DM) feed intake as a percentage of body weight for cattle fed 'Young grass & legume'?",
+      "options": {
+        "A": "Less than 1.5%",
+        "B": "1.0% - 1.8%",
+        "C": "1.5% - 2.5%",
+        "D": "2.5% - 3.5%"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which forage diet results in 'POOR animal production' due to low digestibility and a slow rumen breakdown rate?",
+      "options": {
+        "A": "Young grass & legume",
+        "B": "Mainly young grass",
+        "C": "Mainly old grass",
+        "D": "Fresh chopped corn"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary purpose of plowing in forage land preparation?",
+      "options": {
+        "A": "To compress the topsoil and create hard ground for seeds",
+        "B": "To loosen the soil and eliminate weeds and most crop residues",
+        "C": "To inoculate the pasture with nitrogen-fixing bacteria",
+        "D": "To flood the field to prevent pest reproduction"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the scientific name of Madre de cacao?",
+      "options": {
+        "A": "Desmodium cinereum",
+        "B": "Leucaena leucocephala",
+        "C": "Gliricidia sepium",
+        "D": "Brachiaria decumbens"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which common name corresponds to the forage species 'Desmodium cinereum'?",
+      "options": {
+        "A": "Napier",
+        "B": "Rensonii",
+        "C": "Ipil-ipil",
+        "D": "Corn"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding 'Mainly young grass' feed characteristics is TRUE?",
+      "options": {
+        "A": "It provides medium feed quality, moderate digestibility, and moderate animal production.",
+        "B": "It results in poor animal production with a daily DM intake below 1.5%.",
+        "C": "It exhibits a fast breakdown rate in the rumen and high digestibility.",
+        "D": "It results in good animal production with a daily DM intake between 2.5% and 3.5%."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "What is the scientific name of Ipil-ipil as stated in the forage species list?",
+      "options": {
+        "A": "Leucaena leucocephala",
+        "B": "Gliricidia sepium",
+        "C": "Desmodium cinereum",
+        "D": "Pennisetum purpureum"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the illustrated field operations shown at the bottom of the page (images p28_img1 and p28_img2), which agricultural activity is demonstrated?",
+      "options": {
+        "A": "Direct seeding of legume seeds",
+        "B": "Plowing for land preparation",
+        "C": "Harvesting silage with a forage chopper",
+        "D": "Spraying herbicide to control noxious weeds"
+      },
+      "answer": "B",
+      "image_id": "p28_img2"
+    }
+  ]
+}
