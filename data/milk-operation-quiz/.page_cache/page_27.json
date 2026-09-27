@@ -1,0 +1,123 @@
+{
+  "page": 27,
+  "title": "Vitamins, Minerals, and Water Requirements",
+  "text": "4. Vitamins - vitamins are organic compounds needed in minute amounts that are essential for life. In normal condition micro-organism synthesize vitamins K and B-complex in the rumen.\nVitamin A - comes primarily from B-carotene which is abundant in fresh forages.\nVitamin D - is necessary for the absorption and metabolism of calcium and phosphorus. Cholecalciferol (D3) can be formed by the solar irradiation of the skin.\nVitamin E - is very high in fresh forages.\n\n5. Minerals - Needed for bone and teeth formation, hormone actions, enzyme activation and water balance and milk production.\n\nMacro minerals | Micro minerals\nCalcium | Iron\nPhosphorous | Copper\nMagnesium | Manganese\nSodium | Zinc\nChlorine | Iodine\nSulfur | Cobalt\nPotassium | Selenium\n\n6. Water - is required in the largest amount by the dairy cow. A lactating cow needs at least 85-90 liters of water every day.\n\nProvide dairy cow ad libitum of water\n\nDairysquare - Dairy Farming Module Page 27",
+  "images": [
+    {
+      "id": "p27_img1",
+      "bbox": [
+        525,
+        323,
+        811,
+        672
+      ],
+      "label": "Provide dairy cow ad libitum of water",
+      "description": "Cattle drinking water from a blue trough outdoors under trees, labeled 'Provide dairy cow ad libitum of water'."
+    }
+  ],
+  "facts": [
+    "Vitamins are organic compounds needed in minute amounts that are essential for life.",
+    "Under normal conditions, microorganisms synthesize vitamins K and B-complex in the rumen.",
+    "Vitamin A comes primarily from B-carotene (beta-carotene), which is abundant in fresh forages.",
+    "Vitamin D is necessary for the absorption and metabolism of calcium and phosphorus.",
+    "Cholecalciferol (Vitamin D3) can be formed by the solar irradiation of the skin.",
+    "Vitamin E is very high in fresh forages.",
+    "Minerals are needed for bone and teeth formation, hormone actions, enzyme activation, water balance, and milk production.",
+    "Macro minerals listed include Calcium, Phosphorous, Magnesium, Sodium, Chlorine, Sulfur, and Potassium.",
+    "Micro minerals listed include Iron, Copper, Manganese, Zinc, Iodine, Cobalt, and Selenium.",
+    "Water is required in the largest amount by the dairy cow.",
+    "A lactating dairy cow needs at least 85-90 liters of water every day.",
+    "Dairy cows should be provided water ad libitum."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which vitamins are synthesized by microorganisms in the rumen under normal conditions?",
+      "options": {
+        "A": "Vitamins A and D",
+        "B": "Vitamins K and B-complex",
+        "C": "Vitamins C and E",
+        "D": "Vitamins A and E"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What compound found abundantly in fresh forages serves as the primary source of Vitamin A?",
+      "options": {
+        "A": "Cholecalciferol",
+        "B": "B-carotene",
+        "C": "Tocopherol",
+        "D": "Cobalt"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which vitamin is essential for the absorption and metabolism of calcium and phosphorus, and can be formed as cholecalciferol (D3) by solar irradiation of the skin?",
+      "options": {
+        "A": "Vitamin A",
+        "B": "Vitamin B-complex",
+        "C": "Vitamin D",
+        "D": "Vitamin K"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is classified as a macro mineral in dairy cattle nutrition according to the table?",
+      "options": {
+        "A": "Copper",
+        "B": "Manganese",
+        "C": "Potassium",
+        "D": "Selenium"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which mineral from the table is categorized as a micro mineral?",
+      "options": {
+        "A": "Magnesium",
+        "B": "Sulfur",
+        "C": "Chlorine",
+        "D": "Cobalt"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How much water does a lactating dairy cow require each day at minimum?",
+      "options": {
+        "A": "20-30 liters",
+        "B": "45-50 liters",
+        "C": "85-90 liters",
+        "D": "120-150 liters"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What nutrient is required in the largest amount by the dairy cow?",
+      "options": {
+        "A": "Water",
+        "B": "Calcium",
+        "C": "Vitamin A",
+        "D": "Crude protein"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding water provision for dairy cows shown in the illustration is correct?",
+      "options": {
+        "A": "Water must be restricted to twice a day after feeding.",
+        "B": "Water should be provided to dairy cows ad libitum (freely available).",
+        "C": "Lactating cows do not require more than 40 liters of water daily.",
+        "D": "Water is required in smaller quantities than macro minerals."
+      },
+      "answer": "B",
+      "image_id": "p27_img1"
+    }
+  ]
+}
