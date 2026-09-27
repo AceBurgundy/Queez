@@ -1,0 +1,157 @@
+{
+  "page": 29,
+  "title": "Land Preparation (Continued) and Planting",
+  "text": "2. Harrowing - helps to provide finer seed bed and destroy emerging weeds.\n\n3. Furrowing - helps to provide irrigation to the plants\n\nB. Planting\n1. Seeds - most legumes can be reliably established from seed.\n\ni. Proper caring of seeds:\na) Seeds may die quickly if not dried and stored properly and keep them dry.\nb) For every percentage increase in seeds moisture above 10%, the forage life of seeds halved.\nc) Conduct germination test to determine the quality of seeds.\nd) For seeds with hard seed coats, use scarification techniques or soak the seeds in hot water for 20 seconds before planting.\ne) Seeds should not be sown deeper than 1 cm or they cannot emerge.\n\n2. Vegetative materials - easy and reliable in establishing grasses. Start with small nursery areas and plant out at the start of the wet season.\n\nDairysquare - Dairy Farming Module\nPage 29",
+  "images": [
+    {
+      "id": "p29_img1",
+      "bbox": [
+        88,
+        297,
+        237,
+        699
+      ],
+      "label": "Tractor Harrowing Field",
+      "description": "A tractor pulling a harrowing implement across a field to break up soil clods and destroy emerging weeds to prepare a fine seedbed."
+    },
+    {
+      "id": "p29_img2",
+      "bbox": [
+        291,
+        299,
+        444,
+        700
+      ],
+      "label": "Furrowed Agricultural Field",
+      "description": "Neat, parallel furrows created across an open field designed to facilitate proper irrigation for crops."
+    },
+    {
+      "id": "p29_img3",
+      "bbox": [
+        763,
+        214,
+        946,
+        458
+      ],
+      "label": "Nursery Grass Plot",
+      "description": "A small nursery plot of emerging forage grasses established with a sprinkler irrigation riser in the background."
+    },
+    {
+      "id": "p29_img4",
+      "bbox": [
+        762,
+        489,
+        946,
+        788
+      ],
+      "label": "Field Planting from Vegetative Materials",
+      "description": "Farm workers hand-planting vegetative grass materials in rows along a cultivated field at the onset of the wet season."
+    }
+  ],
+  "facts": [
+    "Harrowing helps provide a finer seedbed and destroy emerging weeds.",
+    "Furrowing helps provide irrigation to the plants.",
+    "Most legumes can be reliably established from seed.",
+    "Seeds may die quickly if not dried and stored properly in dry conditions.",
+    "For every percentage increase in seed moisture above 10%, the storage life of seeds is halved.",
+    "A germination test should be conducted to determine seed quality.",
+    "For seeds with hard seed coats, scarification techniques or soaking in hot water for 20 seconds before planting should be used.",
+    "Seeds should not be sown deeper than 1 cm or they cannot emerge.",
+    "Vegetative materials are easy and reliable in establishing grasses.",
+    "When using vegetative materials, farmers should start with small nursery areas and plant out at the start of the wet season."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary purpose of harrowing during land preparation?",
+      "options": {
+        "A": "To create deep irrigation channels for water flow",
+        "B": "To provide a finer seedbed and destroy emerging weeds",
+        "C": "To compact loose soil to retain high moisture levels",
+        "D": "To bury mature weeds deep beneath the topsoil"
+      },
+      "answer": "B",
+      "image_id": "p29_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which land preparation practice specifically helps to provide irrigation to the plants?",
+      "options": {
+        "A": "Plowing",
+        "B": "Harrowing",
+        "C": "Furrowing",
+        "D": "Scarification"
+      },
+      "answer": "C",
+      "image_id": "p29_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does seed moisture content above 10% affect seed storage life?",
+      "options": {
+        "A": "Each 1% increase reduces the storage life by 10%",
+        "B": "Each 1% increase cuts the storage life in half",
+        "C": "Each 1% increase doubles the dormancy period",
+        "D": "Each 1% increase halves the germination rate immediately"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For seeds with hard seed coats, how long should they be soaked in hot water before planting?",
+      "options": {
+        "A": "10 seconds",
+        "B": "20 seconds",
+        "C": "60 seconds",
+        "D": "5 minutes"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the maximum recommended sowing depth for seeds to ensure proper emergence?",
+      "options": {
+        "A": "0.5 cm",
+        "B": "1 cm",
+        "C": "2.5 cm",
+        "D": "5 cm"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which type of forage plant is typically established easily and reliably using vegetative materials?",
+      "options": {
+        "A": "Legumes",
+        "B": "Grasses",
+        "C": "Cereals",
+        "D": "Brassicas"
+      },
+      "answer": "B",
+      "image_id": "p29_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When is the optimal time to transplant vegetative planting materials out into the main field?",
+      "options": {
+        "A": "At the onset of the dry season",
+        "B": "During mid-summer drought periods",
+        "C": "At the start of the wet season",
+        "D": "Immediately following the first heavy frost"
+      },
+      "answer": "C",
+      "image_id": "p29_img4"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding legume seed care and establishment is TRUE?",
+      "options": {
+        "A": "Seeds should be sown at a depth of at least 3 cm to protect them from heat.",
+        "B": "Most legumes can be reliably established from seed.",
+        "C": "Moisture levels above 10% prolong seed viability significantly.",
+        "D": "Hard-coated seeds should be boiled for 10 minutes prior to planting."
+      },
+      "answer": "B"
+    }
+  ]
+}
