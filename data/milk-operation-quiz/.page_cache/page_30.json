@@ -1,0 +1,144 @@
+{
+  "page": 30,
+  "title": "Planting characteristics of grasses and legumes & Sowing rate",
+  "text": "Planting characteristics of grasses:\n\nForage | Distance between Furrows | Distance bet. Plant | Planting Material\nNapier | 70 cm | 40 cm | Stem cutting\nParagrass | 40 cm | 40 cm | Root stock/ stem cutting\nSignal Grass | 50 cm | 40 cm | Root Stocks/Seeds\nGuinea Grass | 50 cm | 40 cm | Root Stock/Seeds\n\nPlanting characteristics of legumes:\n\nForage | Distance between Furrows | Distance between Plant | Planting Material\nKudzu | Broadcast seeds | Seeds\nCentrosema | Broadcast seeds | Seeds\nFlemingia | 50 cm x 30 cm (hedge row) | Seeds\nIndigofera | 50 cm x 30 cm (hedge row) | Seeds\nDesmodium | 50 cm x 30 cm (hedge row) | Seeds\nCalliandra | 50 cm x 30 cm (hedge row) | Seedlings\nIpil-Ipil | 50 cm x 30 cm (hedge row) | Seedlings\nMadre Cacao | 50 cm x 30 cm (hedge row) | Sticks/ Posts\n\nSowing rate:\n[Photo: Good sowing rate]\n[Photo: Very high sowing rate]\n\nDairysquare - Dairy Farming Module Page 30",
+  "images": [
+    {
+      "id": "p30_img1",
+      "bbox": [
+        614,
+        168,
+        850,
+        482
+      ],
+      "label": "Good sowing rate",
+      "description": "Hand placed beside emerging pasture grass showing ideal plant spacing and density under a good sowing rate."
+    },
+    {
+      "id": "p30_img2",
+      "bbox": [
+        614,
+        519,
+        847,
+        835
+      ],
+      "label": "Very high sowing rate",
+      "description": "Hand resting over densely packed, crowded seedlings demonstrating an excessively dense or very high sowing rate."
+    }
+  ],
+  "facts": [
+    "Napier grass requires 70 cm distance between furrows, 40 cm distance between plants, and uses stem cutting as planting material.",
+    "Paragrass requires 40 cm distance between furrows, 40 cm distance between plants, and uses root stock or stem cutting as planting material.",
+    "Signal grass requires 50 cm distance between furrows, 40 cm distance between plants, and uses root stocks or seeds as planting material.",
+    "Guinea grass requires 50 cm distance between furrows, 40 cm distance between plants, and uses root stock or seeds as planting material.",
+    "All four listed grasses (Napier, Paragrass, Signal Grass, Guinea Grass) share the same distance between plants of 40 cm.",
+    "Kudzu and Centrosema legumes are sown by broadcasting seeds.",
+    "Flemingia, Indigofera, and Desmodium legumes are planted in hedge rows at 50 cm x 30 cm using seeds.",
+    "Calliandra is planted at 50 cm x 30 cm (hedge row) using seedlings.",
+    "Ipil-Ipil is planted at 50 cm x 30 cm (hedge row) using seedlings.",
+    "Madre Cacao is planted at 50 cm x 30 cm (hedge row) using sticks or posts as planting material.",
+    "A visual comparison illustrates the seedling density differences between a 'Good sowing rate' and a 'Very high sowing rate'."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended distance between furrows when planting Napier grass?",
+      "options": {
+        "A": "70 cm",
+        "B": "50 cm",
+        "C": "40 cm",
+        "D": "30 cm"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the uniform distance between individual plants recommended for Napier, Paragrass, Signal Grass, and Guinea Grass?",
+      "options": {
+        "A": "30 cm",
+        "B": "40 cm",
+        "C": "50 cm",
+        "D": "70 cm"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which planting material is specifically used for propagating Madre Cacao?",
+      "options": {
+        "A": "Seeds",
+        "B": "Seedlings",
+        "C": "Sticks/ Posts",
+        "D": "Root stocks"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which planting method/spacing is indicated for the forage legumes Kudzu and Centrosema?",
+      "options": {
+        "A": "50 cm x 30 cm hedge row",
+        "B": "Broadcast seeds",
+        "C": "70 cm x 40 cm furrow planting",
+        "D": "Stem cutting in furrows"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What planting material is utilized when establishing Calliandra and Ipil-Ipil?",
+      "options": {
+        "A": "Stem cuttings",
+        "B": "Sticks/ Posts",
+        "C": "Seedlings",
+        "D": "Broadcast seeds"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the furrow distance and plant spacing for hedge rows of Flemingia, Indigofera, and Desmodium?",
+      "options": {
+        "A": "40 cm x 40 cm",
+        "B": "50 cm x 30 cm",
+        "C": "70 cm x 40 cm",
+        "D": "50 cm x 40 cm"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which two forage grasses are listed as requiring a 50 cm furrow spacing and can be propagated using root stocks or seeds?",
+      "options": {
+        "A": "Napier and Paragrass",
+        "B": "Signal Grass and Guinea Grass",
+        "C": "Paragrass and Signal Grass",
+        "D": "Napier and Guinea Grass"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the planting characteristics of Paragrass is TRUE?",
+      "options": {
+        "A": "Paragrass requires 40 cm between furrows and 40 cm between plants, using root stock or stem cuttings.",
+        "B": "Paragrass requires 70 cm between furrows and is planted exclusively from seeds.",
+        "C": "Paragrass is established only by broadcasting seeds across the field.",
+        "D": "Paragrass requires 50 cm between furrows and uses sticks or posts as planting material."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Based on the visual comparison shown under 'Sowing rate', what condition is depicted in the photograph showing overly dense and crowded grass seedlings?",
+      "options": {
+        "A": "Good sowing rate",
+        "B": "Very high sowing rate",
+        "C": "Under-sown pasture",
+        "D": "Stunted grass growth"
+      },
+      "answer": "B",
+      "image_id": "p30_img2"
+    }
+  ]
+}
