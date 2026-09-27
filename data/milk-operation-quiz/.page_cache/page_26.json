@@ -1,0 +1,192 @@
+{
+  "page": 26,
+  "title": "Basic Feed Nutrients",
+  "text": "Basic Feed Nutrients:\n1. Carbohydrates - common source of energy in ruminants. Sources of carbohydrates include forages, roughages, grains and sugars.\n\nSugars are found in the cells of plants\nStarch is the main component of grains\n\n2. Fats - added to the diets to increase energy density. Energy contents are 2.25 times greater than carbohydrates.\n\nCottonseeds is rich in fat\nSoybean is a good source of fat for cattle\n\nFats are given in moderate amounts as too much fat in the diet can reduce feed intake and may cause scouring.\n\n3. Proteins - essential for maintenance, growth and milk production. Amino acids are the building blocks of life.\n\nMolasses can be added to feed and water\nSpent grain is a good source of protein\n\nDairysquare - Dairy Farming Module\nPage 26",
+  "images": [
+    {
+      "id": "p26_img1",
+      "bbox": [
+        151,
+        169,
+        329,
+        432
+      ],
+      "label": "Cattle eating plant forage",
+      "description": "Black and white cows eating green forage feed from a feed bunk, illustrating that sugars are found in the cells of plants."
+    },
+    {
+      "id": "p26_img2",
+      "bbox": [
+        150,
+        483,
+        329,
+        832
+      ],
+      "label": "Cattle feeding on grain feed",
+      "description": "Cattle feeding at a long concrete trough on grains, illustrating that starch is the main component of grains."
+    },
+    {
+      "id": "p26_img3",
+      "bbox": [
+        415,
+        161,
+        589,
+        465
+      ],
+      "label": "Hand holding feed with cottonseeds",
+      "description": "A close-up of a hand holding a handful of chopped forage feed mixed with cottonseeds, rich in fat."
+    },
+    {
+      "id": "p26_img4",
+      "bbox": [
+        415,
+        514,
+        589,
+        834
+      ],
+      "label": "Cattle feeding at a head gate trough",
+      "description": "Cattle lined up feeding at a stanchion feed alley, representing soybeans as a fat source."
+    },
+    {
+      "id": "p26_img5",
+      "bbox": [
+        746,
+        163,
+        920,
+        470
+      ],
+      "label": "Cows gathered around liquid molasses bucket",
+      "description": "Cows drinking liquid supplement from a large dark tub, illustrating that molasses can be added to feed and water."
+    },
+    {
+      "id": "p26_img6",
+      "bbox": [
+        745,
+        528,
+        921,
+        839
+      ],
+      "label": "Cattle eating spent grain from a trough",
+      "description": "A group of cattle feeding on mash/spent grain from a large white square container, showing spent grain as a protein source."
+    }
+  ],
+  "facts": [
+    "Carbohydrates are a common source of energy in ruminants.",
+    "Sources of carbohydrates include forages, roughages, grains, and sugars.",
+    "Sugars are found in the cells of plants.",
+    "Starch is the main component of grains.",
+    "Fats are added to ruminant diets to increase energy density.",
+    "The energy content of fats is 2.25 times greater than that of carbohydrates.",
+    "Cottonseeds are rich in fat.",
+    "Soybean is a good source of fat for cattle.",
+    "Fats must be given in moderate amounts because excess fat in the diet reduces feed intake and may cause scouring.",
+    "Proteins are essential for maintenance, growth, and milk production.",
+    "Amino acids are the building blocks of life.",
+    "Molasses can be added to feed and water.",
+    "Spent grain is a good source of protein."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "How many times greater is the energy content of fats compared to carbohydrates in cattle diets?",
+      "options": {
+        "A": "1.5 times",
+        "B": "2.25 times",
+        "C": "3.0 times",
+        "D": "4.25 times"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is identified as the main component of grains?",
+      "options": {
+        "A": "Starch",
+        "B": "Fructose",
+        "C": "Cellulose",
+        "D": "Pectin"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What adverse effects can occur if too much fat is included in a ruminant's diet?",
+      "options": {
+        "A": "Excessive weight loss and bloat",
+        "B": "Reduced feed intake and scouring",
+        "C": "Mastitis and milk fever",
+        "D": "Acidosis and laminitis"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which nutrient provides the common source of energy in ruminants and is derived from forages, roughages, grains, and sugars?",
+      "options": {
+        "A": "Carbohydrates",
+        "B": "Proteins",
+        "C": "Minerals",
+        "D": "Vitamins"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, what are described as the 'building blocks of life' essential for protein formation?",
+      "options": {
+        "A": "Fatty acids",
+        "B": "Amino acids",
+        "C": "Nucleic acids",
+        "D": "Simple sugars"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "Which byproduct shown in the guide serves as a good source of protein for cattle feed?",
+      "options": {
+        "A": "Spent grain",
+        "B": "Rice bran",
+        "C": "Corn silage",
+        "D": "Wheat straw"
+      },
+      "answer": "A",
+      "image_id": "p26_img6"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which ingredient can be added directly to both feed and water for dairy cattle?",
+      "options": {
+        "A": "Cottonseeds",
+        "B": "Soybean meal",
+        "C": "Molasses",
+        "D": "Urea"
+      },
+      "answer": "C",
+      "image_id": "p26_img5"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which feed ingredient is specifically highlighted on this page as being rich in fat for cattle diets?",
+      "options": {
+        "A": "Spent grain",
+        "B": "Cottonseeds",
+        "C": "Forage grasses",
+        "D": "Wheat bran"
+      },
+      "answer": "B",
+      "image_id": "p26_img3"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding proteins in cattle nutrition is TRUE?",
+      "options": {
+        "A": "Proteins are primarily added only to increase the dietary energy density.",
+        "B": "Proteins are essential for maintenance, growth, and milk production.",
+        "C": "Proteins should be severely restricted to avoid scouring in cattle.",
+        "D": "Proteins are mainly found in the cell walls of grain starch."
+      },
+      "answer": "B"
+    }
+  ]
+}
