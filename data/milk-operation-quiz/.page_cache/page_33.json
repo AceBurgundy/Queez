@@ -1,0 +1,162 @@
+{
+  "page": 33,
+  "title": "SILAGE MAKING",
+  "text": "SILAGE MAKING\n\no Method of conserving animal feed for those times when there is less animal feed available.\no Corn, Napier, and other forage crops fermented.\no Sugars present in the fodder are converted to lactic acid, which acts as a preservative and a good source of readily fermentable sugars for the rumen microbes.\n\nAdvantage of silage making:\n1. Keeps forage in good condition for a very long time without an excessive loss of feed nutrients.\n2. Provides high-quality ruminant feed during extensive weather conditions.\n\nSilage preparation:\n1. Silage bag\n2. Silage Bunker\n\nSteps in silage making:\n1. Harvesting\no Corn, Napier and other forage crops can be used for silage making.\n2. Chopping\no Standard cut size 3/4 to 1 inch.\no Make sure that the harvested crop is about 65%-75% moisture content.\no Hand method used to estimate the moisture concentration of forage to be ensiled. Take a handful of chopped forage; squeeze it into a ball, and release.\no Chopped forage is too wet to ensile if the ball stays together and too dry if it quickly falls apart. Forage that slowly falls apart is ready to be ensiled.\n\nPerform hand method to check the moisture of the forage.\n\n3. Filling the silage bag\n\nDairysquare - Dairy Farming Module\nPage 33",
+  "images": [
+    {
+      "id": "p33_img1",
+      "bbox": [
+        595,
+        303,
+        746,
+        541
+      ],
+      "label": "Hand squeezing chopped forage",
+      "description": "Close-up photograph showing a person's hands squeezing a handful of chopped green forage into a ball to test moisture level."
+    },
+    {
+      "id": "p33_img2",
+      "bbox": [
+        595,
+        580,
+        746,
+        796
+      ],
+      "label": "Hand holding squeezed forage after release",
+      "description": "Photograph of an open hand holding chopped green forage after being squeezed to observe whether it holds together or slowly falls apart."
+    },
+    {
+      "id": "p33_img3",
+      "bbox": [
+        804,
+        273,
+        938,
+        532
+      ],
+      "label": "Filling forage into a silage bag",
+      "description": "Person packing chopped green forage into a thick plastic silage bag."
+    },
+    {
+      "id": "p33_img4",
+      "bbox": [
+        804,
+        556,
+        940,
+        831
+      ],
+      "label": "Top view of chopped forage packed in a lined container or bag",
+      "description": "Top-down view of coarsely chopped corn or Napier forage packed tightly inside a dark-lined bag or container."
+    }
+  ],
+  "facts": [
+    "Silage making is a method of conserving animal feed for times when less animal feed is available.",
+    "Corn, Napier, and other forage crops are fermented to make silage.",
+    "Sugars present in the fodder are converted into lactic acid during fermentation.",
+    "Lactic acid acts as a preservative and provides a good source of readily fermentable sugars for rumen microbes.",
+    "Silage making keeps forage in good condition for a very long time without excessive loss of feed nutrients.",
+    "Silage provides high-quality ruminant feed during extensive weather conditions.",
+    "Two forms or structures for silage preparation mentioned are silage bag and silage bunker.",
+    "The first step in silage making is harvesting.",
+    "The second step in silage making is chopping.",
+    "The standard cut size for chopping forage for silage is 3/4 to 1 inch.",
+    "Harvested crop for silage should have a moisture content of about 65% to 75%.",
+    "The hand method can be used to estimate the moisture concentration of forage to be ensiled.",
+    "To perform the hand moisture test, take a handful of chopped forage, squeeze it into a ball, and release.",
+    "In the hand squeeze test, forage is too wet to ensile if the ball stays together.",
+    "In the hand squeeze test, forage is too dry if the ball quickly falls apart.",
+    "In the hand squeeze test, forage is ready to be ensiled if the ball slowly falls apart.",
+    "The third step in silage making is filling the silage bag."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "During silage fermentation, sugars in the fodder are primarily converted into which acid that acts as a preservative?",
+      "options": {
+        "A": "Lactic acid",
+        "B": "Acetic acid",
+        "C": "Butyric acid",
+        "D": "Propionic acid"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended standard cut size for chopped forage in silage making?",
+      "options": {
+        "A": "1/4 to 1/2 inch",
+        "B": "3/4 to 1 inch",
+        "C": "1.5 to 2 inches",
+        "D": "2 to 3 inches"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the ideal moisture content of the harvested crop for making silage?",
+      "options": {
+        "A": "40% to 50%",
+        "B": "50% to 60%",
+        "C": "65% to 75%",
+        "D": "80% to 90%"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When using the hand squeeze method to evaluate chopped forage moisture, which outcome indicates the forage is ready to be ensiled?",
+      "options": {
+        "A": "The ball stays tightly compressed and water drips freely",
+        "B": "The ball immediately shatters into dust",
+        "C": "The ball quickly falls apart",
+        "D": "The ball slowly falls apart"
+      },
+      "answer": "D",
+      "image_id": "p33_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "If a handful of squeezed chopped forage completely holds its ball shape without crumbling after release, what does this indicate?",
+      "options": {
+        "A": "The forage is too dry to ensile",
+        "B": "The forage is too wet to ensile",
+        "C": "The forage is at perfect moisture content",
+        "D": "The forage has fermented completely"
+      },
+      "answer": "B",
+      "image_id": "p33_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the advantages of silage making is TRUE according to the text?",
+      "options": {
+        "A": "It preserves forage long-term without excessive loss of nutrients and provides quality feed during extensive weather conditions.",
+        "B": "It completely eliminates all rumen microbes from ruminant digestion.",
+        "C": "It requires the forage to be completely sun-dried to under 15% moisture before packing.",
+        "D": "It can only be prepared using underground concrete bunkers, not bags."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following lists the correct sequence of the first three steps in silage making presented on this page?",
+      "options": {
+        "A": "1. Chopping, 2. Harvesting, 3. Filling the silage bag",
+        "B": "1. Fermentation, 2. Chopping, 3. Harvesting",
+        "C": "1. Harvesting, 2. Chopping, 3. Filling the silage bag",
+        "D": "1. Moisture testing, 2. Harvesting, 3. Packing"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which two forage crops are explicitly cited as examples suitable for silage making?",
+      "options": {
+        "A": "Corn and Napier",
+        "B": "Alfalfa and Clover",
+        "C": "Wheat and Barley",
+        "D": "Rice straw and Sugarcane bagasse"
+      },
+      "answer": "A"
+    }
+  ]
+}
