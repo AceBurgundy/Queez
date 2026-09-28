@@ -1,0 +1,131 @@
+{
+  "page": 31,
+  "title": "Common problems of forages in a cut-and-carry system & Fertilizer application",
+  "text": "High sowing rate = weak seedlings\nGood sowing rate = strong seedlings\n\nCommon problems of forages in a cut-and-carry system:\n- A major management problem of forages in the field is nutrient decline.\n\nLeaf comparison of forages from nutrient declined field (left) and a fertile field (right).\n\nFertilizer application:\n- 60-80 % of the nutrients an animal eats are returned in manure and urine.\n- Manure is an excellent resource for overcoming nutrient depletion problems.\n\nDairysquare - Dairy Farming Module Page 31",
+  "images": [
+    {
+      "id": "p31_img1",
+      "bbox": [
+        51,
+        363,
+        323,
+        638
+      ],
+      "label": "Comparison of seedlings based on sowing rate",
+      "description": "Two forage seedlings placed against a notepad showing that a high sowing rate produces weak seedlings (left) while a good sowing rate produces strong, leafy seedlings (right)."
+    },
+    {
+      "id": "p31_img2",
+      "bbox": [
+        431,
+        381,
+        642,
+        622
+      ],
+      "label": "Leaf comparison between nutrient-declined and fertile fields",
+      "description": "Two leaves held in hands comparing a pale, yellowish leaf from a nutrient-declined field (left) with a dark green, healthy leaf from a fertile field (right)."
+    },
+    {
+      "id": "p31_img3",
+      "bbox": [
+        773,
+        160,
+        933,
+        456
+      ],
+      "label": "Manure collection and shoveling",
+      "description": "A worker using a shovel to handle a large mound of animal manure in a farmyard."
+    },
+    {
+      "id": "p31_img4",
+      "bbox": [
+        765,
+        477,
+        937,
+        915
+      ],
+      "label": "Fertile forage field",
+      "description": "A lush, green field of growing forage grasses on rolling hillside pasture."
+    }
+  ],
+  "facts": [
+    "A high sowing rate results in weak seedlings.",
+    "A good sowing rate produces strong seedlings.",
+    "A major management problem of forages in the field under a cut-and-carry system is nutrient decline.",
+    "Forage leaves from a nutrient-declined field appear pale/yellowish compared to the dark green leaves from a fertile field.",
+    "Between 60% and 80% of the nutrients consumed by an animal are returned in manure and urine.",
+    "Manure is an excellent resource for overcoming nutrient depletion problems in forage fields."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the consequence of having a high sowing rate for forage plants?",
+      "options": {
+        "A": "Faster maturation and earlier harvesting",
+        "B": "Weak seedlings",
+        "C": "Increased leaf surface area and thicker stems",
+        "D": "Resistance to soil nutrient decline"
+      },
+      "answer": "B",
+      "image_id": "p31_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is identified as a major management problem of forages in the field under a cut-and-carry system?",
+      "options": {
+        "A": "Nutrient decline",
+        "B": "Overgrazing by livestock",
+        "C": "Excessive soil water retention",
+        "D": "Pest predation of roots"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Approximately what percentage of the nutrients an animal eats are returned in manure and urine?",
+      "options": {
+        "A": "20\u201340 %",
+        "B": "40\u201350 %",
+        "C": "60\u201380 %",
+        "D": "90\u2013100 %"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, what is an excellent resource for overcoming nutrient depletion problems in forage fields?",
+      "options": {
+        "A": "Chemical pesticides",
+        "B": "Synthetic nitrogen sprays",
+        "C": "Manure",
+        "D": "Limestone powder"
+      },
+      "answer": "C",
+      "image_id": "p31_img3"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement correctly describes the visual difference between forage leaves from a nutrient-declined field versus a fertile field?",
+      "options": {
+        "A": "The nutrient-declined leaf is paler/yellowish on the left, while the fertile leaf is vibrant green on the right.",
+        "B": "The nutrient-declined leaf is larger and darker green on the left.",
+        "C": "Both leaves show identical coloration regardless of soil fertility.",
+        "D": "The fertile field leaf is pale yellow while the nutrient-declined leaf is dark green."
+      },
+      "answer": "A",
+      "image_id": "p31_img2"
+    },
+    {
+      "type": "identification",
+      "question": "In the seedling comparison diagram, what condition results in strong, healthy seedlings?",
+      "options": {
+        "A": "High sowing rate",
+        "B": "Excessive weeding",
+        "C": "Good sowing rate",
+        "D": "Zero fertilizer application"
+      },
+      "answer": "C",
+      "image_id": "p31_img1"
+    }
+  ]
+}
