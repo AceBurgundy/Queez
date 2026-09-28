@@ -1,0 +1,183 @@
+{
+  "page": 35,
+  "title": "Silage making (bunker type)",
+  "text": "Silage making (bunker type):\n1. Harvesting\n2. Chopping\n3. Filling the bunker\n4. Compacting (manual or mechanical)\n5. Covering and sealing\n\nWhen is the silage ready?\no at least three weeks (21 days) after preparation but as a rule of thumb, 60 to 70 days produces an optimum fermentation.\n\nDairysquare \u2013 Dairy Farming Module Page 35",
+  "images": [
+    {
+      "id": "p35_img1",
+      "bbox": [
+        136,
+        368,
+        312,
+        631
+      ],
+      "label": "Filling the bunker",
+      "description": "Overhead view showing machinery unloading chopped green forage into a bunker silo."
+    },
+    {
+      "id": "p35_img2",
+      "bbox": [
+        363,
+        67,
+        536,
+        318
+      ],
+      "label": "Manual compacting (tamper tool)",
+      "description": "Worker using a heavy handheld tamper to manually compact silage against the bunker wall."
+    },
+    {
+      "id": "p35_img3",
+      "bbox": [
+        364,
+        321,
+        536,
+        663
+      ],
+      "label": "Manual compacting tools",
+      "description": "Heavy wooden or log pounders/tampers with handles placed on compacted forage material."
+    },
+    {
+      "id": "p35_img4",
+      "bbox": [
+        364,
+        663,
+        535,
+        930
+      ],
+      "label": "Mechanical compacting with tractor",
+      "description": "A tractor driving over and pressing down chopped green silage in a bunker silo for mechanical compaction."
+    },
+    {
+      "id": "p35_img5",
+      "bbox": [
+        583,
+        76,
+        756,
+        363
+      ],
+      "label": "Placing plastic sheeting over bunker edge",
+      "description": "Covering the bunker silage edges tightly with heavy black plastic sheeting."
+    },
+    {
+      "id": "p35_img6",
+      "bbox": [
+        583,
+        368,
+        755,
+        689
+      ],
+      "label": "Sealing silage cover with tyres",
+      "description": "Close-up view of a sealed silage clamp covered in black plastic sheeting and weighed down along seams with tyres."
+    },
+    {
+      "id": "p35_img7",
+      "bbox": [
+        587,
+        700,
+        755,
+        925
+      ],
+      "label": "Covered bunker silo facility",
+      "description": "Covered shed or bunker structure with silage piles covered by plastic sheets weighed down with old tyres."
+    }
+  ],
+  "facts": [
+    "The 5 main steps in bunker-type silage making are: 1. Harvesting, 2. Chopping, 3. Filling the bunker, 4. Compacting (manual or mechanical), and 5. Covering and sealing.",
+    "Compacting of silage in a bunker can be done either manually (using handheld pounders/tampers) or mechanically (using equipment such as a tractor).",
+    "Covering and sealing involves laying heavy plastic sheeting over the silage and weighting it down (e.g., using tyres) to create an airtight seal.",
+    "Silage is ready at the minimum of at least three weeks (21 days) after preparation.",
+    "As a rule of thumb, allowing 60 to 70 days produces optimum fermentation in silage."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the correct sequential order of steps for bunker-type silage making?",
+      "options": {
+        "A": "Harvesting \u2192 Chopping \u2192 Filling the bunker \u2192 Compacting \u2192 Covering and sealing",
+        "B": "Chopping \u2192 Harvesting \u2192 Filling the bunker \u2192 Covering and sealing \u2192 Compacting",
+        "C": "Harvesting \u2192 Filling the bunker \u2192 Chopping \u2192 Compacting \u2192 Covering and sealing",
+        "D": "Harvesting \u2192 Compacting \u2192 Chopping \u2192 Filling the bunker \u2192 Covering and sealing"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, what is the minimum duration after preparation before silage is ready for use?",
+      "options": {
+        "A": "At least 7 days (1 week)",
+        "B": "At least 14 days (2 weeks)",
+        "C": "At least 21 days (3 weeks)",
+        "D": "At least 30 days (1 month)"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "As a rule of thumb, how many days of curing produce optimum fermentation for silage?",
+      "options": {
+        "A": "10 to 20 days",
+        "B": "30 to 45 days",
+        "C": "60 to 70 days",
+        "D": "90 to 120 days"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Which step in silage making immediately follows 'Filling the bunker'?",
+      "options": {
+        "A": "Compacting (manual or mechanical)",
+        "B": "Covering and sealing",
+        "C": "Chopping",
+        "D": "Harvesting"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following methods can be used to compact silage according to the module?",
+      "options": {
+        "A": "Only hydraulic static pressing",
+        "B": "Manual or mechanical compacting",
+        "C": "Water submersion compaction",
+        "D": "Natural gravity settling only"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding bunker silage preparation is TRUE?",
+      "options": {
+        "A": "Silage achieves optimum fermentation in less than 10 days.",
+        "B": "Silage is ready at least 21 days after preparation, but 60 to 70 days produces optimum fermentation.",
+        "C": "Covering and sealing is performed prior to compacting the bunker.",
+        "D": "Compacting cannot be done mechanically with a tractor."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What material is shown being placed on top of the black plastic sheet to weigh it down and seal the silage bunker?",
+      "options": {
+        "A": "Used vehicle tyres",
+        "B": "Concrete blocks",
+        "C": "Metal steel beams",
+        "D": "Gravel bags only"
+      },
+      "answer": "A",
+      "image_id": "p35_img6"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What vehicle is illustrated carrying out mechanical compacting inside the silage bunker?",
+      "options": {
+        "A": "A combine harvester",
+        "B": "A tractor",
+        "C": "A forklift",
+        "D": "A bulldozer"
+      },
+      "answer": "B",
+      "image_id": "p35_img4"
+    }
+  ]
+}
