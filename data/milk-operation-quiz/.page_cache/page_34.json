@@ -1,0 +1,151 @@
+{
+  "page": 34,
+  "title": "Compacting, Sealing the bag, and Storage",
+  "text": "4. Compacting\n  o Pressed to remove the air to prevent decomposition\n  o It is best to compact the silage every time you add 3 inches of chopped forage.\n\n5. Sealing the bag\n  o Air tight - fermentation works best to produce lactic acid.\n  o Not air tight - molds formation leads to spoilage.\n\n6. Storage\n  o Inspect the bags in a regular basis.\n  o Do not allow any animals to climb on top the bags.\n  o Label the bags for easy identification.\n  o Inspect if there are holes present; if present the silage need to repacked.\n\nDairysquare - Dairy Farming Module\nPage 34",
+  "images": [
+    {
+      "id": "p34_img1",
+      "bbox": [
+        133,
+        252,
+        303,
+        510
+      ],
+      "label": "Manual compacting of forage in plastic bag",
+      "description": "People pressing and pressing down forage inside a plastic liner bag during the ensiling process."
+    },
+    {
+      "id": "p34_img2",
+      "bbox": [
+        132,
+        549,
+        303,
+        819
+      ],
+      "label": "Inserting and packing chopped forage into outer sack",
+      "description": "Workers packing and adjusting the silage bag and outer woven sack."
+    },
+    {
+      "id": "p34_img3",
+      "bbox": [
+        408,
+        253,
+        552,
+        521
+      ],
+      "label": "Gathering and twisting the inner plastic bag mouth",
+      "description": "Inner plastic bag tightly twisted at the neck over the packed green chopped forage to ensure an airtight seal."
+    },
+    {
+      "id": "p34_img4",
+      "bbox": [
+        407,
+        570,
+        554,
+        816
+      ],
+      "label": "Tying and securing the outer silage bag",
+      "description": "Hands tying or stitching closed the outer white sack with twine."
+    },
+    {
+      "id": "p34_img5",
+      "bbox": [
+        698,
+        368,
+        888,
+        633
+      ],
+      "label": "Storage stack of sealed silage bags",
+      "description": "Neatly stacked sealed silage bags stored indoors in a storage room."
+    }
+  ],
+  "facts": [
+    "Compacting is done by pressing the chopped forage to remove air and prevent decomposition.",
+    "It is recommended to compact the silage every time 3 inches of chopped forage are added.",
+    "Sealing the silage bag airtight allows fermentation to work best and produce lactic acid.",
+    "If the silage bag is not airtight, mold formation occurs, which leads to spoilage.",
+    "Silage bags must be inspected on a regular basis during storage.",
+    "Animals must not be allowed to climb on top of the stored silage bags.",
+    "Silage bags should be labeled for easy identification.",
+    "Storage bags must be inspected for holes; if holes are present, the silage needs to be repacked."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary purpose of compacting chopped forage during the ensiling process?",
+      "options": {
+        "A": "To remove air in order to prevent decomposition",
+        "B": "To increase moisture content for fermentation",
+        "C": "To allow oxygen circulation within the forage",
+        "D": "To speed up mold formation and drying"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "How often or at what depth interval is it best to compact the silage during filling?",
+      "options": {
+        "A": "Every time you add 3 inches of chopped forage",
+        "B": "Every time you add 6 inches of chopped forage",
+        "C": "Every time you add 12 inches of chopped forage",
+        "D": "Only once after completely filling the bag"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why must the silage bag be sealed completely airtight?",
+      "options": {
+        "A": "Because aerobic respiration enhances forage protein content",
+        "B": "Because fermentation works best in airtight conditions to produce lactic acid",
+        "C": "To allow carbon dioxide to escape freely into the atmosphere",
+        "D": "To dry out the forage and eliminate all bacterial activity"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What happens if a silage bag is NOT sealed airtight?",
+      "options": {
+        "A": "Excess lactic acid causes rapid over-fermentation",
+        "B": "Mold formation occurs, leading to spoilage",
+        "C": "The forage becomes too sweet for livestock consumption",
+        "D": "The forage turns into dry hay within a few days"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the storage of silage bags is TRUE?",
+      "options": {
+        "A": "Animals should be allowed to walk on the bags to keep them compacted.",
+        "B": "Bags should never be labeled to prevent ink contamination.",
+        "C": "Inspect the bags on a regular basis and repack the silage if holes are present.",
+        "D": "Silage bags with holes should be left untouched to let moisture escape."
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What corrective action is required if holes are detected in stored silage bags?",
+      "options": {
+        "A": "Discard the entire storage batch immediately",
+        "B": "The silage needs to be repacked",
+        "C": "Add water directly into the bag through the hole",
+        "D": "Expose the bag to direct sunlight to kill bacteria"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which guideline for silage storage is explicitly stated in the manual?",
+      "options": {
+        "A": "Do not allow any animals to climb on top of the bags",
+        "B": "Stack bags outdoors exposed to open rain",
+        "C": "Open each bag weekly to inspect aroma and moisture",
+        "D": "Compact the bags mechanically after one month of storage"
+      },
+      "answer": "A"
+    }
+  ]
+}
