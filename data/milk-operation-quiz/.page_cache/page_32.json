@@ -1,0 +1,160 @@
+{
+  "page": 32,
+  "title": "Productivity and quality of forage",
+  "text": "Productivity and quality of forage:\n\nDry matter yield (t/ha/yr), grown at the different soil fertility levels | Grasses | Legumes\nLow soil fertility | 10 \u2013 15 | 3 - 5\nMedium soil fertility | 15 \u2013 30 | 5 - 10\nHigh soil fertility | 30 \u2013 50 | 10 \u2013 15\n% Crude Protein (CP) | 5 \u2013 15 | 15 \u2013 25\n% Calcium (Ca) | 0.2 - 0.5 | 0.8 - 1.9\n\nWeed control:\n- Weeds compete crops. Some are toxic to animals; some are unpalatable and injurious to grazing livestock because of thorns/spines.\n\nCommon weeds in tropical pastures:\n1. Hagonoy (Chromolaena odorata)\n2. Kanding-kanding (Lantana camara)\n3. Talong gubat (Solanum ferox)\n4. Bracken fern (Ptredium aquilinum)\n\nOther application of forages:\n1. As hedgegrows in alley cropping\n2. As bounderies\n3. As living fence\n4. For weed control\n5. Erosion control\n6. Use as firewood\n7. Mitigation measure for global warming\n\nForages utilized as a living fence (left) and boundaries (right).\n\nDairysquare \u2013 Dairy Farming Module Page 32",
+  "images": [
+    {
+      "id": "p32_img1",
+      "bbox": [
+        693,
+        118,
+        866,
+        501
+      ],
+      "label": "Forages utilized as a living fence",
+      "description": "Vegetative forage plants planted closely along a fence line serving as a living fence bordering trees."
+    },
+    {
+      "id": "p32_img2",
+      "bbox": [
+        694,
+        519,
+        866,
+        878
+      ],
+      "label": "Forages utilized as boundaries",
+      "description": "Rows of trees and forage plants established along a property boundary dividing agricultural plots."
+    }
+  ],
+  "facts": [
+    "Under low soil fertility, grasses yield 10\u201315 t/ha/yr of dry matter.",
+    "Under low soil fertility, legumes yield 3\u20135 t/ha/yr of dry matter.",
+    "Under medium soil fertility, grasses yield 15\u201330 t/ha/yr of dry matter.",
+    "Under medium soil fertility, legumes yield 5\u201310 t/ha/yr of dry matter.",
+    "Under high soil fertility, grasses yield 30\u201350 t/ha/yr of dry matter.",
+    "Under high soil fertility, legumes yield 10\u201315 t/ha/yr of dry matter.",
+    "Grasses contain 5\u201315% Crude Protein (CP).",
+    "Legumes contain 15\u201325% Crude Protein (CP).",
+    "Grasses contain 0.2\u20130.5% Calcium (Ca).",
+    "Legumes contain 0.8\u20131.9% Calcium (Ca).",
+    "Weeds compete with crops; some are toxic to animals, while others are unpalatable and injurious to grazing livestock due to thorns/spines.",
+    "Hagonoy is the common name for Chromolaena odorata.",
+    "Kanding-kanding is the common name for Lantana camara.",
+    "Talong gubat is the common name for Solanum ferox.",
+    "Bracken fern is the common name for Ptredium aquilinum (Pteridium aquilinum).",
+    "Other applications of forages include: as hedgerows in alley cropping, as boundaries, as living fences, for weed control, erosion control, firewood, and as a mitigation measure for global warming."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the expected dry matter yield (t/ha/yr) of grasses grown in high soil fertility conditions?",
+      "options": {
+        "A": "10 \u2013 15 t/ha/yr",
+        "B": "15 \u2013 30 t/ha/yr",
+        "C": "30 \u2013 50 t/ha/yr",
+        "D": "50 \u2013 75 t/ha/yr"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the forage quality comparison, what is the Crude Protein (CP) content percentage of legumes?",
+      "options": {
+        "A": "5 \u2013 15%",
+        "B": "15 \u2013 25%",
+        "C": "25 \u2013 35%",
+        "D": "0.8 \u2013 1.9%"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the scientific name of the pasture weed commonly known as 'Hagonoy'?",
+      "options": {
+        "A": "Lantana camara",
+        "B": "Solanum ferox",
+        "C": "Chromolaena odorata",
+        "D": "Ptredium aquilinum"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following common tropical pasture weeds is scientifically designated as Lantana camara?",
+      "options": {
+        "A": "Kanding-kanding",
+        "B": "Talong gubat",
+        "C": "Hagonoy",
+        "D": "Bracken fern"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How much Calcium (Ca) percentage do legumes typically contain compared to grasses?",
+      "options": {
+        "A": "0.2 \u2013 0.5%",
+        "B": "0.8 \u2013 1.9%",
+        "C": "3 \u2013 5%",
+        "D": "5 \u2013 10%"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What dry matter yield range is typical for legumes grown under low soil fertility?",
+      "options": {
+        "A": "10 \u2013 15 t/ha/yr",
+        "B": "5 \u2013 10 t/ha/yr",
+        "C": "3 \u2013 5 t/ha/yr",
+        "D": "1 \u2013 2 t/ha/yr"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement correctly describes the productivity comparison between grasses and legumes across all soil fertility levels?",
+      "options": {
+        "A": "Grasses consistently produce higher dry matter yield per hectare per year than legumes at all soil fertility levels.",
+        "B": "Legumes produce higher dry matter yield than grasses under high soil fertility conditions.",
+        "C": "Grasses have higher crude protein content than legumes.",
+        "D": "Legumes yield the same dry matter quantity as grasses under medium soil fertility."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as an alternative application of forages?",
+      "options": {
+        "A": "Hedgegrows in alley cropping",
+        "B": "Living fence and boundaries",
+        "C": "Direct synthetic nitrogen fertilizer substitute",
+        "D": "Mitigation measure for global warming"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "What common tropical pasture weed corresponds to the scientific name Solanum ferox?",
+      "options": {
+        "A": "Hagonoy",
+        "B": "Talong gubat",
+        "C": "Bracken fern",
+        "D": "Kanding-kanding"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the bottom-left photograph (p32_img1), what specific practical application of forage is illustrated?",
+      "options": {
+        "A": "Living fence",
+        "B": "Boundary demarcation only",
+        "C": "Alley cropping hedgerows",
+        "D": "Firewood production"
+      },
+      "answer": "A",
+      "image_id": "p32_img1"
+    }
+  ]
+}
