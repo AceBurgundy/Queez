@@ -1,0 +1,123 @@
+{
+  "page": 37,
+  "title": "HOUSING AND INFRASTRUCTURE",
+  "text": "HOUSING AND INFRASTRUCTURE\n\nObjectives:\n1. Learn the importance of good housing to dairy animals\n2. Familiarize the criteria in area selection for dairy farm and points to consider in housing establishment.\n3. Acquaint with dairy infrastructure, materials used in the construction and best practices in cow comfort.\n4. Familiarize the equipment and support facilities needed in dairy operations.\n\nWhy provide a good housing for dairy cattle?\n1. to protect the animals from extreme weather conditions.\n2. for easy administration of technical services.\n3. ease in doing daily farm activities like milking, cleaning and feeding.\n\nWhat are the basic considerations for area selection?\n1. Housing area per animal.\nCLASS AND AGE | Shed or Barn Floor Area( sq. meter/animal)\nCalves (up to 3 months) | 1\nCalves (3-6 months) | 2\nCalves (7 months \u2013 1 year) | 3\nYearlings(1-2 years) | 4\nHeifer/Steer(2-3 years) | 5\nMilking and dry cows | 6\nPregnant cows | 10\n\n2. Orientation of the farm.\n[Diagram showing Farm building situated in an east-west orientation with sun paths for Summer and Winter]\nFarm building should be situated in a east-west orientation\n\nDairysquare \u2013 Dairy Farming Module Page 37",
+  "images": [
+    {
+      "id": "p37_img1",
+      "bbox": [
+        678,
+        321,
+        876,
+        676
+      ],
+      "label": "Farm Building Orientation Diagram",
+      "description": "An architectural diagram depicting a farm building oriented along an east-west axis, with seasonal sun trajectories labeled 'Summer' and 'Winter' showing how solar radiation tracks relative to North, South, East, and West."
+    }
+  ],
+  "facts": [
+    "Learning objectives of the module include understanding the importance of housing, criteria for area selection and housing establishment, dairy infrastructure and cow comfort materials/practices, and equipment/support facilities.",
+    "Providing good housing protects dairy cattle from extreme weather conditions.",
+    "Good housing facilitates easy administration of technical services.",
+    "Good housing provides ease in executing daily farm activities such as milking, cleaning, and feeding.",
+    "The required shed or barn floor area for calves up to 3 months old is 1 sq. meter per animal.",
+    "The required shed or barn floor area for calves aged 3 to 6 months is 2 sq. meters per animal.",
+    "The required shed or barn floor area for calves aged 7 months to 1 year is 3 sq. meters per animal.",
+    "The required shed or barn floor area for yearlings (1 to 2 years) is 4 sq. meters per animal.",
+    "The required shed or barn floor area for heifers or steers (2 to 3 years) is 5 sq. meters per animal.",
+    "The required shed or barn floor area for milking and dry cows is 6 sq. meters per animal.",
+    "The required shed or barn floor area for pregnant cows is 10 sq. meters per animal.",
+    "Farm buildings should be situated in an east-west orientation to optimize exposure to the sun during summer and winter."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended shed or barn floor area per animal for milking and dry cows?",
+      "options": {
+        "A": "4 sq. meters",
+        "B": "5 sq. meters",
+        "C": "6 sq. meters",
+        "D": "10 sq. meters"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the housing area recommendations, how much barn floor space is required for a pregnant cow?",
+      "options": {
+        "A": "6 sq. meters",
+        "B": "8 sq. meters",
+        "C": "10 sq. meters",
+        "D": "12 sq. meters"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How much barn floor space is required per animal for calves aged 3 to 6 months?",
+      "options": {
+        "A": "1 sq. meter",
+        "B": "2 sq. meters",
+        "C": "3 sq. meters",
+        "D": "4 sq. meters"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which animal class requires a shed or barn floor area of 4 sq. meters per animal?",
+      "options": {
+        "A": "Calves (7 months \u2013 1 year)",
+        "B": "Yearlings (1\u20132 years)",
+        "C": "Heifer/Steer (2\u20133 years)",
+        "D": "Milking cows"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended orientation for a dairy farm building as illustrated on this page?",
+      "options": {
+        "A": "North-South orientation",
+        "B": "East-West orientation",
+        "C": "Northeast-Southwest orientation",
+        "D": "Northwest-Southeast orientation"
+      },
+      "answer": "B",
+      "image_id": "p37_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the reasons for providing good housing for dairy cattle is TRUE according to the text?",
+      "options": {
+        "A": "It protects the animals from extreme weather conditions and aids daily farm activities.",
+        "B": "It eliminates the need for administering veterinary and technical services.",
+        "C": "It is primarily designed to restrict cattle movement entirely to accelerate weight gain.",
+        "D": "It prevents the animals from receiving natural sunlight during winter."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the floor area requirement for young calves up to 3 months of age?",
+      "options": {
+        "A": "0.5 sq. meter per animal",
+        "B": "1 sq. meter per animal",
+        "C": "1.5 sq. meters per animal",
+        "D": "2 sq. meters per animal"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How much barn floor space is specified for heifers or steers aged 2 to 3 years?",
+      "options": {
+        "A": "3 sq. meters",
+        "B": "4 sq. meters",
+        "C": "5 sq. meters",
+        "D": "6 sq. meters"
+      },
+      "answer": "C"
+    }
+  ]
+}
