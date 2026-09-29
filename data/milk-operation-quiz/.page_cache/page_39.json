@@ -1,0 +1,140 @@
+{
+  "page": 39,
+  "title": "Dairy Housing and Facilities: Barn Types and Working Area",
+  "text": "3. Yearling barn\n\n4. Heifer barn\n\n5. Sick barn/isolation pen\n\n6. Working area\n\nDairysquare - Dairy Farming Module Page 39",
+  "images": [
+    {
+      "id": "p39_img1",
+      "bbox": [
+        70,
+        307,
+        258,
+        691
+      ],
+      "label": "Yearling barn",
+      "description": "Photograph showing a group of dairy yearlings standing side by side with ear tags in a yearling barn facility."
+    },
+    {
+      "id": "p39_img2",
+      "bbox": [
+        278,
+        306,
+        467,
+        693
+      ],
+      "label": "Heifer barn",
+      "description": "Photograph showing heifers housed behind metal pen bars in a covered heifer barn."
+    },
+    {
+      "id": "p39_img3",
+      "bbox": [
+        487,
+        305,
+        676,
+        692
+      ],
+      "label": "Sick barn/isolation pen",
+      "description": "Photograph of sick or isolated cattle resting on bedding in a sick barn or isolation pen."
+    },
+    {
+      "id": "p39_img4",
+      "bbox": [
+        698,
+        283,
+        903,
+        482
+      ],
+      "label": "Working area - Cattle crush/chute",
+      "description": "Photograph of a cow secured in a metal working chute or crush in the farm's working area."
+    },
+    {
+      "id": "p39_img5",
+      "bbox": [
+        699,
+        488,
+        903,
+        718
+      ],
+      "label": "Working area - Headgate handling",
+      "description": "Photograph of a handler working with a cow secured in a wooden headgate or handling stanchion."
+    }
+  ],
+  "facts": [
+    "A yearling barn is designated specifically for housing growing yearling dairy animals.",
+    "A heifer barn is designated for housing growing heifers before they enter the milking herd.",
+    "A sick barn or isolation pen is utilized to separate, monitor, and treat ill or injured dairy cattle.",
+    "The working area provides facilities (such as chutes, crushes, and headgates) for handling, restraint, medical treatment, and management procedures on cattle.",
+    "Page 39 is part of the 'Dairysquare - Dairy Farming Module'."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which specific housing facility listed on this page is designated for separating and treating ill or injured cattle?",
+      "options": {
+        "A": "Sick barn/isolation pen",
+        "B": "Yearling barn",
+        "C": "Heifer barn",
+        "D": "Calf hutch"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "What facility is illustrated by the cattle restrained in chutes/headgates shown under item 6?",
+      "options": {
+        "A": "Working area",
+        "B": "Milking parlor",
+        "C": "Feed storage shed",
+        "D": "Calving stall"
+      },
+      "answer": "A",
+      "image_id": "p39_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which barn is designated specifically for older adolescent cattle between calfhood and breeding heifer stage as shown in item 3?",
+      "options": {
+        "A": "Yearling barn",
+        "B": "Milking cow barn",
+        "C": "Dry cow pen",
+        "D": "Bull stall"
+      },
+      "answer": "A",
+      "image_id": "p39_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary function of a heifer barn as listed on this page?",
+      "options": {
+        "A": "Housing growing young female dairy cattle prior to calving and joining the milking herd",
+        "B": "Housing exclusively mature lactating cows during milking times",
+        "C": "Serving as an isolation pen for diseased animals",
+        "D": "Storing harvested forage and concentrate feed rations"
+      },
+      "answer": "A",
+      "image_id": "p39_img2"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the dairy facilities shown on Page 39 is TRUE?",
+      "options": {
+        "A": "A sick barn/isolation pen is used to separate and care for diseased or recovering cattle.",
+        "B": "The yearling barn is strictly intended for newly calved mature milking cows.",
+        "C": "The working area is only used to store tractors and silage bags.",
+        "D": "Heifers are housed exclusively in isolation pens throughout their growth period."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "According to the footer of Page 39, which training material module does this page belong to?",
+      "options": {
+        "A": "Dairysquare - Dairy Farming Module",
+        "B": "NAPOLCOM Agricultural Extension Manual",
+        "C": "FAO Modern Livestock Handbook",
+        "D": "Dairytech Herd Health Protocol"
+      },
+      "answer": "A"
+    }
+  ]
+}
