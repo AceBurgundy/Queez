@@ -1,0 +1,153 @@
+{
+  "page": 38,
+  "title": "What are the different dairy farm infrastructures?",
+  "text": "3. Distance of the farm from the main road and other livestock farms - atleast 1 kilometer distance to the main road or other livestock farms.\n\n4. Access to potable water.\n\nWhat are the different dairy farm infrastructures?\n1. Cattle barn\na) Feeding area\nb) Watering area\nc) Resting area\nd) Roofing - atleast 5-6 meters high to minimize ammonia build up inside the barn.\ne) Flooring - must be slotted or have a rough surface to prevent split cows.\n\n2. Calf barn\n\nDairysquare - Dairy Farming Module Page 38",
+  "images": [
+    {
+      "id": "p38_img1",
+      "bbox": [
+        292,
+        351,
+        498,
+        715
+      ],
+      "label": "High-roofed cattle barn structure",
+      "description": "An open-sided cattle barn structure with a high roof designed to allow proper ventilation and minimize ammonia build-up."
+    },
+    {
+      "id": "p38_img2",
+      "bbox": [
+        537,
+        305,
+        692,
+        590
+      ],
+      "label": "Slotted cattle barn flooring with dairy cow",
+      "description": "Interior of a cattle barn showing a cow standing on a slotted or textured floor alley with stalls on the side."
+    },
+    {
+      "id": "p38_img3",
+      "bbox": [
+        538,
+        599,
+        692,
+        764
+      ],
+      "label": "Grooved or slotted barn floor surface",
+      "description": "Close-up view of grooved or textured non-slip barn walkway flooring designed to prevent slipping."
+    },
+    {
+      "id": "p38_img4",
+      "bbox": [
+        732,
+        219,
+        936,
+        501
+      ],
+      "label": "Individual calf pens / calf housing",
+      "description": "Calf barn section showing individual partitioned pens with feed buckets for young calves."
+    },
+    {
+      "id": "p38_img5",
+      "bbox": [
+        732,
+        513,
+        936,
+        785
+      ],
+      "label": "Group calf pen with straw bedding",
+      "description": "Group housing inside a calf barn with calves resting and standing on straw or bedding material."
+    }
+  ],
+  "facts": [
+    "The distance of the dairy farm from the main road and other livestock farms must be at least 1 kilometer.",
+    "A dairy farm requires access to potable water.",
+    "Dairy farm infrastructures include cattle barn and calf barn.",
+    "A cattle barn includes a feeding area, a watering area, and a resting area.",
+    "The roofing of a cattle barn should be at least 5-6 meters high to minimize ammonia build up inside the barn.",
+    "Flooring of a cattle barn must be slotted or have a rough surface to prevent split cows.",
+    "Proper dairy farm infrastructure includes designated housing facilities specifically for calves (calf barn)."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the minimum required distance of a dairy farm from the main road and other livestock farms?",
+      "options": {
+        "A": "At least 500 meters",
+        "B": "At least 1 kilometer",
+        "C": "At least 2 kilometers",
+        "D": "At least 5 kilometers"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended height for cattle barn roofing in order to minimize ammonia build-up inside?",
+      "options": {
+        "A": "At least 2-3 meters",
+        "B": "At least 3-4 meters",
+        "C": "At least 5-6 meters",
+        "D": "At least 8-10 meters"
+      },
+      "answer": "C",
+      "image_id": "p38_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why must cattle barn flooring be slotted or have a rough surface?",
+      "options": {
+        "A": "To keep the hooves polished and filed down",
+        "B": "To prevent split cows caused by slipping",
+        "C": "To retain warmth during cold weather",
+        "D": "To speed up milk secretion in the udder"
+      },
+      "answer": "B",
+      "image_id": "p38_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following are listed as specific designated areas inside the cattle barn?",
+      "options": {
+        "A": "Feeding area, watering area, and resting area",
+        "B": "Mating area, pasture paddock, and feed storage room",
+        "C": "Quarantine clinic, laboratory, and feed mixing floor",
+        "D": "Processing room, refrigeration zone, and retail counter"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Is the following statement true or false? 'Cattle barn roofing should be at least 5-6 meters high primarily to prevent split cows.'",
+      "options": {
+        "A": "True, because high roofs provide structural stability to avoid cattle slipping.",
+        "B": "False, because high roofing is designed to minimize ammonia build-up inside the barn.",
+        "C": "True, because low roofs cause cows to panic and split their legs.",
+        "D": "False, because high roofing is meant strictly to collect rainwater for potable water supply."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "Which crucial resource requirement is explicitly listed under dairy farm site requirements alongside proper farm distance?",
+      "options": {
+        "A": "Access to high-voltage industrial grid power",
+        "B": "Access to potable water",
+        "C": "Access to an adjacent slaughterhouse",
+        "D": "Direct connection to an urban railway network"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What infrastructure for young stock is listed under dairy farm infrastructures alongside the cattle barn?",
+      "options": {
+        "A": "Calf barn",
+        "B": "Hay shed",
+        "C": "Manure lagoon",
+        "D": "Milking parlor"
+      },
+      "answer": "A",
+      "image_id": "p38_img4"
+    }
+  ]
+}
