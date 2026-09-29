@@ -1,0 +1,169 @@
+{
+  "page": 40,
+  "title": "Milking parlour and Waste management facility",
+  "text": "7. Milking parlour\n\nMilking cans\nPortable milking machine\nDigital weighing scale\nFreezer\n\n8. Waste management facility\n\nVermicomposting\nLagoon\n\nDairysquare - Dairy Farming Module\nPage 40",
+  "images": [
+    {
+      "id": "p40_img1",
+      "bbox": [
+        73,
+        201,
+        266,
+        459
+      ],
+      "label": "Milking cans",
+      "description": "Set of aluminum/stainless steel milking cans used for collecting and holding milk."
+    },
+    {
+      "id": "p40_img2",
+      "bbox": [
+        76,
+        532,
+        269,
+        876
+      ],
+      "label": "Portable milking machine",
+      "description": "A mobile milking unit on wheels equipped with teat cups, tubes, a vacuum pump, and a milk container bucket."
+    },
+    {
+      "id": "p40_img3",
+      "bbox": [
+        308,
+        169,
+        523,
+        388
+      ],
+      "label": "Digital weighing scale",
+      "description": "A digital weighing scale showing a digital display panel and a milk container receiver below."
+    },
+    {
+      "id": "p40_img4",
+      "bbox": [
+        366,
+        502,
+        517,
+        856
+      ],
+      "label": "Freezer",
+      "description": "A horizontal chest freezer with caster wheels for milk or dairy cold storage."
+    },
+    {
+      "id": "p40_img5",
+      "bbox": [
+        602,
+        115,
+        808,
+        492
+      ],
+      "label": "Vermicomposting",
+      "description": "Green elongated composting bins or beds filled with organic waste and manure for vermicomposting under a shaded roof."
+    },
+    {
+      "id": "p40_img6",
+      "bbox": [
+        605,
+        524,
+        805,
+        888
+      ],
+      "label": "Lagoon",
+      "description": "An open-air waste treatment and manure retention pond or lagoon adjacent to dairy farm barns."
+    }
+  ],
+  "facts": [
+    "Item 7 covers equipment associated with the milking parlour in a dairy farm setup.",
+    "Equipment shown under the milking parlour category includes milking cans, a portable milking machine, a digital weighing scale, and a freezer.",
+    "Milking cans serve as containers for handling, storing, or transporting harvested milk.",
+    "A portable milking machine is a mobile wheeled milking device utilized in dairy operations.",
+    "A digital weighing scale is used in the milking parlour setup to measure the weight/yield of milk accurately.",
+    "A freezer (chest type) is utilized in the milking parlour facility for cold storage preservation.",
+    "Item 8 covers the dairy farm's waste management facility.",
+    "Waste management facilities illustrated include vermicomposting and a waste treatment lagoon.",
+    "Vermicomposting uses earthworms to break down animal manure and organic farm waste into compost.",
+    "A waste lagoon is used for holding, settling, and biological treatment of liquid dairy manure and wastewater."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "Which piece of mobile milking parlour equipment shown on page 40 features teat cups, hoses, a milk can container, and wheels for transport?",
+      "options": {
+        "A": "Portable milking machine",
+        "B": "Bulk milk cooler",
+        "C": "Digital weighing scale",
+        "D": "Milking cans"
+      },
+      "answer": "A",
+      "image_id": "p40_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following equipment items is explicitly listed under Section 7 ('Milking parlour') on page 40?",
+      "options": {
+        "A": "Silage cutter",
+        "B": "Digital weighing scale",
+        "C": "Vermicomposting bed",
+        "D": "Lagoon aerator"
+      },
+      "answer": "B",
+      "image_id": "p40_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Under Section 8 ('Waste management facility'), which biological method of organic waste degradation is pictured?",
+      "options": {
+        "A": "Incineration",
+        "B": "Vermicomposting",
+        "C": "Autoclaving",
+        "D": "Chemical precipitation"
+      },
+      "answer": "B",
+      "image_id": "p40_img5"
+    },
+    {
+      "type": "identification",
+      "question": "What is the open-air pond structure illustrated under Section 8 ('Waste management facility') called?",
+      "options": {
+        "A": "Drinking trough",
+        "B": "Foot bath",
+        "C": "Lagoon",
+        "D": "Fish pond"
+      },
+      "answer": "C",
+      "image_id": "p40_img6"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What appliance is featured under the milking parlour equipment on page 40 for temperature-controlled preservation?",
+      "options": {
+        "A": "Autoclave",
+        "B": "Pasteurizer",
+        "C": "Freezer",
+        "D": "Incubator"
+      },
+      "answer": "C",
+      "image_id": "p40_img4"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement correctly describes the classification of 'Vermicomposting' and 'Lagoon' on page 40?",
+      "options": {
+        "A": "They are classified under Section 8 as components of the Waste management facility.",
+        "B": "They are classified under Section 7 as components of the Milking parlour.",
+        "C": "They are classified under Section 9 as Feeding and forage processing tools.",
+        "D": "They are classified as milk transportation containers."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How many total items or facilities are illustrated with images on page 40 across sections 7 and 8?",
+      "options": {
+        "A": "4",
+        "B": "5",
+        "C": "6",
+        "D": "8"
+      },
+      "answer": "C"
+    }
+  ]
+}
