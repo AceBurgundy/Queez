@@ -1,0 +1,153 @@
+{
+  "page": 36,
+  "title": "Characteristics of a good silage",
+  "text": "Characteristics of a good silage:\n\nCHARACTERISTICS | GOOD SILAGE | BAD SILAGE\nColor | Bright, light green yellow or green brown | Dark green to Dark brown\nTexture | When tightly squeezing the silage: it breaks slowly into two. | If very low moisture: the silage breaks into small pieces. / If moisture is too high: water is dripping\nOder | Sweet-Sour pleasant smell | Manure smell or putrid smell\n\nFeeding silage to dairy cattle:\n\u2022 Slowly introduce the silage to the animals.\n\u2022 After feeding silage, the feed bunks must be cleaned out to prevent any remaining silage to spoil and cause contamination to the next feed out.\n\u2022 Cover or seal the silage after use to prevent spoilage.\n\nDairysquare - Dairy Farming Module\nPage 36",
+  "images": [
+    {
+      "id": "p36_img1",
+      "bbox": [
+        280,
+        150,
+        481,
+        506
+      ],
+      "label": "Good quality silage sample held in hand",
+      "description": "Photograph showing good quality, greenish-yellow, finely chopped silage held in a farmer's hand next to a compacted silage face."
+    },
+    {
+      "id": "p36_img2",
+      "bbox": [
+        278,
+        526,
+        485,
+        853
+      ],
+      "label": "Poor quality or deteriorated silage",
+      "description": "Close-up photograph of spoiled, dark, discolored, or coarse silage showing signs of improper fermentation or moisture issues."
+    }
+  ],
+  "facts": [
+    "Good silage has a bright, light green yellow or green brown color.",
+    "Bad silage has a dark green to dark brown color.",
+    "When tightly squeezing good silage, it breaks slowly into two.",
+    "If silage has very low moisture, it breaks into small pieces when squeezed.",
+    "If silage moisture is too high, water drips from it when squeezed.",
+    "Good silage has a sweet-sour pleasant odor or smell.",
+    "Bad silage has a manure smell or putrid smell.",
+    "Silage should be slowly introduced to dairy cattle.",
+    "Feed bunks must be cleaned out after feeding silage to prevent remaining silage from spoiling and contaminating the next feed out.",
+    "Silage must be covered or sealed after use to prevent spoilage."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the expected color of high-quality (good) silage?",
+      "options": {
+        "A": "Bright, light green yellow or green brown",
+        "B": "Dark green to dark brown",
+        "C": "Deep jet black with white mold",
+        "D": "Bright golden orange to pale white"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How should good silage behave when tightly squeezed by hand?",
+      "options": {
+        "A": "It crumbles instantly into a fine powder",
+        "B": "It breaks slowly into two",
+        "C": "Water drips continuously from the palm",
+        "D": "It shatters into numerous small pieces"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "If water drips when silage is tightly squeezed, what does this indicate about the silage?",
+      "options": {
+        "A": "The moisture content is too low",
+        "B": "The silage has perfect lactic fermentation",
+        "C": "The moisture content is too high",
+        "D": "The silage has optimal dry matter content"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What happens when silage with very low moisture is tightly squeezed?",
+      "options": {
+        "A": "It breaks slowly into two sections",
+        "B": "It breaks into small pieces",
+        "C": "It releases a foul-smelling liquid",
+        "D": "It forms a dense, unbreakable ball"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following describes the typical odor of properly fermented, good silage?",
+      "options": {
+        "A": "Manure smell",
+        "B": "Sweet-sour pleasant smell",
+        "C": "Putrid, rotting odor",
+        "D": "Strong ammonia or burning odor"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding bad silage characteristics is TRUE?",
+      "options": {
+        "A": "Bad silage is bright, light green yellow and smells sweet-sour.",
+        "B": "Bad silage exhibits a manure smell or putrid smell.",
+        "C": "Bad silage breaks slowly into two when squeezed tightly.",
+        "D": "Bad silage never displays dark green to dark brown coloration."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How should silage initially be introduced into dairy cattle rations?",
+      "options": {
+        "A": "Quickly in full daily ration amounts on day one",
+        "B": "Only as a liquid slurry mixed with molasses",
+        "C": "Slowly introduced to the animals",
+        "D": "After boiling and drying in full sun for two days"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why must feed bunks be thoroughly cleaned out after feeding silage to dairy cattle?",
+      "options": {
+        "A": "To lower the bunk surface temperature for cattle resting",
+        "B": "To prevent remaining silage from spoiling and contaminating the next feed out",
+        "C": "To collect uneaten silage for re-ensiling in the bunker",
+        "D": "To increase the ruminal pH of cows during feeding"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What essential maintenance step should be done after taking silage from storage for daily use?",
+      "options": {
+        "A": "Cover or seal the silage after use to prevent spoilage",
+        "B": "Aerate the remaining silage with electric blowers",
+        "C": "Spray excess water over the exposed silage face",
+        "D": "Leave the silage pit uncovered to let air circulate freely"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "What colors are characteristic of bad, improperly fermented silage?",
+      "options": {
+        "A": "Dark green to Dark brown",
+        "B": "Light yellow to golden straw",
+        "C": "Bright green to pale yellow",
+        "D": "Pure white to ash gray"
+      },
+      "answer": "A"
+    }
+  ]
+}
