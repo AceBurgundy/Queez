@@ -1,0 +1,135 @@
+{
+  "page": 42,
+  "title": "CALVING AND CALF MANAGEMENT",
+  "text": "CALVING AND CALF MANAGEMENT\n\nObjectives:\n1. To learn the calving process.\n2. To familiarize the common problems in calving.\n3. To know how to manage the neonates and calves.\n\nDefinition of terms:\nNeonate - new born animal.\nLactation - the process of making milk.\nLactation period - is the length of milk production period after calving. Standard is 305 days.\nGestation - the period of time between conception and birth. Standard is 285 days.\nParturition - act of giving birth.\nDystocia - is the abnormal or difficulty in parturition.\nColostrum - first milk of the cow, rich in antibodies, nutrients and minerals.\n\nPre-calving management:\n1. Separate the cow due for calving.\na) Vitamin administration\nb) Perform rectal palpation to determine the presentation and size of the fetus.\nc) Check the cow's udder for early signs of mastitis.\n2. Place the cow in a clean and dry calving area days before its expected calving date.\na) Calving pens should be properly cleaned and disinfected before restocking.\nb) Provide clean and dry beddings especially in calving pens with concrete flooring.\nc) Calving pens should be spacious for free movement and allow proper ventilation.\n\nStages of parturition:\nStage 1: Calf moves into position as the cervix and birth canal begin to dilate.\nSigns:\n- Vocalization and restless behavior\n- Raised tail head\n- Increased urination and defecation\n- Full udder\n\nDairysquare - Dairy Farming Module Page 42",
+  "images": [
+    {
+      "id": "p42_img1",
+      "bbox": [
+        757,
+        353,
+        937,
+        645
+      ],
+      "label": "Cow exhibiting pre-calving signs with a raised tail head",
+      "description": "A black-and-white dairy cow standing in an enclosure showing signs of impending calving, specifically with a raised tail head."
+    }
+  ],
+  "facts": [
+    "The learning objectives of Calving and Calf Management are: to learn the calving process, to familiarize common problems in calving, and to know how to manage neonates and calves.",
+    "A neonate is defined as a newborn animal.",
+    "Lactation is defined as the process of making milk.",
+    "The lactation period is the length of milk production period after calving, with a standard duration of 305 days.",
+    "Gestation is the period of time between conception and birth, with a standard duration of 285 days.",
+    "Parturition is the act of giving birth.",
+    "Dystocia refers to abnormal or difficult parturition.",
+    "Colostrum is the first milk produced by the cow, rich in antibodies, nutrients, and minerals.",
+    "Pre-calving management includes separating the cow due for calving, administering vitamins, performing rectal palpation to determine fetal presentation and size, and checking the udder for early signs of mastitis.",
+    "The cow should be placed in a clean and dry calving area days before its expected calving date.",
+    "Calving pens must be properly cleaned and disinfected before restocking, provided with clean and dry beddings (especially on concrete flooring), and must be spacious for free movement and allow proper ventilation.",
+    "Stage 1 of parturition occurs when the calf moves into position as the cervix and birth canal begin to dilate.",
+    "Signs of Stage 1 parturition include vocalization and restless behavior, a raised tail head, increased urination and defecation, and a full udder."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What is the standard duration of the lactation period in dairy cows?",
+      "options": {
+        "A": "285 days",
+        "B": "305 days",
+        "C": "365 days",
+        "D": "250 days"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the standard gestation period between conception and birth in dairy cows?",
+      "options": {
+        "A": "285 days",
+        "B": "305 days",
+        "C": "210 days",
+        "D": "320 days"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Which term describes an abnormal or difficult parturition (birth process)?",
+      "options": {
+        "A": "Lactation",
+        "B": "Gestation",
+        "C": "Dystocia",
+        "D": "Mastitis"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is colostrum?",
+      "options": {
+        "A": "The hormonal secretion triggering uterine contractions during Stage 1",
+        "B": "The fluid drained from the birth canal prior to cervical dilation",
+        "C": "The first milk of the cow, rich in antibodies, nutrients, and minerals",
+        "D": "The antibiotic solution infused into the udder during the dry period"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is rectal palpation performed as part of pre-calving management?",
+      "options": {
+        "A": "To measure milk production capacity",
+        "B": "To determine the presentation and size of the fetus",
+        "C": "To test the cow for subclinical mastitis",
+        "D": "To induce cervical dilation prior to delivery"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which physiological event defines Stage 1 of parturition?",
+      "options": {
+        "A": "Complete expulsion of the calf through the birth canal",
+        "B": "Expulsion of the placenta and fetal membranes",
+        "C": "The calf moves into position as the cervix and birth canal begin to dilate",
+        "D": "Immediate release of colostrum upon suckling"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a sign of Stage 1 parturition?",
+      "options": {
+        "A": "Vocalization and restless behavior",
+        "B": "Raised tail head",
+        "C": "Decreased urination and defecation",
+        "D": "Full udder"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "The photograph at the bottom of the page illustrates a cow displaying which characteristic sign of Stage 1 calving?",
+      "options": {
+        "A": "Raised tail head",
+        "B": "Recumbency with visible calf hooves",
+        "C": "Expulsion of fetal fluids",
+        "D": "Active maternal grooming of a neonate"
+      },
+      "answer": "A",
+      "image_id": "p42_img1"
+    },
+    {
+      "type": "true_false",
+      "question": "Regarding pen preparation, clean and dry bedding is particularly emphasized for calving pens with which type of flooring?",
+      "options": {
+        "A": "True, it is especially emphasized for pens with concrete flooring",
+        "B": "False, bedding is prohibited on concrete floors to prevent slipping",
+        "C": "False, bedding is only required on packed dirt surfaces",
+        "D": "False, bedding is replaced with rubber slats exclusively"
+      },
+      "answer": "A"
+    }
+  ]
+}
