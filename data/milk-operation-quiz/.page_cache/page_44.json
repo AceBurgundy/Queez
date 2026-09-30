@@ -1,0 +1,240 @@
+{
+  "page": 44,
+  "title": "Different delivery presentation / Calving assistance",
+  "text": "Different delivery presentation\n1. Normal position\nNormal presentation\nPosterior presentation\n\n2. Abnormal position\nTransverse presentation (legs first)\nTransverse presentation (back first)\nHead back\nHead to the side\nHead down\nShoulder flexion\nCarpal flexion\nUpside down\nHock flexion\nHip flexion\n\nCalving assistance\nWhen will you intervene?\n1. If the cow is restless for more than 4-6 hours but does not go into labor.\n2. If a cow is straining but no part of the calf is showing after two hours.\n3. If feet or nose is not showing but the calf is no delivered after 2 hours.\n4. Abnormal presentation.\n\nDairysquare - Dairy Farming Module\nPage 44",
+  "images": [
+    {
+      "id": "p44_img1",
+      "bbox": [
+        115,
+        273,
+        269,
+        497
+      ],
+      "label": "Normal presentation",
+      "description": "Diagram of a calf inside the birth canal in a normal anterior presentation with forefeet and head extended forward towards the vulva."
+    },
+    {
+      "id": "p44_img2",
+      "bbox": [
+        116,
+        508,
+        266,
+        726
+      ],
+      "label": "Posterior presentation",
+      "description": "Diagram of a calf in posterior position with hind legs extending toward the birth canal."
+    },
+    {
+      "id": "p44_img3",
+      "bbox": [
+        330,
+        161,
+        477,
+        388
+      ],
+      "label": "Transverse presentation (legs first)",
+      "description": "Diagram showing an abnormal calving position where the calf lies transversely with its legs directed toward the birth canal."
+    },
+    {
+      "id": "p44_img4",
+      "bbox": [
+        330,
+        401,
+        475,
+        624
+      ],
+      "label": "Transverse presentation (back first)",
+      "description": "Diagram showing abnormal transverse presentation with the calf's back facing the birth canal."
+    },
+    {
+      "id": "p44_img5",
+      "bbox": [
+        336,
+        628,
+        474,
+        836
+      ],
+      "label": "Head back",
+      "description": "Diagram showing abnormal presentation where the calf's forelegs are forward but the head is bent backwards over its shoulder."
+    },
+    {
+      "id": "p44_img6",
+      "bbox": [
+        483,
+        76,
+        626,
+        274
+      ],
+      "label": "Head to the side",
+      "description": "Diagram showing abnormal calving presentation where the calf's head is turned laterally to the side."
+    },
+    {
+      "id": "p44_img7",
+      "bbox": [
+        496,
+        296,
+        622,
+        483
+      ],
+      "label": "Head down",
+      "description": "Diagram showing abnormal presentation with the calf's head bent downwards between the front legs."
+    },
+    {
+      "id": "p44_img8",
+      "bbox": [
+        492,
+        497,
+        624,
+        706
+      ],
+      "label": "Shoulder flexion",
+      "description": "Diagram showing abnormal calving posture where one forelimb is retained and flexed at the shoulder."
+    },
+    {
+      "id": "p44_img9",
+      "bbox": [
+        481,
+        715,
+        617,
+        894
+      ],
+      "label": "Carpal flexion",
+      "description": "Diagram showing abnormal presentation with the front leg flexed at the carpus (knee)."
+    },
+    {
+      "id": "p44_img10",
+      "bbox": [
+        643,
+        191,
+        786,
+        410
+      ],
+      "label": "Upside down",
+      "description": "Diagram showing abnormal presentation where the calf is rotated dorsally upside down."
+    },
+    {
+      "id": "p44_img11",
+      "bbox": [
+        645,
+        424,
+        781,
+        604
+      ],
+      "label": "Hock flexion",
+      "description": "Diagram showing posterior abnormal presentation with the hind leg flexed at the hock joint."
+    },
+    {
+      "id": "p44_img12",
+      "bbox": [
+        641,
+        623,
+        785,
+        810
+      ],
+      "label": "Hip flexion",
+      "description": "Diagram showing posterior abnormal presentation (breech) with flexion at the hip joints."
+    }
+  ],
+  "facts": [
+    "Under normal delivery positions, presentations include 'Normal presentation' (anterior) and 'Posterior presentation'.",
+    "Abnormal delivery positions include: Transverse presentation (legs first), Transverse presentation (back first), Head back, Head to the side, Head down, Shoulder flexion, Carpal flexion, Upside down, Hock flexion, and Hip flexion.",
+    "Intervention during calving is required if the cow is restless for more than 4-6 hours but does not go into labor.",
+    "Intervention is required if a cow is straining but no part of the calf is showing after two hours.",
+    "Intervention is required if feet or nose is not showing but the calf is not delivered after 2 hours.",
+    "Intervention is required if there is an abnormal presentation."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, when should you intervene if a cow is restless but does not progress into active labor?",
+      "options": {
+        "A": "If the cow is restless for more than 1 to 2 hours",
+        "B": "If the cow is restless for more than 4-6 hours",
+        "C": "If the cow is restless for more than 8-10 hours",
+        "D": "If the cow is restless for more than 12-24 hours"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How long can a cow be straining without any part of the calf showing before intervention is required?",
+      "options": {
+        "A": "30 minutes",
+        "B": "1 hour",
+        "C": "2 hours",
+        "D": "4 hours"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is classified under '1. Normal position' rather than an abnormal position?",
+      "options": {
+        "A": "Upside down",
+        "B": "Posterior presentation",
+        "C": "Transverse presentation (legs first)",
+        "D": "Carpal flexion"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which abnormal delivery presentation involves the calf lying across the birth canal with its spine or dorsum facing the exit?",
+      "options": {
+        "A": "Transverse presentation (back first)",
+        "B": "Transverse presentation (legs first)",
+        "C": "Shoulder flexion",
+        "D": "Hock flexion"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "An abnormal calving presentation where the knee joint of a front leg is bent inside the birth canal is identified as:",
+      "options": {
+        "A": "Hock flexion",
+        "B": "Hip flexion",
+        "C": "Carpal flexion",
+        "D": "Head down"
+      },
+      "answer": "C",
+      "image_id": "p44_img9"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which abnormal presentation is characterized by the calf's head being bent downwards between its forelegs?",
+      "options": {
+        "A": "Head back",
+        "B": "Head to the side",
+        "C": "Head down",
+        "D": "Shoulder flexion"
+      },
+      "answer": "C",
+      "image_id": "p44_img7"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which abnormal presentation involves the rear legs being bent at the hocks in a posterior presentation?",
+      "options": {
+        "A": "Hock flexion",
+        "B": "Hip flexion",
+        "C": "Carpal flexion",
+        "D": "Shoulder flexion"
+      },
+      "answer": "A",
+      "image_id": "p44_img11"
+    },
+    {
+      "type": "true_false",
+      "question": "True or False: An abnormal presentation during calving requires human assistance or intervention.",
+      "options": {
+        "A": "True, abnormal presentation is an explicit condition requiring intervention.",
+        "B": "False, all abnormal presentations correct themselves spontaneously within 6 hours.",
+        "C": "False, intervention is only warranted after 24 hours of labor.",
+        "D": "True, but only if the cow is a first-calf heifer."
+      },
+      "answer": "A"
+    }
+  ]
+}
