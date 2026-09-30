@@ -1,0 +1,154 @@
+{
+  "page": 41,
+  "title": "Cow comfort practices:",
+  "text": "Cow comfort practices:\n\n1. Installation of ventilation and cooling system.\nIndustrial fans\nSprinklers\n\n2. Establish secure cow pathway.\nConcrete cow path\n\n3. Application of beddings.\nHay straw\nSand\n\n4. Establish a mosquito/fly control program.\n\nDairysquare \u2013 Dairy Farming Module\nPage 41",
+  "images": [
+    {
+      "id": "p41_img1",
+      "bbox": [
+        107,
+        69,
+        292,
+        484
+      ],
+      "label": "Industrial fans",
+      "description": "Large industrial fans installed overhead along the barn roof structure to provide ventilation for dairy cows."
+    },
+    {
+      "id": "p41_img2",
+      "bbox": [
+        108,
+        499,
+        293,
+        918
+      ],
+      "label": "Sprinklers",
+      "description": "Row of water misting nozzles or sprinklers spraying a fine cooling mist over cows to relieve heat stress."
+    },
+    {
+      "id": "p41_img3",
+      "bbox": [
+        348,
+        342,
+        555,
+        656
+      ],
+      "label": "Concrete cow path",
+      "description": "A dedicated, secure concrete walkway between green pastures and trees with cows walking along it accompanied by a handler."
+    },
+    {
+      "id": "p41_img4",
+      "bbox": [
+        614,
+        110,
+        827,
+        477
+      ],
+      "label": "Hay straw bedding",
+      "description": "Dairy cows resting and standing on a thick, dry bedding made of hay or straw inside a barn."
+    },
+    {
+      "id": "p41_img5",
+      "bbox": [
+        615,
+        489,
+        829,
+        893
+      ],
+      "label": "Sand bedding",
+      "description": "A dairy cow lying comfortably inside a free-stall cubicle layered with deep sand bedding."
+    }
+  ],
+  "facts": [
+    "Cow comfort practice 1 is the installation of a ventilation and cooling system.",
+    "Industrial fans and sprinklers are examples of equipment used in ventilation and cooling systems for cows.",
+    "Cow comfort practice 2 is establishing a secure cow pathway.",
+    "A concrete cow path is an example of an established secure pathway for dairy cows.",
+    "Cow comfort practice 3 is the application of beddings.",
+    "Hay straw and sand are common materials used as bedding for cow comfort.",
+    "Cow comfort practice 4 is establishing a mosquito/fly control program.",
+    "The page belongs to the Dairysquare \u2013 Dairy Farming Module (Page 41)."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following cooling equipment are specifically highlighted on page 41 as part of ventilation and cooling systems?",
+      "options": {
+        "A": "Industrial fans and sprinklers",
+        "B": "Air conditioners and ice baths",
+        "C": "Exhaust chimneys and ceiling heaters",
+        "D": "Evaporative swamp coolers and chilled drinking pipes"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "What type of secure cow pathway is specifically shown in the photograph under Cow Comfort Practice #2?",
+      "options": {
+        "A": "Concrete cow path",
+        "B": "Wooden boardwalk",
+        "C": "Rubber-matted lane",
+        "D": "Gravel trail"
+      },
+      "answer": "A",
+      "image_id": "p41_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, which two materials are pictured and recommended for the application of cow beddings?",
+      "options": {
+        "A": "Hay straw and sand",
+        "B": "Sawdust and shredded newspaper",
+        "C": "Peanut hulls and wood chips",
+        "D": "Dry soil and gravel"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "True or False: Establishing a mosquito/fly control program is explicitly listed as one of the recommended cow comfort practices.",
+      "options": {
+        "A": "True, it is listed as practice #4 under cow comfort practices.",
+        "B": "False, fly control is only considered an environmental sanitation practice, not cow comfort.",
+        "C": "False, insect control is deemed harmful to cow comfort.",
+        "D": "False, only chemical tick dipping is recommended."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the photograph labeled 'Sand', what is the dairy cow doing?",
+      "options": {
+        "A": "Lying comfortably in a free-stall bedded with sand",
+        "B": "Feeding from an automated mixer wagon",
+        "C": "Walking along a secure concrete alleyway",
+        "D": "Being milked in a parallel milking parlor"
+      },
+      "answer": "A",
+      "image_id": "p41_img5"
+    },
+    {
+      "type": "identification",
+      "question": "Which cow comfort practice corresponds to the use of overhead industrial fans and water sprinklers?",
+      "options": {
+        "A": "Installation of ventilation and cooling system",
+        "B": "Establish secure cow pathway",
+        "C": "Application of beddings",
+        "D": "Establish a mosquito/fly control program"
+      },
+      "answer": "A",
+      "image_id": "p41_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How many numbered cow comfort practices are enumerated on Page 41 of the Dairy Farming Module?",
+      "options": {
+        "A": "4 practices",
+        "B": "3 practices",
+        "C": "5 practices",
+        "D": "6 practices"
+      },
+      "answer": "A"
+    }
+  ]
+}
