@@ -1,0 +1,144 @@
+{
+  "page": 43,
+  "title": "Stage 2 & Stage 3 of Calving / Parturition",
+  "text": "Stage 2: Cervix becomes fully dilated and the calf moves through the birth canal.\nSigns:\n- Appearance of the water bag\n- Abdominal contractions\n- Calf's leg become visible\n- Expulsion of the calf\n\n[Image: Water bag]\nWater bag\n\n[Image: Calf's leg appeared at the vulva]\nCalf's leg appeared at the vulva\n\nStage 3: Expulsion of the fetal membranes (8-12hrs).\nSigns:\n- Presence of placenta or fetal membrane.\n\n[Image: Fetal membarane]\nFetal membarane\n\nDairysquare - Dairy Farming Module\nPage 43",
+  "images": [
+    {
+      "id": "p43_img1",
+      "bbox": [
+        198,
+        178,
+        403,
+        474
+      ],
+      "label": "Water bag",
+      "description": "Photograph showing the emergence of the fluid-filled water bag (amniotic sac) hanging from the cow's vulva during Stage 2 of calving."
+    },
+    {
+      "id": "p43_img2",
+      "bbox": [
+        198,
+        484,
+        403,
+        892
+      ],
+      "label": "Calf's leg appeared at the vulva",
+      "description": "Photograph showing a cow lying down during labor with the calf's leg and foot emerging visibly through the vulva."
+    },
+    {
+      "id": "p43_img3",
+      "bbox": [
+        529,
+        310,
+        743,
+        691
+      ],
+      "label": "Fetal membarane",
+      "description": "Two composite photos showing expelled fetal membrane: on the left, a person holding up the placenta showing cotyledons, and on the right, the fetal membrane hanging from the cow's vulva."
+    }
+  ],
+  "facts": [
+    "During Stage 2 of calving, the cervix becomes fully dilated.",
+    "During Stage 2 of calving, the calf moves through the birth canal.",
+    "Signs of Stage 2 of calving include the appearance of the water bag.",
+    "Signs of Stage 2 of calving include abdominal contractions.",
+    "Signs of Stage 2 of calving include the calf's leg becoming visible.",
+    "Signs of Stage 2 of calving culminate in the expulsion of the calf.",
+    "Stage 3 of calving is characterized by the expulsion of the fetal membranes.",
+    "Expulsion of fetal membranes in Stage 3 normally takes between 8 to 12 hours (8-12hrs).",
+    "A primary sign of Stage 3 of calving is the presence of the placenta or fetal membrane.",
+    "The document is part of the 'Dairysquare - Dairy Farming Module' on Page 43."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What primary physiological event occurs to the cervix during Stage 2 of calving?",
+      "options": {
+        "A": "The cervix becomes fully dilated",
+        "B": "The cervix closes to protect the birth canal",
+        "C": "The cervix hardens and forms a mucus plug",
+        "D": "The cervix remains undilated until after expulsion"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a sign of Stage 2 of calving?",
+      "options": {
+        "A": "Appearance of the water bag",
+        "B": "Abdominal contractions",
+        "C": "Restlessness without abdominal contractions",
+        "D": "Calf's leg become visible"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, what is the expected normal duration for Stage 3 (expulsion of fetal membranes)?",
+      "options": {
+        "A": "1 to 2 hours",
+        "B": "4 to 6 hours",
+        "C": "8 to 12 hours",
+        "D": "24 to 48 hours"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "What is the defining event of Stage 3 of calving?",
+      "options": {
+        "A": "Dilation of the cervix",
+        "B": "Appearance of the water bag",
+        "C": "Expulsion of the fetal membranes",
+        "D": "Delivery of the calf's torso"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "True or False: Expulsion of the calf takes place during Stage 2 of calving.",
+      "options": {
+        "A": "True, expulsion of the calf occurs during Stage 2",
+        "B": "False, expulsion of the calf occurs during Stage 1",
+        "C": "False, expulsion of the calf occurs during Stage 3",
+        "D": "False, expulsion of the calf occurs after Stage 3"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the photograph labeled 'Water bag', what structure is visibly emerging from the cow?",
+      "options": {
+        "A": "The amniotic sac / fluid-filled water bag",
+        "B": "The retained placenta from a previous birth",
+        "C": "The umbilical cord alone",
+        "D": "The rear hooves inside the uterine wall"
+      },
+      "answer": "A",
+      "image_id": "p43_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the key sign indicating Stage 3 of calving as listed on Page 43?",
+      "options": {
+        "A": "Presence of placenta or fetal membrane",
+        "B": "Onset of heavy milk letdown",
+        "C": "Rapid rise in maternal body temperature",
+        "D": "Appearance of colostrum droplets on the vulva"
+      },
+      "answer": "A",
+      "image_id": "p43_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "During which stage does the calf move through the birth canal?",
+      "options": {
+        "A": "Stage 1",
+        "B": "Stage 2",
+        "C": "Stage 3",
+        "D": "Stage 4"
+      },
+      "answer": "B"
+    }
+  ]
+}
