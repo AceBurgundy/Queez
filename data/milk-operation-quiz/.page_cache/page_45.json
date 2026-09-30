@@ -1,0 +1,155 @@
+{
+  "page": 45,
+  "title": "Management of the neonate",
+  "text": "Calving chain\nCalving jack\n\nManagement of the neonate:\n1. Clear the mucus in the nose and mouth to allow the calf to breath.\na) Use a clean dry cloth.\nb) Hanging the calf.\nc) Use a twig to irritate the nose and stimulate the sneeze reflex.\n\nStimulating sneezing to remove mucus\nhang the calf to remove mucus in the mouth\n\n2. Tie the navel cord using a thread or navel clips.\n\nUsing navel clips to ligate the navel cord\n\nDairysquare - Dairy Farming Module Page 45",
+  "images": [
+    {
+      "id": "p45_img1",
+      "bbox": [
+        51,
+        96,
+        252,
+        493
+      ],
+      "label": "Calving chain",
+      "description": "Demonstration of a calving chain looped securely around the legs/fetlocks of a calf during assisted calving."
+    },
+    {
+      "id": "p45_img2",
+      "bbox": [
+        51,
+        510,
+        252,
+        908
+      ],
+      "label": "Calving jack",
+      "description": "Mechanical calving jack or puller attached to the calving chains to assist delivery of the calf."
+    },
+    {
+      "id": "p45_img3",
+      "bbox": [
+        422,
+        168,
+        626,
+        484
+      ],
+      "label": "Stimulating sneezing to remove mucus",
+      "description": "A newborn calf having its nose stimulated with a twig or straw to trigger the sneeze reflex and expel mucus."
+    },
+    {
+      "id": "p45_img4",
+      "bbox": [
+        423,
+        566,
+        628,
+        866
+      ],
+      "label": "hang the calf to remove mucus in the mouth",
+      "description": "Handlers suspending or hanging the newborn calf head-down to allow fluid and mucus to drain from the mouth and respiratory tract."
+    },
+    {
+      "id": "p45_img5",
+      "bbox": [
+        709,
+        364,
+        915,
+        638
+      ],
+      "label": "Using navel clips to ligate the navel cord",
+      "description": "Close-up of hands applying navel clips to ligate the umbilical cord of a newborn animal."
+    }
+  ],
+  "facts": [
+    "A calving chain is an instrument used during assisted calving to secure and pull the calf's limbs.",
+    "A calving jack is a mechanical pulling aid connected to calving chains to assist in delivering a calf.",
+    "The first step in neonate management is to clear mucus from the nose and mouth to allow the calf to breathe.",
+    "Clearing respiratory mucus can be accomplished by using a clean dry cloth.",
+    "Hanging the calf upside down or by its hind legs is a method used to remove mucus from the mouth and respiratory tract by gravity.",
+    "Inserting a twig into the calf's nose irritates the nasal passage and stimulates the sneeze reflex to expel mucus.",
+    "The second step in neonate management is to tie or ligate the navel cord.",
+    "The umbilical cord can be tied or ligated using a thread or navel clips."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary objective of clearing mucus from a newborn calf's nose and mouth immediately after birth?",
+      "options": {
+        "A": "To allow the newborn calf to breathe",
+        "B": "To stimulate immediate colostrum suckling",
+        "C": "To lower the calf's body temperature",
+        "D": "To prepare the calf for identification tagging"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following methods is recommended to stimulate the sneeze reflex in a newborn calf to expel nasal mucus?",
+      "options": {
+        "A": "Injecting saline solution into the nostrils",
+        "B": "Using a twig to gently irritate the nose",
+        "C": "Blowing compressed air into the nasal passage",
+        "D": "Pinching the calf's nostrils closed for 10 seconds"
+      },
+      "answer": "B",
+      "image_id": "p45_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why is a newborn calf sometimes hung upside down or suspended briefly after birth?",
+      "options": {
+        "A": "To stretch the calf's hind leg tendons",
+        "B": "To drain and remove accumulated mucus from the mouth and airway",
+        "C": "To accurately measure the calf's birth weight",
+        "D": "To promote blood flow away from the brain"
+      },
+      "answer": "B",
+      "image_id": "p45_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which materials are specified for tying or ligating the navel cord of a newborn calf?",
+      "options": {
+        "A": "Elastic castration bands or zip ties",
+        "B": "Surgical staples or medical tape",
+        "C": "A thread or navel clips",
+        "D": "Wire twists or rubber rings"
+      },
+      "answer": "C",
+      "image_id": "p45_img5"
+    },
+    {
+      "type": "identification",
+      "question": "Which mechanical extraction device is shown alongside calving chains to assist in pulling a difficult calf during delivery?",
+      "options": {
+        "A": "Calving jack",
+        "B": "Embryotome",
+        "C": "Emasculator",
+        "D": "Fetal extractor loop"
+      },
+      "answer": "A",
+      "image_id": "p45_img2"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding neonate airway clearance is TRUE according to the guide?",
+      "options": {
+        "A": "A clean dry cloth may be used to clear mucus from the nose and mouth.",
+        "B": "Cold water should be poured into the nasal passage to stimulate breathing.",
+        "C": "Calf airway mucus should be left undisturbed to dissolve naturally.",
+        "D": "Chemical stimulants are required before any physical clearing of mucus."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the recommended procedure immediately following airway clearance in the management of the neonate?",
+      "options": {
+        "A": "Administering oral antibiotics immediately",
+        "B": "Tying the navel cord using a thread or navel clips",
+        "C": "Branding the calf for herd identification",
+        "D": "Weaning the calf immediately from maternal milk"
+      },
+      "answer": "B"
+    }
+  ]
+}
