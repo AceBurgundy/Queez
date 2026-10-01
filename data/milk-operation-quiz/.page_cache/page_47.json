@@ -1,0 +1,123 @@
+{
+  "page": 47,
+  "title": "COMMON DISEASES IN DAIRY CATTLE",
+  "text": "COMMON DISEASES IN DAIRY CATTLE\n\nObjectives:\n1. To be able to identify the healthy from sick animals.\n2. To know the common diseases in calves.\n3. To know the common diseases in heifers and cows.\n4. To be able to know how to manage and prevent the common diseases in dairy cattle.\n\nHealthy vs. Sick\n\n| | HEALTHY | SICK |\n|---|---|---|\n| Eyes | Bright, alert | Dull, depress, dehydrated, lacrimate |\n| Nose | Moist and clean | Dry, nasal discharges |\n| Ears | Erect, alert | Droop |\n| Skin and coat | Shiny, smooth | Dry, dehydrated |\n| Social behavior | With the herd | Isolated from the herd |\n| Activity | Normal | Recumbent, inappetent |\n| Production | Normal | Sudden decrease |\n\n10 Health check protocol:\n\n1. TEMPERATURE \u2013 normal temperature of adult dairy cattle is 38.5-39.0\u00b0C.\n[Photo: Rectal thermometer is used to get the body temperature of the cow.]\nRectal thermometer is used to get the body temperature of the cow.\n\nWhat causes body temperature to increase?\n- Weather condition\n- Estrus cycle\n- Presence of infection\n\n2. DUNG OR MANURE\n\nDairysquare \u2013 Dairy Farming Module\nPage 47",
+  "images": [
+    {
+      "id": "p47_img1",
+      "bbox": [
+        558,
+        342,
+        762,
+        658
+      ],
+      "label": "Measuring body temperature with a rectal thermometer",
+      "description": "A close-up photograph showing a person's hand inserting a digital rectal thermometer under the tail head of a cow to measure its body temperature."
+    }
+  ],
+  "facts": [
+    "The learning objectives include identifying healthy from sick animals, knowing common diseases in calves, heifers, and cows, and learning how to manage and prevent them.",
+    "Healthy cattle have bright and alert eyes, whereas sick cattle have dull, depressed, dehydrated, or lacrimating eyes.",
+    "Healthy cattle have a moist and clean nose, while sick cattle have a dry nose or nasal discharges.",
+    "Healthy cattle have erect and alert ears, whereas sick cattle have drooping ears.",
+    "The skin and coat of healthy cattle are shiny and smooth, whereas sick cattle have dry and dehydrated skin and coat.",
+    "In terms of social behavior, healthy cattle stay with the herd, while sick cattle become isolated from the herd.",
+    "Healthy cattle display normal activity, whereas sick cattle may be recumbent and inappetent.",
+    "Milk production remains normal in healthy cattle, but sick cattle show a sudden decrease in production.",
+    "The normal body temperature of adult dairy cattle is 38.5\u00b0C to 39.0\u00b0C.",
+    "A rectal thermometer is used to measure the body temperature of a cow.",
+    "Body temperature in dairy cattle can increase due to weather conditions, the estrus cycle, or the presence of an infection.",
+    "The second item listed under the 10 Health check protocol is 'DUNG OR MANURE'."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the normal body temperature range for an adult dairy cow?",
+      "options": {
+        "A": "36.5\u201337.0\u00b0C",
+        "B": "37.5\u201338.0\u00b0C",
+        "C": "38.5\u201339.0\u00b0C",
+        "D": "39.5\u201340.5\u00b0C"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Which instrument is specifically used to measure the body temperature of a cow as shown in the protocol?",
+      "options": {
+        "A": "Infrared forehead scanner",
+        "B": "Rectal thermometer",
+        "C": "Tympanic ear thermometer",
+        "D": "Oral glass thermometer"
+      },
+      "answer": "B",
+      "image_id": "p47_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a factor that causes a cow's body temperature to increase?",
+      "options": {
+        "A": "Weather condition",
+        "B": "Estrus cycle",
+        "C": "Presence of infection",
+        "D": "High dietary fiber intake"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements comparing healthy and sick dairy cattle is TRUE?",
+      "options": {
+        "A": "Healthy cows have drooping ears, while sick cows hold their ears erect.",
+        "B": "Sick cows typically remain with the herd, while healthy cows isolate themselves.",
+        "C": "Sick cows often display recumbency, inappetence, and a sudden decrease in milk production.",
+        "D": "A dry, discharge-free nose is a primary sign of optimal cow health."
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the 'Healthy vs. Sick' physical examination chart, what is the expected appearance of the eyes in a healthy cow?",
+      "options": {
+        "A": "Dull and lacrimating",
+        "B": "Bright and alert",
+        "C": "Sunken and dry",
+        "D": "Depressed and cloudy"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What characteristic describes the skin and coat of a healthy cow compared to a sick cow?",
+      "options": {
+        "A": "Shiny and smooth vs. dry and dehydrated",
+        "B": "Rough and matted vs. oily and soft",
+        "C": "Dry and shedding vs. moist and glossy",
+        "D": "Thick and coarse vs. bald and scaly"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the second parameter listed under the '10 Health check protocol' on this page?",
+      "options": {
+        "A": "Rumen motility",
+        "B": "Respiration rate",
+        "C": "Dung or manure",
+        "D": "Heart rate"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which behavioural symptom indicates that an animal is inappetent and unwilling or unable to stand?",
+      "options": {
+        "A": "Erect and alert",
+        "B": "Recumbent and inappetent",
+        "C": "Gregarious and active",
+        "D": "Agitated and hyperactive"
+      },
+      "answer": "B"
+    }
+  ]
+}
