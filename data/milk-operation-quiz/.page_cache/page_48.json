@@ -1,0 +1,150 @@
+{
+  "page": 48,
+  "title": "Manure Evaluation and Vaginal Discharge",
+  "text": "What to look at?\n- Consistency and texture\n- Odor\n- Color\n- Presence of parasite eggs.\n\nFactors that may affect the cow's manure?\n- Weather condition\n- Sudden change in the diet\n- Nutritional deficiency\n- Hydration status\n- Disease and infection\n- Parasitism\n- Fresh cows\n\n3. VAGINAL DISCHARGE\n\nWhat to look at?\n- Color\n- Odor\n- Consistency\n\nCows in heat\nDischarge after 3-5 days post calving\n\nDairysquare - Dairy Farming Module\nPage 48",
+  "images": [
+    {
+      "id": "p48_img1",
+      "bbox": [
+        363,
+        118,
+        537,
+        370
+      ],
+      "label": "Loose / watery manure consistency",
+      "description": "Photograph of loose, watery cow manure spreading flatly across the ground."
+    },
+    {
+      "id": "p48_img2",
+      "bbox": [
+        363,
+        373,
+        537,
+        608
+      ],
+      "label": "Ideal / normal manure consistency",
+      "description": "Photograph of a well-formed, round cow dung patty with distinct concentric rings resting on grass."
+    },
+    {
+      "id": "p48_img3",
+      "bbox": [
+        363,
+        611,
+        537,
+        882
+      ],
+      "label": "Firm / dry manure consistency",
+      "description": "Photograph of firm, dry, segmented cow manure clods/piles on dirt."
+    },
+    {
+      "id": "p48_img4",
+      "bbox": [
+        691,
+        217,
+        862,
+        444
+      ],
+      "label": "Cows in heat vaginal discharge",
+      "description": "Photograph showing clear, mucous, stringy vaginal discharge from a cow in heat."
+    },
+    {
+      "id": "p48_img5",
+      "bbox": [
+        691,
+        529,
+        863,
+        781
+      ],
+      "label": "Discharge after 3-5 days post calving",
+      "description": "Photograph showing lochial/cloudy vaginal discharge observed 3 to 5 days after calving."
+    }
+  ],
+  "facts": [
+    "When evaluating a cow's manure, key characteristics to look at include consistency and texture, odor, color, and presence of parasite eggs.",
+    "Factors that can affect cow's manure include weather condition, sudden change in diet, nutritional deficiency, hydration status, disease and infection, parasitism, and being a fresh cow.",
+    "Section 3 covers vaginal discharge in dairy cows.",
+    "When evaluating vaginal discharge, the characteristics to look at are color, odor, and consistency.",
+    "Vaginal discharge in cows in heat appears clear and stringy/mucous.",
+    "Post-calving vaginal discharge is monitored specifically 3-5 days post calving."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a parameter to evaluate when observing cow manure?",
+      "options": {
+        "A": "Consistency and texture",
+        "B": "Presence of parasite eggs",
+        "C": "Taste and acidity",
+        "D": "Color and odor"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which factor is explicitly mentioned as affecting the characteristics of a cow's manure?",
+      "options": {
+        "A": "Coat color pattern",
+        "B": "Milking machine brand",
+        "C": "Sudden change in the diet",
+        "D": "Ear tag placement"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How many factors that may affect a cow's manure are listed on the page?",
+      "options": {
+        "A": "5 factors",
+        "B": "7 factors",
+        "C": "9 factors",
+        "D": "3 factors"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What three properties should be examined when evaluating a cow's vaginal discharge?",
+      "options": {
+        "A": "Volume, temperature, and pH",
+        "B": "Color, odor, and consistency",
+        "C": "Viscosity, glucose level, and parasite count",
+        "D": "Stickiness, fat content, and color"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the photograph labels on post-calving monitoring, within what timeframe is the post-calving discharge highlighted?",
+      "options": {
+        "A": "1-2 hours post calving",
+        "B": "3-5 days post calving",
+        "C": "10-14 days post calving",
+        "D": "3-5 weeks post calving"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Based on the image labeled 'Cows in heat', what visual characteristic is typical of vaginal discharge during estrus?",
+      "options": {
+        "A": "Clear, stringy mucous discharge hanging from the vulva",
+        "B": "Thick, foul-smelling yellow pus",
+        "C": "Dry, dark crusted material",
+        "D": "Watery green fluid with bubbles"
+      },
+      "answer": "A",
+      "image_id": "p48_img4"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding factors affecting cow manure is TRUE according to the text?",
+      "options": {
+        "A": "Hydration status and parasitism are both factors that may affect a cow's manure.",
+        "B": "Weather conditions have no effect on a cow's manure consistency.",
+        "C": "Fresh cows produce manure that is completely unaffected by physiological changes.",
+        "D": "Nutritional deficiencies only alter urine, never manure."
+      },
+      "answer": "A"
+    }
+  ]
+}
