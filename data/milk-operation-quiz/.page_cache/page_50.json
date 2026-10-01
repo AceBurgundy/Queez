@@ -1,0 +1,143 @@
+{
+  "page": 50,
+  "title": "RUMEN, ABOMASUM, AND RESPIRATORY EXAMINATION",
+  "text": "6. RUMEN \u2013 look for the signs of bloat.\na) Mild bloat\nb) Moderate bloat\nc) Severe bloat\n\n1  2  3\n\n7. ABOMASUM \u2013 displacement of the abomasum is common in dairy cattle.\n\nLEFT  RIGHT\nNormal position of abomasum (red) and rumen (blue)\n\nLEFT  RIGHT\nPosition of abomasum (red) and rumen (blue) in a cow with an LDA\n\n8. RESPIRATORY \u2013 normal respiratory rate is 10-30 beats per minute (15-40 in calves).\n\nWhat to look for?\n- Difficulty in breathing\n- Nasal discharges\n- Fever and Inappetence\n\nDairysquare \u2013 Dairy Farming Module  Page 50",
+  "images": [
+    {
+      "id": "p50_img1",
+      "bbox": [
+        140,
+        313,
+        337,
+        742
+      ],
+      "label": "Stages of Bloat in Cattle (Rear View)",
+      "description": "Three rear-view line illustrations of cattle labeled 1, 2, and 3 demonstrating progressive distension of the flanks representing mild, moderate, and severe bloat."
+    },
+    {
+      "id": "p50_img2",
+      "bbox": [
+        384,
+        240,
+        584,
+        755
+      ],
+      "label": "Diagram comparing normal stomach orientation and Left Displaced Abomasum (LDA)",
+      "description": "Cross-sectional anatomical diagrams comparing the normal position of the abomasum (red) on the right/ventral side and rumen (blue) versus a cow with LDA where the abomasum is displaced to the left side."
+    },
+    {
+      "id": "p50_img3",
+      "bbox": [
+        743,
+        385,
+        951,
+        613
+      ],
+      "label": "Photograph of a dairy calf/cow",
+      "description": "Color photograph showing a black-and-white dairy cow/calf in a pen, illustrating clinical assessment of respiratory signs."
+    }
+  ],
+  "facts": [
+    "When assessing the rumen, examiners must look for signs of bloat.",
+    "The stages or classifications of bloat listed are mild bloat, moderate bloat, and severe bloat.",
+    "Diagram figures 1, 2, and 3 depict the progressive flank distension associated with bloat in cattle.",
+    "Displacement of the abomasum is common in dairy cattle.",
+    "Under normal anatomy, the rumen is positioned on the left side and the abomasum is positioned ventrally towards the right.",
+    "In a cow with an LDA (Left Displaced Abomasum), the abomasum (red) shifts to the left side between the body wall and the rumen (blue).",
+    "The normal respiratory rate in adult dairy cattle is 10-30 beats (breaths) per minute.",
+    "The normal respiratory rate in calves is 15-40 beats (breaths) per minute.",
+    "Clinical signs to look for when evaluating the respiratory system include difficulty in breathing, nasal discharges, and fever and inappetence."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the normal respiratory rate for adult cattle as stated on Page 50?",
+      "options": {
+        "A": "10-30 beats per minute",
+        "B": "15-40 beats per minute",
+        "C": "40-60 beats per minute",
+        "D": "5-15 beats per minute"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the normal respiratory rate range specifically noted for calves?",
+      "options": {
+        "A": "10-20 beats per minute",
+        "B": "15-40 beats per minute",
+        "C": "25-50 beats per minute",
+        "D": "30-60 beats per minute"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What common disorder of the fourth stomach compartment is highlighted as being common in dairy cattle?",
+      "options": {
+        "A": "Abomasal impaction",
+        "B": "Displacement of the abomasum",
+        "C": "Abomasal ulceration",
+        "D": "Reticular groove dysfunction"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the clinical abbreviation 'LDA' stand for in dairy cattle medicine?",
+      "options": {
+        "A": "Left Displaced Abomasum",
+        "B": "Lateral Distended Abomasum",
+        "C": "Lower Digestive Acidosis",
+        "D": "Left Digestive Atrophy"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the cross-sectional anatomical diagram, where is the abomasum (red) located in a cow diagnosed with an LDA?",
+      "options": {
+        "A": "On the extreme right lateral wall",
+        "B": "Displaced to the left side alongside the rumen",
+        "C": "Dorsal to the spine in the center",
+        "D": "Inside the reticulum on the right"
+      },
+      "answer": "B",
+      "image_id": "p50_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When examining the rumen, which condition and its three severity levels (mild, moderate, severe) should be looked for?",
+      "options": {
+        "A": "Acidosis",
+        "B": "Bloat",
+        "C": "Hardware disease",
+        "D": "Impaction"
+      },
+      "answer": "B",
+      "image_id": "p50_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed under 'What to look for?' during a respiratory assessment on Page 50?",
+      "options": {
+        "A": "Difficulty in breathing",
+        "B": "Nasal discharges",
+        "C": "Fever and Inappetence",
+        "D": "Bloody diarrhea"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding the respiratory and rumen examination of cattle is TRUE according to the page?",
+      "options": {
+        "A": "Calves normally have a lower respiratory rate (10-30) than adult cows (15-40).",
+        "B": "Normal position of the abomasum is situated towards the right ventral abdomen.",
+        "C": "Displacement of the abomasum is extremely rare in dairy cattle.",
+        "D": "Bloat only occurs in a single uniform severity without mild or severe stages."
+      },
+      "answer": "B"
+    }
+  ]
+}
