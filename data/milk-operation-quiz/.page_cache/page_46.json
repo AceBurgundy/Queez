@@ -1,0 +1,133 @@
+{
+  "page": 46,
+  "title": "Calf Care and Management",
+  "text": "3. Disinfect the navel using navel dips with povidone iodine.\n\nDisinfecting the navel will greatly help prevent calf mortalities\n\n4. Give the newborn calf sufficient colostrum (2 litres) in the first two hours of life.\n\nColostrum is the \"passport to life\"\n\n5. Record all the necessary information.\na) ETN of the dam\nb) Time and date of birth\nc) Calving ease\nd) Weight and color markings of the calf\ne) Personnel attended\n\n6. Calf care management\n7 days old calves:\n- Give concentrates and adlibitum water.\n- Vitamin ADE and B-complex\n- Ear tagging or ear notching\n1 month old calves:\n- Desbudding\n- Deworming\n- Reduce milk consumption\n\nDairysquare - Dairy Farming Module Page 46",
+  "images": [
+    {
+      "id": "p46_img1",
+      "bbox": [
+        92,
+        347,
+        296,
+        653
+      ],
+      "label": "Navel Disinfection",
+      "description": "A person applying a navel dip cup with povidone iodine solution to a calf's navel to prevent infection."
+    },
+    {
+      "id": "p46_img2",
+      "bbox": [
+        379,
+        332,
+        582,
+        669
+      ],
+      "label": "Colostrum Feeding",
+      "description": "A farm worker feeding colostrum to a young calf using a calf feeding bottle."
+    }
+  ],
+  "facts": [
+    "The navel should be disinfected using navel dips with povidone iodine.",
+    "Disinfecting the navel greatly helps prevent calf mortalities.",
+    "A newborn calf should be given sufficient colostrum (2 litres) in the first two hours of life.",
+    "Colostrum is described as the 'passport to life'.",
+    "Information to record after birth includes: ETN of the dam, time and date of birth, calving ease, weight and color markings of the calf, and personnel attended.",
+    "At 7 days old, calves should be given concentrates and adlibitum water.",
+    "At 7 days old, calves receive Vitamin ADE and B-complex.",
+    "At 7 days old, identification by ear tagging or ear notching is performed.",
+    "At 1 month old, calf care includes desbudding, deworming, and reducing milk consumption."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What antiseptic solution is specifically recommended for navel dipping to prevent calf mortalities?",
+      "options": {
+        "A": "Hydrogen peroxide",
+        "B": "Povidone iodine",
+        "C": "Chlorhexidine gluconate",
+        "D": "Ethyl alcohol"
+      },
+      "answer": "B",
+      "image_id": "p46_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How much colostrum should be fed to a newborn calf within its first two hours of life?",
+      "options": {
+        "A": "1 litre",
+        "B": "2 litres",
+        "C": "4 litres",
+        "D": "6 litres"
+      },
+      "answer": "B",
+      "image_id": "p46_img2"
+    },
+    {
+      "type": "identification",
+      "question": "What is referred to as the 'passport to life' for a newborn calf?",
+      "options": {
+        "A": "Colostrum",
+        "B": "Vitamin ADE",
+        "C": "Povidone iodine",
+        "D": "Concentrate starter"
+      },
+      "answer": "A",
+      "image_id": "p46_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed among the necessary recording information after calf birth?",
+      "options": {
+        "A": "ETN of the dam",
+        "B": "Calving ease",
+        "C": "Weight and color markings of the calf",
+        "D": "Body temperature of the dam"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the calf management schedule, at what age should ear tagging or ear notching be carried out?",
+      "options": {
+        "A": "Immediately after birth",
+        "B": "7 days old",
+        "C": "1 month old",
+        "D": "3 months old"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which vitamins are scheduled to be administered to calves at 7 days old?",
+      "options": {
+        "A": "Vitamin C and Vitamin K",
+        "B": "Vitamin ADE and B-complex",
+        "C": "Vitamin D3 and Calcium",
+        "D": "Vitamin E and Selenium"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What management practices are prescribed for 1-month-old calves?",
+      "options": {
+        "A": "Ear tagging, concentrates, and Vitamin ADE",
+        "B": "Desbudding, deworming, and reducing milk consumption",
+        "C": "Colostrum feeding, deworming, and adlibitum water",
+        "D": "Weaning completely, castration, and pasture grazing"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding calf care at 7 days of age is TRUE?",
+      "options": {
+        "A": "Calves should receive concentrates and adlibitum water.",
+        "B": "Calves should undergo desbudding and deworming.",
+        "C": "Calves should have their milk consumption reduced immediately.",
+        "D": "Calves must only be offered liquid colostrum without water."
+      },
+      "answer": "A"
+    }
+  ]
+}
