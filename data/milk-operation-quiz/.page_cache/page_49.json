@@ -1,0 +1,165 @@
+{
+  "page": 49,
+  "title": "4. URINE / 5. UDDER AND MILK",
+  "text": "7 days post calving\nCow with metritis\n\n4. URINE\n\nColour | Significance\nStraw | Normal urine\nColourless-pale | Dilute urine: low S.G.\nDeep yellow | Concentrated: dehydration, bilirubinuria\nOrange-red | Haematuria, haemoglobinuria\nBrown-black | Myoglobinuria\nMilky white | Pyuria\nOrange | Certain drugs: oxytetracyclines\n\n5. UDDER AND MILK\n\nDairysquare \u2013 Dairy Farming Module\nPage 49",
+  "images": [
+    {
+      "id": "p49_img1",
+      "bbox": [
+        53,
+        67,
+        330,
+        364
+      ],
+      "label": "7 days post calving vaginal discharge",
+      "description": "Discharge flowing from the vulva of a cow caught in a hand, labeled '7 days post calving'."
+    },
+    {
+      "id": "p49_img2",
+      "bbox": [
+        52,
+        420,
+        329,
+        915
+      ],
+      "label": "Cow with metritis",
+      "description": "A cow lying in a stall with abnormal foul/reddish discharge on the floor behind her, labeled 'Cow with metritis'."
+    },
+    {
+      "id": "p49_img3",
+      "bbox": [
+        719,
+        111,
+        903,
+        519
+      ],
+      "label": "Milk sample vials showing various abnormal appearances",
+      "description": "A row of glass vials containing milk samples ranging in appearance from white to watery, yellow, clotted, and serous fluids under section 5. UDDER AND MILK."
+    },
+    {
+      "id": "p49_img4",
+      "bbox": [
+        719,
+        520,
+        903,
+        896
+      ],
+      "label": "California Mastitis Test (CMT) paddle with abnormal milk reactions",
+      "description": "A four-well CMT paddle showing thickening, gel formation, and clumping in milk samples indicative of high somatic cell count or clinical mastitis."
+    }
+  ],
+  "facts": [
+    "A clear to slightly cloudy lochial discharge can be evaluated 7 days post calving.",
+    "Metritis presents with abnormal, foul, often reddish discharge seen behind the cow in stalls.",
+    "Straw-coloured urine signifies normal bovine urine.",
+    "Colourless to pale urine indicates dilute urine with low specific gravity (S.G.).",
+    "Deep yellow urine indicates concentrated urine caused by dehydration or bilirubinuria.",
+    "Orange-red urine signifies haematuria or haemoglobinuria.",
+    "Brown-black urine signifies myoglobinuria.",
+    "Milky white urine signifies pyuria (pus/white blood cells in urine).",
+    "Orange urine is associated with administration of certain drugs such as oxytetracyclines.",
+    "Under section '5. UDDER AND MILK', abnormal milk can be inspected using sample test vials and paddle-based testing (such as CMT) showing mastitis gel reactions."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "According to the urine assessment chart, what is the normal colour of bovine urine?",
+      "options": {
+        "A": "Straw",
+        "B": "Colourless-pale",
+        "C": "Deep yellow",
+        "D": "Milky white"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does colourless-pale urine signify in dairy cattle?",
+      "options": {
+        "A": "Myoglobinuria",
+        "B": "Dilute urine: low S.G.",
+        "C": "Severe dehydration",
+        "D": "Presence of oxytetracyclines"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Deep yellow urine in cattle is indicative of which of the following conditions?",
+      "options": {
+        "A": "Pyuria",
+        "B": "Haematuria only",
+        "C": "Concentrated urine: dehydration, bilirubinuria",
+        "D": "Low specific gravity"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "An orange-red discoloration of bovine urine indicates which condition?",
+      "options": {
+        "A": "Myoglobinuria",
+        "B": "Haematuria, haemoglobinuria",
+        "C": "Pyuria",
+        "D": "Normal lochial contamination"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which urine colour is specifically associated with myoglobinuria?",
+      "options": {
+        "A": "Brown-black",
+        "B": "Deep yellow",
+        "C": "Straw",
+        "D": "Milky white"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Milky white urine in cattle is a clinical sign of:",
+      "options": {
+        "A": "Oxytetracycline excretion",
+        "B": "Haemoglobinuria",
+        "C": "Pyuria",
+        "D": "Bilirubinuria"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Administration of which drug class is cited as causing orange urine in cattle?",
+      "options": {
+        "A": "Penicillins",
+        "B": "Sulphonamides",
+        "C": "Oxytetracyclines",
+        "D": "Aminoglycosides"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Is the following statement true or false? 'Brown-black urine in cattle indicates pyuria.'",
+      "options": {
+        "A": "True, because brown-black indicates purulent matter in urine.",
+        "B": "False, because brown-black urine indicates myoglobinuria, whereas pyuria causes milky white urine.",
+        "C": "False, because brown-black urine indicates normal hydration.",
+        "D": "True, because myoglobinuria causes straw-coloured urine."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "In image p49_img2, what clinical reproductive condition is depicted in the lying cow showing reddish discharge?",
+      "options": {
+        "A": "Metritis",
+        "B": "Ketosis",
+        "C": "Milk fever",
+        "D": "Mastitis"
+      },
+      "answer": "A",
+      "image_id": "p49_img2"
+    }
+  ]
+}
