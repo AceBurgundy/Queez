@@ -1,0 +1,188 @@
+{
+  "page": 55,
+  "title": "PROLAPSE & Retained Placenta Treatments",
+  "text": "OXYTOCIN BIO\n5 IU/ml\ninjection solution\n50 ml\nOXYTOCIN BIO 5 IU/ml\nbioveta\n\nHormonal treatment using oxytocin\nMechanical approach of retained placenta\n\n4. PROLAPSE - one or more organs in the pelvis slip down from their normal position and bulge into the vagina.\n\nVaginal prolapse\nCervical prolapse\nUterine prolapse\n\nManagement of prolapse:\na) Replacement of the prolapse.\nb) Apply salt or sugar solution to reduce swelling.\nc) Suture the vulva if necessary.\nd) Give anti-inflammatory drugs and antibiotics.\n\nDairysquare - Dairy Farming Module\nPage 55",
+  "images": [
+    {
+      "id": "p55_img1",
+      "bbox": [
+        53,
+        172,
+        248,
+        432
+      ],
+      "label": "Hormonal treatment using oxytocin",
+      "description": "Bottle and box of Oxytocin Bio 5 IU/ml injection solution (50 ml) manufactured by Bioveta, used as hormonal treatment for retained placenta."
+    },
+    {
+      "id": "p55_img2",
+      "bbox": [
+        48,
+        550,
+        249,
+        836
+      ],
+      "label": "Mechanical approach of retained placenta",
+      "description": "Veterinary or farm worker performing manual removal/mechanical approach of retained placenta from a cow."
+    },
+    {
+      "id": "p55_img3",
+      "bbox": [
+        349,
+        67,
+        553,
+        292
+      ],
+      "label": "Vaginal prolapse",
+      "description": "Cow lying down with vaginal prolapse showing protruding pink mucosal tissue."
+    },
+    {
+      "id": "p55_img4",
+      "bbox": [
+        349,
+        323,
+        555,
+        591
+      ],
+      "label": "Cervical prolapse",
+      "description": "Cow showing cervical prolapse protruding externally from the vulva."
+    },
+    {
+      "id": "p55_img5",
+      "bbox": [
+        351,
+        620,
+        554,
+        934
+      ],
+      "label": "Uterine prolapse",
+      "description": "Standing cow with severe complete uterine prolapse hanging down extensively between the hind legs."
+    },
+    {
+      "id": "p55_img6",
+      "bbox": [
+        715,
+        131,
+        897,
+        458
+      ],
+      "label": "Replacement and treatment of prolapsed tissue",
+      "description": "Handlers wearing gloves manually cleaning and replacing prolapsed pelvic organs back into the cow."
+    },
+    {
+      "id": "p55_img7",
+      "bbox": [
+        715,
+        471,
+        897,
+        792
+      ],
+      "label": "Suturing the vulva after prolapse replacement",
+      "description": "Veterinary procedure of placing retention sutures in the vulva of a cow to prevent recurrence of prolapse."
+    }
+  ],
+  "facts": [
+    "Oxytocin (e.g., Oxytocin Bio 5 IU/ml injection solution) is used as a hormonal treatment for conditions such as retained placenta.",
+    "A mechanical approach can be utilized for addressing retained placenta.",
+    "Prolapse is defined as the condition where one or more organs in the pelvis slip down from their normal position and bulge into the vagina.",
+    "Common types of prolapse shown include vaginal prolapse, cervical prolapse, and uterine prolapse.",
+    "Step a in the management of prolapse is the replacement of the prolapse (repositioning the organ).",
+    "Step b in the management of prolapse is the application of a salt or sugar solution to reduce tissue swelling/edema.",
+    "Step c in the management of prolapse is suturing the vulva if necessary (retention sutures).",
+    "Step d in the management of prolapse includes administering anti-inflammatory drugs and antibiotics.",
+    "This content is part of the 'Dairysquare - Dairy Farming Module' on Page 55."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What medical term describes the condition where one or more organs in the pelvis slip down from their normal position and bulge into the vagina?",
+      "options": {
+        "A": "Dystocia",
+        "B": "Prolapse",
+        "C": "Metritis",
+        "D": "Retained placenta"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which hormone product is shown on Page 55 as a hormonal treatment (such as for retained placenta)?",
+      "options": {
+        "A": "Oxytocin (5 IU/ml)",
+        "B": "Progesterone (10 mg/ml)",
+        "C": "Estrogen (2 mg/ml)",
+        "D": "Prostaglandin F2 alpha (5 mg/ml)"
+      },
+      "answer": "A",
+      "image_id": "p55_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the management protocol on Page 55, what hypertonic topical solution should be applied to the prolapsed tissue to reduce swelling?",
+      "options": {
+        "A": "Dilute alcohol or vinegar solution",
+        "B": "Salt or sugar solution",
+        "C": "Hydrogen peroxide solution",
+        "D": "Warm soapy water solution"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT one of the three specific types of prolapse illustrated with photographs on this page?",
+      "options": {
+        "A": "Vaginal prolapse",
+        "B": "Cervical prolapse",
+        "C": "Uterine prolapse",
+        "D": "Rectal prolapse"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What surgical intervention is indicated in step (c) of prolapse management if necessary to prevent re-expulsion?",
+      "options": {
+        "A": "Ovariectomy",
+        "B": "Suture the vulva",
+        "C": "Episiotomy",
+        "D": "Resection of the cervix"
+      },
+      "answer": "B",
+      "image_id": "p55_img7"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding post-replacement medical management of prolapse is correct according to the guide?",
+      "options": {
+        "A": "Only calcium borogluconate should be administered intravenously.",
+        "B": "Anti-inflammatory drugs and antibiotics should be administered.",
+        "C": "No systemic medications are recommended after organ replacement.",
+        "D": "Only high-dose oxytocin injections are given post-replacement."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary first step listed under 'Management of prolapse'?",
+      "options": {
+        "A": "Immediate culling of the animal",
+        "B": "Replacement of the prolapse",
+        "C": "Amputation of the prolapsed organ",
+        "D": "Administering antibiotics before touching the tissue"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which illustration demonstrates the manual/physical intervention performed by an operator for a retained placenta?",
+      "options": {
+        "A": "Hormonal treatment using oxytocin",
+        "B": "Mechanical approach of retained placenta",
+        "C": "Uterine prolapse standing posture",
+        "D": "Suturing the vulva procedure"
+      },
+      "answer": "B",
+      "image_id": "p55_img2"
+    }
+  ]
+}
