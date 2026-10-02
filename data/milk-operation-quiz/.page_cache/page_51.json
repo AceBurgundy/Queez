@@ -1,0 +1,142 @@
+{
+  "page": 51,
+  "title": "Heart, Lameness, and Common Diseases in Calves",
+  "text": "9. HEART - normal heart rate of cattle is 48-84 beats per minute.\n\nWhat to look for?\n- Arch back\n- Wasting\n- Recumbent\n- Apathy\n\n10. LAMENESS\n\nWhat to look for?\n- Abnormal walking posture and gait\n- Arched back\n- Favors one or more limbs to walk\n- Reluctance to bear weight to the affected limb\n- Recumbent\n\nCommon diseases in calves:\n\n1. NAVEL ILL AND NAVEL ILL - swelling of the navel caused by an infection. Calves with severe infection died within 5 days.\n\nClinical signs:\n- Fever\n- Swelling of the joints\n- Pus and transudate leaks out the navel\n\nDairysquare - Dairy Farming Module Page 51",
+  "images": [
+    {
+      "id": "p51_img1",
+      "bbox": [
+        88,
+        361,
+        287,
+        715
+      ],
+      "label": "Cow exhibiting heart-related illness symptoms (arched back / wasting)",
+      "description": "A black-and-white Holstein cow standing in an indoor stall showing signs of wasting and an arched back."
+    },
+    {
+      "id": "p51_img2",
+      "bbox": [
+        483,
+        227,
+        644,
+        520
+      ],
+      "label": "Cow showing signs of lameness with arched back indoors",
+      "description": "A black-and-white dairy cow standing with a distinctly arched back and abnormal limb positioning indicative of lameness."
+    },
+    {
+      "id": "p51_img3",
+      "bbox": [
+        496,
+        524,
+        644,
+        836
+      ],
+      "label": "Cow showing lameness posture in a pasture field",
+      "description": "A black-and-white dairy cow standing in a grassy field with an arched back and abnormal gait stance."
+    }
+  ],
+  "facts": [
+    "The normal heart rate of cattle is 48 to 84 beats per minute.",
+    "Signs to look for regarding heart problems in cattle include arched back, wasting, recumbent state, and apathy.",
+    "Signs to look for regarding lameness in cattle include abnormal walking posture and gait.",
+    "An arched back can indicate lameness as well as heart issues.",
+    "Lame cattle favor one or more limbs when walking.",
+    "Lame cattle show reluctance to bear weight on the affected limb.",
+    "Lameness can cause cattle to become recumbent.",
+    "Navel ill is a swelling of the navel caused by an infection in calves.",
+    "Calves with severe navel ill infection died within 5 days.",
+    "Clinical signs of navel ill include fever, swelling of the joints, and pus and transudate leaking out of the navel."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the normal heart rate range of cattle?",
+      "options": {
+        "A": "30-50 beats per minute",
+        "B": "48-84 beats per minute",
+        "C": "90-120 beats per minute",
+        "D": "60-100 beats per minute"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is listed under 'What to look for?' when evaluating heart conditions in cattle?",
+      "options": {
+        "A": "Hyperactivity and aggression",
+        "B": "Arch back, wasting, recumbent, and apathy",
+        "C": "Rapid weight gain and swollen brisket",
+        "D": "Excessive salivation and teeth grinding"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements about lameness in cattle is TRUE?",
+      "options": {
+        "A": "Lame cattle show a reluctance to bear weight on the affected limb.",
+        "B": "Lame cattle walk with a perfectly straight back and increased speed.",
+        "C": "Lame cattle distribute weight evenly across all four limbs.",
+        "D": "Recumbency is never observed in cattle with lameness."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "Which symptom is listed as a sign to look for under BOTH 'HEART' issues and 'LAMENESS'?",
+      "options": {
+        "A": "Pus leaking from the navel",
+        "B": "Apathy",
+        "C": "Arched back / Arch back",
+        "D": "Reluctance to bear weight"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What defines 'Navel Ill' in calves according to the guide?",
+      "options": {
+        "A": "Respiratory distress caused by lungworms",
+        "B": "Swelling of the navel caused by an infection",
+        "C": "Inflammation of the hoof caused by footrot",
+        "D": "Digestive upset caused by sudden dietary change"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Within how many days can calves with severe navel ill die?",
+      "options": {
+        "A": "Within 24 hours",
+        "B": "Within 5 days",
+        "C": "Within 10 to 14 days",
+        "D": "Within 3 weeks"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a clinical sign of navel ill in calves?",
+      "options": {
+        "A": "Fever",
+        "B": "Swelling of the joints",
+        "C": "Pus and transudate leaks out the navel",
+        "D": "Severe watery diarrhea with blood"
+      },
+      "answer": "D"
+    },
+    {
+      "type": "identification",
+      "question": "What fluid discharges from the navel during navel ill infection?",
+      "options": {
+        "A": "Clear amniotic fluid only",
+        "B": "Pus and transudate",
+        "C": "Pure blood and bile",
+        "D": "Rumen liquor"
+      },
+      "answer": "B"
+    }
+  ]
+}
