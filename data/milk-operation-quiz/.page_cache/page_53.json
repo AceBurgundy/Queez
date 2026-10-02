@@ -1,0 +1,153 @@
+{
+  "page": 53,
+  "title": "Treatment and Management of Calf Diseases & Common Diseases in Heifers and Cows",
+  "text": "- Nasal discharges\n- Stunted growth\n\nTreatment and management:\n- Antibiotic therapy (bacterial infection)\n- Isolate the animal\n- Reduce overcrowding\n- Replace bedding regularly\n- Proper ventilation\n\n4. SEPTICEMIA \u2013 infection of the blood.\nClinical signs:\n- Fever\n- Stunted growth\n- Inappetence\n- Lethargic\n- Sudden death\n\nCommon diseases in heifers and cows\n\n1. EPHEMERAL FEVER (3 days sickness)\nClinical signs:\n- Fever\n- Drooling\n- Recumbent\n\nDairysquare \u2013 Dairy Farming Module\nPage 53",
+  "images": [
+    {
+      "id": "p53_img1",
+      "bbox": [
+        51,
+        513,
+        230,
+        802
+      ],
+      "label": "Calf with respiratory disease / nasal discharge",
+      "description": "Young dark calf coughing or showing nasal discharge in a stall."
+    },
+    {
+      "id": "p53_img2",
+      "bbox": [
+        300,
+        489,
+        482,
+        799
+      ],
+      "label": "Lethargic calf lying recumbent due to septicemia",
+      "description": "A spotted young calf lying completely prone and lethargic on straw bedding."
+    },
+    {
+      "id": "p53_img3",
+      "bbox": [
+        684,
+        207,
+        856,
+        492
+      ],
+      "label": "Cow drooling due to ephemeral fever",
+      "description": "Close-up of a dark cow's head exhibiting prominent foaming and drooling at the mouth."
+    },
+    {
+      "id": "p53_img4",
+      "bbox": [
+        685,
+        508,
+        856,
+        794
+      ],
+      "label": "Recumbent cow affected by 3-day sickness",
+      "description": "A black-and-white cow lying down recumbent outdoors in a paddock or pen."
+    }
+  ],
+  "facts": [
+    "Clinical signs continued from preceding calf respiratory disease include nasal discharges and stunted growth.",
+    "Treatment and management of respiratory illness include antibiotic therapy for bacterial infections.",
+    "Management practices for calf disease control include isolating the sick animal, reducing overcrowding, replacing bedding regularly, and ensuring proper ventilation.",
+    "Septicemia is defined as an infection of the blood.",
+    "Clinical signs of septicemia include fever, stunted growth, inappetence, lethargy, and sudden death.",
+    "Common diseases in heifers and cows include Ephemeral Fever, which is also known as 3 days sickness.",
+    "Clinical signs of Ephemeral Fever (3 days sickness) include fever, drooling, and becoming recumbent."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What medical term is defined as an infection of the blood in cattle?",
+      "options": {
+        "A": "Septicemia",
+        "B": "Ephemeral fever",
+        "C": "Acidosis",
+        "D": "Pneumonia"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is commonly known as '3 days sickness' in heifers and cows?",
+      "options": {
+        "A": "Septicemia",
+        "B": "Ephemeral fever",
+        "C": "Milk fever",
+        "D": "Bovine viral diarrhea"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which clinical sign is listed for Ephemeral Fever (3 days sickness)?",
+      "options": {
+        "A": "Inappetence only",
+        "B": "Drooling",
+        "C": "Bloody diarrhea",
+        "D": "Severe abdominal distension"
+      },
+      "answer": "B",
+      "image_id": "p53_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is a clinical sign specifically associated with Septicemia as listed on page 53?",
+      "options": {
+        "A": "Drooling saliva",
+        "B": "Sudden death",
+        "C": "Increased milk letdown",
+        "D": "Rapid rumination"
+      },
+      "answer": "B",
+      "image_id": "p53_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is NOT listed as a management or treatment step for calf respiratory infection on page 53?",
+      "options": {
+        "A": "Isolate the animal",
+        "B": "Reduce overcrowding",
+        "C": "Withhold all fluids for 48 hours",
+        "D": "Replace bedding regularly"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement correctly describes the clinical signs of Ephemeral Fever in cattle?",
+      "options": {
+        "A": "Cattle show fever, drooling, and recumbency.",
+        "B": "Cattle experience sudden death with no fever.",
+        "C": "Cattle only show stunted growth without any other signs.",
+        "D": "Cattle remain fully active and hyper-alert."
+      },
+      "answer": "A",
+      "image_id": "p53_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When treating bacterial calf respiratory infection, what therapy is directly indicated on page 53?",
+      "options": {
+        "A": "Antibiotic therapy",
+        "B": "Antifungal shampoo",
+        "C": "Antiviral vaccination during acute onset",
+        "D": "Calcium borogluconate injection"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What environmental management practice is specified on page 53 to help control respiratory issues in calves?",
+      "options": {
+        "A": "Keeping barns completely sealed and unventilated",
+        "B": "Proper ventilation",
+        "C": "Increasing stocking density to preserve heat",
+        "D": "Reusing damp bedding continuously"
+      },
+      "answer": "B"
+    }
+  ]
+}
