@@ -1,0 +1,156 @@
+{
+  "page": 52,
+  "title": "Treatment and management / CALF DIARRHEA / RESPIRATORY PROBLEM",
+  "text": "Treatment and management:\nPrevention is better than cure\na) Maintain cleanliness and hygiene in the calf barn.\nb) Disinfect the navel regularly.\nc) Sufficient colostrum intake.\n\n2. CALF DIARRHEA\nCauses:\na) Bacterial\nb) Viral (clostridium)\nc) Environmental (dirty calf pen, cold weather)\nd) Nutrition (bad milk, sudden change in diet)\ne) Stress (noise, overcrowding)\nf) Insufficient colostrum intake\nClinical signs:\n- Loose bowel\n- Dirty or stained caudal area\n- Dehydrated\n- Fever\n- Lethargic\n\n3. RESPIRATORY PROBLEM\nCauses:\na) Bacterial\nb) Viral (clostridium)\nc) Environmental (dirty calf pen, cold weather)\nd) Stress (overcrowding)\ne) Insufficient colostrum intake\nClinical signs:\n- Fever\n- Labored breathing\n- Coughing (especially when startled or agitated)\n\nDairysquare - Dairy Farming Module Page 52",
+  "images": [
+    {
+      "id": "p52_img1",
+      "bbox": [
+        51,
+        252,
+        250,
+        526
+      ],
+      "label": "Infected calf navel",
+      "description": "Close-up photograph of an infected umbilical/navel area of a calf with dark discharge and swelling (navel ill / omphalitis)."
+    },
+    {
+      "id": "p52_img2",
+      "bbox": [
+        51,
+        542,
+        254,
+        815
+      ],
+      "label": "Calf with swollen joints",
+      "description": "Photograph of a calf showing swollen carpal/hock joints associated with joint ill or systemic spread from navel ill."
+    },
+    {
+      "id": "p52_img3",
+      "bbox": [
+        444,
+        568,
+        701,
+        816
+      ],
+      "label": "Calf with stained hindquarters from diarrhea",
+      "description": "Photograph showing the rear view of a young calf with fecal staining and dirty coat around the tail and caudal/perineal area caused by diarrhea."
+    }
+  ],
+  "facts": [
+    "Navel ill treatment and management is governed by the principle: 'Prevention is better than cure'.",
+    "Preventative management includes maintaining cleanliness and hygiene in the calf barn.",
+    "Preventative management includes regularly disinfecting the navel.",
+    "Preventative management requires sufficient colostrum intake.",
+    "Calf diarrhea can be caused by bacterial pathogens.",
+    "Calf diarrhea can be caused by viral agents (listed with clostridium in text).",
+    "Calf diarrhea can be caused by environmental factors such as a dirty calf pen and cold weather.",
+    "Calf diarrhea can be caused by nutritional factors such as bad milk and sudden change in diet.",
+    "Calf diarrhea can be caused by stress factors like noise and overcrowding.",
+    "Calf diarrhea can be caused by insufficient colostrum intake.",
+    "Clinical signs of calf diarrhea include loose bowel.",
+    "Clinical signs of calf diarrhea include a dirty or stained caudal area.",
+    "Clinical signs of calf diarrhea include dehydration.",
+    "Clinical signs of calf diarrhea include fever.",
+    "Clinical signs of calf diarrhea include lethargy.",
+    "Causes of respiratory problems in calves include bacterial infections.",
+    "Causes of respiratory problems in calves include viral infections (listed with clostridium in text).",
+    "Causes of respiratory problems in calves include environmental factors such as dirty calf pens and cold weather.",
+    "Causes of respiratory problems in calves include stress caused by overcrowding.",
+    "Causes of respiratory problems in calves include insufficient colostrum intake.",
+    "Clinical signs of respiratory problems in calves include fever.",
+    "Clinical signs of respiratory problems in calves include labored breathing.",
+    "Clinical signs of respiratory problems in calves include coughing, especially when startled or agitated."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is listed under 'Prevention is better than cure' for calf treatment and management?",
+      "options": {
+        "A": "Disinfect the navel regularly",
+        "B": "Administer prophylactic antibiotics immediately at birth",
+        "C": "Withhold colostrum for the first 24 hours",
+        "D": "Expose calves immediately to adult cow pens"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which nutritional factor is identified as a specific cause of calf diarrhea?",
+      "options": {
+        "A": "Overfeeding dry hay",
+        "B": "Bad milk or sudden change in diet",
+        "C": "Excessive intake of clean warm water",
+        "D": "Feeding mineral blocks too early"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following clinical signs is characteristic of calf diarrhea?",
+      "options": {
+        "A": "Dirty or stained caudal area",
+        "B": "Dry non-productive sneeze only",
+        "C": "Hyperactive behavior and excitement",
+        "D": "Constipation and hard feces"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When is coughing especially observed in calves suffering from respiratory problems?",
+      "options": {
+        "A": "Only during deep nighttime sleep",
+        "B": "Only when standing under direct sunlight",
+        "C": "Especially when startled or agitated",
+        "D": "Immediately after drinking clean water"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which common risk factor is listed as a cause for BOTH calf diarrhea and calf respiratory problems?",
+      "options": {
+        "A": "Dirty calf pen and cold weather",
+        "B": "Excessive vitamin supplementation",
+        "C": "Hot, humid pasture grazing",
+        "D": "Overuse of antiseptic dips"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "The image p52_img3 depicts the hind legs and rear of a calf primarily to illustrate which clinical sign of diarrhea?",
+      "options": {
+        "A": "Fractured femur bone",
+        "B": "Dirty or stained caudal area",
+        "C": "Infected umbilical cord",
+        "D": "Swollen joints from arthritis"
+      },
+      "answer": "B",
+      "image_id": "p52_img3"
+    },
+    {
+      "type": "true_false",
+      "question": "True or False: Insufficient colostrum intake is listed as a cause of both calf diarrhea and respiratory problems.",
+      "options": {
+        "A": "True, it impairs immunity and predisposes calves to both conditions",
+        "B": "False, colostrum intake is only related to diarrhea",
+        "C": "False, colostrum intake is only related to respiratory disease",
+        "D": "False, colostrum has no effect on disease prevention"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which clinical sign is common to both calf diarrhea and calf respiratory problems?",
+      "options": {
+        "A": "Labored breathing",
+        "B": "Loose bowel",
+        "C": "Fever",
+        "D": "Stained caudal area"
+      },
+      "answer": "C"
+    }
+  ]
+}
