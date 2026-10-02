@@ -1,0 +1,154 @@
+{
+  "page": 54,
+  "title": "Downer Cow Syndrome & Retained Placenta",
+  "text": "Treatment and management:\n- Usually, it will recover after 3 days.\n- Vitamin supplementation\n- Anti-inflammatory drugs\n- Fly and mosquito management\n\n2. DOWNER COW SYNDROME - the inability of the cow to rise due to muscle and nerve damage caused by prolonged recumbency.\n\n[Photo: Split cow due to slippery flooring]\nSplit cow due to slippery flooring\n\n[Photo: Malnutrition and injuries in the limbs can cause the cows to down]\nMalnutrition and injuries in the limbs can cause the cows to down\n\nDowner cow management\n\n[Photo: Hip locks are used to hold the cows]\nHip locks are used to hold the cows\n\n[Photo: Use of harness keeps the cow in standing position]\nUse of harness keeps the cow in standing position\n\n3. RETAINED PLACENTA (Retained fetal membrane) - retention of the placenta after 24-48 hours after calving.\n\nHow to treat?\n- Mechanical approach - manual removal.\n- Hormonal treatment - injection of hormone such as oxytocin.\n\nDairysquare - Dairy Farming Module\nPage 54",
+  "images": [
+    {
+      "id": "p54_img1",
+      "bbox": [
+        234,
+        102,
+        477,
+        342
+      ],
+      "label": "Split cow due to slippery flooring",
+      "description": "A cow recumbent with legs splayed out (split cow) on a concrete floor due to slippery flooring."
+    },
+    {
+      "id": "p54_img2",
+      "bbox": [
+        296,
+        486,
+        477,
+        897
+      ],
+      "label": "Recumbent cow on bedding",
+      "description": "A cow lying down on straw/bedding inside a barn due to limb injury or malnutrition."
+    },
+    {
+      "id": "p54_img3",
+      "bbox": [
+        544,
+        117,
+        729,
+        486
+      ],
+      "label": "Hip locks supporting a cow",
+      "description": "Hip clamp/lock apparatus attached to a hoist used to assist and hold a cow in an upright position outdoors."
+    },
+    {
+      "id": "p54_img4",
+      "bbox": [
+        542,
+        601,
+        729,
+        887
+      ],
+      "label": "Harness supporting a cow",
+      "description": "A sling or body harness suspended from above used to keep a cow supported in a standing position."
+    }
+  ],
+  "facts": [
+    "Treatment and management at the top of the page notes recovery usually occurs after 3 days.",
+    "Management methods include vitamin supplementation, anti-inflammatory drugs, and fly and mosquito management.",
+    "Downer Cow Syndrome is defined as the inability of the cow to rise due to muscle and nerve damage caused by prolonged recumbency.",
+    "Slippery flooring can cause a cow to split and become a downer cow.",
+    "Malnutrition and injuries in the limbs can cause cows to go down.",
+    "Downer cow management utilizes hip locks (clamps) to hold or lift cows.",
+    "Downer cow management utilizes a harness or sling to keep the cow in a standing position.",
+    "Retained Placenta (retained fetal membrane) is defined as the retention of the placenta 24 to 48 hours after calving.",
+    "Treatment for retained placenta includes a mechanical approach involving manual removal.",
+    "Treatment for retained placenta includes hormonal treatment via injection of a hormone such as oxytocin."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What condition is defined as the inability of a cow to rise due to muscle and nerve damage caused by prolonged recumbency?",
+      "options": {
+        "A": "Downer Cow Syndrome",
+        "B": "Milk Fever",
+        "C": "Retained Placenta",
+        "D": "Ketosis"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Retained placenta (retained fetal membrane) in dairy cows is diagnosed when the placenta is retained for how long after calving?",
+      "options": {
+        "A": "2 to 4 hours",
+        "B": "6 to 12 hours",
+        "C": "24 to 48 hours",
+        "D": "5 to 7 days"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which hormone is specifically noted as an injection treatment for retained placenta?",
+      "options": {
+        "A": "Oxytocin",
+        "B": "Progesterone",
+        "C": "Estrogen",
+        "D": "Prolactin"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What mechanical approach is mentioned for the treatment of a retained placenta?",
+      "options": {
+        "A": "Surgical excision through laparotomy",
+        "B": "Manual removal",
+        "C": "Saline uterine lavage",
+        "D": "Vacuum aspiration"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, what environmental hazard commonly leads to a 'split cow'?",
+      "options": {
+        "A": "Steep pasture slopes",
+        "B": "Slippery flooring",
+        "C": "Overcrowded feed bunks",
+        "D": "Narrow barn doorways"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which two pieces of equipment are specifically illustrated for downer cow management to support or hold the cow?",
+      "options": {
+        "A": "Hobbles and head gates",
+        "B": "Hip locks and harnesses",
+        "C": "Nose tongs and tail ropes",
+        "D": "Casting ropes and tilt tables"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement is TRUE regarding the causes and management of downer cows as described on the page?",
+      "options": {
+        "A": "Malnutrition and limb injuries can cause cows to go down.",
+        "B": "Downer cows should never be supported with a harness or hip locks.",
+        "C": "Downer Cow Syndrome is caused exclusively by infectious viral pathogens.",
+        "D": "Cows on slippery floors are immune to muscle and nerve damage."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is shown in the image being used to help keep the downer cow in a standing position?",
+      "options": {
+        "A": "Body harness suspended from above",
+        "B": "Inflatable water flotation tank",
+        "C": "Permanent wooden frame chute",
+        "D": "Cast on both hind legs"
+      },
+      "answer": "A",
+      "image_id": "p54_img4"
+    }
+  ]
+}
