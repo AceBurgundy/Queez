@@ -1,0 +1,161 @@
+{
+  "page": 57,
+  "title": "Treatment and management of Hoof Diseases & Hardware Disease",
+  "text": "Foot rot\nInter-digital dermatitis\n\nTreatment and management:\n- Foot care management\n- Medicated foot bath\n\n7. HARDWARE DISEASE (Bovine traumatic reticulopericarditis) \u2013 ingestion of sharp or foreign objects resulting to irritation and penetration in the lining of the reticulum.\n\nDairysquare \u2013 Dairy Farming Module\nPage 57",
+  "images": [
+    {
+      "id": "p57_img1",
+      "bbox": [
+        119,
+        175,
+        292,
+        506
+      ],
+      "label": "Foot rot",
+      "description": "Close-up photograph showing a cow hoof affected by foot rot."
+    },
+    {
+      "id": "p57_img2",
+      "bbox": [
+        51,
+        597,
+        292,
+        829
+      ],
+      "label": "Inter-digital dermatitis",
+      "description": "Photograph of the rear/interdigital area of a bovine hoof showing inter-digital dermatitis lesion."
+    },
+    {
+      "id": "p57_img3",
+      "bbox": [
+        413,
+        67,
+        616,
+        603
+      ],
+      "label": "Hoof care and trimming stages",
+      "description": "Three sequential views of cow hooves being trimmed and cleaned in a hoof care management crush/chute."
+    },
+    {
+      "id": "p57_img4",
+      "bbox": [
+        413,
+        612,
+        614,
+        883
+      ],
+      "label": "Medicated foot bath",
+      "description": "Dairy cows walking through a blue chemical/medicated foot bath trough in a barn alleyway."
+    },
+    {
+      "id": "p57_img5",
+      "bbox": [
+        693,
+        260,
+        922,
+        492
+      ],
+      "label": "Hardware disease reticulum lesion (view 1)",
+      "description": "Gross anatomical/post-mortem view of the reticulum mucosa showing damage, inflammation, or foreign object penetration."
+    },
+    {
+      "id": "p57_img6",
+      "bbox": [
+        693,
+        508,
+        920,
+        737
+      ],
+      "label": "Hardware disease reticulum lesion (view 2)",
+      "description": "Gloved hand pointing to the penetrated or irritated honeycomb lining of the reticulum in a cow suffering from bovine traumatic reticulopericarditis."
+    }
+  ],
+  "facts": [
+    "Foot rot and inter-digital dermatitis are bovine foot diseases shown on the page.",
+    "Treatment and management for foot conditions include foot care management.",
+    "Treatment and management for foot conditions include the use of a medicated foot bath.",
+    "Hardware Disease is clinically referred to as Bovine traumatic reticulopericarditis.",
+    "Hardware disease is caused by the ingestion of sharp or foreign objects.",
+    "Ingestion of sharp or foreign objects in hardware disease results in irritation and penetration in the lining of the reticulum."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What is the scientific or clinical veterinary term for 'Hardware Disease'?",
+      "options": {
+        "A": "Bovine traumatic reticulopericarditis",
+        "B": "Bovine spongiform encephalopathy",
+        "C": "Infectious bovine rhinotracheitis",
+        "D": "Bovine digital dermatitis"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Hardware disease is primarily caused by:",
+      "options": {
+        "A": "Bacterial infection of the interdigital cleft",
+        "B": "Ingestion of sharp or foreign objects",
+        "C": "Severe deficiency of calcium and phosphorus",
+        "D": "Excessive accumulation of gas in the rumen"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In hardware disease, foreign objects irritate and penetrate the lining of which digestive compartment?",
+      "options": {
+        "A": "Rumen",
+        "B": "Abomasum",
+        "C": "Reticulum",
+        "D": "Omasum"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following are listed as methods for the treatment and management of foot conditions such as foot rot and inter-digital dermatitis?",
+      "options": {
+        "A": "Foot care management and medicated foot bath",
+        "B": "Rumenotomy and high-concentrate diet",
+        "C": "Oral magnetic bolus and calcium gluconate",
+        "D": "Pasture burning and complete herd isolation"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which statement regarding hardware disease is TRUE?",
+      "options": {
+        "A": "Hardware disease is caused by ingestion of sharp foreign objects penetrating the lining of the reticulum.",
+        "B": "Hardware disease is primarily a fungal infection affecting the hooves.",
+        "C": "Hardware disease is treated by walking cows through a medicated foot bath.",
+        "D": "Hardware disease refers exclusively to digital dermatitis of the lower limbs."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "identification",
+      "question": "What preventative/therapeutic practice is depicted where dairy cows walk through a liquid chemical solution to prevent and treat hoof disorders?",
+      "options": {
+        "A": "Medicated foot bath",
+        "B": "Teat dipping",
+        "C": "Colostrum drencher",
+        "D": "Subcutaneous vaccination",
+        "image_id": "p57_img4"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What hoof condition is identified along with foot rot at the top of the page?",
+      "options": {
+        "A": "Laminitis",
+        "B": "Inter-digital dermatitis",
+        "C": "Sole ulcer",
+        "D": "White line disease"
+      },
+      "answer": "B"
+    }
+  ]
+}
