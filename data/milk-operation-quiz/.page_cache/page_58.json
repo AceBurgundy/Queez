@@ -1,0 +1,130 @@
+{
+  "page": 58,
+  "title": "Management: Application of rumen magnets / 8. PARASITES",
+  "text": "Management:\n- Application of rumen magnets\n\n8. PARASITES\na) Endoparasites\n- Roundworms\n- Tapeworms\n- protozoa\nb) Ectoparasites\n- Ticks\n\nDairysquare - Dairy Farming Module\nPage 58",
+  "images": [
+    {
+      "id": "p58_img1",
+      "bbox": [
+        115,
+        137,
+        307,
+        452
+      ],
+      "label": "Administration of a rumen magnet to cattle",
+      "description": "A farm worker or veterinarian in blue shirt inserting or administering a rumen magnet into a restrained cow's throat using a balling gun."
+    },
+    {
+      "id": "p58_img2",
+      "bbox": [
+        116,
+        463,
+        305,
+        874
+      ],
+      "label": "Rumen magnet with attached metallic debris",
+      "description": "A cylindrical or caged yellow rumen magnet with attracted metallic pieces such as wire and nails clinging to its surface."
+    },
+    {
+      "id": "p58_img3",
+      "bbox": [
+        501,
+        120,
+        699,
+        508
+      ],
+      "label": "Ticks (Ectoparasites)",
+      "description": "Various stages and sizes of cattle ticks showing external parasites on a light background."
+    },
+    {
+      "id": "p58_img4",
+      "bbox": [
+        499,
+        540,
+        700,
+        888
+      ],
+      "label": "Tapeworms (Endoparasites)",
+      "description": "Segments and bodies of tapeworms displayed against a dark background, illustrating internal parasites."
+    }
+  ],
+  "facts": [
+    "A key management practice for preventing hardware disease (traumatic reticuloperitonitis) is the application of rumen magnets.",
+    "Rumen magnets attract and hold ingested ferromagnetic objects such as wire and nails to prevent them from penetrating the reticulum wall.",
+    "Parasites in dairy cattle are divided into two main categories: Endoparasites and Ectoparasites.",
+    "Endoparasites listed in cattle include Roundworms, Tapeworms, and protozoa.",
+    "Ectoparasites listed in cattle include Ticks."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "What preventive device is applied orally to cattle to capture swallowed ferromagnetic debris in the reticulum?",
+      "options": {
+        "A": "Rumen magnets",
+        "B": "Esophageal stents",
+        "C": "Trocar and cannula",
+        "D": "Reticular springs"
+      },
+      "answer": "A",
+      "image_id": "p58_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which of the following is classified as an ectoparasite of dairy cattle according to page 58?",
+      "options": {
+        "A": "Roundworms",
+        "B": "Tapeworms",
+        "C": "Ticks",
+        "D": "Protozoa"
+      },
+      "answer": "C",
+      "image_id": "p58_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "All of the following are listed under 'Endoparasites' on page 58 EXCEPT:",
+      "options": {
+        "A": "Roundworms",
+        "B": "Ticks",
+        "C": "Tapeworms",
+        "D": "Protozoa"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the classification of parasites on page 58 is TRUE?",
+      "options": {
+        "A": "Ticks are categorized as endoparasites.",
+        "B": "Protozoa are categorized as endoparasites.",
+        "C": "Tapeworms are categorized as ectoparasites.",
+        "D": "Roundworms are categorized as ectoparasites."
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What type of parasite shown in the image is represented by ribbon-like flat segmented worms affecting the digestive tract?",
+      "options": {
+        "A": "Ticks",
+        "B": "Tapeworms",
+        "C": "Lice",
+        "D": "Flukes"
+      },
+      "answer": "B",
+      "image_id": "p58_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary management recommendation stated at the top of page 58?",
+      "options": {
+        "A": "Application of pour-on acaricides",
+        "B": "Application of rumen magnets",
+        "C": "Surgical ruminal cannulation",
+        "D": "Daily drenching with antihelminthics"
+      },
+      "answer": "B",
+      "image_id": "p58_img1"
+    }
+  ]
+}
