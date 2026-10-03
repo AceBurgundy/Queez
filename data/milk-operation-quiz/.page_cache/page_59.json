@@ -1,0 +1,178 @@
+{
+  "page": 59,
+  "title": "DIFFERENT FARM TOOLS AND EQUIPMENTS",
+  "text": "DIFFERENT FARM TOOLS AND EQUIPMENTS\n\nShovel is a tool used to dig as well as to move loose, granular materials (like dirt, gravel, grain, or snow) from one spot to another.\n\nSpade is a tool used for digging straight-edged holes or trenches, slicing and lifting sod, and edging flower beds or lawns.\n\nRake is used for scooping, scraping, gathering, or leveling materials, such as soil, mulch, or leaves.\n\nPitchfork is used to lift and pitch or throw loose material, such as hay, straw, manure, or leaves.\n\nWheelbarrows are used for a variety of things, such as moving feeds to the barn or collecting manure and other waste out of the barn.\n\nManual manure scraper is used to clear out lumps of manure for easy rinsing.\n\nDairysquare - Dairy Farming Module\nPage 59",
+  "images": [
+    {
+      "id": "p59_img1",
+      "bbox": [
+        103,
+        606,
+        211,
+        808
+      ],
+      "label": "Shovel",
+      "description": "A shovel featuring a curved blade with a handle, used for digging and moving loose granular materials."
+    },
+    {
+      "id": "p59_img2",
+      "bbox": [
+        226,
+        617,
+        377,
+        800
+      ],
+      "label": "Spade",
+      "description": "A spade with a flat, straight-edged rectangular blade and D-grip handle, used for edging and trenching."
+    },
+    {
+      "id": "p59_img3",
+      "bbox": [
+        390,
+        595,
+        455,
+        840
+      ],
+      "label": "Rake",
+      "description": "A farm rake with a long handle and tined head, used for gathering or leveling soil, mulch, or leaves."
+    },
+    {
+      "id": "p59_img4",
+      "bbox": [
+        478,
+        633,
+        632,
+        792
+      ],
+      "label": "Pitchfork",
+      "description": "A pitchfork with long pointed tines and a long wooden handle, used for pitching loose material like hay or manure."
+    },
+    {
+      "id": "p59_img5",
+      "bbox": [
+        634,
+        603,
+        760,
+        812
+      ],
+      "label": "Wheelbarrow",
+      "description": "A two-wheeled green tub wheelbarrow with handles and frame, used for transporting feeds or farm waste."
+    },
+    {
+      "id": "p59_img6",
+      "bbox": [
+        764,
+        656,
+        927,
+        757
+      ],
+      "label": "Manual manure scraper",
+      "description": "A manual scraper with a broad flat rectangular blade and an upright long handle, used for clearing lumps of manure."
+    }
+  ],
+  "facts": [
+    "A shovel is used to dig as well as to move loose, granular materials (such as dirt, gravel, grain, or snow) from one spot to another.",
+    "A spade is used for digging straight-edged holes or trenches, slicing and lifting sod, and edging flower beds or lawns.",
+    "A rake is used for scooping, scraping, gathering, or leveling materials like soil, mulch, or leaves.",
+    "A pitchfork is used to lift and pitch or throw loose material, such as hay, straw, manure, or leaves.",
+    "Wheelbarrows are used for various tasks, including moving feeds to the barn or collecting manure and other waste out of the barn.",
+    "A manual manure scraper is used to clear out lumps of manure for easy rinsing."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "Which farm tool is specifically used to dig straight-edged holes or trenches, slice and lift sod, and edge flower beds or lawns?",
+      "options": {
+        "A": "Rake",
+        "B": "Spade",
+        "C": "Pitchfork",
+        "D": "Manual manure scraper"
+      },
+      "answer": "B",
+      "image_id": "p59_img2"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What tool is designed to dig as well as move loose, granular materials like dirt, gravel, grain, or snow from one spot to another?",
+      "options": {
+        "A": "Shovel",
+        "B": "Spade",
+        "C": "Wheelbarrow",
+        "D": "Rake"
+      },
+      "answer": "A",
+      "image_id": "p59_img1"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary function of a manual manure scraper according to the module?",
+      "options": {
+        "A": "To dig drainage trenches in the cow pens",
+        "B": "To pitch loose bedding straw into stalls",
+        "C": "To clear out lumps of manure for easy rinsing",
+        "D": "To transport feed bags from storage to the barn"
+      },
+      "answer": "C",
+      "image_id": "p59_img6"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which tool is used for scooping, scraping, gathering, or leveling materials such as soil, mulch, or leaves?",
+      "options": {
+        "A": "Pitchfork",
+        "B": "Manual manure scraper",
+        "C": "Shovel",
+        "D": "Rake"
+      },
+      "answer": "D",
+      "image_id": "p59_img3"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which tool is described as being used to lift and pitch or throw loose material like hay, straw, manure, or leaves?",
+      "options": {
+        "A": "Spade",
+        "B": "Pitchfork",
+        "C": "Wheelbarrow",
+        "D": "Rake"
+      },
+      "answer": "B",
+      "image_id": "p59_img4"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are wheelbarrows primarily used for on the dairy farm as listed on this page?",
+      "options": {
+        "A": "Moving feeds to the barn or collecting manure and other waste out of the barn",
+        "B": "Slicing sod and digging straight-edged trenches around pasture fences",
+        "C": "Leveling soil and mulch across outdoor grazing paddocks",
+        "D": "Mixing sanitizing solutions and teat dip chemicals"
+      },
+      "answer": "A",
+      "image_id": "p59_img5"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements about the farm tools described on Page 59 is TRUE?",
+      "options": {
+        "A": "A spade is used to clear out lumps of manure for easy rinsing.",
+        "B": "A shovel is used to lift and throw loose material like hay and straw.",
+        "C": "A pitchfork is used to lift and pitch loose material such as hay, straw, manure, or leaves.",
+        "D": "A rake is exclusively used for digging deep round post holes."
+      },
+      "answer": "C"
+    },
+    {
+      "type": "identification",
+      "question": "Identify the equipment illustrated in image p59_img5 that is used for transporting feeds or collecting manure and waste out of the barn.",
+      "options": {
+        "A": "Wheelbarrow",
+        "B": "Manual manure scraper",
+        "C": "Bulk feed cart",
+        "D": "Tractor scoop"
+      },
+      "answer": "A",
+      "image_id": "p59_img5"
+    }
+  ]
+}
