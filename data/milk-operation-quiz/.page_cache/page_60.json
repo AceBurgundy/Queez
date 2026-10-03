@@ -1,0 +1,151 @@
+{
+  "page": 60,
+  "title": "PORTABLE MILKING MACHINE",
+  "text": "Sickle is used for harvesting, or reaping, grain crops or cutting succulent forage mainly for feeding livestock, either freshly cut or dried as hay.\n\nFencer graft is used for post hole digging.\n\nPORTABLE MILKING MACHINE\n\nMILK COLLECTOR\nMILK CUP\nMILK HOSE\nMILK TANK\nAIR HOSE\n\nBAROMETER\nPULSATOR\nAIR PRESSURE REGULATING VALVE\nAIR TANK\nVACUUM PUMP\nMOTOR\nWHEEL\n\n[Diagram Detail]\nMILK COLLECTOR\nSHUT-OFF\nAIR TUBE\nMILK TUBE\nMILK CUP\n\nThe Portable milking machine is composed of two parts, a milking machine and a vacuum device, It is used for collecting milk from cows and goats. This machine is easy to operate, flexible, convenient, and has reliable performance. It is an ideal milking equipment necessary for medium and small dairy farms and professional dairy farmers to perceive modern milking of dairy cows.\n\nDairysquare - Dairy Farming Module\nPage 60",
+  "images": [
+    {
+      "id": "p60_img1",
+      "bbox": [
+        55,
+        603,
+        178,
+        836
+      ],
+      "label": "Sickle",
+      "description": "A curved-blade sickle held by a human hand, used for cutting forage or reaping grain crops."
+    },
+    {
+      "id": "p60_img2",
+      "bbox": [
+        207,
+        688,
+        368,
+        737
+      ],
+      "label": "Fencer graft",
+      "description": "A manual two-handled post hole digger or fencer graft tool."
+    },
+    {
+      "id": "p60_img3",
+      "bbox": [
+        478,
+        33,
+        808,
+        856
+      ],
+      "label": "Portable Milking Machine Diagram",
+      "description": "Labeled diagram of a portable milking machine showing components including barometer, pulsator, air pressure regulating valve, air tank, vacuum pump, motor, wheel, milk tank, milk hose, air hose, and milking cluster."
+    },
+    {
+      "id": "p60_img4",
+      "bbox": [
+        678,
+        2,
+        821,
+        292
+      ],
+      "label": "Milking Cluster Assembly Detail",
+      "description": "Close-up diagram of the milking claw/cluster assembly indicating milk collector, shut-off valve, air tube, milk tube, and milk cups."
+    }
+  ],
+  "facts": [
+    "A sickle is used for harvesting, or reaping, grain crops or cutting succulent forage mainly for feeding livestock, either freshly cut or dried as hay.",
+    "A fencer graft is used for post hole digging.",
+    "The portable milking machine is composed of two main parts: a milking machine and a vacuum device.",
+    "The portable milking machine is used for collecting milk from cows and goats.",
+    "The portable milking machine is described as easy to operate, flexible, convenient, and has reliable performance.",
+    "The portable milking machine is an ideal milking equipment necessary for medium and small dairy farms and professional dairy farmers to achieve modern milking.",
+    "Components labeled on the portable milking machine include: Barometer, Pulsator, Air Pressure Regulating Valve, Air Tank, Vacuum Pump, Motor, Wheel, Milk Tank, Milk Hose, and Air Hose.",
+    "Components labeled on the milking cluster detail include: Milk Collector, Shut-off, Air Tube, Milk Tube, and Milk Cup."
+  ],
+  "questions": [
+    {
+      "type": "multiple_choice",
+      "question": "According to the guide, which tool is specifically used for post hole digging?",
+      "options": {
+        "A": "Fencer graft",
+        "B": "Sickle",
+        "C": "Pick mattock",
+        "D": "Spade"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary function of a sickle described on this page?",
+      "options": {
+        "A": "Harvesting or reaping grain crops and cutting succulent forage for feeding livestock",
+        "B": "Digging holes for post fences and foundation stakes",
+        "C": "Aerating pasture soil and weeding around dairy crops",
+        "D": "Extracting milk clusters and cleaning milking hoses"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are the two main parts that compose the portable milking machine?",
+      "options": {
+        "A": "A milking machine and a vacuum device",
+        "B": "A motor and a cooling tank",
+        "C": "A pulsator and a pasteurization unit",
+        "D": "A milk claw and an electric generator"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For which animals is the portable milking machine indicated for collecting milk?",
+      "options": {
+        "A": "Cows and goats",
+        "B": "Cows and sheep only",
+        "C": "Goats and camels only",
+        "D": "Water buffaloes and horses only"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which component on the portable milking machine is positioned next to the pulsator to regulate air pressure?",
+      "options": {
+        "A": "Air pressure regulating valve",
+        "B": "Shut-off valve",
+        "C": "Vacuum strainer",
+        "D": "Drain plug"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which instrument is installed on top of the air tank assembly to measure vacuum/pressure?",
+      "options": {
+        "A": "Barometer",
+        "B": "Thermometer",
+        "C": "Hydrometer",
+        "D": "Flow meter"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the close-up diagram of the milking claw unit, which part connects the milk cup directly to the milk collector?",
+      "options": {
+        "A": "Milk tube",
+        "B": "Vacuum pump",
+        "C": "Barometer",
+        "D": "Motor"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding the portable milking machine is TRUE according to the text?",
+      "options": {
+        "A": "It is an ideal milking equipment necessary for medium and small dairy farms.",
+        "B": "It is only suitable for large commercial industrial dairy farms with over 500 cattle.",
+        "C": "It cannot be used for milking goats.",
+        "D": "It operates strictly without a vacuum device."
+      },
+      "answer": "A"
+    }
+  ]
+}
