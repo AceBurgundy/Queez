@@ -1,0 +1,145 @@
+{
+  "page": 56,
+  "title": "5. MILK FEVER (Hypocalcemia) & 6. HOOF AND LEG PROBLEMS",
+  "text": "5. MILK FEVER (Hypocalcemia)\n- Metabolic problem\n- Low level of blood calcium\n- 24 hours or 2-3 days after calving\n- Can lead to other problems like metritis and downer cow syndrome.\n\nClinical signs:\n- Hypersensitivity and excitability.\n- Sternal recumbency and anorexic\n- Lateral recumbency and loss of consciousness\n\nTreatment:\n- Calcium supplementation\n\n6. HOOF AND LEG PROBLEMS \u2013 any complication in the hoof and legs may result to lameness.\nCommon problems:\n- Foot rot\n- Inter-digital dermatitis\n\nDairysquare - Dairy Farming Module\nPage 56",
+  "images": [
+    {
+      "id": "p56_img1",
+      "bbox": [
+        257,
+        277,
+        459,
+        788
+      ],
+      "label": "Cow with milk fever lying down in a field",
+      "description": "Photograph showing a dairy cow suffering from milk fever lying down on green pasture in a recumbent posture."
+    },
+    {
+      "id": "p56_img2",
+      "bbox": [
+        538,
+        263,
+        811,
+        804
+      ],
+      "label": "Veterinary treatment of a downer cow with milk fever",
+      "description": "Photograph of a handler/veterinarian administering an intravenous calcium infusion to a recumbent cow resting on straw bedding in a barn."
+    }
+  ],
+  "facts": [
+    "Milk fever is medically termed hypocalcemia.",
+    "Milk fever is classified as a metabolic problem.",
+    "Milk fever is caused by a low level of blood calcium.",
+    "Milk fever typically occurs within 24 hours or 2-3 days after calving.",
+    "Milk fever can lead to secondary problems such as metritis and downer cow syndrome.",
+    "Clinical signs of milk fever include hypersensitivity and excitability.",
+    "Clinical signs of milk fever include sternal recumbency and being anorexic.",
+    "Clinical signs of milk fever include lateral recumbency and loss of consciousness.",
+    "The primary treatment for milk fever is calcium supplementation.",
+    "Any complication in the hoof and legs may result in lameness.",
+    "Foot rot is a common hoof and leg problem in dairy cattle.",
+    "Inter-digital dermatitis is a common hoof and leg problem in dairy cattle."
+  ],
+  "questions": [
+    {
+      "type": "identification",
+      "question": "What is the medical term for milk fever?",
+      "options": {
+        "A": "Hypocalcemia",
+        "B": "Hypoglycemia",
+        "C": "Hyperkalemia",
+        "D": "Hypomagnesemia"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What primary metabolic defect causes milk fever in dairy cows?",
+      "options": {
+        "A": "Low level of blood glucose",
+        "B": "Low level of blood calcium",
+        "C": "High level of blood ketones",
+        "D": "Excess accumulation of lactic acid"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When does milk fever typically occur in relation to calving?",
+      "options": {
+        "A": "2 to 3 weeks before calving",
+        "B": "During peak lactation around 60 days after calving",
+        "C": "24 hours or 2-3 days after calving",
+        "D": "Immediately upon drying off"
+      },
+      "answer": "C"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Milk fever can predispose or lead to which secondary complications?",
+      "options": {
+        "A": "Foot rot and inter-digital dermatitis",
+        "B": "Metritis and downer cow syndrome",
+        "C": "Bloat and hardware disease",
+        "D": "Brucellosis and tuberculosis"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which progression of recumbency and mental state represents advanced clinical signs of milk fever?",
+      "options": {
+        "A": "Continuous standing with severe muscle tremors",
+        "B": "Sternal recumbency transitioning to lateral recumbency and loss of consciousness",
+        "C": "High fever with hyperactive consciousness and aggressive kicking",
+        "D": "Immediate sudden death without recumbency"
+      },
+      "answer": "B"
+    },
+    {
+      "type": "identification",
+      "question": "What is the recommended treatment for milk fever as stated in the module?",
+      "options": {
+        "A": "Antibiotic therapy",
+        "B": "Calcium supplementation",
+        "C": "Intramuscular iron injections",
+        "D": "Oral sodium bicarbonate"
+      },
+      "answer": "B",
+      "image_id": "p56_img2"
+    },
+    {
+      "type": "true_false",
+      "question": "Which of the following statements regarding milk fever clinical signs is TRUE?",
+      "options": {
+        "A": "Hypersensitivity and excitability can be observed as clinical signs.",
+        "B": "Affected cows always display normal appetite and feeding behavior.",
+        "C": "Milk fever is an infectious viral disease transmitted by ticks.",
+        "D": "It typically develops 3 months after calving during mid-lactation."
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What condition may result from any complication in the hoof and legs?",
+      "options": {
+        "A": "Lameness",
+        "B": "Hypocalcemia",
+        "C": "Metritis",
+        "D": "Ketosis"
+      },
+      "answer": "A"
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which two disorders are explicitly listed as common hoof and leg problems?",
+      "options": {
+        "A": "Foot rot and inter-digital dermatitis",
+        "B": "Downer cow syndrome and mastitis",
+        "C": "Laminitis and arthritis",
+        "D": "Metritis and sole ulcers"
+      },
+      "answer": "A"
+    }
+  ]
+}
