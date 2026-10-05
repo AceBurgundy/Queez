@@ -461,3 +461,145 @@
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
 }
+
+/* =============================================================================
+   Start Exam Dialog & Item Wheel Rules
+   ============================================================================= */
+
+.start-exam-dialog {
+  max-width: 23rem;
+}
+
+.start-exam-dialog__section {
+  margin: 1.25rem 0;
+}
+
+.start-exam-dialog__section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.item-wheel {
+  position: relative;
+  height: 132px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  border-radius: 0.875rem;
+  background-color: var(--md-sys-color-surface-container);
+  outline: none;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+
+.item-wheel::-webkit-scrollbar {
+  display: none;
+}
+
+.item-wheel:focus-visible {
+  box-shadow: 0 0 0 2px var(--md-sys-color-primary);
+}
+
+.item-wheel__highlight {
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  top: 44px;
+  height: 44px;
+  background-color: var(--md-sys-color-surface-container-highest);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: 0.625rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.item-wheel__spacer {
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.item-wheel__row {
+  position: relative;
+  z-index: 2;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-family: var(--md-sys-typescale-font-label);
+  color: var(--md-sys-color-on-surface-variant);
+  scroll-snap-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.15s ease, color 0.15s ease, font-size 0.15s ease;
+}
+
+.item-wheel__row--selected {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--md-sys-color-primary);
+  transform: scale(1.08);
+}
+
+.start-exam-dialog__caption {
+  font-size: 0.8125rem;
+  color: var(--md-sys-color-on-surface-variant);
+  text-align: center;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.start-exam-dialog__link-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.start-exam-dialog__link-button {
+  background-color: transparent;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-primary);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.start-exam-dialog__link-button:hover {
+  background-color: var(--md-sys-color-surface-container-highest);
+}
+
+.start-exam-dialog__link-button--active {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-color: var(--md-sys-color-primary);
+}
+
+@media (max-width: 600px) {
+  .start-exam-scrim {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .start-exam-scrim .start-exam-dialog {
+    max-width: 100%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+    transform: translateY(100%);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.45);
+  }
+
+  .time-picker-scrim--visible .start-exam-dialog {
+    transform: translateY(0);
+  }
+}
+
