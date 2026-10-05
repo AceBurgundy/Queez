@@ -9,7 +9,6 @@ window.DOCUMENTATION_ITEMS["data/navigation-items/napolcom-mock-exam.js"] = {
   "item_title": "NAPOLCOM Mock Exam",
   "icon_name": "assignment",
   "data_path": "data/napolcom-quiz/data.json",
-  "mock_exam_question_count": 60,
   "header_container": {
     "title": "NAPOLCOM Entrance Mock Exam",
     "description": "Complete practice mock examination prepared for review purposes. Covers Verbal Reasoning, Quantitative Math, Logical Deduction, and Philippine Constitution & Police Laws.",

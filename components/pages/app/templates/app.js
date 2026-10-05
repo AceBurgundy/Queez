@@ -22,7 +22,10 @@ import {
 import {
   buildMockExamDeck,
   restoreMockExamDeck,
-  DEFAULT_MOCK_EXAM_QUESTION_COUNT
+  DEFAULT_MOCK_EXAM_QUESTION_COUNT,
+  buildSectionExamDeck,
+  restoreSectionExamDeck,
+  DEFAULT_SECTION_EXAM_QUESTION_COUNT
 } from "../../../sections/quiz-engine/scripts/mock-exam-sampler.js";
 
 css(import.meta, ["../styles/app.css"]);
@@ -568,8 +571,6 @@ export class App extends Component {
           tabIndex: index
         }));
 
-        /** @type {number} */
-        const mockExamBudget = itemData.mock_exam_question_count || DEFAULT_MOCK_EXAM_QUESTION_COUNT;
         /** @type {string} */
         const quizTitle = headerContainer.title || itemData.item_title || adaptedData.title || "Mock Exam";
         /** @type {string} */
@@ -579,7 +580,7 @@ export class App extends Component {
           ? headerContainer.badge_list
           : [
               { icon_name: "format_list_numbered", badge_label: `${sanitizedQuestions.length} Questions in Bank` },
-              { icon_name: "timer", badge_label: `${Math.min(mockExamBudget, sanitizedQuestions.length)}m Mock Exam` },
+              { icon_name: "timer", badge_label: "Mock Exam" },
               { icon_name: "verified", badge_label: "Multiple Choice" }
             ];
 
@@ -600,19 +601,22 @@ export class App extends Component {
         // Factory: Create Full Mock Exam Action Bar (~1 Hour Deck) for Banner
         const createFullExamActionBar = () => {
           /** @type {number} */
-          const mockQuestionsCount = Math.min(mockExamBudget, sanitizedQuestions.length);
+          const maximumQuestionCount = sanitizedQuestions.length;
+          /** @type {number} */
+          const defaultQuestionCount = Math.min(DEFAULT_MOCK_EXAM_QUESTION_COUNT, maximumQuestionCount);
           return new QuizActionBar({
-            questionsCount: mockQuestionsCount,
+            questionsCount: maximumQuestionCount,
+            defaultQuestionsCount: defaultQuestionCount,
             buttonLabel: "Start Mock Exam",
-            tooltipText: `Start ${mockQuestionsCount}-Item Mock Exam (~1 Hour)`,
+            tooltipText: `Configure and start mock exam (${maximumQuestionCount} items available)`,
             isBanner: true,
-            onStartQuiz: ({ isTimed, durationSeconds }) => {
+            onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
               /** @type {Object} */
               const mockDeck = buildMockExamDeck({
                 quizId,
                 questions: sanitizedQuestions,
                 sectionBounds,
-                questionBudget: mockExamBudget
+                questionBudget: questionCount
               });
 
               mountQuizEngine({
@@ -635,21 +639,34 @@ export class App extends Component {
             (question) => question.number >= bounds.startNum && question.number <= bounds.endNum
           );
           /** @type {number} */
-          const sectionCount = Math.max(1, sectionQuestions.length);
+          const maximumQuestionCount = sectionQuestions.length;
+          /** @type {number} */
+          const defaultQuestionCount = Math.min(DEFAULT_SECTION_EXAM_QUESTION_COUNT, maximumQuestionCount);
           /** @type {Object} */
           const categoryDefinition = tabList[tabIndex] || {};
           /** @type {string} */
           const sectionTitle = categoryDefinition.tab_title || categoryDefinition.tabTitle || `Part ${tabIndex + 1}`;
 
           return new QuizActionBar({
-            questionsCount: sectionCount,
+            questionsCount: maximumQuestionCount,
+            defaultQuestionsCount: defaultQuestionCount,
             buttonLabel: sectionTitle,
-            tooltipText: `Start ${sectionTitle} Section Exam`,
+            tooltipText: `Configure and start ${sectionTitle} exam (${maximumQuestionCount} items available)`,
             isBanner: false,
-            onStartQuiz: ({ isTimed, durationSeconds }) => {
+            onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
+              /** @type {Object} */
+              const sectionDeck = buildSectionExamDeck({
+                quizId,
+                questions: sanitizedQuestions,
+                sectionBounds,
+                sectionIndex: tabIndex,
+                questionCount
+              });
+
               mountQuizEngine({
                 examScope: "section",
                 sectionCategoryIndex: tabIndex,
+                deck: sectionDeck,
                 isTimed,
                 totalTimeSeconds: durationSeconds,
                 startTime: Date.now()
@@ -703,15 +720,15 @@ export class App extends Component {
           const sectionCategoryIndex = examMeta.sectionCategoryIndex ?? 0;
 
           /** @type {Array<Object>} */
-          const questionsForScoring = examScope === "full" && examMeta.deck
+          const questionsForScoring = examMeta.deck
             ? examMeta.deck.questions
             : sanitizedQuestions;
           /** @type {string} */
-          const scoringQuizId = examScope === "full" && examMeta.deck
+          const scoringQuizId = examMeta.deck
             ? examMeta.deck.deckQuizId
             : quizId;
           /** @type {Array<Object>} */
-          const scoringBounds = examScope === "full" && examMeta.deck
+          const scoringBounds = examMeta.deck
             ? examMeta.deck.sectionBounds
             : sectionBounds;
 
@@ -778,15 +795,15 @@ export class App extends Component {
           const sectionCategoryIndex = engineConfig.sectionCategoryIndex ?? 0;
 
           /** @type {Array<Object>} */
-          const activeQuestions = (examScope === "full" && engineConfig.deck)
+          const activeQuestions = engineConfig.deck
             ? engineConfig.deck.questions
             : sanitizedQuestions;
           /** @type {string} */
-          const activeEngineQuizId = (examScope === "full" && engineConfig.deck)
+          const activeEngineQuizId = engineConfig.deck
             ? engineConfig.deck.deckQuizId
             : quizId;
           /** @type {Array<Object>} */
-          const activeEngineBounds = (examScope === "full" && engineConfig.deck)
+          const activeEngineBounds = engineConfig.deck
             ? engineConfig.deck.sectionBounds
             : sectionBounds;
 
@@ -867,7 +884,9 @@ export class App extends Component {
           /** @type {number} */
           const sectionCategoryIndex = session.sectionCategoryIndex ?? 0;
           /** @type {Object|null} */
-          const restoredDeck = examScope === "full" ? restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds) : null;
+          const restoredDeck = examScope === "section"
+            ? restoreSectionExamDeck(quizId, sanitizedQuestions, sectionBounds, sectionCategoryIndex)
+            : restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds);
 
           /** @type {Array<Object>} */
           const questionsForScoring = restoredDeck ? restoredDeck.questions : sanitizedQuestions;
@@ -916,7 +935,9 @@ export class App extends Component {
           /** @type {number} */
           const sectionCategoryIndex = session.sectionCategoryIndex ?? 0;
           /** @type {Object|null} */
-          const restoredDeck = examScope === "full" ? restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds) : null;
+          const restoredDeck = examScope === "section"
+            ? restoreSectionExamDeck(quizId, sanitizedQuestions, sectionBounds, sectionCategoryIndex)
+            : restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds);
 
           /** @type {Array<Object>} */
           const activeQuestions = restoredDeck ? restoredDeck.questions : sanitizedQuestions;

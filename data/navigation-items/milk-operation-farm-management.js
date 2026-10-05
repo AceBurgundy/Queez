@@ -9,7 +9,6 @@ window.DOCUMENTATION_ITEMS["data/navigation-items/milk-operation-farm-management
   "item_title": "Milk Operation & Farm Management",
   "icon_name": "agriculture",
   "data_path": "data/milk-operation-quiz/data.json",
-  "mock_exam_question_count": 60,
   "header_container": {
     "title": "Milk Operation and Farm Management",
     "description": "Comprehensive Dairy Farming Examination & Technical Review covering 12 domains: History, Breeds, Reproduction, Anatomy, Nutrition, Silage, Facilities, Health, and Equipment.",
