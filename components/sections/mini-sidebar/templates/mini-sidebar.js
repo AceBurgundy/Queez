@@ -7,93 +7,169 @@ css(import.meta, ["../styles/mini-sidebar.css"]);
 
 /**
  * MiniSidebar Component
- * Persistent, vertical icon rail on the left side with:
- * - App icon ImageButton (Dashboard / Home) with bottom mini pill active indicator
- * - Queezes catalog icon button (All Quizzes) with bottom mini pill active indicator
- * - Light/Dark Theme toggle icon button
- * - Always visible and persistent
+ * Persistent vertical icon rail on desktop, and off-canvas mobile drawer on small screens.
  */
 export class MiniSidebar extends Component {
   /**
-   * @param {Object} [configuration]
+   * @param {Object} [configuration={}]
    * @param {import("../../../../Component.js").Signal<string>} [configuration.activePathSignal] - Reactive active path signal.
    * @param {function(string): void} [configuration.onNavigate] - Page navigation callback.
+   * @param {function(): void} [configuration.onCloseDrawer] - Callback when drawer requests close.
    */
-  constructor({ activePathSignal, onNavigate } = {}) {
+  constructor({ activePathSignal, onNavigate, onCloseDrawer } = {}) {
     super();
 
+    /** @type {import("../../../../Component.js").Signal<string>|undefined} */
     this.activePathSignal = activePathSignal;
+
+    /** @type {function(string): void|undefined} */
     this.onNavigate = onNavigate;
 
+    /** @type {function(): void|undefined} */
+    this.onCloseDrawer = onCloseDrawer;
+
+    /** @type {string} */
     const currentTheme = typeof document !== "undefined"
       ? (document.documentElement.getAttribute("data-theme") || "dark")
       : "dark";
+    /** @type {import("../../../../Component.js").Signal<string>} */
     this.themeSignal = signal(currentTheme);
 
-    const updateActiveIndicator = (pathArg) => {
-      const resolvedPath = (typeof pathArg === "string" && pathArg)
-        ? pathArg
+    /** @type {import("../../../../Component.js").Signal<boolean>} */
+    this.isOpenSignal = signal(false);
+
+    /**
+     * Opens the mobile drawer.
+     * @returns {void}
+     */
+    this.open = () => {
+      this.isOpenSignal.value = true;
+      /** @type {HTMLElement|null} */
+      const sidebarElement = document.getElementById("miniSidebar");
+      if (sidebarElement) {
+        sidebarElement.classList.add("mini-sidebar--open");
+      }
+    };
+
+    /**
+     * Closes the mobile drawer.
+     * @returns {void}
+     */
+    this.close = () => {
+      this.isOpenSignal.value = false;
+      /** @type {HTMLElement|null} */
+      const sidebarElement = document.getElementById("miniSidebar");
+      if (sidebarElement) {
+        sidebarElement.classList.remove("mini-sidebar--open");
+      }
+      if (typeof this.onCloseDrawer === "function") {
+        this.onCloseDrawer();
+      }
+    };
+
+    /**
+     * Toggles the mobile drawer.
+     * @returns {void}
+     */
+    this.toggle = () => {
+      if (this.isOpenSignal.value) {
+        this.close();
+      } else {
+        this.open();
+      }
+    };
+
+    /**
+     * @param {string} [pathArgument]
+     * @returns {void}
+     */
+    const updateActiveIndicator = (pathArgument) => {
+      /** @type {string} */
+      const resolvedPath = (typeof pathArgument === "string" && pathArgument)
+        ? pathArgument
         : (this.activePathSignal ? this.activePathSignal.value : (route.value || getCurrentBrowserPath()));
 
+      /** @type {boolean} */
       const isQuizzes = resolvedPath === "data/quizzes.js" ||
                         resolvedPath === "/quizzes" ||
                         resolvedPath.includes("quizzes");
+      /** @type {boolean} */
       const isDashboard = !isQuizzes;
 
+      /** @type {HTMLElement|null} */
       const appItem = document.getElementById("miniSidebarAppItem");
-      const appbutton = document.querySelector(".mini-sidebar__app-image-button");
+      /** @type {HTMLElement|null} */
+      const appButton = document.querySelector(".mini-sidebar__app-image-button");
+      /** @type {HTMLElement|null} */
       const appPill = document.getElementById("miniSidebarAppPill");
 
+      /** @type {HTMLElement|null} */
       const quizzesItem = document.getElementById("miniSidebarQuizzesItem");
-      const quizzesbutton = document.getElementById("miniSidebarQuizzesbutton");
+      /** @type {HTMLElement|null} */
+      const quizzesButton = document.getElementById("miniSidebarQuizzesbutton");
+      /** @type {HTMLElement|null} */
       const quizzesPill = document.getElementById("miniSidebarQuizzesPill");
 
       if (isDashboard) {
         appItem?.classList.add("mini-sidebar__nav-item--active");
-        appbutton?.classList.add("mini-sidebar__app-image-button--active");
+        appButton?.classList.add("mini-sidebar__app-image-button--active");
         appPill?.classList.add("mini-sidebar__active-pill--visible");
 
         quizzesItem?.classList.remove("mini-sidebar__nav-item--active");
-        quizzesbutton?.classList.remove("mini-sidebar__button--active");
+        quizzesButton?.classList.remove("mini-sidebar__button--active");
         quizzesPill?.classList.remove("mini-sidebar__active-pill--visible");
       } else {
         appItem?.classList.remove("mini-sidebar__nav-item--active");
-        appbutton?.classList.remove("mini-sidebar__app-image-button--active");
+        appButton?.classList.remove("mini-sidebar__app-image-button--active");
         appPill?.classList.remove("mini-sidebar__active-pill--visible");
 
         quizzesItem?.classList.add("mini-sidebar__nav-item--active");
-        quizzesbutton?.classList.add("mini-sidebar__button--active");
+        quizzesButton?.classList.add("mini-sidebar__button--active");
         quizzesPill?.classList.add("mini-sidebar__active-pill--visible");
       }
     };
 
+    /**
+     * @returns {void}
+     */
     const handleThemeToggle = () => {
+      /** @type {"light"|"dark"} */
       const updatedTheme = toggleThemeMode();
       this.themeSignal.value = updatedTheme;
 
+      /** @type {string} */
       const nextIcon = updatedTheme === "light" ? "dark_mode" : "light_mode";
-      document.querySelectorAll("[data-theme-icon]").forEach((el) => {
-        el.textContent = nextIcon;
+      document.querySelectorAll("[data-theme-icon]").forEach((element) => {
+        element.textContent = nextIcon;
       });
       showToast(`Switched to ${updatedTheme} theme`);
     };
 
-    const handleNavigate = (path) => {
-      updateActiveIndicator(path);
+    /**
+     * @param {string} destinationPath
+     * @returns {void}
+     */
+    const handleNavigate = (destinationPath) => {
+      updateActiveIndicator(destinationPath);
+      this.close();
       if (typeof this.onNavigate === "function") {
-        this.onNavigate(path);
+        this.onNavigate(destinationPath);
       } else {
-        window.location.hash = path.includes("quizzes") ? "#/quizzes" : "#/";
+        window.location.hash = destinationPath.includes("quizzes") ? "#/quizzes" : "#/";
       }
     };
 
+    /**
+     * @returns {void}
+     */
     const handleQueezesClick = () => {
       handleNavigate("data/quizzes.js");
     };
 
+    /** @type {string} */
     const initialThemeIcon = this.themeSignal.value === "light" ? "dark_mode" : "light_mode";
 
-    // App icon ImageButton: Dashboard / Home
+    /** @type {ImageButton} */
     const appIconButton = new ImageButton({
       src: "assets/icon.png",
       alt: "Dashboard",
@@ -116,24 +192,30 @@ export class MiniSidebar extends Component {
         <!-- Top navigation group -->
         <div class="mini-sidebar__group">
           <div class="mini-sidebar__nav-item" id="miniSidebarAppItem">
-            ${appIconButton}
+            <div class="mini-sidebar__item-row" onclick=${() => handleNavigate("data/dashboard.js")}>
+              ${appIconButton}
+              <span class="mini-sidebar__drawer-label">Dashboard</span>
+            </div>
             <div
               id="miniSidebarAppPill"
               class="mini-sidebar__active-pill"
               aria-hidden="true"
             ></div>
           </div>
+
           <div class="mini-sidebar__nav-item" id="miniSidebarQuizzesItem">
-            <button
-              type="button"
-              id="miniSidebarQuizzesbutton"
-              class="mini-sidebar__button"
-              data-tooltip="Queezes"
-              aria-label="View all Queezes"
-              onclick=${handleQueezesClick}
-            >
-              <span class="mini-sidebar__emoji-icon" role="img" aria-label="brain">🧠</span>
-            </button>
+            <div class="mini-sidebar__item-row" onclick=${handleQueezesClick}>
+              <button
+                type="button"
+                id="miniSidebarQuizzesbutton"
+                class="mini-sidebar__button"
+                data-tooltip="Queezes"
+                aria-label="View all Queezes"
+              >
+                <span class="mini-sidebar__emoji-icon" role="img" aria-label="brain">🧠</span>
+              </button>
+              <span class="mini-sidebar__drawer-label">Queezes</span>
+            </div>
             <div
               id="miniSidebarQuizzesPill"
               class="mini-sidebar__active-pill"
@@ -144,15 +226,17 @@ export class MiniSidebar extends Component {
 
         <!-- Bottom utility group -->
         <div class="mini-sidebar__group">
-          <button
-            type="button"
-            class="mini-sidebar__button"
-            data-tooltip="Toggle Theme"
-            aria-label="Toggle Light / Dark Theme"
-            onclick=${handleThemeToggle}
-          >
-            <span class="google-symbols notranslate" data-theme-icon>${initialThemeIcon}</span>
-          </button>
+          <div class="mini-sidebar__item-row" onclick=${handleThemeToggle}>
+            <button
+              type="button"
+              class="mini-sidebar__button"
+              data-tooltip="Toggle Theme"
+              aria-label="Toggle Light / Dark Theme"
+            >
+              <span class="google-symbols notranslate" data-theme-icon>${initialThemeIcon}</span>
+            </button>
+            <span class="mini-sidebar__drawer-label">Toggle Theme</span>
+          </div>
         </div>
       </aside>
     `;
@@ -167,14 +251,17 @@ export class MiniSidebar extends Component {
       }
 
       this.routeUnsubscribe = Redirect.onRouteChange((newRoute) => {
+        /** @type {string} */
         const currentRoute = newRoute || (typeof window !== "undefined" ? (window.location.hash || window.location.pathname) : "");
         if (currentRoute && (currentRoute.includes("quizzes") || currentRoute.startsWith("/quizzes"))) {
           updateActiveIndicator("data/quizzes.js");
         } else {
           updateActiveIndicator("data/dashboard.js");
         }
+        this.close();
       });
 
+      /** @type {string} */
       const initialPath = this.activePathSignal?.value || "data/dashboard.js";
       updateActiveIndicator(initialPath);
     };

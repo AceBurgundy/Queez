@@ -1,7 +1,3 @@
-/* =============================================================================
-   Mini Sidebar Styles (Persistent Material Design 3 Icon Rail)
-   ============================================================================= */
-
 .mini-sidebar {
   width: 4rem;
   height: 100%;
@@ -20,7 +16,6 @@
   z-index: 100;
 }
 
-/* Nav groups inside sidebar */
 .mini-sidebar__group {
   display: flex;
   flex-direction: column;
@@ -29,7 +24,6 @@
   width: 100%;
 }
 
-/* Nav Item Container */
 .mini-sidebar__nav-item {
   display: flex;
   flex-direction: column;
@@ -38,7 +32,24 @@
   gap: 0.35rem;
 }
 
-/* Standard Icon Buttons (e.g. Light/Dark theme toggle) */
+.mini-sidebar__item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+
+.mini-sidebar__drawer-label {
+  display: none;
+  font-family: var(--md-sys-typescale-font-label, sans-serif);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+  white-space: nowrap;
+}
+
 .mini-sidebar__button {
   width: 2.75rem;
   height: 2.75rem;
@@ -81,7 +92,6 @@
   outline-offset: 2px;
 }
 
-/* Tooltip on hover */
 .mini-sidebar__button[data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -108,7 +118,6 @@
   transform: translateY(-50%) scale(1);
 }
 
-/* App Icon ImageButton custom adjustments inside sidebar */
 .mini-sidebar__app-image-button {
   border-radius: var(--md-sys-shape-corner-medium, 0.75rem);
   transition: transform 0.2s ease;
@@ -119,31 +128,23 @@
   transform: scale(1.08);
 }
 
-/* Strictly remove rounded colors border from active state */
 .mini-sidebar__app-image-button--active {
   outline: none !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-/* Active State for Icon Buttons: keep clean, indicator handled by mini pill */
 .mini-sidebar__button--active {
   color: var(--md-sys-color-primary);
   background-color: transparent;
   box-shadow: none !important;
 }
 
-/* =============================================================================
-   Bottom Mini Pill Active Indicator
-   A small, rounded div located at the bottom of the active nav item.
-   Its background is subtly brighter than the parent mini-sidebar surface.
-   ============================================================================= */
 .mini-sidebar__active-pill {
   width: 1.125rem;
   height: 3.5px;
   border-radius: 9999px;
   background-color: var(--md-sys-color-surface-container-highest);
-  background-color: color-mix(in srgb, var(--md-sys-color-on-surface) 32%, var(--md-sys-color-surface-container-low));
   opacity: 0;
   transform: scaleX(0.3);
   transition: opacity 0.22s cubic-bezier(0.2, 0, 0, 1),
@@ -152,9 +153,71 @@
   box-shadow: none !important;
 }
 
-/* When the parent nav item is active, reveal the mini pill */
 .mini-sidebar__nav-item--active .mini-sidebar__active-pill,
 .mini-sidebar__active-pill--visible {
   opacity: 1;
   transform: scaleX(1);
+}
+
+/* Mobile & Portrait Responsive Drawer Styles */
+@media (max-width: 768px), (orientation: portrait), ((orientation: landscape) and (max-height: 550px)) {
+  .mini-sidebar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    max-width: 80vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 1000;
+    padding: calc(56px + 1.25rem) 1rem 2rem 1.25rem;
+    border-radius: 0 var(--md-sys-shape-corner-large) var(--md-sys-shape-corner-large) 0;
+    box-shadow: 6px 0 28px rgba(0, 0, 0, 0.35);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    border-left: none;
+  }
+
+  .mini-sidebar.mini-sidebar--open {
+    transform: translateX(0);
+  }
+
+  .mini-sidebar__group {
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .mini-sidebar__nav-item {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .mini-sidebar__item-row {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .mini-sidebar__drawer-label {
+    display: inline-block;
+  }
+
+  .mini-sidebar__active-pill {
+    display: none;
+  }
+
+  .mini-sidebar__button[data-tooltip]::after {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) and (orientation: portrait) {
+  .mini-sidebar {
+    width: 320px;
+    padding-top: calc(64px + 1.5rem);
+  }
 }

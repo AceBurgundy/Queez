@@ -1,11 +1,13 @@
 import { Component, html, signal, css, route, Redirect, getCurrentBrowserPath } from "../../../../Component.js";
 import { MiniSidebar } from "../../../sections/mini-sidebar/templates/mini-sidebar.js";
+import { TopBar } from "../../../widgets/top-bar/templates/top-bar.js";
 import { Dashboard } from "../../dashboard/templates/dashboard.js";
 import { Banner } from "../../../sections/banner/templates/banner.js";
 import { Tabs } from "../../../widgets/tabs/templates/tabs.js";
 import { Toast } from "../../../widgets/toast/templates/toast.js";
 import { LoadingScreen } from "../../../widgets/loading-screen/templates/loading-screen.js";
 import { fetchNavigationItemData } from "../../../../common/scripts/data-loader.js";
+import { adaptQuizData } from "../../../../common/scripts/quiz-data-adapter.js";
 import { QuizActionBar } from "../../../widgets/quiz-action-bar/templates/quiz-action-bar.js";
 import { StartNowButton } from "../../../widgets/start-now-button/templates/start-now-button.js";
 import { QuizEngine } from "../../../sections/quiz-engine/templates/quiz-engine.js";
@@ -17,17 +19,22 @@ import {
   evaluateScoreTally,
   getCategoryBounds
 } from "../../../sections/quiz-engine/scripts/quiz-state-manager.js";
+import {
+  buildMockExamDeck,
+  restoreMockExamDeck,
+  DEFAULT_MOCK_EXAM_QUESTION_COUNT
+} from "../../../sections/quiz-engine/scripts/mock-exam-sampler.js";
 
 css(import.meta, ["../styles/app.css"]);
 
 /**
  * Main Single Page Application Component for Queez!
- * Orchestrates navigation state, persistent mini-sidebar icon rail,
+ * Orchestrates navigation state, top bar for mobile, persistent mini-sidebar / drawer,
  * and dynamic viewport mounting (Dashboard vs Quiz view).
  */
 export class App extends Component {
   /**
-   * @param {Object} [configuration]
+   * @param {Object} [configuration={}]
    * @param {Object|Array<Object>} [configuration.documentationData={}] - Master quiz registry from data.js.
    * @param {Array<Object>} [configuration.categoryGroups=[]] - Category groups list.
    */
@@ -37,6 +44,7 @@ export class App extends Component {
   } = {}) {
     super();
 
+    /** @type {Object} */
     const masterData = documentationData && typeof documentationData === "object" && !Array.isArray(documentationData)
       ? documentationData
       : {
@@ -49,29 +57,91 @@ export class App extends Component {
               : []
         };
 
+    /** @type {string} */
     this.dashboardPath = masterData.dashboard_path || "data/dashboard.js";
+    /** @type {string} */
     this.quizzesPath = masterData.quizzes_path || "data/quizzes.js";
+    /** @type {Array<Object>} */
     this.categoryGroups = Array.isArray(masterData.category_groups)
       ? masterData.category_groups
       : [];
 
-    window.DOCUMENTATION_DATA = masterData;
-    window.DOCUMENTATION_ITEMS = window.DOCUMENTATION_ITEMS || {};
+    /** @type {Object} */
+    const windowObject = /** @type {*} */ (window);
+    windowObject.DOCUMENTATION_DATA = masterData;
+    windowObject.DOCUMENTATION_ITEMS = windowObject.DOCUMENTATION_ITEMS || {};
 
+    /** @type {import("../../../../Component.js").Signal<string>} */
     this.activePathSignal = signal(this.dashboardPath);
+    /** @type {LoadingScreen} */
     this.loadingScreenComponent = new LoadingScreen();
+    /** @type {Toast} */
     const toastComponent = new Toast();
 
+    /** @type {MiniSidebar} */
     this.miniSidebarComponent = new MiniSidebar({
       activePathSignal: this.activePathSignal,
       onNavigate: (selectedPath) => {
+        this.closeMobileDrawer();
         this.navigateTo(selectedPath);
+      },
+      onCloseDrawer: () => {
+        this.closeMobileDrawer();
       }
     });
+
+    /** @type {TopBar} */
+    this.topBarComponent = new TopBar({
+      title: "Queez!",
+      onMenuToggle: () => {
+        this.toggleMobileDrawer();
+      }
+    });
+
+    /**
+     * Toggles mobile drawer visibility.
+     * @returns {void}
+     */
+    this.toggleMobileDrawer = () => {
+      /** @type {HTMLElement|null} */
+      const backdropElement = document.getElementById("appBackdrop");
+      /** @type {HTMLElement|null} */
+      const sidebarElement = document.getElementById("miniSidebar");
+      if (sidebarElement && sidebarElement.classList.contains("mini-sidebar--open")) {
+        sidebarElement.classList.remove("mini-sidebar--open");
+        backdropElement?.classList.remove("app-root__backdrop--visible");
+        this.topBarComponent.setMenuOpen(false);
+      } else {
+        sidebarElement?.classList.add("mini-sidebar--open");
+        backdropElement?.classList.add("app-root__backdrop--visible");
+        this.topBarComponent.setMenuOpen(true);
+      }
+    };
+
+    /**
+     * Closes mobile drawer.
+     * @returns {void}
+     */
+    this.closeMobileDrawer = () => {
+      /** @type {HTMLElement|null} */
+      const backdropElement = document.getElementById("appBackdrop");
+      /** @type {HTMLElement|null} */
+      const sidebarElement = document.getElementById("miniSidebar");
+      sidebarElement?.classList.remove("mini-sidebar--open");
+      backdropElement?.classList.remove("app-root__backdrop--visible");
+      this.topBarComponent.setMenuOpen(false);
+    };
 
     this.template = html`
       <div class="app-root" id="appRoot">
         ${this.loadingScreenComponent}
+        ${this.topBarComponent}
+        <div
+          id="appBackdrop"
+          class="app-root__backdrop"
+          aria-hidden="true"
+          onclick=${() => this.closeMobileDrawer()}
+        ></div>
         ${this.miniSidebarComponent}
         <main
           id="mainViewport"
@@ -89,6 +159,7 @@ export class App extends Component {
     this.mounted = () => {
       // 1. Resolve current active route on initial mount
       const currentRoute = this.parseCurrentRoute();
+      /** @type {string} */
       let expectedNavPath = this.dashboardPath;
       if (currentRoute.type === "quiz") {
         expectedNavPath = this.findNavigationPathForQuizId(currentRoute.quizId) || "data/navigation-items/napolcom-mock-exam.js";
@@ -101,7 +172,9 @@ export class App extends Component {
 
       // 2. Component-safe route change subscription via Redirect.onRouteChange
       this.routeUnsubscribe = Redirect.onRouteChange((normalizedPath) => {
+        this.closeMobileDrawer();
         const activeRoute = this.parseCurrentRoute(normalizedPath);
+        /** @type {string} */
         let targetNavPath = this.dashboardPath;
         if (activeRoute.type === "quiz") {
           targetNavPath = this.findNavigationPathForQuizId(activeRoute.quizId) || "data/navigation-items/napolcom-mock-exam.js";
@@ -114,6 +187,34 @@ export class App extends Component {
           this.loadNavigationItem(targetNavPath);
         }
       });
+
+      // 3. Escape key listener to close drawer
+      /** @param {KeyboardEvent} keyboardEvent */
+      const handleKeyDown = (keyboardEvent) => {
+        if (keyboardEvent.key === "Escape") {
+          this.closeMobileDrawer();
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      this.cleanupKeyDown = () => {
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+
+      // 4. Close drawer if viewport resizes back to desktop width
+      if (typeof window.matchMedia === "function") {
+        /** @type {MediaQueryList} */
+        const mediaQuery = window.matchMedia("(min-width: 769px) and (orientation: landscape)");
+        /** @param {MediaQueryListEvent} event */
+        const handleMediaChange = (event) => {
+          if (event.matches) {
+            this.closeMobileDrawer();
+          }
+        };
+        mediaQuery.addEventListener("change", handleMediaChange);
+        this.cleanupMedia = () => {
+          mediaQuery.removeEventListener("change", handleMediaChange);
+        };
+      }
     };
 
     this.beforeUnmount = () => {
@@ -121,14 +222,20 @@ export class App extends Component {
         this.routeUnsubscribe();
         this.routeUnsubscribe = null;
       }
+      if (typeof this.cleanupKeyDown === "function") {
+        this.cleanupKeyDown();
+      }
+      if (typeof this.cleanupMedia === "function") {
+        this.cleanupMedia();
+      }
     };
   }
 
   /**
    * Resolves the canonical quiz ID from a navigation path or item data.
-   * @param {string} navigationPath
-   * @param {Object} [itemData]
-   * @returns {string}
+   * @param {string} navigationPath - Target navigation path.
+   * @param {Object} [itemData=null] - Loaded item metadata.
+   * @returns {string} Canonical quiz identifier.
    */
   resolveQuizId(navigationPath, itemData = null) {
     if (itemData) {
@@ -136,7 +243,10 @@ export class App extends Component {
       if (itemData.quiz_id) return itemData.quiz_id;
       if (itemData.data && itemData.data.id) return itemData.data.id;
     }
-    const cached = window.DOCUMENTATION_ITEMS?.[navigationPath];
+    /** @type {Object} */
+    const windowObject = /** @type {*} */ (window);
+    /** @type {Object|undefined} */
+    const cached = windowObject.DOCUMENTATION_ITEMS?.[navigationPath];
     if (cached) {
       if (cached.id) return cached.id;
       if (cached.quiz_id) return cached.quiz_id;
@@ -150,20 +260,26 @@ export class App extends Component {
 
   /**
    * Finds the navigation item script path matching a given quiz ID.
-   * @param {string} quizId
-   * @returns {string|null}
+   * @param {string} quizId - Unique quiz identifier.
+   * @returns {string|null} Navigation item path or null if not found.
    */
   findNavigationPathForQuizId(quizId) {
     if (!quizId) return null;
+    /** @type {string} */
     const cleanId = quizId.toLowerCase().trim();
+    /** @type {Object} */
+    const windowObject = /** @type {*} */ (window);
 
     for (const group of this.categoryGroups) {
       for (const navPath of (group.navigation_item_paths || [])) {
-        const item = window.DOCUMENTATION_ITEMS?.[navPath];
+        /** @type {Object|undefined} */
+        const item = windowObject.DOCUMENTATION_ITEMS?.[navPath];
+        /** @type {string|undefined} */
         const itemId = item?.id || item?.quiz_id || item?.data?.id;
         if (itemId && itemId.toLowerCase() === cleanId) {
           return navPath;
         }
+        /** @type {string} */
         const navBaseName = navPath.replace(/^.*[\\\/]/, "").replace(/\.[^/.]+$/, "").toLowerCase();
         if (
           cleanId === navBaseName ||
@@ -184,10 +300,11 @@ export class App extends Component {
 
   /**
    * Parses active route from window.location or passed path.
-   * @param {string} [customPath]
-   * @returns {{ type: "dashboard"|"quiz"|"quizzes", quizId?: string, rawPath: string }}
+   * @param {string|null} [customPath=null] - Optional override path.
+   * @returns {{ type: ("dashboard"|"quiz"|"quizzes"), quizId?: string, rawPath: string }} Route descriptor.
    */
   parseCurrentRoute(customPath = null) {
+    /** @type {string} */
     let path = (typeof customPath === "string" && customPath)
       ? customPath
       : (typeof window !== "undefined" ? (window.location.hash || window.location.pathname || "/") : "/");
@@ -204,6 +321,7 @@ export class App extends Component {
       path = path.slice(0, -1);
     }
 
+    /** @type {RegExpMatchArray|null} */
     const quizMatch = path.match(/^\/quizzes\/([a-zA-Z0-9_-]+)/);
     if (quizMatch) {
       return { type: "quiz", quizId: quizMatch[1], rawPath: path };
@@ -218,9 +336,10 @@ export class App extends Component {
 
   /**
    * Synchronizes browser URL history and Component.js route signal.
-   * @param {string} targetUrlPath
-   * @param {Object} [options]
-   * @param {boolean} [options.replace=false]
+   * @param {string} targetUrlPath - Destination URL.
+   * @param {Object} [options={}] - Options object.
+   * @param {boolean} [options.replace=false] - Whether to replace state.
+   * @returns {void}
    */
   pushRouteState(targetUrlPath, { replace = false } = {}) {
     Redirect.navigate(targetUrlPath, { replace });
@@ -228,7 +347,7 @@ export class App extends Component {
 
   /**
    * Performs initial page load with loading screen dismissal.
-   * @param {string} initialPath
+   * @param {string} initialPath - Initial path to mount.
    * @returns {Promise<void>}
    */
   async loadInitialPage(initialPath) {
@@ -252,22 +371,25 @@ export class App extends Component {
   /**
    * Navigates to a specific quiz or dashboard path.
    * Updates URL route to /quizzes/<quiz-id> or / and browser history.
-   * @param {string} targetNavigationPath
-   * @param {Object} [options]
-   * @param {boolean} [options.updateHistory=true]
-   * @param {boolean} [options.replace=false]
+   * @param {string} targetNavigationPath - Navigation destination.
+   * @param {Object} [options={}] - Navigation options.
+   * @param {boolean} [options.updateHistory=true] - Update browser URL.
+   * @param {boolean} [options.replace=false] - Replace history entry.
    * @returns {void}
    */
   navigateTo(targetNavigationPath, { updateHistory = true, replace = false } = {}) {
     if (!targetNavigationPath) return;
 
+    /** @type {string} */
     let navPath = targetNavigationPath;
+    /** @type {string} */
     let routePath = "/";
 
     if (targetNavigationPath === "/quizzes" || targetNavigationPath === "quizzes" || targetNavigationPath === this.quizzesPath) {
       navPath = this.quizzesPath;
       routePath = "/quizzes";
     } else if (targetNavigationPath.startsWith("/quizzes/") || targetNavigationPath.startsWith("quizzes/")) {
+      /** @type {string} */
       const quizId = targetNavigationPath.replace(/^\/?quizzes\//, "");
       navPath = this.findNavigationPathForQuizId(quizId) || "data/navigation-items/napolcom-mock-exam.js";
       routePath = `/quizzes/${quizId}`;
@@ -275,14 +397,18 @@ export class App extends Component {
       navPath = this.dashboardPath;
       routePath = "/";
     } else {
+      /** @type {string} */
       const quizId = this.resolveQuizId(targetNavigationPath);
       routePath = `/quizzes/${quizId}`;
       navPath = targetNavigationPath;
     }
 
     if (updateHistory && typeof window !== "undefined") {
+      /** @type {string} */
       const targetHash = `#${routePath}`;
+      /** @type {string} */
       const currentHash = window.location.hash || "#/";
+      /** @type {string} */
       const normalizedCurrentHash = (currentHash === "#" || currentHash === "") ? "#/" : currentHash;
 
       if (normalizedCurrentHash !== targetHash) {
@@ -309,6 +435,7 @@ export class App extends Component {
     fetchNavigationItemData(this.dashboardPath).catch(() => {});
     fetchNavigationItemData(this.quizzesPath).catch(() => {});
     this.categoryGroups.forEach((group) => {
+      /** @type {Array<string>} */
       const itemPaths = group.navigation_item_paths || [];
       itemPaths.forEach((path) => {
         fetchNavigationItemData(path).catch(() => {});
@@ -318,8 +445,8 @@ export class App extends Component {
 
   /**
    * Loads navigation item data using the common data loader.
-   * @param {string} navigationPath
-   * @returns {Promise<Object>}
+   * @param {string} navigationPath - Target item path.
+   * @returns {Promise<Object>} Loaded item object.
    */
   async fetchNavigationItemData(navigationPath) {
     return fetchNavigationItemData(navigationPath);
@@ -327,10 +454,11 @@ export class App extends Component {
 
   /**
    * Dynamically mounts either the Dashboard or a Quiz into the main viewport.
-   * @param {string} navigationPath
+   * @param {string} navigationPath - Destination path.
    * @returns {Promise<void>}
    */
   async loadNavigationItem(navigationPath) {
+    /** @type {HTMLElement|null} */
     const viewportElement = document.getElementById("mainViewport");
     if (!viewportElement || !navigationPath) {
       return;
@@ -338,13 +466,15 @@ export class App extends Component {
 
     this.activePathSignal.value = navigationPath;
 
-
     try {
+      /** @type {Object} */
       const itemData = await this.fetchNavigationItemData(navigationPath);
+      /** @type {Object} */
       const headerContainer = itemData.header_container || {};
 
       // 1. If Dashboard
       if (navigationPath === this.dashboardPath) {
+        /** @type {StartNowButton} */
         const startNowButton = new StartNowButton({
           label: "Start Now",
           onStart: () => {
@@ -352,6 +482,7 @@ export class App extends Component {
           }
         });
 
+        /** @type {Banner} */
         const bannerComponent = new Banner({
           title: headerContainer.title || "Queez!",
           description: headerContainer.description || "",
@@ -362,6 +493,7 @@ export class App extends Component {
           actionComponent: startNowButton
         });
 
+        /** @type {Dashboard} */
         const dashboardComponent = new Dashboard({
           tabList: itemData.tab_list || [],
           onNavigatePage: (destinationPath) => {
@@ -374,6 +506,7 @@ export class App extends Component {
         dashboardComponent.__mount?.();
       } else if (navigationPath === this.quizzesPath) {
         // 2. If Quizzes Catalog Page
+        /** @type {Banner} */
         const bannerComponent = new Banner({
           title: headerContainer.title || "Queezes",
           description: headerContainer.description || "Explore available mock examinations and review questionnaires.",
@@ -387,6 +520,7 @@ export class App extends Component {
           bannerImage: headerContainer.banner_image || headerContainer.mockup_card
         });
 
+        /** @type {Dashboard} */
         const quizzesPageComponent = new Dashboard({
           tabList: itemData.tab_list || [],
           onNavigatePage: (destinationPath) => {
@@ -398,63 +532,92 @@ export class App extends Component {
         bannerComponent.__mount?.();
         quizzesPageComponent.__mount?.();
       } else {
-        // 3. If Quiz Page (Banner + 4-column Tabs + Subject Overview / Quiz Engine / Results)
+        // 3. If Quiz Page (Banner + Tabs + Subject Overview / Quiz Engine / Results)
+        /** @type {string} */
         const quizId = this.resolveQuizId(navigationPath, itemData);
-
+        /** @type {string} */
         const dataJsonPath = itemData.data_path || "data/napolcom-quiz/data.json";
-        let rawQuestions = [];
-        try {
-          const rawQuizData = await this.fetchNavigationItemData(dataJsonPath);
-          rawQuestions = (rawQuizData && rawQuizData.data && rawQuizData.data.questions) ||
-                         (rawQuizData && rawQuizData.questions) ||
-                         (itemData.data && itemData.data.questions) || [];
-        } catch (fetchErr) {
-          console.warn("Could not fetch quiz data JSON, falling back to embedded data:", fetchErr);
-          rawQuestions = (itemData.data && itemData.data.questions) || [];
-        }
 
-        // Security: Register answers strictly in memory closure and sanitize questions
+        /** @type {Object} */
+        const rawQuizData = await this.fetchNavigationItemData(dataJsonPath);
+        /** @type {Object} */
+        const adaptedData = adaptQuizData(rawQuizData, dataJsonPath, itemData.tab_list || []);
+
+        /** @type {Array<Object>} */
+        const rawQuestions = adaptedData.questions || [];
+        /** @type {Array<Object>} */
         const sanitizedQuestions = registerQuestionsAndSanitize(quizId, rawQuestions);
 
-        const quizTitle = headerContainer.title || itemData.item_title || (itemData.data && itemData.data.title) || "Mock Exam";
-        const quizDescription = headerContainer.description || (itemData.data && itemData.data.subtitle) || "";
+        /** @type {Array<Object>} */
+        const sectionBounds = adaptedData.sections.map((section) => ({
+          startNum: section.startNumber,
+          endNum: section.endNumber,
+          startNumber: section.startNumber,
+          endNumber: section.endNumber,
+          id: section.id,
+          title: section.title
+        }));
+
+        /** @type {Array<Object>} */
+        const tabList = adaptedData.sections.map((section, index) => ({
+          tab_title: section.title,
+          tabTitle: section.title,
+          icon_name: section.iconName || "category",
+          iconName: section.iconName || "category",
+          section_id: section.id,
+          tabIndex: index
+        }));
+
+        /** @type {number} */
+        const mockExamBudget = itemData.mock_exam_question_count || DEFAULT_MOCK_EXAM_QUESTION_COUNT;
+        /** @type {string} */
+        const quizTitle = headerContainer.title || itemData.item_title || adaptedData.title || "Mock Exam";
+        /** @type {string} */
+        const quizDescription = headerContainer.description || adaptedData.subtitle || "";
+        /** @type {Array<Object>} */
         const quizBadges = (headerContainer.badge_list && headerContainer.badge_list.length > 0)
           ? headerContainer.badge_list
           : [
-              { icon_name: "format_list_numbered", badge_label: `${sanitizedQuestions.length || 150} Questions` },
-              { icon_name: "school", badge_label: (itemData.data && itemData.data.publisher) || "Exam Mastery" },
+              { icon_name: "format_list_numbered", badge_label: `${sanitizedQuestions.length} Questions in Bank` },
+              { icon_name: "timer", badge_label: `${Math.min(mockExamBudget, sanitizedQuestions.length)}m Mock Exam` },
               { icon_name: "verified", badge_label: "Multiple Choice" }
             ];
-        const quizBannerImage = headerContainer.banner_image || headerContainer.mockup_card || {
-          shrink: false
-        };
 
-        const tabList = (itemData.tab_list && itemData.tab_list.length > 0)
-          ? itemData.tab_list
-          : [
-              { tab_title: "Verbal Reasoning", icon_name: "spellcheck", section_blocks: [] },
-              { tab_title: "Quantitative", icon_name: "calculate", section_blocks: [] },
-              { tab_title: "Logical Reasoning", icon_name: "psychology", section_blocks: [] },
-              { tab_title: "General Info", icon_name: "public", section_blocks: [] }
-            ];
+        /** @type {Object} */
+        const quizBannerImage = headerContainer.banner_image || headerContainer.mockup_card || { shrink: false };
 
+        /** @type {{ session: Object|null }} */
         const { session } = loadActiveSession(quizId);
+        /** @type {QuizEngine|null} */
         let currentActiveQuizEngine = null;
+        /** @type {QuizActionBar|null} */
         let initialBannerActionBar = null;
+        /** @type {QuizActionBar|null} */
         let initialSectionBar = null;
+        /** @type {QuizResults|null} */
         let completedResultsComponent = null;
 
-        // Factory: Create Full Exam Action Bar (All Questions) for Banner
+        // Factory: Create Full Mock Exam Action Bar (~1 Hour Deck) for Banner
         const createFullExamActionBar = () => {
-          const totalQuestions = sanitizedQuestions.length || 1;
+          /** @type {number} */
+          const mockQuestionsCount = Math.min(mockExamBudget, sanitizedQuestions.length);
           return new QuizActionBar({
-            questionsCount: totalQuestions,
+            questionsCount: mockQuestionsCount,
             buttonLabel: "Start Mock Exam",
-            tooltipText: "Start Full Mock Exam",
+            tooltipText: `Start ${mockQuestionsCount}-Item Mock Exam (~1 Hour)`,
             isBanner: true,
             onStartQuiz: ({ isTimed, durationSeconds }) => {
+              /** @type {Object} */
+              const mockDeck = buildMockExamDeck({
+                quizId,
+                questions: sanitizedQuestions,
+                sectionBounds,
+                questionBudget: mockExamBudget
+              });
+
               mountQuizEngine({
                 examScope: "full",
+                deck: mockDeck,
                 isTimed,
                 totalTimeSeconds: durationSeconds,
                 startTime: Date.now()
@@ -464,14 +627,19 @@ export class App extends Component {
         };
 
         // Factory: Create Section Exam Action Bar (Category-Scoped Questions) for Tabs Action Bar
-        const createSectionActionBar = (tabIdx = 0) => {
-          const bounds = getCategoryBounds(tabIdx, sanitizedQuestions.length, tabList.length);
+        const createSectionActionBar = (tabIndex = 0) => {
+          /** @type {{ startNum: number, endNum: number }} */
+          const bounds = getCategoryBounds(tabIndex, sanitizedQuestions.length, tabList.length, sectionBounds);
+          /** @type {Array<Object>} */
           const sectionQuestions = sanitizedQuestions.filter(
-            (q) => q.number >= bounds.startNum && q.number <= bounds.endNum
+            (question) => question.number >= bounds.startNum && question.number <= bounds.endNum
           );
+          /** @type {number} */
           const sectionCount = Math.max(1, sectionQuestions.length);
-          const catDef = tabList[tabIdx] || {};
-          const sectionTitle = catDef.tab_title || catDef.tabTitle || `Part ${tabIdx + 1}`;
+          /** @type {Object} */
+          const categoryDefinition = tabList[tabIndex] || {};
+          /** @type {string} */
+          const sectionTitle = categoryDefinition.tab_title || categoryDefinition.tabTitle || `Part ${tabIndex + 1}`;
 
           return new QuizActionBar({
             questionsCount: sectionCount,
@@ -481,7 +649,7 @@ export class App extends Component {
             onStartQuiz: ({ isTimed, durationSeconds }) => {
               mountQuizEngine({
                 examScope: "section",
-                sectionCategoryIndex: tabIdx,
+                sectionCategoryIndex: tabIndex,
                 isTimed,
                 totalTimeSeconds: durationSeconds,
                 startTime: Date.now()
@@ -491,16 +659,18 @@ export class App extends Component {
         };
 
         // Tabs navigation with reactive section button update
+        /** @type {Tabs} */
         const tabsComponent = new Tabs({
           tabList,
           initialIndex: 0,
-          onTabChange: (selectedIdx) => {
+          onTabChange: (selectedIndex) => {
             if (currentActiveQuizEngine) {
-              currentActiveQuizEngine.jumpToCategory(selectedIdx);
+              currentActiveQuizEngine.jumpToCategory(selectedIndex);
             } else {
+              /** @type {HTMLElement|null} */
               const sectionBarContainer = document.getElementById("quizActionBarContainer");
               if (sectionBarContainer) {
-                const sectionBar = createSectionActionBar(selectedIdx);
+                const sectionBar = createSectionActionBar(selectedIndex);
                 sectionBarContainer.innerHTML = sectionBar.toString();
                 sectionBar.__mount?.();
               }
@@ -508,42 +678,65 @@ export class App extends Component {
           }
         });
 
-        // Handler: Finish exam and show results (Full or Section-limited)
+        // Handler: Finish exam and show results
         const handleFinishExam = (userAnswers, examMeta = {}) => {
+          /** @type {HTMLElement|null} */
           const contentArea = document.getElementById("quizTabContentArea");
           if (!contentArea) return;
 
           currentActiveQuizEngine = null;
 
+          /** @type {HTMLElement|null} */
           const bannerBadges = document.getElementById("bannerBadgesContainer");
           if (bannerBadges) {
             bannerBadges.innerHTML = "";
           }
+          /** @type {HTMLElement|null} */
           const actionBarContainer = document.getElementById("quizActionBarContainer");
           if (actionBarContainer) {
             actionBarContainer.innerHTML = "";
           }
 
+          /** @type {string} */
           const examScope = examMeta.examScope || "full";
+          /** @type {number} */
           const sectionCategoryIndex = examMeta.sectionCategoryIndex ?? 0;
 
+          /** @type {Array<Object>} */
+          const questionsForScoring = examScope === "full" && examMeta.deck
+            ? examMeta.deck.questions
+            : sanitizedQuestions;
+          /** @type {string} */
+          const scoringQuizId = examScope === "full" && examMeta.deck
+            ? examMeta.deck.deckQuizId
+            : quizId;
+          /** @type {Array<Object>} */
+          const scoringBounds = examScope === "full" && examMeta.deck
+            ? examMeta.deck.sectionBounds
+            : sectionBounds;
+
+          /** @type {Object} */
           const scoreTally = evaluateScoreTally(
-            quizId,
-            sanitizedQuestions,
+            scoringQuizId,
+            questionsForScoring,
             userAnswers,
             tabList,
             examScope,
-            sectionCategoryIndex
+            sectionCategoryIndex,
+            scoringBounds
           );
 
-          const catDef = tabList[sectionCategoryIndex] || {};
-          const sectionTitle = catDef.tab_title || catDef.tabTitle || `Part ${sectionCategoryIndex + 1}`;
+          /** @type {Object} */
+          const categoryDefinition = tabList[sectionCategoryIndex] || {};
+          /** @type {string} */
+          const sectionTitle = categoryDefinition.tab_title || categoryDefinition.tabTitle || `Part ${sectionCategoryIndex + 1}`;
 
+          /** @type {QuizResults} */
           const quizResults = new QuizResults({
             scoreTally,
             examMetadata: {
               quizTitle,
-              publisher: (itemData.data && itemData.data.publisher) || "Exam Mastery",
+              publisher: adaptedData.publisher || "Exam Mastery",
               isTimed: examMeta.isTimed ?? false,
               totalTimeSeconds: examMeta.totalTimeSeconds ?? 0,
               startTime: examMeta.startTime ?? Date.now(),
@@ -562,10 +755,13 @@ export class App extends Component {
           window.scrollTo({ top: 0, behavior: "smooth" });
         };
 
-        // Handler: Mount QuizEngine (Full or Section)
+        // Handler: Mount QuizEngine
         const mountQuizEngine = (engineConfig = {}) => {
+          /** @type {HTMLElement|null} */
           const contentArea = document.getElementById("quizTabContentArea");
+          /** @type {HTMLElement|null} */
           const actionBarContainer = document.getElementById("quizActionBarContainer");
+          /** @type {HTMLElement|null} */
           const bannerBadges = document.getElementById("bannerBadgesContainer");
 
           if (bannerBadges) {
@@ -576,26 +772,44 @@ export class App extends Component {
           }
           if (!contentArea) return;
 
+          /** @type {string} */
           const examScope = engineConfig.examScope || "full";
+          /** @type {number} */
           const sectionCategoryIndex = engineConfig.sectionCategoryIndex ?? 0;
 
+          /** @type {Array<Object>} */
+          const activeQuestions = (examScope === "full" && engineConfig.deck)
+            ? engineConfig.deck.questions
+            : sanitizedQuestions;
+          /** @type {string} */
+          const activeEngineQuizId = (examScope === "full" && engineConfig.deck)
+            ? engineConfig.deck.deckQuizId
+            : quizId;
+          /** @type {Array<Object>} */
+          const activeEngineBounds = (examScope === "full" && engineConfig.deck)
+            ? engineConfig.deck.sectionBounds
+            : sectionBounds;
+
+          /** @type {QuizEngine} */
           const quizEngine = new QuizEngine({
-            quizId,
-            questions: sanitizedQuestions,
+            quizId: activeEngineQuizId,
+            questions: activeQuestions,
             categories: tabList,
+            sectionBounds: activeEngineBounds,
             savedSession: engineConfig.savedSession || null,
             isTimed: engineConfig.isTimed || false,
             totalTimeSeconds: engineConfig.totalTimeSeconds || 0,
             startTime: engineConfig.startTime || Date.now(),
             examScope,
             sectionCategoryIndex,
-            onCategoryChange: (catIdx) => {
-              tabsComponent.activateTab(catIdx, false);
+            onCategoryChange: (categoryIndex) => {
+              tabsComponent.activateTab(categoryIndex, false);
             },
             onFinishExam: (userAnswers, finishMeta) => {
               handleFinishExam(userAnswers, {
                 examScope: finishMeta?.examScope || examScope,
                 sectionCategoryIndex: finishMeta?.sectionCategoryIndex ?? sectionCategoryIndex,
+                deck: engineConfig.deck || null,
                 isTimed: quizEngine.isTimed,
                 totalTimeSeconds: quizEngine.totalTimeSeconds,
                 startTime: quizEngine.startTime
@@ -613,16 +827,18 @@ export class App extends Component {
           window.scrollTo({ top: 0, behavior: "smooth" });
         };
 
-        // Handler: Reset to Initial Start View with both Banner and Tab play buttons restored
+        // Handler: Reset to Initial Start View
         const renderInitialQuizView = () => {
           currentActiveQuizEngine = null;
           tabsComponent.activateTab(0, false);
+          /** @type {HTMLElement|null} */
           const contentArea = document.getElementById("quizTabContentArea");
           if (contentArea) {
             contentArea.innerHTML = "";
           }
 
           // Restore Banner Full Exam Play Button
+          /** @type {HTMLElement|null} */
           const bannerBadges = document.getElementById("bannerBadgesContainer");
           if (bannerBadges) {
             const bannerBar = createFullExamActionBar();
@@ -631,6 +847,7 @@ export class App extends Component {
           }
 
           // Restore Tab Section Exam Play Button for Tab 0
+          /** @type {HTMLElement|null} */
           const actionBarContainer = document.getElementById("quizActionBarContainer");
           if (actionBarContainer) {
             const sectionBar = createSectionActionBar(0);
@@ -639,30 +856,47 @@ export class App extends Component {
           }
         };
 
+        /** @type {string} */
         let initialContentHtml = "";
+        /** @type {string} */
         let initialActionBarHtml = "";
 
         if (session && session.status === "completed") {
-          // Render results directly
+          /** @type {string} */
           const examScope = session.examScope || "full";
+          /** @type {number} */
           const sectionCategoryIndex = session.sectionCategoryIndex ?? 0;
+          /** @type {Object|null} */
+          const restoredDeck = examScope === "full" ? restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds) : null;
+
+          /** @type {Array<Object>} */
+          const questionsForScoring = restoredDeck ? restoredDeck.questions : sanitizedQuestions;
+          /** @type {string} */
+          const scoringQuizId = restoredDeck ? restoredDeck.deckQuizId : quizId;
+          /** @type {Array<Object>} */
+          const scoringBounds = restoredDeck ? restoredDeck.sectionBounds : sectionBounds;
+
+          /** @type {Object} */
           const scoreTally = evaluateScoreTally(
-            quizId,
-            sanitizedQuestions,
+            scoringQuizId,
+            questionsForScoring,
             session.answers || {},
             tabList,
             examScope,
-            sectionCategoryIndex
+            sectionCategoryIndex,
+            scoringBounds
           );
 
-          const catDef = tabList[sectionCategoryIndex] || {};
-          const sectionTitle = catDef.tab_title || catDef.tabTitle || `Part ${sectionCategoryIndex + 1}`;
+          /** @type {Object} */
+          const categoryDefinition = tabList[sectionCategoryIndex] || {};
+          /** @type {string} */
+          const sectionTitle = categoryDefinition.tab_title || categoryDefinition.tabTitle || `Part ${sectionCategoryIndex + 1}`;
 
           completedResultsComponent = new QuizResults({
             scoreTally,
             examMetadata: {
               quizTitle,
-              publisher: (itemData.data && itemData.data.publisher) || "Exam Mastery",
+              publisher: adaptedData.publisher || "Exam Mastery",
               isTimed: session.isTimed,
               totalTimeSeconds: session.totalTimeSeconds,
               startTime: session.startTime,
@@ -677,24 +911,37 @@ export class App extends Component {
           });
           initialContentHtml = completedResultsComponent.toString();
         } else if (session && (session.status === "in_progress" || session.status === "transition")) {
-          // Restore in-progress or transition engine
+          /** @type {string} */
           const examScope = session.examScope || "full";
+          /** @type {number} */
           const sectionCategoryIndex = session.sectionCategoryIndex ?? 0;
+          /** @type {Object|null} */
+          const restoredDeck = examScope === "full" ? restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds) : null;
 
+          /** @type {Array<Object>} */
+          const activeQuestions = restoredDeck ? restoredDeck.questions : sanitizedQuestions;
+          /** @type {string} */
+          const activeEngineQuizId = restoredDeck ? restoredDeck.deckQuizId : quizId;
+          /** @type {Array<Object>} */
+          const activeEngineBounds = restoredDeck ? restoredDeck.sectionBounds : sectionBounds;
+
+          /** @type {QuizEngine} */
           const quizEngine = new QuizEngine({
-            quizId,
-            questions: sanitizedQuestions,
+            quizId: activeEngineQuizId,
+            questions: activeQuestions,
             categories: tabList,
+            sectionBounds: activeEngineBounds,
             savedSession: session,
             examScope,
             sectionCategoryIndex,
-            onCategoryChange: (catIdx) => {
-              tabsComponent.activateTab(catIdx, false);
+            onCategoryChange: (categoryIndex) => {
+              tabsComponent.activateTab(categoryIndex, false);
             },
             onFinishExam: (userAnswers, finishMeta) => {
               handleFinishExam(userAnswers, {
                 examScope: finishMeta?.examScope || examScope,
                 sectionCategoryIndex: finishMeta?.sectionCategoryIndex ?? sectionCategoryIndex,
+                deck: restoredDeck,
                 isTimed: quizEngine.isTimed,
                 totalTimeSeconds: quizEngine.totalTimeSeconds,
                 startTime: quizEngine.startTime
@@ -704,13 +951,14 @@ export class App extends Component {
           currentActiveQuizEngine = quizEngine;
           initialContentHtml = quizEngine.toString();
         } else {
-          // Initial overview mode: empty contentArea, full exam bar on banner, section bar on tabs
+          // Initial overview mode
           initialBannerActionBar = createFullExamActionBar();
           initialContentHtml = "";
           initialSectionBar = createSectionActionBar(0);
           initialActionBarHtml = initialSectionBar.toString();
         }
 
+        /** @type {Banner} */
         const bannerComponent = new Banner({
           title: quizTitle,
           description: quizDescription,
@@ -739,14 +987,14 @@ export class App extends Component {
         // Mount child components if present
         if (currentActiveQuizEngine) {
           currentActiveQuizEngine.__mount?.();
-          const activeCategoryIdx = (currentActiveQuizEngine.examScope === "section")
+          /** @type {number} */
+          const activeCategoryIndex = (currentActiveQuizEngine.examScope === "section")
             ? currentActiveQuizEngine.sectionCategoryIndex
             : (session?.activeCategoryIndex || 0);
-          tabsComponent.activateTab(activeCategoryIdx, false);
+          tabsComponent.activateTab(activeCategoryIndex, false);
         } else if (completedResultsComponent) {
           completedResultsComponent.__mount?.();
         } else {
-          // Initial state: mount banner Full Exam bar & tab Section Exam bar
           initialBannerActionBar?.__mount?.();
           initialSectionBar?.__mount?.();
         }
