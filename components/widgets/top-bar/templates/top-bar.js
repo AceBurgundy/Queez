@@ -28,8 +28,8 @@ export class TopBar extends Component {
       ? (document.documentElement.getAttribute("data-theme") || "dark")
       : "dark";
 
-    /** @type {import("../../../../Component.js").Signal<string>} */
-    this.themeIconSignal = signal(currentThemeAttribute === "light" ? "dark_mode" : "light_mode");
+    /** @type {string} */
+    const initialThemeIcon = currentThemeAttribute === "light" ? "dark_mode" : "light_mode";
 
     /** @type {import("../../../../Component.js").Signal<string>} */
     this.burgerIconSignal = signal("menu");
@@ -45,21 +45,13 @@ export class TopBar extends Component {
 
     /**
      * Handles theme toggle click.
+     * @param {MouseEvent} [clickEvent]
      * @returns {void}
      */
-    const handleThemeToggleClick = () => {
+    const handleThemeToggleClick = (clickEvent) => {
+      clickEvent?.stopPropagation?.();
       /** @type {"light"|"dark"} */
       const updatedThemeMode = toggleThemeMode();
-      /** @type {string} */
-      const nextIconName = updatedThemeMode === "light" ? "dark_mode" : "light_mode";
-      this.themeIconSignal.value = nextIconName;
-
-      /** @type {NodeListOf<HTMLElement>} */
-      const iconElements = document.querySelectorAll("[data-theme-icon]");
-      iconElements.forEach((iconElement) => {
-        iconElement.textContent = nextIconName;
-      });
-
       showToast(`Switched to ${updatedThemeMode} theme`);
     };
 
@@ -97,10 +89,11 @@ export class TopBar extends Component {
           <button
             type="button"
             class="top-bar__button"
+            data-tooltip="Toggle Theme"
             aria-label="Toggle Light / Dark Theme"
             onclick=${handleThemeToggleClick}
           >
-            <span class="google-symbols top-bar__icon" aria-hidden="true">${this.themeIconSignal}</span>
+            <span class="google-symbols top-bar__icon" data-theme-icon aria-hidden="true">${initialThemeIcon}</span>
           </button>
         </div>
       </header>

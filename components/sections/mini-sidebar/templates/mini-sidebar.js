@@ -130,18 +130,14 @@ export class MiniSidebar extends Component {
     };
 
     /**
+     * @param {MouseEvent} [clickEvent]
      * @returns {void}
      */
-    const handleThemeToggle = () => {
+    const handleThemeToggle = (clickEvent) => {
+      clickEvent?.stopPropagation?.();
       /** @type {"light"|"dark"} */
       const updatedTheme = toggleThemeMode();
       this.themeSignal.value = updatedTheme;
-
-      /** @type {string} */
-      const nextIcon = updatedTheme === "light" ? "dark_mode" : "light_mode";
-      document.querySelectorAll("[data-theme-icon]").forEach((element) => {
-        element.textContent = nextIcon;
-      });
       showToast(`Switched to ${updatedTheme} theme`);
     };
 
@@ -160,9 +156,20 @@ export class MiniSidebar extends Component {
     };
 
     /**
+     * @param {MouseEvent} [clickEvent]
      * @returns {void}
      */
-    const handleQueezesClick = () => {
+    const handleDashboardClick = (clickEvent) => {
+      clickEvent?.stopPropagation?.();
+      handleNavigate("data/dashboard.js");
+    };
+
+    /**
+     * @param {MouseEvent} [clickEvent]
+     * @returns {void}
+     */
+    const handleQueezesClick = (clickEvent) => {
+      clickEvent?.stopPropagation?.();
       handleNavigate("data/quizzes.js");
     };
 
@@ -192,9 +199,9 @@ export class MiniSidebar extends Component {
         <!-- Top navigation group -->
         <div class="mini-sidebar__group">
           <div class="mini-sidebar__nav-item" id="miniSidebarAppItem">
-            <div class="mini-sidebar__item-row" onclick=${() => handleNavigate("data/dashboard.js")}>
+            <div class="mini-sidebar__item-row" onclick=${handleDashboardClick}>
               ${appIconButton}
-              <span class="mini-sidebar__drawer-label">Dashboard</span>
+              <span class="mini-sidebar__drawer-label" onclick=${handleDashboardClick}>Dashboard</span>
             </div>
             <div
               id="miniSidebarAppPill"
@@ -211,10 +218,11 @@ export class MiniSidebar extends Component {
                 class="mini-sidebar__button"
                 data-tooltip="Queezes"
                 aria-label="View all Queezes"
+                onclick=${handleQueezesClick}
               >
                 <span class="mini-sidebar__emoji-icon" role="img" aria-label="brain">🧠</span>
               </button>
-              <span class="mini-sidebar__drawer-label">Queezes</span>
+              <span class="mini-sidebar__drawer-label" onclick=${handleQueezesClick}>Queezes</span>
             </div>
             <div
               id="miniSidebarQuizzesPill"
@@ -232,10 +240,11 @@ export class MiniSidebar extends Component {
               class="mini-sidebar__button"
               data-tooltip="Toggle Theme"
               aria-label="Toggle Light / Dark Theme"
+              onclick=${handleThemeToggle}
             >
-              <span class="google-symbols notranslate" data-theme-icon>${initialThemeIcon}</span>
+              <span class="google-symbols notranslate" data-theme-icon aria-hidden="true">${initialThemeIcon}</span>
             </button>
-            <span class="mini-sidebar__drawer-label">Toggle Theme</span>
+            <span class="mini-sidebar__drawer-label" onclick=${handleThemeToggle}>Toggle Theme</span>
           </div>
         </div>
       </aside>

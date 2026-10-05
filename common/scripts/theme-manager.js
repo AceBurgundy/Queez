@@ -30,6 +30,24 @@ export function setPalette(paletteName) {
 }
 
 /**
+ * Synchronizes all theme icon elements in the DOM to reflect the active theme.
+ * @param {"light"|"dark"} themeMode - Current active theme mode.
+ * @returns {void}
+ */
+export function syncThemeIcons(themeMode) {
+  if (typeof document === "undefined") {
+    return;
+  }
+  /** @type {string} */
+  const iconName = themeMode === "light" ? "dark_mode" : "light_mode";
+  /** @type {NodeListOf<HTMLElement>} */
+  const iconElements = document.querySelectorAll("[data-theme-icon]");
+  iconElements.forEach((element) => {
+    element.textContent = iconName;
+  });
+}
+
+/**
  * Sets the active color mode (light or dark) on the document root element.
  * @param {"light"|"dark"} themeMode - Theme mode to set.
  * @returns {void}
@@ -41,6 +59,7 @@ export function setThemeMode(themeMode) {
   } catch {
     // Ignore storage errors in private browsing modes
   }
+  syncThemeIcons(themeMode);
 }
 
 /**
@@ -98,9 +117,8 @@ export function initializeTheme() {
     document.documentElement.setAttribute("data-palette", AVAILABLE_PALETTES[randomIndex]);
   }
 
-  if (savedTheme === "light" || savedTheme === "dark") {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
+  /** @type {"light"|"dark"} */
+  const resolvedTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
+  document.documentElement.setAttribute("data-theme", resolvedTheme);
+  syncThemeIcons(resolvedTheme);
 }
