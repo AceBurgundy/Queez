@@ -34,12 +34,15 @@ export class TabItem extends Component {
     this.onSelect = onSelect;
 
     /**
+     * @param {MouseEvent} [clickEvent]
      * @returns {void}
      */
-    const handleTabClick = () => {
+    const handleTabClick = (clickEvent) => {
       /** @type {Object} */
       const windowObject = /** @type {*} */ (window);
       if (windowObject && windowObject.__tabJustDragged) {
+        clickEvent?.preventDefault?.();
+        clickEvent?.stopPropagation?.();
         return;
       }
       if (typeof this.onSelect === "function") {

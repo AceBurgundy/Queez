@@ -59,6 +59,10 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
   let isDraggingGesture = false;
   /** @type {boolean} */
   let isTransitionAnimating = false;
+  /** @type {boolean} */
+  let preventNextClick = false;
+  /** @type {number|null} */
+  let dragResetTimer = null;
   /** @type {number|null} */
   let activePointerIdentifier = null;
 
@@ -163,6 +167,7 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
     if (!isDraggingGesture) {
       if (Math.abs(horizontalDelta) > 4) {
         isDraggingGesture = true;
+        preventNextClick = true;
       } else {
         return;
       }
@@ -224,6 +229,10 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
    * @returns {void}
    */
   const handleGestureEnd = (clientX) => {
+    if (isTransitionAnimating) {
+      return;
+    }
+
     if (!activeTabElement) {
       cleanupDragStyles();
       return;
@@ -234,13 +243,19 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
       return;
     }
 
+    preventNextClick = true;
     if (typeof window !== "undefined") {
       /** @type {Object} */
       const windowObject = /** @type {*} */ (window);
       windowObject.__tabJustDragged = true;
-      setTimeout(() => {
+      if (dragResetTimer !== null) {
+        window.clearTimeout(dragResetTimer);
+      }
+      dragResetTimer = window.setTimeout(() => {
         windowObject.__tabJustDragged = false;
-      }, 250);
+        preventNextClick = false;
+        dragResetTimer = null;
+      }, 500);
     }
 
     /** @type {number} */
@@ -423,25 +438,59 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
     isTransitionAnimating = false;
   };
 
-  trackElement.addEventListener("pointerdown", onPointerDown);
-  trackElement.addEventListener("pointermove", onPointerMove);
-  trackElement.addEventListener("pointerup", onPointerUp);
-  trackElement.addEventListener("pointercancel", onPointerCancel);
+  /**
+   * Captures and cancels any synthetic clicks emitted immediately after a swipe drag gesture.
+   * @param {MouseEvent} clickEvent - Intercepted click event.
+   * @returns {void}
+   */
+  const onClickCapture = (clickEvent) => {
+    if (preventNextClick) {
+      clickEvent.preventDefault();
+      clickEvent.stopPropagation();
+      clickEvent.stopImmediatePropagation();
+      preventNextClick = false;
+      if (typeof window !== "undefined") {
+        /** @type {Object} */
+        const windowObject = /** @type {*} */ (window);
+        windowObject.__tabJustDragged = false;
+      }
+    }
+  };
 
-  trackElement.addEventListener("touchstart", onTouchStart, { passive: true });
-  trackElement.addEventListener("touchmove", onTouchMove, { passive: false });
-  trackElement.addEventListener("touchend", onTouchEnd, { passive: true });
-  trackElement.addEventListener("touchcancel", onTouchCancel, { passive: true });
+  /** @type {boolean} */
+  const supportsPointerEvents = typeof window !== "undefined" && Boolean(window.PointerEvent);
+
+  trackElement.addEventListener("click", onClickCapture, true);
+
+  if (supportsPointerEvents) {
+    trackElement.addEventListener("pointerdown", onPointerDown);
+    trackElement.addEventListener("pointermove", onPointerMove);
+    trackElement.addEventListener("pointerup", onPointerUp);
+    trackElement.addEventListener("pointercancel", onPointerCancel);
+  } else {
+    trackElement.addEventListener("touchstart", onTouchStart, { passive: true });
+    trackElement.addEventListener("touchmove", onTouchMove, { passive: false });
+    trackElement.addEventListener("touchend", onTouchEnd, { passive: true });
+    trackElement.addEventListener("touchcancel", onTouchCancel, { passive: true });
+  }
 
   return () => {
-    trackElement.removeEventListener("pointerdown", onPointerDown);
-    trackElement.removeEventListener("pointermove", onPointerMove);
-    trackElement.removeEventListener("pointerup", onPointerUp);
-    trackElement.removeEventListener("pointercancel", onPointerCancel);
+    trackElement.removeEventListener("click", onClickCapture, true);
+    if (dragResetTimer !== null) {
+      window.clearTimeout(dragResetTimer);
+      dragResetTimer = null;
+    }
 
-    trackElement.removeEventListener("touchstart", onTouchStart);
-    trackElement.removeEventListener("touchmove", onTouchMove);
-    trackElement.removeEventListener("touchend", onTouchEnd);
-    trackElement.removeEventListener("touchcancel", onTouchCancel);
+    if (supportsPointerEvents) {
+      trackElement.removeEventListener("pointerdown", onPointerDown);
+      trackElement.removeEventListener("pointermove", onPointerMove);
+      trackElement.removeEventListener("pointerup", onPointerUp);
+      trackElement.removeEventListener("pointercancel", onPointerCancel);
+    } else {
+      trackElement.removeEventListener("touchstart", onTouchStart);
+      trackElement.removeEventListener("touchmove", onTouchMove);
+      trackElement.removeEventListener("touchend", onTouchEnd);
+      trackElement.removeEventListener("touchcancel", onTouchCancel);
+    }
   };
 }

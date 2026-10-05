@@ -48,7 +48,10 @@ export class Tabs extends Component {
     const activateTabWithAnimation = (targetIndex, direction = null, notifyParent = true) => {
       /** @type {number} */
       const previousIndex = this.activeTabSignal.value;
-      if (previousIndex === targetIndex && !notifyParent) {
+      if (previousIndex === targetIndex) {
+        if (notifyParent && typeof this.onTabChange === "function") {
+          this.onTabChange(targetIndex);
+        }
         return;
       }
 
