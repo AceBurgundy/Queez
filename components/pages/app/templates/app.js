@@ -322,12 +322,12 @@ export class App extends Component {
     }
 
     /** @type {RegExpMatchArray|null} */
-    const quizMatch = path.match(/^\/quizzes\/([a-zA-Z0-9_-]+)/);
+    const quizMatch = path.match(/^\/(?:quizzes|queezes)\/([a-zA-Z0-9_-]+)/);
     if (quizMatch) {
       return { type: "quiz", quizId: quizMatch[1], rawPath: path };
     }
 
-    if (path === "/quizzes") {
+    if (path === "/quizzes" || path === "/queezes") {
       return { type: "quizzes", rawPath: path };
     }
 
@@ -385,12 +385,12 @@ export class App extends Component {
     /** @type {string} */
     let routePath = "/";
 
-    if (targetNavigationPath === "/quizzes" || targetNavigationPath === "quizzes" || targetNavigationPath === this.quizzesPath) {
+    if (targetNavigationPath === "/quizzes" || targetNavigationPath === "quizzes" || targetNavigationPath === "/queezes" || targetNavigationPath === "queezes" || targetNavigationPath === this.quizzesPath) {
       navPath = this.quizzesPath;
       routePath = "/quizzes";
-    } else if (targetNavigationPath.startsWith("/quizzes/") || targetNavigationPath.startsWith("quizzes/")) {
+    } else if (targetNavigationPath.startsWith("/quizzes/") || targetNavigationPath.startsWith("quizzes/") || targetNavigationPath.startsWith("/queezes/") || targetNavigationPath.startsWith("queezes/")) {
       /** @type {string} */
-      const quizId = targetNavigationPath.replace(/^\/?quizzes\//, "");
+      const quizId = targetNavigationPath.replace(/^\/?(?:quizzes|queezes)\//, "");
       navPath = this.findNavigationPathForQuizId(quizId) || "data/navigation-items/napolcom-mock-exam.js";
       routePath = `/quizzes/${quizId}`;
     } else if (targetNavigationPath === this.dashboardPath || targetNavigationPath === "/") {

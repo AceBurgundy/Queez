@@ -262,7 +262,7 @@ export class MiniSidebar extends Component {
       this.routeUnsubscribe = Redirect.onRouteChange((newRoute) => {
         /** @type {string} */
         const currentRoute = newRoute || (typeof window !== "undefined" ? (window.location.hash || window.location.pathname) : "");
-        if (currentRoute && (currentRoute.includes("quizzes") || currentRoute.startsWith("/quizzes"))) {
+        if (currentRoute && (currentRoute.includes("quizzes") || currentRoute.startsWith("/quizzes") || currentRoute.includes("queezes") || currentRoute.startsWith("/queezes"))) {
           updateActiveIndicator("data/quizzes.js");
         } else {
           updateActiveIndicator("data/dashboard.js");

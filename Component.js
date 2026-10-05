@@ -1484,6 +1484,10 @@ export function getCurrentBrowserPath() {
     if (hash) {
       return sanitizeRoutePath(hash);
     }
+    const pathname = window.location.pathname;
+    if (pathname && pathname !== "/" && !pathname.endsWith(".html") && !pathname.endsWith(".htm")) {
+      return sanitizeRoutePath(pathname);
+    }
     return "/";
   }
   return sanitizeRoutePath(window.location.pathname);
@@ -1938,7 +1942,7 @@ export class Root {
 
       const matched = resolveRouteComponent(currentBrowserPath);
       const targetComponent = matched || destination;
-      const targetPath = matched ? currentBrowserPath : path;
+      const targetPath = (matched || persistent) ? (currentBrowserPath || path) : path;
 
       const useHashMode = shouldUseHashRouting();
       const targetUrl = useHashMode ? `#${targetPath}` : targetPath;
