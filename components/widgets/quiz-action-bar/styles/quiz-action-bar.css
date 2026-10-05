@@ -117,99 +117,6 @@
 }
 
 /* =============================================================================
-   Exposed Timer Component (Card Component - separate timer button removed)
-   ============================================================================= */
-.quiz-action-bar__timer-card {
-  display: inline-flex;
-  align-items: center;
-  height: 3.75rem;
-  background-color: var(--md-sys-color-surface-container-high);
-  border: 1.5px solid var(--md-sys-color-outline-variant);
-  border-radius: 1.125rem;
-  box-shadow: none !important;
-  box-sizing: border-box;
-  padding: 0 0.875rem 0 1rem;
-  gap: 1rem;
-  position: relative;
-  transition: border-color 0.2s ease,
-              background-color 0.2s ease;
-}
-
-.quiz-action-bar__timer-card:hover {
-  border-color: var(--md-sys-color-outline);
-  box-shadow: none !important;
-}
-
-.quiz-action-bar__timer-card:focus-within {
-  border-color: var(--md-sys-color-primary);
-  outline: 2px solid var(--md-sys-color-primary);
-  box-shadow: none !important;
-}
-
-/* Clock icon trigger inside the timer card */
-.quiz-action-bar__timer-icon-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  color: var(--md-sys-color-on-surface-variant);
-  border-radius: var(--md-sys-shape-corner-full);
-  transition: color 0.2s ease;
-  flex-shrink: 0;
-}
-
-.quiz-action-bar__timer-icon-button:hover,
-.quiz-action-bar__timer-card:hover .quiz-action-bar__timer-icon-button {
-  color: var(--md-sys-color-primary);
-}
-
-/* Time Input inside timer card */
-.quiz-action-bar__time-input {
-  width: 5.5rem;
-  flex: 1;
-  min-width: 0;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-family: var(--md-sys-typescale-font-label, monospace);
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: var(--md-sys-color-on-surface);
-  text-align: center;
-  letter-spacing: 0.04em;
-  font-variant-numeric: tabular-nums;
-  padding: 0;
-}
-
-/* Clear / Reset Button */
-.quiz-action-bar__clear-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: none;
-  color: var(--md-sys-color-on-surface-variant);
-  cursor: pointer;
-  padding: 0.25rem;
-  border-radius: var(--md-sys-shape-corner-full);
-  transition: color 0.2s ease, background-color 0.2s ease;
-  flex-shrink: 0;
-}
-
-.quiz-action-bar__clear-button .google-symbols {
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
-.quiz-action-bar__clear-button:hover {
-  color: var(--md-sys-color-error);
-  background-color: rgba(255, 0, 0, 0.08);
-}
-
-/* =============================================================================
    Mobile Responsiveness (< 601px)
    ============================================================================= */
 @media (max-width: 600px) {
@@ -245,20 +152,6 @@
   .quiz-action-bar__play-label {
     font-size: 1.0625rem;
     max-width: 100%;
-  }
-
-  /* Timer Card on mobile */
-  .quiz-action-bar__timer-card {
-    width: 100%;
-    justify-content: space-between;
-    padding: 0 0.875rem 0 1rem;
-    gap: 0.5rem;
-    flex-shrink: 0;
-  }
-
-  .quiz-action-bar__time-input {
-    width: 5.5rem;
-    font-size: 1.35rem;
   }
 }
 
@@ -396,32 +289,6 @@
   color: var(--md-sys-color-on-surface);
   line-height: 1;
   margin-top: 1rem;
-}
-
-.time-picker-dialog__presets {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0 1.5rem 0;
-}
-
-.time-picker-dialog__chip {
-  background-color: var(--md-sys-color-surface-container);
-  border: 1px solid var(--md-sys-color-outline-variant);
-  color: var(--md-sys-color-on-surface);
-  border-radius: 0.5rem;
-  padding: 0.35rem 0.65rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.time-picker-dialog__chip:hover {
-  background-color: var(--md-sys-color-surface-container-highest);
-  border-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-primary);
 }
 
 .time-picker-dialog__actions {
