@@ -105,8 +105,8 @@ export class QuizActionBar extends Component {
    * @param {string} [options.dialogTitle] - Optional custom title for the configuration dialog.
    * @param {string} [options.dialogSubtitle] - Optional custom subtitle for the configuration dialog.
    * @param {number} [options.minimumQuestionCount=1] - Minimum questions allowed.
-   * @param {number} [options.maximumQuestionCount=100] - Total available questions in pool.
-   * @param {number} [options.defaultQuestionCount=100] - Default selected questions.
+   * @param {number} [options.questionsCount] - Alias for maximumQuestionCount.
+   * @param {number} [options.defaultQuestionsCount] - Alias for defaultQuestionCount.
    */
   constructor({
     onStartQuiz,
@@ -116,20 +116,31 @@ export class QuizActionBar extends Component {
     dialogTitle,
     dialogSubtitle,
     minimumQuestionCount = 1,
-    maximumQuestionCount = 100,
-    defaultQuestionCount = 100
+    maximumQuestionCount,
+    defaultQuestionCount,
+    questionsCount,
+    defaultQuestionsCount
   } = {}) {
     super();
 
+    /** @type {function(Object): void|undefined} */
     this.onStartQuiz = onStartQuiz;
+    /** @type {string} */
     this.buttonLabel = buttonLabel;
+    /** @type {string} */
     this.tooltipText = tooltipText;
+    /** @type {boolean} */
     this.isBanner = isBanner;
+    /** @type {string|undefined} */
     this.dialogTitle = dialogTitle;
+    /** @type {string|undefined} */
     this.dialogSubtitle = dialogSubtitle;
+    /** @type {number} */
     this.minimumQuestionCount = minimumQuestionCount;
-    this.maximumQuestionCount = maximumQuestionCount;
-    this.defaultQuestionCount = defaultQuestionCount;
+    /** @type {number} */
+    this.maximumQuestionCount = maximumQuestionCount ?? questionsCount ?? 100;
+    /** @type {number} */
+    this.defaultQuestionCount = defaultQuestionCount ?? defaultQuestionsCount ?? this.maximumQuestionCount;
 
     /**
      * Handles opening the start-exam modal dialog.

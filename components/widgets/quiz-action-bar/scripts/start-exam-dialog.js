@@ -31,14 +31,14 @@ const CLOCK_HEADER_ICON_SVG = `
 `;
 
 /**
- * Creates the DOM element tree for the start exam modal dialog.
+ * Creates the DOM element tree for the start exam modal dialog with side-by-side items and duration controls.
  * @param {Object} parameters
  * @param {string} parameters.title - Dialog title.
  * @param {string} parameters.subtitle - Dialog subtitle.
  * @param {number} parameters.minimumQuestionCount - Minimum allowed questions.
  * @param {number} parameters.maximumQuestionCount - Maximum available questions in pool.
  * @param {number} parameters.initialQuestionCount - Initially selected question count.
- * @returns {{ scrimElement: HTMLElement, wheelElement: HTMLElement, hoursInputElement: HTMLInputElement, minutesInputElement: HTMLInputElement, linkButtonElement: HTMLButtonElement, captionElement: HTMLElement, confirmButtonElement: HTMLButtonElement, cancelButtonElement: HTMLButtonElement, rowElements: Array<HTMLElement> }} References to key dialog elements.
+ * @returns {{ scrimElement: HTMLElement, wheelElement: HTMLElement, hoursInputElement: HTMLInputElement, minutesInputElement: HTMLInputElement, linkCheckboxElement: HTMLInputElement, captionElement: HTMLElement, confirmButtonElement: HTMLButtonElement, cancelButtonElement: HTMLButtonElement, rowElements: Array<HTMLElement> }} References to key dialog elements.
  */
 const createDialogDom = ({
   title,
@@ -87,14 +87,20 @@ const createDialogDom = ({
   headerElement.appendChild(iconElement);
   headerElement.appendChild(titleGroupElement);
 
+  // Side-by-side row container for ITEMS and DURATION
   /** @type {HTMLDivElement} */
-  const itemSectionElement = document.createElement("div");
-  itemSectionElement.className = "start-exam-dialog__section";
+  const rowContainerElement = document.createElement("div");
+  rowContainerElement.className = "start-exam-dialog__row";
+
+  // Column 1: Items Selector
+  /** @type {HTMLDivElement} */
+  const itemsColumnElement = document.createElement("div");
+  itemsColumnElement.className = "start-exam-dialog__col start-exam-dialog__col--items";
 
   /** @type {HTMLDivElement} */
   const itemLabelElement = document.createElement("div");
   itemLabelElement.className = "start-exam-dialog__section-label";
-  itemLabelElement.textContent = "Number of Items";
+  itemLabelElement.textContent = "ITEMS";
 
   /** @type {HTMLDivElement} */
   const wheelElement = document.createElement("div");
@@ -105,12 +111,6 @@ const createDialogDom = ({
   wheelElement.setAttribute("aria-valuemin", String(minimumQuestionCount));
   wheelElement.setAttribute("aria-valuemax", String(maximumQuestionCount));
   wheelElement.setAttribute("aria-valuenow", String(initialQuestionCount));
-
-  /** @type {HTMLDivElement} */
-  const highlightElement = document.createElement("div");
-  highlightElement.className = "item-wheel__highlight";
-  highlightElement.setAttribute("aria-hidden", "true");
-  wheelElement.appendChild(highlightElement);
 
   /** @type {HTMLDivElement} */
   const topSpacer = document.createElement("div");
@@ -147,17 +147,18 @@ const createDialogDom = ({
   bottomSpacer.setAttribute("aria-hidden", "true");
   wheelElement.appendChild(bottomSpacer);
 
-  itemSectionElement.appendChild(itemLabelElement);
-  itemSectionElement.appendChild(wheelElement);
+  itemsColumnElement.appendChild(itemLabelElement);
+  itemsColumnElement.appendChild(wheelElement);
 
+  // Column 2: Duration Controls
   /** @type {HTMLDivElement} */
-  const timeSectionElement = document.createElement("div");
-  timeSectionElement.className = "start-exam-dialog__section";
+  const durationColumnElement = document.createElement("div");
+  durationColumnElement.className = "start-exam-dialog__col start-exam-dialog__col--duration";
 
   /** @type {HTMLDivElement} */
   const timeLabelElement = document.createElement("div");
   timeLabelElement.className = "start-exam-dialog__section-label";
-  timeLabelElement.textContent = "Duration";
+  timeLabelElement.textContent = "DURATION";
 
   /** @type {HTMLDivElement} */
   const timeDisplayElement = document.createElement("div");
@@ -218,28 +219,39 @@ const createDialogDom = ({
   timeDisplayElement.appendChild(colonElement);
   timeDisplayElement.appendChild(minutesWrapElement);
 
+  durationColumnElement.appendChild(timeLabelElement);
+  durationColumnElement.appendChild(timeDisplayElement);
+
+  rowContainerElement.appendChild(itemsColumnElement);
+  rowContainerElement.appendChild(durationColumnElement);
+
+  // Caption describing duration
   /** @type {HTMLDivElement} */
   const captionElement = document.createElement("div");
   captionElement.className = "start-exam-dialog__caption";
   captionElement.textContent = "No time limit (untimed)";
 
+  // Checkbox: "By number of items"
   /** @type {HTMLDivElement} */
-  const linkButtonWrapElement = document.createElement("div");
-  linkButtonWrapElement.className = "start-exam-dialog__link-wrap";
+  const checkboxWrapElement = document.createElement("div");
+  checkboxWrapElement.className = "start-exam-dialog__checkbox-wrap";
 
-  /** @type {HTMLButtonElement} */
-  const linkButtonElement = document.createElement("button");
-  linkButtonElement.type = "button";
-  linkButtonElement.className = "start-exam-dialog__link-button";
-  linkButtonElement.textContent = "By question count (1 min/item)";
+  /** @type {HTMLInputElement} */
+  const linkCheckboxElement = document.createElement("input");
+  linkCheckboxElement.type = "checkbox";
+  linkCheckboxElement.id = "startExamByItemCountCheckbox";
+  linkCheckboxElement.className = "start-exam-dialog__checkbox";
 
-  linkButtonWrapElement.appendChild(linkButtonElement);
+  /** @type {HTMLLabelElement} */
+  const checkboxLabelElement = document.createElement("label");
+  checkboxLabelElement.htmlFor = "startExamByItemCountCheckbox";
+  checkboxLabelElement.className = "start-exam-dialog__checkbox-label";
+  checkboxLabelElement.textContent = "By number of items";
 
-  timeSectionElement.appendChild(timeLabelElement);
-  timeSectionElement.appendChild(timeDisplayElement);
-  timeSectionElement.appendChild(captionElement);
-  timeSectionElement.appendChild(linkButtonWrapElement);
+  checkboxWrapElement.appendChild(linkCheckboxElement);
+  checkboxWrapElement.appendChild(checkboxLabelElement);
 
+  // Dialog Action Buttons
   /** @type {HTMLDivElement} */
   const actionsElement = document.createElement("div");
   actionsElement.className = "time-picker-dialog__actions";
@@ -260,8 +272,9 @@ const createDialogDom = ({
   actionsElement.appendChild(confirmButtonElement);
 
   dialogElement.appendChild(headerElement);
-  dialogElement.appendChild(itemSectionElement);
-  dialogElement.appendChild(timeSectionElement);
+  dialogElement.appendChild(rowContainerElement);
+  dialogElement.appendChild(captionElement);
+  dialogElement.appendChild(checkboxWrapElement);
   dialogElement.appendChild(actionsElement);
   scrimElement.appendChild(dialogElement);
 
@@ -270,7 +283,7 @@ const createDialogDom = ({
     wheelElement,
     hoursInputElement,
     minutesInputElement,
-    linkButtonElement,
+    linkCheckboxElement,
     captionElement,
     confirmButtonElement,
     cancelButtonElement,
@@ -365,7 +378,7 @@ export const openStartExamDialog = ({
     wheelElement,
     hoursInputElement,
     minutesInputElement,
-    linkButtonElement,
+    linkCheckboxElement,
     captionElement,
     confirmButtonElement,
     cancelButtonElement,
@@ -430,15 +443,7 @@ export const openStartExamDialog = ({
       2,
       "0"
     );
-    if (currentTimeState.linked) {
-      linkButtonElement.classList.add(
-        "start-exam-dialog__link-button--active"
-      );
-    } else {
-      linkButtonElement.classList.remove(
-        "start-exam-dialog__link-button--active"
-      );
-    }
+    linkCheckboxElement.checked = Boolean(currentTimeState.linked);
     updateCaption(captionElement, currentTimeState, currentQuestionCount);
   };
 
@@ -545,12 +550,19 @@ export const openStartExamDialog = ({
     }
   });
 
-  // "By question count" button handler
-  linkButtonElement.addEventListener("click", () => {
-    currentTimeState = applyByQuestionCount(
-      currentTimeState,
-      currentQuestionCount
-    );
+  // Checkbox change handler for "By number of items"
+  linkCheckboxElement.addEventListener("change", () => {
+    if (linkCheckboxElement.checked) {
+      currentTimeState = applyByQuestionCount(
+        currentTimeState,
+        currentQuestionCount
+      );
+    } else {
+      currentTimeState = {
+        ...currentTimeState,
+        linked: false
+      };
+    }
     syncTimeInputsFromState();
   });
 
@@ -629,7 +641,7 @@ export const openStartExamDialog = ({
     } else if (event.key === "Enter") {
       if (
         document.activeElement !== cancelButtonElement &&
-        document.activeElement !== linkButtonElement
+        document.activeElement !== linkCheckboxElement
       ) {
         event.preventDefault();
         confirmButtonElement.click();
