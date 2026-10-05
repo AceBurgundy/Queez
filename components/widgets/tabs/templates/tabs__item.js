@@ -45,6 +45,9 @@ export class TabItem extends Component {
         clickEvent?.stopPropagation?.();
         return;
       }
+      if (this.activeTabSignal && this.activeTabSignal.value === this.tabIndex) {
+        return;
+      }
       if (typeof this.onSelect === "function") {
         this.onSelect(this.tabIndex);
       }

@@ -38,6 +38,11 @@ export class Tabs extends Component {
     /** @type {function(number): void} */
     this.onTabChange = onTabChange;
 
+    /** @type {boolean} */
+    let isTabAnimating = false;
+    /** @type {number|null} */
+    let animationTimer = null;
+
     /**
      * Activates a tab index with optional sliding transition animation on mobile or carousel mode.
      * @param {number} targetIndex - Target tab index.
@@ -55,12 +60,33 @@ export class Tabs extends Component {
         return;
       }
 
+      if (isTabAnimating && direction !== "none") {
+        return;
+      }
+
       this.activeTabSignal.value = targetIndex;
 
       /** @type {string|null} */
       const effectiveDirection = direction === "none"
         ? null
         : (direction || (targetIndex > previousIndex ? "next" : (targetIndex < previousIndex ? "previous" : null)));
+
+      if (effectiveDirection) {
+        isTabAnimating = true;
+        if (animationTimer !== null) {
+          clearTimeout(animationTimer);
+        }
+        animationTimer = setTimeout(() => {
+          isTabAnimating = false;
+          animationTimer = null;
+        }, 380);
+      } else {
+        isTabAnimating = false;
+        if (animationTimer !== null) {
+          clearTimeout(animationTimer);
+          animationTimer = null;
+        }
+      }
 
       /** @type {HTMLElement|null} */
       const rootTabsElement = document.querySelector(".tabs");

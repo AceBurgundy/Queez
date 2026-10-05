@@ -88,14 +88,18 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
     /** @type {number} */
     const currentActiveIndex = targetActiveIndex !== null ? targetActiveIndex : getActiveIndex();
 
+    if (allTabElements.length === 0) {
+      allTabElements = Array.from(trackElement.querySelectorAll(".tabs__item"));
+    }
+
     allTabElements.forEach((tabItemElement, elementIndex) => {
+      tabItemElement.style.transition = "none";
       tabItemElement.style.position = "";
       tabItemElement.style.width = "";
       tabItemElement.style.height = "";
       tabItemElement.style.left = "";
       tabItemElement.style.top = "";
       tabItemElement.style.transform = "";
-      tabItemElement.style.transition = "";
       tabItemElement.style.display = "";
       tabItemElement.style.zIndex = "";
       if (elementIndex === currentActiveIndex) {
@@ -106,6 +110,23 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
         tabItemElement.setAttribute("aria-selected", "false");
       }
     });
+
+    // Force layout flush while transition is none to prevent stylesheet transition reanimation
+    void trackElement.offsetHeight;
+
+    /** @type {Array<HTMLElement>} */
+    const tabElementsToRestore = [...allTabElements];
+    if (typeof window !== "undefined" && typeof window.requestAnimationFrame === "function") {
+      window.requestAnimationFrame(() => {
+        tabElementsToRestore.forEach((tabItemElement) => {
+          tabItemElement.style.transition = "";
+        });
+      });
+    } else {
+      tabElementsToRestore.forEach((tabItemElement) => {
+        tabItemElement.style.transition = "";
+      });
+    }
 
     isDraggingGesture = false;
     activeTabElement = null;
@@ -448,12 +469,6 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
       clickEvent.preventDefault();
       clickEvent.stopPropagation();
       clickEvent.stopImmediatePropagation();
-      preventNextClick = false;
-      if (typeof window !== "undefined") {
-        /** @type {Object} */
-        const windowObject = /** @type {*} */ (window);
-        windowObject.__tabJustDragged = false;
-      }
     }
   };
 
