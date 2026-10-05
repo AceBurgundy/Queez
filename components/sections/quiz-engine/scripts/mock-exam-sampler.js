@@ -1,25 +1,31 @@
 /**
  * @file mock-exam-sampler.js
- * @description Mock exam deck generator that samples questions per section with full-bank rotation coverage over repeated attempts.
+ * @description Mock and section exam deck generators that sample questions per section with full-bank rotation coverage over repeated attempts.
  */
 
 import { registerDeckSolutions } from "./quiz-state-manager.js";
 
 /**
- * Default number of questions budgeted for a mock exam (~1 hour test).
+ * Default number of questions budgeted for a total mock exam.
  * @type {number}
  */
-export const DEFAULT_MOCK_EXAM_QUESTION_COUNT = 60;
+export const DEFAULT_MOCK_EXAM_QUESTION_COUNT = 100;
 
 /**
- * Storage key for rotation history across mock exam retakes.
+ * Default number of questions budgeted for a section (tab) exam.
+ * @type {number}
+ */
+export const DEFAULT_SECTION_EXAM_QUESTION_COUNT = 10;
+
+/**
+ * Storage key for rotation history across exam retakes.
  * Record shape: Record<quizId, Record<sectionIndex, Array<number>>>
  * @type {string}
  */
 const MOCK_EXAM_HISTORY_STORAGE_KEY = "queez_mock_exam_history";
 
 /**
- * Storage key for currently active mock exam deck definition (question numbers only, no answers).
+ * Storage key for currently active exam deck definition (source numbers and scope only, no answers).
  * @type {string}
  */
 const ACTIVE_MOCK_DECK_STORAGE_KEY = "queez_active_mock_deck";
@@ -31,7 +37,7 @@ const ACTIVE_MOCK_DECK_STORAGE_KEY = "queez_active_mock_deck";
  * @param {function(): number} [randomSource=Math.random] - Random number generator returning [0, 1).
  * @returns {Array<T>} Shuffled array reference.
  */
-export function shuffleInPlace(items, randomSource = Math.random) {
+export const shuffleInPlace = (items, randomSource = Math.random) => {
   for (let index = items.length - 1; index > 0; index -= 1) {
     /** @type {number} */
     const targetIndex = Math.floor(randomSource() * (index + 1));
@@ -41,7 +47,7 @@ export function shuffleInPlace(items, randomSource = Math.random) {
     items[targetIndex] = temporaryItem;
   }
   return items;
-}
+};
 
 /**
  * Allocates question quotas across sections based on budget and section capacities.
@@ -49,7 +55,7 @@ export function shuffleInPlace(items, randomSource = Math.random) {
  * @param {number} totalBudget - Total question count desired.
  * @returns {Array<number>} Allocated question counts per section.
  */
-export function allocateSectionCounts(sectionCapacities, totalBudget) {
+export const allocateSectionCounts = (sectionCapacities, totalBudget) => {
   if (!Array.isArray(sectionCapacities) || sectionCapacities.length === 0) {
     return [];
   }
@@ -57,25 +63,36 @@ export function allocateSectionCounts(sectionCapacities, totalBudget) {
   /** @type {number} */
   const sectionCount = sectionCapacities.length;
   /** @type {number} */
-  const totalAvailable = sectionCapacities.reduce((accumulator, count) => accumulator + count, 0);
+  const totalAvailable = sectionCapacities.reduce(
+    (accumulator, count) => accumulator + count,
+    0
+  );
   /** @type {number} */
   const effectiveBudget = Math.min(totalBudget, totalAvailable);
 
   /** @type {number} */
   const baseAllocation = Math.floor(effectiveBudget / sectionCount);
   /** @type {Array<number>} */
-  const allocations = sectionCapacities.map((capacity) => Math.min(capacity, baseAllocation));
+  const allocations = sectionCapacities.map((capacity) =>
+    Math.min(capacity, baseAllocation)
+  );
 
   /** @type {number} */
-  let allocatedSum = allocations.reduce((accumulator, count) => accumulator + count, 0);
+  let allocatedSum = allocations.reduce(
+    (accumulator, count) => accumulator + count,
+    0
+  );
   /** @type {number} */
   let remainingBudget = effectiveBudget - allocatedSum;
 
-  // Distribute remaining quota round-robin to sections with remaining capacity
   /** @type {number} */
   let iterationGuard = 0;
   while (remainingBudget > 0 && iterationGuard < sectionCount * 2) {
-    for (let index = 0; index < sectionCount && remainingBudget > 0; index += 1) {
+    for (
+      let index = 0;
+      index < sectionCount && remainingBudget > 0;
+      index += 1
+    ) {
       if (allocations[index] < sectionCapacities[index]) {
         allocations[index] += 1;
         remainingBudget -= 1;
@@ -85,41 +102,46 @@ export function allocateSectionCounts(sectionCapacities, totalBudget) {
   }
 
   return allocations;
-}
+};
 
 /**
- * Loads mock exam rotation history from localStorage.
- * @returns {Record<string, Record<string, Array<number>>>}
+ * Loads exam rotation history from localStorage.
+ * @returns {Record<string, Record<string, Array<number>>>>}
  */
-export function loadMockExamHistory() {
+export const loadMockExamHistory = () => {
   if (typeof window === "undefined" || !window.localStorage) {
     return {};
   }
   try {
     /** @type {string|null} */
-    const rawHistory = window.localStorage.getItem(MOCK_EXAM_HISTORY_STORAGE_KEY);
+    const rawHistory = window.localStorage.getItem(
+      MOCK_EXAM_HISTORY_STORAGE_KEY
+    );
     return rawHistory ? JSON.parse(rawHistory) : {};
   } catch (error) {
     console.warn("Failed to load mock exam history:", error);
     return {};
   }
-}
+};
 
 /**
- * Saves mock exam rotation history to localStorage.
+ * Saves exam rotation history to localStorage.
  * @param {Record<string, Record<string, Array<number>>>>} historyObject - History payload.
  * @returns {void}
  */
-export function saveMockExamHistory(historyObject) {
+export const saveMockExamHistory = (historyObject) => {
   if (typeof window === "undefined" || !window.localStorage) {
     return;
   }
   try {
-    window.localStorage.setItem(MOCK_EXAM_HISTORY_STORAGE_KEY, JSON.stringify(historyObject));
+    window.localStorage.setItem(
+      MOCK_EXAM_HISTORY_STORAGE_KEY,
+      JSON.stringify(historyObject)
+    );
   } catch (error) {
     console.warn("Failed to persist mock exam history:", error);
   }
-}
+};
 
 /**
  * Selects question numbers from a section pool, prioritizing unserved questions.
@@ -129,7 +151,12 @@ export function saveMockExamHistory(historyObject) {
  * @param {function(): number} [randomSource=Math.random] - Random source for test determinism.
  * @returns {{ selected: Array<Object>, updatedServed: Array<number> }} Selected questions and new served list.
  */
-export function selectSectionQuestions(sectionQuestions, countToSelect, servedNumbers, randomSource = Math.random) {
+export const selectSectionQuestions = (
+  sectionQuestions,
+  countToSelect,
+  servedNumbers,
+  randomSource = Math.random
+) => {
   /** @type {Array<Object>} */
   const availableQuestions = [...sectionQuestions];
   if (countToSelect >= availableQuestions.length) {
@@ -142,23 +169,27 @@ export function selectSectionQuestions(sectionQuestions, countToSelect, servedNu
   /** @type {Set<number>} */
   const servedSet = new Set(servedNumbers);
   /** @type {Array<Object>} */
-  let unservedQuestions = availableQuestions.filter((question) => !servedSet.has(question.number));
+  let unservedQuestions = availableQuestions.filter(
+    (question) => !servedSet.has(question.number)
+  );
 
   /** @type {Array<Object>} */
   const selectedQuestions = [];
   /** @type {Array<number>} */
   let newServedList = [...servedNumbers];
 
-  // If unserved pool is smaller than needed count, take all unserved, then reset cycle
   if (unservedQuestions.length < countToSelect) {
     selectedQuestions.push(...unservedQuestions);
     newServedList = [];
     /** @type {Set<number>} */
-    const pickedNumbers = new Set(selectedQuestions.map((question) => question.number));
-    unservedQuestions = availableQuestions.filter((question) => !pickedNumbers.has(question.number));
+    const pickedNumbers = new Set(
+      selectedQuestions.map((question) => question.number)
+    );
+    unservedQuestions = availableQuestions.filter(
+      (question) => !pickedNumbers.has(question.number)
+    );
   }
 
-  // Shuffle remaining candidate pool and pick required remainder
   shuffleInPlace(unservedQuestions, randomSource);
   /** @type {number} */
   const remainderNeeded = countToSelect - selectedQuestions.length;
@@ -174,7 +205,7 @@ export function selectSectionQuestions(sectionQuestions, countToSelect, servedNu
     selected: selectedQuestions,
     updatedServed: newServedList
   };
-}
+};
 
 /**
  * Builds a rotated mock exam deck from the full question bank.
@@ -186,22 +217,30 @@ export function selectSectionQuestions(sectionQuestions, countToSelect, servedNu
  * @param {function(): number} [configuration.randomSource=Math.random] - Random generator for shuffling.
  * @returns {Object} Deck result object.
  */
-export function buildMockExamDeck({
+export const buildMockExamDeck = ({
   quizId,
   questions = [],
   sectionBounds = [],
   questionBudget = DEFAULT_MOCK_EXAM_QUESTION_COUNT,
   randomSource = Math.random
-}) {
+}) => {
   /** @type {number} */
   const totalQuestionsInBank = questions.length;
   if (totalQuestionsInBank <= questionBudget) {
+    if (typeof window !== "undefined" && window.localStorage) {
+      try {
+        window.localStorage.removeItem(ACTIVE_MOCK_DECK_STORAGE_KEY);
+      } catch (error) {
+        console.warn("Failed to remove active mock deck:", error);
+      }
+    }
     return {
       deckQuizId: quizId,
       questions,
       sectionBounds,
       sourceNumbers: questions.map((question) => question.number),
-      isSampled: false
+      isSampled: false,
+      examScope: "full"
     };
   }
 
@@ -215,20 +254,27 @@ export function buildMockExamDeck({
   /** @type {Record<string, Array<number>>} */
   const quizHistory = historyStore[quizId];
 
-  // Slice bank questions by section bounds
   /** @type {Array<Array<Object>>} */
   const sectionQuestionsList = sectionBounds.map((bound) => {
     /** @type {number} */
-    const startNum = bound.startNum ?? bound.startNumber ?? 1;
+    const startNumber = bound.startNum ?? bound.startNumber ?? 1;
     /** @type {number} */
-    const endNum = bound.endNum ?? bound.endNumber ?? startNum;
-    return questions.filter((question) => question.number >= startNum && question.number <= endNum);
+    const endNumber = bound.endNum ?? bound.endNumber ?? startNumber;
+    return questions.filter(
+      (question) =>
+        question.number >= startNumber && question.number <= endNumber
+    );
   });
 
   /** @type {Array<number>} */
-  const sectionCapacities = sectionQuestionsList.map((sectionList) => sectionList.length);
+  const sectionCapacities = sectionQuestionsList.map(
+    (sectionList) => sectionList.length
+  );
   /** @type {Array<number>} */
-  const sectionAllocations = allocateSectionCounts(sectionCapacities, questionBudget);
+  const sectionAllocations = allocateSectionCounts(
+    sectionCapacities,
+    questionBudget
+  );
 
   /** @type {Array<Object>} */
   const deckQuestions = [];
@@ -286,16 +332,13 @@ export function buildMockExamDeck({
   });
 
   saveMockExamHistory(historyStore);
-
-  // Register solutions into solutionRegistry for the deck quiz ID
   registerDeckSolutions(deckQuizId, quizId, solutionNumberMapping);
 
-  // Persist active deck description (source question numbers only) to localStorage
   if (typeof window !== "undefined" && window.localStorage) {
     try {
       window.localStorage.setItem(
         ACTIVE_MOCK_DECK_STORAGE_KEY,
-        JSON.stringify({ quizId, sourceNumbers })
+        JSON.stringify({ quizId, sourceNumbers, examScope: "full" })
       );
     } catch (error) {
       console.warn("Failed to persist active mock deck:", error);
@@ -307,32 +350,204 @@ export function buildMockExamDeck({
     questions: deckQuestions,
     sectionBounds: deckBounds,
     sourceNumbers,
-    isSampled: true
+    isSampled: true,
+    examScope: "full"
   };
-}
+};
+
+/**
+ * Builds a rotated section exam deck for a single section with subset sampling.
+ * @param {Object} configuration
+ * @param {string} configuration.quizId - Unique quiz identifier.
+ * @param {Array<Object>} configuration.questions - Sanitized question bank.
+ * @param {Array<Object>} configuration.sectionBounds - Section bounds list.
+ * @param {number} configuration.sectionIndex - Target section index.
+ * @param {number} [configuration.questionCount=DEFAULT_SECTION_EXAM_QUESTION_COUNT] - Number of items requested.
+ * @param {function(): number} [configuration.randomSource=Math.random] - Random generator for shuffling.
+ * @returns {Object} Deck result object.
+ */
+export const buildSectionExamDeck = ({
+  quizId,
+  questions = [],
+  sectionBounds = [],
+  sectionIndex = 0,
+  questionCount = DEFAULT_SECTION_EXAM_QUESTION_COUNT,
+  randomSource = Math.random
+}) => {
+  /** @type {number} */
+  const clampedSectionIndex = Math.max(
+    0,
+    Math.min(sectionIndex, Math.max(0, sectionBounds.length - 1))
+  );
+  /** @type {Object} */
+  const targetBound = sectionBounds[clampedSectionIndex] || {
+    startNumber: 1,
+    endNumber: questions.length
+  };
+  /** @type {number} */
+  const startNumber = targetBound.startNum ?? targetBound.startNumber ?? 1;
+  /** @type {number} */
+  const endNumber = targetBound.endNum ?? targetBound.endNumber ?? startNumber;
+
+  /** @type {Array<Object>} */
+  const pool = questions.filter(
+    (question) =>
+      question.number >= startNumber && question.number <= endNumber
+  );
+
+  /** @type {number} */
+  const normalizedBudget = Math.floor(questionCount) || DEFAULT_SECTION_EXAM_QUESTION_COUNT;
+  /** @type {number} */
+  const effectiveCount = Math.max(1, Math.min(normalizedBudget, pool.length));
+
+  if (effectiveCount >= pool.length) {
+    if (typeof window !== "undefined" && window.localStorage) {
+      try {
+        window.localStorage.removeItem(ACTIVE_MOCK_DECK_STORAGE_KEY);
+      } catch (error) {
+        console.warn("Failed to clear active mock deck storage:", error);
+      }
+    }
+    return {
+      deckQuizId: quizId,
+      questions,
+      sectionBounds,
+      sourceNumbers: pool.map((question) => question.number),
+      isSampled: false,
+      examScope: "section",
+      sectionCategoryIndex: clampedSectionIndex
+    };
+  }
+
+  /** @type {string} */
+  const deckQuizId = `${quizId}::section${clampedSectionIndex}`;
+  /** @type {Record<string, Record<string, Array<number>>>>} */
+  const historyStore = loadMockExamHistory();
+  if (!historyStore[quizId]) {
+    historyStore[quizId] = {};
+  }
+  /** @type {Record<string, Array<number>>} */
+  const quizHistory = historyStore[quizId];
+  /** @type {Array<number>} */
+  const pastServed = quizHistory[String(clampedSectionIndex)] || [];
+
+  const { selected, updatedServed } = selectSectionQuestions(
+    pool,
+    effectiveCount,
+    pastServed,
+    randomSource
+  );
+
+  quizHistory[String(clampedSectionIndex)] = updatedServed;
+  saveMockExamHistory(historyStore);
+
+  // Preserve relative order of selected questions from the source section
+  selected.sort(
+    (firstQuestion, secondQuestion) =>
+      firstQuestion.number - secondQuestion.number
+  );
+
+  /** @type {Array<Object>} */
+  const deckQuestions = [];
+  /** @type {Record<number, number>} */
+  const solutionNumberMapping = {};
+  /** @type {Array<number>} */
+  const sourceNumbers = [];
+
+  selected.forEach((sourceQuestion, itemIndex) => {
+    /** @type {number} */
+    const assignedNumber = itemIndex + 1;
+    solutionNumberMapping[assignedNumber] = sourceQuestion.number;
+    sourceNumbers.push(sourceQuestion.number);
+
+    deckQuestions.push({
+      ...sourceQuestion,
+      number: assignedNumber,
+      sourceNumber: sourceQuestion.number
+    });
+  });
+
+  // Section bounds: same length as original; active section is {1..N}, others {1, 1}
+  /** @type {Array<Object>} */
+  const deckBounds = sectionBounds.map((bound, currentBoundIndex) => {
+    if (currentBoundIndex === clampedSectionIndex) {
+      return {
+        startNum: 1,
+        endNum: effectiveCount,
+        startNumber: 1,
+        endNumber: effectiveCount
+      };
+    }
+    return {
+      startNum: 1,
+      endNum: 1,
+      startNumber: 1,
+      endNumber: 1
+    };
+  });
+
+  registerDeckSolutions(deckQuizId, quizId, solutionNumberMapping);
+
+  if (typeof window !== "undefined" && window.localStorage) {
+    try {
+      window.localStorage.setItem(
+        ACTIVE_MOCK_DECK_STORAGE_KEY,
+        JSON.stringify({
+          quizId,
+          sourceNumbers,
+          examScope: "section",
+          sectionCategoryIndex: clampedSectionIndex
+        })
+      );
+    } catch (error) {
+      console.warn("Failed to persist active section deck:", error);
+    }
+  }
+
+  return {
+    deckQuizId,
+    questions: deckQuestions,
+    sectionBounds: deckBounds,
+    sourceNumbers,
+    isSampled: true,
+    examScope: "section",
+    sectionCategoryIndex: clampedSectionIndex
+  };
+};
 
 /**
  * Restores an active mock exam deck from stored source question numbers.
  * @param {string} quizId - Original quiz identifier.
  * @param {Array<Object>} bankQuestions - Sanitized questions from bank.
  * @param {Array<Object>} sectionBounds - Original section bounds.
- * @returns {Object|null} Restored deck object or null if none saved.
+ * @returns {Object|null} Restored deck object or null if none saved or not full scope.
  */
-export function restoreMockExamDeck(quizId, bankQuestions, sectionBounds) {
+export const restoreMockExamDeck = (quizId, bankQuestions, sectionBounds) => {
   if (typeof window === "undefined" || !window.localStorage) {
     return null;
   }
 
   try {
     /** @type {string|null} */
-    const rawDeckJson = window.localStorage.getItem(ACTIVE_MOCK_DECK_STORAGE_KEY);
+    const rawDeckJson = window.localStorage.getItem(
+      ACTIVE_MOCK_DECK_STORAGE_KEY
+    );
     if (!rawDeckJson) {
       return null;
     }
 
     /** @type {Object} */
     const deckRecord = JSON.parse(rawDeckJson);
-    if (!deckRecord || deckRecord.quizId !== quizId || !Array.isArray(deckRecord.sourceNumbers)) {
+    if (
+      !deckRecord ||
+      deckRecord.quizId !== quizId ||
+      !Array.isArray(deckRecord.sourceNumbers)
+    ) {
+      return null;
+    }
+
+    // Ignore section-scoped records when restoring full mock exam
+    if (deckRecord.examScope && deckRecord.examScope !== "full") {
       return null;
     }
 
@@ -351,9 +566,9 @@ export function restoreMockExamDeck(quizId, bankQuestions, sectionBounds) {
     /** @type {Record<number, number>} */
     const solutionNumberMapping = {};
 
-    sourceNumbers.forEach((sourceNumber, index) => {
+    sourceNumbers.forEach((sourceNumber, itemIndex) => {
       /** @type {number} */
-      const assignedNumber = index + 1;
+      const assignedNumber = itemIndex + 1;
       /** @type {Object|undefined} */
       const sourceQuestion = bankQuestionMap.get(sourceNumber);
       if (sourceQuestion) {
@@ -370,7 +585,6 @@ export function restoreMockExamDeck(quizId, bankQuestions, sectionBounds) {
       return null;
     }
 
-    // Reconstruct deckBounds matching original section proportions
     /** @type {Array<Object>} */
     const deckBounds = [];
     /** @type {number} */
@@ -407,10 +621,121 @@ export function restoreMockExamDeck(quizId, bankQuestions, sectionBounds) {
       questions: deckQuestions,
       sectionBounds: deckBounds,
       sourceNumbers,
-      isSampled: true
+      isSampled: true,
+      examScope: "full"
     };
   } catch (error) {
     console.warn("Failed to restore mock exam deck:", error);
     return null;
   }
-}
+};
+
+/**
+ * Restores an active section exam deck from stored source question numbers.
+ * @param {string} quizId - Original quiz identifier.
+ * @param {Array<Object>} bankQuestions - Sanitized questions from bank.
+ * @param {Array<Object>} sectionBounds - Original section bounds.
+ * @param {number} sectionIndex - Target section index.
+ * @returns {Object|null} Restored deck object or null if none saved or scope mismatch.
+ */
+export const restoreSectionExamDeck = (
+  quizId,
+  bankQuestions,
+  sectionBounds,
+  sectionIndex
+) => {
+  if (typeof window === "undefined" || !window.localStorage) {
+    return null;
+  }
+
+  try {
+    /** @type {string|null} */
+    const rawDeckJson = window.localStorage.getItem(
+      ACTIVE_MOCK_DECK_STORAGE_KEY
+    );
+    if (!rawDeckJson) {
+      return null;
+    }
+
+    /** @type {Object} */
+    const deckRecord = JSON.parse(rawDeckJson);
+    if (
+      !deckRecord ||
+      deckRecord.quizId !== quizId ||
+      deckRecord.examScope !== "section" ||
+      deckRecord.sectionCategoryIndex !== sectionIndex ||
+      !Array.isArray(deckRecord.sourceNumbers)
+    ) {
+      return null;
+    }
+
+    /** @type {Array<number>} */
+    const sourceNumbers = deckRecord.sourceNumbers;
+    /** @type {Map<number, Object>} */
+    const bankQuestionMap = new Map();
+    bankQuestions.forEach((question) => {
+      bankQuestionMap.set(question.number, question);
+    });
+
+    /** @type {string} */
+    const deckQuizId = `${quizId}::section${sectionIndex}`;
+    /** @type {Array<Object>} */
+    const deckQuestions = [];
+    /** @type {Record<number, number>} */
+    const solutionNumberMapping = {};
+
+    sourceNumbers.forEach((sourceNumber, itemIndex) => {
+      /** @type {number} */
+      const assignedNumber = itemIndex + 1;
+      /** @type {Object|undefined} */
+      const sourceQuestion = bankQuestionMap.get(sourceNumber);
+      if (sourceQuestion) {
+        deckQuestions.push({
+          ...sourceQuestion,
+          number: assignedNumber,
+          sourceNumber
+        });
+        solutionNumberMapping[assignedNumber] = sourceNumber;
+      }
+    });
+
+    if (deckQuestions.length === 0) {
+      return null;
+    }
+
+    /** @type {number} */
+    const effectiveCount = deckQuestions.length;
+    /** @type {Array<Object>} */
+    const deckBounds = sectionBounds.map((bound, currentBoundIndex) => {
+      if (currentBoundIndex === sectionIndex) {
+        return {
+          startNum: 1,
+          endNum: effectiveCount,
+          startNumber: 1,
+          endNumber: effectiveCount
+        };
+      }
+      return {
+        startNum: 1,
+        endNum: 1,
+        startNumber: 1,
+        endNumber: 1
+      };
+    });
+
+    registerDeckSolutions(deckQuizId, quizId, solutionNumberMapping);
+
+    return {
+      deckQuizId,
+      questions: deckQuestions,
+      sectionBounds: deckBounds,
+      sourceNumbers,
+      isSampled: true,
+      examScope: "section",
+      sectionCategoryIndex: sectionIndex
+    };
+  } catch (error) {
+    console.warn("Failed to restore section exam deck:", error);
+    return null;
+  }
+};
