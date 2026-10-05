@@ -7,13 +7,29 @@ css(import.meta, ["../styles/quiz-engine.css"]);
 
 /**
  * Maps question number to its category index (0-indexed).
- * Dynamically supports any total question count and category count.
- * @param {number} questionNumber
- * @param {number} [totalQuestions=150]
- * @param {number} [categoriesCount=4]
- * @returns {number}
+ * Dynamically supports any total question count, category count, or explicit sectionBounds.
+ * @param {number} questionNumber - 1-based question number.
+ * @param {number} [totalQuestions=150] - Total questions count.
+ * @param {number} [categoriesCount=4] - Total categories count.
+ * @param {Array<{ startNum?: number, endNum?: number, startNumber?: number, endNumber?: number }>|null} [sectionBounds=null] - Explicit section bounds.
+ * @returns {number} Category index (0-indexed).
  */
-export function getCategoryIndexForQuestion(questionNumber, totalQuestions = 150, categoriesCount = 4) {
+export function getCategoryIndexForQuestion(questionNumber, totalQuestions = 150, categoriesCount = 4, sectionBounds = null) {
+  if (Array.isArray(sectionBounds) && sectionBounds.length > 0) {
+    for (let index = 0; index < sectionBounds.length; index += 1) {
+      /** @type {Object} */
+      const boundEntry = sectionBounds[index] || {};
+      /** @type {number} */
+      const startNum = boundEntry.startNum ?? boundEntry.startNumber ?? 1;
+      /** @type {number} */
+      const endNum = boundEntry.endNum ?? boundEntry.endNumber ?? startNum;
+      if (questionNumber >= startNum && questionNumber <= endNum) {
+        return index;
+      }
+    }
+    return Math.max(0, Math.min(sectionBounds.length - 1, categoriesCount - 1));
+  }
+
   if (totalQuestions === 2 && categoriesCount === 2) {
     return questionNumber <= 1 ? 0 : 1;
   }
@@ -26,8 +42,9 @@ export function getCategoryIndexForQuestion(questionNumber, totalQuestions = 150
     if (questionNumber <= 135) return 2;
     return 3;
   }
-  const perCat = Math.max(1, Math.ceil(totalQuestions / Math.max(1, categoriesCount)));
-  return Math.min(categoriesCount - 1, Math.floor((questionNumber - 1) / perCat));
+  /** @type {number} */
+  const perCategory = Math.max(1, Math.ceil(totalQuestions / Math.max(1, categoriesCount)));
+  return Math.min(categoriesCount - 1, Math.floor((questionNumber - 1) / perCategory));
 }
 
 /**
@@ -42,22 +59,24 @@ export function getCategoryIndexForQuestion(questionNumber, totalQuestions = 150
 export class QuizEngine extends Component {
   /**
    * @param {Object} configuration
-   * @param {string} configuration.quizId
+   * @param {string} configuration.quizId - Unique quiz identifier.
    * @param {Array<Object>} configuration.questions - Sanitized questions (no correct answers).
    * @param {Array<Object>} configuration.categories - Category list.
-   * @param {Object} [configuration.savedSession] - Restored session from localStorage.
-   * @param {boolean} [configuration.isTimed=false]
-   * @param {number} [configuration.totalTimeSeconds=0]
-   * @param {number} [configuration.startTime=Date.now()]
+   * @param {Array<Object>|null} [configuration.sectionBounds=null] - Explicit section bounds list.
+   * @param {Object|null} [configuration.savedSession=null] - Restored session from localStorage.
+   * @param {boolean} [configuration.isTimed=false] - Whether timer is active.
+   * @param {number} [configuration.totalTimeSeconds=0] - Countdown timer duration in seconds.
+   * @param {number} [configuration.startTime=Date.now()] - Start timestamp.
    * @param {string} [configuration.examScope="full"] - "full" or "section".
    * @param {number} [configuration.sectionCategoryIndex=0] - Category index if examScope === "section".
-   * @param {function(number): void} [configuration.onCategoryChange]
-   * @param {function(Record<number, string>, Object): void} [configuration.onFinishExam]
+   * @param {function(number): void} [configuration.onCategoryChange=()=>{}] - Callback when active section changes.
+   * @param {function(Record<number, string>, Object): void} [configuration.onFinishExam=()=>{}] - Callback on completion.
    */
   constructor({
     quizId,
     questions = [],
     categories = [],
+    sectionBounds = null,
     savedSession = null,
     isTimed = false,
     totalTimeSeconds = 0,
@@ -69,48 +88,80 @@ export class QuizEngine extends Component {
   } = {}) {
     super();
 
+    /** @type {string} */
     this.quizId = quizId;
+    /** @type {Array<Object>} */
     this.questions = questions;
+    /** @type {Array<Object>} */
     this.categories = categories;
+    /** @type {Array<Object>|null} */
+    this.sectionBounds = sectionBounds;
+    /** @type {function(number): void} */
     this.onCategoryChange = onCategoryChange;
+    /** @type {function(Record<number, string>, Object): void} */
     this.onFinishExam = onFinishExam;
 
+    /** @type {string} */
     this.examScope = savedSession?.examScope || examScope;
+    /** @type {number} */
     this.sectionCategoryIndex = savedSession?.sectionCategoryIndex ?? sectionCategoryIndex;
 
+    /** @type {{ startNum: number, endNum: number }} */
     const bounds = (this.examScope === "section")
-      ? getCategoryBounds(this.sectionCategoryIndex, this.questions.length, this.categories.length)
+      ? getCategoryBounds(this.sectionCategoryIndex, this.questions.length, this.categories.length, this.sectionBounds)
       : { startNum: 1, endNum: this.questions.length };
-    this.sectionBounds = bounds;
+    this.activeScopeBounds = bounds;
+    /** @type {number} */
     this.sectionTotalQuestions = bounds.endNum - bounds.startNum + 1;
 
     // Restore or initialize state
+    /** @type {number} */
     const defaultInitialIndex = (this.examScope === "section") ? (bounds.startNum - 1) : 0;
+    /** @type {number} */
     const initialQuestionIndex = savedSession?.currentQuestionIndex ?? defaultInitialIndex;
+    /** @type {Record<number, string>} */
     const initialAnswers = savedSession?.answers || {};
+    /** @type {number} */
     const initialCategoryIndex = (this.examScope === "section")
       ? this.sectionCategoryIndex
-      : getCategoryIndexForQuestion(initialQuestionIndex + 1, this.questions.length, this.categories.length);
+      : getCategoryIndexForQuestion(initialQuestionIndex + 1, this.questions.length, this.categories.length, this.sectionBounds);
 
+    /** @type {boolean} */
     this.isTimed = savedSession?.isTimed ?? isTimed;
+    /** @type {number} */
     this.totalTimeSeconds = savedSession?.totalTimeSeconds ?? totalTimeSeconds;
+    /** @type {number} */
     this.startTime = savedSession?.startTime ?? startTime;
 
+    /** @type {Record<number, string>} */
     this.answers = { ...initialAnswers };
+    /** @type {import("../../../../Component.js").Signal<number>} */
     this.currentQuestionIndexSignal = signal(initialQuestionIndex);
+    /** @type {import("../../../../Component.js").Signal<number>} */
     this.activeCategoryIndexSignal = signal(initialCategoryIndex);
+    /** @type {import("../../../../Component.js").Signal<boolean>} */
     this.isTransitionSignal = signal(Boolean(this.examScope === "full" && savedSession?.status === "transition"));
+    /** @type {import("../../../../Component.js").Signal<number>} */
     this.transitionNextCategorySignal = signal(savedSession?.transitionNextCategory || 1);
 
     // Timer signal
+    /**
+     * @returns {number}
+     */
     const calcRemainingSeconds = () => {
       if (!this.isTimed || this.totalTimeSeconds <= 0) return 0;
+      /** @type {number} */
       const elapsed = Math.floor((Date.now() - this.startTime) / 1000);
       return Math.max(0, this.totalTimeSeconds - elapsed);
     };
 
+    /** @type {import("../../../../Component.js").Signal<number>} */
     this.remainingSecondsSignal = signal(calcRemainingSeconds());
 
+    /**
+     * @param {string} [status="in_progress"]
+     * @returns {void}
+     */
     const persistCurrentState = (status = "in_progress") => {
       saveActiveSession({
         quizId: this.quizId,
@@ -128,17 +179,26 @@ export class QuizEngine extends Component {
     };
 
     // Answer Selection
-    const handleSelectAnswer = (qNumber, selectedValue) => {
-      this.answers[qNumber] = selectedValue;
+    /**
+     * @param {number} questionNumber
+     * @param {string} selectedValue
+     * @returns {void}
+     */
+    const handleSelectAnswer = (questionNumber, selectedValue) => {
+      this.answers[questionNumber] = selectedValue;
       persistCurrentState("in_progress");
 
       // Update active option style in DOM instantly
-      const qCard = document.querySelector(`.question-card[data-question-number="${qNumber}"]`);
-      if (qCard) {
-        qCard.querySelectorAll(".question-card__option-button").forEach((button) => {
-          const keyEl = button.querySelector(".question-card__option-key");
+      /** @type {HTMLElement|null} */
+      const questionCardElement = document.querySelector(`.question-card[data-question-number="${questionNumber}"]`);
+      if (questionCardElement) {
+        questionCardElement.querySelectorAll(".question-card__option-button").forEach((button) => {
+          /** @type {HTMLElement|null} */
+          const keyElement = button.querySelector(".question-card__option-key");
+          /** @type {HTMLElement|null} */
           const radioIcon = button.querySelector(".question-card__radio-icon");
-          const isSelected = keyEl && keyEl.textContent.trim() === selectedValue;
+          /** @type {boolean} */
+          const isSelected = Boolean(keyElement && keyElement.textContent.trim() === selectedValue);
           button.classList.toggle("question-card__option-button--selected", isSelected);
           button.setAttribute("aria-checked", isSelected ? "true" : "false");
           if (radioIcon) {
@@ -149,26 +209,37 @@ export class QuizEngine extends Component {
     };
 
     // Pagination handlers
+    /**
+     * @returns {void}
+     */
     const handleNextPage = () => {
-      const currentIdx = this.currentQuestionIndexSignal.value;
-      const currentQNum = currentIdx + 1;
-      const currentCat = getCategoryIndexForQuestion(currentQNum, this.questions.length, this.categories.length);
-      const { endNum } = getCategoryBounds(currentCat, this.questions.length, this.categories.length);
+      /** @type {number} */
+      const currentIndex = this.currentQuestionIndexSignal.value;
+      /** @type {number} */
+      const currentQuestionNumber = currentIndex + 1;
+      /** @type {number} */
+      const currentCategory = (this.examScope === "section")
+        ? this.sectionCategoryIndex
+        : getCategoryIndexForQuestion(currentQuestionNumber, this.questions.length, this.categories.length, this.sectionBounds);
+      /** @type {{ startNum: number, endNum: number }} */
+      const currentBounds = getCategoryBounds(currentCategory, this.questions.length, this.categories.length, this.sectionBounds);
 
       // Check if current page slice reaches the end of current category
-      const nextPageFirstQNum = currentIdx + 11;
+      /** @type {number} */
+      const nextPageFirstQuestionNumber = currentIndex + 11;
       if (this.examScope === "section") {
-        if (nextPageFirstQNum > endNum) {
+        if (nextPageFirstQuestionNumber > currentBounds.endNum) {
           finishQuiz();
           return;
         }
       } else {
-        if (nextPageFirstQNum > endNum) {
+        if (nextPageFirstQuestionNumber > currentBounds.endNum) {
           // At the end of this category
-          if (currentCat < this.categories.length - 1) {
+          if (currentCategory < this.categories.length - 1) {
             // Show category transition checkpoint!
-            const nextCat = currentCat + 1;
-            this.transitionNextCategorySignal.value = nextCat;
+            /** @type {number} */
+            const nextCategory = currentCategory + 1;
+            this.transitionNextCategorySignal.value = nextCategory;
             this.isTransitionSignal.value = true;
             persistCurrentState("transition");
             this.renderView();
@@ -183,46 +254,64 @@ export class QuizEngine extends Component {
       }
 
       // Advance 10 questions
-      const maxIdx = (this.examScope === "section") ? endNum - 1 : this.questions.length - 1;
-      const nextIdx = Math.min(maxIdx, currentIdx + 10);
-      this.currentQuestionIndexSignal.value = nextIdx;
+      /** @type {number} */
+      const maxIndex = (this.examScope === "section") ? currentBounds.endNum - 1 : this.questions.length - 1;
+      /** @type {number} */
+      const nextIndex = Math.min(maxIndex, currentIndex + 10);
+      this.currentQuestionIndexSignal.value = nextIndex;
       persistCurrentState("in_progress");
       this.renderView();
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    /**
+     * @returns {void}
+     */
     const handlePrevPage = () => {
-      const currentIdx = this.currentQuestionIndexSignal.value;
-      const currentQNum = currentIdx + 1;
-      const currentCat = (this.examScope === "section")
+      /** @type {number} */
+      const currentIndex = this.currentQuestionIndexSignal.value;
+      /** @type {number} */
+      const currentQuestionNumber = currentIndex + 1;
+      /** @type {number} */
+      const currentCategory = (this.examScope === "section")
         ? this.sectionCategoryIndex
-        : getCategoryIndexForQuestion(currentQNum, this.questions.length, this.categories.length);
-      const { startNum } = getCategoryBounds(currentCat, this.questions.length, this.categories.length);
+        : getCategoryIndexForQuestion(currentQuestionNumber, this.questions.length, this.categories.length, this.sectionBounds);
+      /** @type {{ startNum: number, endNum: number }} */
+      const currentBounds = getCategoryBounds(currentCategory, this.questions.length, this.categories.length, this.sectionBounds);
 
       // Go back 10 questions within this category
-      const prevIdx = Math.max(startNum - 1, currentIdx - 10);
-      this.currentQuestionIndexSignal.value = prevIdx;
+      /** @type {number} */
+      const previousIndex = Math.max(currentBounds.startNum - 1, currentIndex - 10);
+      this.currentQuestionIndexSignal.value = previousIndex;
       persistCurrentState("in_progress");
       this.renderView();
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    /**
+     * @returns {void}
+     */
     const handleResumeCategory = () => {
-      const nextCat = this.transitionNextCategorySignal.value;
-      const { startNum } = getCategoryBounds(nextCat, this.questions.length, this.categories.length);
-      this.currentQuestionIndexSignal.value = startNum - 1;
-      this.activeCategoryIndexSignal.value = nextCat;
+      /** @type {number} */
+      const nextCategory = this.transitionNextCategorySignal.value;
+      /** @type {{ startNum: number, endNum: number }} */
+      const nextBounds = getCategoryBounds(nextCategory, this.questions.length, this.categories.length, this.sectionBounds);
+      this.currentQuestionIndexSignal.value = nextBounds.startNum - 1;
+      this.activeCategoryIndexSignal.value = nextCategory;
       this.isTransitionSignal.value = false;
       persistCurrentState("in_progress");
 
       if (typeof this.onCategoryChange === "function") {
-        this.onCategoryChange(nextCat);
+        this.onCategoryChange(nextCategory);
       }
 
       this.renderView();
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    /**
+     * @returns {void}
+     */
     const finishQuiz = () => {
       persistCurrentState("completed");
       if (this.timerIntervalId) {
@@ -234,58 +323,81 @@ export class QuizEngine extends Component {
           sectionCategoryIndex: this.sectionCategoryIndex,
           isTimed: this.isTimed,
           totalTimeSeconds: this.totalTimeSeconds,
-          startTime: this.startTime
+          startTime: this.startTime,
+          sectionBounds: this.sectionBounds
         });
       }
     };
 
-    this.jumpToCategory = (targetCatIdx) => {
+    /**
+     * @param {number} targetCategoryIndex
+     * @returns {void}
+     */
+    this.jumpToCategory = (targetCategoryIndex) => {
       if (this.examScope === "section") {
         return; // Exam is locked to this tab's questions
       }
-      if (targetCatIdx < 0 || targetCatIdx >= this.categories.length) return;
-      const { startNum } = getCategoryBounds(targetCatIdx, this.questions.length, this.categories.length);
-      this.currentQuestionIndexSignal.value = startNum - 1;
-      this.activeCategoryIndexSignal.value = targetCatIdx;
+      if (targetCategoryIndex < 0 || targetCategoryIndex >= this.categories.length) {
+        return;
+      }
+      /** @type {{ startNum: number, endNum: number }} */
+      const targetBounds = getCategoryBounds(targetCategoryIndex, this.questions.length, this.categories.length, this.sectionBounds);
+      this.currentQuestionIndexSignal.value = targetBounds.startNum - 1;
+      this.activeCategoryIndexSignal.value = targetCategoryIndex;
       this.isTransitionSignal.value = false;
       persistCurrentState("in_progress");
       this.renderView();
       window.scrollTo({ top: 0, behavior: "smooth" });
     };
 
+    /**
+     * @returns {void}
+     */
     this.renderView = () => {
-      const container = document.getElementById("quizEngineRoot");
-      if (!container) return;
-      container.innerHTML = this.buildContent();
+      /** @type {HTMLElement|null} */
+      const containerElement = document.getElementById("quizEngineRoot");
+      if (!containerElement) {
+        return;
+      }
+      containerElement.innerHTML = this.buildContent();
       this.attachListeners();
     };
 
+    /**
+     * @returns {string}
+     */
     this.buildContent = () => {
       // 1. Transition Screen Checkpoint
       if (this.isTransitionSignal.value) {
-        const nextCatIdx = this.transitionNextCategorySignal.value;
-        const nextCatDef = this.categories[nextCatIdx] || {};
-        const catTitle = nextCatDef.tab_title || nextCatDef.tabTitle || `Category ${nextCatIdx + 1}`;
-        const catIcon = nextCatDef.icon_name || nextCatDef.iconName || "school";
-        const { startNum, endNum } = getCategoryBounds(nextCatIdx, this.questions.length, this.categories.length);
-        const count = endNum - startNum + 1;
+        /** @type {number} */
+        const nextCategoryIndex = this.transitionNextCategorySignal.value;
+        /** @type {Object} */
+        const nextCategoryDefinition = this.categories[nextCategoryIndex] || {};
+        /** @type {string} */
+        const categoryTitle = nextCategoryDefinition.tab_title || nextCategoryDefinition.tabTitle || `Category ${nextCategoryIndex + 1}`;
+        /** @type {string} */
+        const categoryIcon = nextCategoryDefinition.icon_name || nextCategoryDefinition.iconName || "school";
+        /** @type {{ startNum: number, endNum: number }} */
+        const nextBounds = getCategoryBounds(nextCategoryIndex, this.questions.length, this.categories.length, this.sectionBounds);
+        /** @type {number} */
+        const count = nextBounds.endNum - nextBounds.startNum + 1;
 
         return `
           <div class="quiz-engine__transition-view" role="region" aria-label="Section Transition">
             <div class="quiz-engine__transition-icon">
-              <span class="google-symbols notranslate">${catIcon}</span>
+              <span class="google-symbols notranslate">${categoryIcon}</span>
             </div>
-            <h2 class="quiz-engine__transition-headline">Proceed to ${catTitle}</h2>
+            <h2 class="quiz-engine__transition-headline">Proceed to ${categoryTitle}</h2>
             <p class="quiz-engine__transition-subtext">
-              Part ${nextCatIdx + 1} of ${this.categories.length} • Questions ${startNum} to ${endNum} (${count} items).
+              Part ${nextCategoryIndex + 1} of ${this.categories.length} • Questions ${nextBounds.startNum} to ${nextBounds.endNum} (${count} items).
               Take a breath and continue when you are ready.
             </p>
             <button
               type="button"
               id="buttonResumeCategory"
               class="bright-squircle quiz-engine__transition-play-button"
-              data-tooltip="Start ${catTitle}"
-              aria-label="Start ${catTitle}"
+              data-tooltip="Start ${categoryTitle}"
+              aria-label="Start ${categoryTitle}"
             >
               <span class="bright-squircle__icon-slot bright-squircle__icon-slot--play">
                 <svg class="squircle-play-svg squircle-play-svg--main" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
@@ -301,34 +413,47 @@ export class QuizEngine extends Component {
       }
 
       // 2. Active 10 Questions Page
-      const startIdx = this.currentQuestionIndexSignal.value;
-      const currentCatIdx = (this.examScope === "section")
+      /** @type {number} */
+      const startIndex = this.currentQuestionIndexSignal.value;
+      /** @type {number} */
+      const currentCategoryIndex = (this.examScope === "section")
         ? this.sectionCategoryIndex
-        : getCategoryIndexForQuestion(startIdx + 1, this.questions.length, this.categories.length);
-      const { startNum, endNum } = getCategoryBounds(currentCatIdx, this.questions.length, this.categories.length);
-      const pageEndIdx = Math.min(endNum, startIdx + 10);
-      const pageQuestions = this.questions.slice(startIdx, pageEndIdx);
+        : getCategoryIndexForQuestion(startIndex + 1, this.questions.length, this.categories.length, this.sectionBounds);
+      /** @type {{ startNum: number, endNum: number }} */
+      const activeBounds = getCategoryBounds(currentCategoryIndex, this.questions.length, this.categories.length, this.sectionBounds);
+      /** @type {number} */
+      const pageEndIndex = Math.min(activeBounds.endNum, startIndex + 10);
+      /** @type {Array<Object>} */
+      const pageQuestions = this.questions.slice(startIndex, pageEndIndex);
 
-      const currentCatDef = this.categories[currentCatIdx] || {};
-      const catTitle = currentCatDef.tab_title || currentCatDef.tabTitle || `Part ${currentCatIdx + 1}`;
-      const catIcon = currentCatDef.icon_name || currentCatDef.iconName || "category";
-      const catDisplayTitle = (this.examScope === "section")
-        ? `${catTitle} (Section Exam)`
-        : catTitle;
+      /** @type {Object} */
+      const currentCategoryDefinition = this.categories[currentCategoryIndex] || {};
+      /** @type {string} */
+      const categoryTitle = currentCategoryDefinition.tab_title || currentCategoryDefinition.tabTitle || `Part ${currentCategoryIndex + 1}`;
+      /** @type {string} */
+      const categoryIcon = currentCategoryDefinition.icon_name || currentCategoryDefinition.iconName || "category";
+      /** @type {string} */
+      const categoryDisplayTitle = (this.examScope === "section")
+        ? `${categoryTitle} (Section Exam)`
+        : categoryTitle;
 
       // Question Cards Markup
-      const cardsHtml = pageQuestions.map((q) => {
-        const qCard = new QuestionCard({
-          question: q,
-          selectedAnswer: this.answers[q.number] || "",
-          onSelectAnswer: (qNum, val) => handleSelectAnswer(qNum, val)
+      /** @type {string} */
+      const cardsHtml = pageQuestions.map((questionItem) => {
+        /** @type {QuestionCard} */
+        const questionCard = new QuestionCard({
+          question: questionItem,
+          selectedAnswer: this.answers[questionItem.number] || "",
+          onSelectAnswer: (questionNumber, answerValue) => handleSelectAnswer(questionNumber, answerValue)
         });
-        return qCard.toString();
+        return questionCard.toString();
       }).join("");
 
       // Live Timer Badge
+      /** @type {string} */
       let timerBadgeHtml = "";
       if (this.isTimed) {
+        /** @type {number} */
         const remaining = this.remainingSecondsSignal.value;
         timerBadgeHtml = `
           <div class="quiz-engine__timer-pill" aria-live="polite" aria-label="Remaining time">
@@ -339,30 +464,37 @@ export class QuizEngine extends Component {
       }
 
       // Progress label
+      /** @type {number} */
       const totalExamQuestions = (this.examScope === "section")
         ? this.sectionTotalQuestions
         : this.questions.length;
-      const currentRelativeQ = (this.examScope === "section")
-        ? (Math.min(pageEndIdx, endNum) - startNum + 1)
-        : Math.min(pageEndIdx, this.questions.length);
-      const progressLabel = `Question ${currentRelativeQ} of ${totalExamQuestions}`;
+      /** @type {number} */
+      const currentRelativeQuestionNumber = (this.examScope === "section")
+        ? (Math.min(pageEndIndex, activeBounds.endNum) - activeBounds.startNum + 1)
+        : Math.min(pageEndIndex, this.questions.length);
+      /** @type {string} */
+      const progressLabel = `Question ${currentRelativeQuestionNumber} of ${totalExamQuestions}`;
 
       // Navigation button labels
-      const isFirstPageOfCategory = startIdx === startNum - 1;
-      const isLastPageOfCategory = pageEndIdx >= endNum;
-      const isLastCategory = (this.examScope === "section") || (currentCatIdx === this.categories.length - 1);
+      /** @type {boolean} */
+      const isFirstPageOfCategory = startIndex === activeBounds.startNum - 1;
+      /** @type {boolean} */
+      const isLastPageOfCategory = pageEndIndex >= activeBounds.endNum;
+      /** @type {boolean} */
+      const isLastCategory = (this.examScope === "section") || (currentCategoryIndex === this.categories.length - 1);
 
+      /** @type {string} */
       const nextLabel = isLastPageOfCategory
         ? "Finish & Submit Exam"
-        : (this.examScope === "section" ? "Next Page" : `Proceed to ${this.categories[currentCatIdx + 1]?.tab_title || "Next Category"}`);
+        : (this.examScope === "section" ? "Next Page" : `Proceed to ${this.categories[currentCategoryIndex + 1]?.tab_title || "Next Category"}`);
 
       return `
         <div class="quiz-engine" role="region" aria-label="Questionnaire Engine">
           <!-- Progress Header Bar -->
           <div class="quiz-engine__header">
             <div class="quiz-engine__category-badge">
-              <span class="google-symbols notranslate">${catIcon}</span>
-              <span>${catDisplayTitle}</span>
+              <span class="google-symbols notranslate">${categoryIcon}</span>
+              <span>${categoryDisplayTitle}</span>
             </div>
 
             <div style="display: flex; align-items: center; gap: 0.75rem;">
@@ -393,7 +525,7 @@ export class QuizEngine extends Component {
             </button>
 
             <span class="quiz-engine__page-indicator">
-              Questions ${startIdx + 1}–${pageEndIdx} of ${endNum}
+              Questions ${startIndex + 1}–${pageEndIndex} of ${activeBounds.endNum}
             </span>
 
             <button
@@ -422,12 +554,14 @@ export class QuizEngine extends Component {
       // Setup Live Countdown Timer
       if (this.isTimed) {
         this.timerIntervalId = setInterval(() => {
+          /** @type {number} */
           const remaining = calcRemainingSeconds();
           this.remainingSecondsSignal.value = remaining;
 
-          const timerEl = document.getElementById("quizEngineLiveTimer");
-          if (timerEl) {
-            timerEl.textContent = formatSecondsToTime(remaining);
+          /** @type {HTMLElement|null} */
+          const timerElement = document.getElementById("quizEngineLiveTimer");
+          if (timerElement) {
+            timerElement.textContent = formatSecondsToTime(remaining);
           }
 
           if (remaining <= 0) {
@@ -439,51 +573,67 @@ export class QuizEngine extends Component {
     };
 
     this.attachListeners = () => {
-      const root = document.getElementById("quizEngineRoot");
-      if (!root) return;
+      /** @type {HTMLElement|null} */
+      const rootElement = document.getElementById("quizEngineRoot");
+      if (!rootElement) {
+        return;
+      }
 
-      const resumebutton = root.querySelector("#buttonResumeCategory");
-      if (resumebutton) {
-        resumebutton.onclick = () => {
+      /** @type {HTMLElement|null} */
+      const resumeButton = rootElement.querySelector("#buttonResumeCategory");
+      if (resumeButton) {
+        resumeButton.onclick = () => {
           handleResumeCategory();
         };
       }
 
-      const nextbutton = root.querySelector("#buttonNextPage");
-      if (nextbutton) {
-        nextbutton.onclick = () => {
+      /** @type {HTMLElement|null} */
+      const nextButton = rootElement.querySelector("#buttonNextPage");
+      if (nextButton) {
+        nextButton.onclick = () => {
           handleNextPage();
         };
       }
 
-      const prevbutton = root.querySelector("#buttonPrevPage");
-      if (prevbutton) {
-        prevbutton.onclick = () => {
+      /** @type {HTMLElement|null} */
+      const prevButton = rootElement.querySelector("#buttonPrevPage");
+      if (prevButton) {
+        prevButton.onclick = () => {
           handlePrevPage();
         };
       }
 
       // Option selection delegation
-      root.querySelectorAll(".question-card__option-button").forEach((button) => {
-        button.onclick = (e) => {
-          e.preventDefault();
-          const card = button.closest(".question-card");
-          const qNum = parseInt(card?.dataset.questionNumber, 10);
-          const keyEl = button.querySelector(".question-card__option-key");
-          const key = keyEl ? keyEl.textContent.trim() : "";
-          if (qNum && key) {
-            handleSelectAnswer(qNum, key);
+      rootElement.querySelectorAll(".question-card__option-button").forEach((button) => {
+        /** @param {MouseEvent} event */
+        button.onclick = (event) => {
+          event.preventDefault();
+          /** @type {HTMLElement|null} */
+          const cardElement = button.closest(".question-card");
+          /** @type {number} */
+          const questionNumber = parseInt(cardElement?.dataset.questionNumber || "0", 10);
+          /** @type {HTMLElement|null} */
+          const keyElement = button.querySelector(".question-card__option-key");
+          /** @type {string} */
+          const keyString = keyElement ? keyElement.textContent.trim() : "";
+          if (questionNumber && keyString) {
+            handleSelectAnswer(questionNumber, keyString);
           }
         };
       });
 
       // Text input delegation
-      root.querySelectorAll(".question-card__text-input").forEach((input) => {
-        input.oninput = (e) => {
-          const card = input.closest(".question-card");
-          const qNum = parseInt(card?.dataset.questionNumber, 10);
-          if (qNum) {
-            handleSelectAnswer(qNum, e.target.value);
+      rootElement.querySelectorAll(".question-card__text-input").forEach((inputElement) => {
+        /** @param {Event} event */
+        inputElement.oninput = (event) => {
+          /** @type {HTMLElement|null} */
+          const cardElement = inputElement.closest(".question-card");
+          /** @type {number} */
+          const questionNumber = parseInt(cardElement?.dataset.questionNumber || "0", 10);
+          /** @type {HTMLInputElement} */
+          const targetInput = /** @type {HTMLInputElement} */ (event.target);
+          if (questionNumber) {
+            handleSelectAnswer(questionNumber, targetInput.value);
           }
         };
       });
