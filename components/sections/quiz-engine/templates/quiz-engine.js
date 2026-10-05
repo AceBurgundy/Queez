@@ -1,4 +1,4 @@
-import { Component, css, html, signal } from "../../../../Component.js";
+import { Component, css, html, raw, signal } from "../../../../Component.js";
 import { QuestionCard } from "../../../widgets/question-card/templates/question-card.js";
 import { formatSecondsToTime } from "../../../widgets/quiz-action-bar/templates/quiz-action-bar.js";
 import { saveActiveSession, clearActiveSession, getCategoryBounds } from "../scripts/quiz-state-manager.js";
@@ -354,6 +354,9 @@ export class QuizEngine extends Component {
      * @returns {void}
      */
     this.renderView = () => {
+      if (typeof document === "undefined" || typeof document.getElementById !== "function") {
+        return;
+      }
       /** @type {HTMLElement|null} */
       const containerElement = document.getElementById("quizEngineRoot");
       if (!containerElement) {
@@ -544,12 +547,12 @@ export class QuizEngine extends Component {
 
     this.template = html`
       <div id="quizEngineRoot" style="width: 100%;">
-        ${this.buildContent()}
+        ${raw(this.buildContent())}
       </div>
     `;
 
     this.mounted = () => {
-      this.attachListeners();
+      this.renderView();
 
       // Setup Live Countdown Timer
       if (this.isTimed) {
@@ -573,6 +576,9 @@ export class QuizEngine extends Component {
     };
 
     this.attachListeners = () => {
+      if (typeof document === "undefined" || typeof document.getElementById !== "function") {
+        return;
+      }
       /** @type {HTMLElement|null} */
       const rootElement = document.getElementById("quizEngineRoot");
       if (!rootElement) {
