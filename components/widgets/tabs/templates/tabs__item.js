@@ -18,19 +18,38 @@ export class TabItem extends Component {
   constructor({ tabTitle, iconName, tabIndex, activeTabSignal, onSelect }) {
     super();
 
+    /** @type {string} */
     this.tabTitle = tabTitle;
+
+    /** @type {string} */
     this.iconName = iconName || "category";
+
+    /** @type {number} */
     this.tabIndex = tabIndex;
+
+    /** @type {import("../../../../Component.js").Signal<number>} */
     this.activeTabSignal = activeTabSignal;
+
+    /** @type {function(number): void} */
     this.onSelect = onSelect;
 
+    /**
+     * @returns {void}
+     */
     const handleTabClick = () => {
+      /** @type {Object} */
+      const windowObject = /** @type {*} */ (window);
+      if (windowObject && windowObject.__tabJustDragged) {
+        return;
+      }
       if (typeof this.onSelect === "function") {
         this.onSelect(this.tabIndex);
       }
     };
 
+    /** @type {boolean} */
     const isSelected = this.activeTabSignal.value === this.tabIndex;
+    /** @type {string} */
     const buttonClassName = isSelected
       ? "tabs__item tabs__item--active"
       : "tabs__item";
