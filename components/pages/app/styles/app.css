@@ -131,7 +131,7 @@
   }
 
   .app-root__viewport {
-    padding-top: 56px; /* Space for fixed TopBar */
+    padding-top: calc(56px + 0.5rem); /* Space for fixed TopBar plus breathing room */
     border: none;
     border-radius: 0;
   }
@@ -142,12 +142,12 @@
 
   .quiz-view-container {
     width: 95%;
-    padding: 0.75rem 0 3rem;
+    padding: 0.5rem 0 3rem;
   }
 }
 
 @media (min-width: 601px) and (orientation: portrait) {
   .app-root__viewport {
-    padding-top: 4rem; /* Account for 4rem top bar */
+    padding-top: calc(4rem + 0.5rem); /* Account for 4rem top bar plus breathing room */
   }
 }

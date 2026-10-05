@@ -77,9 +77,13 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
 
   /**
    * Resets temporary inline drag styling on all tab elements.
+   * @param {number|null} [targetActiveIndex=null] - Tab index to activate upon cleanup.
    * @returns {void}
    */
-  const cleanupDragStyles = () => {
+  const cleanupDragStyles = (targetActiveIndex = null) => {
+    /** @type {number} */
+    const currentActiveIndex = targetActiveIndex !== null ? targetActiveIndex : getActiveIndex();
+
     allTabElements.forEach((tabItemElement, elementIndex) => {
       tabItemElement.style.position = "";
       tabItemElement.style.width = "";
@@ -90,12 +94,12 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
       tabItemElement.style.transition = "";
       tabItemElement.style.display = "";
       tabItemElement.style.zIndex = "";
-      /** @type {number} */
-      const currentActiveIndex = getActiveIndex();
       if (elementIndex === currentActiveIndex) {
         tabItemElement.classList.add("tabs__item--active");
+        tabItemElement.setAttribute("aria-selected", "true");
       } else {
         tabItemElement.classList.remove("tabs__item--active");
+        tabItemElement.setAttribute("aria-selected", "false");
       }
     });
 
@@ -266,7 +270,7 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
       nextTabElement.style.transform = "translate3d(0, 0, 0)";
 
       setTimeout(() => {
-        cleanupDragStyles();
+        cleanupDragStyles(nextTabIndex);
         isTransitionAnimating = false;
         if (typeof onActivateIndex === "function") {
           onActivateIndex(nextTabIndex, "none");
@@ -279,7 +283,7 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
       previousTabElement.style.transform = "translate3d(0, 0, 0)";
 
       setTimeout(() => {
-        cleanupDragStyles();
+        cleanupDragStyles(previousTabIndex);
         isTransitionAnimating = false;
         if (typeof onActivateIndex === "function") {
           onActivateIndex(previousTabIndex, "none");

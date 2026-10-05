@@ -91,15 +91,22 @@ export class Tabs extends Component {
             } else if (effectiveDirection === "previous") {
               outgoingTabButton.classList.add("tabs__item--slide-out-right");
             }
-          }
-          setTimeout(() => {
+            setTimeout(() => {
+              outgoingTabButton.classList.remove(
+                "tabs__item--active",
+                "tabs__item--slide-out-left",
+                "tabs__item--slide-out-right"
+              );
+              outgoingTabButton.setAttribute("aria-selected", "false");
+            }, 360);
+          } else {
             outgoingTabButton.classList.remove(
               "tabs__item--active",
               "tabs__item--slide-out-left",
               "tabs__item--slide-out-right"
             );
             outgoingTabButton.setAttribute("aria-selected", "false");
-          }, 360);
+          }
         }
 
         if (incomingTabButton) {

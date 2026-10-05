@@ -1,0 +1,9 @@
+# Scratch test files
+scratch/
+.deep-plan/
+plans/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log
