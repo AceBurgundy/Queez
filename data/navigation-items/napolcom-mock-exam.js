@@ -1,6 +1,6 @@
 /**
- * Navigation item specification: NAPOLCOM Mock Examination (Full 150-Item Exam).
- * Organized into 4 official subject domain tabs with clean metadata.
+ * @file Navigation item specification: NAPOLCOM Mock Examination.
+ * Maps section identifiers to presentation icons and configures mock exam parameters.
  */
 window.DOCUMENTATION_ITEMS = window.DOCUMENTATION_ITEMS || {};
 window.DOCUMENTATION_ITEMS["data/navigation-items/napolcom-mock-exam.js"] = {
@@ -9,12 +9,11 @@ window.DOCUMENTATION_ITEMS["data/navigation-items/napolcom-mock-exam.js"] = {
   "item_title": "NAPOLCOM Mock Exam",
   "icon_name": "assignment",
   "data_path": "data/napolcom-quiz/data.json",
+  "mock_exam_question_count": 60,
   "header_container": {
     "title": "NAPOLCOM Entrance Mock Exam",
-    "description": "Complete 150-item practice mock examination prepared for review purposes. Covers Verbal Reasoning, Quantitative Math, Logical Deduction, and Philippine Constitution & Police Laws.",
+    "description": "Complete practice mock examination prepared for review purposes. Covers Verbal Reasoning, Quantitative Math, Logical Deduction, and Philippine Constitution & Police Laws.",
     "badge_list": [
-      { "icon_name": "format_list_numbered", "badge_label": "150 Questions" },
-      { "icon_name": "schedule", "badge_label": "150 Minutes Allotted" },
       { "icon_name": "school", "badge_label": "Exam Mastery" },
       { "icon_name": "verified", "badge_label": "Multiple Choice" }
     ],
@@ -23,20 +22,20 @@ window.DOCUMENTATION_ITEMS["data/navigation-items/napolcom-mock-exam.js"] = {
   },
   "tab_list": [
     {
-      "tab_title": "General Info",
-      "icon_name": "public"
-    },
-    {
-      "tab_title": "Verbal Reasoning",
+      "section_id": "verbal-reasoning",
       "icon_name": "spellcheck"
     },
     {
-      "tab_title": "Quantitative",
+      "section_id": "quantitative",
       "icon_name": "calculate"
     },
     {
-      "tab_title": "Logical Reasoning",
+      "section_id": "logical-reasoning",
       "icon_name": "psychology"
+    },
+    {
+      "section_id": "general-info",
+      "icon_name": "public"
     }
   ]
 };
