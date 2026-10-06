@@ -102,6 +102,10 @@ export class QuizActionBar extends Component {
    * @param {string} [options.buttonLabel="Start Exam"] - Action button label.
    * @param {string} [options.tooltipText="Launch exam"] - Accessibility tooltip.
    * @param {boolean} [options.isBanner=false] - Whether action bar is embedded in banner.
+   * @param {boolean} [options.isSection=false] - Whether action bar is the minimalist section variant.
+   * @param {string} [options.sectionDescription=""] - Educational section description text.
+   * @param {string} [options.sectionIcon="category"] - Material symbol icon name for section.
+   * @param {string} [options.questionRangeText=""] - Text badge describing item count and question bounds.
    * @param {string} [options.dialogTitle] - Optional custom title for the configuration dialog.
    * @param {string} [options.dialogSubtitle] - Optional custom subtitle for the configuration dialog.
    * @param {number} [options.minimumQuestionCount=1] - Minimum questions allowed.
@@ -113,6 +117,10 @@ export class QuizActionBar extends Component {
     buttonLabel = "Start Exam",
     tooltipText = "Launch exam",
     isBanner = false,
+    isSection = false,
+    sectionDescription = "",
+    sectionIcon = "category",
+    questionRangeText = "",
     dialogTitle,
     dialogSubtitle,
     minimumQuestionCount = 1,
@@ -131,6 +139,14 @@ export class QuizActionBar extends Component {
     this.tooltipText = tooltipText;
     /** @type {boolean} */
     this.isBanner = isBanner;
+    /** @type {boolean} */
+    this.isSection = isSection;
+    /** @type {string} */
+    this.sectionDescription = sectionDescription;
+    /** @type {string} */
+    this.sectionIcon = sectionIcon;
+    /** @type {string} */
+    this.questionRangeText = questionRangeText;
     /** @type {string|undefined} */
     this.dialogTitle = dialogTitle;
     /** @type {string|undefined} */
@@ -152,7 +168,7 @@ export class QuizActionBar extends Component {
         event.preventDefault();
       }
       openStartExamDialog({
-        title: this.dialogTitle || this.buttonLabel || "Start Exam",
+        title: this.dialogTitle || (this.isSection ? "Start Section Exam" : this.buttonLabel) || "Start Exam",
         subtitle: this.dialogSubtitle || "Choose items and duration",
         minimumQuestionCount: this.minimumQuestionCount,
         maximumQuestionCount: this.maximumQuestionCount,
@@ -180,36 +196,71 @@ export class QuizActionBar extends Component {
     /** @type {string} */
     const containerClass = this.isBanner
       ? "quiz-action-bar quiz-action-bar--banner"
-      : "quiz-action-bar";
+      : this.isSection
+        ? "quiz-action-bar quiz-action-bar--section"
+        : "quiz-action-bar";
 
-    this.template = html`
-      <div class="${containerClass}" aria-label="Exam Launch Controls">
-        <div
-          class="quiz-action-bar__play-card"
-          data-action="play-quiz"
-          role="button"
-          tabindex="0"
-          data-tooltip="${this.tooltipText}"
-          aria-label="${this.tooltipText}"
-          onclick=${handleLaunchClick}
-          onkeydown=${handleLaunchKeydown}
-        >
-          <div class="bright-squircle quiz-action-bar__play-button" aria-hidden="true">
-            <span class="bright-squircle__icon-slot bright-squircle__icon-slot--play">
-              <svg class="squircle-play-svg squircle-play-svg--main" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
-                <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
-              </svg>
-              <svg class="squircle-play-svg squircle-play-svg--incoming" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
-                <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
-              </svg>
-            </span>
+    if (this.isSection) {
+      this.template = html`
+        <div class="${containerClass}" aria-label="Section Exam Controls">
+          <div class="quiz-action-bar__section-info">
+            <span class="material-symbols-outlined quiz-action-bar__section-icon" aria-hidden="true">${this.sectionIcon}</span>
+            <div class="quiz-action-bar__section-text">
+              ${this.sectionDescription ? html`<p class="quiz-action-bar__section-description">${this.sectionDescription}</p>` : ""}
+              ${this.questionRangeText ? html`<span class="quiz-action-bar__section-badge">${this.questionRangeText}</span>` : ""}
+            </div>
           </div>
-
-          <div class="quiz-action-bar__play-text-widget">
-            <span class="quiz-action-bar__play-label">${this.buttonLabel}</span>
+          <div class="quiz-action-bar__section-action">
+            <button
+              type="button"
+              class="bright-squircle quiz-action-bar__play-button quiz-action-bar__play-button--compact"
+              data-tooltip="${this.tooltipText}"
+              aria-label="${this.tooltipText}"
+              onclick=${handleLaunchClick}
+              onkeydown=${handleLaunchKeydown}
+            >
+              <span class="bright-squircle__icon-slot bright-squircle__icon-slot--play">
+                <svg class="squircle-play-svg squircle-play-svg--main" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
+                </svg>
+                <svg class="squircle-play-svg squircle-play-svg--incoming" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
+                </svg>
+              </span>
+            </button>
           </div>
         </div>
-      </div>
-    `;
+      `;
+    } else {
+      this.template = html`
+        <div class="${containerClass}" aria-label="Exam Launch Controls">
+          <div
+            class="quiz-action-bar__play-card"
+            data-action="play-quiz"
+            role="button"
+            tabindex="0"
+            data-tooltip="${this.tooltipText}"
+            aria-label="${this.tooltipText}"
+            onclick=${handleLaunchClick}
+            onkeydown=${handleLaunchKeydown}
+          >
+            <div class="bright-squircle quiz-action-bar__play-button" aria-hidden="true">
+              <span class="bright-squircle__icon-slot bright-squircle__icon-slot--play">
+                <svg class="squircle-play-svg squircle-play-svg--main" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                  <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
+                </svg>
+                <svg class="squircle-play-svg squircle-play-svg--incoming" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+                  <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
+                </svg>
+              </span>
+            </div>
+
+            <div class="quiz-action-bar__play-text-widget">
+              <span class="quiz-action-bar__play-label">${this.buttonLabel}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
   }
 }

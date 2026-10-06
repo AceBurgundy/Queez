@@ -547,7 +547,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "Vocabulary, grammar, sentence completion, reading comprehension, and paragraph organization."
     },
     {
       "id": "quantitative",
@@ -1093,7 +1094,8 @@
           },
           "answer": "B"
         }
-      ]
+      ],
+      "description": "Basic arithmetic, percentage, fractions, algebra, geometry, and numerical reasoning."
     },
     {
       "id": "logical-reasoning",
@@ -1639,7 +1641,8 @@
           },
           "answer": "C"
         }
-      ]
+      ],
+      "description": "Logical deduction, sequence completion, pattern analysis, and critical problem solving."
     },
     {
       "id": "general-info",
@@ -1825,7 +1828,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "Philippine Constitution, human rights, law enforcement ethics, and current events."
     }
   ],
   "subtitle": "Prepare • Practice • Master.",

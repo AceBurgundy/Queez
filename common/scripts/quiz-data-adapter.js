@@ -41,6 +41,7 @@
  * @typedef {Object} AdaptedSection
  * @property {string} id - Canonical section identifier.
  * @property {string} title - Section title text.
+ * @property {string} [description] - Educational section description text.
  * @property {string} iconName - Material symbol icon name.
  * @property {number} startNumber - First question number in this section (1-based).
  * @property {number} endNumber - Final question number in this section (1-based).
@@ -70,7 +71,7 @@
  * @returns {AdaptedQuiz} The adapted and verified quiz dataset ready for view mounting.
  * @throws {Error} If the document does not adhere to the quiz-data.v1 schema version.
  */
-export function adaptQuizData(portableDocument, dataPath = "", tabDefinitions = []) {
+export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = []) => {
   if (!portableDocument || typeof portableDocument !== "object") {
     throw new Error("Invalid quiz document provided: expected non-null object.");
   }
@@ -137,6 +138,7 @@ export function adaptQuizData(portableDocument, dataPath = "", tabDefinitions = 
     adaptedSections.push({
       id: currentSection.id,
       title: currentSection.title,
+      description: currentSection.description || "",
       iconName: assignedIcon,
       startNumber: sectionStartNumber,
       endNumber: sectionEndNumber,

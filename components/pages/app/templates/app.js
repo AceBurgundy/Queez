@@ -585,6 +585,7 @@ export class App extends Component {
         const tabList = adaptedData.sections.map((section, index) => ({
           tab_title: section.title,
           tabTitle: section.title,
+          description: section.description || "",
           icon_name: section.iconName || "category",
           iconName: section.iconName || "category",
           section_id: section.id,
@@ -757,17 +758,25 @@ export class App extends Component {
           /** @type {string} */
           const sectionTitle = categoryDefinition.tab_title || categoryDefinition.tabTitle || `Part ${tabIndex + 1}`;
           /** @type {string} */
-          const sectionActionLabel = `Start Section Exam • ${maximumQuestionCount} Items`;
+          const sectionDescription = categoryDefinition.description || (adaptedData.sections && adaptedData.sections[tabIndex] && adaptedData.sections[tabIndex].description) || "";
+          /** @type {string} */
+          const sectionIcon = categoryDefinition.icon_name || categoryDefinition.iconName || "category";
+          /** @type {string} */
+          const questionRangeText = `${maximumQuestionCount} Items • Questions ${bounds.startNum}–${bounds.endNum}`;
 
           return new QuizActionBar({
             questionsCount: maximumQuestionCount,
             maximumQuestionCount,
             defaultQuestionCount: maximumQuestionCount,
-            buttonLabel: sectionActionLabel,
-            tooltipText: `Configure and start ${sectionTitle} (${maximumQuestionCount} items available)`,
+            buttonLabel: `Start ${sectionTitle}`,
+            tooltipText: `Start Section Exam (${maximumQuestionCount} items)`,
             dialogTitle: sectionTitle,
             dialogSubtitle: "Configure section items and duration",
             isBanner: false,
+            isSection: true,
+            sectionDescription,
+            sectionIcon,
+            questionRangeText,
             onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
               /** @type {Object} */
               const sectionDeck = buildSectionExamDeck({
