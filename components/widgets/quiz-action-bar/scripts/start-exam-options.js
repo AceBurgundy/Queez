@@ -37,13 +37,13 @@ export const resolveDefaultQuestionCount = (preferredCount, poolSize) => {
 };
 
 /**
- * Maximum seconds allowed in the timer dialog (23 hours, 59 minutes).
+ * Maximum seconds allowed in the timer dialog (23 hours, 59 minutes, 59 seconds).
  * @type {number}
  */
-export const MAXIMUM_TIMER_SECONDS = 23 * 3600 + 59 * 60;
+export const MAXIMUM_TIMER_SECONDS = 23 * 3600 + 59 * 60 + 59;
 
 /**
- * Computes duration in seconds from question count (1 minute per question, capped at 23:59).
+ * Computes duration in seconds from question count (1 minute per question, capped at 23:59:59).
  * @param {number} questionCount - Number of questions.
  * @returns {number} Duration in seconds.
  */
@@ -57,19 +57,20 @@ export const secondsForQuestionCount = (questionCount) => {
 
 /**
  * Creates initial timer state (untimed, unlinked).
- * @returns {{ hours: number, minutes: number, linked: boolean }} Initial time state.
+ * @returns {{ hours: number, minutes: number, seconds: number, linked: boolean }} Initial time state.
  */
 export const createTimeState = () => ({
   hours: 0,
   minutes: 0,
+  seconds: 0,
   linked: false
 });
 
 /**
  * Applies the 'By question count' duration (1 min/item) and sets linked mode.
- * @param {{ hours: number, minutes: number, linked: boolean }} currentState - Current time state.
+ * @param {{ hours: number, minutes: number, seconds: number, linked: boolean }} currentState - Current time state.
  * @param {number} questionCount - Question count to derive time from.
- * @returns {{ hours: number, minutes: number, linked: boolean }} Updated time state.
+ * @returns {{ hours: number, minutes: number, seconds: number, linked: boolean }} Updated time state.
  */
 export const applyByQuestionCount = (currentState, questionCount) => {
   /** @type {number} */
@@ -78,19 +79,22 @@ export const applyByQuestionCount = (currentState, questionCount) => {
   const derivedHours = Math.floor(totalSeconds / 3600);
   /** @type {number} */
   const derivedMinutes = Math.floor((totalSeconds % 3600) / 60);
+  /** @type {number} */
+  const derivedSeconds = totalSeconds % 60;
 
   return {
     hours: derivedHours,
     minutes: derivedMinutes,
+    seconds: derivedSeconds,
     linked: true
   };
 };
 
 /**
  * Updates timer state when question count changes, updating time only if linked.
- * @param {{ hours: number, minutes: number, linked: boolean }} currentState - Current time state.
+ * @param {{ hours: number, minutes: number, seconds: number, linked: boolean }} currentState - Current time state.
  * @param {number} questionCount - New question count.
- * @returns {{ hours: number, minutes: number, linked: boolean }} Updated time state.
+ * @returns {{ hours: number, minutes: number, seconds: number, linked: boolean }} Updated time state.
  */
 export const onQuestionCountChanged = (currentState, questionCount) => {
   if (currentState.linked) {
@@ -100,13 +104,14 @@ export const onQuestionCountChanged = (currentState, questionCount) => {
 };
 
 /**
- * Updates timer state upon user manual editing of hours and minutes, clearing linked mode.
- * @param {{ hours: number, minutes: number, linked: boolean }} currentState - Current time state.
+ * Updates timer state upon user manual editing of hours, minutes, and seconds, clearing linked mode.
+ * @param {{ hours: number, minutes: number, seconds: number, linked: boolean }} currentState - Current time state.
  * @param {number|string} rawHours - Raw hours input.
  * @param {number|string} rawMinutes - Raw minutes input.
- * @returns {{ hours: number, minutes: number, linked: boolean }} Updated time state.
+ * @param {number|string} [rawSeconds=0] - Raw seconds input.
+ * @returns {{ hours: number, minutes: number, seconds: number, linked: boolean }} Updated time state.
  */
-export const onTimeEdited = (currentState, rawHours, rawMinutes) => {
+export const onTimeEdited = (currentState, rawHours, rawMinutes, rawSeconds = 0) => {
   /** @type {number} */
   const parsedHours = Math.floor(Number(rawHours));
   /** @type {number} */
@@ -121,9 +126,17 @@ export const onTimeEdited = (currentState, rawHours, rawMinutes) => {
     ? Math.max(0, Math.min(59, parsedMinutes))
     : 0;
 
+  /** @type {number} */
+  const parsedSeconds = Math.floor(Number(rawSeconds));
+  /** @type {number} */
+  const safeSeconds = Number.isFinite(parsedSeconds)
+    ? Math.max(0, Math.min(59, parsedSeconds))
+    : 0;
+
   return {
     hours: safeHours,
     minutes: safeMinutes,
+    seconds: safeSeconds,
     linked: false
   };
 };
@@ -157,14 +170,14 @@ export const formatSecondsToClockString = (totalSeconds) => {
 /**
  * Builds the final result payload for the onConfirm callback.
  * @param {number} questionCount - Selected question count.
- * @param {{ hours: number, minutes: number, linked: boolean }} timeState - Final timer state.
+ * @param {{ hours: number, minutes: number, seconds?: number, linked: boolean }} timeState - Final timer state.
  * @returns {{ isTimed: boolean, durationSeconds: number, formattedTime: string, questionCount: number }} Result payload.
  */
 export const buildStartResult = (questionCount, timeState) => {
   /** @type {number} */
   const safeCount = Math.max(1, Math.floor(Number(questionCount)) || 1);
   /** @type {number} */
-  const totalSeconds = timeState.hours * 3600 + timeState.minutes * 60;
+  const totalSeconds = (timeState.hours || 0) * 3600 + (timeState.minutes || 0) * 60 + (timeState.seconds || 0);
   /** @type {boolean} */
   const isTimed = totalSeconds > 0;
   /** @type {string} */

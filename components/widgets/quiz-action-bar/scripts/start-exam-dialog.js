@@ -38,7 +38,7 @@ const CLOCK_HEADER_ICON_SVG = `
  * @param {number} parameters.minimumQuestionCount - Minimum allowed questions.
  * @param {number} parameters.maximumQuestionCount - Maximum available questions in pool.
  * @param {number} parameters.initialQuestionCount - Initially selected question count.
- * @returns {{ scrimElement: HTMLElement, wheelElement: HTMLElement, hoursInputElement: HTMLInputElement, minutesInputElement: HTMLInputElement, linkCheckboxElement: HTMLInputElement, captionElement: HTMLElement, confirmButtonElement: HTMLButtonElement, cancelButtonElement: HTMLButtonElement, rowElements: Array<HTMLElement> }} References to key dialog elements.
+ * @returns {{ scrimElement: HTMLElement, wheelElement: HTMLElement, hoursInputElement: HTMLInputElement, minutesInputElement: HTMLInputElement, secondsInputElement: HTMLInputElement, linkCheckboxElement: HTMLInputElement, captionElement: HTMLElement, confirmButtonElement: HTMLButtonElement, cancelButtonElement: HTMLButtonElement, rowElements: Array<HTMLElement> }} References to key dialog elements.
  */
 const createDialogDom = ({
   title,
@@ -215,9 +215,39 @@ const createDialogDom = ({
   minutesWrapElement.appendChild(minutesInputElement);
   minutesWrapElement.appendChild(minutesLabelElement);
 
+  /** @type {HTMLDivElement} */
+  const secondColonElement = document.createElement("div");
+  secondColonElement.className = "time-picker-dialog__colon";
+  secondColonElement.textContent = ":";
+
+  /** @type {HTMLDivElement} */
+  const secondsWrapElement = document.createElement("div");
+  secondsWrapElement.className = "time-picker-dialog__input-wrap";
+
+  /** @type {HTMLLabelElement} */
+  const secondsLabelElement = document.createElement("label");
+  secondsLabelElement.className = "time-picker-dialog__label";
+  secondsLabelElement.setAttribute("for", "startExamSecondsInput");
+  secondsLabelElement.textContent = "Seconds";
+
+  /** @type {HTMLInputElement} */
+  const secondsInputElement = document.createElement("input");
+  secondsInputElement.type = "number";
+  secondsInputElement.className = "time-picker-dialog__input-box";
+  secondsInputElement.id = "startExamSecondsInput";
+  secondsInputElement.min = "0";
+  secondsInputElement.max = "59";
+  secondsInputElement.value = "00";
+  secondsInputElement.setAttribute("aria-label", "Seconds");
+
+  secondsWrapElement.appendChild(secondsInputElement);
+  secondsWrapElement.appendChild(secondsLabelElement);
+
   timeDisplayElement.appendChild(hoursWrapElement);
   timeDisplayElement.appendChild(colonElement);
   timeDisplayElement.appendChild(minutesWrapElement);
+  timeDisplayElement.appendChild(secondColonElement);
+  timeDisplayElement.appendChild(secondsWrapElement);
 
   durationColumnElement.appendChild(timeLabelElement);
   durationColumnElement.appendChild(timeDisplayElement);
@@ -283,6 +313,7 @@ const createDialogDom = ({
     wheelElement,
     hoursInputElement,
     minutesInputElement,
+    secondsInputElement,
     linkCheckboxElement,
     captionElement,
     confirmButtonElement,
@@ -294,12 +325,14 @@ const createDialogDom = ({
 /**
  * Updates caption text describing the current timer configuration.
  * @param {HTMLElement} captionElement - Target caption element.
- * @param {{ hours: number, minutes: number, linked: boolean }} timeState - Active time state.
+ * @param {{ hours: number, minutes: number, seconds?: number, linked: boolean }} timeState - Active time state.
  * @param {number} questionCount - Current question count.
  * @returns {void}
  */
 const updateCaption = (captionElement, timeState, questionCount) => {
-  if (timeState.hours === 0 && timeState.minutes === 0) {
+  /** @type {number} */
+  const currentSeconds = timeState.seconds ?? 0;
+  if (timeState.hours === 0 && timeState.minutes === 0 && currentSeconds === 0) {
     captionElement.textContent = "No time limit (untimed)";
     return;
   }
@@ -311,6 +344,11 @@ const updateCaption = (captionElement, timeState, questionCount) => {
   if (timeState.minutes > 0) {
     durationParts.push(
       `${timeState.minutes} min${timeState.minutes > 1 ? "s" : ""}`
+    );
+  }
+  if (currentSeconds > 0) {
+    durationParts.push(
+      `${currentSeconds} sec${currentSeconds > 1 ? "s" : ""}`
     );
   }
   /** @type {string} */
@@ -370,7 +408,7 @@ export const openStartExamDialog = ({
     defaultQuestionCount,
     safeMaximum
   );
-  /** @type {{ hours: number, minutes: number, linked: boolean }} */
+  /** @type {{ hours: number, minutes: number, seconds: number, linked: boolean }} */
   let currentTimeState = createTimeState();
 
   const {
@@ -378,6 +416,7 @@ export const openStartExamDialog = ({
     wheelElement,
     hoursInputElement,
     minutesInputElement,
+    secondsInputElement,
     linkCheckboxElement,
     captionElement,
     confirmButtonElement,
@@ -440,6 +479,10 @@ export const openStartExamDialog = ({
   const syncTimeInputsFromState = () => {
     hoursInputElement.value = String(currentTimeState.hours).padStart(2, "0");
     minutesInputElement.value = String(currentTimeState.minutes).padStart(
+      2,
+      "0"
+    );
+    secondsInputElement.value = String(currentTimeState.seconds ?? 0).padStart(
       2,
       "0"
     );
@@ -575,12 +618,14 @@ export const openStartExamDialog = ({
     currentTimeState = onTimeEdited(
       currentTimeState,
       hoursInputElement.value,
-      minutesInputElement.value
+      minutesInputElement.value,
+      secondsInputElement.value
     );
     syncTimeInputsFromState();
   };
   hoursInputElement.addEventListener("input", handleTimeInputEdited);
   minutesInputElement.addEventListener("input", handleTimeInputEdited);
+  secondsInputElement.addEventListener("input", handleTimeInputEdited);
 
   /**
    * Closes the dialog with transition and restores opener focus.
