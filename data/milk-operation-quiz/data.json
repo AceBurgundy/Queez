@@ -482,7 +482,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "History and evolution of dairying, objectives, economic significance, and dairy development programs."
     },
     {
       "id": "breeds-bcs",
@@ -970,7 +971,8 @@
           },
           "answer": "C"
         }
-      ]
+      ],
+      "description": "Dairy cattle and goat breeds, body condition scoring (BCS), physical characteristics, and selection criteria."
     },
     {
       "id": "breeding-reproduction",
@@ -1460,7 +1462,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "Reproductive anatomy, heat detection, artificial insemination, estrus cycle, and gestation management."
     },
     {
       "id": "body-parts-hoof",
@@ -1948,7 +1951,8 @@
           },
           "answer": "D"
         }
-      ]
+      ],
+      "description": "External bovine anatomy, skeletal structure, mammary system, hoof health, and trimming techniques."
     },
     {
       "id": "digestion-compartments",
@@ -2441,7 +2445,8 @@
           "answer": "B",
           "image": "assets/p26_p26_img3.png"
         }
-      ]
+      ],
+      "description": "Ruminant digestive physiology, rumen fermentation, reticulum, omasum, and abomasum functions."
     },
     {
       "id": "nutrition-feeds",
@@ -2923,7 +2928,8 @@
           },
           "answer": "C"
         }
-      ]
+      ],
+      "description": "Nutrient requirements, dry matter intake, feed evaluation, concentrates, minerals, and rationing."
     },
     {
       "id": "forage-pasture",
@@ -3405,7 +3411,8 @@
           },
           "answer": "C"
         }
-      ]
+      ],
+      "description": "Pasture management, forage grass and legume varieties, grazing systems, and carrying capacity."
     },
     {
       "id": "silage-making",
@@ -3893,7 +3900,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "Silage fermentation principles, crop harvesting, ensiling processes, pit management, and quality assessment."
     },
     {
       "id": "housing-cow-comfort",
@@ -4382,7 +4390,8 @@
           },
           "answer": "D"
         }
-      ]
+      ],
+      "description": "Dairy facility design, ventilation, stall bedding, heat stress mitigation, and herd comfort standards."
     },
     {
       "id": "calving-calf-care",
@@ -4861,7 +4870,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "Parturition management, colostrum feeding, calf rearing, weaning protocols, and heifer development."
     },
     {
       "id": "herd-health-diseases",
@@ -5343,7 +5353,8 @@
           },
           "answer": "B"
         }
-      ]
+      ],
+      "description": "Infectious and metabolic cattle diseases, biosecurity, vaccination schedules, mastitis, and herd diagnostics."
     },
     {
       "id": "tools-milking-equipment",
@@ -5781,7 +5792,8 @@
           },
           "answer": "A"
         }
-      ]
+      ],
+      "description": "Milking machines, sanitation procedures, milk hygiene, storage, cooling tanks, and dairy parlor equipment."
     }
   ],
   "subtitle": "PREPARE • PRACTICE • MASTER",

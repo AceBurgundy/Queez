@@ -204,26 +204,25 @@ export class QuizActionBar extends Component {
       this.template = html`
         <div class="${containerClass}" aria-label="Section Exam Controls">
           <div class="quiz-action-bar__section-info">
-            <span class="material-symbols-outlined quiz-action-bar__section-icon" aria-hidden="true">${this.sectionIcon}</span>
             <div class="quiz-action-bar__section-text">
-              ${this.sectionDescription ? html`<p class="quiz-action-bar__section-description">${this.sectionDescription}</p>` : ""}
               ${this.questionRangeText ? html`<span class="quiz-action-bar__section-badge">${this.questionRangeText}</span>` : ""}
+              ${this.sectionDescription ? html`<p class="quiz-action-bar__section-description">${this.sectionDescription}</p>` : ""}
             </div>
           </div>
           <div class="quiz-action-bar__section-action">
             <button
               type="button"
-              class="bright-squircle quiz-action-bar__play-button quiz-action-bar__play-button--compact"
+              class="bright-squircle quiz-action-bar__play-button quiz-action-bar__play-button--section"
               data-tooltip="${this.tooltipText}"
               aria-label="${this.tooltipText}"
               onclick=${handleLaunchClick}
               onkeydown=${handleLaunchKeydown}
             >
               <span class="bright-squircle__icon-slot bright-squircle__icon-slot--play">
-                <svg class="squircle-play-svg squircle-play-svg--main" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <svg class="squircle-play-svg squircle-play-svg--main" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                   <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
                 </svg>
-                <svg class="squircle-play-svg squircle-play-svg--incoming" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <svg class="squircle-play-svg squircle-play-svg--incoming" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
                   <path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11.04-6.86a1 1 0 0 0 0-1.72L9.5 4.28A1 1 0 0 0 8 5.14z" />
                 </svg>
               </span>
