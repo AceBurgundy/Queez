@@ -80,6 +80,8 @@ export class App extends Component {
     this.activePathSignal = signal(this.dashboardPath);
     /** @type {string|null} */
     this.lastLoadedRoutePath = null;
+    /** @type {number} */
+    this.navigationTransactionId = 0;
     /** @type {LoadingScreen} */
     this.loadingScreenComponent = new LoadingScreen();
     /** @type {Toast} */
@@ -192,6 +194,7 @@ export class App extends Component {
 
         if (this.activePathSignal.value !== targetNavPath || activeRoute.rawPath !== this.lastLoadedRoutePath) {
           this.activePathSignal.value = targetNavPath;
+          this.lastLoadedRoutePath = activeRoute.rawPath;
           this.loadNavigationItem(targetNavPath);
         }
       });
@@ -438,12 +441,12 @@ export class App extends Component {
         } else {
           window.location.hash = targetHash;
         }
-        return;
       }
     }
 
     if (this.activePathSignal.value !== navPath || this.lastLoadedRoutePath !== routePath) {
       this.activePathSignal.value = navPath;
+      this.lastLoadedRoutePath = routePath;
       this.loadNavigationItem(navPath);
     }
   }
@@ -485,6 +488,8 @@ export class App extends Component {
       return;
     }
 
+    /** @type {number} */
+    const currentTransactionId = (++this.navigationTransactionId);
     const currentRoute = this.parseCurrentRoute();
     this.lastLoadedRoutePath = currentRoute.rawPath;
     this.activePathSignal.value = navigationPath;
@@ -492,6 +497,9 @@ export class App extends Component {
     try {
       /** @type {Object} */
       const itemData = await this.fetchNavigationItemData(navigationPath);
+      if (this.navigationTransactionId !== currentTransactionId) {
+        return;
+      }
       /** @type {Object} */
       const headerContainer = itemData.header_container || {};
 
@@ -563,6 +571,9 @@ export class App extends Component {
 
         /** @type {Object} */
         const rawQuizData = await this.fetchNavigationItemData(dataJsonPath);
+        if (this.navigationTransactionId !== currentTransactionId) {
+          return;
+        }
         /** @type {Object} */
         const adaptedData = adaptQuizData(rawQuizData, dataJsonPath, itemData.tab_list || []);
 
@@ -1151,7 +1162,11 @@ export class App extends Component {
         }
       }
 
-      viewportElement.scrollTo({ top: 0, behavior: "smooth" });
+      viewportElement.scrollTop = 0;
+      viewportElement.scrollTo({ top: 0, behavior: "instant" });
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
     } catch (loadingError) {
       console.error("Failed to load quiz item:", loadingError);
       viewportElement.innerHTML = `

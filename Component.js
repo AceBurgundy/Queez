@@ -1513,7 +1513,7 @@ if (typeof window !== "undefined") {
     /** @type {number} */
     const savedScrollPosition = navEvent?.state?.__liteScrollY ?? 0;
 
-    if (destinationPage) {
+    if (destinationPage && !destinationPage.__litePersistent) {
       if (route.value !== currentPath) {
         route.value = currentPath;
       }
@@ -1654,7 +1654,9 @@ const renderRoute = async (destinationComponentOrGetter, pathString, { replace =
     return;
   }
 
-  routes[normalizedPath] = ResolvedComponent;
+  if (!ResolvedComponent?.__litePersistent) {
+    routes[normalizedPath] = ResolvedComponent;
+  }
 
   /** @type {string} */
   let renderedTemplateString = "";
@@ -1739,6 +1741,18 @@ const renderRoute = async (destinationComponentOrGetter, pathString, { replace =
           return;
         }
         console.error("[lite-spa] ViewTransition.finished rejected:", transitionError);
+      });
+    }
+    if (viewTransition?.ready) {
+      viewTransition.ready.catch((transitionError) => {
+        if (
+          transitionError?.name === "AbortError" ||
+          transitionError?.name === "DOMException" ||
+          String(transitionError?.message || "").includes("ViewTransition")
+        ) {
+          return;
+        }
+        console.error("[lite-spa] ViewTransition.ready rejected:", transitionError);
       });
     }
   } else {
@@ -1957,13 +1971,21 @@ export class Root {
 
       renderRoute(targetComponent, targetPath, { replace: true, updateHistory: false });
 
-      // Persistent root: remove the bootstrap route entry so the router never treats
-      // the root path as a navigable target again. This protects a persistent App Shell
-      // from being unmounted or overwritten when child routes render.
+      // Persistent root: mark component class and clear any route pointing to it so
+      // the router never treats the shell as a navigable child route. This protects a
+      // persistent App Shell from being unmounted or overwritten when child routes render.
       // Deferred via microtask so renderRoute's async body has already committed.
       if (persistent) {
+        destination.__litePersistent = true;
         Promise.resolve().then(() => {
+          Object.keys(routes).forEach((routeKey) => {
+            if (routes[routeKey] === destination || routes[routeKey] === targetComponent) {
+              routes[routeKey] = null;
+            }
+          });
           routes[sanitizeRoutePath(path)] = null;
+          routes[sanitizeRoutePath(targetPath)] = null;
+          routes[sanitizeRoutePath(currentBrowserPath)] = null;
         });
       }
     };
