@@ -6,6 +6,8 @@
   justify-content: center;
   gap: 0.625rem;
   height: 4.375rem;
+  min-width: 0;
+  max-width: 20rem;
   border-radius: var(--md-sys-shape-corner-full);
   background: transparent;
   color: var(--md-sys-color-on-surface-variant);
@@ -24,6 +26,7 @@
 .tabs__item .tabs__item-icon,
 .tabs__item .google-symbols {
   font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
 .tabs__item:hover {
@@ -46,6 +49,10 @@
 
 .tabs__item-label {
   line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 
 /* Desktop Overflow Carousel Item Styles */
@@ -53,6 +60,7 @@
   display: none;
   width: 100%;
   flex: 1 0 100%;
+  max-width: 100% !important;
   height: 80px !important;
   min-height: 80px !important;
   max-height: 80px !important;

@@ -12,6 +12,8 @@ import { QuizActionBar } from "../../../widgets/quiz-action-bar/templates/quiz-a
 import { StartNowButton } from "../../../widgets/start-now-button/templates/start-now-button.js";
 import { QuizEngine } from "../../../sections/quiz-engine/templates/quiz-engine.js";
 import { QuizResults } from "../../../sections/quiz-results/templates/quiz-results.js";
+import { QuizResultsReview } from "../../../sections/quiz-results/templates/quiz-results-review.js";
+import { downloadOfflineResultsHtml } from "../../../sections/quiz-results/scripts/quiz-export-service.js";
 import {
   registerQuestionsAndSanitize,
   loadActiveSession,
@@ -76,6 +78,8 @@ export class App extends Component {
 
     /** @type {import("../../../../Component.js").Signal<string>} */
     this.activePathSignal = signal(this.dashboardPath);
+    /** @type {string|null} */
+    this.lastLoadedRoutePath = null;
     /** @type {LoadingScreen} */
     this.loadingScreenComponent = new LoadingScreen();
     /** @type {Toast} */
@@ -162,9 +166,10 @@ export class App extends Component {
     this.mounted = () => {
       // 1. Resolve current active route on initial mount
       const currentRoute = this.parseCurrentRoute();
+      this.lastLoadedRoutePath = currentRoute.rawPath;
       /** @type {string} */
       let expectedNavPath = this.dashboardPath;
-      if (currentRoute.type === "quiz") {
+      if (currentRoute.type === "quiz" || currentRoute.type === "quiz-results") {
         expectedNavPath = this.findNavigationPathForQuizId(currentRoute.quizId) || "data/navigation-items/napolcom-mock-exam.js";
       } else if (currentRoute.type === "quizzes") {
         expectedNavPath = this.quizzesPath;
@@ -179,13 +184,13 @@ export class App extends Component {
         const activeRoute = this.parseCurrentRoute(normalizedPath);
         /** @type {string} */
         let targetNavPath = this.dashboardPath;
-        if (activeRoute.type === "quiz") {
+        if (activeRoute.type === "quiz" || activeRoute.type === "quiz-results") {
           targetNavPath = this.findNavigationPathForQuizId(activeRoute.quizId) || "data/navigation-items/napolcom-mock-exam.js";
         } else if (activeRoute.type === "quizzes") {
           targetNavPath = this.quizzesPath;
         }
 
-        if (this.activePathSignal.value !== targetNavPath) {
+        if (this.activePathSignal.value !== targetNavPath || activeRoute.rawPath !== this.lastLoadedRoutePath) {
           this.activePathSignal.value = targetNavPath;
           this.loadNavigationItem(targetNavPath);
         }
@@ -304,7 +309,7 @@ export class App extends Component {
   /**
    * Parses active route from window.location or passed path.
    * @param {string|null} [customPath=null] - Optional override path.
-   * @returns {{ type: ("dashboard"|"quiz"|"quizzes"), quizId?: string, rawPath: string }} Route descriptor.
+   * @returns {{ type: ("dashboard"|"quiz"|"quizzes"|"quiz-results"), quizId?: string, rawPath: string }} Route descriptor.
    */
   parseCurrentRoute(customPath = null) {
     /** @type {string} */
@@ -322,6 +327,12 @@ export class App extends Component {
     }
     if (path.length > 1 && path.endsWith("/")) {
       path = path.slice(0, -1);
+    }
+
+    /** @type {RegExpMatchArray|null} */
+    const resultsMatch = path.match(/^\/(?:quizzes|queezes)\/([a-zA-Z0-9_-]+)\/results$/);
+    if (resultsMatch) {
+      return { type: "quiz-results", quizId: resultsMatch[1], rawPath: path };
     }
 
     /** @type {RegExpMatchArray|null} */
@@ -393,9 +404,16 @@ export class App extends Component {
       routePath = "/quizzes";
     } else if (targetNavigationPath.startsWith("/quizzes/") || targetNavigationPath.startsWith("quizzes/") || targetNavigationPath.startsWith("/queezes/") || targetNavigationPath.startsWith("queezes/")) {
       /** @type {string} */
-      const quizId = targetNavigationPath.replace(/^\/?(?:quizzes|queezes)\//, "");
-      navPath = this.findNavigationPathForQuizId(quizId) || "data/navigation-items/napolcom-mock-exam.js";
-      routePath = `/quizzes/${quizId}`;
+      const quizPathFragment = targetNavigationPath.replace(/^\/?(?:quizzes|queezes)\//, "");
+      if (quizPathFragment.endsWith("/results")) {
+        /** @type {string} */
+        const baseQuizId = quizPathFragment.replace(/\/results$/, "");
+        navPath = this.findNavigationPathForQuizId(baseQuizId) || "data/navigation-items/napolcom-mock-exam.js";
+        routePath = `/quizzes/${baseQuizId}/results`;
+      } else {
+        navPath = this.findNavigationPathForQuizId(quizPathFragment) || "data/navigation-items/napolcom-mock-exam.js";
+        routePath = `/quizzes/${quizPathFragment}`;
+      }
     } else if (targetNavigationPath === this.dashboardPath || targetNavigationPath === "/") {
       navPath = this.dashboardPath;
       routePath = "/";
@@ -424,7 +442,7 @@ export class App extends Component {
       }
     }
 
-    if (this.activePathSignal.value !== navPath) {
+    if (this.activePathSignal.value !== navPath || this.lastLoadedRoutePath !== routePath) {
       this.activePathSignal.value = navPath;
       this.loadNavigationItem(navPath);
     }
@@ -467,6 +485,8 @@ export class App extends Component {
       return;
     }
 
+    const currentRoute = this.parseCurrentRoute();
+    this.lastLoadedRoutePath = currentRoute.rawPath;
     this.activePathSignal.value = navigationPath;
 
     try {
@@ -589,6 +609,92 @@ export class App extends Component {
 
         /** @type {{ session: Object|null }} */
         const { session } = loadActiveSession(quizId);
+
+        if (currentRoute.type === "quiz-results") {
+          if (!session || session.status !== "completed") {
+            this.navigateTo(`/quizzes/${quizId}`, { replace: true });
+            return;
+          }
+
+          /** @type {string} */
+          const examScope = session.examScope || "full";
+          /** @type {number} */
+          const sectionCategoryIndex = session.sectionCategoryIndex ?? 0;
+          /** @type {Object|null} */
+          const restoredDeck = examScope === "section"
+            ? restoreSectionExamDeck(quizId, sanitizedQuestions, sectionBounds, sectionCategoryIndex)
+            : restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds);
+
+          /** @type {Array<Object>} */
+          const questionsForScoring = restoredDeck ? restoredDeck.questions : sanitizedQuestions;
+          /** @type {string} */
+          const scoringQuizId = restoredDeck ? restoredDeck.deckQuizId : quizId;
+          /** @type {Array<Object>} */
+          const scoringBounds = restoredDeck ? restoredDeck.sectionBounds : sectionBounds;
+
+          /** @type {Object} */
+          const scoreTally = evaluateScoreTally(
+            scoringQuizId,
+            questionsForScoring,
+            session.answers || {},
+            tabList,
+            examScope,
+            sectionCategoryIndex,
+            scoringBounds
+          );
+
+          /** @type {Object} */
+          const categoryDefinition = tabList[sectionCategoryIndex] || {};
+          /** @type {string} */
+          const sectionTitle = categoryDefinition.tab_title || categoryDefinition.tabTitle || `Part ${sectionCategoryIndex + 1}`;
+
+          /** @type {QuizResultsReview} */
+          const quizResultsReviewComponent = new QuizResultsReview({
+            scoreTally,
+            examMetadata: {
+              quizTitle,
+              publisher: adaptedData.publisher || "Exam Mastery",
+              isTimed: session.isTimed,
+              totalTimeSeconds: session.totalTimeSeconds,
+              startTime: session.startTime,
+              examScope,
+              sectionTitle
+            },
+            onBackToSummary: () => {
+              this.navigateTo(`/quizzes/${quizId}`);
+            },
+            onRetakeExam: () => {
+              clearActiveSession();
+              this.navigateTo(`/quizzes/${quizId}`);
+            },
+            onDownloadResults: () => {
+              /** @type {string} */
+              const exportScopeLabel = (examScope === "section") ? sectionTitle : "Full Exam";
+              /** @type {string} */
+              const formattedDate = new Date().toISOString().slice(0, 10);
+              /** @type {string} */
+              const downloadFilename = `${quizId}-${exportScopeLabel.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-results-${formattedDate}.html`;
+              downloadOfflineResultsHtml({
+                quizTitle,
+                publisher: adaptedData.publisher || "Exam Mastery",
+                scoreTally,
+                metadata: {
+                  isTimed: session.isTimed,
+                  totalTimeSeconds: session.totalTimeSeconds,
+                  startTime: session.startTime,
+                  examScope,
+                  sectionTitle
+                }
+              }, downloadFilename);
+            }
+          });
+
+          viewportElement.innerHTML = quizResultsReviewComponent.toString();
+          quizResultsReviewComponent.__mount?.();
+          viewportElement.scrollTo({ top: 0, behavior: "smooth" });
+          return;
+        }
+
         /** @type {QuizEngine|null} */
         let currentActiveQuizEngine = null;
         /** @type {QuizActionBar|null} */
@@ -769,6 +875,9 @@ export class App extends Component {
               examScope,
               sectionTitle
             },
+            onShowResults: () => {
+              this.navigateTo(`/quizzes/${quizId}/results`);
+            },
             onRetakeExam: () => {
               clearActiveSession();
               currentActiveQuizEngine = null;
@@ -930,6 +1039,9 @@ export class App extends Component {
               startTime: session.startTime,
               examScope,
               sectionTitle
+            },
+            onShowResults: () => {
+              this.navigateTo(`/quizzes/${quizId}/results`);
             },
             onRetakeExam: () => {
               clearActiveSession();

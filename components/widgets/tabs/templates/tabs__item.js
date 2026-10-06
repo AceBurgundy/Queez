@@ -67,10 +67,11 @@ export class TabItem extends Component {
         class="${buttonClassName}"
         aria-selected="${isSelected ? "true" : "false"}"
         data-tab-index="${String(this.tabIndex)}"
+        title="${this.tabTitle}"
         onclick=${handleTabClick}
       >
         <span class="google-symbols notranslate tabs__item-icon">${this.iconName}</span>
-        <span class="tabs__item-label">${this.tabTitle}</span>
+        <span class="tabs__item-label" title="${this.tabTitle}">${this.tabTitle}</span>
       </button>
     `;
   }

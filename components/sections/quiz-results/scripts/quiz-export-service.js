@@ -35,6 +35,7 @@ export function generateOfflineResultsHtml(exportData) {
     :root {
       --bg: #121316;
       --surface: #1e1f23;
+      --surface-container-low: #1a1b1f;
       --surface-high: #2a2b30;
       --surface-highest: #35363c;
       --on-surface: #e2e2e6;
@@ -42,18 +43,22 @@ export function generateOfflineResultsHtml(exportData) {
       --primary: #80deea;
       --on-primary: #00363a;
       --primary-container: #004f55;
+      --tertiary: #a1c9fd;
+      --on-tertiary: #00325b;
       --success: #4caf50;
-      --success-bg: rgba(76, 175, 80, 0.15);
+      --success-bg: rgba(76, 175, 80, 0.16);
       --error: #f44336;
-      --error-bg: rgba(244, 67, 54, 0.15);
+      --error-bg: rgba(244, 67, 54, 0.16);
       --outline: #44474e;
-      --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --outline-variant: #44474e;
+      --font-display: 'Google Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Google Sans Text', 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background-color: var(--bg);
       color: var(--on-surface);
-      font-family: var(--font-display);
+      font-family: var(--font-body);
       line-height: 1.5;
       padding: 2rem 1rem;
     }
@@ -145,8 +150,6 @@ export function generateOfflineResultsHtml(exportData) {
       flex-direction: column;
       gap: 1rem;
     }
-    .q-card.correct { border-left: 6px solid var(--success); }
-    .q-card.incorrect { border-left: 6px solid var(--error); }
     .q-header { display: flex; align-items: flex-start; gap: 0.875rem; }
     .q-badge {
       background: var(--surface-highest);
@@ -156,7 +159,7 @@ export function generateOfflineResultsHtml(exportData) {
       border-radius: 999px;
       font-size: 0.85rem;
     }
-    .q-title { font-weight: 600; font-size: 1.05rem; flex: 1; }
+    .q-title { font-weight: 600; font-size: 1.05rem; flex: 1; font-family: var(--font-display); }
     .q-status { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; }
     .q-status.correct { color: var(--success); }
     .q-status.incorrect { color: var(--error); }
@@ -186,11 +189,19 @@ export function generateOfflineResultsHtml(exportData) {
     .opt-tag { margin-left: auto; font-size: 0.75rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; }
     .opt-tag.your-choice { background: var(--error); color: #fff; }
     .opt-tag.correct-choice { background: var(--success); color: #fff; }
-    .pagination {
+    .pagination-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.5rem 0;
+    }
+    .pagination-actions {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem 0;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
     }
     .page-button {
       background: var(--surface-high);
@@ -201,14 +212,15 @@ export function generateOfflineResultsHtml(exportData) {
       border-radius: 999px;
       cursor: pointer;
       font-size: 0.95rem;
+      transition: background-color 0.2s ease;
     }
     .page-button:hover:not(:disabled) { background: var(--surface-highest); }
     .page-button:disabled { opacity: 0.4; cursor: not-allowed; }
-    .page-info { font-size: 0.95rem; color: var(--on-surface-variant); font-weight: 500; }
+    .page-info { font-size: 0.95rem; color: var(--on-surface-variant); font-weight: 500; text-align: center; }
     @media print {
       body { background: #fff; color: #000; padding: 0; }
       .header-card, .q-card, .category-card { border: 1px solid #ddd; background: #fff; color: #000; box-shadow: none; }
-      .pagination { display: none; }
+      .pagination-wrapper { display: none; }
     }
   </style>
 </head>
@@ -239,10 +251,12 @@ export function generateOfflineResultsHtml(exportData) {
     <div class="questions-wrapper" id="questionsContainer"></div>
 
     <!-- Pagination Controls -->
-    <div class="pagination">
-      <button type="button" class="page-button" id="buttonPrev">Previous 10</button>
-      <span class="page-info" id="pageIndicator">Page 1 of 15</span>
-      <button type="button" class="page-button" id="buttonNext">Next 10</button>
+    <div class="pagination-wrapper">
+      <div class="page-info" id="pageIndicator">Page 1 of 15</div>
+      <div class="pagination-actions">
+        <button type="button" class="page-button" id="buttonPrev">Previous 10</button>
+        <button type="button" class="page-button" id="buttonNext">Next 10</button>
+      </div>
     </div>
   </div>
 

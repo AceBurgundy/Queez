@@ -1,5 +1,4 @@
 import { Component, css, html } from "../../../../Component.js";
-import { downloadOfflineResultsHtml } from "../scripts/quiz-export-service.js";
 
 css(import.meta, ["../styles/quiz-results.css"]);
 
@@ -13,71 +12,64 @@ export class QuizResults extends Component {
    * @param {Object} configuration
    * @param {Object} configuration.scoreTally - Result from evaluateScoreTally.
    * @param {Object} configuration.examMetadata - Metadata (quizTitle, isTimed, durationSeconds, etc.).
+   * @param {function(): void} [configuration.onShowResults] - Show review answers callback.
    * @param {function(): void} [configuration.onRetakeExam] - Retake callback.
    */
   constructor({
     scoreTally = {},
     examMetadata = {},
+    onShowResults = () => {},
     onRetakeExam = () => {}
   } = {}) {
     super();
 
     this.scoreTally = scoreTally;
     this.examMetadata = examMetadata;
+    this.onShowResults = onShowResults;
     this.onRetakeExam = onRetakeExam;
 
-    const {
-      totalCorrect = 0,
-      totalQuestions = 150,
-      percentage = 0,
-      isPassed = false,
-      categoryBreakdown = []
-    } = this.scoreTally;
+    /** @type {number} */
+    const totalCorrect = this.scoreTally.totalCorrect ?? 0;
+    /** @type {number} */
+    const totalQuestions = this.scoreTally.totalQuestions ?? 150;
+    /** @type {number} */
+    const percentage = this.scoreTally.percentage ?? 0;
+    /** @type {boolean} */
+    const isPassed = this.scoreTally.isPassed ?? false;
+    /** @type {Array<Object>} */
+    const categoryBreakdown = this.scoreTally.categoryBreakdown || [];
 
-    const {
-      quizTitle = "Examination",
-      isTimed = false,
-      totalTimeSeconds = 0,
-      startTime = Date.now(),
-      publisher = "MASTERY",
-      examScope = "full",
-      sectionTitle = ""
-    } = this.examMetadata;
+    /** @type {string} */
+    const quizTitle = this.examMetadata.quizTitle || "Examination";
+    /** @type {boolean} */
+    const isTimed = this.examMetadata.isTimed ?? false;
+    /** @type {number} */
+    const totalTimeSeconds = this.examMetadata.totalTimeSeconds ?? 0;
+    /** @type {number} */
+    const startTime = this.examMetadata.startTime ?? Date.now();
+    /** @type {string} */
+    const examScope = this.examMetadata.examScope || "full";
+    /** @type {string} */
+    const sectionTitle = this.examMetadata.sectionTitle || "";
 
+    /** @type {boolean} */
     const isSection = examScope === "section" || this.scoreTally.examScope === "section";
+    /** @type {string} */
     const resolvedSectionTitle = sectionTitle || this.scoreTally.categoryBreakdown?.[0]?.title || "Section";
+    /** @type {string} */
     const examScopeLabel = isSection ? `${resolvedSectionTitle} (Section Exam)` : "Full Examination";
 
+    /** @type {number} */
     const elapsedSeconds = Math.max(0, Math.floor((Date.now() - startTime) / 1000));
+    /** @type {string} */
     const durationLabel = isTimed
       ? `Timed (${Math.floor(totalTimeSeconds / 60)} mins)`
       : `Untimed (${Math.floor(elapsedSeconds / 60)} mins taken)`;
 
-    const handleDownload = () => {
-      const exportTitle = isSection ? `${quizTitle} — ${resolvedSectionTitle}` : quizTitle;
-      const exportSubtitle = isSection
-        ? `Official Verification & Solution Key • ${resolvedSectionTitle} Section Exam`
-        : "Official Verification & Solution Key • Comprehensive Full Mock Exam";
-
-      const exportPayload = {
-        quizTitle: exportTitle,
-        quizSubtitle: exportSubtitle,
-        publisher,
-        isTimed,
-        durationLabel,
-        completionDate: new Date().toLocaleString(),
-        totalScore: totalCorrect,
-        totalQuestions,
-        percentage,
-        isPassed,
-        categoryBreakdown,
-        questionReviewList: this.scoreTally.questionReviewList || []
-      };
-
-      const titleSlug = quizTitle.toLowerCase().replace(/[^a-z0-9]/g, "-");
-      const sectionSlug = isSection ? `-${resolvedSectionTitle.toLowerCase().replace(/[^a-z0-9]/g, "-")}` : "";
-      const safeFilename = `queez-${titleSlug}${sectionSlug}-results.html`;
-      downloadOfflineResultsHtml(exportPayload, safeFilename);
+    const handleShowResults = () => {
+      if (typeof this.onShowResults === "function") {
+        this.onShowResults();
+      }
     };
 
     const handleRetake = () => {
@@ -86,29 +78,33 @@ export class QuizResults extends Component {
       }
     };
 
-    const categoryCardsHtml = categoryBreakdown.map((cat) => {
+    /** @type {Array<string>} */
+    const categoryCardsHtml = categoryBreakdown.map((categoryItem) => {
       return html`
         <div class="quiz-results__category-card">
           <div class="quiz-results__category-header">
             <span class="quiz-results__category-title">
-              <span class="google-symbols notranslate">${cat.icon || "category"}</span>
-              <span>${cat.title}</span>
+              <span class="google-symbols notranslate">${categoryItem.icon || "category"}</span>
+              <span>${categoryItem.title}</span>
             </span>
             <span class="quiz-results__category-score">
-              ${cat.correct} / ${cat.total} (${cat.percentage}%)
+              ${categoryItem.correct} / ${categoryItem.total} (${categoryItem.percentage}%)
             </span>
           </div>
           <div class="quiz-results__progress-bar-bg">
-            <div class="quiz-results__progress-bar-fill" style="width: ${cat.percentage}%;"></div>
+            <div class="quiz-results__progress-bar-fill" style="width: ${categoryItem.percentage}%;"></div>
           </div>
         </div>
       `;
     });
 
+    /** @type {string} */
     const statusBadgeClass = isPassed
       ? "quiz-results__status-badge quiz-results__status-badge--passed"
       : "quiz-results__status-badge quiz-results__status-badge--failed";
+    /** @type {string} */
     const statusText = isPassed ? "PASSED (Benchmark \u2265 75%)" : "NEEDS IMPROVEMENT";
+    /** @type {string} */
     const statusIcon = isPassed ? "check_circle" : "cancel";
 
     this.template = html`
@@ -149,13 +145,13 @@ export class QuizResults extends Component {
           <div class="quiz-results__actions-row">
             <button
               type="button"
-              id="buttonDownloadResults"
+              id="buttonShowResults"
               class="bright-squircle quiz-results__button"
-              data-tooltip="Download Results (HTML)"
-              aria-label="Download Standalone Offline Results HTML"
-              onclick=${handleDownload}
+              data-tooltip="Review Answers"
+              aria-label="Review Question Answers"
+              onclick=${handleShowResults}
             >
-              <span class="google-symbols notranslate icon--download">download</span>
+              <span class="google-symbols notranslate icon--visibility">visibility</span>
             </button>
 
             <button
@@ -180,10 +176,12 @@ export class QuizResults extends Component {
     `;
 
     this.mounted = () => {
-      const downloadbutton = document.getElementById("buttonDownloadResults");
-      if (downloadbutton) downloadbutton.onclick = handleDownload;
-      const retakebutton = document.getElementById("buttonRetakeExam");
-      if (retakebutton) retakebutton.onclick = handleRetake;
+      /** @type {HTMLElement|null} */
+      const showResultsButton = document.getElementById("buttonShowResults");
+      if (showResultsButton) showResultsButton.onclick = handleShowResults;
+      /** @type {HTMLElement|null} */
+      const retakeButton = document.getElementById("buttonRetakeExam");
+      if (retakeButton) retakeButton.onclick = handleRetake;
     };
   }
 }
