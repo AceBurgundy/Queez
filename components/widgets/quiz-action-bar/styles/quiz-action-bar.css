@@ -135,8 +135,22 @@
 .quiz-action-bar__section-info {
   display: flex;
   align-items: center;
+  gap: 1rem;
   min-width: 0;
   flex: 1;
+}
+
+.quiz-action-bar__section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.875rem;
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-primary);
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .quiz-action-bar__section-text {
@@ -185,6 +199,11 @@
   border-radius: 1.125rem;
 }
 
+/* Optical centering: play triangle SVG center is at x=13.52 in a 24-wide viewBox, shift left to balance visual weight */
+.quiz-action-bar__play-button--section .bright-squircle__icon-slot--play {
+  transform: translateX(-2.5px);
+}
+
 .quiz-action-bar__play-button--section:hover {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
@@ -214,6 +233,10 @@
     align-items: stretch;
     gap: 1.125rem;
     padding: 1rem 0.25rem;
+  }
+
+  .quiz-action-bar__section-icon {
+    display: none;
   }
 
   .quiz-action-bar__section-action {

@@ -198,6 +198,8 @@ export class Tabs extends Component {
 
     /** @type {boolean} */
     const hasMultipleTabs = this.tabList.length > 1;
+    /** @type {boolean} */
+    const isCarousel = this.tabList.length >= 5;
 
     /** @type {Array<TabItem>} */
     const tabItemComponents = this.tabList.map((tabDefinition, index) => {
@@ -213,7 +215,7 @@ export class Tabs extends Component {
     });
 
     this.template = html`
-      <nav class="tabs" aria-label="Quiz Groups Navigation">
+      <nav class="tabs ${isCarousel ? "tabs--carousel" : ""}" aria-label="Quiz Groups Navigation">
         <button
           type="button"
           class="tabs__carousel-button tabs__carousel-button--previous"
@@ -258,6 +260,11 @@ export class Tabs extends Component {
           const isMobileWidth = window.innerWidth <= 768;
           if (isMobileWidth) {
             containerElement.classList.remove("tabs--carousel");
+            return;
+          }
+
+          if (this.tabList.length >= 5) {
+            containerElement.classList.add("tabs--carousel");
             return;
           }
 

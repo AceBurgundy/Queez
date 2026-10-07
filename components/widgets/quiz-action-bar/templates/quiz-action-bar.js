@@ -204,6 +204,7 @@ export class QuizActionBar extends Component {
       this.template = html`
         <div class="${containerClass}" aria-label="Section Exam Controls">
           <div class="quiz-action-bar__section-info">
+            ${this.sectionIcon ? html`<span class="google-symbols notranslate quiz-action-bar__section-icon" aria-hidden="true">${this.sectionIcon}</span>` : ""}
             <div class="quiz-action-bar__section-text">
               ${this.questionRangeText ? html`<span class="quiz-action-bar__section-badge">${this.questionRangeText}</span>` : ""}
               ${this.sectionDescription ? html`<p class="quiz-action-bar__section-description">${this.sectionDescription}</p>` : ""}
