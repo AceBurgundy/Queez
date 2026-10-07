@@ -103,6 +103,10 @@ const createDialogDom = ({
   itemLabelElement.textContent = "ITEMS";
 
   /** @type {HTMLDivElement} */
+  const itemStepperWrapElement = document.createElement("div");
+  itemStepperWrapElement.className = "item-stepper-wrap";
+
+  /** @type {HTMLDivElement} */
   const wheelElement = document.createElement("div");
   wheelElement.className = "item-wheel";
   wheelElement.setAttribute("role", "spinbutton");
@@ -147,8 +151,42 @@ const createDialogDom = ({
   bottomSpacer.setAttribute("aria-hidden", "true");
   wheelElement.appendChild(bottomSpacer);
 
+  /** @type {HTMLDivElement} */
+  const stepperButtonsElement = document.createElement("div");
+  stepperButtonsElement.className = "item-stepper-buttons";
+  stepperButtonsElement.setAttribute("aria-label", "Items stepper");
+
+  /** @type {HTMLButtonElement} */
+  const stepperUpButtonElement = document.createElement("button");
+  stepperUpButtonElement.type = "button";
+  stepperUpButtonElement.className = "item-stepper-button item-stepper-button--up";
+  stepperUpButtonElement.setAttribute("aria-label", "Previous item (scroll up)");
+  stepperUpButtonElement.title = "Previous item (hold to scroll faster)";
+  stepperUpButtonElement.innerHTML = `<span class="google-symbols notranslate" aria-hidden="true">keyboard_arrow_up</span>`;
+
+  /** @type {HTMLButtonElement} */
+  const stepperDownButtonElement = document.createElement("button");
+  stepperDownButtonElement.type = "button";
+  stepperDownButtonElement.className = "item-stepper-button item-stepper-button--down";
+  stepperDownButtonElement.setAttribute("aria-label", "Next item (scroll down)");
+  stepperDownButtonElement.title = "Next item (hold to scroll faster)";
+  stepperDownButtonElement.innerHTML = `<span class="google-symbols notranslate" aria-hidden="true">keyboard_arrow_down</span>`;
+
+  if (initialQuestionCount <= minimumQuestionCount) {
+    stepperUpButtonElement.disabled = true;
+  }
+  if (initialQuestionCount >= maximumQuestionCount) {
+    stepperDownButtonElement.disabled = true;
+  }
+
+  stepperButtonsElement.appendChild(stepperUpButtonElement);
+  stepperButtonsElement.appendChild(stepperDownButtonElement);
+
+  itemStepperWrapElement.appendChild(wheelElement);
+  itemStepperWrapElement.appendChild(stepperButtonsElement);
+
   itemsColumnElement.appendChild(itemLabelElement);
-  itemsColumnElement.appendChild(wheelElement);
+  itemsColumnElement.appendChild(itemStepperWrapElement);
 
   // Column 2: Duration Controls
   /** @type {HTMLDivElement} */
@@ -311,6 +349,10 @@ const createDialogDom = ({
   return {
     scrimElement,
     wheelElement,
+    itemsColumnElement,
+    itemStepperWrapElement,
+    stepperUpButtonElement,
+    stepperDownButtonElement,
     hoursInputElement,
     minutesInputElement,
     secondsInputElement,
@@ -414,6 +456,10 @@ export const openStartExamDialog = ({
   const {
     scrimElement,
     wheelElement,
+    itemsColumnElement,
+    itemStepperWrapElement,
+    stepperUpButtonElement,
+    stepperDownButtonElement,
     hoursInputElement,
     minutesInputElement,
     secondsInputElement,
@@ -455,7 +501,7 @@ export const openStartExamDialog = ({
   };
 
   /**
-   * Updates visual row selection classes in the item wheel.
+   * Updates visual row selection classes and stepper button states.
    * @param {number} selectedCount - Currently selected question count.
    * @returns {void}
    */
@@ -470,6 +516,12 @@ export const openStartExamDialog = ({
         rowElement.classList.remove("item-wheel__row--selected");
       }
     });
+    if (stepperUpButtonElement) {
+      stepperUpButtonElement.disabled = selectedCount <= safeMinimum;
+    }
+    if (stepperDownButtonElement) {
+      stepperDownButtonElement.disabled = selectedCount >= safeMaximum;
+    }
   };
 
   /**
@@ -493,6 +545,7 @@ export const openStartExamDialog = ({
   // Initial scroll position setup (without smooth animation)
   requestAnimationFrame(() => {
     scrollWheelToCount(currentQuestionCount, false);
+    updateRowVisuals(currentQuestionCount);
   });
 
   // Handle wheel scroll with requestAnimationFrame throttling
@@ -535,9 +588,215 @@ export const openStartExamDialog = ({
   };
   wheelElement.addEventListener("scroll", handleWheelScroll, { passive: true });
 
-  // Clicking a row centers it
+  // Handle mouse wheel scrolling across the entire items column and stepper container
+  /**
+   * Handles mouse wheel scrolling anywhere in the items column.
+   * @param {WheelEvent} event
+   * @returns {void}
+   */
+  const handleColumnMouseWheel = (event) => {
+    event.preventDefault();
+    /** @type {number} */
+    const direction = event.deltaY > 0 ? 1 : -1;
+    /** @type {number} */
+    const nextCount = clampQuestionCount(
+      currentQuestionCount + direction,
+      safeMinimum,
+      safeMaximum
+    );
+    if (nextCount !== currentQuestionCount) {
+      scrollWheelToCount(nextCount, true);
+    }
+  };
+  if (itemsColumnElement) {
+    itemsColumnElement.addEventListener("wheel", handleColumnMouseWheel, { passive: false });
+  }
+
+  // Desktop pointer drag-to-scroll on the numbers wheel
+  /** @type {boolean} */
+  let isDraggingWheel = false;
+  /** @type {number} */
+  let dragStartY = 0;
+  /** @type {number} */
+  let dragStartScrollTop = 0;
+  /** @type {boolean} */
+  let hasDraggedDistance = false;
+
+  /**
+   * Starts pointer drag on wheel.
+   * @param {PointerEvent} event
+   * @returns {void}
+   */
+  const handleWheelPointerDown = (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+    isDraggingWheel = true;
+    hasDraggedDistance = false;
+    dragStartY = event.clientY;
+    dragStartScrollTop = wheelElement.scrollTop;
+    wheelElement.classList.add("item-wheel--dragging");
+    if (typeof wheelElement.setPointerCapture === "function") {
+      wheelElement.setPointerCapture(event.pointerId);
+    }
+  };
+
+  /**
+   * Updates scroll position during pointer drag.
+   * @param {PointerEvent} event
+   * @returns {void}
+   */
+  const handleWheelPointerMove = (event) => {
+    if (!isDraggingWheel) {
+      return;
+    }
+    const deltaY = event.clientY - dragStartY;
+    if (Math.abs(deltaY) > 4) {
+      hasDraggedDistance = true;
+    }
+    wheelElement.scrollTop = dragStartScrollTop - deltaY;
+  };
+
+  /**
+   * Concludes pointer drag and snaps to nearest row.
+   * @param {PointerEvent} event
+   * @returns {void}
+   */
+  const handleWheelPointerUp = (event) => {
+    if (!isDraggingWheel) {
+      return;
+    }
+    isDraggingWheel = false;
+    wheelElement.classList.remove("item-wheel--dragging");
+    if (typeof wheelElement.releasePointerCapture === "function" && wheelElement.hasPointerCapture(event.pointerId)) {
+      wheelElement.releasePointerCapture(event.pointerId);
+    }
+    if (hasDraggedDistance) {
+      const nearestRowIndex = Math.round(wheelElement.scrollTop / WHEEL_ROW_HEIGHT_PIXELS);
+      const targetCount = clampQuestionCount(safeMinimum + nearestRowIndex, safeMinimum, safeMaximum);
+      scrollWheelToCount(targetCount, true);
+    }
+  };
+
+  wheelElement.addEventListener("pointerdown", handleWheelPointerDown);
+  wheelElement.addEventListener("pointermove", handleWheelPointerMove);
+  wheelElement.addEventListener("pointerup", handleWheelPointerUp);
+  wheelElement.addEventListener("pointercancel", handleWheelPointerUp);
+
+  // Stepper Up/Down hold-to-accelerate controller
+  /**
+   * Sets up hold-to-accelerate stepper button behavior.
+   * @param {HTMLButtonElement} buttonElement
+   * @param {number} stepDirection - Direction to step (-1 for up, +1 for down).
+   * @returns {void}
+   */
+  const setupStepperButton = (buttonElement, stepDirection) => {
+    if (!buttonElement) {
+      return;
+    }
+    /** @type {number|null} */
+    let holdTimeoutId = null;
+    /** @type {number|null} */
+    let repeatTimeoutId = null;
+    /** @type {number} */
+    let repeatCount = 0;
+
+    /**
+     * Performs a single step in stepDirection.
+     * @returns {void}
+     */
+    const performStep = () => {
+      /** @type {number} */
+      const nextCount = clampQuestionCount(
+        currentQuestionCount + stepDirection,
+        safeMinimum,
+        safeMaximum
+      );
+      if (nextCount !== currentQuestionCount) {
+        scrollWheelToCount(nextCount, repeatCount === 0);
+      }
+    };
+
+    /**
+     * Dynamically computes accelerating repeat interval.
+     * @param {number} count
+     * @returns {number} Interval in milliseconds.
+     */
+    const getRepeatInterval = (count) => {
+      if (count > 20) return 15;
+      if (count > 10) return 30;
+      if (count > 4) return 60;
+      return 110;
+    };
+
+    /**
+     * Stops repeat timer and snaps cleanly.
+     * @returns {void}
+     */
+    const stopHolding = () => {
+      if (holdTimeoutId !== null) {
+        clearTimeout(holdTimeoutId);
+        holdTimeoutId = null;
+      }
+      if (repeatTimeoutId !== null) {
+        clearTimeout(repeatTimeoutId);
+        repeatTimeoutId = null;
+      }
+      if (repeatCount > 0) {
+        scrollWheelToCount(currentQuestionCount, true);
+      }
+      repeatCount = 0;
+    };
+
+    /**
+     * Schedules the next repeated step.
+     * @returns {void}
+     */
+    const scheduleNextStep = () => {
+      repeatCount += 1;
+      performStep();
+      repeatTimeoutId = setTimeout(scheduleNextStep, getRepeatInterval(repeatCount));
+    };
+
+    /**
+     * Starts stepping and hold timer on pointerdown.
+     * @param {PointerEvent} event
+     * @returns {void}
+     */
+    const startHolding = (event) => {
+      if (event.pointerType === "mouse" && event.button !== 0) {
+        return;
+      }
+      event.preventDefault();
+      stopHolding();
+      performStep();
+      holdTimeoutId = setTimeout(scheduleNextStep, 260);
+    };
+
+    buttonElement.addEventListener("pointerdown", startHolding);
+    buttonElement.addEventListener("pointerup", stopHolding);
+    buttonElement.addEventListener("pointerleave", stopHolding);
+    buttonElement.addEventListener("pointercancel", stopHolding);
+
+    buttonElement.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        if (!event.repeat) {
+          event.preventDefault();
+          performStep();
+        }
+      }
+    });
+  };
+
+  setupStepperButton(stepperUpButtonElement, -1);
+  setupStepperButton(stepperDownButtonElement, 1);
+
+  // Clicking a row centers it (ignored if dragged)
   rowElements.forEach((rowElement) => {
     rowElement.addEventListener("click", () => {
+      if (hasDraggedDistance) {
+        return;
+      }
       /** @type {number} */
       const rowCount = clampQuestionCount(
         Number(rowElement.dataset.count),

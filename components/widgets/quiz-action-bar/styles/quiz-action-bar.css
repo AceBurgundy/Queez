@@ -444,7 +444,7 @@
    ============================================================================= */
 
 .start-exam-dialog {
-  max-width: 29.5rem;
+  max-width: 31.5rem;
   padding: 1.75rem;
 }
 
@@ -469,8 +469,8 @@
 }
 
 .start-exam-dialog__col--items {
-  flex: 0 0 4.75rem;
-  width: 4.75rem;
+  flex: 0 0 7.75rem;
+  width: 7.75rem;
 }
 
 .start-exam-dialog__col--duration {
@@ -511,6 +511,62 @@
   margin-bottom: 1.25rem;
 }
 
+/* Items Stepper Layout & Accelerating Arrows */
+.item-stepper-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.item-stepper-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 132px;
+  flex-shrink: 0;
+}
+
+.item-stepper-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.375rem;
+  height: 3.625rem;
+  border-radius: 0.75rem;
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-on-surface);
+  border: 1.5px solid var(--md-sys-color-outline-variant);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  padding: 0;
+}
+
+.item-stepper-button:hover:not(:disabled) {
+  background-color: var(--md-sys-color-surface-container-high);
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+}
+
+.item-stepper-button:active:not(:disabled) {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  transform: scale(0.94);
+}
+
+.item-stepper-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.item-stepper-button .google-symbols {
+  font-size: 1.5rem;
+}
+
 .item-wheel {
   position: relative;
   height: 132px;
@@ -524,6 +580,13 @@
   border: none;
   box-shadow: none;
   outline: none;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.item-wheel:active,
+.item-wheel--dragging {
+  cursor: grabbing !important;
 }
 
 .item-wheel::-webkit-scrollbar {
@@ -616,6 +679,10 @@
 
   .start-exam-dialog__row {
     gap: 1rem;
+  }
+
+  .item-stepper-buttons {
+    display: none !important;
   }
 
   .start-exam-dialog__col--items {
