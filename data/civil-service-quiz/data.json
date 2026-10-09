@@ -1,0 +1,4666 @@
+{
+  "schema_version": "quiz-data.v1",
+  "id": "civil-service-exam",
+  "title": "CIVIL SERVICE EXAMINATION",
+  "subtitle": "Career Service Professional & Sub-Professional Examination",
+  "publisher": "CIVIL SERVICE COMMISSION / CSE REVIEWER",
+  "instructions": [
+    "Read each question carefully and select the best answer from the given choices.",
+    "For reading comprehension items, base your answers strictly on the provided passages.",
+    "For mathematical questions, scratch paper may be used for calculations.",
+    "Time management is essential. Pace yourself appropriately across each domain."
+  ],
+  "sections": [
+    {
+      "id": "verbal-ability",
+      "title": "Verbal Ability",
+      "description": "English Grammar, Vocabulary, Correct Spelling, and Idiomatic Expressions.",
+      "questions": [
+        {
+          "number": 1,
+          "type": "multiple_choice",
+          "question": "Which sentence uses “famish” correctly?",
+          "options": {
+            "A": "After the straight exam, I felt too exhausted and famished to eat my favourite foods.",
+            "B": "I could eat a horse, I am famish now.",
+            "C": "I famished my stomach next time you treat me to a meal out.",
+            "D": "I will bring lots of pizza, that’s a famish."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 2,
+          "type": "multiple_choice",
+          "question": "Priscila _______ rather not invest her savings in the stock market.",
+          "options": {
+            "A": "must",
+            "B": "has to",
+            "C": "could",
+            "D": "would"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 3,
+          "type": "multiple_choice",
+          "question": "Did you have any problem ______ our house?",
+          "options": {
+            "A": "search",
+            "B": "to search",
+            "C": "searching"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 4,
+          "type": "multiple_choice",
+          "question": "for searching",
+          "options": {
+            "D": "my",
+            "A": "to be",
+            "B": "I had been",
+            "C": "that I may"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 5,
+          "type": "multiple_choice",
+          "question": "Most basketball players are 6 ____ tall or more.",
+          "options": {
+            "A": "foot",
+            "B": "feet",
+            "C": "foots",
+            "D": "feets"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 6,
+          "type": "multiple_choice",
+          "question": "These children _____ how to improvise more props for the play.",
+          "options": {
+            "A": "knew",
+            "B": "knows",
+            "C": "know",
+            "D": "known"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 7,
+          "type": "multiple_choice",
+          "question": "The company will upgrade ______ computer systems next week.",
+          "options": {
+            "A": "there",
+            "B": "their",
+            "C": "its",
+            "D": "it’s"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 8,
+          "type": "multiple_choice",
+          "question": "Clara ___________ three thousand words for her essay.",
+          "options": {
+            "A": "have wrote",
+            "B": "has wrote",
+            "C": "have written",
+            "D": "has written"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 9,
+          "type": "multiple_choice",
+          "question": "You have too many _______ but few time to prove you’re right.",
+          "options": {
+            "A": "hypothesis",
+            "B": "hypotheses",
+            "C": "hyphothesises",
+            "D": "hypothesess"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 10,
+          "type": "multiple_choice",
+          "question": "Neither Sarah nor Tina _______ the crime yesterday.",
+          "options": {
+            "A": "witness",
+            "B": "witnesses",
+            "C": "witnessed",
+            "D": "witnessing"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 11,
+          "type": "multiple_choice",
+          "question": "You do like going to the party alone. _____ you?",
+          "options": {
+            "A": "Does",
+            "B": "Doesn’t",
+            "C": "Do",
+            "D": "Don’t"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 12,
+          "type": "multiple_choice",
+          "question": "We had our house _______ in yellow.",
+          "options": {
+            "A": "painting",
+            "B": "painted",
+            "C": "paint",
+            "D": "to paint"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 13,
+          "type": "multiple_choice",
+          "question": "He has been exercising but his immune system was steadily _________.",
+          "options": {
+            "A": "weak",
+            "B": "weaken",
+            "C": "weakened",
+            "D": "weakening"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 14,
+          "type": "multiple_choice",
+          "question": "I was ______ that the weather would be sunny and we would be able to enjoy our swimming.",
+          "options": {
+            "A": "hopeless",
+            "B": "hopeful",
+            "C": "hopelike",
+            "D": "hopely"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 15,
+          "type": "multiple_choice",
+          "question": "I think it’s not a great idea. I totally ______.",
+          "options": {
+            "A": "misagree",
+            "B": "unagree",
+            "C": "inagree",
+            "D": "disagree"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 16,
+          "type": "multiple_choice",
+          "question": "So many ___________ I found in the library, now I’m ready to report.",
+          "options": {
+            "A": "information",
+            "B": "informations",
+            "C": "infoes",
+            "D": "infos"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 17,
+          "type": "multiple_choice",
+          "question": "My grandpa always feed his flock of _______ early in the morning.",
+          "options": {
+            "A": "sheeps",
+            "B": "sheep",
+            "C": "ships",
+            "D": "ship"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 18,
+          "type": "multiple_choice",
+          "question": "Happy memories are always remembered, not ________.",
+          "options": {
+            "A": "forget",
+            "B": "forgets",
+            "C": "forgot",
+            "D": "forgotten"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 19,
+          "type": "multiple_choice",
+          "question": "Flight Z735 ______ yesterday. 350 passengers died in that accident.",
+          "options": {
+            "A": "crush",
+            "B": "crushed",
+            "C": "crash",
+            "D": "crashed"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 20,
+          "type": "multiple_choice",
+          "question": "There is a ________ message when you look closely at her painting.",
+          "options": {
+            "A": "hid",
+            "B": "hide",
+            "C": "hided",
+            "D": "hidden"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 21,
+          "type": "multiple_choice",
+          "question": "If you are ambivalent with the answers, analyze the given problem.",
+          "options": {
+            "A": "confusion",
+            "B": "innocent",
+            "C": "uncertain",
+            "D": "unaware"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 22,
+          "type": "multiple_choice",
+          "question": "He left the country because of the ominous experiences he had in the past.",
+          "options": {
+            "A": "unforgettable",
+            "B": "threatening",
+            "C": "ugly",
+            "D": "remarkable"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 23,
+          "type": "multiple_choice",
+          "question": "inclined",
+          "options": {
+            "D": "clueless",
+            "A": "resolute",
+            "B": "uncertain",
+            "C": "forgetful"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 24,
+          "type": "multiple_choice",
+          "question": "Reading words without understanding their meaning is futile.",
+          "options": {
+            "A": "helpless",
+            "B": "useless",
+            "C": "unnecessary",
+            "D": "avoidable"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 25,
+          "type": "multiple_choice",
+          "question": "She wears gold but people knows how ostentatious she can be.",
+          "options": {
+            "A": "pretentious",
+            "B": "ambitious",
+            "C": "gorgeous",
+            "D": "rebellious"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 26,
+          "type": "multiple_choice",
+          "question": "He submitted a grotesque artwork that nobody in the class could relate to.",
+          "options": {
+            "A": "different",
+            "B": "weird",
+            "C": "beautiful",
+            "D": "colorful"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 27,
+          "type": "multiple_choice",
+          "question": "Their clandestine affair remained unknown for three years.",
+          "options": {
+            "A": "forbidden",
+            "B": "surprise",
+            "C": "secret",
+            "D": "unacceptable"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 28,
+          "type": "multiple_choice",
+          "question": "They say love is like a firework, a fleeting moment.",
+          "options": {
+            "A": "brief",
+            "B": "unforgettable",
+            "C": "shinny",
+            "D": "remarkable"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 29,
+          "type": "multiple_choice",
+          "question": "Cara is repulsive and rebellious. She always speaks sordid words.",
+          "options": {
+            "A": "dirty",
+            "B": "vulgar",
+            "C": "weird",
+            "D": "bizarre"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 30,
+          "type": "multiple_choice",
+          "question": "Every time I see Cathy looking at me, I feel Euphoria in my bones.",
+          "options": {
+            "A": "gravity",
+            "B": "ecstasy",
+            "C": "erotic",
+            "D": "numb"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 31,
+          "type": "multiple_choice",
+          "question": "I bought this book because when I read the blurb at the back, I fell in love with it.",
+          "options": {
+            "A": "summary",
+            "B": "teaser",
+            "C": "blog",
+            "D": "plot"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 32,
+          "type": "multiple_choice",
+          "question": "Finding a way out of the labyrinth is the last challenge of the competition.",
+          "options": {
+            "A": "castle",
+            "B": "forest",
+            "C": "maze",
+            "D": "box"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 33,
+          "type": "multiple_choice",
+          "question": "There is still love in our hearts amidst our seemingly mundane existence.",
+          "options": {
+            "A": "complicated",
+            "B": "modern",
+            "C": "worldly",
+            "D": "wealthy"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 34,
+          "type": "multiple_choice",
+          "question": "Cassy has a strong penchant in collecting cars.",
+          "options": {
+            "A": "belief",
+            "B": "fondness",
+            "C": "hobby",
+            "D": "route"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 35,
+          "type": "multiple_choice",
+          "question": "Diskettes and CDs are going obsolete.",
+          "options": {
+            "A": "recycled",
+            "B": "refurbished",
+            "C": "updated",
+            "D": "outdated"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 36,
+          "type": "multiple_choice",
+          "question": "The Queen of the Night dances vivaciously.",
+          "options": {
+            "A": "lively",
+            "B": "awkward",
+            "C": "kindly",
+            "D": "sweetly"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 37,
+          "type": "multiple_choice",
+          "question": "The court released a dogmatic statement that made people more hopeful.",
+          "options": {
+            "A": "naive",
+            "B": "unbelievable",
+            "C": "assertive",
+            "D": "unclear"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 38,
+          "type": "multiple_choice",
+          "question": "This generation is prone to plethoric use of mobile gadgets.",
+          "options": {
+            "A": "essential",
+            "B": "crucial",
+            "C": "important",
+            "D": "excessive"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 39,
+          "type": "multiple_choice",
+          "question": "I am usually haphazard in composing my poetry but they turn out so well anyway.",
+          "options": {
+            "A": "disorganized",
+            "B": "blank",
+            "C": "puzzled",
+            "D": "strategic"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 40,
+          "type": "multiple_choice",
+          "question": "If you don’t spill the beans now, you might gonna regret it.",
+          "options": {
+            "A": "spread rumors",
+            "B": "let out a secret",
+            "C": "plant some seeds",
+            "D": "none of the above"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 41,
+          "type": "multiple_choice",
+          "question": "Hey, man, you are absolutely barking up the wrong tree here because I’m innocent.",
+          "options": {
+            "A": "choosing the wrong dog",
+            "B": "giving up a fight",
+            "C": "accusing the wrong person",
+            "D": "setting up an event in a tree"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 42,
+          "type": "multiple_choice",
+          "question": "weak spot",
+          "options": {
+            "D": "was stolen",
+            "A": "very expensive",
+            "B": "got fired",
+            "C": "met an accident"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 43,
+          "type": "multiple_choice",
+          "question": "He married a woman who was born with a silver spoon in her mouth.",
+          "options": {
+            "A": "born very beautiful",
+            "B": "born very poor",
+            "C": "born into a very rich family",
+            "D": "born very talkative"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 44,
+          "type": "multiple_choice",
+          "question": "She has different investments because she doesn’t want to put all eggs in one basket.",
+          "options": {
+            "A": "doesn’t want to put all resources in one possibility",
+            "B": "doesn’t want to cook everything at once",
+            "C": "doesn’t want to go bankrupt",
+            "D": "none of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 45,
+          "type": "multiple_choice",
+          "question": "Whenever his crush passes by the hallway, he’s having butterflies on his stomach.",
+          "options": {
+            "A": "he feels sick",
+            "B": "he feels nervous",
+            "C": "he feels like flying",
+            "D": "he feels so handsome"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 46,
+          "type": "multiple_choice",
+          "question": "Even though they had a nasty fight, they decided to bury the hatchet and move on.",
+          "options": {
+            "A": "kill the enemy",
+            "B": "remember the past",
+            "C": "bury the dead",
+            "D": "forget the past quarrel"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 47,
+          "type": "multiple_choice",
+          "question": "My father always reminds us, “don’t count your chickens before the eggs have hatched.”",
+          "options": {
+            "A": "Don’t eat your eggs before they are cooked.",
+            "B": "Don’t make plans for something that might not happen.",
+            "C": "Don’t deal with your problems before they are solved.",
+            "D": "All of the above."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 48,
+          "type": "multiple_choice",
+          "question": "iphones became so popular not only to teens, even my grandparents jumped on the bandwagon and bought some.",
+          "options": {
+            "A": "ride on the gadget and sell Apple",
+            "B": "jump for technology and sell iphones",
+            "C": "joined the new trend and bought iphones",
+            "D": "bought Android and Apple."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 49,
+          "type": "multiple_choice",
+          "question": "Sila ay nagdadamayan sa hirap at ginhawa. Sila ay totoong “naghihiramang suklay”",
+          "options": {
+            "A": "mag asawa",
+            "B": "magkapatid",
+            "C": "magkaibigan",
+            "D": "magka anak"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 50,
+          "type": "multiple_choice",
+          "question": "There is no PANACEA that will solve our financial difficulty.",
+          "options": {
+            "A": "cure-all",
+            "B": "answer",
+            "C": "paradox",
+            "D": "criteria"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 51,
+          "type": "multiple_choice",
+          "question": "DEBACLE",
+          "options": {
+            "A": "introduction",
+            "B": "conflict",
+            "C": "disaster",
+            "D": "assault"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 52,
+          "type": "multiple_choice",
+          "question": "LAGASAW",
+          "options": {
+            "A": "tunog ng pag-yak",
+            "B": "tunog ng hangin",
+            "C": "tunog ng alon",
+            "D": "tunog ng busina"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 53,
+          "type": "multiple_choice",
+          "question": "KABAL",
+          "options": {
+            "A": "sepal",
+            "B": "kaban",
+            "C": "unawa",
+            "D": "agimat"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 54,
+          "type": "multiple_choice",
+          "question": "HAGINIT",
+          "options": {
+            "A": "hagikhik",
+            "B": "hambalang",
+            "C": "handusay",
+            "D": "harurot"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 55,
+          "type": "multiple_choice",
+          "question": "DALAHIKAN",
+          "options": {
+            "A": "daungan",
+            "B": "istambayan",
+            "C": "palaruan",
+            "D": "dagat"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 56,
+          "type": "multiple_choice",
+          "question": "FORBEARANCE",
+          "options": {
+            "A": "attitude",
+            "B": "stubbornness",
+            "C": "generosity",
+            "D": "patience"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 57,
+          "type": "multiple_choice",
+          "question": "ALLEGIANCE",
+          "options": {
+            "A": "loyalty",
+            "B": "solemnity",
+            "C": "intelligence",
+            "D": "sincerity"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 58,
+          "type": "multiple_choice",
+          "question": "GRUNGY",
+          "options": {
+            "A": "fashionable",
+            "B": "brittle",
+            "C": "dirty",
+            "D": "warm"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 59,
+          "type": "multiple_choice",
+          "question": "PROSCRIBE",
+          "options": {
+            "A": "record",
+            "B": "promote",
+            "C": "forbid",
+            "D": "interpret"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 60,
+          "type": "multiple_choice",
+          "question": "HULAS",
+          "options": {
+            "A": "litaw",
+            "B": "lusaw",
+            "C": "hilaw",
+            "D": "durog"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 61,
+          "type": "multiple_choice",
+          "question": "DALAHIRA",
+          "options": {
+            "A": "matulungin",
+            "B": "tsismosa",
+            "C": "pustura",
+            "D": "madalasin"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 62,
+          "type": "multiple_choice",
+          "question": "BARAL",
+          "options": {
+            "A": "metal",
+            "B": "trangka",
+            "C": "santo",
+            "D": "sulat"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 63,
+          "type": "multiple_choice",
+          "question": "DULANG",
+          "options": {
+            "A": "mahabang hapag",
+            "B": "uri ng isda",
+            "C": "malungkot na drama",
+            "D": "makasaysayang tula"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 64,
+          "type": "multiple_choice",
+          "question": "GULA-GULANIT",
+          "options": {
+            "A": "lukot-lukot",
+            "B": "punit-punit",
+            "C": "iba-ibang kulay",
+            "D": "buhol-buhol"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 65,
+          "type": "multiple_choice",
+          "question": "LAGAK",
+          "options": {
+            "A": "tuyot",
+            "B": "tungga",
+            "C": "pigtal",
+            "D": "deposito"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 66,
+          "type": "multiple_choice",
+          "question": "CANTANKEROUS",
+          "options": {
+            "A": "ill-advised",
+            "B": "offensive",
+            "C": "greasy",
+            "D": "quarrelsome"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 67,
+          "type": "multiple_choice",
+          "question": "PERAMBULATE",
+          "options": {
+            "A": "move back and forth",
+            "B": "walk",
+            "C": "disbelieve",
+            "D": "investigate\nIdiomatic Expression & Correct Grammar/Spelling:"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 68,
+          "type": "multiple_choice",
+          "question": "1. A pretty penny means _____________.",
+          "options": {
+            "A": "If something costs a pretty penny, it is very expensive.",
+            "B": "If something costs a pretty penny, it is very inexpensive.",
+            "C": "If something costs a pretty penny, it is very precious.",
+            "D": "If something costs a pretty penny, it is very unimportant."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 69,
+          "type": "multiple_choice",
+          "question": "Come out of your shell means _____________.",
+          "options": {
+            "A": "If someone comes in of their shell, they never stop being shy and withdrawn and\nbecome more unfriendly and sociable.",
+            "B": "If someone comes out of their shell, they stop being shy and withdrawn and\nbecome more friendly and sociable.",
+            "C": "If someone comes out of their shell, they never stop being shy and withdrawn\nand become more friendly and sociable.",
+            "D": "If someone comes in of their shell, they stop being shy and withdrawn\nand become more un friendly and unsociable."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 70,
+          "type": "multiple_choice",
+          "question": "Derring-do means _________.",
+          "options": {
+            "A": "If a person shows derring-do, they show unwillingness.",
+            "B": "If a person shows derring-do, they show shyness.",
+            "C": "If a person shows derring-do, they show great courage.",
+            "D": "If a person shows derring-do, they show pettiness."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 71,
+          "type": "multiple_choice",
+          "question": "Hot water means ___________.",
+          "options": {
+            "A": "If you get into hot water, you get into trouble.",
+            "B": "If you get into hot water, you get a lucky day.",
+            "C": "If you get into hot water, you get a bad day.",
+            "D": "If you get into hot water, you get a burn skin."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 72,
+          "type": "multiple_choice",
+          "question": "Keep abreast means __________.",
+          "options": {
+            "A": "If you keep abreast of things, you stay uninformed about developments.",
+            "B": "If you keep abreast of things, you stay informed about developments.",
+            "C": "If you keep abreast of things, you stay informed about things.",
+            "D": "If you keep abreast of things, you stay informed about life"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 73,
+          "type": "multiple_choice",
+          "question": "There are times when you must decide and \"take the bull by the horns.\"",
+          "options": {
+            "A": "make the right decision",
+            "C": "make a bold decision",
+            "B": "make the wrong decision",
+            "D": "make a final decision"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 74,
+          "type": "multiple_choice",
+          "question": "He \"leads a dog's life\" really because his freedom is always curtailed.",
+          "options": {
+            "A": "never knows what to do",
+            "C": "never goes out",
+            "B": "sometimes does something wrong",
+            "D": "never does what he wants"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 75,
+          "type": "multiple_choice",
+          "question": "No-one ever mentions him because he's regarded as the \"black sheep of the family.\"",
+          "options": {
+            "A": "the one with a sense of humour",
+            "C": "the one who is always late",
+            "B": "the one with a bad reputation",
+            "D": "the one who never washes"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 76,
+          "type": "multiple_choice",
+          "question": "I shouldn't go outside without a raincoat because \"it's raining cats and dogs.\"",
+          "options": {
+            "A": "it's just started to rain",
+            "C": "it's raining very heavily",
+            "B": "it's going to rain",
+            "D": "it's raining a little"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 77,
+          "type": "multiple_choice",
+          "question": "You shouldn't sign there I think he's about \"to make a monkey out of you.\"",
+          "options": {
+            "A": "to make a fool of you",
+            "C": "to make you feel stupid",
+            "B": "to make you lose money",
+            "D": "to make you lose interest\nFor each of the following sentences, choose the correct spelling for the missing word."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 78,
+          "type": "multiple_choice",
+          "question": "She had to buy a ________ of shoes to match her dress.",
+          "options": {
+            "A": "pair",
+            "B": "pear",
+            "C": "pare",
+            "D": "peer"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 79,
+          "type": "multiple_choice",
+          "question": "The ________ of the school asked all faculty members to attend a meeting.",
+          "options": {
+            "A": "principal",
+            "B": "principle",
+            "C": "precept"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 80,
+          "type": "multiple_choice",
+          "question": "The ________ of the perfume was intoxicating.",
+          "options": {
+            "A": "accent",
+            "B": "sent",
+            "C": "cent",
+            "D": "scent"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 81,
+          "type": "multiple_choice",
+          "question": "The room was completely ________ of furniture.",
+          "options": {
+            "A": "beer",
+            "B": "bear",
+            "C": "bare"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 82,
+          "type": "multiple_choice",
+          "question": "________ only four o’clock in the afternoon.",
+          "options": {
+            "A": "It’s",
+            "B": "Its",
+            "C": "He’s"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 83,
+          "type": "multiple_choice",
+          "question": "Creativity is ________ best asset.",
+          "options": {
+            "A": "you’re",
+            "B": "your"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 84,
+          "type": "multiple_choice",
+          "question": "The ________ in the mountains was peaceful and still.",
+          "options": {
+            "A": "air",
+            "B": "heir",
+            "C": "ear",
+            "D": "ere"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 85,
+          "type": "multiple_choice",
+          "question": "Take the ________ to the second floor.",
+          "options": {
+            "A": "steers",
+            "B": "stares",
+            "C": "stairs"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 86,
+          "type": "multiple_choice",
+          "question": "She boarded a ________ to San Francisco last night.",
+          "options": {
+            "A": "plane",
+            "B": "plain"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 87,
+          "type": "multiple_choice",
+          "question": "He had a reputation for being very ___and self-centered.",
+          "options": {
+            "A": "vain",
+            "B": "vane",
+            "C": "vein\nAnalogy and Logic Test"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 88,
+          "type": "multiple_choice",
+          "question": "Genuine : Authentic : : Mirage : _____",
+          "options": {
+            "A": "Illusion",
+            "B": "Image",
+            "C": "Hideout",
+            "D": "Reflection"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 89,
+          "type": "multiple_choice",
+          "question": "SECLUSION : HERMIT ::",
+          "options": {
+            "A": "wealth: embezzler",
+            "B": "ambition : philanthropist",
+            "C": "domination : athlete",
+            "D": "turpitude : introvert",
+            "E": "injustice : lawyer"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 90,
+          "type": "multiple_choice",
+          "question": "philanthropist : munificence ::",
+          "options": {
+            "A": "aristocrat : gratitude",
+            "B": "skeptic : disbelief",
+            "C": "symptom : treatment",
+            "D": "anomaly : plausibility",
+            "E": "cynic : melancholy"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 91,
+          "type": "multiple_choice",
+          "question": "Vague : Nebulous : :",
+          "options": {
+            "A": "spectacular : legitimate",
+            "B": "mundane : commonplace",
+            "C": "magical : impressive",
+            "D": "steep : shallow"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 92,
+          "type": "multiple_choice",
+          "question": "Diaphanous : Opaque",
+          "options": {
+            "A": "dishevelled : messy",
+            "B": "disconsolate : happy",
+            "C": "disrespectful : injurious",
+            "D": "disallow : reject",
+            "E": "distraught : calm"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 93,
+          "type": "multiple_choice",
+          "question": "FRAME : PICTURE",
+          "options": {
+            "A": "display : museum",
+            "B": "shelf : refrigerator",
+            "C": "mechanic : electrician",
+            "D": "nail : hammer",
+            "E": "fence : backyard"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 94,
+          "type": "multiple_choice",
+          "question": "SEARCH : FIND",
+          "options": {
+            "A": "sleep : wake",
+            "B": "explore : discover",
+            "C": "draw : paint",
+            "D": "think : relate",
+            "E": "walk : run"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 95,
+          "type": "multiple_choice",
+          "question": "PHARMACY : DRUGS",
+          "options": {
+            "A": "mall : store",
+            "B": "doctor : medicine",
+            "C": "bakery : bread",
+            "D": "supermarket : discount store",
+            "E": "toys : games"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 96,
+          "type": "multiple_choice",
+          "question": "LAYER : TIER",
+          "options": {
+            "A": "section : segment",
+            "B": "dais : speaker",
+            "C": "curtain : stage",
+            "D": "chapter : verse",
+            "E": "cotton : bale"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 97,
+          "type": "multiple_choice",
+          "question": "METROPOLITAN : URBAN",
+          "options": {
+            "A": "bucolic : rural",
+            "B": "sleepy : nocturnal",
+            "C": "agricultural : cow",
+            "D": "autumn : harvest",
+            "E": "agrarian : generous"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 98,
+          "type": "multiple_choice",
+          "question": "TEACHER : SCHOOL",
+          "options": {
+            "A": "actor : role",
+            "B": "mechanic : engine",
+            "C": "jockey : horse",
+            "D": "judge : courthouse",
+            "E": "author : book"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 99,
+          "type": "multiple_choice",
+          "question": "CAR : GASOLINE",
+          "options": {
+            "A": "truck : trailer",
+            "B": "car : garage",
+            "C": "bicycle : feet",
+            "D": "boat : ocean",
+            "E": "deck : house"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 100,
+          "type": "multiple_choice",
+          "question": "RUN: JOG",
+          "options": {
+            "A": "trot : race",
+            "B": "swim : dive",
+            "C": "dance : ballet",
+            "D": "juggle : bounce",
+            "E": "rain : drizzle"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 101,
+          "type": "multiple_choice",
+          "question": "RADIO : TELEVISION",
+          "options": {
+            "A": "electricity : lightning",
+            "B": "up : down",
+            "C": "ear : eye",
+            "D": "nose : face",
+            "E": "old : new"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 102,
+          "type": "multiple_choice",
+          "question": "TAILOR : SUIT",
+          "options": {
+            "A": "scheme : agent",
+            "B": "edit : manuscript",
+            "C": "revise : writer",
+            "D": "mention : opinion",
+            "E": "implode : building"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 103,
+          "type": "multiple_choice",
+          "question": "The history book has more pages from the poetry book, but fewer pages than the math book.\nThe math book has more pages than the science book but fewer pages than the English book.\nThe poetry book has the fewest pages.\nIf the first two statements are true, the third is",
+          "options": {
+            "A": "true",
+            "B": "false",
+            "C": "uncertain"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 104,
+          "type": "multiple_choice",
+          "question": "Subscribing to Cable T.V. is a luxury. All luxuries are needles expenditures. Having a cellular phone is not\na luxury. Dining in a Five-Star hotel is a needless expenditure\nCONCLUSION:",
+          "options": {
+            "A": "Having a cellular phone is not a needless expenditure",
+            "B": "Subscribing to Cable TV is a needless expenditure",
+            "C": "Subscribing to cable TV is not a needless expenditure",
+            "D": "Dining in a Five-Star hotel is not a luxury",
+            "E": "Dining in a Five-Star hotel is a luxury"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 105,
+          "type": "multiple_choice",
+          "question": "A factory worker has five children. No one else in the factory has five children.",
+          "options": {
+            "A": "All workers in the factory have five children each.",
+            "B": "Everybody in the factory has children.",
+            "C": "Some of the factory workers have more than five children.",
+            "D": "Only one worker in the factory has exactly five children."
+          },
+          "answer": "D"
+        },
+        {
+          "number": 106,
+          "type": "multiple_choice",
+          "question": "Television convinces viewers that the likelihood of their becoming the victim of a violent crime is extremely\nhigh; at the same time by its very nature, TV persuades viewers to passively accept whatever happens to\nthem.",
+          "options": {
+            "A": "TV viewing promotes criminal behaviour.",
+            "B": "TV viewers are most likely to be victimized than others.",
+            "C": "People should not watch TV.",
+            "D": "TV promotes a feeling of helpless vulnerability in viewers."
+          },
+          "answer": "D"
+        },
+        {
+          "number": 107,
+          "type": "multiple_choice",
+          "question": "The government is soon going to introduce a bill which would permit the instituting of private universities\nunder very strict directions.",
+          "options": {
+            "A": "We have some private universities in our country even now.",
+            "B": "The demand for more universities is being stepped up.",
+            "C": "Such directions can also be issued without informing the Parliament.",
+            "D": "The government gives directions to establish anything in private sector.",
+            "E": "Unless and until the directions are given, the private universities can charge exorbitant fees."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 108,
+          "type": "multiple_choice",
+          "question": "All the tulips in Zoe’s garden are white.\nAll the pansies in Zoe’s garden are yellow.\nAll the flowers in Zoe’s garden are either white or yellow.\nIf the first two statements are true, the third statement is",
+          "options": {
+            "A": "true.",
+            "B": "false.",
+            "C": "uncertain."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 109,
+          "type": "multiple_choice",
+          "question": "Tom puts on his socks before he puts on his shoes.\nHe puts on his shirt before he puts on his jacket.\nTom puts on his shoes before he puts on his shirt.\nIf the first two statements are true, the third statement is",
+          "options": {
+            "A": "true.",
+            "B": "false.",
+            "C": "uncertain."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 110,
+          "type": "multiple_choice",
+          "question": "Three pencils cost the same as two erasers.\nFour erasers cost the same as one ruler.\nPencils are more expensive than rulers.\nIf the first two statements are true, the third statement is",
+          "options": {
+            "A": "true.",
+            "B": "false.",
+            "C": "uncertain."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 111,
+          "type": "multiple_choice",
+          "question": "A jar of jelly beans contains more red beans than green.\nThere are more yellow beans than red.\nThe jar contains fewer yellow jelly beans than green ones.\nIf the first two statements are true, the third statement is",
+          "options": {
+            "A": "true.",
+            "B": "false.",
+            "C": "uncertain."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 112,
+          "type": "multiple_choice",
+          "question": "A toothpick is useful.\nUseful things are valuable.\nA toothpick is valuable.\nIf the first two statements are true, the third statement is",
+          "options": {
+            "A": "true.",
+            "B": "false.",
+            "C": "uncertain.\nReading Comprehension"
+          },
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "reading-comprehension",
+      "title": "Reading Comprehension",
+      "description": "Critical reading, passage analysis, main ideas, and inferential comprehension.",
+      "questions": [
+        {
+          "number": 113,
+          "type": "multiple_choice",
+          "question": "Famous Beach in the Philippines",
+          "options": {
+            "B": "The Beach of Boracay",
+            "C": "Boracay, a Blessed Island",
+            "D": "Why People Go to Boracay"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 114,
+          "type": "multiple_choice",
+          "question": "Malaysia Airline Flight MH370’s disappearance is still under investigation. Many countries joined in the search for what really happened and where the aircraft is now. The flight lost contact with air traffic controllers about an hour after its take off. The weather was fine when the aircraft was flying so it adds more theories about other possible reasons of the aircraft’s fate. The oil slick spotted off Vietnam’s coast turned out to be fuel oil used in cargo ships so it has nothing to do with the aircraft. Interpol also says the disappearance of the jet plane has nothing to do with terrorist attack. More questions are adding to this quest and no specific answer is given and proven yet. The above selection supports the idea:",
+          "options": {
+            "A": "That Flight MH370 is somewhere under the sea",
+            "B": "That Flight MH370’s disappearance is still a mystery",
+            "C": "That Flight MH370 must have crashed after loss contact",
+            "D": "That Flight MH370 is in Bermuda Triangle"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 115,
+          "type": "multiple_choice",
+          "question": "Flappy Bird, a mobile game created in 2013 by Dong Nguyen from Vietnam became a hit at the start of 2014. At the end of January 2014, it was the most downloaded game in the iOS App Store. The game is extremely addictive and difficult so users strive harder to score higher. Due to its intense popularity, the creator decided to remove it from the App Store. Because of its millions of downloads, Nguyen claimed he was making $50,000 per day from it. The demand of Flappy Bird made some gadgets owners to sell their devices with Flappy Bird installed for twice or thrice their original price. What is the best title for the above article?",
+          "options": {
+            "A": "Most Downloaded Game",
+            "B": "The Demand of Flappy Bird Game",
+            "C": "Flappy Bird App"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 116,
+          "type": "multiple_choice",
+          "question": "The Rise of Game Apps",
+          "options": {
+            "D": "Global climate change and its effects are occurring and are likely to increase over time.",
+            "A": "Climate change will continue to get worse until humanity takes serious actions to stop it.",
+            "B": "Global climate change is happening on earth now.",
+            "C": "The effects of climate change are getting extremely dangerous."
+          },
+          "answer": "D"
+        },
+        {
+          "number": 117,
+          "type": "multiple_choice",
+          "question": "Mark Zuckerberg, Co-Founder and CEO of Facebook spoke with President Barack Obama to discuss about internet privacy impositions by the U.S. government. Zuckerberg said, “The Internet works because most people and companies do the same. We work together to create this secure environment and make our shared space even better for the world. This is why I’ve been so confused and frustrated by the repeated reports of the behavior of the U.S. government. When our engineers work tirelessly to improve security, we imagine we’re protecting you against criminals, not our own government. The U.S. government should be the champion for the Internet, not a threat. It needs to be much more transparent about what it’s doing, or people will believe the worst. I’ve called President Obama to express my frustration over the damage the government is creating for all of our future. Unfortunately, it seems like it will take a very long time for true full reform. So it’s up to us — all of us — to build the Internet we want. Together, we can build a space that is greater and a more important part of the world than anything we have today, but is also safe and secure. I’m committed to seeing this happen, and you can count on Facebook to do our part.” Why is Internet Privacy very important to all of us?",
+          "options": {
+            "A": "Because it is not safe to trust anyone with our online accounts.",
+            "B": "Because nobody really owns the internet. It is a free space.",
+            "C": "Because it protects and secures not only our online accounts but also our online activities.",
+            "D": "Because the government’s protection is not enough."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 118,
+          "type": "multiple_choice",
+          "question": "Search Engine Optimization a.k.a. SEO is vital for a website to stay successful for a long time. The world of internet continues to evolve so website owners must stay in the game by making updates while practicing effective SEO. Great content and correct SEO are the blood of a website because without them, a site could die. The paragraph is mainly about what?",
+          "options": {
+            "A": "The importance of Search Engine Optimization",
+            "B": "The life of a successful website",
+            "C": "The secrets of making a website successful",
+            "D": "How to apply Search Engine Optimization"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 119,
+          "type": "multiple_choice",
+          "question": "There are around 2 million Filipinos without jobs today. That includes graduates and undergraduates. According to survey, there will be another half- million to graduate this year without possible job placements. Unemployed people complain about job shortage. Many go to the cities to apply to some companies but end up going home with nothing. Unemployment rate increases each year even though there are many job fairs. The paragraph states that…",
+          "options": {
+            "A": "Unemployment in the Philippines is common",
+            "B": "Unemployment rate in the Philippines is seriously increasing",
+            "C": "Unemployment in the Philippines must be solved",
+            "D": "Unemployment solutions for Filipinos"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 120,
+          "type": "multiple_choice",
+          "question": "“In the Olympic Peninsula of northwest Washington State, a small town named Forks exists under a near-constant cover of clouds. It rains on this inconsequential town more than any other place in the United States of America. It was from this town and its gloomy, omnipresent shade that my mother escaped with me when I was only a few months old. It was in this town that I’d been compelled to spend a month every summer until I was fourteen. That was the year I finally put my foot down; these past three summers, my dad, Charlie, vacationed with me in California for two weeks instead. It was to Forks that I now exiled myself – an action that I took with great horror. I detested Forks. I loved Phoenix. I loved the sun and the blistering heat. I loved the vigorous, sprawling city.” -Stephenie Meyer, “The Twilight Saga” Provide the specific setting of the story",
+          "options": {
+            "A": "Phoenix",
+            "B": "Rainy day",
+            "C": "Forks, Washington",
+            "D": "Twilight"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 121,
+          "type": "multiple_choice",
+          "question": "“It’s twenty-five after six and the sky still has some shades of purple and orange…oh well just like me, I am standing here, in this secretive rooftop, overjoyed…yet there are still some fragments of fear and haze… I wonder if the sky is glad and excited about the night or if it is crying over the bright day that passed.”              – Fehl Dungo – “Higher than the Rooftop” What is the mood of the story?",
+          "options": {
+            "A": "Happiness",
+            "B": "Sorrow",
+            "C": "Confusion",
+            "D": "Grief"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 122,
+          "type": "multiple_choice",
+          "question": "Investing has been a hot topic for quite a while. Many people especially employees and entrepreneurs don’t rely on time deposits and regular savings account to save and earn interests. The most common investments in the Philippines are through real estates, mutual funds and trust funds. Although few people also join trading in the stock market, more and more Filipinos are not reluctant to invest their money and diversify them to different money making wheels. What does the article try to convey?",
+          "options": {
+            "A": "DCBA                  2. DACB                 3. DABC                   4. DCAB",
+            "B": " A. It is very vital to have social media presence however personal blogs serve as web domains. B. Most people including celebrities and businessmen have blogs nowadays. C. Therefore, building them will help anyone in promoting himself or his business. D. Apparently blogs are like our offices only they are in the internet.",
+            "C": " A. The basic steps in building a website are easy to remember and registering a domain name is the usual priority. B. Designing a layout will come after that. C. Finally, adding more content and social media presence are required to keep your site active. D. Then you need a hosting provider to host your site’s content in the World Wide Web.",
+            "D": " A. Speaking in English every day is also proven effective. B. Another way is watching English movies and TV shows particularly with English subtitles. C. Reading articles in books, newspapers, and magazines is just among the helpful ways. D. There are many ways to improve and develop English proficiency.",
+            "E": " A. Others don’t realize yet what to pursue because they have many dreams. B. Finding the right course in college is one of the most challenging decisions anyone can make. C. Some people want to pursue their dreams ever since they were just little. D. Indeed destiny is a matter of choice."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 123,
+          "type": "multiple_choice",
+          "question": "READING COMPREHENSION\nThere are no effective boundaries when it comes to pollutants. Studies have shown that toxic insecticides that\nhave been banned in many countries are riding the wind from countries where they remain legal. Compounds\nsuch as DDT and toxaphene have been found in remote places like the Yukon and other Arctic regions.\nThis paragraph best supports the statement that",
+          "options": {
+            "A": "toxic insecticides such as DDT have not been banned throughout the world.",
+            "B": "more pollutants find their way into polar climates than they do into warmer areas.",
+            "C": "studies have proven that many countries have ignored their own anti-pollution laws.",
+            "D": "DDT and toxaphene are the two most toxic insecticides in the world."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 124,
+          "type": "multiple_choice",
+          "question": "READING COMPREHENSION\nMost researchers in needy countries are based on the thinking and approach of the highly developed Western\nworld, and seldom have they been directed toward meeting the countries; own development needs.\nThe sentence best supports the statement that _________.",
+          "options": {
+            "A": "highly developed countries offer the best guide for the development of needy countries",
+            "B": "most researchers done in needy countries are missing their objectives",
+            "C": "most researchers have universal application",
+            "D": "needy countries need researchers to help them reach the status of the western world",
+            "E": "needy countries spend so much time for conducting researchers"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 125,
+          "type": "multiple_choice",
+          "question": "Critical reading is a demanding process. To read critically, you must slow down your reading and, with\npencil in hand, perform specific operations on the text. Mark up the text with your reactions, conclusions, and\nquestions. When you read, become an active participant.\nThis paragraph best supports the statement that",
+          "options": {
+            "A": "critical reading is a slow, dull, but essential process.",
+            "B": "the best critical reading happens at critical times in a person’s life.",
+            "C": "readers should get in the habit of questioning the truth of what they read.",
+            "D": "critical reading requires thoughtful and careful attention.",
+            "E": "critical reading should take place at the same time each day."
+          },
+          "answer": "D"
+        },
+        {
+          "number": 126,
+          "type": "multiple_choice",
+          "question": "Two person look out through the same bars; one sees mud and the other, the stars.\nThe sentence best supports the statement that __________.",
+          "options": {
+            "A": "some people are more blind than others",
+            "B": "people see things differently depending on their own perspective",
+            "C": "people have varied ways of looking at different things",
+            "D": "people have different tastes and interests",
+            "E": "people tend to influence one another’s views of things"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 127,
+          "type": "multiple_choice",
+          "question": "Nagawang mabago ng mga kasalukuyang awitin ang kamalayan ng Pilipino upang kantahin ang sarili\nniyang mga awit sa tanging wikang nakapagsasatinig sa kanyang kaluluwa.\nIsinasaad ng pangungusap na __________.",
+          "options": {
+            "A": "madamdamin at makabuluhan ang mga awiting isinulat sa wikang Pilipino",
+            "B": "tagumpay ang mga awiting Pilipino na mabago ang kaugalian ng mga tao Pilipino",
+            "C": "madaling matutuhan ang mga awiting Pilipino dahil ang mga ito ay nasusulat sa katutubong wika",
+            "D": "natututuhan nang tangkilikin ng mga Pilipino ang kanilang mga sariling awitin",
+            "E": "nagkakaroon na ng kamalayan ang mga Pilipino tungkol sa lahat ng mga awitin ngayon"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 128,
+          "type": "multiple_choice",
+          "question": "Sixty years ago I know everything ; now I know nothing ; education is a progressive discovery of our own\nignorance.\nThe sentence best supports the statement that __________.",
+          "options": {
+            "A": "the older we get, the more we forget what we have learned",
+            "B": "the older we get, the more knowledgeable we become",
+            "C": "the more we learn, the more we realize that there’s more we need to know",
+            "D": "we learn more as we grow old",
+            "E": "ignorance is a lifelong experience"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 129,
+          "type": "multiple_choice",
+          "question": "In a modern economy, the results of long-range planning frequently depend upon the future value of\nmoney. The ability then to predict the value of money is a key to economic progress.\nThe paragraph best supports the statement that _________.",
+          "options": {
+            "A": "the value of money is unpredictable at times",
+            "B": "the unpredictability of money is an obstacle to a nation’s prosperity",
+            "C": "economic progress is facilitated by properly controlling budgetary expenses",
+            "D": "long-range planning is unheard of in traditional economies",
+            "E": "financial planning is indispensable in modern economy"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 130,
+          "type": "multiple_choice",
+          "question": "Ang pagbaba ng halaga ng piso lumikha ng krisis sa maraming industriya ng bansa. Kasunod nito ang\npagtitipid at problema sa kawalan ng mapasukang trabaho. Lumikha rin ito ng pagtataas ng presyo ng mga\nbilihin na labis nakaapekto sa kita ng mga manggagawa.\nAyon sa talata __________.",
+          "options": {
+            "A": "ang kasalukuyang krisis ay bunga ng mga mahal na bilihin at kawalan ng mapasukang trabaho.",
+            "B": "ang krisis ay nakaapekto sa hangarin ng maraming industriya na makapagbigay ng karagdagang sahod sa\nkanilang mga manggagawa",
+            "C": "dumarami ang mga walang hanapbuhay at tumataas ang halaga ng mga bilihin dahil sa krisis",
+            "D": "maraming industriya ang nalulugi dahil sa krisis kaya itinataas din nila ang presyo ng kanilang mga produkto",
+            "E": "dahil sa krisis, maraming industriya ang napilitang magsara\nQuestions 84–92 are about the following passage.\nWhen another old cave is discovered in the south of France, it is not usually news. Rather, it is an ordinary\nevent. Such discoveries are so frequent these days that hardly anybody pays heed to them.\nHowever, when the Lascaux cave complex was discovered in 1940, the world was amazed. Painted directly on\nits walls were hundreds of scenes showing how people lived thousands of years ago. The scenes show people\nhunting animals, such as bison or wild cats. Other images depict birds and, most noticeably, horses, which\nappear in more than 300 wall images, by far outnumbering all other animals.\nEarly artists drawing these animals accomplished a monumental and difficult task. THEY did not limit\nthemselves to the easily accessible walls but carried their painting materials to spaces that required climbing\nsteep walls or crawling into narrow passages in the Lascaux complex. Unfortunately, the paintings have been\nexposed to the destructive action of water and temperature changes, which easily wear the images away.\nBecause the Lascaux caves have many entrances, air movement has also damaged the images inside.\nAlthough they are not out in the open air, where natural light would have destroyed them long ago, many of the\nimages have deteriorated and are barely recognizable. To prevent further damage, the site was closed to\ntourists in 1963, 23 years after it was discovered."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 131,
+          "type": "multiple_choice",
+          "question": "Which title best summarizes the main idea of the passage?",
+          "options": {
+            "A": "Wild Animals in Art",
+            "B": "Hidden Prehistoric Paintings",
+            "C": "Exploring Caves Respectfully",
+            "D": "Determining the Age of French Caves"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 132,
+          "type": "multiple_choice",
+          "question": "In 2nd sentence, the words pays heed to are closest in meaning to _______.",
+          "options": {
+            "A": "discovers",
+            "B": "watches",
+            "C": "notices",
+            "D": "buys"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 133,
+          "type": "multiple_choice",
+          "question": "Based on the passage, what is probably true about the south of France?",
+          "options": {
+            "A": "It is home to rare animals.",
+            "B": "It has a large number of caves.",
+            "C": "It is known for horse-racing events.",
+            "D": "It has attracted many famous artists."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 134,
+          "type": "multiple_choice",
+          "question": "According to the passage, which animals appear most often on the cave walls?",
+          "options": {
+            "A": "Birds",
+            "B": "Bison",
+            "C": "Horses",
+            "D": "Wild cats"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 135,
+          "type": "multiple_choice",
+          "question": "the word depict is closest in meaning to _______.",
+          "options": {
+            "A": "show",
+            "B": "hunt",
+            "C": "count",
+            "D": "draw"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 136,
+          "type": "multiple_choice",
+          "question": "Why was painting inside the Lascaux complex a difficult task?",
+          "options": {
+            "A": "It was completely dark inside.",
+            "B": "The caves were full of wild animals.",
+            "C": "Painting materials were hard to find.",
+            "D": "Many painting spaces were difficult to reach."
+          },
+          "answer": "D"
+        },
+        {
+          "number": 137,
+          "type": "multiple_choice",
+          "question": "In the 3rd paragraph, the word THEY refers to _______.",
+          "options": {
+            "A": "walls",
+            "B": "artists",
+            "C": "animals",
+            "D": "materials"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 138,
+          "type": "multiple_choice",
+          "question": "According to the passage, all of the following have caused damage to the paintings EXCEPT _______.",
+          "options": {
+            "A": "temperature changes",
+            "B": "air movement",
+            "C": "water",
+            "D": "light"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 139,
+          "type": "multiple_choice",
+          "question": "What does the passage say happened at the Lascaux caves in 1963?",
+          "options": {
+            "A": "Visitors were prohibited from entering.",
+            "B": "A new lighting system was installed.",
+            "C": "Another part was discovered.",
+            "D": "A new entrance was created.\nQuestions 93–95 are about the following passage.\nLightning is an electrical discharge that occurs in a thunderstorm. Often you’ll see it in the form of a bright “bolt”\n(or streak) coming from the sky. Lightning occurs when static electricity inside clouds builds up and causes an\nelectrical charge. What causes the static electricity? Water! Specifically, water droplets collide with ice crystals\nafter the temperature in the cloud falls below freezing. Sometimes these collisions are small, but other times\nthey’re quite large. Large collisions cause large electrical charges, and when they’re large enough, look out!\nThe hyper-charged cloud will emit a burst of lightning. This lightning looks quite impressive. For a good reason,\ntoo: A lightning bolt’s temperature gets so hot that it’s sometimes five times hotter than the sun’s surface.\nAlthough the lightning bolt is hot, though, it’s also short-lived. Because of that, when a person is unfortunate\nenough to be struck by lightning, their odds of surviving are pretty good. Statistics show that 90% of victims\nsurvive a lightning blast. Oh, and that old saying, “Lightning never strikes twice in the same spot”? It’s a myth!\nMany people report surviving lightning blasts three or more times. What’s more, lightning strikes some\nskyscrapers multiple times. The other prominent feature of lightning storms is the thunder. This is caused by\nthe super-heated air around a lightning bolt expands at the speed of sound. We hear thunder after seeing the\nlightning bolt because sound travels slower than the speed of light. In reality, though, both occur at the same\nmoment."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 140,
+          "type": "multiple_choice",
+          "question": "What can we infer from this passage?",
+          "options": {
+            "A": "An electrical discharge in the clouds causes lightning.",
+            "B": "Lightning is not as hot as the temperature of the sun’s surface.",
+            "C": "The sound that lightning makes occurs when electricity strikes an object.",
+            "D": "We hear lightning before we see it."
+          },
+          "answer": "A"
+        },
+        {
+          "number": 141,
+          "type": "multiple_choice",
+          "question": "Being struck by lightning means:",
+          "options": {
+            "A": "Instant death.",
+            "B": "Less than a fifty percent chance of survival.",
+            "C": "A ninety percent chance of surviving the strike.",
+            "D": "An eighty percent chance of survival."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 142,
+          "type": "multiple_choice",
+          "question": "Lightning is caused by the following:",
+          "options": {
+            "A": "Water droplets colliding with ice crystals creating static electricity.",
+            "B": "Friction from the clouds rubbing together.",
+            "C": "Water droplets colliding.",
+            "D": "Warm and cold air mixing together.\nParagraph Organization"
+          },
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "paragraph-organization",
+      "title": "Paragraph Organization",
+      "description": "Sentence sequencing, coherent ordering, and structural transition analysis.",
+      "questions": [
+        {
+          "number": 143,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. One effective way is to diversify his funds to different investments like real \nestate, \nstocks \nand \nmoney \ninstruments \nlike \nbonds \nand \ntrust \nfunds. \nB. It is always best to expand money to different investment wheels. \nC. \nA \nwise \ninvestor \nmust \nnot \nput \nall \nhis \neggs \nin \none \nbasket. \nD. He should always consider the risks involved in investing his money.",
+          "options": {
+            "A": "CBAD",
+            "B": "CBDA",
+            "C": "CDAB",
+            "D": "CDBA"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 144,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. It is very vital to have social media presence however personal blogs serve as \nweb \ndomains. \nB. Most people including celebrities and businessmen have blogs nowadays. \nC. Therefore, building them will help anyone in promoting himself or his business. \nD. Apparently blogs are like our offices only they are in the internet.",
+          "options": {
+            "A": "BDAC",
+            "B": "BADC",
+            "C": "BACD",
+            "D": "BDCA"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 145,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. The basic steps in building a website are easy to remember and registering a \ndomain \nname \nis \nthe \nusual \npriority. \nB. \nDesigning \na \nlayout \nwill \ncome \nafter \nthat. \nC. Finally, adding more content and social media presence are required to keep \nyour \nsite \nactive. \nD. Then you need a hosting provider to host your site’s content in the World Wide \nWeb.",
+          "options": {
+            "A": "ABCD",
+            "B": "ADBC",
+            "C": "ACBD",
+            "D": "ADCB"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 146,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. \nSpeaking \nin \nEnglish \nevery \nday \nis \nalso \nproven \neffective. \nB. Another way is watching English movies and TV shows particularly with English \nsubtitles. \nC. Reading articles in books, newspapers, and magazines is just among the helpful \nways. \nD. There are many ways to improve and develop English proficiency.",
+          "options": {
+            "A": "DCBA",
+            "B": "DACB",
+            "C": "DABC",
+            "D": "DCAB"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 147,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. Others don’t realize yet what to pursue because they have many dreams. \nB. Finding the right course in college is one of the most challenging decisions \nanyone \ncan \nmake. \nC. Some people want to pursue their dreams ever since they were just little. \nD. Indeed destiny is a matter of choice.",
+          "options": {
+            "A": "BDAC",
+            "B": "BCDA",
+            "C": "BADC",
+            "D": "BCAD"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 148,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. While passport, airline tickets and valid IDs are required, proof of financial \ncapacity \nmay \nbe \nrequired \nfor \nvisa \napplication. \nB. \nMany \nFilipinos \nrejoiced \nhearing \nthat \ngood \nnews. \nC. The Bureau of Immigration announced recently that proof of financial capacity \nis \nnot \na \nprimary \nrequirement \nat \nthe \nairport. \nD. Positive points go to the bureau for this.",
+          "options": {
+            "A": "CBAD",
+            "B": "CADB",
+            "C": "CABD",
+            "D": "CBDA"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 149,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. This will be one of your tickets to land a job in the government. \nB. That is why many people apply to take the Career Service examination. \nC. If you passed the exam, you will get a certificate of eligibility. \nD. Career Service Eligibility is a major requirement to apply for a job position in the \ngovernment.",
+          "options": {
+            "A": "DCBA",
+            "B": "DBAC",
+            "C": "DBCA",
+            "D": "DCAB"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 150,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. Your passport will arrive in 7 days if you choose the rush processing. \nB. \nGetting \na \npassport \nis \nfaster \nnowadays. \nC. \nNow, \nit \nonly \ntakes \nabout \n10 \nworking \ndays. \nD. Compared before, it would take about a month for the regular processing.",
+          "options": {
+            "A": "BCAD",
+            "B": "BDCA",
+            "C": "BADC",
+            "D": "BACD"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 151,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. Facebook has been the number one social network in the web and the world for \nquite \nlong \nnow. \nB. Mobile instant messaging apps are also dominating social presence in the \ninternet. \nC. After many acquisitions, Facebook bought Instagram, one of the fastest growing \nphoto \nsharing \nnetworks. \nD. Because of that, Facebook acquired WhatsApp, a leading instant chat platform \nlike Kakaotalk.",
+          "options": {
+            "A": "ACBD",
+            "B": "ABCD",
+            "C": "ADCB",
+            "D": "ADBC"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 152,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. They will help you to purchase through zero-interest installment schemes. \nB. Thus, you must be wise and pay in full if you want to avoid never-ending debts. \nC. Credit cards are helpful if you know how and when to use them wisely. \nD. However, they will produce interests from interests if you didn’t pay the whole \namount at the due date.",
+          "options": {
+            "A": "CDBA",
+            "B": "CABD",
+            "C": "CDAB",
+            "D": "CADB"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 153,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. Many innovations without proven results and follow up evaluation are educational wastages\nB. One wonders in the final analysis if these changes have been deeply rooted on basic problems of the people\nthey serve.\nC. Some curriculum changes were mere fads without foreseeable achievements.\nD. What we need are innovations that overcome the mis-education of the young.\nChoices:",
+          "options": {
+            "A": "BACD",
+            "B": "ACDB",
+            "C": "ABCD",
+            "D": "CBAD"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 154,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. By trying, man learns to solve his problems through satisfying acts and eliminate actions which are\nannoying.\nB. He used a hungry cat in a puzzled box where it tried ways to get out in order to get to the food.\nC. Edward C. Thorndike’s connectionism theory of learning establishes the trial and error way to learn.\nD. He established the fact that like the cat, man too, learns by trial and error.\nChoices:",
+          "options": {
+            "A": "ACBD",
+            "B": "BACD",
+            "C": "ACDB",
+            "D": "ABCD"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 155,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. A responsive educational system should be directed towards regional cooperation.\nB. Commonality of educational objectives should be replaced by better ways of achieving goals that fit the\nregional needs.\nC. It is necessary to revolutionize the contemporary methodologies in the teaching-learning processes.\nD. The educational goals should seek for a better way of experimentation in the teaching strategies and\ntechnologies.\nChoices:",
+          "options": {
+            "A": "ABCD",
+            "B": "ABDC",
+            "C": "BCAD",
+            "D": "DABC"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 156,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. Before, his religion was basically involved with rituals and ceremonies.\nB. The religion of the teacher helps him in reducing his fears and uncertainties.\nC. His religion responds to his needs for a means to allay fears about the uncertainty of events contrary to\nnatural laws.\nD. Religion is important because it provides spiritual nourishment for his total being.\nChoices:",
+          "options": {
+            "A": "ABCD",
+            "B": "BACD",
+            "C": "DBCA",
+            "D": "CBAD"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 157,
+          "type": "multiple_choice",
+          "question": "Arrange the following sentences in the best sequence to form a coherent paragraph:\nA. Although the government is willing to put resources to education ,alone, it cannot do the job.\nB. Education Act of 1980 provides an all encompassing activity with participation at all educational levels and\nsectors.\nC. The private schools have to be partners.\nD. The Act not only strengthens but equips the DepEd with its regulatory and developmental tasks as well",
+          "options": {
+            "A": "BACD",
+            "B": "ABCD",
+            "C": "DBCA",
+            "D": "CADB"
+          },
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "analytical-ability",
+      "title": "Analytical Ability & Logic",
+      "description": "Word Analogy, Logical Deduction, Syllogisms, and Data Interpretation.",
+      "questions": [
+        {
+          "number": 158,
+          "type": "multiple_choice",
+          "question": "Iron: metal: : granite: ______",
+          "options": {
+            "A": "rock",
+            "B": "sand",
+            "C": "solid"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 159,
+          "type": "multiple_choice",
+          "question": "Decibel: sound: : volt: ______",
+          "options": {
+            "A": "watts",
+            "B": "fire",
+            "C": "electricity",
+            "D": "lightning"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 160,
+          "type": "multiple_choice",
+          "question": "Coward: brave: : philanthropist: _______",
+          "options": {
+            "A": "selfish",
+            "B": "kind",
+            "C": "pessimist"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 161,
+          "type": "multiple_choice",
+          "question": "optimist",
+          "options": {
+            "D": "traits",
+            "A": "character",
+            "B": "behavior",
+            "C": "subject"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 162,
+          "type": "multiple_choice",
+          "question": "Antenna: signal: : net: ______",
+          "options": {
+            "A": "web",
+            "B": "catch",
+            "C": "gross",
+            "D": "fish"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 163,
+          "type": "multiple_choice",
+          "question": "Stanza: poem: : act: ______",
+          "options": {
+            "A": "movie",
+            "B": "opera",
+            "C": "song",
+            "D": "lyric"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 164,
+          "type": "multiple_choice",
+          "question": "Astrology: Astronomy: :Alchemy: _________",
+          "options": {
+            "A": "Chemistry",
+            "B": "Biology",
+            "C": "Physics",
+            "D": "Science"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 165,
+          "type": "multiple_choice",
+          "question": "Census: population: : inventory: __________",
+          "options": {
+            "A": "accounting",
+            "B": "merchandise",
+            "C": "cost",
+            "D": "list"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 166,
+          "type": "multiple_choice",
+          "question": "Oath: promise: : contract: __________",
+          "options": {
+            "A": "license",
+            "B": "contact",
+            "C": "agreement",
+            "D": "paper"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 167,
+          "type": "multiple_choice",
+          "question": "Glimmer: Flicker: : murmur: _______",
+          "options": {
+            "A": "whisper",
+            "B": "shout",
+            "C": "rumor",
+            "D": "speak"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 168,
+          "type": "multiple_choice",
+          "question": "Bouquet: flowers: : flock:",
+          "options": {
+            "A": "dogs",
+            "B": "sheep",
+            "C": "ship",
+            "D": "cats"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 169,
+          "type": "multiple_choice",
+          "question": "Rescind: law: : withdraw: _______",
+          "options": {
+            "A": "bank",
+            "B": "candidacy",
+            "C": "deposit",
+            "D": "resume"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 170,
+          "type": "multiple_choice",
+          "question": "Hoax: deceive: : filibuster: ______",
+          "options": {
+            "A": "delay",
+            "B": "refuse",
+            "C": "stop",
+            "D": "none"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 171,
+          "type": "multiple_choice",
+          "question": "Syllabus: course: :agenda: _______",
+          "options": {
+            "A": "subject",
+            "B": "platform",
+            "C": "meeting",
+            "D": "lesson"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 172,
+          "type": "multiple_choice",
+          "question": "Cat: kitten: :horse: _______",
+          "options": {
+            "A": "cab",
+            "B": "puppy",
+            "C": "stallion",
+            "D": "pony"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 173,
+          "type": "multiple_choice",
+          "question": "Evaporate: vapor: : petrify: _______",
+          "options": {
+            "A": "liquid",
+            "B": "stone",
+            "C": "magnify",
+            "D": "cold"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 174,
+          "type": "multiple_choice",
+          "question": "Canvas: painter: : marble: ________",
+          "options": {
+            "A": "sculptor",
+            "B": "rock",
+            "C": "statue",
+            "D": "form"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 175,
+          "type": "multiple_choice",
+          "question": "Hammer: anvil: : pestle: _________",
+          "options": {
+            "A": "ground",
+            "B": "grinder",
+            "C": "mortar",
+            "D": "knife"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 176,
+          "type": "multiple_choice",
+          "question": "Librarian: books: : curator: _______",
+          "options": {
+            "A": "atlas",
+            "B": "encyclopedia",
+            "C": "room",
+            "D": "paintings"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 177,
+          "type": "multiple_choice",
+          "question": "Archive: manuscript: arsenal: ________",
+          "options": {
+            "A": "soldier",
+            "B": "weapon",
+            "C": "castle",
+            "D": "king"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 178,
+          "type": "multiple_choice",
+          "question": "Bodyguard: protection: : mentor: _______",
+          "options": {
+            "A": "advice",
+            "B": "counsel",
+            "C": "teacher",
+            "D": "leader"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 179,
+          "type": "multiple_choice",
+          "question": "Novelist: plot: : Architect: _______",
+          "options": {
+            "A": "building",
+            "B": "design",
+            "C": "blueprint",
+            "D": "house"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 180,
+          "type": "multiple_choice",
+          "question": "Molecule: atoms: : tissue: _______",
+          "options": {
+            "A": "organ",
+            "B": "cells",
+            "C": "body",
+            "D": "neutrons"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 181,
+          "type": "multiple_choice",
+          "question": "Call: telephone: : type: ________",
+          "options": {
+            "A": "cellphone",
+            "B": "ipad",
+            "C": "keyboard",
+            "D": "piano"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 182,
+          "type": "multiple_choice",
+          "question": "Eavesdrop: conversation: : trespass: _________",
+          "options": {
+            "A": "property",
+            "B": "house",
+            "C": "land",
+            "D": "assets"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 183,
+          "type": "multiple_choice",
+          "question": "In which of the following years did over 2/3 of the students who took the exam not pass it?",
+          "options": {
+            "A": "2005",
+            "B": "2006",
+            "C": "2008",
+            "D": "2009",
+            "E": "Cannot say"
+          },
+          "answer": "C",
+          "image": "assets/chart_students_exam_stats.png"
+        },
+        {
+          "number": 184,
+          "type": "multiple_choice",
+          "question": "It is known that a quarter of the students who passed the exam in 2007, passed it at the first trial. Assuming\neach exam has two trials, what percentage of all the students who took the exam that year passed it in the\nsecond trial?",
+          "options": {
+            "A": "10",
+            "B": "15",
+            "C": "30",
+            "D": "75",
+            "E": "Cannot say"
+          },
+          "answer": "C",
+          "image": "assets/chart_students_exam_stats.png"
+        },
+        {
+          "number": 185,
+          "type": "multiple_choice",
+          "question": "If the number of Chinese Insurance stocks represented 3.5% of all Insurance securities, approximately how\nmany Insurance bonds were Chinese?",
+          "options": {
+            "A": "9,200,000",
+            "B": "9,500,000",
+            "C": "10,800,000",
+            "D": "910,000",
+            "E": "1,080,000\nFor questions 4 to 6,  Refer to the following graph of sales and profit figures of ABC Ltd and answer the\nquestions that follow."
+          },
+          "answer": "B",
+          "image": "assets/chart_insurance_securities.png"
+        },
+        {
+          "number": 186,
+          "type": "multiple_choice",
+          "question": "I Return on sales (Profit/sales) was highest in which year?",
+          "options": {
+            "A": "1995",
+            "B": "1996",
+            "C": "1997",
+            "D": "1998",
+            "E": "cannot say"
+          },
+          "answer": "C",
+          "image": "assets/chart_sales_profit_abc.png"
+        },
+        {
+          "number": 187,
+          "type": "multiple_choice",
+          "question": "How many times return on sales (profit/sales) exceeded 15 % ?",
+          "options": {
+            "A": "once",
+            "B": "twice",
+            "C": "thrice",
+            "D": "four times",
+            "E": "never"
+          },
+          "answer": "A",
+          "image": "assets/chart_sales_profit_abc.png"
+        },
+        {
+          "number": 188,
+          "type": "multiple_choice",
+          "question": "How many times growth in profit over the previous year exceeded 50%  was registered ?",
+          "options": {
+            "A": "once",
+            "B": "twice",
+            "C": "thrice",
+            "D": "four times",
+            "E": "never\nFor questions 7 to 9: The following graph shows the data related to Foreign Equity Inflow (FEI) for the five\ncountries for two years- 1997 and 1998. FEI is the ratio of foreign equity inflow to the country's GDP, which is\nexpressed as a percentage in the following graph."
+          },
+          "answer": "B",
+          "image": "assets/chart_sales_profit_abc.png"
+        },
+        {
+          "number": 189,
+          "type": "multiple_choice",
+          "question": "Find the ratio between FEI for Malaysia in 1997 and FEI for Thailand in 1998",
+          "options": {
+            "A": "7 : 25",
+            "B": "8 : 21",
+            "C": "6 : 11",
+            "D": "1067 : 582",
+            "E": "cannot say"
+          },
+          "answer": "D",
+          "image": "assets/chart_fdi_trends.png"
+        },
+        {
+          "number": 190,
+          "type": "multiple_choice",
+          "question": "Name the country which has the minimum change in the FEI",
+          "options": {
+            "A": "India",
+            "B": "China",
+            "C": "Malaysia",
+            "D": "S.Korea",
+            "E": "cannot say"
+          },
+          "answer": "D",
+          "image": "assets/chart_fdi_trends.png"
+        },
+        {
+          "number": 191,
+          "type": "multiple_choice",
+          "question": "If, Education sector in Thailand had 25% of FEI in 1997 and 60% of FEI in 1998, then find the approx ratio of\nthe amounts allocated to Education in 1997 to 1998. (Assume the GDPs of both of these years for Thailand is\nsame.)",
+          "options": {
+            "A": "1 : 5",
+            "B": "25 : 72",
+            "C": "6 : 11",
+            "D": "7 : 25",
+            "E": "cannot say\nfor question #10"
+          },
+          "answer": "B",
+          "image": "assets/chart_fei_currency.png"
+        },
+        {
+          "number": 192,
+          "type": "multiple_choice",
+          "question": "A rumour about an upcoming recession in Japan has reduced the value of the Yen 7% compared with the\nEuro. How many Euros can you now buy for 500 Yen?",
+          "options": {
+            "A": "3.5",
+            "B": "3.26",
+            "C": "3.15",
+            "D": "3.76",
+            "E": "None of the above\nVocabulary"
+          },
+          "answer": "B",
+          "image": "assets/chart_fei_currency.png"
+        }
+      ]
+    },
+    {
+      "id": "numerical-ability",
+      "title": "Numerical Ability",
+      "description": "Mathematical Operations, Fractions, Word Problems, Percentages, and Ratios.",
+      "questions": [
+        {
+          "number": 193,
+          "type": "multiple_choice",
+          "question": "2187, 729, 243, 81, 27, 9, ____?",
+          "options": {
+            "A": "6",
+            "B": "3",
+            "C": "4",
+            "D": "2"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 194,
+          "type": "multiple_choice",
+          "question": "1, 4, 9, 16, 25, 36, 49, 64, ___ ?",
+          "options": {
+            "A": "72",
+            "B": "75",
+            "C": "81",
+            "D": "90"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 195,
+          "type": "multiple_choice",
+          "question": "-144",
+          "options": {
+            "D": "IS KP",
+            "A": "IR KP",
+            "B": "IR KQ",
+            "C": "IS KQ"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 196,
+          "type": "multiple_choice",
+          "question": "A5 D25 G125 J625 M3125 ____?",
+          "options": {
+            "A": "P15525",
+            "B": "P15625",
+            "C": "O15525",
+            "D": "O15625"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 197,
+          "type": "multiple_choice",
+          "question": "What is -25 + 16?",
+          "options": {
+            "A": "9",
+            "B": "-9",
+            "C": "-41",
+            "D": "41"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 198,
+          "type": "multiple_choice",
+          "question": "What is 107 – (-17) ?",
+          "options": {
+            "A": "-90",
+            "B": "90",
+            "C": "124",
+            "D": "-124"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 199,
+          "type": "multiple_choice",
+          "question": "(-9) (-22) = ____?",
+          "options": {
+            "A": "198",
+            "B": "-198",
+            "C": "31",
+            "D": "-31"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 200,
+          "type": "multiple_choice",
+          "question": "(21) (-4) + (8) (-2) = ____?",
+          "options": {
+            "A": "-100",
+            "B": "100",
+            "C": "-23",
+            "D": "23"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 201,
+          "type": "multiple_choice",
+          "question": "(-560) ÷ 7 = ___?",
+          "options": {
+            "A": "-80",
+            "B": "80",
+            "C": "-553",
+            "D": "553"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 202,
+          "type": "multiple_choice",
+          "question": "6/8 + 2 ½ + 4/12 is also the same as?",
+          "options": {
+            "A": "½ + 2.5 + ¼",
+            "B": "½ + 5/2 + 1/6",
+            "C": "¾ + 2.5 + 1/6",
+            "D": "¾ + 5/2 + 1/3"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 203,
+          "type": "multiple_choice",
+          "question": "What is the Least Common Denominator of 1/8, ¾, and 1/16?",
+          "options": {
+            "A": "4",
+            "B": "8",
+            "C": "16",
+            "D": "2"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 204,
+          "type": "multiple_choice",
+          "question": "What is the Greatest Common Factor of 36 and 54?",
+          "options": {
+            "A": "6",
+            "B": "12",
+            "C": "18",
+            "D": "9"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 205,
+          "type": "multiple_choice",
+          "question": "What is the sum of ½ + 8/4 + 6/12 ?",
+          "options": {
+            "A": "15/12",
+            "B": "3/12",
+            "C": "3",
+            "D": "3 1/12"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 206,
+          "type": "multiple_choice",
+          "question": "3/9 x 2/3 = ____",
+          "options": {
+            "A": "6/27",
+            "B": "2/9",
+            "C": "9/18",
+            "D": "1/9"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 207,
+          "type": "multiple_choice",
+          "question": "¾ ÷ 1/8 = ____",
+          "options": {
+            "A": "8",
+            "B": "4",
+            "C": "12",
+            "D": "6"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 208,
+          "type": "multiple_choice",
+          "question": "What is the decimal form of ¾ %?",
+          "options": {
+            "A": ".0075",
+            "B": ".075",
+            "C": ".75",
+            "D": ".00075"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 209,
+          "type": "multiple_choice",
+          "question": "Convert 3.4% as a fraction.",
+          "options": {
+            "A": "34/100",
+            "B": ".34/100",
+            "C": "3.4/1000",
+            "D": "3.4/100"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 210,
+          "type": "multiple_choice",
+          "question": "What is ¼ in decimal?",
+          "options": {
+            "A": ".025",
+            "B": ".25",
+            "C": "2.5",
+            "D": ".0025"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 211,
+          "type": "multiple_choice",
+          "question": "What is the ratio of ½ to 2/5?",
+          "options": {
+            "A": "3:4",
+            "B": "5:4",
+            "C": "1:3",
+            "D": "2:5"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 212,
+          "type": "multiple_choice",
+          "question": "2.12 is multiplied by 10 to the sixth power is?",
+          "options": {
+            "A": "212.000",
+            "B": "2,120,000",
+            "C": "212,000",
+            "D": "21,200"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 213,
+          "type": "multiple_choice",
+          "question": "25 is multiplied by 10 to the fifth power is?",
+          "options": {
+            "A": "2,500,000",
+            "B": "250,000",
+            "C": "25,000",
+            "D": ".000025"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 214,
+          "type": "multiple_choice",
+          "question": "Find the value of x in the equation: 5x + 25 =10",
+          "options": {
+            "A": "5",
+            "B": "3",
+            "C": "-3",
+            "D": "-5"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 215,
+          "type": "multiple_choice",
+          "question": "If x=8, find the value of y in the equation: 4x – 2y = 28.",
+          "options": {
+            "A": "-4",
+            "B": "-2",
+            "C": "4",
+            "D": "2"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 216,
+          "type": "multiple_choice",
+          "question": "Find the value of x if y= 8 in the equation: 2x + 4y = 50",
+          "options": {
+            "A": "9",
+            "B": "8",
+            "C": "10",
+            "D": "4 Problem Solving / Word Problems:"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 217,
+          "type": "multiple_choice",
+          "question": "Kit is twice as old as his friend Sam. Sam is 5 years older than Cara. In 5 years, Kit will be three times as old as Cara. How old is Sam?",
+          "options": {
+            "A": "2 years old",
+            "B": "3 years old",
+            "C": "4 years old",
+            "D": "5 years old"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 218,
+          "type": "multiple_choice",
+          "question": "James’s dad is 5 times older than James and James is twice as old as his sister Sara. In two years, the sum of their ages will be 58. How old is James now?",
+          "options": {
+            "A": "6 years old",
+            "B": "7 years old",
+            "C": "8 years old",
+            "D": "9 years old"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 219,
+          "type": "multiple_choice",
+          "question": "Cathy scored 85, 87, 90, 95, and 100 in her Math exams. What will be her average grade in Math from this period?",
+          "options": {
+            "A": "91.40",
+            "B": "91.50",
+            "C": "92",
+            "D": "93.50"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 220,
+          "type": "multiple_choice",
+          "question": "Letty left home and drove at the rate of 50 miles per hour for 2 hours. She stopped for lunch then drove for another 4 hours at 65 mph to reach Los Angeles. How many miles did Letty drive to reach LA?",
+          "options": {
+            "A": "115 miles",
+            "B": "360 miles",
+            "C": "310 miles",
+            "D": "100 miles"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 221,
+          "type": "multiple_choice",
+          "question": "Michelle went to SM for the 3-day sale. She bought a new pair of shoes and paid only P2,450 discounted for 20% off. What was the original price of the shoes?",
+          "options": {
+            "A": "P3,062.50",
+            "B": "P3,260.50",
+            "C": "P3,620.50",
+            "D": "P3,026.50"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 222,
+          "type": "multiple_choice",
+          "question": "(25)^0 - (-2)^4 + (-3^4) - (-8)^2 = ?",
+          "options": {
+            "A": "2",
+            "B": "1",
+            "C": "+161",
+            "D": "+160",
+            "E": "-160"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 223,
+          "type": "multiple_choice",
+          "question": "-2^2 - (-9)^2 - (-3^2) + 15^0 = ?",
+          "options": {
+            "A": "-75",
+            "B": "+75",
+            "C": "-85",
+            "D": "+85",
+            "E": "0"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 224,
+          "type": "multiple_choice",
+          "question": "20% of 30% of X is 225 what is the value of X",
+          "options": {
+            "A": "13.5",
+            "B": "825",
+            "C": "375",
+            "D": "3750",
+            "E": "112.5"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 225,
+          "type": "multiple_choice",
+          "question": "If the perimeter of a square is doubled, what happens to the area? ______",
+          "options": {
+            "A": "the area is twice its original.",
+            "B": "the area is 4 times its original.",
+            "C": "the area is 6 times its original.",
+            "D": "the area is 8 times its original."
+          },
+          "answer": "B"
+        },
+        {
+          "number": 226,
+          "type": "multiple_choice",
+          "question": "A one forth percent of a number is 25. What is the number?",
+          "options": {
+            "A": "100",
+            "B": "1,000",
+            "C": "10,000",
+            "D": "100,000"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 227,
+          "type": "multiple_choice",
+          "question": "√0.000225 = ____?",
+          "options": {
+            "A": "15",
+            "B": "1.5",
+            "C": "0.15",
+            "D": "0.015",
+            "E": "0.0015"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 228,
+          "type": "multiple_choice",
+          "question": "√0.00000081 = ____?",
+          "options": {
+            "A": "9",
+            "B": "0.9",
+            "C": "0.09",
+            "D": "0.009",
+            "E": "0.0009"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 229,
+          "type": "multiple_choice",
+          "question": "Which of the numbers below is 650 when rounded to the nearest ten and 600 when rounded to the nearest hundred?",
+          "options": {
+            "A": "645.01",
+            "B": "645.00",
+            "C": "651.00",
+            "D": "688.00",
+            "E": "none of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 230,
+          "type": "multiple_choice",
+          "question": "Round off to the nearest hundreds place: 9,750",
+          "options": {
+            "A": "9,900",
+            "B": "9,700",
+            "C": "9,800",
+            "D": "9,760",
+            "E": "none of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 231,
+          "type": "multiple_choice",
+          "question": "Round off to the nearest hundreds place: 9,650",
+          "options": {
+            "A": "9,860",
+            "B": "9,700",
+            "C": "9,760",
+            "D": "9,600",
+            "E": "none of the above"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 232,
+          "type": "multiple_choice",
+          "question": "Number Series: 125%, 100%, 80%, 64%,____",
+          "options": {
+            "A": "60%",
+            "B": "50%",
+            "C": "42%",
+            "D": "52.5%",
+            "E": "51.2%"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 233,
+          "type": "multiple_choice",
+          "question": "Number series: 2, 10, 60, 420, ____",
+          "options": {
+            "A": "1680",
+            "B": "840",
+            "C": "3414",
+            "D": "3360",
+            "E": "4500"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 234,
+          "type": "multiple_choice",
+          "question": "The mean median and mode of 5 numbers are equal. The numbers are 7, 8, 10, 15. What is the 5th\nnumber?",
+          "options": {
+            "A": "7",
+            "B": "5",
+            "C": "10",
+            "D": "15",
+            "E": "8"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 235,
+          "type": "multiple_choice",
+          "question": "The mean median and mode of 7 numbers are equal. The numbers are 24, 22, 18, 10, 38, 32. What is\nthe 7th number?",
+          "options": {
+            "A": "24",
+            "B": "22",
+            "C": "18",
+            "D": "10",
+            "E": "32"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 236,
+          "type": "multiple_choice",
+          "question": "Number Series: 1, 2, 2, 3, 4, 4, 8, 5, __",
+          "options": {
+            "A": "6",
+            "B": "7",
+            "C": "16",
+            "D": "20",
+            "E": "none of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 237,
+          "type": "multiple_choice",
+          "question": "Number Series: 15, 7.5, 7.5, 15, 60, ____",
+          "options": {
+            "A": "480",
+            "B": "120",
+            "C": "240",
+            "D": "420",
+            "E": "none of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 238,
+          "type": "multiple_choice",
+          "question": "Round-off 2,833,333 to the nearest hundred thousands",
+          "options": {
+            "A": "2,833,300",
+            "B": "2,900,000",
+            "C": "2,833,000",
+            "D": "2,800,000",
+            "E": "none of the above"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 239,
+          "type": "multiple_choice",
+          "question": "The product of the ages of three sisters is 567. If the two sisters are twins and are 2 years older than their\nyounger sister. What is the age of their younger sister?",
+          "options": {
+            "A": "16",
+            "B": "10",
+            "C": "7",
+            "D": "8",
+            "E": "none of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 240,
+          "type": "multiple_choice",
+          "question": "Number Series: [4÷4×2], [8÷4×2], [16÷4×2], ___",
+          "options": {
+            "A": "2",
+            "B": "16",
+            "C": "32",
+            "D": "8",
+            "E": "none of the above"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 241,
+          "type": "multiple_choice",
+          "question": "A solution is made of water and pure milk. If 70% of the solution is water, how many milliliters of pure milk\nare in 1 liter of this solution?",
+          "options": {
+            "A": "30",
+            "B": "70",
+            "C": "250",
+            "D": "300",
+            "E": "none of the above"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 242,
+          "type": "multiple_choice",
+          "question": "4010 x 0.0001 = ___",
+          "options": {
+            "A": "0.00401",
+            "B": "0.0401",
+            "C": "0.401",
+            "D": "4.01",
+            "E": "40.1"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 243,
+          "type": "multiple_choice",
+          "question": "(−7)² + (−7²) =",
+          "options": {
+            "A": "0",
+            "B": "+98",
+            "C": "−98",
+            "D": "2401",
+            "E": "None of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 244,
+          "type": "multiple_choice",
+          "question": "When the first and the last digits of 2, 836 are interchanged, the new number is _____.",
+          "options": {
+            "A": "3996 more than 2,836",
+            "B": "3996 less than 2, 836",
+            "C": "1404 more than 2, 836",
+            "D": "1404 less than 2, 836",
+            "E": "none of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 245,
+          "type": "multiple_choice",
+          "question": "If twice the value of a certain number is increased by 8 the result is 40. What is the number?",
+          "options": {
+            "A": "8",
+            "B": "16",
+            "C": "24",
+            "D": "32",
+            "E": "none of the above"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 246,
+          "type": "multiple_choice",
+          "question": "Genzy's dad is 5 times as old as Genzy and Genzy is twice as old as her sister Zymie. In two years, the\nsum of their ages will be 58. How old is Genzy now?",
+          "options": {
+            "A": "4",
+            "B": "6",
+            "C": "8",
+            "D": "12",
+            "E": "none of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 247,
+          "type": "multiple_choice",
+          "question": "In a group of 120 persons, there are 32 more women than men. How many women are there in the\ngroup?",
+          "options": {
+            "A": "44",
+            "B": "88",
+            "C": "76",
+            "D": "56",
+            "E": "none of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 248,
+          "type": "multiple_choice",
+          "question": "If the dimensions of a square change in such a manner that the area remains constant, what must\nhappen to the other side if one side will be increased by 1/4 of itself?",
+          "options": {
+            "A": "it decreases by 1/5",
+            "B": "it decreases by 1/4",
+            "C": "it decreases by 1/3",
+            "D": "it decreases by 1/2",
+            "E": "none of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 249,
+          "type": "multiple_choice",
+          "question": ". If x - 3 = y, then (y - x )³ = _____ ?",
+          "options": {
+            "A": "9",
+            "B": "-27",
+            "C": "27",
+            "D": "81",
+            "E": "cannot be determined"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 250,
+          "type": "multiple_choice",
+          "question": "0.75 is to ¾ as 0.8 is to ______",
+          "options": {
+            "A": "2/3",
+            "B": "4/5",
+            "C": "5/6",
+            "D": "6/7",
+            "E": "3/5"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 251,
+          "type": "multiple_choice",
+          "question": "75% is to 1/2 as 45% is to ______",
+          "options": {
+            "A": "3/11",
+            "B": "3/10",
+            "C": "3/4",
+            "D": "2/3",
+            "E": "3/5"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 252,
+          "type": "multiple_choice",
+          "question": "0.25 is to 0.125 as to 1.25 is to ________",
+          "options": {
+            "A": "0.625",
+            "B": "1.125",
+            "C": "1.625",
+            "D": "2.125",
+            "E": "6.250"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 253,
+          "type": "multiple_choice",
+          "question": "2 is to 50 as 3.2 is to _________",
+          "options": {
+            "A": "60",
+            "B": "70",
+            "C": "80",
+            "D": "90",
+            "E": "1"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 254,
+          "type": "multiple_choice",
+          "question": "4 × 8 + 12/4 - 8/2 =",
+          "options": {
+            "A": "32",
+            "B": "31",
+            "C": "35",
+            "D": "39",
+            "E": "30"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 255,
+          "type": "multiple_choice",
+          "question": "483.43 + 123.334 + 31.5544 + 444.4 =",
+          "options": {
+            "A": "182.7184",
+            "D": "1082.7184",
+            "B": "1082.4468",
+            "E": "1082.7814",
+            "C": "1988.5678"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 256,
+          "type": "multiple_choice",
+          "question": "Which is the greatest?",
+          "options": {
+            "A": "5/12",
+            "B": "17/33",
+            "C": "52/80",
+            "D": "18/42",
+            "E": "50/70"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 257,
+          "type": "multiple_choice",
+          "question": "44 is 80% of what number?",
+          "options": {
+            "A": "50",
+            "B": "60",
+            "C": "54",
+            "D": "55",
+            "E": "70"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 258,
+          "type": "multiple_choice",
+          "question": "18+ 3 × 3 + (54/3+ -68/-4) =",
+          "options": {
+            "A": "62",
+            "B": "64",
+            "C": "26",
+            "D": "333",
+            "E": "330"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 259,
+          "type": "multiple_choice",
+          "question": "There are 3 numbers whose sum is 54; one number is double and triple times greater than the other\nnumbers, what are those numbers?",
+          "options": {
+            "A": "10, 20, 34",
+            "B": "9, 15, 30",
+            "C": "8, 16, 30",
+            "D": "9, 18, 27",
+            "E": "7, 14, 21"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 260,
+          "type": "multiple_choice",
+          "question": "At 6:30 am, Jeany told Margarette that she found Blessy 15 and ¼ hours ago, at what time Jeany found\nBlessy?",
+          "options": {
+            "A": "9:25 pm",
+            "B": "6:30pm",
+            "C": "5:25pm",
+            "D": "3:25pm",
+            "E": "3:15pm"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 261,
+          "type": "multiple_choice",
+          "question": ". If 3 siomai cost P 15 pesos, how much if Kenneth buy 12 siomais.",
+          "options": {
+            "A": "55",
+            "B": "45",
+            "C": "65",
+            "D": "60",
+            "E": "80"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 262,
+          "type": "multiple_choice",
+          "question": "What number when increased by 74 percent of itself will equal to 80?",
+          "options": {
+            "A": "43",
+            "B": "42",
+            "C": "44",
+            "D": "54",
+            "E": "46"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 263,
+          "type": "multiple_choice",
+          "question": "What is the smallest positive number which, when you divided by 3, 4 or 5, will leave a remainder of 2?",
+          "options": {
+            "A": "42",
+            "B": "22",
+            "C": "62",
+            "D": "122",
+            "E": "102"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 264,
+          "type": "multiple_choice",
+          "question": "Which of the following numbers is represented by the prime factors 2 × 3 × 7?",
+          "options": {
+            "A": "21",
+            "B": "42",
+            "C": "84",
+            "D": "237",
+            "E": "none of these"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 265,
+          "type": "multiple_choice",
+          "question": "Which of the following numbers is divisible by 6?",
+          "options": {
+            "A": "232",
+            "B": "341",
+            "C": "546",
+            "D": "903",
+            "E": "none of these"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 266,
+          "type": "multiple_choice",
+          "question": "In a room, there are 9 boys and 12 girls. The ratio of girls to boys is ___",
+          "options": {
+            "A": "9 : 24",
+            "B": "3 : 4",
+            "C": "4 : 3",
+            "D": "1 : 2"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 267,
+          "type": "multiple_choice",
+          "question": "A pet store has 8 cats, 12 dogs, and 3 rabbits. The ratio 8:23 compares",
+          "options": {
+            "A": "dogs to cats",
+            "B": "cats to dogs",
+            "C": "rabbits to cats",
+            "D": "cats to all animals"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 268,
+          "type": "multiple_choice",
+          "question": "Ratio of 750m and 3km is ____",
+          "options": {
+            "A": "3 : 7",
+            "B": "3 : 5",
+            "C": "2 : 7",
+            "D": "1 : 4"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 269,
+          "type": "multiple_choice",
+          "question": "The ratio of two sides of a parallelogram is 4 : 3. If its perimeter is 56 cm, find the lengths of its sides.",
+          "options": {
+            "A": "14cm, 13cm",
+            "D": "16cm, 12cm",
+            "B": "18cm, 15cm",
+            "E": "none of the above",
+            "C": "30cm, 26cm"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 270,
+          "type": "multiple_choice",
+          "question": "Four consecutive integers have a mean of 9.5. What is the largest of these integers?",
+          "options": {
+            "A": "38",
+            "B": "10",
+            "C": "11",
+            "D": "14",
+            "E": "19"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 271,
+          "type": "multiple_choice",
+          "question": "A baseball pitcher won 80% of the games he pitched. If he pitched 35 ballgames, how many games did\nhe win?",
+          "options": {
+            "A": "70",
+            "B": "28",
+            "C": "43",
+            "D": "35",
+            "E": "none of the above"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 272,
+          "type": "multiple_choice",
+          "question": "Jerry, an electrician, worked 9 months out of the year. What percent of the year did he work?",
+          "options": {
+            "A": "9%",
+            "B": "60%",
+            "C": "75%",
+            "D": "90%",
+            "E": "none of the above"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 273,
+          "type": "multiple_choice",
+          "question": "There are 40 students in a class. Sixteen of those students are boys. What percent of the class are girls?",
+          "options": {
+            "A": "60%",
+            "B": "40%",
+            "C": "43%",
+            "D": "50%",
+            "E": "none of the above"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 274,
+          "type": "multiple_choice",
+          "question": "Analie took a math test and got 48 correct and 12 incorrect answers. What was the percentage of correct\nanswers?",
+          "options": {
+            "A": "25%",
+            "B": "75%",
+            "C": "20%",
+            "D": "80%",
+            "E": "none of the above"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 275,
+          "type": "multiple_choice",
+          "question": "120 is what percent of 48?",
+          "options": {
+            "A": "2.5%",
+            "B": "250%",
+            "C": "25%",
+            "D": "40%"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 276,
+          "type": "multiple_choice",
+          "question": "120% of what number is 72?",
+          "options": {
+            "A": "144",
+            "B": "600",
+            "C": "14,400",
+            "D": "60"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 277,
+          "type": "multiple_choice",
+          "question": "10% of 300 is what number?",
+          "options": {
+            "A": "3",
+            "B": "0.3",
+            "C": "30",
+            "D": "300"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 278,
+          "type": "multiple_choice",
+          "question": "Two and one-half percent of what number is 88?",
+          "options": {
+            "A": "3520",
+            "B": "35,200",
+            "C": "2.2",
+            "D": "352"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 279,
+          "type": "multiple_choice",
+          "question": "95% of people in my street have a car. There are 160 people in my street. How many do not have a car?",
+          "options": {
+            "A": "8",
+            "B": "92",
+            "C": "152",
+            "D": "75",
+            "E": "80"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 280,
+          "type": "multiple_choice",
+          "question": "If 300 students filled form for entrance test and 280 appeared in test out of which only 70% have passed\ntest then number of students who failed test are",
+          "options": {
+            "A": "84",
+            "B": "54",
+            "C": "90",
+            "D": "104",
+            "E": "20"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 281,
+          "type": "multiple_choice",
+          "question": "40 % of 5 is equal to",
+          "options": {
+            "A": "2",
+            "B": "20",
+            "C": "0.2",
+            "D": "0.02",
+            "E": "none of these"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 282,
+          "type": "multiple_choice",
+          "question": "In a shipment of computers, 2/25 of the computers are defective. What is the ratio of defective to non\ndefective computers?",
+          "options": {
+            "A": "2/25",
+            "B": "2/23",
+            "C": "25/2",
+            "D": "23/2",
+            "E": "none of these"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 283,
+          "type": "multiple_choice",
+          "question": "Which of the following is divisible (with no remainder) by 6?",
+          "options": {
+            "A": "856247",
+            "B": "625874",
+            "C": "147414",
+            "D": "235465",
+            "E": "142546"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 284,
+          "type": "multiple_choice",
+          "question": "A solution is made of water and pure orange. If 80% of the solution is water, how many liters of pure\norange are in 25 liters of this solution?",
+          "options": {
+            "A": "10",
+            "B": "15",
+            "C": "25",
+            "D": "5",
+            "E": "20"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 285,
+          "type": "multiple_choice",
+          "question": "What is the average of 7/8 and 3/4?",
+          "options": {
+            "A": "13/8",
+            "B": "5/6",
+            "C": "5/3",
+            "D": "5/12",
+            "E": "13/16"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 286,
+          "type": "multiple_choice",
+          "question": "If -6/(a - 3) = 3/(a + 2), then a = ?",
+          "options": {
+            "A": "-1/3",
+            "B": "1/3",
+            "C": "1/2",
+            "D": "-1/2",
+            "E": "3"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 287,
+          "type": "multiple_choice",
+          "question": "A company makes a profit equal to 25% of its sales. The profit is shared equally among the 4 owners of\nthe company. If the company generates sales of $2,000,000, how much money does each one of the\nowners get?",
+          "options": {
+            "A": "125,000",
+            "B": "312,500",
+            "C": "500,000",
+            "D": "1,250,000",
+            "E": "375,000"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 288,
+          "type": "multiple_choice",
+          "question": "If a = 3, then 2 / (1/7 + 1/a) = ?",
+          "options": {
+            "A": "21/5",
+            "B": "21/10",
+            "C": "20",
+            "D": "10",
+            "E": "5"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 289,
+          "type": "multiple_choice",
+          "question": "If (a + b)^2 = 25 and (a - b)^2 = 45, then a^2 + b^2 = ?",
+          "options": {
+            "A": "35",
+            "B": "70",
+            "C": "625",
+            "D": "2025",
+            "E": "4900"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 290,
+          "type": "multiple_choice",
+          "question": "10-2+4×2-(10÷5×2) = ?",
+          "options": {
+            "A": "12",
+            "B": "15",
+            "C": "-1",
+            "D": "20",
+            "E": "23"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 291,
+          "type": "multiple_choice",
+          "question": "The population of a certain town is 5,000.If it increases 5% each year, what will be the approximate\npopulation at the end of 10 years?",
+          "options": {
+            "A": "7500",
+            "B": "12500",
+            "C": "14250",
+            "D": "8144",
+            "E": "5250"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 292,
+          "type": "multiple_choice",
+          "question": "Gary decided to cycle to his friend’s house at a speed of 6kph and the journey took 30 minutes. How far\ndid Gary cycle?",
+          "options": {
+            "A": "18 km",
+            "B": "3 km",
+            "C": "6 km",
+            "D": "12 km",
+            "E": "none of these"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 293,
+          "type": "multiple_choice",
+          "question": "A boat takes 4/5 as much time to travel downstream as to its return. If the rate of the river’s current is 6\nkph, what is the rate of the boat in still water?",
+          "options": {
+            "A": "30 kph",
+            "B": "54 kph",
+            "C": "84 kph",
+            "D": "60 kph",
+            "E": "none of these"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 294,
+          "type": "multiple_choice",
+          "question": "If a car travels at 60 kph, what is the distance it travels in 30 minutes?",
+          "options": {
+            "A": "2 km",
+            "B": "30 km",
+            "C": "120 km",
+            "D": "1,800 km",
+            "E": "none of these"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 295,
+          "type": "multiple_choice",
+          "question": "A car travels 120 miles at a speed of 40 miles per hour and makes a return trip at a speed of 60 miles per\nhour. What is its average speed, in miles per hour, of the police car?",
+          "options": {
+            "A": "42",
+            "B": "44",
+            "C": "46",
+            "D": "48",
+            "E": "none of these\n================= END =================\nREAD these INSPIRATIONAL QUOTES...\nI hope these words will somehow help motivate you to study, review, pass all exams and be successful in life... and\nbecome an inspiration to others...\n“Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you\nare doing or learning to do.”\n“If you have a dream, you can spend a lifetime studying, planning, and getting ready for it. What you should be doing\nis getting started.”\n“Success is not final, failure is not fatal; it is the courage to continue that counts.”\n“Allow yourself to be a beginner. No one starts off being excellent.”\n“Be stronger than your excuses.”\n“If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.”\n“The earlier you start working on something, the earlier you will see results.”\n“If we wait until we’re ready, we’ll be waiting for the rest of our lives.”\n“You don’t have to be great to start. But you have to start to be great.”\n“The distance between dreams and reality is called action.”\n“Never let small minds convince you that your dreams are too big.”\n“You were born to win. But to be a winner, you must plan to win, prepare to win and expect to win.”\n\"Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will\ncome.\" “Impossible is not a fact. It is an opinion.”\n“More people would learn from their mistakes if they weren’t so busy denying them.”\n“FEAR – Forget Everything And Run… or… Face Everything And Rise. It’s your choice.”\n“Behind every successful person, there are a lot of unsuccessful years.”\n“When you talk, you are only repeating what you already know. But if you listen, you may learn something new.”\n\"Push yourself because no one else is going to do it for you.\"\n“The beautiful thing about learning is that no one can take it away from you.”"
+          },
+          "answer": "D"
+        }
+      ]
+    },
+    {
+      "id": "general-information",
+      "title": "General Information",
+      "description": "Philippine Constitution, RA 6713 Code of Ethics, Environmental Laws, and Current Events.",
+      "questions": [
+        {
+          "number": 296,
+          "type": "multiple_choice",
+          "question": "Senate, Supreme Court, Congress",
+          "options": {
+            "B": "Presidential, Unicameral- Parliamentary, Bicameral-Parliamentary",
+            "C": "Legislative, Executive, Judicial",
+            "D": "The Legislature, The Senate, The Supreme Court"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 297,
+          "type": "multiple_choice",
+          "question": "The Supreme Court shall be composed of a Chief Justice and how many Associates Justices?",
+          "options": {
+            "A": "12",
+            "B": "13",
+            "C": "14",
+            "D": "15"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 298,
+          "type": "multiple_choice",
+          "question": "The Commander-in-Chief of all armed forces of the Philippines this 2017 is _________.",
+          "options": {
+            "A": "Air Force Commanding General Jeffrey Delgado",
+            "B": "Rodrigo Duterte",
+            "C": "Chief Justice Maria Lourdes Sereno"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 299,
+          "type": "multiple_choice",
+          "question": "AFP Chief Lieutenant Gen. Emmanuel Bautista",
+          "options": {
+            "D": "The Congress",
+            "A": "President of the Philippines",
+            "B": "House of Representatives",
+            "C": "The Supreme Court"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 300,
+          "type": "multiple_choice",
+          "question": "The legislative power shall be vested in the _________ which shall consist of a Senate and a House of Representatives.",
+          "options": {
+            "A": "Congress of the Philippines",
+            "B": "House of Ombudsman",
+            "C": "The Supreme Court",
+            "D": "Bureau of Internal Revenue"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 301,
+          "type": "multiple_choice",
+          "question": "The Senate shall be composed of how many senators elected at large by voters of the Philippines?",
+          "options": {
+            "A": "21",
+            "B": "22",
+            "C": "23",
+            "D": "24"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 302,
+          "type": "multiple_choice",
+          "question": "How long shall the term of office of the senators be commenced?",
+          "options": {
+            "A": "3 years",
+            "B": "4 years",
+            "C": "5 years",
+            "D": "6 years"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 303,
+          "type": "multiple_choice",
+          "question": "The term of office of the President and Vice-president of the Philippines shall be up to how many years?",
+          "options": {
+            "A": "3 years",
+            "B": "4 years",
+            "C": "5 years",
+            "D": "6 years"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 304,
+          "type": "multiple_choice",
+          "question": "The members of the House of Representatives shall be elected for a term of _______.",
+          "options": {
+            "A": "3 years",
+            "B": "4 years",
+            "C": "5 years",
+            "D": "6 years"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 305,
+          "type": "multiple_choice",
+          "question": "The following shall be exempted from taxation except:",
+          "options": {
+            "A": "Lands and buildings",
+            "B": "Churches and convents",
+            "C": "Charitable institutions",
+            "D": "Non-profit cemeteries"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 306,
+          "type": "multiple_choice",
+          "question": "The Congress, by a vote of ____ of both Houses in joint session assembled, voting separately, shall have the sole power to declare a state of war.",
+          "options": {
+            "A": "Two-thirds",
+            "B": "One-half",
+            "C": "Three quarters",
+            "D": "Minority"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 307,
+          "type": "multiple_choice",
+          "question": "It states that “no person shall be deprived of life, liberty, or property without due process of law, nor any person be denied the equal protection of the laws.”",
+          "options": {
+            "A": "Article VI",
+            "B": "Bill of Rights",
+            "C": "Republic Act",
+            "D": "Court Order"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 308,
+          "type": "multiple_choice",
+          "question": "All of the following is TRUE except:",
+          "options": {
+            "A": "No person shall be compelled to be a witness against himself",
+            "B": "No person shall be imprisoned for non-payment of debt or poll tax.",
+            "C": "No ex post facto law or bill of attainder shall not be enacted.",
+            "D": "No person shall be detained solely by reason of his political beliefs and aspirations."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 309,
+          "type": "multiple_choice",
+          "question": "The following are citizens of the Philippines except:",
+          "options": {
+            "A": "Those fathers or mothers are citizens of the Philippines",
+            "B": "Those who are born before January 17, 1973, of Filipino mothers, who elect Philippine citizenship upon reaching the age of majority",
+            "C": "Those who are naturalized citizens of the Philippines in accordance with law.",
+            "D": "All of the above are true."
+          },
+          "answer": "D"
+        },
+        {
+          "number": 310,
+          "type": "multiple_choice",
+          "question": "It is the right and obligation by all citizens, who are at least 18 years of age, and qualified by law, to vote in the election of national and local officials of the government without literacy,, property, or other substantive requirement.",
+          "options": {
+            "A": "Suffrage",
+            "B": "Election",
+            "C": "Voting power",
+            "D": "Civil Right"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 311,
+          "type": "multiple_choice",
+          "question": "The three inherent powers of the state are the following except one:",
+          "options": {
+            "A": "Police Power",
+            "B": "Power of Eminent Domain",
+            "C": "Power of Taxation",
+            "D": "Power to Impeach"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 312,
+          "type": "multiple_choice",
+          "question": "It is the power of the State to promote public welfare by restraining the use of both liberty and property of all people.",
+          "options": {
+            "A": "Police Power",
+            "B": "Power of Eminent Domain",
+            "C": "Power if Taxation",
+            "D": "Power to Impeach"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 313,
+          "type": "multiple_choice",
+          "question": "It is the power of the State to take properties for the purpose of public use upon payment of just compensation.",
+          "options": {
+            "A": "Police Power",
+            "B": "Power of Eminent Domain",
+            "C": "Power if Taxation",
+            "D": "Power to Impeach"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 314,
+          "type": "multiple_choice",
+          "question": "It is the power of the State to impose charge or burden to persons and properties, and property rights for the purpose of raising revenues to protect the people and extend public projects and services.",
+          "options": {
+            "A": "Police Power",
+            "B": "Power of Eminent Domain",
+            "C": "Power if Taxation",
+            "D": "Power to Impeach"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 315,
+          "type": "multiple_choice",
+          "question": "The following are members of the Constitutional Commission except:",
+          "options": {
+            "A": "Commission on Civil Rights",
+            "B": "Commission on Elections",
+            "C": "Civil Service Commission",
+            "D": "Commission on Audit"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 316,
+          "type": "multiple_choice",
+          "question": "It states that public office is public trust and that public officers and employees must, at all times, be accountable to the people, serve them with utmost responsibility, integrity, loyalty and efficiency; act with patriotism and justice and lead modest lives.",
+          "options": {
+            "A": "Public Trust",
+            "B": "Constitutional Rights",
+            "C": "Accountability",
+            "D": "Responsibility"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 317,
+          "type": "multiple_choice",
+          "question": "Who shall have the exclusive power to initiate all cases of impeachment?",
+          "options": {
+            "A": "House of Blue Ribbon Committee",
+            "B": "House of Representatives",
+            "C": "House of the Senate",
+            "D": "Speaker of the House"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 318,
+          "type": "multiple_choice",
+          "question": "R.A. 6713 is an act to uphold the time-honored principle of public office being a public trust, granting incentives and rewards for exemplary service, enumerating prohibited acts and providing penalties for violations thereof and for other purposes.",
+          "options": {
+            "A": "Preamble",
+            "B": "Code of Ethics",
+            "C": "Code of Government Officials",
+            "D": "Code of Conduct and Ethical Standards for Public Officials and Employees"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 319,
+          "type": "multiple_choice",
+          "question": "The following are duties and responsibilities of Public officials and Employees except:",
+          "options": {
+            "A": "Act promptly on letters, inquiries, calls or any other form of communications sent by the public.",
+            "B": "Submit performance reports of the agency or office regularly",
+            "C": "Accept gifts from the public upon prioritizing their queries.",
+            "D": "Process documents and papers expeditiously."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 320,
+          "type": "multiple_choice",
+          "question": "It is a written instrument containing the proposition and required number of signatories and shall be in a form determined by and submitted to the Commission on Elections.",
+          "options": {
+            "A": "Bill",
+            "B": "Law",
+            "C": "Proposition",
+            "D": "Petition"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 321,
+          "type": "multiple_choice",
+          "question": "It is the electoral process by which an initiative on the Constitution is either approved or rejected by the people.",
+          "options": {
+            "A": "Referendum",
+            "B": "Plebiscite",
+            "C": "Petition",
+            "D": "Initiative"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 322,
+          "type": "multiple_choice",
+          "question": "It is the power of the electorate to approve or reject a legislation through an election called for the purpose.",
+          "options": {
+            "A": "Referendum",
+            "B": "Plebiscite",
+            "C": "Petition",
+            "D": "Initiative"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 323,
+          "type": "multiple_choice",
+          "question": "This law promotes responsible family planning and proper use of reproductive methods to eliminate over-population growth.",
+          "options": {
+            "A": "RH Bill",
+            "B": "Responsible Parenthood and Reproductive Health Law",
+            "C": "Reproductive Law",
+            "D": "Family Planning"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 324,
+          "type": "multiple_choice",
+          "question": "It is a specialized agency of the United Nations that concerns international public health.",
+          "options": {
+            "A": "Department of Health",
+            "B": "World Health Organization",
+            "C": "International Health Organization",
+            "D": "All of the above"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 325,
+          "type": "multiple_choice",
+          "question": "APEC is a summit that promotes free trade and economic cooperation throughout the Asia-Pacific region countries. APEC stands for:",
+          "options": {
+            "A": "Asia Pacific Economic Corporation",
+            "B": "Asia Pacific Economic Cooperation",
+            "C": "Asia Pacific Economic Council",
+            "D": "Asia Pacific Economic Countries"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 326,
+          "type": "multiple_choice",
+          "question": "Association of Southeast Asian Nations (ASEAN) aims to accelerate economic growth, stability, social progress and cultural development in the spirit of equality and partnership to strengthen prosperous and peaceful community along Southeast Asian Nations. Which of the following countries is not a member of ASEAN?",
+          "options": {
+            "A": "Hong Kong",
+            "B": "Philippines",
+            "C": "Singapore",
+            "D": "Thailand"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 327,
+          "type": "multiple_choice",
+          "question": "It is a law in the Philippines that aims to address legal issues concerning online interactions and harmful internet behavior in the Philippines. It aims to prevent and punish cybercrime in the country.",
+          "options": {
+            "A": "Cybersquatting",
+            "B": "Cybercrime Act",
+            "C": "Cybercrime Prevention Act",
+            "D": "Cyber Identity Theft Act"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 328,
+          "type": "multiple_choice",
+          "question": "__________waste breaks down into natural components and can be recycled into the life cycle naturally.",
+          "options": {
+            "A": "Bio-chemical",
+            "B": "Recyclable",
+            "C": "Biodegradable",
+            "D": "Non-biodegradable"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 329,
+          "type": "multiple_choice",
+          "question": "The following are examples of non-biodegradable waste except:",
+          "options": {
+            "A": "Plastics",
+            "B": "Metals",
+            "C": "Styrofoam",
+            "D": "Papers"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 330,
+          "type": "multiple_choice",
+          "question": "It is a project of DOST for more accurate, integrated and responsive disaster prevention and mitigation system especially in high-risk calamity areas of the Philippines.",
+          "options": {
+            "A": "PAGASA",
+            "B": "I am Ready",
+            "C": "DOST-Advanced Disaster Program",
+            "D": "Project NOAH"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 331,
+          "type": "multiple_choice",
+          "question": "PAGASA is the official government agency for weather forecasting, flood control, astronomical observations, and time service. PAGASA stands for _______?",
+          "options": {
+            "A": "Philippine Atmospheric Geographical and Astronomical Services Administration",
+            "B": "Philippine Atmospheric Geophysical and Astronomical Services Administration",
+            "C": "Philippine Atmospheric Geological and Astronomical Services Association",
+            "D": "Philippine Atmospheric Geophysical and Astronomical Services Association"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 332,
+          "type": "multiple_choice",
+          "question": "PHIVOLCS is a branch of DOST to moderate disasters that may arise from volcanic eruptions, earthquakes, tsunami and other related geotectonic phenomena in the Philippines. What is PHIVOLCS?",
+          "options": {
+            "A": "Philippine Institute of Volcanology and Seismology",
+            "B": "Philippine Institute of Volcanic and Seismic Services",
+            "C": "Philippine Institute of Volcanic and Seismology Services",
+            "D": "Philippine Institute of Volcano and Seismic System"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 333,
+          "type": "multiple_choice",
+          "question": "Which of the following is a renewable source of energy?",
+          "options": {
+            "A": "Geothermal energy",
+            "B": "Solar energy",
+            "C": "Wind energy",
+            "D": "All of the above"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 334,
+          "type": "multiple_choice",
+          "question": "It is a process by which thermal radiation from the earth’s surface is absorbed by atmospheric greenhouse gases and is re-radiated in all directions.",
+          "options": {
+            "A": "Global Warming",
+            "B": "Greenhouse Effect",
+            "C": "Ozone Layer",
+            "D": "Solar Radiation"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 335,
+          "type": "multiple_choice",
+          "question": "USB is an industry standard that connects computers and electronic devices like keyboards, digicams, portable media devices, disk drivers, smartphones, and network adapters to any computer. USB stands for?",
+          "options": {
+            "A": "Unit Serial Box",
+            "B": "Unit Serial Bolt",
+            "C": "Universal Serial Bin",
+            "D": "Universal Serial Bus"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 336,
+          "type": "multiple_choice",
+          "question": "What is the national language of the Philippines according to 1987 Phil Constitution article XIV section 6?",
+          "options": {
+            "A": "Pilipino",
+            "B": "Tagalog",
+            "C": "Filipino",
+            "D": "English",
+            "E": "Both B & C"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 337,
+          "type": "multiple_choice",
+          "question": "What do you call the introductory part of the Constitution?",
+          "options": {
+            "A": "Preface",
+            "C": "Preamble",
+            "B": "Amendments",
+            "D": "Bill of Rights"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 338,
+          "type": "multiple_choice",
+          "question": "What form of government does the Philippines adopt?",
+          "options": {
+            "A": "Republican",
+            "B": "Democratic",
+            "C": "Neither a nor b",
+            "D": "Both a and b"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 339,
+          "type": "multiple_choice",
+          "question": "Who among the following may issue a warrant of arrest or a search warrant?",
+          "options": {
+            "A": "A senator",
+            "C": "A congressman",
+            "B": "A judge",
+            "D": "The President"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 340,
+          "type": "multiple_choice",
+          "question": "A foreigner may acquire Filipino citizenship through",
+          "options": {
+            "A": "Naturalization",
+            "C": "Rebirth",
+            "B": "Extradition",
+            "D": "Visa application"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 341,
+          "type": "multiple_choice",
+          "question": "What is regarded by the State as a \"primary social economic force?\"",
+          "options": {
+            "A": "education",
+            "C": "labor",
+            "B": "trade",
+            "D": "commerce"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 342,
+          "type": "multiple_choice",
+          "question": "According to Article III, Section 15 of the Constitution, the writ of habeas corpus may be suspended in\ntimes of rebellion or what?",
+          "options": {
+            "A": "martial law",
+            "C": "terrorism",
+            "B": "war",
+            "D": "invasion"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 343,
+          "type": "multiple_choice",
+          "question": "The Lower Chamber of the Congress of the Philippines is known by what name?",
+          "options": {
+            "A": "Senate",
+            "B": "Congressional Lower Chamber",
+            "C": "National Assembly",
+            "D": "House of Representatives"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 344,
+          "type": "multiple_choice",
+          "question": "A Member of either house of Congress may be expelled by their fellow Members. For a Member to be\nexpelled, how much of the total number of Members of a house must concur with the expulsion?",
+          "options": {
+            "A": "two-thirds",
+            "B": "majority\nc three-fourths",
+            "D": "nine-tenths"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 345,
+          "type": "multiple_choice",
+          "question": "If a President wishes to veto a bill, he/she must communicate it within a certain span of time, otherwise\nthe bill will become a law. How long is this span of time?",
+          "options": {
+            "A": "3 weeks",
+            "B": "48 days",
+            "C": "60 days",
+            "D": "30 days"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 346,
+          "type": "multiple_choice",
+          "question": "At present, how many percent of the population of the Philippines are aliens?",
+          "options": {
+            "A": "30%",
+            "C": "40%",
+            "E": "70%",
+            "B": "25%",
+            "D": "50%"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 347,
+          "type": "multiple_choice",
+          "question": "What project of the DENR that includes the protection of Industrial pollution of our Environment?",
+          "options": {
+            "A": "Bantay Kalikasan",
+            "D": "Ecological Watch",
+            "B": "Bantay Ilog",
+            "E": "Solid Waste Management",
+            "C": "Bantay Dagat"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 348,
+          "type": "multiple_choice",
+          "question": "What government agency thus the status of government employee in the free voluntary services belong?",
+          "options": {
+            "A": "Secretary",
+            "C": "Municipal",
+            "E": "Barangay",
+            "B": "Regional",
+            "D": "National"
+          },
+          "answer": "E"
+        },
+        {
+          "number": 349,
+          "type": "multiple_choice",
+          "question": "Which is not a ground for Impeachment of the Pres., Vice-Pres., Ombudsman, and Senator?",
+          "options": {
+            "A": "graft and corruption",
+            "B": "sexual harassment",
+            "C": "grave abuse of the authority",
+            "D": "against the Family if the child scolded by the parents",
+            "E": "Other crimes"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 350,
+          "type": "multiple_choice",
+          "question": "What is the ground for impeachment of the Pres., Vice-Pres., Ombudsman, and Senator?",
+          "options": {
+            "A": "sexual harassment",
+            "B": "heinous crime",
+            "C": "grave abuse of the authority",
+            "D": "graft and corruption",
+            "E": "culpable violation of the Constitution\nNumerical Reasoning"
+          },
+          "answer": "E"
+        }
+      ]
+    },
+    {
+      "id": "clerical-operations",
+      "title": "Clerical Operations",
+      "description": "Filing, Office Management, Clerical Reasoning, and Alphabetical Indexing.",
+      "questions": [
+        {
+          "number": 351,
+          "type": "multiple_choice",
+          "question": "Which department of an office is responsible for hiring new personnel?",
+          "options": {
+            "A": "Office of the President",
+            "B": "Accounting Department",
+            "C": "Logistic and Supply",
+            "D": "Human Resource Department"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 352,
+          "type": "multiple_choice",
+          "question": "Which computer program should you go if you want to email a company?",
+          "options": {
+            "A": "Word",
+            "B": "Excel",
+            "C": "Outlook",
+            "D": "Powerpoint"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 353,
+          "type": "multiple_choice",
+          "question": "This is a telephonic transmission of scanned documents of texts and images to a telephone number connected to a printer.",
+          "options": {
+            "A": "Photocopying Machine",
+            "B": "Fax Machine",
+            "C": "Typewriter"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 354,
+          "type": "multiple_choice",
+          "question": "Inkjet Printer",
+          "options": {
+            "D": "Manager",
+            "A": "Auditor",
+            "B": "Treasurer",
+            "C": "Chief Executive Officer"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 355,
+          "type": "multiple_choice",
+          "question": "Which department of a company is responsible for cash register operations and payment processing?",
+          "options": {
+            "A": "Cashier",
+            "B": "Billing",
+            "C": "Accounting",
+            "D": "Budget"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 356,
+          "type": "multiple_choice",
+          "question": "What is the correct filing arrangement for the following names?",
+          "options": {
+            "A": "4,2,1,3",
+            "B": "4,1,2,3",
+            "C": "4,3,2,1",
+            "D": "4,1,3,2"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 357,
+          "type": "multiple_choice",
+          "question": "All of the following items are found in the Official Receipt form except _____.",
+          "options": {
+            "A": "Name and address of the buyer",
+            "B": "Signature of the recipient",
+            "C": "Quantity of the items paid",
+            "D": "Credit Card Number of the customer"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 358,
+          "type": "multiple_choice",
+          "question": "The method of indexing and filing where names are in alphabetized order.",
+          "options": {
+            "A": "Numeric",
+            "B": "Metric",
+            "C": "Geographic",
+            "D": "Alphabetic"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 359,
+          "type": "multiple_choice",
+          "question": "Which is the best way to address a correspondence for the President of the Philippines?",
+          "options": {
+            "A": "His Excellency Rodrigo Duterte",
+            "B": "His Excellency President Rodrigo Duterte",
+            "C": "President Rodrigo Duterte",
+            "D": "President Digong"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 360,
+          "type": "multiple_choice",
+          "question": "How do you address the Queen of England when you talk about her?",
+          "options": {
+            "A": "Her Highness the Queen",
+            "B": "Her Majesty Queen Elizabeth II",
+            "C": "Queen Elizabeth II her Highness",
+            "D": "Queen Elizabeth II her Majesty"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 361,
+          "type": "multiple_choice",
+          "question": "Your boss asked you to send her a soft copy of your latest résumé. An example of a soft copy is:",
+          "options": {
+            "A": "A print out copy usually in a paper",
+            "B": "Original copy written in a paper",
+            "C": "A copy saved in a computer and sent through email",
+            "D": "A copy from a Xerox machine"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 362,
+          "type": "multiple_choice",
+          "question": "When a company asked you to submit your latest CV, what does CV stand for?",
+          "options": {
+            "A": "Curriculum Vitum",
+            "B": "Curriculum Virtue",
+            "C": "Curriculum Vitae",
+            "D": "Curriculum Vital"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 363,
+          "type": "multiple_choice",
+          "question": "It is the section of Accounting Department in a company that records goods and services that it receives and the payments it owes.",
+          "options": {
+            "A": "Budget",
+            "B": "Payroll",
+            "C": "Accounts Payable and Receivable",
+            "D": "Inventory"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 364,
+          "type": "multiple_choice",
+          "question": "Which of the following is not a function of Accounting Department in a big corporation?",
+          "options": {
+            "A": "Prepare Interim Financial Statements",
+            "B": "Inventory Management",
+            "C": "Bank Reconciliation",
+            "D": "Internal and External Auditing"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 365,
+          "type": "multiple_choice",
+          "question": "He is the highest ranking executive manager in a corporation and he is the top person in command in an organization.",
+          "options": {
+            "A": "Chief Financial Executive",
+            "B": "Chief Executive Officer",
+            "C": "Executive Admin. Officer",
+            "D": "Chief Executive Assistant"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 366,
+          "type": "multiple_choice",
+          "question": "Which of the following is not a responsibility of a clerical worker?",
+          "options": {
+            "A": "Marketing and promotion for customers",
+            "B": "Filing and updating purchase orders",
+            "C": "Updating and billing buyer’s account",
+            "D": "Answering business emails"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 367,
+          "type": "multiple_choice",
+          "question": "Arrange the proper filing of the following in alphabetical order: A. Lieutenant Colonel Mark David B. Atty. Elen Rodriguez C. Captain Max Aquino D. Dr. Juan Castro",
+          "options": {
+            "A": "CDAB",
+            "B": "CDBA",
+            "C": "BDCA",
+            "D": "BCDA"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 368,
+          "type": "multiple_choice",
+          "question": "Arrange the proper filing of the following in alphabetical order: A. Sec. Dinky Soliman B. Sec. Richard Gordon C. Sec. Voltaire Gazmin D. Sec. Armin Luistro",
+          "options": {
+            "A": "DABC",
+            "B": "DACB",
+            "C": "CBDA",
+            "D": "CBAD"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 369,
+          "type": "multiple_choice",
+          "question": "How much is the present Value-Added-Tax in the Philippines?",
+          "options": {
+            "A": "12% of gross profit",
+            "B": "12% of cost of goods sold",
+            "C": "12% of gross sales",
+            "D": "12% of net income"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 370,
+          "type": "multiple_choice",
+          "question": "This department of the company is responsible for preparing and updating customers’ accounts:",
+          "options": {
+            "A": "Purchasing section",
+            "B": "Cashier section",
+            "C": "Billing Section",
+            "D": "Releasing section"
+          },
+          "answer": "C"
+        },
+        {
+          "number": 371,
+          "type": "multiple_choice",
+          "question": "This is a type of document issued by a seller to a buyer relating to a sale transaction and indicating the products, quantities and prices sold to the buyer.",
+          "options": {
+            "A": "Check voucher",
+            "B": "Purchase order",
+            "C": "Delivery receipt",
+            "D": "Sales invoice"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 372,
+          "type": "multiple_choice",
+          "question": "Which of the following is not a usual document used in a sales company?",
+          "options": {
+            "A": "Form 137",
+            "B": "Delivery receipt",
+            "C": "Sales invoice",
+            "D": "Purchase order"
+          },
+          "answer": "A"
+        },
+        {
+          "number": 373,
+          "type": "multiple_choice",
+          "question": "One of the responsibilities of a clerical job is answering and tending phone calls. Which is the best way to answer a phone call in a company?",
+          "options": {
+            "A": "Say “Hello,” and wait for the caller to speak.",
+            "B": "Run and get a pen and notebook then pick up the phone.",
+            "C": "Answer the phone politely and give your department or company name.",
+            "D": "Wait for fellow employees to answer the phone."
+          },
+          "answer": "C"
+        },
+        {
+          "number": 374,
+          "type": "multiple_choice",
+          "question": "An example of a hard copy document is:",
+          "options": {
+            "A": "PDF file letter",
+            "B": "Company email message",
+            "C": "A business letter saved in USB",
+            "D": "Business letter in a paper"
+          },
+          "answer": "D"
+        },
+        {
+          "number": 375,
+          "type": "multiple_choice",
+          "question": "What does a CC means in an email message?",
+          "options": {
+            "A": "Copy sent",
+            "B": "Copy furnished",
+            "C": "Copy cat",
+            "D": "Client copy"
+          },
+          "answer": "B"
+        },
+        {
+          "number": 376,
+          "type": "multiple_choice",
+          "question": "The chief financial officer is responsible for the financial matters and financial\nmanagement of a corporation, she is also known as the _______.",
+          "options": {
+            "A": "Auditor",
+            "B": "Treasurer",
+            "C": "Chief Executive Officer",
+            "D": "Manager\n."
+          },
+          "answer": "B"
+        }
+      ]
+    }
+  ]
+}

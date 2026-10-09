@@ -11,7 +11,8 @@ const documentationData = {
       category_name: "Queezes",
       navigation_item_paths: [
         "data/navigation-items/napolcom-mock-exam.js",
-        "data/navigation-items/milk-operation-farm-management.js"
+        "data/navigation-items/milk-operation-farm-management.js",
+        "data/navigation-items/civil-service-exam.js"
       ]
     }
   ]

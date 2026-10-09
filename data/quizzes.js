@@ -27,7 +27,7 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
         {
           "heading_title": "Available Queezes",
           "block_type": "cards_container",
-          "layout_type": "two_cards",
+          "layout_type": "three_cards",
           "cards": [
             {
               "title": "Milk Operation and Farm Management",
@@ -46,6 +46,15 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
               "image_source": "",
               "shrink": false,
               "description": "Complete 150-item practice mock examination prepared for review purposes. Covers Verbal Reasoning, Quantitative Math, Logical Deduction, and Philippine Constitution & Police Laws."
+            },
+            {
+              "title": "Civil Service Examination",
+              "label": "Career Service",
+              "quiz_id": "civil-service-exam",
+              "link": "queezes/civil-service-exam",
+              "image_source": "",
+              "shrink": false,
+              "description": "Comprehensive 376-item Career Service Professional & Sub-Professional mock examination covering 7 domains: Verbal Ability, Reading Comprehension, Paragraph Organization, Analytical & Logic, Numerical Ability, General Information, and Clerical Operations."
             }
           ]
         }
