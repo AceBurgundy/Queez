@@ -815,7 +815,7 @@
             "A": "move back and forth",
             "B": "walk",
             "C": "disbelieve",
-            "D": "investigate\nIdiomatic Expression & Correct Grammar/Spelling:"
+            "D": "investigate"
           },
           "answer": "B"
         },
@@ -836,10 +836,10 @@
           "type": "multiple_choice",
           "question": "Come out of your shell means _____________.",
           "options": {
-            "A": "If someone comes in of their shell, they never stop being shy and withdrawn and\nbecome more unfriendly and sociable.",
-            "B": "If someone comes out of their shell, they stop being shy and withdrawn and\nbecome more friendly and sociable.",
-            "C": "If someone comes out of their shell, they never stop being shy and withdrawn\nand become more friendly and sociable.",
-            "D": "If someone comes in of their shell, they stop being shy and withdrawn\nand become more un friendly and unsociable."
+            "A": "If someone comes in of their shell, they never stop being shy and withdrawn and become more unfriendly and sociable.",
+            "B": "If someone comes out of their shell, they stop being shy and withdrawn and become more friendly and sociable.",
+            "C": "If someone comes out of their shell, they never stop being shy and withdrawn and become more friendly and sociable.",
+            "D": "If someone comes in of their shell, they stop being shy and withdrawn and become more un friendly and unsociable."
           },
           "answer": "B"
         },
@@ -935,7 +935,7 @@
             "A": "to make a fool of you",
             "C": "to make you feel stupid",
             "B": "to make you lose money",
-            "D": "to make you lose interest\nFor each of the following sentences, choose the correct spelling for the missing word."
+            "D": "to make you lose interest"
           },
           "answer": "A"
         },
@@ -1046,7 +1046,7 @@
           "options": {
             "A": "vain",
             "B": "vane",
-            "C": "vein\nAnalogy and Logic Test"
+            "C": "vein"
           },
           "answer": "A"
         },
@@ -1355,7 +1355,7 @@
           "options": {
             "A": "true.",
             "B": "false.",
-            "C": "uncertain.\nReading Comprehension"
+            "C": "uncertain."
           },
           "answer": "A"
         }
@@ -1478,18 +1478,18 @@
           "type": "multiple_choice",
           "question": "Investing has been a hot topic for quite a while. Many people especially employees and entrepreneurs don’t rely on time deposits and regular savings account to save and earn interests. The most common investments in the Philippines are through real estates, mutual funds and trust funds. Although few people also join trading in the stock market, more and more Filipinos are not reluctant to invest their money and diversify them to different money making wheels. What does the article try to convey?",
           "options": {
-            "A": "DCBA                  2. DACB                 3. DABC                   4. DCAB",
-            "B": " A. It is very vital to have social media presence however personal blogs serve as web domains. B. Most people including celebrities and businessmen have blogs nowadays. C. Therefore, building them will help anyone in promoting himself or his business. D. Apparently blogs are like our offices only they are in the internet.",
-            "C": " A. The basic steps in building a website are easy to remember and registering a domain name is the usual priority. B. Designing a layout will come after that. C. Finally, adding more content and social media presence are required to keep your site active. D. Then you need a hosting provider to host your site’s content in the World Wide Web.",
-            "D": " A. Speaking in English every day is also proven effective. B. Another way is watching English movies and TV shows particularly with English subtitles. C. Reading articles in books, newspapers, and magazines is just among the helpful ways. D. There are many ways to improve and develop English proficiency.",
-            "E": " A. Others don’t realize yet what to pursue because they have many dreams. B. Finding the right course in college is one of the most challenging decisions anyone can make. C. Some people want to pursue their dreams ever since they were just little. D. Indeed destiny is a matter of choice."
+            "A": "DCBA 2. DACB 3. DABC 4. DCAB",
+            "B": "A. It is very vital to have social media presence however personal blogs serve as web domains. B. Most people including celebrities and businessmen have blogs nowadays. C. Therefore, building them will help anyone in promoting himself or his business. D. Apparently blogs are like our offices only they are in the internet.",
+            "C": "A. The basic steps in building a website are easy to remember and registering a domain name is the usual priority. B. Designing a layout will come after that. C. Finally, adding more content and social media presence are required to keep your site active. D. Then you need a hosting provider to host your site’s content in the World Wide Web.",
+            "D": "A. Speaking in English every day is also proven effective. B. Another way is watching English movies and TV shows particularly with English subtitles. C. Reading articles in books, newspapers, and magazines is just among the helpful ways. D. There are many ways to improve and develop English proficiency.",
+            "E": "A. Others don’t realize yet what to pursue because they have many dreams. B. Finding the right course in college is one of the most challenging decisions anyone can make. C. Some people want to pursue their dreams ever since they were just little. D. Indeed destiny is a matter of choice."
           },
           "answer": "A"
         },
         {
           "number": 123,
           "type": "multiple_choice",
-          "question": "READING COMPREHENSION\nThere are no effective boundaries when it comes to pollutants. Studies have shown that toxic insecticides that\nhave been banned in many countries are riding the wind from countries where they remain legal. Compounds\nsuch as DDT and toxaphene have been found in remote places like the Yukon and other Arctic regions.\nThis paragraph best supports the statement that",
+          "question": "There are no effective boundaries when it comes to pollutants. Studies have shown that toxic insecticides that\nhave been banned in many countries are riding the wind from countries where they remain legal. Compounds\nsuch as DDT and toxaphene have been found in remote places like the Yukon and other Arctic regions.\nThis paragraph best supports the statement that",
           "options": {
             "A": "toxic insecticides such as DDT have not been banned throughout the world.",
             "B": "more pollutants find their way into polar climates than they do into warmer areas.",
@@ -1501,7 +1501,7 @@
         {
           "number": 124,
           "type": "multiple_choice",
-          "question": "READING COMPREHENSION\nMost researchers in needy countries are based on the thinking and approach of the highly developed Western\nworld, and seldom have they been directed toward meeting the countries; own development needs.\nThe sentence best supports the statement that _________.",
+          "question": "Most researchers in needy countries are based on the thinking and approach of the highly developed Western\nworld, and seldom have they been directed toward meeting the countries; own development needs.\nThe sentence best supports the statement that _________.",
           "options": {
             "A": "highly developed countries offer the best guide for the development of needy countries",
             "B": "most researchers done in needy countries are missing their objectives",
@@ -1582,7 +1582,7 @@
           "question": "Ang pagbaba ng halaga ng piso lumikha ng krisis sa maraming industriya ng bansa. Kasunod nito ang\npagtitipid at problema sa kawalan ng mapasukang trabaho. Lumikha rin ito ng pagtataas ng presyo ng mga\nbilihin na labis nakaapekto sa kita ng mga manggagawa.\nAyon sa talata __________.",
           "options": {
             "A": "ang kasalukuyang krisis ay bunga ng mga mahal na bilihin at kawalan ng mapasukang trabaho.",
-            "B": "ang krisis ay nakaapekto sa hangarin ng maraming industriya na makapagbigay ng karagdagang sahod sa\nkanilang mga manggagawa",
+            "B": "ang krisis ay nakaapekto sa hangarin ng maraming industriya na makapagbigay ng karagdagang sahod sa kanilang mga manggagawa",
             "C": "dumarami ang mga walang hanapbuhay at tumataas ang halaga ng mga bilihin dahil sa krisis",
             "D": "maraming industriya ang nalulugi dahil sa krisis kaya itinataas din nila ang presyo ng kanilang mga produkto",
             "E": "dahil sa krisis, maraming industriya ang napilitang magsara"
@@ -1740,7 +1740,7 @@
             "A": "Water droplets colliding with ice crystals creating static electricity.",
             "B": "Friction from the clouds rubbing together.",
             "C": "Water droplets colliding.",
-            "D": "Warm and cold air mixing together.\nParagraph Organization"
+            "D": "Warm and cold air mixing together."
           },
           "answer": "A",
           "context_id": "ctx_cse_lightning"
@@ -2288,7 +2288,7 @@
             "B": "9,500,000",
             "C": "10,800,000",
             "D": "910,000",
-            "E": "1,080,000\nFor questions 4 to 6,  Refer to the following graph of sales and profit figures of ABC Ltd and answer the\nquestions that follow."
+            "E": "1,080,000"
           },
           "answer": "B",
           "image": "assets/chart_insurance_securities.png"
@@ -2330,7 +2330,7 @@
             "B": "twice",
             "C": "thrice",
             "D": "four times",
-            "E": "never\nFor questions 7 to 9: The following graph shows the data related to Foreign Equity Inflow (FEI) for the five\ncountries for two years- 1997 and 1998. FEI is the ratio of foreign equity inflow to the country's GDP, which is\nexpressed as a percentage in the following graph."
+            "E": "never"
           },
           "answer": "B",
           "image": "assets/chart_sales_profit_abc.png"
@@ -2372,7 +2372,7 @@
             "B": "25 : 72",
             "C": "6 : 11",
             "D": "7 : 25",
-            "E": "cannot say\nfor question #10"
+            "E": "cannot say"
           },
           "answer": "B",
           "image": "assets/chart_fei_currency.png"
@@ -2386,7 +2386,7 @@
             "B": "3.26",
             "C": "3.15",
             "D": "3.76",
-            "E": "None of the above\nVocabulary"
+            "E": "None of the above"
           },
           "answer": "B",
           "image": "assets/chart_fei_currency.png"
@@ -3695,7 +3695,7 @@
             "B": "44",
             "C": "46",
             "D": "48",
-            "E": "none of these\n================= END =================\nREAD these INSPIRATIONAL QUOTES...\nI hope these words will somehow help motivate you to study, review, pass all exams and be successful in life... and\nbecome an inspiration to others...\n“Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you\nare doing or learning to do.”\n“If you have a dream, you can spend a lifetime studying, planning, and getting ready for it. What you should be doing\nis getting started.”\n“Success is not final, failure is not fatal; it is the courage to continue that counts.”\n“Allow yourself to be a beginner. No one starts off being excellent.”\n“Be stronger than your excuses.”\n“If you really want to do something, you’ll find a way. If you don’t, you’ll find an excuse.”\n“The earlier you start working on something, the earlier you will see results.”\n“If we wait until we’re ready, we’ll be waiting for the rest of our lives.”\n“You don’t have to be great to start. But you have to start to be great.”\n“The distance between dreams and reality is called action.”\n“Never let small minds convince you that your dreams are too big.”\n“You were born to win. But to be a winner, you must plan to win, prepare to win and expect to win.”\n\"Success isn't always about greatness. It's about consistency. Consistent hard work leads to success. Greatness will\ncome.\" “Impossible is not a fact. It is an opinion.”\n“More people would learn from their mistakes if they weren’t so busy denying them.”\n“FEAR – Forget Everything And Run… or… Face Everything And Rise. It’s your choice.”\n“Behind every successful person, there are a lot of unsuccessful years.”\n“When you talk, you are only repeating what you already know. But if you listen, you may learn something new.”\n\"Push yourself because no one else is going to do it for you.\"\n“The beautiful thing about learning is that no one can take it away from you.”"
+            "E": "none of these"
           },
           "answer": "D"
         }
@@ -4287,7 +4287,8 @@
           "question": "A Member of either house of Congress may be expelled by their fellow Members. For a Member to be\nexpelled, how much of the total number of Members of a house must concur with the expulsion?",
           "options": {
             "A": "two-thirds",
-            "B": "majority\nc three-fourths",
+            "B": "majority",
+            "C": "three-fourths",
             "D": "nine-tenths"
           },
           "answer": "A"
@@ -4365,7 +4366,7 @@
             "B": "heinous crime",
             "C": "grave abuse of the authority",
             "D": "graft and corruption",
-            "E": "culpable violation of the Constitution\nNumerical Reasoning"
+            "E": "culpable violation of the Constitution"
           },
           "answer": "E"
         }
@@ -4683,7 +4684,7 @@
             "A": "Auditor",
             "B": "Treasurer",
             "C": "Chief Executive Officer",
-            "D": "Manager\n."
+            "D": "Manager"
           },
           "answer": "B"
         }
