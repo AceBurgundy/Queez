@@ -280,7 +280,11 @@ export function evaluateScoreTally(
       options: questionItem.options || {},
       userAnswer: userAnswer || "Unanswered",
       correctAnswer: correctAnswer || "N/A",
-      isCorrect
+      isCorrect,
+      ...(questionItem.image ? { image: questionItem.image } : {}),
+      ...(questionItem.caption ? { caption: questionItem.caption } : {}),
+      ...(questionItem.options_type ? { options_type: questionItem.options_type } : {}),
+      ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
     });
   });
 

@@ -1,5 +1,6 @@
 import { Component, css, html, raw, signal } from "../../../../Component.js";
 import { QuestionCard } from "../../../widgets/question-card/templates/question-card.js";
+import { ContextDrawer } from "../../../widgets/context-drawer/templates/context-drawer.js";
 import { formatSecondsToTime } from "../../../widgets/quiz-action-bar/templates/quiz-action-bar.js";
 import { saveActiveSession, clearActiveSession, getCategoryBounds } from "../scripts/quiz-state-manager.js";
 
@@ -100,6 +101,9 @@ export class QuizEngine extends Component {
     this.onCategoryChange = onCategoryChange;
     /** @type {function(Record<number, string>, Object): void} */
     this.onFinishExam = onFinishExam;
+
+    /** @type {ContextDrawer} */
+    this.contextDrawer = new ContextDrawer();
 
     /** @type {string} */
     this.examScope = savedSession?.examScope || examScope;
@@ -541,6 +545,11 @@ export class QuizEngine extends Component {
               <span class="google-symbols notranslate ${(isLastPageOfCategory && isLastCategory) ? "icon--check" : "icon--arrow-forward"}">${(isLastPageOfCategory && isLastCategory) ? "check" : "arrow_forward"}</span>
             </button>
           </div>
+
+          <!-- Context Drawer Mount Point -->
+          <div id="contextDrawerMountPoint">
+            ${this.contextDrawer.toString()}
+          </div>
         </div>
       `;
     };
@@ -609,6 +618,25 @@ export class QuizEngine extends Component {
         };
       }
 
+      // Context drawer trigger delegation
+      rootElement.querySelectorAll(".question-card__context-trigger").forEach((triggerButton) => {
+        /** @param {MouseEvent} event */
+        triggerButton.onclick = (event) => {
+          event.preventDefault();
+          /** @type {HTMLElement|null} */
+          const cardElement = triggerButton.closest(".question-card");
+          /** @type {number} */
+          const questionNumber = parseInt(cardElement?.dataset.questionNumber || "0", 10);
+          /** @type {Object|undefined} */
+          const matchedQuestion = this.questions.find((item) => item.number === questionNumber);
+          if (matchedQuestion && matchedQuestion.context) {
+            this.contextDrawer.open(matchedQuestion.context);
+          }
+        };
+      });
+
+      this.contextDrawer.attachListeners();
+
       // Option selection delegation
       rootElement.querySelectorAll(".question-card__option-button").forEach((button) => {
         /** @param {MouseEvent} event */
@@ -648,6 +676,9 @@ export class QuizEngine extends Component {
     this.unmounted = () => {
       if (this.timerIntervalId) {
         clearInterval(this.timerIntervalId);
+      }
+      if (this.contextDrawer && typeof this.contextDrawer.unmounted === "function") {
+        this.contextDrawer.unmounted();
       }
     };
   }

@@ -71,6 +71,15 @@ export class QuizResultsReview extends Component {
       /** @type {Array<string>} */
       const optionKeys = Object.keys(questionItem.options || {});
       if (optionKeys.length > 0) {
+        /** @type {boolean} */
+        const isVisualOptions = questionItem.options_type === "image" || Object.values(questionItem.options || {}).some((optionValue) => {
+          return typeof optionValue === "string" && (
+            /\.(png|jpe?g|svg|webp)$/i.test(optionValue) ||
+            optionValue.startsWith("data/") ||
+            optionValue.startsWith("quizzes/")
+          );
+        });
+
         /** @type {Array<string>} */
         const optionItemsMarkup = optionKeys.map((optionKey) => {
           /** @type {boolean} */
@@ -94,6 +103,31 @@ export class QuizResultsReview extends Component {
             tagMarkup = '<span class="quiz-review__option-tag quiz-review__option-tag--user">Your Answer</span>';
           }
 
+          if (isVisualOptions) {
+            /** @type {string} */
+            let optionImageUrl = questionItem.options[optionKey];
+            if (typeof optionImageUrl === "string" && optionImageUrl.startsWith("quizzes/")) {
+              optionImageUrl = "data/" + optionImageUrl.slice("quizzes/".length);
+            }
+
+            return html`
+              <div class="${optionClassName} quiz-review__option-item--visual">
+                <div class="quiz-review__visual-header">
+                  <span class="quiz-review__option-key">${optionKey}</span>
+                  ${tagMarkup}
+                </div>
+                <div class="quiz-review__visual-image-wrapper">
+                  <img
+                    src="${optionImageUrl}"
+                    class="quiz-review__option-image"
+                    alt="Option ${optionKey}"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            `;
+          }
+
           return html`
             <div class="${optionClassName}">
               <span class="quiz-review__option-key">${optionKey}</span>
@@ -103,8 +137,13 @@ export class QuizResultsReview extends Component {
           `;
         });
 
+        /** @type {string} */
+        const listClassName = isVisualOptions
+          ? "quiz-review__options-list quiz-review__options-list--visual"
+          : "quiz-review__options-list";
+
         return html`
-          <div class="quiz-review__options-list">
+          <div class="${listClassName}">
             ${optionItemsMarkup.join("")}
           </div>
         `;
@@ -169,6 +208,46 @@ export class QuizResultsReview extends Component {
           /** @type {string} */
           const statusText = questionItem.isCorrect ? "Correct" : "Incorrect";
 
+          /** @type {string|null} */
+          let resolvedImage = questionItem.image || null;
+          if (resolvedImage && resolvedImage.startsWith("quizzes/")) {
+            resolvedImage = "data/" + resolvedImage.slice("quizzes/".length);
+          }
+
+          /** @type {string} */
+          const imageMarkup = resolvedImage
+            ? html`
+              <div class="quiz-review__image-container">
+                <img
+                  src="${resolvedImage}"
+                  class="quiz-review__image"
+                  alt="Illustration for Question ${questionItem.number}"
+                  loading="lazy"
+                />
+              </div>
+            `
+            : "";
+
+          /** @type {string} */
+          const captionMarkup = questionItem.caption
+            ? html`<p class="quiz-review__caption">${questionItem.caption}</p>`
+            : "";
+
+          /** @type {string} */
+          const explanationMarkup = questionItem.explanation
+            ? html`
+              <details class="quiz-review__explanation">
+                <summary class="quiz-review__explanation-summary">
+                  <span class="google-symbols notranslate quiz-review__explanation-icon">lightbulb</span>
+                  <span>Step-by-Step Explanation</span>
+                </summary>
+                <div class="quiz-review__explanation-content">
+                  <p>${questionItem.explanation}</p>
+                </div>
+              </details>
+            `
+            : "";
+
           return html`
             <div class="quiz-review__card">
               <div class="quiz-review__card-header">
@@ -176,7 +255,10 @@ export class QuizResultsReview extends Component {
                 <div class="quiz-review__question-text">${questionItem.question}</div>
                 <span class="${statusClassName}">${statusText}</span>
               </div>
+              ${imageMarkup}
+              ${captionMarkup}
               ${renderOptionsHtml(questionItem)}
+              ${explanationMarkup}
             </div>
           `;
         });

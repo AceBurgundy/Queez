@@ -12,7 +12,8 @@ const documentationData = {
       navigation_item_paths: [
         "data/navigation-items/napolcom-mock-exam.js",
         "data/navigation-items/milk-operation-farm-management.js",
-        "data/navigation-items/civil-service-exam.js"
+        "data/navigation-items/civil-service-exam.js",
+        "data/navigation-items/pafocs-exam.js"
       ]
     }
   ]

@@ -4,19 +4,36 @@
  */
 
 /**
+ * @typedef {Object} PortableContext
+ * @property {string} id - Unique identifier for the shared reference context.
+ * @property {string} type - Context type ('text', 'image', 'mixed').
+ * @property {string} [title] - Optional human-readable title.
+ * @property {string} [content] - Optional textual content or story.
+ * @property {string} [image] - Optional reference illustration path.
+ * @property {string} [caption] - Optional reference caption.
+ */
+
+/**
  * @typedef {Object} PortableQuestion
  * @property {number} number - Sequential question number (1-based).
+ * @property {number} [original_number] - Source test question number.
+ * @property {string} [context_id] - Reference key linking to a section context.
  * @property {string} type - Question category (e.g., multiple_choice, identification, true_false).
+ * @property {string} [options_type] - Choice payload type ('text' or 'image').
  * @property {string} question - Question prompt text.
- * @property {Record<string, string>} options - Choice dictionary mapping option key to label.
+ * @property {Record<string, string>} options - Choice dictionary mapping option key to label or asset path.
  * @property {string} answer - Correct answer choice key.
  * @property {string} [image] - Optional relative image path.
+ * @property {string} [caption] - Optional image subtext or caption.
+ * @property {string} [explanation] - Optional step-by-step solution derivation.
  */
 
 /**
  * @typedef {Object} PortableSection
  * @property {string} id - Canonical section identifier.
  * @property {string} title - Human-readable section heading.
+ * @property {string} [description] - Educational section description text.
+ * @property {Record<string, PortableContext>} [contexts] - Shared reference blocks.
  * @property {Array<PortableQuestion>} questions - Array of question items inside this section.
  */
 
@@ -135,6 +152,30 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
     /** @type {string} */
     const assignedIcon = iconLookupMap.get(currentSection.id) || "category";
 
+    /** @type {Map<string, Object>} */
+    const resolvedContextsMap = new Map();
+    if (currentSection.contexts && typeof currentSection.contexts === "object") {
+      for (const [contextKey, contextData] of Object.entries(currentSection.contexts)) {
+        if (contextData && typeof contextData === "object") {
+          /** @type {string|undefined} */
+          let resolvedContextImage = undefined;
+          if (contextData.image) {
+            resolvedContextImage = baseDirectory
+              ? `${baseDirectory}/${contextData.image}`
+              : contextData.image;
+          }
+          resolvedContextsMap.set(contextKey, {
+            id: contextData.id || contextKey,
+            type: contextData.type || "text",
+            title: contextData.title || "",
+            content: contextData.content || "",
+            ...(resolvedContextImage ? { image: resolvedContextImage } : {}),
+            ...(contextData.caption ? { caption: contextData.caption } : {})
+          });
+        }
+      }
+    }
+
     adaptedSections.push({
       id: currentSection.id,
       title: currentSection.title,
@@ -158,13 +199,45 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
           : sourceQuestion.image;
       }
 
+      /** @type {Record<string, string>} */
+      const resolvedOptions = {};
+      if (sourceQuestion.options && typeof sourceQuestion.options === "object") {
+        for (const [optionKey, optionValue] of Object.entries(sourceQuestion.options)) {
+          if (typeof optionValue === "string" && (/\.(png|jpe?g|svg|webp)$/i.test(optionValue) || optionValue.startsWith("assets/"))) {
+            resolvedOptions[optionKey] = baseDirectory
+              ? `${baseDirectory}/${optionValue}`
+              : optionValue;
+          } else {
+            resolvedOptions[optionKey] = optionValue;
+          }
+        }
+      }
+
+      /** @type {Object|undefined} */
+      let boundContext = undefined;
+      if (sourceQuestion.context_id && resolvedContextsMap.has(sourceQuestion.context_id)) {
+        boundContext = resolvedContextsMap.get(sourceQuestion.context_id);
+      }
+
+      /** @type {string} */
+      const determinedOptionsType = sourceQuestion.options_type || (
+        Object.values(resolvedOptions).some((optionItem) => typeof optionItem === "string" && /\.(png|jpe?g|svg|webp)$/i.test(optionItem))
+          ? "image"
+          : "text"
+      );
+
       flattenedQuestions.push({
         number: sourceQuestion.number,
+        original_number: sourceQuestion.original_number || sourceQuestion.number,
         type: sourceQuestion.type || "multiple_choice",
+        options_type: determinedOptionsType,
         question: sourceQuestion.question,
-        options: sourceQuestion.options,
+        options: resolvedOptions,
         answer: sourceQuestion.answer,
-        ...(resolvedImagePath ? { image: resolvedImagePath } : {})
+        ...(resolvedImagePath ? { image: resolvedImagePath } : {}),
+        ...(boundContext ? { context: boundContext } : {}),
+        ...(sourceQuestion.caption ? { caption: sourceQuestion.caption } : {}),
+        ...(sourceQuestion.explanation ? { explanation: sourceQuestion.explanation } : {})
       });
     }
   }

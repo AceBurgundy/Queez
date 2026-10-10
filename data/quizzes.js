@@ -27,7 +27,7 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
         {
           "heading_title": "Available Queezes",
           "block_type": "cards_container",
-          "layout_type": "three_cards",
+          "layout_type": "cards_grid",
           "cards": [
             {
               "title": "Milk Operation and Farm Management",
@@ -55,6 +55,15 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
               "image_source": "",
               "shrink": false,
               "description": "Comprehensive 376-item Career Service Professional & Sub-Professional mock examination covering 7 domains: Verbal Ability, Reading Comprehension, Paragraph Organization, Analytical & Logic, Numerical Ability, General Information, and Clerical Operations."
+            },
+            {
+              "title": "PAFOCS Qualifying Examination",
+              "label": "Officer Candidate",
+              "quiz_id": "pafocs-exam",
+              "link": "queezes/pafocs-exam",
+              "image_source": "",
+              "shrink": false,
+              "description": "Comprehensive 400-item Philippine Air Force Officer Candidate School Qualifying Exam covering 6 domains: English, Science, Mathematics, Abstract Reasoning, Diagrammatic Reasoning, and Spatial Ability."
             }
           ]
         }

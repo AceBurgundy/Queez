@@ -292,9 +292,10 @@ export function generateOfflineResultsHtml(exportData) {
       const container = document.getElementById('questionsContainer');
       container.innerHTML = pageItems.map(q => {
         const optionKeys = Object.keys(q.options || {});
+        const isVisual = q.options_type === 'image' || optionKeys.some(k => typeof q.options[k] === 'string' && (/\.(png|jpe?g|svg|webp)$/i.test(q.options[k]) || q.options[k].startsWith('data/')));
         let optionsHtml = '';
         if (optionKeys.length > 0) {
-          optionsHtml = '<div class="options-list">' + optionKeys.map(k => {
+          optionsHtml = '<div class="options-list' + (isVisual ? ' visual-options' : '') + '">' + optionKeys.map(k => {
             const isUser = q.userAnswer === k;
             const isCorrect = q.correctAnswer === k;
             let cls = 'opt-item';
@@ -306,10 +307,14 @@ export function generateOfflineResultsHtml(exportData) {
               cls += ' user-selected';
               tag = '<span class="opt-tag your-choice">Your Answer</span>';
             }
+            const optContent = isVisual
+              ? \`<div style="display:flex;align-items:center;justify-content:center;background:#fff;border-radius:4px;padding:4px;"><img src="\${q.options[k]}" style="max-height:70px;max-width:100%;object-fit:contain;" alt="Option \${k}" /></div>\`
+              : \`<span>\${q.options[k]}</span>\`;
+
             return \`
               <div class="\${cls}">
                 <span class="opt-key">\${k}</span>
-                <span>\${q.options[k]}</span>
+                \${optContent}
                 \${tag}
               </div>
             \`;
@@ -323,6 +328,23 @@ export function generateOfflineResultsHtml(exportData) {
           \`;
         }
 
+        const diagramHtml = q.image
+          ? \`<div style="display:flex;justify-content:center;margin:0.5rem 0;"><img src="\${q.image}" style="max-width:100%;max-height:220px;object-fit:contain;background:#fff;border-radius:8px;padding:4px;" alt="Question illustration" /></div>\`
+          : '';
+
+        const captionHtml = q.caption
+          ? \`<div style="text-align:center;font-size:0.85rem;font-style:italic;color:var(--on-surface-variant);margin-bottom:0.5rem;">\${q.caption}</div>\`
+          : '';
+
+        const explanationHtml = q.explanation
+          ? \`
+            <details style="margin-top:0.75rem;background:var(--surface-highest);border-radius:0.5rem;padding:0.75rem 1rem;">
+              <summary style="font-weight:600;color:var(--primary);cursor:pointer;">💡 Step-by-Step Explanation</summary>
+              <div style="margin-top:0.5rem;line-height:1.6;font-size:0.95rem;white-space:pre-line;">\${q.explanation}</div>
+            </details>
+          \`
+          : '';
+
         return \`
           <div class="q-card \${q.isCorrect ? 'correct' : 'incorrect'}">
             <div class="q-header">
@@ -332,7 +354,10 @@ export function generateOfflineResultsHtml(exportData) {
                 \${q.isCorrect ? 'Correct' : 'Incorrect'}
               </span>
             </div>
+            \${diagramHtml}
+            \${captionHtml}
             \${optionsHtml}
+            \${explanationHtml}
           </div>
         \`;
       }).join('');
