@@ -150,7 +150,7 @@ export class Tabs extends Component {
             }
           }
           if (this.stopButtonCallback) {
-            renderStopButtonOnTrack();
+            renderStopButtonOnActiveTab();
           }
         }
       }
@@ -192,30 +192,31 @@ export class Tabs extends Component {
     };
 
     /**
-     * Internal helper to render the stop button at the end of the tabs track div.
+     * Internal helper to render the stop button at the flex-end of the active tab item.
      * @returns {void}
      */
-    const renderStopButtonOnTrack = () => {
+    const renderStopButtonOnActiveTab = () => {
       if (typeof document === "undefined" || !this.stopButtonCallback) {
         return;
       }
       removeExistingStopButton();
 
       /** @type {HTMLElement|null} */
-      const trackElement = document.querySelector(".tabs__track");
-      if (!trackElement) {
+      const activeTabElement = document.querySelector(".tabs__track .tabs__item--active");
+      if (!activeTabElement) {
         return;
       }
 
-      /** @type {HTMLButtonElement} */
-      const stopButtonElement = document.createElement("button");
-      stopButtonElement.type = "button";
-      stopButtonElement.id = "buttonStopExamTrack";
-      stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--track";
+      /** @type {HTMLElement} */
+      const stopButtonElement = document.createElement("span");
+      stopButtonElement.id = "buttonStopExamTab";
+      stopButtonElement.setAttribute("role", "button");
+      stopButtonElement.tabIndex = 0;
+      stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
       stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
       stopButtonElement.setAttribute("aria-label", "Stop Examination");
       stopButtonElement.innerHTML = `
-        <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+        <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
           <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" />
         </svg>
       `;
@@ -232,22 +233,28 @@ export class Tabs extends Component {
         }
       };
 
-      stopButtonElement.onclick = triggerStop;
-      trackElement.appendChild(stopButtonElement);
+      stopButtonElement.addEventListener("click", triggerStop);
+      stopButtonElement.addEventListener("keydown", (keyboardEvent) => {
+        if (keyboardEvent.key === "Enter" || keyboardEvent.key === " ") {
+          triggerStop(keyboardEvent);
+        }
+      });
+
+      activeTabElement.appendChild(stopButtonElement);
     };
 
     /**
-     * Attaches or moves the Stop Exam button into the tabs track.
+     * Attaches or moves the Stop Exam button into the currently active tab.
      * @param {(() => void)} onStopHandler - Callback invoked when the stop button is triggered.
      * @returns {void}
      */
     const attachStopButton = (onStopHandler) => {
       this.stopButtonCallback = onStopHandler;
-      renderStopButtonOnTrack();
+      renderStopButtonOnActiveTab();
     };
 
     /**
-     * Detaches and removes the Stop Exam button from the tabs track.
+     * Detaches and removes the Stop Exam button from the active tab.
      * @returns {void}
      */
     const detachStopButton = () => {
@@ -391,7 +398,7 @@ export class Tabs extends Component {
       }
 
       if (this.stopButtonCallback) {
-        renderStopButtonOnTrack();
+        renderStopButtonOnActiveTab();
       }
     };
   }

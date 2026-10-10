@@ -109,19 +109,15 @@
 }
 
 .quiz-engine__stop-button--tab {
-  width: 2.25rem;
-  height: 2.25rem;
-  margin-left: 0.5rem;
-  border-radius: var(--md-sys-shape-corner-full);
-}
-
-.quiz-engine__stop-button--track {
-  width: 3.5rem;
-  height: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.875rem;
+  height: 2.875rem;
   aspect-ratio: 1 / 1;
   border-radius: var(--md-sys-shape-corner-full);
-  margin-right: 0.5rem;
-  margin-left: 0.375rem;
+  margin-left: auto;
+  margin-right: 0.375rem;
   flex-shrink: 0;
   color: var(--md-sys-color-on-error-container);
   background-color: var(--md-sys-color-error-container);
@@ -134,27 +130,22 @@
               box-shadow 0.2s ease;
 }
 
-.quiz-engine__stop-button--track:hover {
+.quiz-engine__stop-button--tab:hover {
   background-color: var(--md-sys-color-error);
   color: var(--md-sys-color-on-error);
-  transform: scale(1.06);
-  box-shadow: 0 4px 14px rgba(186, 26, 26, 0.28) !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(186, 26, 26, 0.32) !important;
 }
 
-.quiz-engine__stop-button--track:active {
+.quiz-engine__stop-button--tab:active {
   transform: scale(0.94);
 }
 
-/* Ensure track stop button displays nicely in carousel / mobile mode */
-.tabs--carousel .tabs__track .tabs__item--active,
-.tabs .tabs__track .tabs__item--active {
-  min-width: 0;
-}
-
-.tabs--carousel .tabs__track #buttonStopExamTrack {
-  margin-left: auto;
-  margin-right: 0.5rem;
-  z-index: 2;
+/* Ensure active tab accommodates flex-end stop button */
+.tabs__item--active:has(.quiz-engine__stop-button--tab) {
+  padding-left: 1.25rem;
+  padding-right: 0.375rem;
+  justify-content: flex-start;
 }
 
 .quiz-engine__stop-button--nav {
