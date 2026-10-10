@@ -436,6 +436,12 @@ export class QuizEngine extends Component {
             <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" />
           </svg>
         `;
+        stopButtonElement.onpointerdown = (pointerEvent) => {
+          pointerEvent.stopPropagation();
+        };
+        stopButtonElement.onmousedown = (mouseEvent) => {
+          mouseEvent.stopPropagation();
+        };
         stopButtonElement.onclick = (event) => {
           event.stopPropagation();
           event.preventDefault();

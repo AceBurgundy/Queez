@@ -233,6 +233,12 @@ export class Tabs extends Component {
         }
       };
 
+      stopButtonElement.addEventListener("pointerdown", (pointerEvent) => {
+        pointerEvent.stopPropagation();
+      });
+      stopButtonElement.addEventListener("mousedown", (mouseEvent) => {
+        mouseEvent.stopPropagation();
+      });
       stopButtonElement.addEventListener("click", triggerStop);
       stopButtonElement.addEventListener("keydown", (keyboardEvent) => {
         if (keyboardEvent.key === "Enter" || keyboardEvent.key === " ") {
