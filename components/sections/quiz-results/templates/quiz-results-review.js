@@ -1,4 +1,4 @@
-import { Component, css, html } from "../../../../Component.js";
+import { Component, css, html, TemplateResult } from "../../../../Component.js";
 
 css(import.meta, ["../styles/quiz-results-review.css"]);
 
@@ -95,12 +95,12 @@ export class QuizResultsReview extends Component {
             optionClassName += " quiz-review__option-item--user-selected";
           }
 
-          /** @type {string} */
+          /** @type {TemplateResult|string} */
           let tagMarkup = "";
           if (isCorrectAnswer) {
-            tagMarkup = '<span class="quiz-review__option-tag quiz-review__option-tag--correct">Correct Answer</span>';
+            tagMarkup = html`<span class="quiz-review__option-tag quiz-review__option-tag--correct">Correct Answer</span>`;
           } else if (isUserSelected) {
-            tagMarkup = '<span class="quiz-review__option-tag quiz-review__option-tag--user">Your Answer</span>';
+            tagMarkup = html`<span class="quiz-review__option-tag quiz-review__option-tag--user">Your Answer</span>`;
           }
 
           if (isVisualOptions) {
