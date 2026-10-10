@@ -1,0 +1,183 @@
+/* =============================================================================
+   Material Design 3 / Google Gemini Confirmation Dialog Modal Styles
+   ============================================================================= */
+
+/* Scrim Backdrop */
+.m3-confirm-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.22s cubic-bezier(0.2, 0, 0, 1);
+  pointer-events: none;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+.m3-confirm-scrim--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Dialog Container Card */
+.m3-confirm-dialog {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-extra-large, 1.75rem);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  max-width: 25rem;
+  padding: 1.75rem 1.75rem 1.5rem 1.75rem;
+  transform: scale(0.92) translateY(12px);
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.m3-confirm-scrim--visible .m3-confirm-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* Header & Icon Badge */
+.m3-confirm-dialog__header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.m3-confirm-dialog__icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.875rem;
+  height: 2.875rem;
+  border-radius: var(--md-sys-shape-corner-full, 9999px);
+  background-color: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+  flex-shrink: 0;
+}
+
+.m3-confirm-dialog__icon-badge .google-symbols {
+  font-size: 1.625rem;
+  line-height: 1;
+}
+
+.m3-confirm-dialog__icon-badge--info {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* Headline Title */
+.m3-confirm-dialog__title {
+  margin: 0;
+  font-family: var(--md-sys-typescale-font-headline, 'Google Sans', sans-serif);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--md-sys-color-on-surface);
+  letter-spacing: -0.01em;
+}
+
+/* Supporting Description Body */
+.m3-confirm-dialog__description {
+  margin: 0.75rem 0 1.625rem 0;
+  font-family: var(--md-sys-typescale-font-body, 'Google Sans Text', sans-serif);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Action Button Row */
+.m3-confirm-dialog__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.625rem;
+  margin-top: auto;
+}
+
+/* Action Button Base */
+.m3-confirm-dialog__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--md-sys-typescale-font-label, 'Google Sans', sans-serif);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--md-sys-shape-corner-full, 9999px);
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: none !important;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              color 0.2s cubic-bezier(0.2, 0, 0, 1),
+              transform 0.15s ease,
+              border-color 0.2s ease;
+  line-height: 1.25;
+}
+
+.m3-confirm-dialog__button:active {
+  transform: scale(0.96);
+}
+
+/* Cancel / Dismiss Button (Tonal / Ghost) */
+.m3-confirm-dialog__button--cancel {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+}
+
+.m3-confirm-dialog__button--cancel:hover {
+  background-color: var(--md-sys-color-surface-container-highest);
+}
+
+/* Confirm Destructive Button (M3 Error Filled Pill) */
+.m3-confirm-dialog__button--confirm-destructive {
+  background-color: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+}
+
+.m3-confirm-dialog__button--confirm-destructive:hover {
+  filter: brightness(1.08);
+  transform: scale(1.02);
+}
+
+/* Confirm Standard Primary Button */
+.m3-confirm-dialog__button--confirm-primary {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.m3-confirm-dialog__button--confirm-primary:hover {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .m3-confirm-dialog {
+    padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+    max-width: 100%;
+  }
+
+  .m3-confirm-dialog__actions {
+    flex-direction: column-reverse;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .m3-confirm-dialog__button {
+    width: 100%;
+  }
+}

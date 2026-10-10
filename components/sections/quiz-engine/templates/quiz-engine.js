@@ -1,6 +1,7 @@
 import { Component, css, html, raw, signal } from "../../../../Component.js";
 import { QuestionCard } from "../../../widgets/question-card/templates/question-card.js";
 import { ContextDrawer } from "../../../widgets/context-drawer/templates/context-drawer.js";
+import { ConfirmDialog } from "../../../widgets/confirm-dialog/templates/confirm-dialog.js";
 import { formatSecondsToTime } from "../../../widgets/quiz-action-bar/templates/quiz-action-bar.js";
 import { saveActiveSession, clearActiveSession, getCategoryBounds } from "../scripts/quiz-state-manager.js";
 
@@ -108,6 +109,9 @@ export class QuizEngine extends Component {
 
     /** @type {ContextDrawer} */
     this.contextDrawer = new ContextDrawer();
+
+    /** @type {ConfirmDialog} */
+    this.confirmDialog = new ConfirmDialog();
 
     /** @type {string} */
     this.examScope = savedSession?.examScope || examScope;
@@ -340,13 +344,18 @@ export class QuizEngine extends Component {
     /**
      * Handles stopping the active examination after explicit user confirmation.
      * Discards active in-memory and persistent session states and returns to the initial view.
-     * @returns {void}
+     * @returns {Promise<void>}
      */
-    const handleStopExam = () => {
+    const handleStopExam = async () => {
       /** @type {boolean} */
-      const userConfirmed = typeof window !== "undefined" && typeof window.confirm === "function"
-        ? window.confirm("Are you sure you want to stop the examination? Your active progress will be discarded.")
-        : true;
+      const userConfirmed = await this.confirmDialog.prompt({
+        title: "Stop Examination?",
+        description: "Are you sure you want to stop this examination? Your active progress will be discarded.",
+        confirmLabel: "Stop Exam",
+        cancelLabel: "Continue Exam",
+        icon: "stop_circle",
+        isDestructive: true
+      });
 
       if (!userConfirmed) {
         return;
@@ -364,7 +373,7 @@ export class QuizEngine extends Component {
       }
     };
 
-    /** @type {function(): void} */
+    /** @type {function(): Promise<void>} */
     this.handleStopExam = handleStopExam;
 
     /**
@@ -449,6 +458,10 @@ export class QuizEngine extends Component {
                 </svg>
               </span>
             </button>
+          </div>
+          <!-- Confirm Dialog Mount Point -->
+          <div id="confirmDialogMountPoint">
+            ${this.confirmDialog.toString()}
           </div>
         `;
       }
@@ -595,6 +608,11 @@ export class QuizEngine extends Component {
           <div id="contextDrawerMountPoint">
             ${this.contextDrawer.toString()}
           </div>
+
+          <!-- Confirm Dialog Mount Point -->
+          <div id="confirmDialogMountPoint">
+            ${this.confirmDialog.toString()}
+          </div>
         </div>
       `;
     };
@@ -689,6 +707,7 @@ export class QuizEngine extends Component {
       });
 
       this.contextDrawer.attachListeners();
+      this.confirmDialog.attachListeners();
 
       // Option selection delegation
       rootElement.querySelectorAll(".question-card__option-button").forEach((button) => {
@@ -732,6 +751,9 @@ export class QuizEngine extends Component {
       }
       if (this.contextDrawer && typeof this.contextDrawer.unmounted === "function") {
         this.contextDrawer.unmounted();
+      }
+      if (this.confirmDialog && typeof this.confirmDialog.unmounted === "function") {
+        this.confirmDialog.unmounted();
       }
     };
   }
