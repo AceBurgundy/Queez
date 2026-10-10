@@ -144,6 +144,59 @@ export const saveMockExamHistory = (historyObject) => {
 };
 
 /**
+ * Represents a cluster of questions linked by a shared reference context.
+ * @typedef {Object} QuestionCluster
+ * @property {string|null} contextIdentifier - Unique context ID, or null for standalone questions.
+ * @property {Array<Object>} clusterQuestions - Question objects in this cluster.
+ * @property {number} clusterSize - Number of questions in this cluster.
+ */
+
+/**
+ * Groups questions into atomic clusters based on shared reference contexts.
+ * Questions sharing the same context identifier belong to the same cluster.
+ * Standalone questions without a context form individual single-question clusters.
+ * @param {Array<Object>} questionsList - Questions to partition into clusters.
+ * @returns {Array<QuestionCluster>} Array of atomic question clusters.
+ */
+export const groupQuestionsIntoClusters = (questionsList) => {
+  /** @type {Map<string, Array<Object>>} */
+  const contextClustersMap = new Map();
+  /** @type {Array<QuestionCluster>} */
+  const clusterCollection = [];
+
+  for (const questionItem of questionsList) {
+    /** @type {string|null} */
+    const contextIdentifier = questionItem.context?.id || questionItem.context_id || null;
+    if (contextIdentifier) {
+      if (!contextClustersMap.has(contextIdentifier)) {
+        /** @type {Array<Object>} */
+        const clusteredQuestions = [];
+        contextClustersMap.set(contextIdentifier, clusteredQuestions);
+        clusterCollection.push({
+          contextIdentifier,
+          clusterQuestions: clusteredQuestions,
+          get clusterSize() {
+            return this.clusterQuestions.length;
+          }
+        });
+      }
+      const existingClusterQuestions = contextClustersMap.get(contextIdentifier);
+      if (existingClusterQuestions) {
+        existingClusterQuestions.push(questionItem);
+      }
+    } else {
+      clusterCollection.push({
+        contextIdentifier: null,
+        clusterQuestions: [questionItem],
+        clusterSize: 1
+      });
+    }
+  }
+
+  return clusterCollection;
+};
+
+/**
  * Selects question numbers from a section pool, prioritizing unserved questions.
  * @param {Array<Object>} sectionQuestions - Questions in this section.
  * @param {number} countToSelect - Number of questions to pick.
