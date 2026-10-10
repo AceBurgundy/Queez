@@ -310,6 +310,7 @@ input[type="reset"]:active,
 
 /* 5. Retake Spin */
 .bright-squircle:hover .icon--refresh {
+  transform-origin: center center;
   animation: retakeSpin360 0.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
@@ -318,7 +319,31 @@ input[type="reset"]:active,
   100% { transform: rotate(360deg); }
 }
 
-/* 6. Checkmark Pop */
+/* 6. Eye Blink Animation */
+.bright-squircle:hover .icon--visibility {
+  transform-origin: center center;
+  animation: eyeBlink 1.25s ease-in-out infinite;
+}
+
+@keyframes eyeBlink {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  15%, 25% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(0.08);
+  }
+  60%, 70% {
+    transform: scaleY(1);
+  }
+  65% {
+    transform: scaleY(0.08);
+  }
+}
+
+/* 7. Checkmark Pop */
 .bright-squircle:hover .icon--check {
   animation: checkPop 0.4s cubic-bezier(0.2, 0, 0, 1) infinite alternate;
 }
