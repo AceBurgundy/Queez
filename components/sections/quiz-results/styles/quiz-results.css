@@ -145,17 +145,35 @@
 .quiz-results__button:hover {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: none !important;
 }
 
 .quiz-results__button:active {
-  transform: translateY(0) scale(0.96);
+  transform: scale(0.96);
 }
 
 .quiz-results__button .google-symbols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
   font-size: 1.75rem;
   line-height: 1;
+  text-align: center;
+  margin: auto;
+  transform-origin: center center;
+}
+
+.quiz-results__button:hover .icon--visibility {
+  transform-origin: center center;
+  animation: eyeBlink 1.25s ease-in-out infinite;
+}
+
+.quiz-results__button:hover .icon--refresh {
+  transform-origin: center center;
+  animation: retakeSpin360 0.85s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 /* Category Breakdown Grid */
