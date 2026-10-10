@@ -215,6 +215,8 @@ export class Tabs extends Component {
       stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
       stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
       stopButtonElement.setAttribute("aria-label", "Stop Examination");
+      stopButtonElement.setAttribute("title", "Stop Examination");
+      stopButtonElement.title = "Stop Examination";
       stopButtonElement.innerHTML = `
         <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
           <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" />
@@ -238,6 +240,12 @@ export class Tabs extends Component {
       });
       stopButtonElement.addEventListener("mousedown", (mouseEvent) => {
         mouseEvent.stopPropagation();
+      });
+      stopButtonElement.addEventListener("touchstart", (touchEvent) => {
+        touchEvent.stopPropagation();
+      }, { passive: true });
+      stopButtonElement.addEventListener("touchend", (touchEvent) => {
+        touchEvent.stopPropagation();
       });
       stopButtonElement.addEventListener("click", triggerStop);
       stopButtonElement.addEventListener("keydown", (keyboardEvent) => {

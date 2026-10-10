@@ -119,7 +119,7 @@
   width: 2.875rem;
   height: 2.875rem;
   aspect-ratio: 1 / 1;
-  border-radius: var(--md-sys-shape-corner-full);
+  border-radius: 1rem;
   flex-shrink: 0;
   color: var(--md-sys-color-on-error-container);
   background-color: var(--md-sys-color-error-container);
@@ -143,6 +143,41 @@
 
 .quiz-engine__stop-button--tab:active {
   transform: translateY(-50%) scale(0.94);
+}
+
+/* Tooltip floating above active tab stop button */
+.quiz-engine__stop-button--tab[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 0.625rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background-color: var(--md-sys-color-inverse-surface, #313033);
+  color: var(--md-sys-color-inverse-on-surface, #f4eff4);
+  font-family: var(--md-sys-typescale-font-label);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.35rem 0.625rem;
+  border-radius: var(--md-sys-shape-corner-small, 0.5rem);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 10000 !important;
+}
+
+.quiz-engine__stop-button--tab[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Ensure tab track permits tooltip visibility during active exam */
+.tabs:has(.quiz-engine__stop-button--tab),
+.tabs__track:has(.quiz-engine__stop-button--tab) {
+  overflow: visible !important;
 }
 
 /* Ensure active tab keeps title centered while accommodating right-end stop button */
