@@ -721,7 +721,7 @@ export class App extends Component {
           /** @type {number} */
           const maximumQuestionCount = sanitizedQuestions.length;
           /** @type {number} */
-          const defaultQuestionCount = Math.min(DEFAULT_MOCK_EXAM_QUESTION_COUNT, maximumQuestionCount);
+          const defaultQuestionCount = 1;
           return new QuizActionBar({
             questionsCount: maximumQuestionCount,
             maximumQuestionCount,
@@ -763,7 +763,7 @@ export class App extends Component {
           /** @type {number} */
           const maximumQuestionCount = sectionQuestions.length;
           /** @type {number} */
-          const defaultQuestionCount = Math.min(DEFAULT_SECTION_EXAM_QUESTION_COUNT, maximumQuestionCount);
+          const defaultQuestionCount = 1;
           /** @type {Object} */
           const categoryDefinition = tabList[tabIndex] || {};
           /** @type {string} */
@@ -778,7 +778,8 @@ export class App extends Component {
           return new QuizActionBar({
             questionsCount: maximumQuestionCount,
             maximumQuestionCount,
-            defaultQuestionCount: maximumQuestionCount,
+            defaultQuestionsCount: defaultQuestionCount,
+            defaultQuestionCount,
             buttonLabel: `Start ${sectionTitle}`,
             tooltipText: `Start Section Exam (${maximumQuestionCount} items)`,
             dialogTitle: sectionTitle,
