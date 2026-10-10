@@ -149,6 +149,9 @@ export class Tabs extends Component {
               incomingTabButton.classList.add("tabs__item--slide-in-left");
             }
           }
+          if (this.stopButtonCallback) {
+            renderStopButtonOnActiveTab();
+          }
         }
       }
 
@@ -167,8 +170,98 @@ export class Tabs extends Component {
       activateTabWithAnimation(targetIndex, null, triggerCallback);
     };
 
+    /** @type {(() => void)|null} */
+    this.stopButtonCallback = null;
+
+    /**
+     * Internal helper to remove any existing stop button from the tabs.
+     * @returns {void}
+     */
+    const removeExistingStopButton = () => {
+      if (typeof document === "undefined") {
+        return;
+      }
+      const existingButton = document.getElementById("buttonStopExamTab");
+      if (existingButton && existingButton.parentElement) {
+        existingButton.parentElement.removeChild(existingButton);
+      }
+    };
+
+    /**
+     * Internal helper to render the stop button on the active tab item.
+     * @returns {void}
+     */
+    const renderStopButtonOnActiveTab = () => {
+      if (typeof document === "undefined" || !this.stopButtonCallback) {
+        return;
+      }
+      removeExistingStopButton();
+
+      /** @type {HTMLElement|null} */
+      const activeTabElement = document.querySelector(".tabs__track .tabs__item--active");
+      if (!activeTabElement) {
+        return;
+      }
+
+      /** @type {HTMLElement} */
+      const stopButtonElement = document.createElement("span");
+      stopButtonElement.id = "buttonStopExamTab";
+      stopButtonElement.setAttribute("role", "button");
+      stopButtonElement.tabIndex = 0;
+      stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
+      stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
+      stopButtonElement.setAttribute("aria-label", "Stop Examination");
+      stopButtonElement.innerHTML = `
+        <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+          <rect x="6" y="6" width="12" height="12" rx="2" />
+        </svg>
+      `;
+
+      /**
+       * @param {Event} event
+       * @returns {void}
+       */
+      const triggerStop = (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        if (typeof this.stopButtonCallback === "function") {
+          this.stopButtonCallback();
+        }
+      };
+
+      stopButtonElement.addEventListener("click", triggerStop);
+      stopButtonElement.addEventListener("keydown", (keyboardEvent) => {
+        if (keyboardEvent.key === "Enter" || keyboardEvent.key === " ") {
+          triggerStop(keyboardEvent);
+        }
+      });
+
+      activeTabElement.appendChild(stopButtonElement);
+    };
+
+    /**
+     * Attaches or moves the Stop Exam button into the currently active tab.
+     * @param {(() => void)} onStopHandler - Callback invoked when the stop button is triggered.
+     * @returns {void}
+     */
+    const attachStopButton = (onStopHandler) => {
+      this.stopButtonCallback = onStopHandler;
+      renderStopButtonOnActiveTab();
+    };
+
+    /**
+     * Detaches and removes the Stop Exam button from the active tab.
+     * @returns {void}
+     */
+    const detachStopButton = () => {
+      this.stopButtonCallback = null;
+      removeExistingStopButton();
+    };
+
     this.activateTabWithAnimation = activateTabWithAnimation;
     this.activateTab = activateTab;
+    this.attachStopButton = attachStopButton;
+    this.detachStopButton = detachStopButton;
 
     /**
      * Navigates to next tab in carousel (wrapping around).
@@ -298,6 +391,10 @@ export class Tabs extends Component {
             activateTabWithAnimation(newIndex, direction);
           }
         });
+      }
+
+      if (this.stopButtonCallback) {
+        renderStopButtonOnActiveTab();
       }
     };
   }

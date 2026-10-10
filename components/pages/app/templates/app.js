@@ -900,10 +900,17 @@ export class App extends Component {
             },
             onRetakeExam: () => {
               clearActiveSession();
+              if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
+                tabsComponent.detachStopButton();
+              }
               currentActiveQuizEngine = null;
               renderInitialQuizView();
             }
           });
+
+          if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
+            tabsComponent.detachStopButton();
+          }
 
           contentArea.innerHTML = quizResults.toString();
           quizResults.__mount?.();
@@ -957,6 +964,7 @@ export class App extends Component {
             startTime: engineConfig.startTime || Date.now(),
             examScope,
             sectionCategoryIndex,
+            tabsComponent,
             onCategoryChange: (categoryIndex) => {
               tabsComponent.activateTab(categoryIndex, false);
             },
@@ -975,6 +983,9 @@ export class App extends Component {
               if (quizEngine.timerIntervalId) {
                 clearInterval(quizEngine.timerIntervalId);
                 quizEngine.timerIntervalId = null;
+              }
+              if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
+                tabsComponent.detachStopButton();
               }
               currentActiveQuizEngine = null;
               renderInitialQuizView(examScope === "section" ? sectionCategoryIndex : 0);
@@ -999,6 +1010,9 @@ export class App extends Component {
          */
         const renderInitialQuizView = (targetTabIndex = 0) => {
           currentActiveQuizEngine = null;
+          if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
+            tabsComponent.detachStopButton();
+          }
           tabsComponent.activateTab(targetTabIndex, false);
           /** @type {HTMLElement|null} */
           const contentArea = document.getElementById("quizTabContentArea");
@@ -1111,6 +1125,7 @@ export class App extends Component {
             savedSession: session,
             examScope,
             sectionCategoryIndex,
+            tabsComponent,
             onCategoryChange: (categoryIndex) => {
               tabsComponent.activateTab(categoryIndex, false);
             },
@@ -1129,6 +1144,9 @@ export class App extends Component {
               if (quizEngine.timerIntervalId) {
                 clearInterval(quizEngine.timerIntervalId);
                 quizEngine.timerIntervalId = null;
+              }
+              if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
+                tabsComponent.detachStopButton();
               }
               currentActiveQuizEngine = null;
               renderInitialQuizView(examScope === "section" ? sectionCategoryIndex : 0);

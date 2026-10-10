@@ -86,6 +86,7 @@ export class QuizEngine extends Component {
     startTime = Date.now(),
     examScope = "full",
     sectionCategoryIndex = 0,
+    tabsComponent = null,
     onCategoryChange = () => {},
     onFinishExam = () => {},
     onStopExam = () => {}
@@ -100,6 +101,8 @@ export class QuizEngine extends Component {
     this.categories = categories;
     /** @type {Array<Object>|null} */
     this.sectionBounds = sectionBounds;
+    /** @type {Object|null} */
+    this.tabsComponent = tabsComponent;
     /** @type {function(number): void} */
     this.onCategoryChange = onCategoryChange;
     /** @type {function(Record<number, string>, Object): void} */
@@ -366,6 +369,10 @@ export class QuizEngine extends Component {
         this.timerIntervalId = null;
       }
 
+      if (this.tabsComponent && typeof this.tabsComponent.detachStopButton === "function") {
+        this.tabsComponent.detachStopButton();
+      }
+
       clearActiveSession();
 
       if (typeof this.onStopExam === "function") {
@@ -398,6 +405,54 @@ export class QuizEngine extends Component {
     };
 
     /**
+     * Attaches the stop button to the active tab item.
+     * @returns {void}
+     */
+    const attachTabStopButton = () => {
+      if (this.tabsComponent && typeof this.tabsComponent.attachStopButton === "function") {
+        this.tabsComponent.attachStopButton(() => {
+          handleStopExam();
+        });
+        return;
+      }
+
+      if (typeof document === "undefined") {
+        return;
+      }
+
+      /** @type {HTMLElement|null} */
+      const activeTabElement = document.querySelector(".tabs__track .tabs__item--active");
+      if (activeTabElement && !activeTabElement.querySelector("#buttonStopExamTab")) {
+        /** @type {HTMLElement} */
+        const stopButtonElement = document.createElement("span");
+        stopButtonElement.id = "buttonStopExamTab";
+        stopButtonElement.setAttribute("role", "button");
+        stopButtonElement.tabIndex = 0;
+        stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
+        stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
+        stopButtonElement.setAttribute("aria-label", "Stop Examination");
+        stopButtonElement.innerHTML = `
+          <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
+            <rect x="6" y="6" width="12" height="12" rx="2" />
+          </svg>
+        `;
+        stopButtonElement.onclick = (event) => {
+          event.stopPropagation();
+          event.preventDefault();
+          handleStopExam();
+        };
+        stopButtonElement.onkeydown = (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.stopPropagation();
+            event.preventDefault();
+            handleStopExam();
+          }
+        };
+        activeTabElement.appendChild(stopButtonElement);
+      }
+    };
+
+    /**
      * @returns {void}
      */
     this.renderView = () => {
@@ -411,6 +466,7 @@ export class QuizEngine extends Component {
       }
       containerElement.innerHTML = this.buildContent();
       this.attachListeners();
+      attachTabStopButton();
     };
 
     /**
@@ -557,17 +613,6 @@ export class QuizEngine extends Component {
                 <span class="google-symbols notranslate" style="font-size: 1.125rem;">format_list_numbered</span>
                 <span>${progressLabel}</span>
               </div>
-              <button
-                type="button"
-                id="buttonStopExam"
-                class="bright-squircle quiz-engine__stop-button"
-                data-tooltip="Stop Examination"
-                aria-label="Stop Examination"
-              >
-                <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-                  <rect x="6" y="6" width="12" height="12" rx="2" />
-                </svg>
-              </button>
             </div>
           </div>
 
@@ -593,15 +638,29 @@ export class QuizEngine extends Component {
               Questions ${startIndex + 1}–${pageEndIndex} of ${activeBounds.endNum}
             </span>
 
-            <button
-              type="button"
-              id="buttonNextPage"
-              class="bright-squircle quiz-engine__nav-button"
-              data-tooltip="${nextLabel}"
-              aria-label="${nextLabel}"
-            >
-              <span class="google-symbols notranslate ${(isLastPageOfCategory && isLastCategory) ? "icon--check" : "icon--arrow-forward"}">${(isLastPageOfCategory && isLastCategory) ? "check" : "arrow_forward"}</span>
-            </button>
+            <div class="quiz-engine__navigation-actions">
+              <button
+                type="button"
+                id="buttonStopExamNav"
+                class="bright-squircle quiz-engine__stop-button quiz-engine__stop-button--nav"
+                data-tooltip="Stop Examination"
+                aria-label="Stop Examination"
+              >
+                <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <rect x="6" y="6" width="12" height="12" rx="2" />
+                </svg>
+              </button>
+
+              <button
+                type="button"
+                id="buttonNextPage"
+                class="bright-squircle quiz-engine__nav-button"
+                data-tooltip="${nextLabel}"
+                aria-label="${nextLabel}"
+              >
+                <span class="google-symbols notranslate ${(isLastPageOfCategory && isLastCategory) ? "icon--check" : "icon--arrow-forward"}">${(isLastPageOfCategory && isLastCategory) ? "check" : "arrow_forward"}</span>
+              </button>
+            </div>
           </div>
 
           <!-- Context Drawer Mount Point -->
@@ -663,6 +722,14 @@ export class QuizEngine extends Component {
       if (resumeButton) {
         resumeButton.onclick = () => {
           handleResumeCategory();
+        };
+      }
+
+      /** @type {HTMLElement|null} */
+      const stopExamNavButton = rootElement.querySelector("#buttonStopExamNav");
+      if (stopExamNavButton) {
+        stopExamNavButton.onclick = () => {
+          handleStopExam();
         };
       }
 
