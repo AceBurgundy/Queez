@@ -1369,8 +1369,9 @@
         {
           "number": 113,
           "type": "multiple_choice",
-          "question": "Famous Beach in the Philippines",
+          "question": "Boracay, the most famous beach in the Philippines, is also known as a blessed island. I have never met anyone who has not been enthralled and fascinated when they visited Boracay. The first time you set foot on its powder-like sand, you’ll surely feel lucky to be in a paradise island. The moment you see its crystal pristine water, you’ll be so thankful you’re alive. Many locals and foreigners go there again and again not only because of the breathtaking view but also because to celebrate life and its blessings. The best title for the above article is:",
           "options": {
+            "A": "Famous Beach in the Philippines",
             "B": "The Beach of Boracay",
             "C": "Boracay, a Blessed Island",
             "D": "Why People Go to Boracay"
@@ -1584,7 +1585,7 @@
             "B": "ang krisis ay nakaapekto sa hangarin ng maraming industriya na makapagbigay ng karagdagang sahod sa\nkanilang mga manggagawa",
             "C": "dumarami ang mga walang hanapbuhay at tumataas ang halaga ng mga bilihin dahil sa krisis",
             "D": "maraming industriya ang nalulugi dahil sa krisis kaya itinataas din nila ang presyo ng kanilang mga produkto",
-            "E": "dahil sa krisis, maraming industriya ang napilitang magsara\nQuestions 84–92 are about the following passage.\nWhen another old cave is discovered in the south of France, it is not usually news. Rather, it is an ordinary\nevent. Such discoveries are so frequent these days that hardly anybody pays heed to them.\nHowever, when the Lascaux cave complex was discovered in 1940, the world was amazed. Painted directly on\nits walls were hundreds of scenes showing how people lived thousands of years ago. The scenes show people\nhunting animals, such as bison or wild cats. Other images depict birds and, most noticeably, horses, which\nappear in more than 300 wall images, by far outnumbering all other animals.\nEarly artists drawing these animals accomplished a monumental and difficult task. THEY did not limit\nthemselves to the easily accessible walls but carried their painting materials to spaces that required climbing\nsteep walls or crawling into narrow passages in the Lascaux complex. Unfortunately, the paintings have been\nexposed to the destructive action of water and temperature changes, which easily wear the images away.\nBecause the Lascaux caves have many entrances, air movement has also damaged the images inside.\nAlthough they are not out in the open air, where natural light would have destroyed them long ago, many of the\nimages have deteriorated and are barely recognizable. To prevent further damage, the site was closed to\ntourists in 1963, 23 years after it was discovered."
+            "E": "dahil sa krisis, maraming industriya ang napilitang magsara"
           },
           "answer": "C"
         },
@@ -1598,7 +1599,8 @@
             "C": "Exploring Caves Respectfully",
             "D": "Determining the Age of French Caves"
           },
-          "answer": "B"
+          "answer": "B",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 132,
@@ -1610,7 +1612,8 @@
             "C": "notices",
             "D": "buys"
           },
-          "answer": "C"
+          "answer": "C",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 133,
@@ -1622,7 +1625,8 @@
             "C": "It is known for horse-racing events.",
             "D": "It has attracted many famous artists."
           },
-          "answer": "B"
+          "answer": "B",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 134,
@@ -1634,7 +1638,8 @@
             "C": "Horses",
             "D": "Wild cats"
           },
-          "answer": "C"
+          "answer": "C",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 135,
@@ -1646,7 +1651,8 @@
             "C": "count",
             "D": "draw"
           },
-          "answer": "A"
+          "answer": "A",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 136,
@@ -1658,7 +1664,8 @@
             "C": "Painting materials were hard to find.",
             "D": "Many painting spaces were difficult to reach."
           },
-          "answer": "D"
+          "answer": "D",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 137,
@@ -1670,7 +1677,8 @@
             "C": "animals",
             "D": "materials"
           },
-          "answer": "B"
+          "answer": "B",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 138,
@@ -1682,7 +1690,8 @@
             "C": "water",
             "D": "light"
           },
-          "answer": "D"
+          "answer": "D",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 139,
@@ -1692,9 +1701,10 @@
             "A": "Visitors were prohibited from entering.",
             "B": "A new lighting system was installed.",
             "C": "Another part was discovered.",
-            "D": "A new entrance was created.\nQuestions 93–95 are about the following passage.\nLightning is an electrical discharge that occurs in a thunderstorm. Often you’ll see it in the form of a bright “bolt”\n(or streak) coming from the sky. Lightning occurs when static electricity inside clouds builds up and causes an\nelectrical charge. What causes the static electricity? Water! Specifically, water droplets collide with ice crystals\nafter the temperature in the cloud falls below freezing. Sometimes these collisions are small, but other times\nthey’re quite large. Large collisions cause large electrical charges, and when they’re large enough, look out!\nThe hyper-charged cloud will emit a burst of lightning. This lightning looks quite impressive. For a good reason,\ntoo: A lightning bolt’s temperature gets so hot that it’s sometimes five times hotter than the sun’s surface.\nAlthough the lightning bolt is hot, though, it’s also short-lived. Because of that, when a person is unfortunate\nenough to be struck by lightning, their odds of surviving are pretty good. Statistics show that 90% of victims\nsurvive a lightning blast. Oh, and that old saying, “Lightning never strikes twice in the same spot”? It’s a myth!\nMany people report surviving lightning blasts three or more times. What’s more, lightning strikes some\nskyscrapers multiple times. The other prominent feature of lightning storms is the thunder. This is caused by\nthe super-heated air around a lightning bolt expands at the speed of sound. We hear thunder after seeing the\nlightning bolt because sound travels slower than the speed of light. In reality, though, both occur at the same\nmoment."
+            "D": "A new entrance was created."
           },
-          "answer": "A"
+          "answer": "A",
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 140,
@@ -1706,7 +1716,8 @@
             "C": "The sound that lightning makes occurs when electricity strikes an object.",
             "D": "We hear lightning before we see it."
           },
-          "answer": "A"
+          "answer": "A",
+          "context_id": "ctx_cse_lightning"
         },
         {
           "number": 141,
@@ -1718,7 +1729,8 @@
             "C": "A ninety percent chance of surviving the strike.",
             "D": "An eighty percent chance of survival."
           },
-          "answer": "C"
+          "answer": "C",
+          "context_id": "ctx_cse_lightning"
         },
         {
           "number": 142,
@@ -1730,9 +1742,24 @@
             "C": "Water droplets colliding.",
             "D": "Warm and cold air mixing together.\nParagraph Organization"
           },
-          "answer": "A"
+          "answer": "A",
+          "context_id": "ctx_cse_lightning"
         }
-      ]
+      ],
+      "contexts": {
+        "ctx_cse_lascaux_caves": {
+          "id": "ctx_cse_lascaux_caves",
+          "type": "text",
+          "title": "Passage: The Lascaux Cave Paintings",
+          "content": "When another old cave is discovered in the south of France, it is not usually news. Rather, it is an ordinary event. Such discoveries are so frequent these days that hardly anybody pays heed to them.\n\nHowever, when the Lascaux cave complex was discovered in 1940, the world was amazed. Painted directly on its walls were hundreds of scenes showing how people lived thousands of years ago. The scenes show people hunting animals, such as bison or wild cats. Other images depict birds and, most noticeably, horses, which appear in more than 300 wall images, by far outnumbering all other animals.\n\nEarly artists drawing these animals accomplished a monumental and difficult task. THEY did not limit themselves to the easily accessible walls but carried their painting materials to spaces that required climbing steep walls or crawling into narrow passages in the Lascaux complex. Unfortunately, the paintings have been exposed to the destructive action of water and temperature changes, which easily wear the images away.\n\nBecause the Lascaux caves have many entrances, air movement has also damaged the images inside. Although they are not out in the open air, where natural light would have destroyed them long ago, many of the images have deteriorated and are barely recognizable. To prevent further damage, the site was closed to tourists in 1963, 23 years after it was discovered."
+        },
+        "ctx_cse_lightning": {
+          "id": "ctx_cse_lightning",
+          "type": "text",
+          "title": "Passage: Lightning in Thunderstorms",
+          "content": "Lightning is an electrical discharge that occurs in a thunderstorm. Often you’ll see it in the form of a bright “bolt” (or streak) coming from the sky. Lightning occurs when static electricity inside clouds builds up and causes an electrical charge. What causes the static electricity? Water! Specifically, water droplets collide with ice crystals after the temperature in the cloud falls below freezing. Sometimes these collisions are small, but other times they’re quite large. Large collisions cause large electrical charges, and when they’re large enough, look out!\n\nThe hyper-charged cloud will emit a burst of lightning. This lightning looks quite impressive. For a good reason, too: A lightning bolt’s temperature gets so hot that it’s sometimes five times hotter than the sun’s surface. Although the lightning bolt is hot, though, it’s also short-lived. Because of that, when a person is unfortunate enough to be struck by lightning, their odds of surviving are pretty good. Statistics show that 90% of victims survive a lightning blast. Oh, and that old saying, “Lightning never strikes twice in the same spot”? It’s a myth!\n\nMany people report surviving lightning blasts three or more times. What’s more, lightning strikes some skyscrapers multiple times. The other prominent feature of lightning storms is the thunder. This is caused by the super-heated air around a lightning bolt expands at the speed of sound. We hear thunder after seeing the lightning bolt because sound travels slower than the speed of light. In reality, though, both occur at the same moment."
+        }
+      }
     },
     {
       "id": "paragraph-organization",
