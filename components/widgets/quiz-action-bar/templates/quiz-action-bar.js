@@ -156,7 +156,7 @@ export class QuizActionBar extends Component {
     /** @type {number} */
     this.maximumQuestionCount = maximumQuestionCount ?? questionsCount ?? 100;
     /** @type {number} */
-    this.defaultQuestionCount = defaultQuestionCount ?? defaultQuestionsCount ?? this.maximumQuestionCount;
+    this.defaultQuestionCount = defaultQuestionCount ?? defaultQuestionsCount ?? 1;
 
     /**
      * Handles opening the start-exam modal dialog.

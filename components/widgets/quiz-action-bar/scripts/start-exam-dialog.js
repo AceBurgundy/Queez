@@ -419,7 +419,7 @@ export const openStartExamDialog = ({
   subtitle = "Choose items and duration",
   minimumQuestionCount = 1,
   maximumQuestionCount = 100,
-  defaultQuestionCount = 100,
+  defaultQuestionCount = 1,
   onConfirm,
   onCancel
 }) => {

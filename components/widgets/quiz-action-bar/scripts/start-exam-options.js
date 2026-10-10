@@ -32,7 +32,7 @@ export const resolveDefaultQuestionCount = (preferredCount, poolSize) => {
   /** @type {number} */
   const safePoolSize = Math.max(1, Math.floor(Number(poolSize)) || 1);
   /** @type {number} */
-  const safePreferredCount = Math.floor(Number(preferredCount)) || 10;
+  const safePreferredCount = Math.floor(Number(preferredCount)) || 1;
   return clampQuestionCount(safePreferredCount, 1, safePoolSize);
 };
 
