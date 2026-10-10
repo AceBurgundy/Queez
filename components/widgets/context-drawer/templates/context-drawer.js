@@ -1,4 +1,4 @@
-import { Component, css, html } from "../../../../Component.js";
+import { Component, css, html, raw } from "../../../../Component.js";
 
 css(import.meta, ["../styles/context-drawer.css"]);
 
@@ -196,7 +196,7 @@ export class ContextDrawer extends Component {
 
     this.template = html`
       <div id="contextDrawerHost">
-        ${this.buildContent()}
+        ${raw(this.buildContent())}
       </div>
     `;
 
