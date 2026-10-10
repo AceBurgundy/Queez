@@ -405,7 +405,7 @@ export class QuizEngine extends Component {
     };
 
     /**
-     * Attaches the stop button to the active tab item.
+     * Attaches the stop button to the tabs track.
      * @returns {void}
      */
     const attachTabStopButton = () => {
@@ -421,19 +421,18 @@ export class QuizEngine extends Component {
       }
 
       /** @type {HTMLElement|null} */
-      const activeTabElement = document.querySelector(".tabs__track .tabs__item--active");
-      if (activeTabElement && !activeTabElement.querySelector("#buttonStopExamTab")) {
-        /** @type {HTMLElement} */
-        const stopButtonElement = document.createElement("span");
-        stopButtonElement.id = "buttonStopExamTab";
-        stopButtonElement.setAttribute("role", "button");
-        stopButtonElement.tabIndex = 0;
-        stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
+      const trackElement = document.querySelector(".tabs__track");
+      if (trackElement && !trackElement.querySelector("#buttonStopExamTrack")) {
+        /** @type {HTMLButtonElement} */
+        const stopButtonElement = document.createElement("button");
+        stopButtonElement.type = "button";
+        stopButtonElement.id = "buttonStopExamTrack";
+        stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--track";
         stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
         stopButtonElement.setAttribute("aria-label", "Stop Examination");
         stopButtonElement.innerHTML = `
-          <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true">
-            <rect x="6" y="6" width="12" height="12" rx="2" />
+          <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" />
           </svg>
         `;
         stopButtonElement.onclick = (event) => {
@@ -441,14 +440,7 @@ export class QuizEngine extends Component {
           event.preventDefault();
           handleStopExam();
         };
-        stopButtonElement.onkeydown = (event) => {
-          if (event.key === "Enter" || event.key === " ") {
-            event.stopPropagation();
-            event.preventDefault();
-            handleStopExam();
-          }
-        };
-        activeTabElement.appendChild(stopButtonElement);
+        trackElement.appendChild(stopButtonElement);
       }
     };
 
