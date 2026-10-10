@@ -111,12 +111,12 @@
 .quiz-engine__nav-button:hover:not(:disabled) {
   background-color: var(--md-sys-color-tertiary);
   color: var(--md-sys-color-on-tertiary);
-  transform: translateY(-2px);
+  transform: none;
   box-shadow: none !important;
 }
 
 .quiz-engine__nav-button:active:not(:disabled) {
-  transform: translateY(0) scale(0.96);
+  transform: scale(0.96);
 }
 
 .quiz-engine__nav-button:disabled {
@@ -127,8 +127,16 @@
 }
 
 .quiz-engine__nav-button .google-symbols {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.625rem;
+  height: 1.625rem;
   font-size: 1.625rem;
   line-height: 1;
+  text-align: center;
+  margin: auto;
+  transform-origin: center center;
 }
 
 .quiz-engine__page-indicator {
