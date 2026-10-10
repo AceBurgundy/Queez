@@ -551,8 +551,9 @@ export class QuizEngine extends Component {
                 data-tooltip="Stop Examination"
                 aria-label="Stop Examination"
               >
-                <span class="google-symbols notranslate">stop_circle</span>
-                <span class="quiz-engine__stop-button-label">Stop</span>
+                <svg class="quiz-engine__stop-icon-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <rect x="6" y="6" width="12" height="12" rx="2" />
+                </svg>
               </button>
             </div>
           </div>
