@@ -80,7 +80,7 @@ export class QuizResultsReview extends Component {
           );
         });
 
-        /** @type {Array<string>} */
+        /** @type {Array<TemplateResult>} */
         const optionItemsMarkup = optionKeys.map((optionKey) => {
           /** @type {boolean} */
           const isUserSelected = questionItem.userAnswer === optionKey;
@@ -144,7 +144,7 @@ export class QuizResultsReview extends Component {
 
         return html`
           <div class="${listClassName}">
-            ${optionItemsMarkup.join("")}
+            ${optionItemsMarkup}
           </div>
         `;
       }
