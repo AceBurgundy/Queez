@@ -158,7 +158,7 @@
           "original_number": 8,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "The resuscitation pf multiple victims of the tsunamis have kept the death toll to a A B minimum. No error. C D 2 --- PAGE 3 ---",
+          "question": "The resuscitation pf multiple victims of the tsunamis have kept the death toll to a A B minimum. No error. C D",
           "options": {
             "A": "Underlined phrase A",
             "B": "Underlined phrase B",
@@ -296,7 +296,7 @@
           "original_number": 17,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "Napag-alaman na nakipagsabwatan siya sa kanyang tauhan upang maikubli ang A 8 C katiwaliang kanyang ginawa. Walang mali. D --- PAGE 4 ---",
+          "question": "Napag-alaman na nakipagsabwatan siya sa kanyang tauhan upang maikubli ang A 8 C katiwaliang kanyang ginawa. Walang mali. D",
           "options": {
             "A": "Underlined phrase A",
             "B": "Underlined phrase B",
@@ -453,7 +453,7 @@
           "original_number": 27,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "Professor Lane, our Computer Science teacher, was excited when he had the A B opportunity to meet Bill Gates, the president of Microsoft, Inc. No error. C D E --- PAGE 5 ---",
+          "question": "Professor Lane, our Computer Science teacher, was excited when he had the A B opportunity to meet Bill Gates, the president of Microsoft, Inc. No error. C D E",
           "options": {
             "A": "Underlined phrase A",
             "B": "Underlined phrase B",
@@ -568,7 +568,7 @@
           "original_number": 35,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "Pasan ko ang daigdig 5",
+          "question": "Pasan ko ang daigdig",
           "options": {
             "C": "problema",
             "D": "kasalanan",
@@ -643,7 +643,7 @@
             "A": "Native Language or Dialect",
             "B": "Local Slang",
             "C": "Peculiar manner",
-            "D": "Surrounding area --- PAGE 7 ---"
+            "D": "Surrounding area"
           },
           "answer": "A"
         },
@@ -904,7 +904,7 @@
           "original_number": 59,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "Madalas kang makakakita ng sambalilo sa ulo ng kinakalbong si Padre Francisco. 8 --- PAGE 9 ---",
+          "question": "Madalas kang makakakita ng sambalilo sa ulo ng kinakalbong si Padre Francisco.",
           "options": {
             "A": "Sombrero",
             "B": "Kapa",
@@ -1011,7 +1011,7 @@
             "A": "starling",
             "B": "foundling",
             "C": "yearling",
-            "D": "begrudging --- PAGE 10 ---"
+            "D": "begrudging"
           },
           "answer": "C",
           "explanation": "a yearling is a young animal past its first year but not yet two years old"
@@ -1128,9 +1128,9 @@
           "question": "Sunlight shining through a window was an obvious in the nearly every one of the artist's works.",
           "options": {
             "A": "disjunction",
-            "B": "hindrance 10",
+            "B": "hindrance",
             "C": "repugnance",
-            "D": "motif --- PAGE 11 ---"
+            "D": "motif"
           },
           "answer": "D",
           "explanation": "motif is a recurrent theme or form in an artistic or literary work"
@@ -1247,7 +1247,9 @@
           "question": "Given his nature, it was appropriate that he decided to be a trial lawyer after law school.",
           "options": {
             "A": "lackluster",
-            "B": "engrossed 11 c. penitent d. litigious --- PAGE 12 ---"
+            "B": "engrossed",
+            "C": "penitent",
+            "D": "litigious"
           },
           "answer": "D",
           "explanation": "litigious means inclined to disagree or dispute, especially in lawsuits"
@@ -1290,9 +1292,9 @@
           "question": "With Justine's nature and passion for art, she would make an excellent tour guide for the museum.",
           "options": {
             "A": "volatile",
-            "B": "congenial 12",
+            "B": "congenial",
             "C": "servile",
-            "D": "fledgling READING COMPREHENSION 13 READING COMPREHENSION. Read the given passage and answer the following questions. The victory of the small Greek democracy of Athens over the mighty Persian Empire in 490 B.C. is one of the most famous events in history. Darius, king of the Persian Empire, was furious because Athens had interceded for the other Greek city-states in revolt against Persian domination. In anger the king sent an enormous army to defeat Athens. He thought it would take drastic steps to pacify the rebellious part of the empire. Persia was ruled by one man. In Athens, however, all citizens helped to rule. Ennobled by this participation, Athenians were prepared to die for their city­ state. Perhaps this was the secret of the remarkable victory at Marathon, which freed them from Persian rule. On their way to Marathon, the Persians tried to fool some Greek city-states by claiming to have come in peace. Thefrightened citizens of Delos refused to believe this. Not wanting to abet the conquest of Greece, they fled from their city and did not return until the Persians had left. They were wise, for the Persians next conquered the city of Eritrea and captured its people. Tiny Athens stood alone against Persia. The Athenian people went to their sanctuaries. There they prayed for deliverance. They asked their gods to expedite their victory. The Athenians refurbished their weapons and moved to the plain of Marathon, where their little band would meet the Persians. At the last moment, soldiers from Plataea reinforced the Athenian troops. The Athenian army attacked, and Greek citizens fought bravely. The power of the mighty Persians was offset by the love that the Athenians had for their city. Athenians defeated the Persians in both archery and hand combat. Greek soldiers seized Persian ships and burned them, and the Persians fled in terror. Herodotus, a famous historian, reports that 6,400 Persians died, compared to only 192 Athenians."
+            "D": "fledgling"
           },
           "answer": "B",
           "explanation": "congenial means having a friendly or pleasant disposition, sociable"
@@ -1320,9 +1322,9 @@
           "question": "Darius took drastic steps to the rebellious Athenian.",
           "options": {
             "A": "weaken",
-            "B": "destroy 14",
+            "B": "destroy",
             "C": "calm",
-            "D": "irritate --- PAGE 15 ---"
+            "D": "irritate"
           },
           "answer": "A",
           "context_id": "ctx_eng_socrates"
@@ -1422,7 +1424,7 @@
           "question": "It can be inferred from the passage that the concept of the carrying capacity of land is ------",
           "options": {
             "A": "still hypothetical rather than practical",
-            "B": "basically political rather than ecological 16 --- PAGE 17 ---",
+            "B": "basically political rather than ecological",
             "C": "independent of climatic conditions",
             "D": "relatively unknown among ecologists"
           },
@@ -1480,7 +1482,7 @@
             "A": "flippant",
             "B": "objective",
             "C": "aggressive",
-            "D": "apologetic Coral reefs are one of the most fragile, biologically complex, and diverse marine ecosystems on Earth. This ecosystem is one of the fascinating paradoxes of the biosphere: how do clear, and thus nutrient-poor, waters support such prolific and productive communities? Part of the answer lies within the tissues of the corals themselves. Symbiotic cells of algae known as zooxanthellae carry out photosynthesis using the metabolic wastes of the coral thereby producing food for themselves, for their corals, hosts, and even for other members of the reef community. This symbiotic process allows organisms in the reef community to use sparse nutrient resources efficiently. 17 Unfortunately for coral reefs, however, a variety of human activities are causing worldwide degradation of shallow marine habitats by adding nutrients to the water. Agriculture, slash-and-burn land clearing, sewage disposal and manufacturing that creates waste by-products all increase nutrient loads in these waters. Typical symptoms of reef decline are destabilized herbivore populations and an increasing abundance of algae and filter-feeding animals. Declines in reef communities are consistent with observations that nutrient input is increasing in direct proportion to growing human populations, thereby threatening reef communities sensitive to subtle changes in nutrient input to their waters."
+            "D": "apologetic"
           },
           "answer": "B"
         },
@@ -1531,7 +1533,7 @@
           "original_number": 102,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "According to the passage, which of the following is a factor that is threatening the survival of coral reef communities? 18 --- PAGE 19 ---",
+          "question": "According to the passage, which of the following is a factor that is threatening the survival of coral reef communities?",
           "options": {
             "A": "The waters they inhabit contain few nutrient resources",
             "B": "A decline in nutrient input is disrupting their symbiotic relationship with zooxanthellae.",
@@ -1550,7 +1552,7 @@
             "A": "They are thriving even though human activities have depleted the nutrients in their environment.",
             "B": "They are able to survive in spite of an overabundance of algae inhabiting their waters.",
             "C": "They are able to survive in an environment with limited food resources.",
-            "D": "Their metabolic wastes contribute to the degradation of the waters that they inhabit. The unpleasant feeling passed and she glanced up at him. He was walking unmarked in moonlight, innocent of her reaction to him. She felt then - this thought had come to her before - that there might be more to him than she had imagined. She felt ashamed she never thanked him for the help he had given her father."
+            "D": "Their metabolic wastes contribute to the degradation of the waters that they inhabit."
           },
           "answer": "C"
         },
@@ -1587,12 +1589,12 @@
           "original_number": 106,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "She was ashamed because ----- - 1 9 --- PAGE 20 ---",
+          "question": "She was ashamed because",
           "options": {
             "A": "She was spying on him",
             "B": "There was more to him than she had imagined",
             "C": "A recurring thought came back to her",
-            "D": "She had never thanked him for this help to her father The man sat up in the snow for a moment and struggled for calmness. Then he pulled on his gloves by means of these teeth, and got upon his feet. He glanced down at first in order to assure himself that he was really standing up, for the absence of sensation in his feet left him unrelated to the earth. His erect position in itself started to drive the webs of suspicion from the dog's mind; and when he spoke peremptorily, with the sound of whip-lashes in his voice, the dog rendered its customary allegiance and came to him. As it came within reaching distance, the man lost his control. His arms flashed out to the dog and he experienced genuine surprise when he discovered that his hands could not clutch, that there was neither bend nor feeling in the fingers. He had forgotten for the moment that they were frozen and that they were freezing more and more. All this happened quickly and before the animal could get away, he encircled its body with his arms. He sat down in the snow and in this fashion held the dog, while it snarled and whined and struggled."
+            "D": "She had never thanked him for this help to her father"
           },
           "answer": "D"
         },
@@ -1634,7 +1636,7 @@
             "A": "why so many ships and planes disappear in the Bermuda Triangle",
             "B": "the mysterious disappearances of ships and planes in the Bermuda Triangle",
             "C": "the location of the Bermuda Triangle",
-            "D": "the frequency of the disappearances in the Bermuda Triangle Species interdependence in nature confers many benefits on the species involved, but it can also become a point of weakness when one species involved in the relationship is affected by a catastrophe. Thus, flowering plant species dependent on insect pollination, as opposed to self-pollination orwind pollination, could be endangered when the population of insect-pollinators is depleted by the use of pesticides. In the forests of New Brunswick, for example, various pesticides have been sprayed in the past 25 years in efforts to control the spruce budworm, an economically significant pest. Scientists have now investigated the effects of the spraying of Matacil, one of the anti-budworm agents that is least toxic to insect-pollinators. They studied Matacil's effects on insect mortality in a wide variety of wild insect species and on plant fecundity, expressed as the 23 percentage of the total flowers on an individual plant that actually developed fruit and bore seeds. They found that the most pronounced mortality after the spraying of Matacil occurred among the smaller bees and one family of flies, insects that were all important pollinators of numerous species of plants growing beneath the tree canopy of forests. The fecundity of plants in one common indigenous species, the red-osier dogwood, was significantly reduced in the sprayed areas as compared to that of plants in control plots where Matacil was not sprayed. This species is highly dependent on the insect-pollinators most vulnerable to Matacil. The creeping dogwood, a species similar to the red-osier dogwood, but which is pollinated by large bees, such as bumblebees, showed no significant decline in fecundity. Since large bees are not affected by the spraying of Matacil, these results add weight to the argument that spraying where the pollinators are sensitive to the pesticide used decreases plant fecundity. The question of whether the decrease in plant fecundity caused by the spraying of pesticides actually causes a decline in the overall population of flowering plant species still remains unanswered. Plant species dependent solely on seeds for survival or dispersal are obviously more vulnerable to any decrease in plant fecundity that occurs, whatever its cause. If, on the other hand, vegetative growth and dispersal (by means of shoots or runners) are available as alternative reproductive strategies for a species, then decreases in plant fecundity may be of little consequence. The fecundity effects described here are likely to have the most profound impact on plant species with all four of the following characteristics: a short life span, a narrow geographic range, an incapacity for vegetative propagation, and a dependence on a small number of insect-pollinator species. Perhaps we should give special attention to the conservation of such plant species since they lack key factors in their defenses against the environmental disruption caused by pesticide use."
+            "D": "the frequency of the disappearances in the Bermuda Triangle"
           },
           "answer": "C"
         },
@@ -1842,7 +1844,7 @@
           "question": "It can be inferred that which of the following is true of plant fecundity as it is defined in the passage?",
           "options": {
             "A": "A plant's fecundity decreases as the percentage of unpollinated flowers on the plant increases",
-            "B": "A plant's fecundity decreases as the number of flowers produced by the plant decreases 25 --- PAGE 26 ---",
+            "B": "A plant's fecundity decreases as the number of flowers produced by the plant decreases",
             "C": "A plant's fecundity increases as the number of flowers produced by the plant increases",
             "D": "A plant's fecundity is usually low if the plant relies on a small number of insect species for pollination."
           },
@@ -1872,7 +1874,7 @@
             "A": "Human activities that result in environmental disruption should be abandoned",
             "B": "The use of pesticides is likely to continue into the future",
             "C": "It is economically beneficial to preserve endangered plant species",
-            "D": "Conservation efforts aimed at preserving a few well-chosen species are more cost-effective than are broader-based efforts to improve the environment By the time a child is six or seven she has all the essential avoidances well enough by heart to be trusted with the care of a younger child. And she also develops a number of simple techniques. She learns to weave firm square balls from palm leaves, to make pinwheels of palm leaves or frangipani blossoms, to climb a coconut tree by walking up the trunk on flexible little feet, to break open a coconut with one firm well-directed blow of a knife as long as she is tall, to play a number of group games and sing the songs which go with them, to tidy the house by picking up the litter on the stony floor, to bring water from the sea, to spread out the copra to dry and to help gather it in when rain threatens, to go to a neighboring house and bring back a lighted faggot for the chiefs pipe or the cook-house fire. But in the case of the little girls all these tasks are merely supplementary to the main business of baby-tending. Very small boys also have some care of the younger children, but at eight or nine years of age they are usually relieved of it. Whatever rough edges have not been smoothed off by this responsibility for younger children are worn off by their contact with older boys. 26 For little boys are admitted to interesting and important activities only so long as their behavior is circumspect and helpful. Where small girls are brusquely pushed aside, small boys will be patiently tolerated and they become adept at making themselves useful. The four or five little boys who all wish to assist at the important, business of helping a grown youth lasso reef eels, organize themselves into a highly efficient working team; one boy holds the bait, another holds an extra lasso, others poke eagerly about in holes in the reef looking for prey, while still another tucks the captured eels into his lavalava. The small girls, burdened with heavy babies or the care of little staggerers who are too small to adventure on the reef, discouraged by the hostility of the small boys and the scorn of the older ones, have little opportunity for learning the more adventurous forms of work and play. So while the little boys first undergo the chastening effects of baby-tending and then have many opportunities to learn effective cooperation under the supervision of older boys, the girls' education is less comprehensive. They have a high standard of individual responsibility, but the community provides them with no lessons in cooperation with one another. This is particularly apparent in the activities of young people: the boys organize quickly; the girls waste hours in bickering, innocent of any technique for quick and efficient cooperation."
+            "D": "Conservation efforts aimed at preserving a few well-chosen species are more cost-effective than are broader-based efforts"
           },
           "answer": "D"
         },
@@ -1923,7 +1925,7 @@
           "original_number": 130,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "It can be inferred that the 'high standard of individual responsibility' is _ 27 --- PAGE 28 ---",
+          "question": "It can be inferred that the 'high standard of individual responsibility' is _",
           "options": {
             "A": "not guilty of",
             "B": "unskilled in",
@@ -1984,7 +1986,7 @@
             "A": "Both description and interpretation of observations",
             "B": "Presentation of facts without comment",
             "C": "Description of evidence to support a theory",
-            "D": "Generalization from a particular viewpoint Although there is a great deal of variation within each gender, on the average men and women discuss a surprisingly different range of topics. According to some studies, women and men ranging in age from seventeen to eighty described the range of topics each discussed with friends of the same sex. Certain topics were common to both men and women: work, movies, and television proved to be frequent topics for both groups. The differences between men and women were more striking than the similarities. Female friends spent much more time discussing personal and domestic subjects, relationship problems, family, health and reproductive matters, weight, food 28 and clothing. Men, on the other hand, were more likely to discuss music, current events, sports and business. Women were more likely to gossip about close friends and family. By contrast, men spent more time gossiping about sports figures and media personalities. These differences can lead to frustration when men and women try to converse with one another."
+            "D": "Generalization from a particular viewpoint"
           },
           "answer": "A"
         },
@@ -2026,7 +2028,7 @@
             "A": "what women's conversational topics are",
             "B": "why men don't like conversing with women",
             "C": "the topics men like discussing",
-            "D": "the conversational topics of men and women Most of you probably did not see Mohan at close quarters. He had amazing qualities. One of these qualities was that he managed to draw out the good in another person. The other person may have had plenty of evil in him. But he somehow spotted the good and laid emphasis on the good. The result was that the poor man had to try to be good. He could not help it. He would feel ashamed when he did something wrong."
+            "D": "the conversational topics of men and women"
           },
           "answer": "D"
         },
@@ -2039,7 +2041,7 @@
           "options": {
             "A": "have not seen Mohan",
             "B": "have not heard of Mohan",
-            "C": "are not well-acquainted with Mohan's powers 29 ­ --- PAGE 30 ---",
+            "C": "are not well-acquainted with Mohan's powers",
             "D": "have not observed Mohan's house closely"
           },
           "answer": "C"
@@ -2068,7 +2070,7 @@
             "A": "Mohan forced him to do so",
             "B": "he wanted to imitate Mohan",
             "C": "he was ashamed of doing a wrong thing",
-            "D": "he did not want to remain poor People seldom feel neutral about poetry. Those who love it sometimes give the impression that it is an adequate substitute for food, shelter, and love. But it isn't. Those who dislike poetry on principle sometimes claim, on the other hand, that poetry is only words and good for nothing. That's not true either. When words represent and recreate genuine human feelings, as they often do in poetry, they can be very important. Poems provide, in fact, a language for feeling, and one of poetry's most insistent merits involves its attempt to express the inexpressible. One of the joys of experiencing poetry occurs when we read a poem and want to say, \"yes, that is just what it is like; I know exactly what that line means but I have never been able to express it so well.\" Poetry can be the voice of our feelings even when our minds are speechless with grief or joy."
+            "D": "he did not want to remain poor"
           },
           "answer": "C"
         },
@@ -2096,7 +2098,7 @@
             "A": "seldom feel that poetry is an equivalent for life itself",
             "B": "rarely take a biased opinion about poetry",
             "C": "generally think that poetry expresses what might otherwise seem unutterable",
-            "D": "generally think of poetry as extremely important or totally useless 30 --- PAGE 31 ---"
+            "D": "generally think of poetry as extremely important or totally useless"
           },
           "answer": "D"
         },
@@ -2125,7 +2127,7 @@
             "A": "poetry is not closely concerned with feelings",
             "B": "poems are primarily about how people think rather than how people feel",
             "C": "poetry can't be the expression of one's deepest feelings",
-            "D": "few people think that poetry is neutral Albert Einstein was born in 1879 in the German city of Ulm. He had been no infant prodigy; indeed, he was so late in learning to speak that his parents feared he was fool. In school, though his teachers saw no special talent in him, the signs were already there. He taught himself calculus, for example, and he told me that his teachers seemed a little afraid of him because he asked questions they could not answer. At the age of 16, he asked himself whether a light wave would seem stationary if one ran side by side of it. It seems an innocent question, but this shows Einstein going to the heart of a problem. From it there would arise, ten years later, his theory of relativity."
+            "D": "few people think that poetry is neutral"
           },
           "answer": "D",
           "context_id": "ctx_eng_poetry"
@@ -2165,12 +2167,12 @@
           "original_number": 147,
           "type": "multiple_choice",
           "options_type": "text",
-          "question": "It's obvious in the passage, Einstein's _ 31 --- PAGE 32 ---",
+          "question": "It's obvious in the passage, Einstein's _",
           "options": {
             "A": "genius was a gift",
             "B": "character was perfect to most of his teachers",
             "C": "life encouraged most of the scientist in the world",
-            "D": "question is the origin of his theory of relativity The Richter Magnitude Scale is a method of assigning a single number to quantify the energy released during an earthquake. The magnitude is defined as the logarithm of the ratio of wave's amplitude, measured through a seismograph. Therefore, an earthquake that measures 5.0 of the Richter scale has a shaking amplitude of 1 0 times that of an earthquake measuring 4.0. Since the middle of the 20th century, the Richter Scale has been mostly superseded by the Moment Magnitude Scale, the Richter Scale is still used in Russia and some other former Soviet Union states."
+            "D": "question is the origin of his theory of relativity"
           },
           "answer": "C",
           "context_id": "ctx_eng_poetry"
@@ -2198,7 +2200,7 @@
             "A": "Supplanted",
             "B": "Transferred",
             "C": "Removed",
-            "D": "Usurped In 1892, the Sierra Club was formed. In 1908, an area of coastal redwood trees north of San Francisco was established as Muir Woods National Monument. In the Sierra Nevada Mountains, a walking trail from Yosemite Valley to Mount Whitney was dedicated in 1938. It is called the John Muir Trail. John Muir was born in 1838 in Scotland. His family name means \"moor,\" which is a meadow full of flowers and animals. John loved nature from the time he was small. He also liked to climb rocky cliffs and walls. When John was 1 1 years old, his family moved to the United States and settled in Wisconsin. John was good with tools and soon became an inventor. He first invented a model of a sawmill. Later, he invented an alarm clock that would cause the sleeping person to be tipped out of bed when the timer sounded. 3 2 . Muir left home at an early age. He took a 1,000-mile walk south to the Gulf of Mexico in 1867and 1868. Then he sailed for San Francisco. The city was too noisy and crowded for Muir, so he headed inland for the Sierra Nevadas. When Muir discovered the Yosemite Valley in the Sierra Nevadas, it was as if he had come home. He loved the mountains, the wildlife, and the trees. He climbed the mountains and even climbed trees during thunderstorms in order to get closer to the wind. He put forth the theory in the late 1860s that the Yosemite Valley had been formed through the action of glaciers. People ridiculed him. Not until 1930 was Muir's theory proven correct. Muir began to write articles about the Yosemite Valley to tell readers about its beauty. His writing also warned people that Yosemite was in danger from timber mining and sheep ranching interests. In 1901, Theodore Roosevelt became president of the United States. He was interested in conservation. Muir took the president through Yosemite, and Roosevelt helped get legislation passed to create Yosemite National Park in 1906. Although Muir won many conservation battles, he lost a major one. He fought to save the Hetch Hetchy Valley, which people wanted to dam in order to provide water for San Francisco. In late 1913, a bill was signed to dam the valley. Muir died in 1914. Some people say losing the fight to protect the valley killed Muir."
+            "D": "Usurped"
           },
           "answer": "A"
         },
@@ -2212,7 +2214,7 @@
             "A": "While the family still lived in Scotland",
             "B": "After he sailed to San Francisco",
             "C": "After he traveled in Yosemite",
-            "D": "While the Muir family lived in Wisconsin 33 --- PAGE 34 ---"
+            "D": "While the Muir family lived in Wisconsin"
           },
           "answer": "C"
         },
@@ -2268,7 +2270,7 @@
             "A": "John Muir died",
             "B": "John Muir Trail was dedicated",
             "C": "Muir's glacial theory was proven",
-            "D": "The Sierra Club was formed Life processes are similar in all animals with backbones. So physiologists can find out a lot about the human body by studying animals such as frogs, rats and rabbits. Sometimes research involves the death of these animals. But physiologists take great care not to hurt the animals. The animals are usually put to sleep during the experiments so they do not feel pain. Many people think animals should not be used for experiments. But it is only by physiological research that medicine has been able to advance. Polio is a disease that attacks the nerves. Millions of people have been protected from polio by a fluid called a vaccine. Tissue from monkeys is used to make the vaccine."
+            "D": "The Sierra Club was formed"
           },
           "answer": "B"
         },
@@ -2295,7 +2297,7 @@
           "options": {
             "A": "are of paramount significance for the polio infected monkeys",
             "B": "are the mere way that medicine can progress",
-            "C": "are carried out to remove infected tissues from the animals 34 --- PAGE 35 ---",
+            "C": "are carried out to remove infected tissues from the animals",
             "D": "include only reptiles to discover the vaccines"
           },
           "answer": "B"
@@ -2310,7 +2312,7 @@
             "A": "millions of people have been killed by polio disease so far",
             "B": "physiologists can cure rats, rabbits and frogs as well as people",
             "C": "experimental animals are first put to sleep and then used for research",
-            "D": "monkeys are usually infected with polio In the 16\" century, an age of great marine and terrestrial exploration, Ferdinand Magellan led the first expedition to sail around the world. As a young Portuguese noble, he served the king of Portugal, but he became involved in the quagmire of political intrigue at court and lost the king's favor. After he was dismissed from service by the king of Portugal, he offered to serve the future Emperor Charles V of Spain. A papal decree of 1493 had assigned all land in the New World west of 50 degrees W longitude to Spain and all the land east of that line to Portugal. Magellan offered to prove that the East Indies fell under Spanish authority. On September 20, 1519, Magellan set sail from Spain with five ships. More than a year later, one of these ships was exploring the topography of South America in search of a water route across the continent. This ship sank, but the remaining four ships searched along the southern peninsula of South America. Finally, they found the passage they sought near 50 degrees S latitude. Magellan named this passage the Strait of All Saints, but today it is known as the Strait of Magellan. One ship deserted while in this passage and returned to Spain, so fewer sailors were privileged to gaze at that first panorama of the Pacific Ocean. Those who remained crossed the meridian now known as the International Date Line in the early spring of 1521 after 98 days on the Pacific Ocean. During those long days at sea, many of Magellan's men died of starvation and disease. Later, Magellan became involved in an insular conflict in the Philippines and was killed in a tribal battle. Only one ship and 1 7 sailors under the command of the Basque navigator Elcano survived to complete the westward journey to Spain and thus prove once and for all that the world is round, with no precipice at the edge. --- PAGE 36 ---"
+            "D": "monkeys are usually infected with polio"
           },
           "answer": "C"
         },
@@ -2414,7 +2416,7 @@
             "A": "imaginary circle passing through the poles",
             "B": "imaginary line parallel to the equator",
             "C": "area",
-            "D": "land mass 36 For nearly twenty years I taught boys, lovingly and was being loved in return. When, after twenty-eight years of political work, I returned to education, I might have confined myself to administrative side, but took part in the actual instruction. This I did because I found happiness in it. Modern conditions do not tolerate caste and its monopolies, and the high calling of the educator is open to all."
+            "D": "land mass"
           },
           "answer": "A",
           "context_id": "ctx_eng_magellan"
@@ -2459,7 +2461,7 @@
             "A": "The noble profession of teaching",
             "B": "The serious advice to the teacher",
             "C": "The difficult work of educational administration",
-            "D": "The high-sounding phrases used to describe a teacher He was that rare figure: a natural-born leader, tailored for greatness. When he was but a child his mother had whispered to him, \"My son, you are a child of the dawn. You will be a man of glory, a great leader of your people.\" Sukarno never forgot those words. Liberating his land from 350 years of colonial rule, he molded many disparate peoples into a nation that became the fifth most populous in the world, one of the richest of all in natural resources. He gave his people a language of their own, raised their literacy rate from six to above 55 percent, gave them an intense from pride in being Indonesians. He had monumental talents: an oratorical gift that could sway and charm, an abundance of that indefinable mystique called \"charisma.\" Responding, his people gave him loyalty beyond love, reverence approaching god-worship. 37 --- PAGE 38 ---"
+            "D": "The high-sounding phrases used to describe a teacher"
           },
           "answer": "A",
           "context_id": "ctx_eng_magellan"
@@ -2577,7 +2579,7 @@
             "A": "A paradox is stated, discussed and left unresolved",
             "B": "Two opposing explanations are presented, argued, and reconciled",
             "C": "A theory is proposed and is then followed by descriptions of three experiments that support the theory",
-            "D": "A generalization is stated and is then followed by three instances that support the generalization 40"
+            "D": "A generalization is stated and is then followed by three instances that support the generalization"
           },
           "answer": "A",
           "context_id": "ctx_eng_epidemics"
