@@ -197,7 +197,9 @@ export const groupQuestionsIntoClusters = (questionsList) => {
 };
 
 /**
- * Selects question numbers from a section pool, prioritizing unserved questions.
+ * Selects question numbers from a section pool, prioritizing unserved questions while
+ * preserving atomic context clusters (passages, flowcharts, maps).
+ * Clusters larger than countToSelect are strictly excluded from selection.
  * @param {Array<Object>} sectionQuestions - Questions in this section.
  * @param {number} countToSelect - Number of questions to pick.
  * @param {Array<number>} servedNumbers - Question numbers already served in past attempts.
@@ -215,44 +217,130 @@ export const selectSectionQuestions = (
   if (countToSelect >= availableQuestions.length) {
     return {
       selected: availableQuestions,
-      updatedServed: availableQuestions.map((question) => question.number)
+      updatedServed: availableQuestions.map((questionItem) => questionItem.number)
     };
   }
 
+  /** @type {Array<QuestionCluster>} */
+  const allClusters = groupQuestionsIntoClusters(availableQuestions);
+
   /** @type {Set<number>} */
   const servedSet = new Set(servedNumbers);
-  /** @type {Array<Object>} */
-  let unservedQuestions = availableQuestions.filter(
-    (question) => !servedSet.has(question.number)
+
+  /**
+   * Evaluates whether a cluster has been served.
+   * @param {QuestionCluster} clusterItem
+   * @returns {boolean}
+   */
+  const isClusterServed = (clusterItem) => {
+    return clusterItem.clusterQuestions.some((questionItem) => servedSet.has(questionItem.number));
+  };
+
+  /**
+   * Helper that attempts to select a subset of candidate clusters that equals targetCount.
+   * Uses knapsack/subset sum matching across shuffled clusters.
+   * @param {Array<QuestionCluster>} candidateClusters
+   * @param {number} targetCount
+   * @returns {Array<QuestionCluster>|null}
+   */
+  const findClusterCombination = (candidateClusters, targetCount) => {
+    /** @type {Array<QuestionCluster>} */
+    const eligibleCandidates = candidateClusters.filter(
+      (clusterItem) => clusterItem.clusterSize <= targetCount
+    );
+
+    /** @type {Array<QuestionCluster>} */
+    const shuffledCandidates = [...eligibleCandidates];
+    shuffleInPlace(shuffledCandidates, randomSource);
+
+    /**
+     * Recursive search to find an exact subset sum.
+     * @param {number} candidateIndex
+     * @param {number} remainingBudget
+     * @returns {Array<QuestionCluster>|null}
+     */
+    const searchCombination = (candidateIndex, remainingBudget) => {
+      if (remainingBudget === 0) {
+        return [];
+      }
+      if (candidateIndex >= shuffledCandidates.length || remainingBudget < 0) {
+        return null;
+      }
+
+      const currentCandidate = shuffledCandidates[candidateIndex];
+
+      if (currentCandidate.clusterSize <= remainingBudget) {
+        const includeResult = searchCombination(
+          candidateIndex + 1,
+          remainingBudget - currentCandidate.clusterSize
+        );
+        if (includeResult !== null) {
+          return [currentCandidate, ...includeResult];
+        }
+      }
+
+      return searchCombination(candidateIndex + 1, remainingBudget);
+    };
+
+    return searchCombination(0, targetCount);
+  };
+
+  /** @type {Array<QuestionCluster>} */
+  const eligibleClusters = allClusters.filter(
+    (clusterItem) => clusterItem.clusterSize <= countToSelect
   );
 
-  /** @type {Array<Object>} */
-  const selectedQuestions = [];
+  if (eligibleClusters.length === 0 && allClusters.length > 0) {
+    const smallestCluster = [...allClusters].sort(
+      (firstCluster, secondCluster) => firstCluster.clusterSize - secondCluster.clusterSize
+    )[0];
+    return {
+      selected: [...smallestCluster.clusterQuestions],
+      updatedServed: smallestCluster.clusterQuestions.map((questionItem) => questionItem.number)
+    };
+  }
+
+  /** @type {Array<QuestionCluster>} */
+  const unservedClusters = eligibleClusters.filter((clusterItem) => !isClusterServed(clusterItem));
+
+  /** @type {Array<QuestionCluster>|null} */
+  let chosenClusters = findClusterCombination(unservedClusters, countToSelect);
   /** @type {Array<number>} */
   let newServedList = [...servedNumbers];
 
-  if (unservedQuestions.length < countToSelect) {
-    selectedQuestions.push(...unservedQuestions);
+  if (chosenClusters === null) {
+    chosenClusters = findClusterCombination(eligibleClusters, countToSelect);
     newServedList = [];
-    /** @type {Set<number>} */
-    const pickedNumbers = new Set(
-      selectedQuestions.map((question) => question.number)
-    );
-    unservedQuestions = availableQuestions.filter(
-      (question) => !pickedNumbers.has(question.number)
-    );
   }
 
-  shuffleInPlace(unservedQuestions, randomSource);
-  /** @type {number} */
-  const remainderNeeded = countToSelect - selectedQuestions.length;
-  /** @type {Array<Object>} */
-  const pickedRemainder = unservedQuestions.slice(0, remainderNeeded);
-  selectedQuestions.push(...pickedRemainder);
+  if (chosenClusters === null) {
+    const greedyCandidates = [...eligibleClusters];
+    shuffleInPlace(greedyCandidates, randomSource);
+    chosenClusters = [];
+    let remainingBudget = countToSelect;
+    for (const candidateItem of greedyCandidates) {
+      if (candidateItem.clusterSize <= remainingBudget) {
+        chosenClusters.push(candidateItem);
+        remainingBudget -= candidateItem.clusterSize;
+        if (remainingBudget === 0) {
+          break;
+        }
+      }
+    }
+  }
 
-  pickedRemainder.forEach((question) => {
-    newServedList.push(question.number);
-  });
+  /** @type {Array<Object>} */
+  const selectedQuestions = [];
+  for (const clusterItem of chosenClusters) {
+    for (const questionItem of clusterItem.clusterQuestions) {
+      selectedQuestions.push(questionItem);
+      newServedList.push(questionItem.number);
+    }
+  }
+
+  selectedQuestions.sort(
+    (firstQuestion, secondQuestion) => firstQuestion.number - secondQuestion.number
+  );
 
   return {
     selected: selectedQuestions,
