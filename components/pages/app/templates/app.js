@@ -969,6 +969,15 @@ export class App extends Component {
                 totalTimeSeconds: quizEngine.totalTimeSeconds,
                 startTime: quizEngine.startTime
               });
+            },
+            onStopExam: () => {
+              clearActiveSession();
+              if (quizEngine.timerIntervalId) {
+                clearInterval(quizEngine.timerIntervalId);
+                quizEngine.timerIntervalId = null;
+              }
+              currentActiveQuizEngine = null;
+              renderInitialQuizView();
             }
           });
 

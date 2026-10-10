@@ -72,6 +72,7 @@ export class QuizEngine extends Component {
    * @param {number} [configuration.sectionCategoryIndex=0] - Category index if examScope === "section".
    * @param {function(number): void} [configuration.onCategoryChange=()=>{}] - Callback when active section changes.
    * @param {function(Record<number, string>, Object): void} [configuration.onFinishExam=()=>{}] - Callback on completion.
+   * @param {function(): void} [configuration.onStopExam=()=>{}] - Callback when active exam is stopped.
    */
   constructor({
     quizId,
@@ -85,7 +86,8 @@ export class QuizEngine extends Component {
     examScope = "full",
     sectionCategoryIndex = 0,
     onCategoryChange = () => {},
-    onFinishExam = () => {}
+    onFinishExam = () => {},
+    onStopExam = () => {}
   } = {}) {
     super();
 
@@ -101,6 +103,8 @@ export class QuizEngine extends Component {
     this.onCategoryChange = onCategoryChange;
     /** @type {function(Record<number, string>, Object): void} */
     this.onFinishExam = onFinishExam;
+    /** @type {function(): void} */
+    this.onStopExam = onStopExam;
 
     /** @type {ContextDrawer} */
     this.contextDrawer = new ContextDrawer();
@@ -334,6 +338,36 @@ export class QuizEngine extends Component {
     };
 
     /**
+     * Handles stopping the active examination after explicit user confirmation.
+     * Discards active in-memory and persistent session states and returns to the initial view.
+     * @returns {void}
+     */
+    const handleStopExam = () => {
+      /** @type {boolean} */
+      const userConfirmed = typeof window !== "undefined" && typeof window.confirm === "function"
+        ? window.confirm("Are you sure you want to stop the examination? Your active progress will be discarded.")
+        : true;
+
+      if (!userConfirmed) {
+        return;
+      }
+
+      if (this.timerIntervalId) {
+        clearInterval(this.timerIntervalId);
+        this.timerIntervalId = null;
+      }
+
+      clearActiveSession();
+
+      if (typeof this.onStopExam === "function") {
+        this.onStopExam();
+      }
+    };
+
+    /** @type {function(): void} */
+    this.handleStopExam = handleStopExam;
+
+    /**
      * @param {number} targetCategoryIndex
      * @returns {void}
      */
@@ -504,12 +538,22 @@ export class QuizEngine extends Component {
               <span>${categoryDisplayTitle}</span>
             </div>
 
-            <div style="display: flex; align-items: center; gap: 0.75rem;">
+            <div class="quiz-engine__header-controls" style="display: flex; align-items: center; gap: 0.75rem;">
               ${timerBadgeHtml}
               <div class="quiz-engine__progress-counter" aria-label="Progress">
                 <span class="google-symbols notranslate" style="font-size: 1.125rem;">format_list_numbered</span>
                 <span>${progressLabel}</span>
               </div>
+              <button
+                type="button"
+                id="buttonStopExam"
+                class="bright-squircle quiz-engine__stop-button"
+                data-tooltip="Stop Examination"
+                aria-label="Stop Examination"
+              >
+                <span class="google-symbols notranslate">stop_circle</span>
+                <span class="quiz-engine__stop-button-label">Stop</span>
+              </button>
             </div>
           </div>
 
@@ -599,6 +643,14 @@ export class QuizEngine extends Component {
       if (resumeButton) {
         resumeButton.onclick = () => {
           handleResumeCategory();
+        };
+      }
+
+      /** @type {HTMLElement|null} */
+      const stopExamButton = rootElement.querySelector("#buttonStopExam");
+      if (stopExamButton) {
+        stopExamButton.onclick = () => {
+          handleStopExam();
         };
       }
 
