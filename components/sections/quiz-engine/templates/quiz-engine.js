@@ -624,6 +624,7 @@ export class QuizEngine extends Component {
     `;
 
     this.mounted = () => {
+      persistCurrentState("in_progress");
       this.renderView();
 
       // Setup Live Countdown Timer

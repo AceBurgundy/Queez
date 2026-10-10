@@ -977,7 +977,7 @@ export class App extends Component {
                 quizEngine.timerIntervalId = null;
               }
               currentActiveQuizEngine = null;
-              renderInitialQuizView();
+              renderInitialQuizView(examScope === "section" ? sectionCategoryIndex : 0);
             }
           });
 
@@ -992,9 +992,14 @@ export class App extends Component {
         };
 
         // Handler: Reset to Initial Start View
-        const renderInitialQuizView = () => {
+        /**
+         * Resets the quiz view back to initial mode, clearing the active engine and mounting action bars.
+         * @param {number} [targetTabIndex=0] - Active category tab index to restore.
+         * @returns {void}
+         */
+        const renderInitialQuizView = (targetTabIndex = 0) => {
           currentActiveQuizEngine = null;
-          tabsComponent.activateTab(0, false);
+          tabsComponent.activateTab(targetTabIndex, false);
           /** @type {HTMLElement|null} */
           const contentArea = document.getElementById("quizTabContentArea");
           if (contentArea) {
@@ -1010,14 +1015,15 @@ export class App extends Component {
             bannerBar.__mount?.();
           }
 
-          // Restore Tab Section Exam Play Button for Tab 0
+          // Restore Tab Section Exam Play Button for target tab
           /** @type {HTMLElement|null} */
           const actionBarContainer = document.getElementById("quizActionBarContainer");
           if (actionBarContainer) {
-            const sectionBar = createSectionActionBar(0);
+            const sectionBar = createSectionActionBar(targetTabIndex);
             actionBarContainer.innerHTML = sectionBar.toString();
             sectionBar.__mount?.();
           }
+          window.scrollTo({ top: 0, behavior: "smooth" });
         };
 
         /** @type {string} */
@@ -1117,6 +1123,15 @@ export class App extends Component {
                 totalTimeSeconds: quizEngine.totalTimeSeconds,
                 startTime: quizEngine.startTime
               });
+            },
+            onStopExam: () => {
+              clearActiveSession();
+              if (quizEngine.timerIntervalId) {
+                clearInterval(quizEngine.timerIntervalId);
+                quizEngine.timerIntervalId = null;
+              }
+              currentActiveQuizEngine = null;
+              renderInitialQuizView(examScope === "section" ? sectionCategoryIndex : 0);
             }
           });
           currentActiveQuizEngine = quizEngine;
