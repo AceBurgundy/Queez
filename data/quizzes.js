@@ -45,7 +45,7 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
               "link": "queezes/milk-operation-part-2",
               "image_source": "data/milk-operation-part-2-quiz/assets/body-parts-of-cattle-question.jpg",
               "shrink": false,
-              "description": "Comprehensive 63-point Part 2 Review covering Agricultural Equipment & Tools, Cattle Digestion & Feed Nutrition, and Interactive Anatomical & Milking Machine Callout Diagrams."
+              "description": "Comprehensive 89-point Part 2 Review covering Agricultural Equipment & Tools, Cattle Digestion & Feed Nutrition, Interactive Anatomical & Milking Machine Diagrams, and Dairy Square Daily Routine Resequencing."
             },
             {
               "title": "NAPOLCOM Entrance Examination",

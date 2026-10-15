@@ -850,6 +850,180 @@ export class QuizEngine extends Component {
         };
       });
 
+      // Reorder cards state synchronization helper
+      /**
+       * Updates the numbered badges, index attributes, and button disabled states in a reorder list.
+       * @param {HTMLElement} listContainer
+       * @param {number} questionNumber
+       */
+      const syncReorderCardStates = (listContainer, questionNumber) => {
+        /** @type {NodeListOf<HTMLElement>} */
+        const cardElements = listContainer.querySelectorAll(".question-card__reorder-card");
+        /** @type {number} */
+        const totalCardCount = cardElements.length;
+        /** @type {Array<number>} */
+        const updatedCardIds = [];
+
+        cardElements.forEach((cardElement, cardIndex) => {
+          /** @type {string} */
+          const slotNumber = String(cardIndex + 1);
+          cardElement.dataset.cardIndex = String(cardIndex);
+
+          /** @type {HTMLElement|null} */
+          const badgeElement = cardElement.querySelector(".question-card__reorder-slot-badge");
+          if (badgeElement) {
+            badgeElement.textContent = `#${slotNumber}`;
+          }
+
+          /** @type {HTMLElement|null} */
+          const upButton = cardElement.querySelector('[data-action="move-up"]');
+          if (upButton) {
+            const isFirst = cardIndex === 0;
+            upButton.dataset.disabled = isFirst ? "true" : "false";
+            upButton.classList.toggle("question-card__reorder-action-button--disabled", isFirst);
+          }
+
+          /** @type {HTMLElement|null} */
+          const downButton = cardElement.querySelector('[data-action="move-down"]');
+          if (downButton) {
+            const isLast = cardIndex === totalCardCount - 1;
+            downButton.dataset.disabled = isLast ? "true" : "false";
+            downButton.classList.toggle("question-card__reorder-action-button--disabled", isLast);
+          }
+
+          /** @type {number} */
+          const cardId = parseInt(cardElement.dataset.cardId || "0", 10);
+          if (cardId) {
+            updatedCardIds.push(cardId);
+          }
+        });
+
+        if (questionNumber && updatedCardIds.length > 0) {
+          handleSelectAnswer(questionNumber, updatedCardIds);
+        }
+      };
+
+      // Seed initial reorder answers if not yet present in session
+      rootElement.querySelectorAll(".question-card__reorder-list").forEach((listContainer) => {
+        /** @type {HTMLElement|null} */
+        const cardContainer = listContainer.closest(".question-card");
+        /** @type {number} */
+        const questionNumber = parseInt(cardContainer?.dataset.questionNumber || "0", 10);
+        if (questionNumber && !this.answers[questionNumber]) {
+          const cardElements = listContainer.querySelectorAll(".question-card__reorder-card");
+          const initialCardIds = Array.from(cardElements)
+            .map((cardElement) => parseInt(cardElement.dataset.cardId || "0", 10))
+            .filter(Boolean);
+          if (initialCardIds.length > 0) {
+            this.answers[questionNumber] = initialCardIds;
+            persistCurrentState("in_progress");
+          }
+        }
+      });
+
+      // Reorder cards Move Up / Move Down buttons delegation
+      rootElement.querySelectorAll(".question-card__reorder-action-button").forEach((actionButtonElement) => {
+        /** @type {HTMLElement} */
+        const actionButton = /** @type {HTMLElement} */ (actionButtonElement);
+        /** @param {MouseEvent} clickEvent */
+        actionButton.onclick = (clickEvent) => {
+          clickEvent.preventDefault();
+          if (actionButton.dataset.disabled === "true") return;
+
+          /** @type {HTMLElement|null} */
+          const cardElement = actionButton.closest(".question-card__reorder-card");
+          /** @type {HTMLElement|null} */
+          const listContainer = actionButton.closest(".question-card__reorder-list");
+          /** @type {HTMLElement|null} */
+          const questionContainer = actionButton.closest(".question-card");
+          if (!cardElement || !listContainer || !questionContainer) return;
+
+          /** @type {number} */
+          const questionNumber = parseInt(questionContainer.dataset.questionNumber || "0", 10);
+          /** @type {string|undefined} */
+          const actionType = actionButton.dataset.action;
+
+          if (actionType === "move-up") {
+            /** @type {Element|null} */
+            const previousElement = cardElement.previousElementSibling;
+            if (previousElement) {
+              listContainer.insertBefore(cardElement, previousElement);
+              syncReorderCardStates(listContainer, questionNumber);
+            }
+          } else if (actionType === "move-down") {
+            /** @type {Element|null} */
+            const nextElement = cardElement.nextElementSibling;
+            if (nextElement) {
+              listContainer.insertBefore(nextElement, cardElement);
+              syncReorderCardStates(listContainer, questionNumber);
+            }
+          }
+        };
+      });
+
+      // Reorder cards HTML5 drag-and-drop delegation
+      /** @type {HTMLElement|null} */
+      let draggedElement = null;
+
+      rootElement.querySelectorAll(".question-card__reorder-card").forEach((cardElement) => {
+        /** @param {DragEvent} dragEvent */
+        cardElement.ondragstart = (dragEvent) => {
+          draggedElement = cardElement;
+          cardElement.classList.add("is-dragging");
+          if (dragEvent.dataTransfer) {
+            dragEvent.dataTransfer.effectAllowed = "move";
+            dragEvent.dataTransfer.setData("text/plain", cardElement.dataset.cardId || "");
+          }
+        };
+
+        /** @param {DragEvent} dragEvent */
+        cardElement.ondragover = (dragEvent) => {
+          dragEvent.preventDefault();
+          if (!draggedElement || draggedElement === cardElement) return;
+          if (dragEvent.dataTransfer) {
+            dragEvent.dataTransfer.dropEffect = "move";
+          }
+          cardElement.classList.add("drag-over");
+        };
+
+        cardElement.ondragleave = () => {
+          cardElement.classList.remove("drag-over");
+        };
+
+        /** @param {DragEvent} dragEvent */
+        cardElement.ondrop = (dragEvent) => {
+          dragEvent.preventDefault();
+          cardElement.classList.remove("drag-over");
+          if (!draggedElement || draggedElement === cardElement) return;
+
+          /** @type {HTMLElement|null} */
+          const listContainer = cardElement.closest(".question-card__reorder-list");
+          /** @type {HTMLElement|null} */
+          const questionContainer = cardElement.closest(".question-card");
+          if (!listContainer || !questionContainer) return;
+
+          /** @type {number} */
+          const questionNumber = parseInt(questionContainer.dataset.questionNumber || "0", 10);
+          const boundingRectangle = cardElement.getBoundingClientRect();
+          const dropMiddleY = boundingRectangle.top + boundingRectangle.height / 2;
+
+          if (dragEvent.clientY < dropMiddleY) {
+            listContainer.insertBefore(draggedElement, cardElement);
+          } else {
+            listContainer.insertBefore(draggedElement, cardElement.nextElementSibling);
+          }
+          syncReorderCardStates(listContainer, questionNumber);
+        };
+
+        cardElement.ondragend = () => {
+          cardElement.classList.remove("is-dragging");
+          rootElement.querySelectorAll(".question-card__reorder-card").forEach((item) => {
+            item.classList.remove("drag-over");
+          });
+          draggedElement = null;
+        };
+      });
+
       // Click-to-zoom photo viewer delegation
       rootElement.querySelectorAll(".question-card__image, .question-card__option-image").forEach((clickableImageElement) => {
         /** @param {MouseEvent} clickEvent */

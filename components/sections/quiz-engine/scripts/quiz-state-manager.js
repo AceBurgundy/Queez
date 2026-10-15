@@ -68,6 +68,21 @@ export function registerQuestionsAndSanitize(quizId, rawQuestions = []) {
         type: "multi_part_diagram",
         items: diagramSolutions
       });
+    } else if (questionType === "reorder_cards" && Array.isArray(questionItem.items)) {
+      /** @type {Record<number, { id: number, text: string, answer: string, accepted_answers: Array<string> }>} */
+      const reorderSolutions = {};
+      questionItem.items.forEach((subItem, itemIndex) => {
+        reorderSolutions[itemIndex + 1] = {
+          id: subItem.id,
+          text: String(subItem.text || subItem.answer || "").trim(),
+          answer: String(subItem.answer || "").trim(),
+          accepted_answers: Array.isArray(subItem.accepted_answers) ? subItem.accepted_answers : [String(subItem.answer || "").trim()]
+        };
+      });
+      solutionRegistry.set(`${quizId}::${questionNumber}`, {
+        type: "reorder_cards",
+        items: reorderSolutions
+      });
     } else if (questionType === "identification") {
       solutionRegistry.set(`${quizId}::${questionNumber}`, {
         type: "identification",
@@ -363,6 +378,68 @@ export function evaluateScoreTally(
         ...(questionItem.caption ? { caption: questionItem.caption } : {}),
         ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
       });
+    } else if (questionType === "reorder_cards" && Array.isArray(questionItem.items)) {
+      /** @type {Array<number>} */
+      const userCardOrder = Array.isArray(answers[questionNumber]) ? answers[questionNumber] : [];
+      /** @type {Map<number, Object>} */
+      const itemsByIdMap = new Map(questionItem.items.map((subItem) => [subItem.id, subItem]));
+      /** @type {Array<Object>} */
+      const itemReviews = [];
+
+      questionItem.items.forEach((expectedItem, slotIndex) => {
+        totalQuestions += 1;
+        /** @type {number} */
+        const slotNumber = slotIndex + 1;
+        /** @type {number|undefined} */
+        const placedCardId = userCardOrder[slotIndex];
+        /** @type {Object|undefined} */
+        const placedCard = placedCardId ? itemsByIdMap.get(Number(placedCardId)) : undefined;
+        /** @type {string} */
+        const placedCardText = placedCard ? String(placedCard.text || placedCard.answer || "").trim() : "";
+        /** @type {string} */
+        const normalizedPlaced = normalizeIdentification(placedCardText);
+
+        /** @type {Object} */
+        const targetSolution = (solution && solution.items && solution.items[slotNumber]) || {
+          answer: String(expectedItem.answer || expectedItem.text || ""),
+          accepted_answers: expectedItem.accepted_answers || [String(expectedItem.answer || expectedItem.text || "")]
+        };
+        /** @type {Array<string>} */
+        const acceptedList = targetSolution.accepted_answers || [targetSolution.answer];
+
+        /** @type {boolean} */
+        const isSlotCorrect = Boolean(
+          normalizedPlaced &&
+          acceptedList.some((acceptedItem) => normalizeIdentification(acceptedItem) === normalizedPlaced)
+        );
+
+        if (isSlotCorrect) {
+          totalCorrect += 1;
+        }
+
+        itemReviews.push({
+          id: slotNumber,
+          label: String(slotNumber),
+          userAnswer: placedCardText || "Unanswered",
+          correctAnswer: targetSolution.answer || targetSolution.text || "N/A",
+          isCorrect: isSlotCorrect
+        });
+      });
+
+      questionReviewList.push({
+        number: questionNumber,
+        type: "reorder_cards",
+        question: questionItem.question,
+        options: {},
+        userAnswer: `${itemReviews.filter((item) => item.isCorrect).length}/${itemReviews.length} Correct Positions`,
+        correctAnswer: `${itemReviews.length} Positions`,
+        isCorrect: itemReviews.every((item) => item.isCorrect),
+        items: itemReviews,
+        ...(questionItem.image ? { image: questionItem.image } : {}),
+        ...(questionItem.answer_image ? { answer_image: questionItem.answer_image } : {}),
+        ...(questionItem.caption ? { caption: questionItem.caption } : {}),
+        ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
+      });
     } else if (questionType === "identification") {
       totalQuestions += 1;
       /** @type {string} */
@@ -461,9 +538,22 @@ export function evaluateScoreTally(
         (item) => item.number >= catBounds.startNum && item.number <= catBounds.endNum
       );
       /** @type {number} */
-      const categoryCorrect = categoryQuestions.filter((item) => item.isCorrect).length;
+      let categoryTotal = 0;
       /** @type {number} */
-      const categoryTotal = categoryQuestions.length;
+      let categoryCorrect = 0;
+
+      categoryQuestions.forEach((questionEntry) => {
+        if (Array.isArray(questionEntry.items)) {
+          categoryTotal += questionEntry.items.length;
+          categoryCorrect += questionEntry.items.filter((subItem) => subItem.isCorrect).length;
+        } else {
+          categoryTotal += 1;
+          if (questionEntry.isCorrect) {
+            categoryCorrect += 1;
+          }
+        }
+      });
+
       /** @type {number} */
       const categoryPercent = categoryTotal > 0 ? Math.round((categoryCorrect / categoryTotal) * 100) : 0;
 

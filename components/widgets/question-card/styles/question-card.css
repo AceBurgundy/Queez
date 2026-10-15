@@ -330,6 +330,155 @@
   padding: 0.35rem 0;
 }
 
+/* Reorderable Cards Container & Items */
+.question-card__reorder-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-left: 3.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.question-card__reorder-instruction {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--md-sys-typescale-font-body);
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-small);
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--md-sys-color-primary);
+}
+
+.question-card__reorder-instruction .google-symbols {
+  font-size: 1.125rem;
+  color: var(--md-sys-color-primary);
+  flex-shrink: 0;
+}
+
+.question-card__reorder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.question-card__reorder-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 0.5rem 0.75rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.question-card__reorder-card:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+  border-color: var(--md-sys-color-outline);
+}
+
+.question-card__reorder-card.is-dragging {
+  opacity: 0.5;
+  border-style: dashed;
+  border-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-container-highest);
+}
+
+.question-card__reorder-card.drag-over {
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 2px var(--md-sys-color-primary);
+  transform: scale(1.01);
+}
+
+.question-card__reorder-drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  color: var(--md-sys-color-outline);
+  touch-action: none;
+  flex-shrink: 0;
+}
+
+.question-card__reorder-drag-handle:active {
+  cursor: grabbing;
+}
+
+.question-card__reorder-drag-handle .google-symbols {
+  font-size: 1.25rem;
+}
+
+.question-card__reorder-slot-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-family: var(--md-sys-typescale-font-label);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.question-card__reorder-card-text {
+  flex: 1;
+  font-family: var(--md-sys-typescale-font-body);
+  font-size: 0.9375rem;
+  color: var(--md-sys-color-on-surface);
+  font-weight: 500;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.question-card__reorder-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.question-card__reorder-action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-surface-container-high);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  padding: 0;
+}
+
+.question-card__reorder-action-button:hover:not([data-disabled="true"]) {
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-color: var(--md-sys-color-primary);
+  transform: translateY(-1px);
+}
+
+.question-card__reorder-action-button[data-disabled="true"] {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.question-card__reorder-action-button .google-symbols {
+  font-size: 1.125rem;
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .question-card {
@@ -341,7 +490,9 @@
   .question-card__caption,
   .question-card__options-list,
   .question-card__options-list--visual,
-  .question-card__input-container {
+  .question-card__input-container,
+  .question-card__diagram-inputs-grid,
+  .question-card__reorder-container {
     padding-left: 0;
     margin-left: 0;
   }

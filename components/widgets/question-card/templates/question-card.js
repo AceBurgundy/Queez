@@ -49,7 +49,7 @@ export class QuestionCard extends Component {
     /** @type {string} */
     this.type = questionPayload.type || (this.items ? "multi_part_diagram" : (this.options ? "multiple_choice" : "identification"));
     /** @type {any} */
-    this.selectedAnswer = selectedAnswer || (this.type === "multi_part_diagram" ? {} : "");
+    this.selectedAnswer = selectedAnswer || (this.type === "multi_part_diagram" ? {} : (this.type === "reorder_cards" ? [] : ""));
     /** @type {function(number, any): void} */
     this.onSelectAnswer = onSelectAnswer;
 
@@ -112,10 +112,101 @@ export class QuestionCard extends Component {
     /** @type {string} */
     let bodyTemplate = "";
 
-    /** @type {boolean} */
-    const hasOptions = Boolean(this.options && typeof this.options === "object" && Object.keys(this.options).length > 0);
+    if (this.type === "reorder_cards" && this.items && Array.isArray(this.items) && this.items.length > 0) {
+      /** @type {Array<Object>} */
+      let orderedCards = [];
+      if (Array.isArray(this.selectedAnswer) && this.selectedAnswer.length === this.items.length) {
+        /** @type {Map<number, Object>} */
+        const itemsById = new Map(this.items.map((subItem) => [subItem.id, subItem]));
+        orderedCards = this.selectedAnswer
+          .map((cardId) => itemsById.get(Number(cardId)))
+          .filter(Boolean);
+      }
+      if (orderedCards.length !== this.items.length) {
+        const itemsCopy = [...this.items];
+        let seed = this.number * 997 + 13;
+        for (let counter = itemsCopy.length - 1; counter > 0; counter--) {
+          seed = (seed * 9301 + 49297) % 233280;
+          const randomIndex = Math.floor((seed / 233280) * (counter + 1));
+          const temporaryItem = itemsCopy[counter];
+          itemsCopy[counter] = itemsCopy[randomIndex];
+          itemsCopy[randomIndex] = temporaryItem;
+        }
+        orderedCards = itemsCopy;
+      }
 
-    if (hasOptions && this.options) {
+      /** @type {number} */
+      const totalCardCount = orderedCards.length;
+      /** @type {Array<string>} */
+      const renderedCards = orderedCards.map((card, cardIndex) => {
+        /** @type {boolean} */
+        const isFirst = cardIndex === 0;
+        /** @type {boolean} */
+        const isLast = cardIndex === totalCardCount - 1;
+        /** @type {string} */
+        const cardTitle = card.text || card.answer || "";
+        /** @type {string} */
+        const slotNumber = String(cardIndex + 1);
+
+        return html`
+          <div
+            class="question-card__reorder-card"
+            draggable="true"
+            data-reorder-card="true"
+            data-card-id="${String(card.id)}"
+            data-card-index="${String(cardIndex)}"
+            aria-label="${`Position ${slotNumber}: ${cardTitle}`}"
+          >
+            <div class="question-card__reorder-drag-handle" aria-hidden="true" title="Drag to reorder">
+              <span class="google-symbols notranslate">drag_indicator</span>
+            </div>
+            <div class="question-card__reorder-slot-badge">#${slotNumber}</div>
+            <div class="question-card__reorder-card-text">${cardTitle}</div>
+            <div class="question-card__reorder-card-actions">
+              <button
+                type="button"
+                class="${isFirst ? "question-card__reorder-action-button question-card__reorder-action-button--disabled" : "question-card__reorder-action-button"}"
+                data-action="move-up"
+                data-card-index="${String(cardIndex)}"
+                data-disabled="${isFirst ? "true" : "false"}"
+                aria-label="${`Move ${cardTitle} up`}"
+                title="Move up"
+              >
+                <span class="google-symbols notranslate">arrow_upward</span>
+              </button>
+              <button
+                type="button"
+                class="${isLast ? "question-card__reorder-action-button question-card__reorder-action-button--disabled" : "question-card__reorder-action-button"}"
+                data-action="move-down"
+                data-card-index="${String(cardIndex)}"
+                data-disabled="${isLast ? "true" : "false"}"
+                aria-label="${`Move ${cardTitle} down`}"
+                title="Move down"
+              >
+                <span class="google-symbols notranslate">arrow_downward</span>
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      bodyTemplate = html`
+        <div
+          class="question-card__reorder-container"
+          role="list"
+          aria-label="${`Reorderable Items for Question ${this.number}`}"
+          data-question-number="${String(this.number)}"
+        >
+          <div class="question-card__reorder-instruction">
+            <span class="google-symbols notranslate">swap_vert</span>
+            <span>Drag items or use the arrows to arrange them in order matching circles 1 to ${String(totalCardCount)} in the diagram.</span>
+          </div>
+          <div class="question-card__reorder-list">
+            ${renderedCards}
+          </div>
+        </div>
+      `;
+    } else if (hasOptions && this.options) {
       /** @type {Array<[string, string]>} */
       const optionEntries = Object.entries(this.options);
 

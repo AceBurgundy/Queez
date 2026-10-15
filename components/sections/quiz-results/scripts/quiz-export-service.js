@@ -319,7 +319,7 @@ export function generateOfflineResultsHtml(exportData) {
               </div>
             \`;
           }).join('') + '</div>';
-        } else if (q.type === 'multi_part_diagram' && Array.isArray(q.items)) {
+        } else if ((q.type === 'multi_part_diagram' || q.type === 'reorder_cards') && Array.isArray(q.items)) {
           optionsHtml = '<div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(18rem, 1fr));gap:0.5rem;margin-top:0.5rem;">' + q.items.map(subItem => {
             const isSubCorrect = subItem.isCorrect;
             const borderCol = isSubCorrect ? 'var(--success)' : 'var(--error)';

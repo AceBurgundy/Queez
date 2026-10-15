@@ -24,6 +24,9 @@
  * @property {Record<string, string>} options - Choice dictionary mapping option key to label or asset path.
  * @property {string} answer - Correct answer choice key.
  * @property {string} [image] - Optional relative image path.
+ * @property {string} [answer_image] - Optional relative answer key illustration path.
+ * @property {Array<Object>} [items] - Optional sub-items for multi-part diagrams or reorderable cards.
+ * @property {Array<string>} [accepted_answers] - Optional accepted answer variants.
  * @property {string} [caption] - Optional image subtext or caption.
  * @property {string} [explanation] - Optional step-by-step solution derivation.
  */
@@ -149,8 +152,20 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
       currentRunningNumber += sectionQuestionCount;
     }
 
+    /** @type {Record<string, string>} */
+    const defaultSectionIcons = {
+      "tools-equipment": "construction",
+      "physiology-nutrition": "psychology",
+      "anatomical-mechanical-diagrams": "photo_library",
+      "daily-routine-time-quiz": "schedule",
+      "daily-routine-activity-quiz": "event_repeat"
+    };
+
     /** @type {string} */
-    const assignedIcon = iconLookupMap.get(currentSection.id) || "category";
+    const assignedIcon =
+      iconLookupMap.get(currentSection.id) ||
+      defaultSectionIcons[currentSection.id] ||
+      "category";
 
     /** @type {Map<string, Object>} */
     const resolvedContextsMap = new Map();

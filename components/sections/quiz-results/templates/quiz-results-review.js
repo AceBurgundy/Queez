@@ -149,7 +149,7 @@ export class QuizResultsReview extends Component {
           </div>
         `;
       }
-      if (questionItem.type === "multi_part_diagram" && Array.isArray(questionItem.items)) {
+      if ((questionItem.type === "multi_part_diagram" || questionItem.type === "reorder_cards") && Array.isArray(questionItem.items)) {
         /** @type {Array<TemplateResult>} */
         const itemRows = questionItem.items.map((subItem) => {
           /** @type {string} */
@@ -161,20 +161,29 @@ export class QuizResultsReview extends Component {
             ? "quiz-review__diagram-subrow quiz-review__diagram-subrow--correct"
             : "quiz-review__diagram-subrow quiz-review__diagram-subrow--incorrect";
 
+          /** @type {string} */
+          const userPrefix = questionItem.type === "reorder_cards" ? "Your Position:" : "Your Answer:";
+          /** @type {string} */
+          const correctPrefix = questionItem.type === "reorder_cards" ? "Correct Item:" : "Correct:";
+          /** @type {string} */
+          const statusBadge = subItem.isCorrect
+            ? (questionItem.type === "reorder_cards" ? "Correct Position" : "Correct")
+            : (questionItem.type === "reorder_cards" ? "Misplaced" : "Incorrect");
+
           return html`
             <div class="${itemRowClass}">
-              <span class="quiz-review__diagram-badge">${subItem.label || subItem.id}</span>
+              <span class="quiz-review__diagram-badge">${`#${subItem.label || subItem.id}`}</span>
               <div class="quiz-review__diagram-answers">
-                <span class="quiz-review__diagram-user">Your Answer: <strong>${subItem.userAnswer}</strong></span>
-                <span class="quiz-review__diagram-correct">Correct: <strong>${subItem.correctAnswer}</strong></span>
+                <span class="quiz-review__diagram-user">${userPrefix} <strong>${subItem.userAnswer}</strong></span>
+                <span class="quiz-review__diagram-correct">${correctPrefix} <strong>${subItem.correctAnswer}</strong></span>
               </div>
-              <span class="${itemTagClass}">${subItem.isCorrect ? "Correct" : "Incorrect"}</span>
+              <span class="${itemTagClass}">${statusBadge}</span>
             </div>
           `;
         });
 
         return html`
-          <div class="quiz-review__diagram-breakdown" aria-label="Diagram Callouts Review">
+          <div class="quiz-review__diagram-breakdown" aria-label="Review Items Breakdown">
             ${itemRows}
           </div>
         `;
@@ -331,6 +340,17 @@ export class QuizResultsReview extends Component {
         });
 
         questionsContainer.innerHTML = cardsMarkup.join("");
+
+        // Universal photo viewer delegation for all review images
+        questionsContainer.querySelectorAll(".quiz-review__image--zoomable").forEach((zoomableImageElement) => {
+          /** @type {HTMLImageElement} */
+          const targetImage = /** @type {HTMLImageElement} */ (zoomableImageElement);
+          targetImage.onclick = (clickEvent) => {
+            clickEvent.preventDefault();
+            clickEvent.stopPropagation();
+            getImageViewer().open(targetImage.src, targetImage.alt || "Question diagram");
+          };
+        });
       }
 
       if (pageIndicatorElement) {
