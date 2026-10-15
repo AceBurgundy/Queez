@@ -112,6 +112,9 @@ export class QuestionCard extends Component {
     /** @type {string} */
     let bodyTemplate = "";
 
+    /** @type {boolean} */
+    const hasOptions = Boolean(this.options && typeof this.options === "object" && Object.keys(this.options).length > 0);
+
     if (this.type === "reorder_cards" && this.items && Array.isArray(this.items) && this.items.length > 0) {
       /** @type {Array<Object>} */
       let orderedCards = [];
