@@ -1,0 +1,763 @@
+{
+  "schema_version": "quiz-data.v1",
+  "id": "milk-operation-part-2",
+  "title": "Milk Operation and Farm Management (Part 2)",
+  "subtitle": "Agricultural Tools, Cattle Physiology, Nutrition & Machine Diagrams",
+  "publisher": "Dairy Farming & Livestock Technical Series",
+  "instructions": [
+    "Section I contains 10 multiple-choice questions on farm tools and equipment.",
+    "Section II contains 20 identification questions on dairy cow nutrition, digestion, and physiology.",
+    "Section III contains 2 multi-part interactive diagrams (33 total callout items) identifying cattle body parts and milking machine components.",
+    "Identification inputs accept forgiving text: casing and punctuation differences are automatically resolved."
+  ],
+  "sections": [
+    {
+      "id": "tools-equipment",
+      "title": "Farm Tools & Equipment",
+      "description": "Fodder cutting machinery, manure scrapers, fencing tools, forage sickles, shovels, and rakes.",
+      "questions": [
+        {
+          "number": 1,
+          "original_number": 1,
+          "type": "multiple_choice",
+          "question": "______ is a piece of equipment used to cut grass and other fodder (like straw and corn stalks) into smaller pieces. It's used in agriculture to prepare feed for livestock, making it easier for animals to eat and digest?",
+          "options": {
+            "A": "Grass cutter",
+            "B": "Grass chopper machine",
+            "C": "Mower",
+            "D": "Shredder"
+          },
+          "answer": "B",
+          "explanation": "The correct answer is B (Grass chopper machine)."
+        },
+        {
+          "number": 2,
+          "original_number": 2,
+          "type": "multiple_choice",
+          "question": "It is a portable equipment/machine and used for collecting milk from cows and goats?",
+          "options": {
+            "A": "Milking machine",
+            "B": "Milk collector",
+            "C": "Modern collector",
+            "D": "Portable milking machine"
+          },
+          "answer": "D",
+          "explanation": "The correct answer is D (Portable milking machine)."
+        },
+        {
+          "number": 3,
+          "original_number": 3,
+          "type": "multiple_choice",
+          "question": "What kind of tool used to clear out lumps of manure for easy rinsing?",
+          "options": {
+            "A": "Manual scraper",
+            "B": "Manual manure scraper",
+            "C": "Wheel manure scraper",
+            "D": "Rinser"
+          },
+          "answer": "B",
+          "explanation": "The correct answer is B (Manual manure scraper)."
+        },
+        {
+          "number": 4,
+          "original_number": 4,
+          "type": "multiple_choice",
+          "question": "What tool used variety of things such as moving feeds to the barn or collecting manure and other waste out of the barn?",
+          "options": {
+            "A": "Wheel cart",
+            "B": "Manual scrapper",
+            "C": "Manure scrapper",
+            "D": "Wheelbarrow"
+          },
+          "answer": "D",
+          "explanation": "The correct answer is D (Wheelbarrow)."
+        },
+        {
+          "number": 5,
+          "original_number": 5,
+          "type": "multiple_choice",
+          "question": "What kind of tool used for post hole digging?",
+          "options": {
+            "A": "Fencer sword",
+            "B": "Fencer hole",
+            "C": "Fencer graft",
+            "D": "Fencer blade"
+          },
+          "answer": "C",
+          "explanation": "The correct answer is C (Fencer graft)."
+        },
+        {
+          "number": 6,
+          "original_number": 6,
+          "type": "multiple_choice",
+          "question": "What tool used for harvesting or reaping grain crops or cutting succulent forage mainly for feeding livestock, either freshly cut or dried as hay?",
+          "options": {
+            "A": "Sword",
+            "B": "Blade",
+            "C": "Shaver",
+            "D": "Sickle"
+          },
+          "answer": "D",
+          "explanation": "The correct answer is D (Sickle)."
+        },
+        {
+          "number": 7,
+          "original_number": 7,
+          "type": "multiple_choice",
+          "question": "What kind of tool used for scooping, scraping, gathering, and leveling materials such as soil, mulch, or leaves?",
+          "options": {
+            "A": "Spade",
+            "B": "Rake",
+            "C": "Pitchfork",
+            "D": "Shovel"
+          },
+          "answer": "B",
+          "explanation": "The correct answer is B (Rake)."
+        },
+        {
+          "number": 8,
+          "original_number": 8,
+          "type": "multiple_choice",
+          "question": "What kind of tool used to lift and pitch or throw loose materials such as hay, straw, manure, or leaves?",
+          "options": {
+            "A": "Shovel",
+            "B": "Pitchfork",
+            "C": "Spade",
+            "D": "Rake"
+          },
+          "answer": "B",
+          "explanation": "The correct answer is B (Pitchfork)."
+        },
+        {
+          "number": 9,
+          "original_number": 9,
+          "type": "multiple_choice",
+          "question": "What kind of tool used for digging straight-edged holes or trenches, slicing, and lifting sod, and edging flower beds or lawns?",
+          "options": {
+            "A": "Rake",
+            "B": "Spade",
+            "C": "Shovel",
+            "D": "Pitchfork"
+          },
+          "answer": "B",
+          "explanation": "The correct answer is B (Spade)."
+        },
+        {
+          "number": 10,
+          "original_number": 10,
+          "type": "multiple_choice",
+          "question": "What tool used to dig as well as to move loose, granular materials like (Dirt, gravel, and grain) from one spot to another?",
+          "options": {
+            "A": "Spade",
+            "B": "Shovel",
+            "C": "Rake",
+            "D": "Pitchfork"
+          },
+          "answer": "B",
+          "explanation": "The correct answer is B (Shovel)."
+        }
+      ]
+    },
+    {
+      "id": "physiology-nutrition",
+      "title": "Cattle Physiology & Nutrition",
+      "description": "Essential feed nutrients, rumination, mastication, colostrum, and ruminant stomach anatomy.",
+      "questions": [
+        {
+          "number": 11,
+          "original_number": 1,
+          "type": "identification",
+          "question": "It is the basic feed nutrients essential for maintenance, growth, and milk production.",
+          "options": {},
+          "answer": "PROTEIN",
+          "accepted_answers": [
+            "PROTEIN",
+            "protein",
+            "proteins"
+          ],
+          "explanation": "Answer: PROTEIN."
+        },
+        {
+          "number": 12,
+          "original_number": 2,
+          "type": "identification",
+          "question": "It is the basic feed nutrients needed for bone and teeth formation, hormone actions, enzyme activation and water every day.",
+          "options": {},
+          "answer": "MINERALS",
+          "accepted_answers": [
+            "MINERALS",
+            "mineral",
+            "minerals"
+          ],
+          "explanation": "Answer: MINERALS."
+        },
+        {
+          "number": 13,
+          "original_number": 3,
+          "type": "identification",
+          "question": "It is the basic feed nutrients required in the largest amount by the dairy cow.",
+          "options": {},
+          "answer": "WATER",
+          "accepted_answers": [
+            "WATER"
+          ],
+          "explanation": "Answer: WATER."
+        },
+        {
+          "number": 14,
+          "original_number": 4,
+          "type": "identification",
+          "question": "Nutrients that are organic compounds needed in minute amounts that are essentials for life.",
+          "options": {},
+          "answer": "VITAMINS",
+          "accepted_answers": [
+            "VITAMINS",
+            "vitamin",
+            "vitamins"
+          ],
+          "explanation": "Answer: VITAMINS."
+        },
+        {
+          "number": 15,
+          "original_number": 5,
+          "type": "identification",
+          "question": "Nutrients that added to the diets to increase energy density. Energy contents are 2.25 times greater than carbohydrates?",
+          "options": {},
+          "answer": "FATS",
+          "accepted_answers": [
+            "FATS",
+            "fat",
+            "fats"
+          ],
+          "explanation": "Answer: FATS."
+        },
+        {
+          "number": 16,
+          "original_number": 6,
+          "type": "identification",
+          "question": "It is the common source of energy in ruminants.",
+          "options": {},
+          "answer": "CARBOHYDRATE",
+          "accepted_answers": [
+            "CARBOHYDRATE",
+            "carbohydrate",
+            "carbohydrates"
+          ],
+          "explanation": "Answer: CARBOHYDRATE."
+        },
+        {
+          "number": 17,
+          "original_number": 7,
+          "type": "identification",
+          "question": "Partly digest food returned from the first stomach of ruminants to the mouth for further chewing.",
+          "options": {},
+          "answer": "CUD",
+          "accepted_answers": [
+            "CUD"
+          ],
+          "explanation": "Answer: CUD."
+        },
+        {
+          "number": 18,
+          "original_number": 8,
+          "type": "identification",
+          "question": "It is the process by which the cow regurgitates previously consumed feed and chews further?",
+          "options": {},
+          "answer": "CUD CHEWING",
+          "accepted_answers": [
+            "CUD CHEWING",
+            "cud chewing",
+            "chewing cud",
+            "cud-chewing"
+          ],
+          "explanation": "Answer: CUD CHEWING."
+        },
+        {
+          "number": 19,
+          "original_number": 9,
+          "type": "identification",
+          "question": "Is the chewing and grinding of food into smaller particles?",
+          "options": {},
+          "answer": "MASTICATION",
+          "accepted_answers": [
+            "MASTICATION"
+          ],
+          "explanation": "Answer: MASTICATION."
+        },
+        {
+          "number": 20,
+          "original_number": 10,
+          "type": "identification",
+          "question": "Is the act of gathering food using the tongue and lips and moves it into the mouth?",
+          "options": {},
+          "answer": "PREHENSION",
+          "accepted_answers": [
+            "PREHENSION"
+          ],
+          "explanation": "Answer: PREHENSION."
+        },
+        {
+          "number": 21,
+          "original_number": 11,
+          "type": "identification",
+          "question": "These are the building blocks of cow's life.",
+          "options": {},
+          "answer": "ANIMO ACID",
+          "accepted_answers": [
+            "Amino Acid",
+            "ANIMO ACID",
+            "amino acid",
+            "animo acid"
+          ],
+          "explanation": "Answer: ANIMO ACID."
+        },
+        {
+          "number": 22,
+          "original_number": 12,
+          "type": "identification",
+          "question": "It is so called cow's \"passport to life\"?",
+          "options": {},
+          "answer": "COLOSTRUM",
+          "accepted_answers": [
+            "COLOSTRUM"
+          ],
+          "explanation": "Answer: COLOSTRUM."
+        },
+        {
+          "number": 23,
+          "original_number": 13,
+          "type": "identification",
+          "question": "It is the abnormality or difficulty in giving birth of cow.",
+          "options": {},
+          "answer": "DYSTOCIA",
+          "accepted_answers": [
+            "DYSTOCIA"
+          ],
+          "explanation": "Answer: DYSTOCIA."
+        },
+        {
+          "number": 24,
+          "original_number": 14,
+          "type": "identification",
+          "question": "It is the act of giving birth.",
+          "options": {},
+          "answer": "PARTURATION",
+          "accepted_answers": [
+            "Parturition",
+            "PARTURATION",
+            "parturition",
+            "parturation"
+          ],
+          "explanation": "Answer: PARTURATION."
+        },
+        {
+          "number": 25,
+          "original_number": 15,
+          "type": "identification",
+          "question": "It is an act of separating the calf attachment from the mother.",
+          "options": {},
+          "answer": "SEPARATION",
+          "accepted_answers": [
+            "SEPARATION"
+          ],
+          "explanation": "Answer: SEPARATION."
+        },
+        {
+          "number": 26,
+          "original_number": 16,
+          "type": "identification",
+          "question": "A major site for metabolism of nutrients.",
+          "options": {},
+          "answer": "LIVER",
+          "accepted_answers": [
+            "LIVER"
+          ],
+          "explanation": "Answer: LIVER."
+        },
+        {
+          "number": 27,
+          "original_number": 17,
+          "type": "identification",
+          "question": "It is where water primary absorbed.",
+          "options": {},
+          "answer": "LARGE INTESTINE",
+          "accepted_answers": [
+            "LARGE INTESTINE"
+          ],
+          "explanation": "Answer: LARGE INTESTINE."
+        },
+        {
+          "number": 28,
+          "original_number": 18,
+          "type": "identification",
+          "question": "A pouch-like structure with tissues forms a network like a honeycomb.",
+          "options": {},
+          "answer": "RETICULUM",
+          "accepted_answers": [
+            "RETICULUM"
+          ],
+          "explanation": "Answer: RETICULUM."
+        },
+        {
+          "number": 29,
+          "original_number": 19,
+          "type": "identification",
+          "question": "The first and largest part of the stomach of ruminants.",
+          "options": {},
+          "answer": "RUMEN",
+          "accepted_answers": [
+            "RUMEN"
+          ],
+          "explanation": "Answer: RUMEN."
+        },
+        {
+          "number": 30,
+          "original_number": 20,
+          "type": "identification",
+          "question": "It is also called as \"true stomach\".",
+          "options": {},
+          "answer": "ABOMASUM",
+          "accepted_answers": [
+            "ABOMASUM"
+          ],
+          "explanation": "Answer: ABOMASUM."
+        }
+      ]
+    },
+    {
+      "id": "anatomical-mechanical-diagrams",
+      "title": "Anatomical & Mechanical Diagrams",
+      "description": "Interactive callout identification of dairy cattle external anatomy (23 points) and portable milking machine assembly (10 points).",
+      "questions": [
+        {
+          "number": 31,
+          "original_number": 1,
+          "type": "multi_part_diagram",
+          "question": "Identify the anatomical body parts of dairy cattle indicated by numbers 1 to 23 on the diagram:",
+          "image": "assets/body-parts-of-cattle-question.jpg",
+          "answer_image": "assets/body-parts-of-cattle-answer.jpg",
+          "caption": "Figure 1: External Anatomical Regions and Conformation Points of Dairy Cattle",
+          "options": {},
+          "answer": "DIAGRAM_MULTI_PART",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "type": "identification",
+              "answer": "Tail head",
+              "accepted_answers": [
+                "Tail head",
+                "tailhead"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "type": "identification",
+              "answer": "Pin",
+              "accepted_answers": [
+                "Pin"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "type": "identification",
+              "answer": "Hook",
+              "accepted_answers": [
+                "Hook"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "type": "identification",
+              "answer": "Paralumbar fossa",
+              "accepted_answers": [
+                "Paralumbar fossa"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "type": "identification",
+              "answer": "Loin",
+              "accepted_answers": [
+                "Loin"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "type": "identification",
+              "answer": "Shoulder",
+              "accepted_answers": [
+                "Shoulder"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "type": "identification",
+              "answer": "Crest",
+              "accepted_answers": [
+                "Crest"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "type": "identification",
+              "answer": "Poll",
+              "accepted_answers": [
+                "Poll"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "type": "identification",
+              "answer": "Forehead",
+              "accepted_answers": [
+                "Forehead",
+                "forehead"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "type": "identification",
+              "answer": "Muzzle",
+              "accepted_answers": [
+                "Muzzle"
+              ]
+            },
+            {
+              "id": 11,
+              "label": "11",
+              "type": "identification",
+              "answer": "Elbow",
+              "accepted_answers": [
+                "Elbow"
+              ]
+            },
+            {
+              "id": 12,
+              "label": "12",
+              "type": "identification",
+              "answer": "Dewlap",
+              "accepted_answers": [
+                "Dewlap"
+              ]
+            },
+            {
+              "id": 13,
+              "label": "13",
+              "type": "identification",
+              "answer": "Brisket",
+              "accepted_answers": [
+                "Brisket"
+              ]
+            },
+            {
+              "id": 14,
+              "label": "14",
+              "type": "identification",
+              "answer": "Knee",
+              "accepted_answers": [
+                "Knee"
+              ]
+            },
+            {
+              "id": 15,
+              "label": "15",
+              "type": "identification",
+              "answer": "Hoof",
+              "accepted_answers": [
+                "Hoof"
+              ]
+            },
+            {
+              "id": 16,
+              "label": "16",
+              "type": "identification",
+              "answer": "Heart girth",
+              "accepted_answers": [
+                "Heart girth"
+              ]
+            },
+            {
+              "id": 17,
+              "label": "17",
+              "type": "identification",
+              "answer": "Stifle",
+              "accepted_answers": [
+                "Stifle"
+              ]
+            },
+            {
+              "id": 18,
+              "label": "18",
+              "type": "identification",
+              "answer": "Udder",
+              "accepted_answers": [
+                "Udder"
+              ]
+            },
+            {
+              "id": 19,
+              "label": "19",
+              "type": "identification",
+              "answer": "Teat",
+              "accepted_answers": [
+                "Teat"
+              ]
+            },
+            {
+              "id": 20,
+              "label": "20",
+              "type": "identification",
+              "answer": "Hock",
+              "accepted_answers": [
+                "Hock"
+              ]
+            },
+            {
+              "id": 21,
+              "label": "21",
+              "type": "identification",
+              "answer": "Switch",
+              "accepted_answers": [
+                "Switch"
+              ]
+            },
+            {
+              "id": 22,
+              "label": "22",
+              "type": "identification",
+              "answer": "Dewclaw",
+              "accepted_answers": [
+                "Dewclaw",
+                "dew claw"
+              ]
+            },
+            {
+              "id": 23,
+              "label": "23",
+              "type": "identification",
+              "answer": "Heel",
+              "accepted_answers": [
+                "Heel"
+              ]
+            }
+          ],
+          "explanation": "Official anatomical conformation review diagram for dairy cattle (Parts 1 to 23)."
+        },
+        {
+          "number": 32,
+          "original_number": 2,
+          "type": "multi_part_diagram",
+          "question": "Identify the operational and mechanical components of the portable milking machine indicated by numbers 1 to 10 on the diagram:",
+          "image": "assets/portable-milking-machine-question.jpg",
+          "answer_image": "assets/portable-milking-machine-answer.jpg",
+          "caption": "Figure 2: Component Breakdown of Portable Single/Double-Bucket Milking Machine",
+          "options": {},
+          "answer": "DIAGRAM_MULTI_PART",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "type": "identification",
+              "answer": "Milk Collector",
+              "accepted_answers": [
+                "Milk Collector"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "type": "identification",
+              "answer": "Milk Cup",
+              "accepted_answers": [
+                "Milk Cup"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "type": "identification",
+              "answer": "Milk Tank",
+              "accepted_answers": [
+                "Milk Tank"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "type": "identification",
+              "answer": "Milk Tube",
+              "accepted_answers": [
+                "Milk Tube"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "type": "identification",
+              "answer": "Barometer",
+              "accepted_answers": [
+                "Barometer"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "type": "identification",
+              "answer": "Pulsator",
+              "accepted_answers": [
+                "Pulsator"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "type": "identification",
+              "answer": "Air Pressure Regulating Valve",
+              "accepted_answers": [
+                "Air Pressure Regulating Valve"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "type": "identification",
+              "answer": "Vacuum Pump",
+              "accepted_answers": [
+                "Vacuum Pump"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "type": "identification",
+              "answer": "Motor",
+              "accepted_answers": [
+                "Motor"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "type": "identification",
+              "answer": "Wheel",
+              "accepted_answers": [
+                "Wheel"
+              ]
+            }
+          ],
+          "explanation": "Mechanical and operational assembly components of a portable milking machine (Parts 1 to 10)."
+        }
+      ]
+    }
+  ]
+}

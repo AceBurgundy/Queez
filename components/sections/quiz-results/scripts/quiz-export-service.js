@@ -319,6 +319,22 @@ export function generateOfflineResultsHtml(exportData) {
               </div>
             \`;
           }).join('') + '</div>';
+        } else if (q.type === 'multi_part_diagram' && Array.isArray(q.items)) {
+          optionsHtml = '<div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(18rem, 1fr));gap:0.5rem;margin-top:0.5rem;">' + q.items.map(subItem => {
+            const isSubCorrect = subItem.isCorrect;
+            const borderCol = isSubCorrect ? 'var(--success)' : 'var(--error)';
+            const bgCol = isSubCorrect ? 'var(--success-bg)' : 'var(--error-bg)';
+            return \`
+              <div style="display:flex;align-items:center;gap:0.5rem;padding:0.4rem 0.6rem;border:1px solid \${borderCol};background:\${bgCol};border-radius:6px;font-size:0.85rem;">
+                <span style="font-weight:700;min-width:1.5rem;height:1.5rem;border-radius:50%;background:var(--surface-highest);display:inline-flex;align-items:center;justify-content:center;">\${subItem.label || subItem.id}</span>
+                <div style="flex:1;">
+                  <div>Your: <strong>\${subItem.userAnswer}</strong></div>
+                  <div style="color:var(--success);">Correct: <strong>\${subItem.correctAnswer}</strong></div>
+                </div>
+                <span style="font-size:0.75rem;font-weight:700;color:\${isSubCorrect ? 'var(--success)' : 'var(--error)'};">\${isSubCorrect ? 'Correct' : 'Incorrect'}</span>
+              </div>
+            \`;
+          }).join('') + '</div>';
         } else {
           optionsHtml = \`
             <div style="padding-left: 2rem; font-size: 0.95rem;">
@@ -328,9 +344,23 @@ export function generateOfflineResultsHtml(exportData) {
           \`;
         }
 
-        const diagramHtml = q.image
-          ? \`<div style="display:flex;justify-content:center;margin:0.5rem 0;"><img src="\${q.image}" style="max-width:100%;max-height:220px;object-fit:contain;background:#fff;border-radius:8px;padding:4px;" alt="Question illustration" /></div>\`
-          : '';
+        let diagramHtml = '';
+        if (q.image && q.answer_image) {
+          diagramHtml = \`
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;margin:0.75rem 0;">
+              <div style="text-align:center;">
+                <div style="font-size:0.8rem;font-weight:700;color:var(--on-surface-variant);margin-bottom:0.25rem;">Question Diagram</div>
+                <img src="\${q.image}" style="max-width:100%;max-height:220px;object-fit:contain;background:#fff;border-radius:8px;padding:4px;" alt="Question diagram" />
+              </div>
+              <div style="text-align:center;">
+                <div style="font-size:0.8rem;font-weight:700;color:var(--success);margin-bottom:0.25rem;">Answer Key Diagram</div>
+                <img src="\${q.answer_image}" style="max-width:100%;max-height:220px;object-fit:contain;background:#fff;border-radius:8px;padding:4px;" alt="Answer diagram" />
+              </div>
+            </div>
+          \`;
+        } else if (q.image) {
+          diagramHtml = \`<div style="display:flex;justify-content:center;margin:0.5rem 0;"><img src="\${q.image}" style="max-width:100%;max-height:220px;object-fit:contain;background:#fff;border-radius:8px;padding:4px;" alt="Question illustration" /></div>\`;
+        }
 
         const captionHtml = q.caption
           ? \`<div style="text-align:center;font-size:0.85rem;font-style:italic;color:var(--on-surface-variant);margin-bottom:0.5rem;">\${q.caption}</div>\`

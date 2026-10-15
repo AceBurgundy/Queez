@@ -199,6 +199,14 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
           : sourceQuestion.image;
       }
 
+      /** @type {string|undefined} */
+      let resolvedAnswerImage = undefined;
+      if (sourceQuestion.answer_image) {
+        resolvedAnswerImage = baseDirectory
+          ? `${baseDirectory}/${sourceQuestion.answer_image}`
+          : sourceQuestion.answer_image;
+      }
+
       /** @type {Record<string, string>} */
       const resolvedOptions = {};
       if (sourceQuestion.options && typeof sourceQuestion.options === "object") {
@@ -234,7 +242,10 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
         question: sourceQuestion.question,
         options: resolvedOptions,
         answer: sourceQuestion.answer,
+        ...(sourceQuestion.accepted_answers ? { accepted_answers: sourceQuestion.accepted_answers } : {}),
+        ...(sourceQuestion.items ? { items: sourceQuestion.items } : {}),
         ...(resolvedImagePath ? { image: resolvedImagePath } : {}),
+        ...(resolvedAnswerImage ? { answer_image: resolvedAnswerImage } : {}),
         ...(boundContext ? { context: boundContext } : {}),
         ...(sourceQuestion.caption ? { caption: sourceQuestion.caption } : {}),
         ...(sourceQuestion.explanation ? { explanation: sourceQuestion.explanation } : {})

@@ -6,6 +6,7 @@ import { Banner } from "../../../sections/banner/templates/banner.js";
 import { Tabs } from "../../../widgets/tabs/templates/tabs.js";
 import { Toast } from "../../../widgets/toast/templates/toast.js";
 import { LoadingScreen } from "../../../widgets/loading-screen/templates/loading-screen.js";
+import { getImageViewer } from "../../../widgets/image-viewer/templates/image-viewer.js";
 import { fetchNavigationItemData } from "../../../../common/scripts/data-loader.js";
 import { adaptQuizData } from "../../../../common/scripts/quiz-data-adapter.js";
 import { QuizActionBar } from "../../../widgets/quiz-action-bar/templates/quiz-action-bar.js";
@@ -162,6 +163,7 @@ export class App extends Component {
           <!-- Dynamic Dashboard, Quizzes catalog, or Quiz content mounted here -->
         </main>
         ${toastComponent}
+        ${getImageViewer()}
       </div>
     `;
 

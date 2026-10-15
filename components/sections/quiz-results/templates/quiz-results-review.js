@@ -1,4 +1,5 @@
 import { Component, css, html, TemplateResult } from "../../../../Component.js";
+import { getImageViewer } from "../../../widgets/image-viewer/templates/image-viewer.js";
 
 css(import.meta, ["../styles/quiz-results-review.css"]);
 
@@ -148,6 +149,36 @@ export class QuizResultsReview extends Component {
           </div>
         `;
       }
+      if (questionItem.type === "multi_part_diagram" && Array.isArray(questionItem.items)) {
+        /** @type {Array<TemplateResult>} */
+        const itemRows = questionItem.items.map((subItem) => {
+          /** @type {string} */
+          const itemTagClass = subItem.isCorrect
+            ? "quiz-review__option-tag quiz-review__option-tag--correct"
+            : "quiz-review__option-tag quiz-review__option-tag--user";
+          /** @type {string} */
+          const itemRowClass = subItem.isCorrect
+            ? "quiz-review__diagram-subrow quiz-review__diagram-subrow--correct"
+            : "quiz-review__diagram-subrow quiz-review__diagram-subrow--incorrect";
+
+          return html`
+            <div class="${itemRowClass}">
+              <span class="quiz-review__diagram-badge">${subItem.label || subItem.id}</span>
+              <div class="quiz-review__diagram-answers">
+                <span class="quiz-review__diagram-user">Your Answer: <strong>${subItem.userAnswer}</strong></span>
+                <span class="quiz-review__diagram-correct">Correct: <strong>${subItem.correctAnswer}</strong></span>
+              </div>
+              <span class="${itemTagClass}">${subItem.isCorrect ? "Correct" : "Incorrect"}</span>
+            </div>
+          `;
+        });
+
+        return html`
+          <div class="quiz-review__diagram-breakdown" aria-label="Diagram Callouts Review">
+            ${itemRows}
+          </div>
+        `;
+      }
 
       return html`
         <div class="quiz-review__text-answer-block">
@@ -214,19 +245,55 @@ export class QuizResultsReview extends Component {
             resolvedImage = "data/" + resolvedImage.slice("quizzes/".length);
           }
 
+          /** @type {string|null} */
+          let resolvedAnswerImage = questionItem.answer_image || null;
+          if (resolvedAnswerImage && resolvedAnswerImage.startsWith("quizzes/")) {
+            resolvedAnswerImage = "data/" + resolvedAnswerImage.slice("quizzes/".length);
+          }
+
           /** @type {string} */
-          const imageMarkup = resolvedImage
-            ? html`
+          let imageMarkup = "";
+          if (resolvedImage && resolvedAnswerImage) {
+            imageMarkup = html`
+              <div class="quiz-review__dual-diagram-container">
+                <div class="quiz-review__diagram-pane">
+                  <span class="quiz-review__diagram-label">Question Diagram (Callouts)</span>
+                  <img
+                    src="${resolvedImage}"
+                    class="quiz-review__image quiz-review__image--zoomable"
+                    alt="Question Diagram for Question ${questionItem.number}"
+                    loading="lazy"
+                    title="Click to view full screen"
+                    onclick=${() => getImageViewer().open(resolvedImage, `Question ${questionItem.number} Diagram`)}
+                  />
+                </div>
+                <div class="quiz-review__diagram-pane">
+                  <span class="quiz-review__diagram-label quiz-review__diagram-label--answer">Answer Key Diagram</span>
+                  <img
+                    src="${resolvedAnswerImage}"
+                    class="quiz-review__image quiz-review__image--zoomable"
+                    alt="Answer Key Diagram for Question ${questionItem.number}"
+                    loading="lazy"
+                    title="Click to view full screen"
+                    onclick=${() => getImageViewer().open(resolvedAnswerImage, `Question ${questionItem.number} Answer Key`)}
+                  />
+                </div>
+              </div>
+            `;
+          } else if (resolvedImage) {
+            imageMarkup = html`
               <div class="quiz-review__image-container">
                 <img
                   src="${resolvedImage}"
-                  class="quiz-review__image"
+                  class="quiz-review__image quiz-review__image--zoomable"
                   alt="Illustration for Question ${questionItem.number}"
                   loading="lazy"
+                  title="Click to view full screen"
+                  onclick=${() => getImageViewer().open(resolvedImage, `Question ${questionItem.number} Illustration`)}
                 />
               </div>
-            `
-            : "";
+            `;
+          }
 
           /** @type {string} */
           const captionMarkup = questionItem.caption

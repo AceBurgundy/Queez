@@ -1,0 +1,118 @@
+/* Universal Image Photo Viewer Styles */
+.image-viewer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  animation: imageViewerFadeIn 0.25s cubic-bezier(0.2, 0, 0, 1);
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes imageViewerFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.image-viewer-toolbar {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.image-viewer-hint {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: var(--md-sys-typescale-font-body, system-ui, sans-serif);
+  font-size: 0.875rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.02em;
+}
+
+.image-viewer-close-button {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.image-viewer-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.08);
+}
+
+.image-viewer-stage {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow: auto;
+  cursor: pointer;
+}
+
+.image-viewer__img {
+  max-width: 95vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8);
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.image-viewer__img--zoomed {
+  cursor: zoom-out;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.95);
+}
+
+/* Affordance cursor for zoomable images across the app */
+.question-card__image,
+.question-card__option-image,
+.quiz-review__image,
+.quiz-review__option-image {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.question-card__image:hover,
+.question-card__option-image:hover,
+.quiz-review__image:hover,
+.quiz-review__option-image:hover {
+  transform: scale(1.015);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}

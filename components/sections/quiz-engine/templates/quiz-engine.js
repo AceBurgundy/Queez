@@ -4,6 +4,7 @@ import { ContextDrawer } from "../../../widgets/context-drawer/templates/context
 import { ConfirmDialog } from "../../../widgets/confirm-dialog/templates/confirm-dialog.js";
 import { formatSecondsToTime } from "../../../widgets/quiz-action-bar/templates/quiz-action-bar.js";
 import { saveActiveSession, clearActiveSession, getCategoryBounds } from "../scripts/quiz-state-manager.js";
+import { getImageViewer } from "../../../widgets/image-viewer/templates/image-viewer.js";
 
 css(import.meta, ["../styles/quiz-engine.css"]);
 
@@ -823,6 +824,41 @@ export class QuizEngine extends Component {
           if (questionNumber) {
             handleSelectAnswer(questionNumber, targetInput.value);
           }
+        };
+      });
+
+      // Diagram sub-item inputs delegation
+      rootElement.querySelectorAll(".question-card__diagram-item-input").forEach((diagramInputElement) => {
+        /** @param {Event} event */
+        diagramInputElement.oninput = (event) => {
+          /** @type {HTMLElement|null} */
+          const cardElement = diagramInputElement.closest(".question-card");
+          /** @type {number} */
+          const questionNumber = parseInt(cardElement?.dataset.questionNumber || "0", 10);
+          /** @type {HTMLInputElement} */
+          const targetInput = /** @type {HTMLInputElement} */ (event.target);
+          /** @type {number} */
+          const subItemId = parseInt(targetInput.dataset.itemId || "0", 10);
+          if (questionNumber && subItemId) {
+            /** @type {Record<number, string>} */
+            const currentCompoundAnswers = (typeof this.answers[questionNumber] === "object" && this.answers[questionNumber] !== null)
+              ? { ...this.answers[questionNumber] }
+              : {};
+            currentCompoundAnswers[subItemId] = targetInput.value;
+            handleSelectAnswer(questionNumber, currentCompoundAnswers);
+          }
+        };
+      });
+
+      // Click-to-zoom photo viewer delegation
+      rootElement.querySelectorAll(".question-card__image, .question-card__option-image").forEach((clickableImageElement) => {
+        /** @param {MouseEvent} clickEvent */
+        clickableImageElement.onclick = (clickEvent) => {
+          clickEvent.preventDefault();
+          clickEvent.stopPropagation();
+          /** @type {HTMLImageElement} */
+          const targetImageElement = /** @type {HTMLImageElement} */ (clickableImageElement);
+          getImageViewer().open(targetImageElement.src, targetImageElement.alt || "Question illustration");
         };
       });
     };

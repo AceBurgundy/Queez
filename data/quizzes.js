@@ -39,6 +39,15 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
               "description": "Comprehensive 464-item dairy farming certification examination covering 12 domains: History, Breeds, Reproduction, Anatomy, Nutrition, Silage, Facilities, Health, and Equipment."
             },
             {
+              "title": "Milk Operation and Farm Management (Part 2)",
+              "label": "Dairy Science Part 2",
+              "quiz_id": "milk-operation-part-2",
+              "link": "queezes/milk-operation-part-2",
+              "image_source": "data/milk-operation-part-2-quiz/assets/body-parts-of-cattle-question.jpg",
+              "shrink": false,
+              "description": "Comprehensive 63-point Part 2 Review covering Agricultural Equipment & Tools, Cattle Digestion & Feed Nutrition, and Interactive Anatomical & Milking Machine Callout Diagrams."
+            },
+            {
               "title": "NAPOLCOM Entrance Examination",
               "label": "Featured Exam",
               "quiz_id": "napolcom-mock-exam-7a8f",

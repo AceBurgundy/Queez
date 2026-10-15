@@ -1,4 +1,5 @@
 import { Component, css, html } from "../../../../Component.js";
+import { getImageViewer } from "../../image-viewer/templates/image-viewer.js";
 
 css(import.meta, ["../styles/question-card.css"]);
 
@@ -32,6 +33,10 @@ export class QuestionCard extends Component {
     this.questionText = questionPayload.question || "";
     /** @type {Record<string, string>|null} */
     this.options = questionPayload.options || null;
+    /** @type {Array<Object>|null} */
+    this.items = Array.isArray(questionPayload.items) ? questionPayload.items : null;
+    /** @type {string|null} */
+    this.answerImage = questionPayload.answer_image || null;
     /** @type {string|null} */
     this.rawImage = questionPayload.image || null;
     /** @type {string|null} */
@@ -41,10 +46,10 @@ export class QuestionCard extends Component {
     /** @type {string|null} */
     this.optionsType = questionPayload.options_type || null;
     /** @type {string} */
-    this.type = questionPayload.type || (this.options ? "multiple_choice" : "fill-in-the-blank");
-    /** @type {string} */
-    this.selectedAnswer = selectedAnswer || "";
-    /** @type {function(number, string): void} */
+    this.type = questionPayload.type || (this.items ? "multi_part_diagram" : (this.options ? "multiple_choice" : "identification"));
+    /** @type {any} */
+    this.selectedAnswer = selectedAnswer || (this.type === "multi_part_diagram" ? {} : "");
+    /** @type {function(number, any): void} */
     this.onSelectAnswer = onSelectAnswer;
 
     // Resolve asset path from quizzes/ prefix to data/ prefix if needed
@@ -55,6 +60,16 @@ export class QuestionCard extends Component {
     }
     /** @type {string|null} */
     this.image = resolvedImage;
+
+    /**
+     * Opens image viewer overlay.
+     * @param {string} sourceUrl
+     * @param {string} labelText
+     * @returns {void}
+     */
+    const handleZoomImage = (sourceUrl, labelText) => {
+      getImageViewer().open(sourceUrl, labelText);
+    };
 
     /**
      * @param {string} optionKey
@@ -75,6 +90,25 @@ export class QuestionCard extends Component {
         /** @type {HTMLInputElement} */
         const targetInput = /** @type {HTMLInputElement} */ (inputEvent.target);
         this.onSelectAnswer(this.number, targetInput.value);
+      }
+    };
+
+    /**
+     * @param {number} itemId
+     * @param {Event} inputEvent
+     * @returns {void}
+     */
+    const handleDiagramSubItemInput = (itemId, inputEvent) => {
+      if (typeof this.onSelectAnswer === "function") {
+        /** @type {HTMLInputElement} */
+        const targetInput = /** @type {HTMLInputElement} */ (inputEvent.target);
+        /** @type {Record<number, string>} */
+        const currentCompound = (typeof this.selectedAnswer === "object" && this.selectedAnswer !== null)
+          ? { ...this.selectedAnswer }
+          : {};
+        currentCompound[itemId] = targetInput.value;
+        this.selectedAnswer = currentCompound;
+        this.onSelectAnswer(this.number, currentCompound);
       }
     };
 
@@ -101,7 +135,7 @@ export class QuestionCard extends Component {
       `;
     }
 
-    // Render illustration image if present
+    // Render illustration image if present with click-to-zoom
     /** @type {string} */
     const imageTemplate = this.image
       ? html`
@@ -111,6 +145,8 @@ export class QuestionCard extends Component {
             class="question-card__image"
             alt="Illustration for Question ${this.number}"
             loading="lazy"
+            title="Click to view full screen"
+            onclick=${() => handleZoomImage(this.image, `Question ${this.number} Diagram`)}
           />
         </div>
       `
@@ -223,6 +259,36 @@ export class QuestionCard extends Component {
           </div>
         `;
       }
+    } else if (this.items && Array.isArray(this.items) && this.items.length > 0) {
+      /** @type {Record<number, string>} */
+      const userAnswersMap = (typeof this.selectedAnswer === "object" && this.selectedAnswer !== null)
+        ? this.selectedAnswer
+        : {};
+
+      /** @type {Array<string>} */
+      const diagramInputs = this.items.map((subItem) => {
+        /** @type {string} */
+        const itemVal = userAnswersMap[subItem.id] || "";
+        return html`
+          <div class="question-card__diagram-item">
+            <span class="question-card__diagram-item-badge">${subItem.label || subItem.id}</span>
+            <input
+              type="text"
+              class="question-card__diagram-item-input"
+              placeholder="Enter name for #${subItem.label || subItem.id}..."
+              value="${itemVal}"
+              aria-label="Answer for #${subItem.label || subItem.id}"
+              oninput=${(event) => handleDiagramSubItemInput(subItem.id, event)}
+            />
+          </div>
+        `;
+      });
+
+      bodyTemplate = html`
+        <div class="question-card__diagram-inputs-grid" aria-label="Numbered Diagram Items">
+          ${diagramInputs}
+        </div>
+      `;
     } else {
       bodyTemplate = html`
         <div class="question-card__input-container">

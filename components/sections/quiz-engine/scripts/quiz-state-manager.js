@@ -16,10 +16,23 @@ const QUIZ_SESSION_STORAGE_KEY = "queez_active_session";
 const QUIZ_ACTIVE_MOCK_DECK_STORAGE_KEY = "queez_active_mock_deck";
 
 /**
+ * Normalizes an identification answer string for forgiving comparison.
+ * Converts to lowercase and strips all non-alphanumeric characters.
+ * @param {string} text - Raw input string.
+ * @returns {string} Normalized alphanumeric string.
+ */
+export function normalizeIdentification(text) {
+  if (typeof text !== "string") {
+    return "";
+  }
+  return text.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+/**
  * Isolated in-memory solution registry.
  * Strictly held in this module closure and NEVER exposed to window or DOM attributes.
- * Keyed by: `${quizId}::${questionNumber}` -> correct answer string.
- * @type {Map<string, string>}
+ * Keyed by: `${quizId}::${questionNumber}` -> correct answer string or object.
+ * @type {Map<string, any>}
  */
 const solutionRegistry = new Map();
 
@@ -39,12 +52,40 @@ export function registerQuestionsAndSanitize(quizId, rawQuestions = []) {
   return rawQuestions.map((questionItem) => {
     /** @type {number} */
     const questionNumber = questionItem.number;
-    if (questionItem.answer) {
+    /** @type {string} */
+    const questionType = questionItem.type || "multiple_choice";
+
+    if (questionType === "multi_part_diagram" && Array.isArray(questionItem.items)) {
+      /** @type {Record<number, { answer: string, accepted_answers: Array<string> }>} */
+      const diagramSolutions = {};
+      questionItem.items.forEach((subItem) => {
+        diagramSolutions[subItem.id] = {
+          answer: String(subItem.answer || "").trim(),
+          accepted_answers: Array.isArray(subItem.accepted_answers) ? subItem.accepted_answers : [String(subItem.answer || "").trim()]
+        };
+      });
+      solutionRegistry.set(`${quizId}::${questionNumber}`, {
+        type: "multi_part_diagram",
+        items: diagramSolutions
+      });
+    } else if (questionType === "identification") {
+      solutionRegistry.set(`${quizId}::${questionNumber}`, {
+        type: "identification",
+        answer: String(questionItem.answer || "").trim(),
+        accepted_answers: Array.isArray(questionItem.accepted_answers) ? questionItem.accepted_answers : [String(questionItem.answer || "").trim()]
+      });
+    } else if (questionItem.answer) {
       solutionRegistry.set(`${quizId}::${questionNumber}`, String(questionItem.answer).trim().toUpperCase());
     }
 
     // Return sanitized question copy with zero answer data
-    const { answer, ...sanitized } = questionItem;
+    const { answer, accepted_answers, ...sanitized } = questionItem;
+    if (sanitized.items && Array.isArray(sanitized.items)) {
+      sanitized.items = sanitized.items.map((subItem) => {
+        const { answer: subAnswer, accepted_answers: subAccepted, ...sanitizedSubItem } = subItem;
+        return sanitizedSubItem;
+      });
+    }
     return sanitized;
   });
 }
@@ -256,7 +297,7 @@ export function evaluateScoreTally(
   /** @type {number} */
   let totalCorrect = 0;
   /** @type {number} */
-  const totalQuestions = scopedQuestions.length;
+  let totalQuestions = 0;
   /** @type {Array<Object>} */
   const questionReviewList = [];
 
@@ -264,28 +305,133 @@ export function evaluateScoreTally(
     /** @type {number} */
     const questionNumber = questionItem.number;
     /** @type {string} */
-    const userAnswer = (answers[questionNumber] || "").trim().toUpperCase();
-    /** @type {string} */
-    const correctAnswer = getSolutionAnswer(quizId, questionNumber);
-    /** @type {boolean} */
-    const isCorrect = Boolean(userAnswer && correctAnswer && userAnswer === correctAnswer);
+    const questionType = questionItem.type || "multiple_choice";
+    /** @type {any} */
+    const solution = getSolutionAnswer(quizId, questionNumber);
 
-    if (isCorrect) {
-      totalCorrect += 1;
+    if (questionType === "multi_part_diagram" && Array.isArray(questionItem.items)) {
+      /** @type {Object} */
+      const userDiagramAnswers = (typeof answers[questionNumber] === "object" && answers[questionNumber] !== null)
+        ? answers[questionNumber]
+        : {};
+      /** @type {Array<Object>} */
+      const itemReviews = [];
+
+      questionItem.items.forEach((subItem) => {
+        totalQuestions += 1;
+        /** @type {string} */
+        const rawUserSubAnswer = String(userDiagramAnswers[subItem.id] ?? "").trim();
+        /** @type {string} */
+        const normalizedUser = normalizeIdentification(rawUserSubAnswer);
+        /** @type {Object} */
+        const targetSolution = (solution && solution.items && solution.items[subItem.id]) || {
+          answer: "",
+          accepted_answers: []
+        };
+        /** @type {Array<string>} */
+        const acceptedList = targetSolution.accepted_answers || [targetSolution.answer];
+        /** @type {boolean} */
+        const isSubCorrect = Boolean(
+          normalizedUser &&
+          acceptedList.some((acceptedItem) => normalizeIdentification(acceptedItem) === normalizedUser)
+        );
+
+        if (isSubCorrect) {
+          totalCorrect += 1;
+        }
+
+        itemReviews.push({
+          id: subItem.id,
+          label: subItem.label || String(subItem.id),
+          userAnswer: rawUserSubAnswer || "Unanswered",
+          correctAnswer: targetSolution.answer || "N/A",
+          isCorrect: isSubCorrect
+        });
+      });
+
+      questionReviewList.push({
+        number: questionNumber,
+        type: "multi_part_diagram",
+        question: questionItem.question,
+        options: {},
+        userAnswer: `${itemReviews.filter((item) => item.isCorrect).length}/${itemReviews.length} Points`,
+        correctAnswer: `${itemReviews.length} Points`,
+        isCorrect: itemReviews.every((item) => item.isCorrect),
+        items: itemReviews,
+        ...(questionItem.image ? { image: questionItem.image } : {}),
+        ...(questionItem.answer_image ? { answer_image: questionItem.answer_image } : {}),
+        ...(questionItem.caption ? { caption: questionItem.caption } : {}),
+        ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
+      });
+    } else if (questionType === "identification") {
+      totalQuestions += 1;
+      /** @type {string} */
+      const rawUserAnswer = String(answers[questionNumber] || "").trim();
+      /** @type {string} */
+      const normalizedUser = normalizeIdentification(rawUserAnswer);
+      /** @type {string} */
+      let canonicalAnswer = "";
+      /** @type {Array<string>} */
+      let acceptedList = [];
+
+      if (solution && typeof solution === "object") {
+        canonicalAnswer = solution.answer || "";
+        acceptedList = solution.accepted_answers || [canonicalAnswer];
+      } else {
+        canonicalAnswer = String(solution || "");
+        acceptedList = [canonicalAnswer];
+      }
+
+      /** @type {boolean} */
+      const isCorrect = Boolean(
+        normalizedUser &&
+        acceptedList.some((acceptedItem) => normalizeIdentification(acceptedItem) === normalizedUser)
+      );
+
+      if (isCorrect) {
+        totalCorrect += 1;
+      }
+
+      questionReviewList.push({
+        number: questionNumber,
+        type: "identification",
+        question: questionItem.question,
+        options: {},
+        userAnswer: rawUserAnswer || "Unanswered",
+        correctAnswer: canonicalAnswer || "N/A",
+        isCorrect,
+        ...(questionItem.image ? { image: questionItem.image } : {}),
+        ...(questionItem.caption ? { caption: questionItem.caption } : {}),
+        ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
+      });
+    } else {
+      // Standard Multiple Choice
+      totalQuestions += 1;
+      /** @type {string} */
+      const userAnswer = String(answers[questionNumber] || "").trim().toUpperCase();
+      /** @type {string} */
+      const correctAnswer = typeof solution === "string" ? solution : String(solution?.answer || "");
+      /** @type {boolean} */
+      const isCorrect = Boolean(userAnswer && correctAnswer && userAnswer === correctAnswer);
+
+      if (isCorrect) {
+        totalCorrect += 1;
+      }
+
+      questionReviewList.push({
+        number: questionNumber,
+        type: questionType,
+        question: questionItem.question,
+        options: questionItem.options || {},
+        userAnswer: userAnswer || "Unanswered",
+        correctAnswer: correctAnswer || "N/A",
+        isCorrect,
+        ...(questionItem.image ? { image: questionItem.image } : {}),
+        ...(questionItem.caption ? { caption: questionItem.caption } : {}),
+        ...(questionItem.options_type ? { options_type: questionItem.options_type } : {}),
+        ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
+      });
     }
-
-    questionReviewList.push({
-      number: questionNumber,
-      question: questionItem.question,
-      options: questionItem.options || {},
-      userAnswer: userAnswer || "Unanswered",
-      correctAnswer: correctAnswer || "N/A",
-      isCorrect,
-      ...(questionItem.image ? { image: questionItem.image } : {}),
-      ...(questionItem.caption ? { caption: questionItem.caption } : {}),
-      ...(questionItem.options_type ? { options_type: questionItem.options_type } : {}),
-      ...(questionItem.explanation ? { explanation: questionItem.explanation } : {})
-    });
   });
 
   /** @type {number} */
