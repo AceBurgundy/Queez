@@ -6,7 +6,8 @@ css(import.meta, ["../styles/question-card.css"]);
 /**
  * QuestionCard Component
  * Polymorphic question renderer supporting multiple-choice (text or visual images),
- * fill-in-the-blank text input, image illustrations with captions, and reference context triggers.
+ * fill-in-the-blank text input, numbered diagram identification grids, image illustrations
+ * with captions, and reference context triggers.
  * Security: NEVER renders the correct answer into HTML or DOM attributes.
  */
 export class QuestionCard extends Component {
@@ -14,8 +15,8 @@ export class QuestionCard extends Component {
    * @param {Object} configuration
    * @param {Object} [configuration.questionData] - Sanitized question data.
    * @param {Object} [configuration.question] - Alias for questionData.
-   * @param {string} [configuration.selectedAnswer=""] - Currently selected answer value.
-   * @param {function(number, string): void} [configuration.onSelectAnswer] - Selection callback.
+   * @param {any} [configuration.selectedAnswer=""] - Currently selected answer value.
+   * @param {function(number, any): void} [configuration.onSelectAnswer] - Selection callback.
    */
   constructor({
     questionData = null,
@@ -61,57 +62,6 @@ export class QuestionCard extends Component {
     /** @type {string|null} */
     this.image = resolvedImage;
 
-    /**
-     * Opens image viewer overlay.
-     * @param {string} sourceUrl
-     * @param {string} labelText
-     * @returns {void}
-     */
-    const handleZoomImage = (sourceUrl, labelText) => {
-      getImageViewer().open(sourceUrl, labelText);
-    };
-
-    /**
-     * @param {string} optionKey
-     * @returns {void}
-     */
-    const handleSelectOption = (optionKey) => {
-      if (typeof this.onSelectAnswer === "function") {
-        this.onSelectAnswer(this.number, optionKey);
-      }
-    };
-
-    /**
-     * @param {Event} inputEvent
-     * @returns {void}
-     */
-    const handleTextInput = (inputEvent) => {
-      if (typeof this.onSelectAnswer === "function") {
-        /** @type {HTMLInputElement} */
-        const targetInput = /** @type {HTMLInputElement} */ (inputEvent.target);
-        this.onSelectAnswer(this.number, targetInput.value);
-      }
-    };
-
-    /**
-     * @param {number} itemId
-     * @param {Event} inputEvent
-     * @returns {void}
-     */
-    const handleDiagramSubItemInput = (itemId, inputEvent) => {
-      if (typeof this.onSelectAnswer === "function") {
-        /** @type {HTMLInputElement} */
-        const targetInput = /** @type {HTMLInputElement} */ (inputEvent.target);
-        /** @type {Record<number, string>} */
-        const currentCompound = (typeof this.selectedAnswer === "object" && this.selectedAnswer !== null)
-          ? { ...this.selectedAnswer }
-          : {};
-        currentCompound[itemId] = targetInput.value;
-        this.selectedAnswer = currentCompound;
-        this.onSelectAnswer(this.number, currentCompound);
-      }
-    };
-
     // Render shared context trigger button if question links to a context
     /** @type {string} */
     let contextTemplate = "";
@@ -124,8 +74,8 @@ export class QuestionCard extends Component {
             type="button"
             class="question-card__context-trigger"
             data-context-id="${this.context.id || ""}"
-            data-question-number="${this.number}"
-            aria-label="View Reference Context: ${contextTitle}"
+            data-question-number="${String(this.number)}"
+            aria-label="${`View Reference Context: ${contextTitle}`}"
           >
             <span class="google-symbols notranslate question-card__context-icon">menu_book</span>
             <span class="question-card__context-text">${contextTitle}</span>
@@ -143,10 +93,9 @@ export class QuestionCard extends Component {
           <img
             src="${this.image}"
             class="question-card__image"
-            alt="Illustration for Question ${this.number}"
+            alt="${`Illustration for Question ${this.number}`}"
             loading="lazy"
             title="Click to view full screen"
-            onclick=${() => handleZoomImage(this.image, `Question ${this.number} Diagram`)}
           />
         </div>
       `
@@ -203,7 +152,7 @@ export class QuestionCard extends Component {
               class="${buttonClass}"
               role="radio"
               aria-checked="${isSelected ? "true" : "false"}"
-              onclick=${() => handleSelectOption(key)}
+              data-option-key="${key}"
             >
               <div class="question-card__visual-header">
                 <span class="question-card__option-key">${key}</span>
@@ -213,7 +162,7 @@ export class QuestionCard extends Component {
                 <img
                   src="${optionImageUrl}"
                   class="question-card__option-image"
-                  alt="Option ${key}"
+                  alt="${`Option ${key}`}"
                   loading="lazy"
                 />
               </div>
@@ -222,7 +171,7 @@ export class QuestionCard extends Component {
         });
 
         bodyTemplate = html`
-          <div class="question-card__options-list question-card__options-list--visual" role="radiogroup" aria-label="Visual Choices for Question ${this.number}">
+          <div class="question-card__options-list question-card__options-list--visual" role="radiogroup" aria-label="${`Visual Choices for Question ${this.number}`}">
             ${visualOptionButtons}
           </div>
         `;
@@ -244,7 +193,7 @@ export class QuestionCard extends Component {
               class="${buttonClass}"
               role="radio"
               aria-checked="${isSelected ? "true" : "false"}"
-              onclick=${() => handleSelectOption(key)}
+              data-option-key="${key}"
             >
               <span class="question-card__option-key">${key}</span>
               <span class="question-card__option-text">${label}</span>
@@ -254,7 +203,7 @@ export class QuestionCard extends Component {
         });
 
         bodyTemplate = html`
-          <div class="question-card__options-list" role="radiogroup" aria-label="Choices for Question ${this.number}">
+          <div class="question-card__options-list" role="radiogroup" aria-label="${`Choices for Question ${this.number}`}">
             ${textOptionButtons}
           </div>
         `;
@@ -269,16 +218,18 @@ export class QuestionCard extends Component {
       const diagramInputs = this.items.map((subItem) => {
         /** @type {string} */
         const itemVal = userAnswersMap[subItem.id] || "";
+        /** @type {string} */
+        const subItemIdentifier = String(subItem.label || subItem.id);
         return html`
           <div class="question-card__diagram-item">
-            <span class="question-card__diagram-item-badge">${subItem.label || subItem.id}</span>
+            <span class="question-card__diagram-item-badge">${subItemIdentifier}</span>
             <input
               type="text"
               class="question-card__diagram-item-input"
-              placeholder="Enter name for #${subItem.label || subItem.id}..."
+              data-item-id="${String(subItem.id)}"
+              placeholder="${`Enter name for #${subItemIdentifier}...`}"
               value="${itemVal}"
-              aria-label="Answer for #${subItem.label || subItem.id}"
-              oninput=${(event) => handleDiagramSubItemInput(subItem.id, event)}
+              aria-label="${`Answer for #${subItemIdentifier}`}"
             />
           </div>
         `;
@@ -290,26 +241,27 @@ export class QuestionCard extends Component {
         </div>
       `;
     } else {
+      /** @type {string} */
+      const stringAnswer = typeof this.selectedAnswer === "string" ? this.selectedAnswer : "";
       bodyTemplate = html`
         <div class="question-card__input-container">
           <input
             type="text"
             class="question-card__text-input"
             placeholder="Type your answer here..."
-            value="${this.selectedAnswer}"
-            aria-label="Answer for Question ${this.number}"
-            oninput=${handleTextInput}
+            value="${stringAnswer}"
+            aria-label="${`Answer for Question ${this.number}`}"
           />
         </div>
       `;
     }
 
     this.template = html`
-      <article class="question-card" data-question-number="${this.number}" aria-labelledby="q-stem-${this.number}">
+      <article class="question-card" data-question-number="${String(this.number)}" aria-labelledby="${`q-stem-${this.number}`}">
         ${contextTemplate}
         <div class="question-card__header">
           <span class="question-card__number-badge">${this.number}</span>
-          <p id="q-stem-${this.number}" class="question-card__text">${this.questionText}</p>
+          <p id="${`q-stem-${this.number}`}" class="question-card__text">${this.questionText}</p>
         </div>
         ${imageTemplate}
         ${captionTemplate}
