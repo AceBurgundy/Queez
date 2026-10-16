@@ -143,6 +143,9 @@ export function attachTabsSwipeGesture({ trackElement, getActiveIndex, onActivat
    * @returns {boolean} True if drag sequence initiated.
    */
   const handleGestureStart = (clientX, clientY, pointerIdentifier = null) => {
+    if (trackElement.closest(".tabs--locked") || trackElement.classList.contains("tabs--locked")) {
+      return false;
+    }
     if (!isMobileViewport()) {
       return false;
     }

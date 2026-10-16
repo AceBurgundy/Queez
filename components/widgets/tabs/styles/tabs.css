@@ -184,3 +184,35 @@
     -webkit-user-select: none !important;
   }
 }
+
+/* ==========================================================================
+   Exam Locked State: Suppress tabs scrolling & navigation during active exam
+   ========================================================================== */
+.tabs.tabs--locked .tabs__carousel-button {
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+.tabs.tabs--locked .tabs__track {
+  overflow-x: hidden !important;
+  touch-action: none !important;
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+.tabs.tabs--locked .tabs__item:not(.tabs__item--active) {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  opacity: 0.45;
+}
+
+.tabs.tabs--locked .tabs__item--active {
+  cursor: default !important;
+}
+
+.tabs.tabs--locked .tabs__item--active #buttonStopExamTab {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+

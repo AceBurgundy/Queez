@@ -29,6 +29,9 @@ export function attachDragToScroll(scrollContainerElement) {
    * @returns {void}
    */
   const handlePointerDown = (pointerEvent) => {
+    if (scrollContainerElement.classList.contains("tabs--locked") || scrollContainerElement.closest(".tabs--locked")) {
+      return;
+    }
     if (pointerEvent.pointerType === "mouse" && pointerEvent.button !== 0) {
       return;
     }

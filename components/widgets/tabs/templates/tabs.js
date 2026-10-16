@@ -39,6 +39,9 @@ export class Tabs extends Component {
     this.onTabChange = onTabChange;
 
     /** @type {boolean} */
+    this.isLocked = false;
+
+    /** @type {boolean} */
     let isTabAnimating = false;
     /** @type {number|null} */
     let animationTimer = null;
@@ -258,6 +261,34 @@ export class Tabs extends Component {
     };
 
     /**
+     * Locks tabs navigation and scrolling during an active examination.
+     * @returns {void}
+     */
+    const lock = () => {
+      this.isLocked = true;
+      if (typeof document !== "undefined") {
+        const rootTabsElement = document.querySelector(".tabs");
+        if (rootTabsElement) {
+          rootTabsElement.classList.add("tabs--locked");
+        }
+      }
+    };
+
+    /**
+     * Unlocks tabs navigation and scrolling when an examination ends or is stopped.
+     * @returns {void}
+     */
+    const unlock = () => {
+      this.isLocked = false;
+      if (typeof document !== "undefined") {
+        const rootTabsElement = document.querySelector(".tabs");
+        if (rootTabsElement) {
+          rootTabsElement.classList.remove("tabs--locked");
+        }
+      }
+    };
+
+    /**
      * Attaches or moves the Stop Exam button into the currently active tab.
      * @param {(() => void)} onStopHandler - Callback invoked when the stop button is triggered.
      * @returns {void}
@@ -265,6 +296,7 @@ export class Tabs extends Component {
     const attachStopButton = (onStopHandler) => {
       this.stopButtonCallback = onStopHandler;
       renderStopButtonOnActiveTab();
+      lock();
     };
 
     /**
@@ -274,19 +306,22 @@ export class Tabs extends Component {
     const detachStopButton = () => {
       this.stopButtonCallback = null;
       removeExistingStopButton();
+      unlock();
     };
 
     this.activateTabWithAnimation = activateTabWithAnimation;
     this.activateTab = activateTab;
     this.attachStopButton = attachStopButton;
     this.detachStopButton = detachStopButton;
+    this.lock = lock;
+    this.unlock = unlock;
 
     /**
      * Navigates to next tab in carousel (wrapping around).
      * @returns {void}
      */
     const goToNextTab = () => {
-      if (this.tabList.length <= 1) {
+      if (this.isLocked || this.tabList.length <= 1) {
         return;
       }
       /** @type {number} */
@@ -299,7 +334,7 @@ export class Tabs extends Component {
      * @returns {void}
      */
     const goToPreviousTab = () => {
-      if (this.tabList.length <= 1) {
+      if (this.isLocked || this.tabList.length <= 1) {
         return;
       }
       /** @type {number} */
@@ -320,13 +355,16 @@ export class Tabs extends Component {
         tabIndex: index,
         activeTabSignal: this.activeTabSignal,
         onSelect: (selectedIndex) => {
+          if (this.isLocked) {
+            return;
+          }
           activateTabWithAnimation(selectedIndex);
         }
       });
     });
 
     this.template = html`
-      <nav class="tabs ${isCarousel ? "tabs--carousel" : ""}" aria-label="Quiz Groups Navigation">
+      <nav class="tabs ${isCarousel ? "tabs--carousel" : ""} ${this.isLocked ? "tabs--locked" : ""}" aria-label="Quiz Groups Navigation">
         <button
           type="button"
           class="tabs__carousel-button tabs__carousel-button--previous"
@@ -409,6 +447,10 @@ export class Tabs extends Component {
             activateTabWithAnimation(newIndex, direction);
           }
         });
+      }
+
+      if (this.isLocked && containerElement) {
+        containerElement.classList.add("tabs--locked");
       }
 
       if (this.stopButtonCallback) {
