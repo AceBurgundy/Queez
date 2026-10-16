@@ -14,7 +14,10 @@
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-full);
   gap: 0.25rem;
-  transition: max-width 0.3s cubic-bezier(0.2, 0, 0, 1), margin-right 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transition: width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              max-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              padding 0.35s cubic-bezier(0.2, 0, 0, 1),
+              margin-right 0.35s cubic-bezier(0.2, 0, 0, 1);
   box-sizing: border-box;
 }
 
@@ -56,7 +59,15 @@
   box-shadow: none !important;
   border: none !important;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              min-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              max-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              opacity 0.25s ease,
+              transform 0.35s cubic-bezier(0.2, 0, 0, 1),
+              margin 0.35s cubic-bezier(0.2, 0, 0, 1),
+              padding 0.35s cubic-bezier(0.2, 0, 0, 1),
+              background-color 0.2s ease,
+              color 0.2s ease;
   user-select: none;
   box-sizing: border-box;
   padding: 0;
@@ -96,6 +107,10 @@
   margin: 0 !important;
   padding: 0 !important;
   border-radius: var(--md-sys-shape-corner-full);
+  transition: width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              flex 0.35s cubic-bezier(0.2, 0, 0, 1),
+              max-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+              padding 0.35s cubic-bezier(0.2, 0, 0, 1);
   box-sizing: border-box;
   border: none !important;
   touch-action: none !important;
@@ -137,7 +152,15 @@
     box-shadow: none !important;
     border: none !important;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: width 0.35s cubic-bezier(0.2, 0, 0, 1),
+                min-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+                max-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+                opacity 0.25s ease,
+                transform 0.35s cubic-bezier(0.2, 0, 0, 1),
+                margin 0.35s cubic-bezier(0.2, 0, 0, 1),
+                padding 0.35s cubic-bezier(0.2, 0, 0, 1),
+                background-color 0.2s ease,
+                color 0.2s ease;
     user-select: none;
     box-sizing: border-box;
     padding: 0;
@@ -177,6 +200,10 @@
     margin: 0 !important;
     padding: 0 !important;
     border-radius: var(--md-sys-shape-corner-full);
+    transition: width 0.35s cubic-bezier(0.2, 0, 0, 1),
+                flex 0.35s cubic-bezier(0.2, 0, 0, 1),
+                max-width 0.35s cubic-bezier(0.2, 0, 0, 1),
+                padding 0.35s cubic-bezier(0.2, 0, 0, 1);
     box-sizing: border-box;
     border: none !important;
     touch-action: none !important;
@@ -189,27 +216,47 @@
    Exam Locked State: Suppress tabs scrolling & navigation during active exam
    ========================================================================== */
 .tabs.tabs--locked .tabs__carousel-button {
-  visibility: hidden !important;
-  pointer-events: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
   opacity: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  transform: scale(0.6) !important;
+  visibility: hidden;
 }
 
 .tabs.tabs--locked,
 .tabs--carousel.tabs--locked,
+.tabs:has(#buttonStopExamTrack),
 .tabs:has(#buttonStopExamTab) {
   overflow: visible !important;
 }
 
 .tabs.tabs--locked .tabs__track,
 .tabs--carousel.tabs--locked .tabs__track,
+.tabs:has(#buttonStopExamTrack) .tabs__track,
 .tabs:has(#buttonStopExamTab) .tabs__track,
+.tabs__track:has(#buttonStopExamTrack),
 .tabs__track:has(#buttonStopExamTab) {
+  width: 100% !important;
+  flex: 1 1 100% !important;
   overflow: visible !important;
   overflow-x: visible !important;
   overflow-y: visible !important;
   touch-action: none !important;
   user-select: none !important;
   -webkit-user-select: none !important;
+}
+
+/* Ensure track reserves space on the right for the stop exam button */
+.tabs.tabs--locked .tabs__track,
+.tabs__track:has(#buttonStopExamTrack),
+.tabs__track:has(#buttonStopExamTab) {
+  padding-right: 3.75rem !important;
 }
 
 .tabs.tabs--locked .tabs__item:not(.tabs__item--active) {
@@ -219,12 +266,15 @@
 }
 
 .tabs.tabs--locked .tabs__item--active,
+.tabs__item--active:has(#buttonStopExamTrack),
 .tabs__item--active:has(#buttonStopExamTab) {
   overflow: visible !important;
   cursor: default !important;
 }
 
-.tabs.tabs--locked .tabs__item--active #buttonStopExamTab,
+.tabs.tabs--locked #buttonStopExamTrack,
+.tabs.tabs--locked #buttonStopExamTab,
+#buttonStopExamTrack,
 #buttonStopExamTab {
   border-radius: var(--md-sys-shape-corner-full) !important;
   pointer-events: auto !important;

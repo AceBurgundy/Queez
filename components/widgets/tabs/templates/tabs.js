@@ -153,7 +153,7 @@ export class Tabs extends Component {
             }
           }
           if (this.stopButtonCallback) {
-            renderStopButtonOnActiveTab();
+            renderStopButtonOnTrack();
           }
         }
       }
@@ -195,27 +195,26 @@ export class Tabs extends Component {
     };
 
     /**
-     * Internal helper to render the stop button at the flex-end of the active tab item.
+     * Internal helper to render the stop button inside the tabs track container.
      * @returns {void}
      */
-    const renderStopButtonOnActiveTab = () => {
+    const renderStopButtonOnTrack = () => {
       if (typeof document === "undefined" || !this.stopButtonCallback) {
         return;
       }
       removeExistingStopButton();
 
       /** @type {HTMLElement|null} */
-      const activeTabElement = document.querySelector(".tabs__track .tabs__item--active");
-      if (!activeTabElement) {
+      const trackElement = document.querySelector(".tabs__track");
+      if (!trackElement) {
         return;
       }
 
-      /** @type {HTMLElement} */
-      const stopButtonElement = document.createElement("span");
-      stopButtonElement.id = "buttonStopExamTab";
-      stopButtonElement.setAttribute("role", "button");
-      stopButtonElement.tabIndex = 0;
-      stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
+      /** @type {HTMLButtonElement} */
+      const stopButtonElement = document.createElement("button");
+      stopButtonElement.type = "button";
+      stopButtonElement.id = "buttonStopExamTrack";
+      stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--track";
       stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
       stopButtonElement.setAttribute("aria-label", "Stop Examination");
       stopButtonElement.setAttribute("title", "Stop Examination");
@@ -257,7 +256,7 @@ export class Tabs extends Component {
         }
       });
 
-      activeTabElement.appendChild(stopButtonElement);
+      trackElement.appendChild(stopButtonElement);
     };
 
     /**
@@ -289,18 +288,18 @@ export class Tabs extends Component {
     };
 
     /**
-     * Attaches or moves the Stop Exam button into the currently active tab.
+     * Attaches or moves the Stop Exam button into the tabs track.
      * @param {(() => void)} onStopHandler - Callback invoked when the stop button is triggered.
      * @returns {void}
      */
     const attachStopButton = (onStopHandler) => {
       this.stopButtonCallback = onStopHandler;
-      renderStopButtonOnActiveTab();
+      renderStopButtonOnTrack();
       lock();
     };
 
     /**
-     * Detaches and removes the Stop Exam button from the active tab.
+     * Detaches and removes the Stop Exam button from the tabs track.
      * @returns {void}
      */
     const detachStopButton = () => {
@@ -454,7 +453,7 @@ export class Tabs extends Component {
       }
 
       if (this.stopButtonCallback) {
-        renderStopButtonOnActiveTab();
+        renderStopButtonOnTrack();
       }
     };
   }

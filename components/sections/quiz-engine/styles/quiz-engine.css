@@ -12,10 +12,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--md-sys-color-surface-container-low);
-  border: 1px solid var(--md-sys-color-outline-variant);
-  border-radius: var(--md-sys-shape-corner-large);
-  padding: 0.875rem 1.5rem;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
   box-sizing: border-box;
 }
 
@@ -108,6 +108,7 @@
   transform: scale(0.94);
 }
 
+.quiz-engine__stop-button--track,
 .quiz-engine__stop-button--tab {
   position: absolute;
   right: 0.5rem;
@@ -134,6 +135,7 @@
               box-shadow 0.2s ease;
 }
 
+.quiz-engine__stop-button--track:hover,
 .quiz-engine__stop-button--tab:hover {
   background-color: var(--md-sys-color-error);
   color: var(--md-sys-color-on-error);
@@ -141,11 +143,13 @@
   box-shadow: 0 4px 12px rgba(186, 26, 26, 0.32) !important;
 }
 
+.quiz-engine__stop-button--track:active,
 .quiz-engine__stop-button--tab:active {
   transform: translateY(-50%) scale(0.94);
 }
 
 /* Tooltip floating above active tab stop button */
+.quiz-engine__stop-button--track[data-tooltip]::after,
 .quiz-engine__stop-button--tab[data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
@@ -169,6 +173,7 @@
   z-index: 10000 !important;
 }
 
+.quiz-engine__stop-button--track[data-tooltip]:hover::after,
 .quiz-engine__stop-button--tab[data-tooltip]:hover::after {
   opacity: 1;
   visibility: visible;
@@ -179,11 +184,17 @@
 .tabs.tabs--locked,
 .tabs.tabs--locked .tabs__track,
 .tabs--carousel.tabs--locked .tabs__track,
+.tabs:has(#buttonStopExamTrack),
 .tabs:has(#buttonStopExamTab),
+.tabs:has(.quiz-engine__stop-button--track),
 .tabs:has(.quiz-engine__stop-button--tab),
+.tabs__track:has(#buttonStopExamTrack),
 .tabs__track:has(#buttonStopExamTab),
+.tabs__track:has(.quiz-engine__stop-button--track),
 .tabs__track:has(.quiz-engine__stop-button--tab),
+.tabs__item--active:has(#buttonStopExamTrack),
 .tabs__item--active:has(#buttonStopExamTab),
+.tabs__item--active:has(.quiz-engine__stop-button--track),
 .tabs__item--active:has(.quiz-engine__stop-button--tab) {
   overflow: visible !important;
   overflow-x: visible !important;

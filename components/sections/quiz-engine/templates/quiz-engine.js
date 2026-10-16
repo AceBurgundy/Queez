@@ -422,14 +422,13 @@ export class QuizEngine extends Component {
       }
 
       /** @type {HTMLElement|null} */
-      const activeTabElement = document.querySelector(".tabs__track .tabs__item--active");
-      if (activeTabElement && !activeTabElement.querySelector("#buttonStopExamTab")) {
-        /** @type {HTMLElement} */
-        const stopButtonElement = document.createElement("span");
-        stopButtonElement.id = "buttonStopExamTab";
-        stopButtonElement.setAttribute("role", "button");
-        stopButtonElement.tabIndex = 0;
-        stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--tab";
+      const trackElement = document.querySelector(".tabs__track");
+      if (trackElement && !trackElement.querySelector("#buttonStopExamTrack")) {
+        /** @type {HTMLButtonElement} */
+        const stopButtonElement = document.createElement("button");
+        stopButtonElement.type = "button";
+        stopButtonElement.id = "buttonStopExamTrack";
+        stopButtonElement.className = "bright-squircle quiz-engine__stop-button quiz-engine__stop-button--track";
         stopButtonElement.setAttribute("data-tooltip", "Stop Examination");
         stopButtonElement.setAttribute("aria-label", "Stop Examination");
         stopButtonElement.setAttribute("title", "Stop Examination");
@@ -463,7 +462,7 @@ export class QuizEngine extends Component {
             handleStopExam();
           }
         };
-        activeTabElement.appendChild(stopButtonElement);
+        trackElement.appendChild(stopButtonElement);
       }
     };
 
