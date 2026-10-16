@@ -197,7 +197,7 @@ export class QuestionCard extends Component {
           data-question-number="${String(this.number)}"
         >
           <div class="question-card__reorder-instruction">
-            <span class="google-symbols notranslate">swap_vert</span>
+            <span class="google-symbols notranslate">info</span>
             <span>Drag items or use the arrows to arrange them in order matching circles 1 to ${String(totalCardCount)} in the diagram.</span>
           </div>
           <div class="question-card__reorder-list">

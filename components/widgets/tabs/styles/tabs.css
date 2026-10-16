@@ -194,8 +194,19 @@
   opacity: 0 !important;
 }
 
-.tabs.tabs--locked .tabs__track {
-  overflow-x: hidden !important;
+.tabs.tabs--locked,
+.tabs--carousel.tabs--locked,
+.tabs:has(#buttonStopExamTab) {
+  overflow: visible !important;
+}
+
+.tabs.tabs--locked .tabs__track,
+.tabs--carousel.tabs--locked .tabs__track,
+.tabs:has(#buttonStopExamTab) .tabs__track,
+.tabs__track:has(#buttonStopExamTab) {
+  overflow: visible !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
   touch-action: none !important;
   user-select: none !important;
   -webkit-user-select: none !important;
@@ -207,11 +218,15 @@
   opacity: 0.45;
 }
 
-.tabs.tabs--locked .tabs__item--active {
+.tabs.tabs--locked .tabs__item--active,
+.tabs__item--active:has(#buttonStopExamTab) {
+  overflow: visible !important;
   cursor: default !important;
 }
 
-.tabs.tabs--locked .tabs__item--active #buttonStopExamTab {
+.tabs.tabs--locked .tabs__item--active #buttonStopExamTab,
+#buttonStopExamTab {
+  border-radius: var(--md-sys-shape-corner-full) !important;
   pointer-events: auto !important;
   cursor: pointer !important;
 }

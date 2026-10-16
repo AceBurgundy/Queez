@@ -346,11 +346,16 @@
   gap: 0.5rem;
   font-family: var(--md-sys-typescale-font-body);
   font-size: 0.875rem;
-  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
   background-color: var(--md-sys-color-surface-container);
   border-radius: var(--md-sys-shape-corner-small);
   padding: 0.5rem 0.75rem;
-  border-left: 3px solid var(--md-sys-color-primary);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .question-card__reorder-instruction {
+  color: #ffffff;
 }
 
 .question-card__reorder-instruction .google-symbols {
@@ -494,5 +499,17 @@
 
   .question-card__options-list--visual {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* PC / Desktop: Larger diagram presentation for comfortable visual inspection */
+@media (min-width: 769px) {
+  .question-card__image-container {
+    margin: 0.75rem 0 0.5rem 3.25rem;
+  }
+
+  .question-card__image {
+    max-height: 38rem;
+    width: auto;
   }
 }
