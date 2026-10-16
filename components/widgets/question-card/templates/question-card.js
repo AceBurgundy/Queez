@@ -148,9 +148,6 @@ export class QuestionCard extends Component {
         const isLast = cardIndex === totalCardCount - 1;
         /** @type {string} */
         const cardTitle = card.text || card.answer || "";
-        /** @type {string} */
-        const slotNumber = String(cardIndex + 1);
-
         return html`
           <div
             class="question-card__reorder-card"
@@ -158,12 +155,11 @@ export class QuestionCard extends Component {
             data-reorder-card="true"
             data-card-id="${String(card.id)}"
             data-card-index="${String(cardIndex)}"
-            aria-label="${`Position ${slotNumber}: ${cardTitle}`}"
+            aria-label="${cardTitle}"
           >
             <div class="question-card__reorder-drag-handle" aria-hidden="true" title="Drag to reorder">
               <span class="google-symbols notranslate">drag_indicator</span>
             </div>
-            <div class="question-card__reorder-slot-badge">#${slotNumber}</div>
             <div class="question-card__reorder-card-text">${cardTitle}</div>
             <div class="question-card__reorder-card-actions">
               <button

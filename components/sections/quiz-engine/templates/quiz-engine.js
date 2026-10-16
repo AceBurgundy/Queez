@@ -852,7 +852,7 @@ export class QuizEngine extends Component {
 
       // Reorder cards state synchronization helper
       /**
-       * Updates the numbered badges, index attributes, and button disabled states in a reorder list.
+       * Updates index attributes, button disabled states, and persists state in a reorder list.
        * @param {HTMLElement} listContainer
        * @param {number} questionNumber
        */
@@ -865,15 +865,7 @@ export class QuizEngine extends Component {
         const updatedCardIds = [];
 
         cardElements.forEach((cardElement, cardIndex) => {
-          /** @type {string} */
-          const slotNumber = String(cardIndex + 1);
           cardElement.dataset.cardIndex = String(cardIndex);
-
-          /** @type {HTMLElement|null} */
-          const badgeElement = cardElement.querySelector(".question-card__reorder-slot-badge");
-          if (badgeElement) {
-            badgeElement.textContent = `#${slotNumber}`;
-          }
 
           /** @type {HTMLElement|null} */
           const upButton = cardElement.querySelector('[data-action="move-up"]');
@@ -903,6 +895,75 @@ export class QuizEngine extends Component {
         }
       };
 
+      /**
+       * Smoothly animates the swap of two adjacent cards using FLIP (First, Last, Invert, Play).
+       * @param {HTMLElement} listContainer
+       * @param {HTMLElement} activeCard
+       * @param {HTMLElement} targetCard
+       * @param {function(): void} onComplete
+       */
+      const animateCardSwap = (listContainer, activeCard, targetCard, onComplete) => {
+        const firstActiveTop = activeCard.getBoundingClientRect().top;
+        const firstTargetTop = targetCard.getBoundingClientRect().top;
+
+        // Perform DOM swap
+        if (activeCard.nextElementSibling === targetCard) {
+          listContainer.insertBefore(targetCard, activeCard);
+        } else {
+          listContainer.insertBefore(activeCard, targetCard);
+        }
+
+        const lastActiveTop = activeCard.getBoundingClientRect().top;
+        const lastTargetTop = targetCard.getBoundingClientRect().top;
+
+        const deltaActive = firstActiveTop - lastActiveTop;
+        const deltaTarget = firstTargetTop - lastTargetTop;
+
+        // Invert
+        activeCard.style.transition = "none";
+        activeCard.style.transform = `translateY(${deltaActive}px)`;
+        activeCard.classList.add("is-animating", "is-swapped");
+
+        targetCard.style.transition = "none";
+        targetCard.style.transform = `translateY(${deltaTarget}px)`;
+        targetCard.classList.add("is-animating");
+
+        // Force reflow
+        activeCard.offsetHeight;
+
+        // Play
+        requestAnimationFrame(() => {
+          const transitionStyle = "transform 0.25s cubic-bezier(0.2, 0, 0, 1), background-color 0.25s ease, box-shadow 0.25s ease";
+          activeCard.style.transition = transitionStyle;
+          activeCard.style.transform = "";
+
+          targetCard.style.transition = transitionStyle;
+          targetCard.style.transform = "";
+
+          let cleanedUp = false;
+          const cleanup = () => {
+            if (cleanedUp) return;
+            cleanedUp = true;
+            activeCard.style.transition = "";
+            activeCard.style.transform = "";
+            activeCard.classList.remove("is-animating", "is-swapped");
+
+            targetCard.style.transition = "";
+            targetCard.style.transform = "";
+            targetCard.classList.remove("is-animating");
+
+            activeCard.removeEventListener("transitionend", cleanup);
+          };
+
+          activeCard.addEventListener("transitionend", cleanup);
+          setTimeout(cleanup, 280);
+        });
+
+        if (typeof onComplete === "function") {
+          onComplete();
+        }
+      };
+
       // Seed initial reorder answers if not yet present in session
       rootElement.querySelectorAll(".question-card__reorder-list").forEach((listContainer) => {
         /** @type {HTMLElement|null} */
@@ -925,9 +986,13 @@ export class QuizEngine extends Component {
       rootElement.querySelectorAll(".question-card__reorder-action-button").forEach((actionButtonElement) => {
         /** @type {HTMLElement} */
         const actionButton = /** @type {HTMLElement} */ (actionButtonElement);
+        actionButton.onpointerdown = (pointerEvent) => pointerEvent.stopPropagation();
+        actionButton.onmousedown = (mouseEvent) => mouseEvent.stopPropagation();
+
         /** @param {MouseEvent} clickEvent */
         actionButton.onclick = (clickEvent) => {
           clickEvent.preventDefault();
+          clickEvent.stopPropagation();
           if (actionButton.dataset.disabled === "true") return;
 
           /** @type {HTMLElement|null} */
@@ -947,80 +1012,113 @@ export class QuizEngine extends Component {
             /** @type {Element|null} */
             const previousElement = cardElement.previousElementSibling;
             if (previousElement) {
-              listContainer.insertBefore(cardElement, previousElement);
-              syncReorderCardStates(listContainer, questionNumber);
+              animateCardSwap(listContainer, cardElement, /** @type {HTMLElement} */ (previousElement), () => {
+                syncReorderCardStates(listContainer, questionNumber);
+              });
             }
           } else if (actionType === "move-down") {
             /** @type {Element|null} */
             const nextElement = cardElement.nextElementSibling;
             if (nextElement) {
-              listContainer.insertBefore(nextElement, cardElement);
-              syncReorderCardStates(listContainer, questionNumber);
+              animateCardSwap(listContainer, cardElement, /** @type {HTMLElement} */ (nextElement), () => {
+                syncReorderCardStates(listContainer, questionNumber);
+              });
             }
           }
         };
       });
 
+      /**
+       * Determines which child card comes after the cursor Y coordinate.
+       * @param {HTMLElement} container
+       * @param {number} y
+       * @returns {HTMLElement|null}
+       */
+      const getDragAfterElement = (container, y) => {
+        /** @type {Array<HTMLElement>} */
+        const draggableCards = Array.from(
+          container.querySelectorAll(".question-card__reorder-card:not(.is-dragging)")
+        );
+
+        let closestOffset = Number.NEGATIVE_INFINITY;
+        /** @type {HTMLElement|null} */
+        let closestElement = null;
+
+        draggableCards.forEach((child) => {
+          const box = child.getBoundingClientRect();
+          const offset = y - box.top - box.height / 2;
+          if (offset < 0 && offset > closestOffset) {
+            closestOffset = offset;
+            closestElement = child;
+          }
+        });
+
+        return closestElement;
+      };
+
       // Reorder cards HTML5 drag-and-drop delegation
       /** @type {HTMLElement|null} */
       let draggedElement = null;
 
-      rootElement.querySelectorAll(".question-card__reorder-card").forEach((cardElement) => {
-        /** @param {DragEvent} dragEvent */
-        cardElement.ondragstart = (dragEvent) => {
-          draggedElement = cardElement;
-          cardElement.classList.add("is-dragging");
-          if (dragEvent.dataTransfer) {
-            dragEvent.dataTransfer.effectAllowed = "move";
-            dragEvent.dataTransfer.setData("text/plain", cardElement.dataset.cardId || "");
-          }
-        };
+      rootElement.querySelectorAll(".question-card__reorder-list").forEach((listContainerElement) => {
+        /** @type {HTMLElement} */
+        const listContainer = /** @type {HTMLElement} */ (listContainerElement);
+        /** @type {HTMLElement|null} */
+        const questionContainer = listContainer.closest(".question-card");
+        /** @type {number} */
+        const questionNumber = parseInt(questionContainer?.dataset.questionNumber || "0", 10);
 
-        /** @param {DragEvent} dragEvent */
-        cardElement.ondragover = (dragEvent) => {
+        listContainer.ondragover = (dragEvent) => {
           dragEvent.preventDefault();
-          if (!draggedElement || draggedElement === cardElement) return;
+          if (!draggedElement) return;
           if (dragEvent.dataTransfer) {
             dragEvent.dataTransfer.dropEffect = "move";
           }
-          cardElement.classList.add("drag-over");
-        };
 
-        cardElement.ondragleave = () => {
-          cardElement.classList.remove("drag-over");
-        };
-
-        /** @param {DragEvent} dragEvent */
-        cardElement.ondrop = (dragEvent) => {
-          dragEvent.preventDefault();
-          cardElement.classList.remove("drag-over");
-          if (!draggedElement || draggedElement === cardElement) return;
-
-          /** @type {HTMLElement|null} */
-          const listContainer = cardElement.closest(".question-card__reorder-list");
-          /** @type {HTMLElement|null} */
-          const questionContainer = cardElement.closest(".question-card");
-          if (!listContainer || !questionContainer) return;
-
-          /** @type {number} */
-          const questionNumber = parseInt(questionContainer.dataset.questionNumber || "0", 10);
-          const boundingRectangle = cardElement.getBoundingClientRect();
-          const dropMiddleY = boundingRectangle.top + boundingRectangle.height / 2;
-
-          if (dragEvent.clientY < dropMiddleY) {
-            listContainer.insertBefore(draggedElement, cardElement);
-          } else {
-            listContainer.insertBefore(draggedElement, cardElement.nextElementSibling);
+          const afterElement = getDragAfterElement(listContainer, dragEvent.clientY);
+          if (!afterElement) {
+            listContainer.appendChild(draggedElement);
+          } else if (afterElement !== draggedElement) {
+            listContainer.insertBefore(draggedElement, afterElement);
           }
-          syncReorderCardStates(listContainer, questionNumber);
         };
 
-        cardElement.ondragend = () => {
-          cardElement.classList.remove("is-dragging");
-          rootElement.querySelectorAll(".question-card__reorder-card").forEach((item) => {
-            item.classList.remove("drag-over");
-          });
+        listContainer.ondrop = (dragEvent) => {
+          dragEvent.preventDefault();
+          if (draggedElement) {
+            draggedElement.classList.remove("is-dragging");
+            draggedElement = null;
+          }
+          if (questionNumber) {
+            syncReorderCardStates(listContainer, questionNumber);
+          }
+        };
+      });
+
+      rootElement.querySelectorAll(".question-card__reorder-card").forEach((cardElement) => {
+        /** @type {HTMLElement} */
+        const card = /** @type {HTMLElement} */ (cardElement);
+
+        card.ondragstart = (dragEvent) => {
+          draggedElement = card;
+          card.classList.add("is-dragging");
+          if (dragEvent.dataTransfer) {
+            dragEvent.dataTransfer.effectAllowed = "move";
+            dragEvent.dataTransfer.setData("text/plain", card.dataset.cardId || "");
+          }
+        };
+
+        card.ondragend = () => {
+          card.classList.remove("is-dragging");
           draggedElement = null;
+          /** @type {HTMLElement|null} */
+          const listContainer = card.closest(".question-card__reorder-list");
+          /** @type {HTMLElement|null} */
+          const questionContainer = card.closest(".question-card");
+          const questionNumber = parseInt(questionContainer?.dataset.questionNumber || "0", 10);
+          if (listContainer && questionNumber) {
+            syncReorderCardStates(listContainer, questionNumber);
+          }
         };
       });
 

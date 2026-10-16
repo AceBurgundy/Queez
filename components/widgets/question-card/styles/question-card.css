@@ -415,19 +415,14 @@
   font-size: 1.25rem;
 }
 
-.question-card__reorder-slot-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 2rem;
-  height: 2rem;
-  border-radius: var(--md-sys-shape-corner-full);
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  font-family: var(--md-sys-typescale-font-label);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  flex-shrink: 0;
+.question-card__reorder-card.is-animating {
+  z-index: 2;
+  box-shadow: var(--md-sys-elevation-2);
+}
+
+.question-card__reorder-card.is-swapped {
+  background-color: var(--md-sys-color-primary-container);
+  border-color: var(--md-sys-color-primary);
 }
 
 .question-card__reorder-card-text {
