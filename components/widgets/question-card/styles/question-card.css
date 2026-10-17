@@ -425,9 +425,20 @@
   box-shadow: var(--md-sys-elevation-2);
 }
 
-.question-card__reorder-card.is-swapped {
-  background-color: var(--md-sys-color-primary-container);
-  border-color: var(--md-sys-color-primary);
+.question-card__reorder-step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  background-color: var(--md-sys-color-surface-container-highest);
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  font-family: var(--md-sys-typescale-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .question-card__reorder-card-text {

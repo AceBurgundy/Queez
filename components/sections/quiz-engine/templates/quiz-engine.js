@@ -851,7 +851,7 @@ export class QuizEngine extends Component {
 
       // Reorder cards state synchronization helper
       /**
-       * Updates index attributes, button disabled states, and persists state in a reorder list.
+       * Updates step number badges, index attributes, button disabled states, and persists state in a reorder list.
        * @param {HTMLElement} listContainer
        * @param {number} questionNumber
        */
@@ -867,9 +867,19 @@ export class QuizEngine extends Component {
           cardElement.dataset.cardIndex = String(cardIndex);
 
           /** @type {HTMLElement|null} */
+          const stepBadgeElement = cardElement.querySelector(".question-card__reorder-step-badge");
+          if (stepBadgeElement) {
+            /** @type {string} */
+            const stepNumberText = String(cardIndex + 1);
+            stepBadgeElement.textContent = stepNumberText;
+            stepBadgeElement.setAttribute("aria-label", `Step ${stepNumberText}`);
+          }
+
+          /** @type {HTMLElement|null} */
           const upButton = cardElement.querySelector('[data-action="move-up"]');
           if (upButton) {
             const isFirst = cardIndex === 0;
+            upButton.dataset.cardIndex = String(cardIndex);
             upButton.dataset.disabled = isFirst ? "true" : "false";
             upButton.classList.toggle("question-card__reorder-action-button--disabled", isFirst);
           }
@@ -878,6 +888,7 @@ export class QuizEngine extends Component {
           const downButton = cardElement.querySelector('[data-action="move-down"]');
           if (downButton) {
             const isLast = cardIndex === totalCardCount - 1;
+            downButton.dataset.cardIndex = String(cardIndex);
             downButton.dataset.disabled = isLast ? "true" : "false";
             downButton.classList.toggle("question-card__reorder-action-button--disabled", isLast);
           }
@@ -1080,6 +1091,17 @@ export class QuizEngine extends Component {
           } else if (afterElement !== draggedElement) {
             listContainer.insertBefore(draggedElement, afterElement);
           }
+
+          listContainer.querySelectorAll(".question-card__reorder-card").forEach((cardElement, cardIndex) => {
+            /** @type {HTMLElement|null} */
+            const stepBadgeElement = cardElement.querySelector(".question-card__reorder-step-badge");
+            if (stepBadgeElement) {
+              /** @type {string} */
+              const stepNumberText = String(cardIndex + 1);
+              stepBadgeElement.textContent = stepNumberText;
+              stepBadgeElement.setAttribute("aria-label", `Step ${stepNumberText}`);
+            }
+          });
         };
 
         listContainer.ondrop = (dragEvent) => {

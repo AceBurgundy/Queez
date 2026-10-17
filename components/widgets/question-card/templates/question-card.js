@@ -160,6 +160,7 @@ export class QuestionCard extends Component {
             <div class="question-card__reorder-drag-handle" aria-hidden="true" title="Drag to reorder">
               <span class="google-symbols notranslate">drag_indicator</span>
             </div>
+            <span class="question-card__reorder-step-badge" aria-label="${`Step ${String(cardIndex + 1)}`}">${String(cardIndex + 1)}</span>
             <div class="question-card__reorder-card-text">${cardTitle}</div>
             <div class="question-card__reorder-card-actions">
               <button
@@ -189,6 +190,11 @@ export class QuestionCard extends Component {
         `;
       });
 
+      /** @type {string} */
+      const reorderInstructionText = this.image
+        ? `Drag items or use the arrows to arrange them in order matching circles 1 to ${String(totalCardCount)} in the diagram.`
+        : `Drag items or use the arrows to arrange the steps in the correct sequence from Step 1 to Step ${String(totalCardCount)}.`;
+
       bodyTemplate = html`
         <div
           class="question-card__reorder-container"
@@ -198,7 +204,7 @@ export class QuestionCard extends Component {
         >
           <div class="question-card__reorder-instruction">
             <span class="google-symbols notranslate">info</span>
-            <span>Drag items or use the arrows to arrange them in order matching circles 1 to ${String(totalCardCount)} in the diagram.</span>
+            <span>${reorderInstructionText}</span>
           </div>
           <div class="question-card__reorder-list">
             ${renderedCards}

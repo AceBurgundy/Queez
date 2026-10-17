@@ -72,11 +72,16 @@ export function registerQuestionsAndSanitize(quizId, rawQuestions = []) {
       /** @type {Record<number, { id: number, text: string, answer: string, accepted_answers: Array<string> }>} */
       const reorderSolutions = {};
       questionItem.items.forEach((subItem, itemIndex) => {
+        /** @type {string} */
+        const canonicalStepText = String(subItem.answer || subItem.text || "").trim();
         reorderSolutions[itemIndex + 1] = {
           id: subItem.id,
           text: String(subItem.text || subItem.answer || "").trim(),
-          answer: String(subItem.answer || "").trim(),
-          accepted_answers: Array.isArray(subItem.accepted_answers) ? subItem.accepted_answers : [String(subItem.answer || "").trim()]
+          answer: canonicalStepText,
+          accepted_answers:
+            Array.isArray(subItem.accepted_answers) && subItem.accepted_answers.length > 0
+              ? subItem.accepted_answers
+              : [canonicalStepText]
         };
       });
       solutionRegistry.set(`${quizId}::${questionNumber}`, {
@@ -97,7 +102,12 @@ export function registerQuestionsAndSanitize(quizId, rawQuestions = []) {
     const { answer, accepted_answers, ...sanitized } = questionItem;
     if (sanitized.items && Array.isArray(sanitized.items)) {
       sanitized.items = sanitized.items.map((subItem) => {
-        const { answer: subAnswer, accepted_answers: subAccepted, ...sanitizedSubItem } = subItem;
+        const {
+          answer: subAnswer,
+          accepted_answers: subAccepted,
+          correct_position: subCorrectPosition,
+          ...sanitizedSubItem
+        } = subItem;
         return sanitizedSubItem;
       });
     }

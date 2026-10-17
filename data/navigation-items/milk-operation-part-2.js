@@ -6,26 +6,30 @@ window.DOCUMENTATION_ITEMS = window.DOCUMENTATION_ITEMS || {};
 window.DOCUMENTATION_ITEMS["data/navigation-items/milk-operation-part-2.js"] = {
   "id": "milk-operation-part-2",
   "quiz_id": "milk-operation-part-2",
-  "item_title": "Milk Operation & Farm Management (Part 2)",
+  "item_title": "Milk Operation & Farm Management (Upcoming Exam)",
   "icon_name": "agriculture",
   "data_path": "data/milk-operation-part-2-quiz/data.json",
   "header_container": {
-    "title": "Milk Operation and Farm Management (Part 2)",
-    "description": "Comprehensive Part 2 Review covering Agricultural Tools & Equipment, Cattle Physiology & Feed Nutrition, Interactive Anatomical & Milking Machine Diagrams, and Dairy Square Daily Routine Resequencing.",
+    "title": "Milk Operation and Farm Management (Upcoming Exam)",
+    "description": "Comprehensive Upcoming Exam Review covering Dairy Cattle Breeds, Ruminant Digestion Stages, Basic Feed Nutrients, Silage Preparation, Farm Tools, Cattle Anatomy, Portable Milking Equipment, Cattle Diseases, and Dairy Terminology.",
     "badge_list": [
       { "icon_name": "school", "badge_label": "Dairy Science" },
-      { "icon_name": "verified", "badge_label": "89 Total Points" },
-      { "icon_name": "photo_library", "badge_label": "Interactive Diagrams" },
-      { "icon_name": "swap_vert", "badge_label": "Routine Resequencing" }
+      { "icon_name": "verified", "badge_label": "142 Total Points" },
+      { "icon_name": "swap_vert", "badge_label": "Draggable Step Cards" },
+      { "icon_name": "photo_library", "badge_label": "Interactive Diagrams" }
     ],
     "banner_image": { "shrink": false },
     "mockup_card": { "shrink": false }
   },
   "tab_list": [
-    { "section_id": "tools-equipment", "icon_name": "build" },
-    { "section_id": "physiology-nutrition", "icon_name": "pets" },
-    { "section_id": "anatomical-mechanical-diagrams", "icon_name": "architecture" },
-    { "section_id": "daily-routine-time-quiz", "icon_name": "schedule" },
-    { "section_id": "daily-routine-activity-quiz", "icon_name": "event_repeat" }
+    { "section_id": "dairy-cattle-breeds", "icon_name": "pets" },
+    { "section_id": "ruminant-digestion-process", "icon_name": "vital_signs" },
+    { "section_id": "basic-feed-nutrients", "icon_name": "nutrition" },
+    { "section_id": "silage-making", "icon_name": "grass" },
+    { "section_id": "farm-tools", "icon_name": "construction" },
+    { "section_id": "body-parts-of-cattle", "icon_name": "accessibility_new" },
+    { "section_id": "portable-milking-machine-parts", "icon_name": "precision_manufacturing" },
+    { "section_id": "common-cattle-diseases", "icon_name": "medical_services" },
+    { "section_id": "definition-of-terms", "icon_name": "menu_book" }
   ]
 };

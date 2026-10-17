@@ -157,15 +157,19 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
       "tools-equipment": "construction",
       "physiology-nutrition": "psychology",
       "anatomical-mechanical-diagrams": "photo_library",
-      "daily-routine-time-quiz": "schedule",
-      "daily-routine-activity-quiz": "event_repeat"
+      "dairy-cattle-breeds": "pets",
+      "ruminant-digestion-process": "vital_signs",
+      "basic-feed-nutrients": "nutrition",
+      "silage-making": "grass",
+      "farm-tools": "construction",
+      "body-parts-of-cattle": "accessibility_new",
+      "portable-milking-machine-parts": "precision_manufacturing",
+      "common-cattle-diseases": "medical_services",
+      "definition-of-terms": "menu_book"
     };
 
     /** @type {string} */
-    const assignedIcon =
-      iconLookupMap.get(currentSection.id) ||
-      defaultSectionIcons[currentSection.id] ||
-      "category";
+    const assignedIcon = iconLookupMap.get(currentSection.id) || defaultSectionIcons[currentSection.id] || "category";
 
     /** @type {Map<string, Object>} */
     const resolvedContextsMap = new Map();
