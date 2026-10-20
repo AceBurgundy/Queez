@@ -1,3 +1,8 @@
+# Python
+__pycache__/
+*.py[cod]
+*.bak
+
 # Scratch test files
 scratch/
 .deep-plan/
