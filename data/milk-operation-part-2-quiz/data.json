@@ -176,6 +176,190 @@
           "answer": "B",
           "explanation": "Sahiwal cattle originate from Pakistan & India, produce 4,000 kg milk/year, and possess high parasite resistance.",
           "number": 12
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-guernsey.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Guernsey",
+          "accepted_answers": [
+            "Guernsey",
+            "Guernsey cow",
+            "Guernsey cattle"
+          ],
+          "explanation": "The photograph displays a Guernsey dairy cow, characterized by yellow to reddish-brown and white markings and high milk fat content (4.7%).",
+          "number": 13
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-dairy-shorthorn.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dual-purpose dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Dairy Shorthorn",
+          "accepted_answers": [
+            "Dairy Shorthorn",
+            "Shorthorn",
+            "Dairy Shorthorn cattle"
+          ],
+          "explanation": "The photograph displays a Dairy Shorthorn cow, originating from Great Britain with white and roan markings, used for both milk and beef.",
+          "number": 14
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-ayrshire.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Ayrshire",
+          "accepted_answers": [
+            "Ayrshire",
+            "Aryshire",
+            "Ayrshire cow",
+            "Ayrshire cattle"
+          ],
+          "explanation": "The photograph displays an Ayrshire dairy cow from County of Ayr, Scotland, featuring red and white markings and excellent udder conformation.",
+          "number": 15
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-jersey.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Jersey",
+          "accepted_answers": [
+            "Jersey",
+            "Jersey cow",
+            "Jersey cattle"
+          ],
+          "explanation": "The photograph displays a Jersey dairy cow, originating from Jersey Island, France, characterized by a light brown coat and milk best used for cheese.",
+          "number": 16
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-brown-swiss.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dual-purpose dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Brown Swiss",
+          "accepted_answers": [
+            "Brown Swiss",
+            "Brown Swiss cow",
+            "Brown Swiss cattle"
+          ],
+          "explanation": "The photograph displays a Brown Swiss cow, originating from Switzerland with brown/light gray markings, known for resisting extreme solar radiation.",
+          "number": 17
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-holstein-friesian.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Holstein Friesian",
+          "accepted_answers": [
+            "Holstein Friesian",
+            "Holstein",
+            "Friesian"
+          ],
+          "explanation": "The photograph displays a Holstein Friesian cow from the Netherlands, known for black-and-white markings and the highest annual milk yield.",
+          "number": 18
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-red-and-white-holstein.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Red & White Holstein",
+          "accepted_answers": [
+            "Red & White Holstein",
+            "Red and White Holstein",
+            "Red Holstein"
+          ],
+          "explanation": "The photograph displays a Red & White Holstein cow from the Netherlands, characterized by red and white markings, heat resistance, and a strong immune system.",
+          "number": 19
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-gyr.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the tropical zebu dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Gyr",
+          "accepted_answers": [
+            "Gyr",
+            "Gir",
+            "Gyr/Gir",
+            "Gir cattle"
+          ],
+          "explanation": "The photograph displays a Gyr (Gir) zebu dairy cow from Gujarat, India, characterized by mottled red, yellow, and white coloring, drooping ears, and a prominent hump.",
+          "number": 20
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-red-sindhi.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the tropical dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Red Sindhi",
+          "accepted_answers": [
+            "Red Sindhi",
+            "Sindhi",
+            "Red Sindhi cow",
+            "Red Sindhi cattle"
+          ],
+          "explanation": "The photograph displays a Red Sindhi zebu dairy cow from Pakistan & India, characterized by a reddish-brown to deep red coat, heat tolerance, and tick resistance.",
+          "number": 21
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-sahiwal.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the tropical dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Sahiwal",
+          "accepted_answers": [
+            "Sahiwal",
+            "Sahiwal cow",
+            "Sahiwal cattle"
+          ],
+          "explanation": "The photograph displays a Sahiwal zebu cow from Pakistan & India, characterized by a reddish-brown coat, high parasite resistance, and well-developed udder.",
+          "number": 22
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-bos-taurus.png",
+          "caption": "Cattle Species — Visual Identification",
+          "question": "Identify the temperate cattle species shown in the photograph:",
+          "options": {},
+          "answer": "Bos taurus",
+          "accepted_answers": [
+            "Bos taurus",
+            "Bostaurus",
+            "Temperate cattle"
+          ],
+          "explanation": "The photograph displays Bos taurus, characterized by being humpless, having a large head and neck, broad rump, shorter legs, and high milk production.",
+          "number": 23
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-bos-indicus.png",
+          "caption": "Cattle Species — Visual Identification",
+          "question": "Identify the tropical cattle species shown in the photograph:",
+          "options": {},
+          "answer": "Bos indicus",
+          "accepted_answers": [
+            "Bos indicus",
+            "Bosindicus",
+            "Zebu cattle",
+            "Zebu"
+          ],
+          "explanation": "The photograph displays Bos indicus, characterized by a prominent thoracic hump, long legs, sloping rump, and natural heat and parasite resistance.",
+          "number": 24
         }
       ]
     },
@@ -252,7 +436,7 @@
             }
           ],
           "explanation": "The ruminant digestive cycle proceeds from prehension/mastication to swallowing, rumen/reticulum microbial fermentation, rumination/regurgitation, omasum grinding/abomasum enzymatic digestion, and intestinal absorption.",
-          "number": 13
+          "number": 25
         },
         {
           "type": "reorder_cards",
@@ -302,7 +486,7 @@
             }
           ],
           "explanation": "Feed flows anatomically from the Rumen to the Reticulum, then into the Omasum, and finally through the Abomasum.",
-          "number": 14
+          "number": 26
         },
         {
           "original_number": 19,
@@ -316,7 +500,7 @@
             "paunch"
           ],
           "explanation": "Answer: RUMEN.",
-          "number": 15
+          "number": 27
         },
         {
           "original_number": 18,
@@ -330,7 +514,7 @@
             "honeycomb"
           ],
           "explanation": "Answer: RETICULUM.",
-          "number": 16
+          "number": 28
         },
         {
           "type": "identification",
@@ -342,7 +526,7 @@
             "Book"
           ],
           "explanation": "The omasum ('book') has multiple muscular laminae (leaves) that grind feed and extract water.",
-          "number": 17
+          "number": 29
         },
         {
           "original_number": 20,
@@ -356,7 +540,7 @@
             "true stomach"
           ],
           "explanation": "Answer: ABOMASUM.",
-          "number": 18
+          "number": 30
         },
         {
           "original_number": 17,
@@ -371,7 +555,7 @@
             "colon"
           ],
           "explanation": "Answer: LARGE INTESTINE.",
-          "number": 19
+          "number": 31
         },
         {
           "original_number": 16,
@@ -384,7 +568,7 @@
             "liver"
           ],
           "explanation": "Answer: LIVER.",
-          "number": 20
+          "number": 32
         },
         {
           "type": "multiple_choice",
@@ -397,7 +581,7 @@
           },
           "answer": "B",
           "explanation": "Proteins, fats, and carbohydrates leaving the abomasum are primarily absorbed in the small intestine.",
-          "number": 21
+          "number": 33
         },
         {
           "type": "multiple_choice",
@@ -410,7 +594,7 @@
           },
           "answer": "A",
           "explanation": "The pancreas secretes digestive enzymes and buffers into the small intestine.",
-          "number": 22
+          "number": 34
         },
         {
           "type": "multiple_choice",
@@ -423,7 +607,7 @@
           },
           "answer": "B",
           "explanation": "Ruminant saliva lacks digestive enzymes; feed is swallowed rapidly during initial eating and chewed thoroughly later during rumination.",
-          "number": 23
+          "number": 35
         },
         {
           "type": "multiple_choice",
@@ -436,7 +620,7 @@
           },
           "answer": "C",
           "explanation": "The rumen-reticulum junction prevents coarse particles from entering the omasum and assists in pushing cud back to the esophagus.",
-          "number": 24
+          "number": 36
         }
       ]
     },
@@ -458,7 +642,7 @@
             "crude protein"
           ],
           "explanation": "Answer: PROTEIN.",
-          "number": 25
+          "number": 37
         },
         {
           "original_number": 2,
@@ -472,7 +656,7 @@
             "minerals"
           ],
           "explanation": "Answer: MINERALS.",
-          "number": 26
+          "number": 38
         },
         {
           "original_number": 3,
@@ -484,7 +668,7 @@
             "WATER"
           ],
           "explanation": "Answer: WATER.",
-          "number": 27
+          "number": 39
         },
         {
           "original_number": 4,
@@ -498,7 +682,7 @@
             "vitamins"
           ],
           "explanation": "Answer: VITAMINS.",
-          "number": 28
+          "number": 40
         },
         {
           "original_number": 5,
@@ -513,7 +697,7 @@
             "lipids"
           ],
           "explanation": "Answer: FATS.",
-          "number": 29
+          "number": 41
         },
         {
           "original_number": 6,
@@ -527,7 +711,7 @@
             "carbohydrates"
           ],
           "explanation": "Answer: CARBOHYDRATE.",
-          "number": 30
+          "number": 42
         },
         {
           "original_number": 11,
@@ -542,7 +726,7 @@
             "animo acid"
           ],
           "explanation": "Answer: ANIMO ACID.",
-          "number": 31
+          "number": 43
         },
         {
           "type": "multiple_choice",
@@ -555,7 +739,7 @@
           },
           "answer": "B",
           "explanation": "Fats provide 2.25 times more energy density than carbohydrates.",
-          "number": 32
+          "number": 44
         },
         {
           "type": "multiple_choice",
@@ -568,7 +752,7 @@
           },
           "answer": "C",
           "explanation": "A lactating dairy cow requires at least 85–90 liters of water daily, provided ad libitum.",
-          "number": 33
+          "number": 45
         },
         {
           "type": "multiple_choice",
@@ -581,7 +765,7 @@
           },
           "answer": "B",
           "explanation": "Rumen microorganisms synthesize vitamins K and B-complex under normal physiological conditions.",
-          "number": 34
+          "number": 46
         },
         {
           "type": "multiple_choice",
@@ -594,7 +778,7 @@
           },
           "answer": "C",
           "explanation": "Vitamin D is essential for calcium and phosphorus regulation and can be synthesized in skin exposed to sunlight.",
-          "number": 35
+          "number": 47
         },
         {
           "type": "multiple_choice",
@@ -607,7 +791,7 @@
           },
           "answer": "A",
           "explanation": "Calcium is classified as a macro mineral, while Cobalt is classified as a micro mineral.",
-          "number": 36
+          "number": 48
         }
       ]
     },
@@ -684,7 +868,7 @@
             }
           ],
           "explanation": "Bag silage preparation involves harvesting, chopping, filling, compacting every 3 inches, airtight sealing, and careful indoor storage.",
-          "number": 37
+          "number": 49
         },
         {
           "type": "reorder_cards",
@@ -744,7 +928,7 @@
             }
           ],
           "explanation": "Bunker silage making requires harvesting, chopping, filling the bunker, thorough compaction (manual or tractor), and covering/sealing with weighted plastic sheets.",
-          "number": 38
+          "number": 50
         },
         {
           "type": "reorder_cards",
@@ -784,7 +968,7 @@
             }
           ],
           "explanation": "The hand moisture squeeze test: take a handful, squeeze into a ball, and release; forage that slowly falls apart is at the ideal 65%–75% moisture.",
-          "number": 39
+          "number": 51
         },
         {
           "type": "identification",
@@ -796,7 +980,7 @@
             "Lactic"
           ],
           "explanation": "Anaerobic bacteria convert plant sugars into lactic acid, which preserves the silage and lowers pH.",
-          "number": 40
+          "number": 52
         },
         {
           "type": "identification",
@@ -811,7 +995,7 @@
             "3/4 inch to 1 inch"
           ],
           "explanation": "Chopping forage to 3/4 to 1 inch facilitates tight compaction and optimal anaerobic fermentation.",
-          "number": 41
+          "number": 53
         },
         {
           "type": "identification",
@@ -825,7 +1009,7 @@
             "Every 3 inches"
           ],
           "explanation": "Compacting every 3 inches ensures that air pockets are completely eliminated.",
-          "number": 42
+          "number": 54
         },
         {
           "type": "multiple_choice",
@@ -838,7 +1022,7 @@
           },
           "answer": "C",
           "explanation": "Forage at 65%–75% moisture slowly falls apart upon release, indicating readiness for ensiling.",
-          "number": 43
+          "number": 55
         },
         {
           "type": "multiple_choice",
@@ -851,7 +1035,7 @@
           },
           "answer": "B",
           "explanation": "Silage is usable after 21 days, but 60 to 70 days produces optimum lactic fermentation.",
-          "number": 44
+          "number": 56
         },
         {
           "type": "multiple_choice",
@@ -864,7 +1048,7 @@
           },
           "answer": "A",
           "explanation": "Good silage is light green-yellow to green-brown, breaks slowly into two when squeezed, and has a pleasant sweet-sour aroma.",
-          "number": 45
+          "number": 57
         },
         {
           "type": "multiple_choice",
@@ -877,7 +1061,7 @@
           },
           "answer": "B",
           "explanation": "Gradual diet introduction, cleaning feed bunks, re-sealing storage faces, and repairing bag punctures prevent contamination and spoilage.",
-          "number": 46
+          "number": 58
         }
       ]
     },
@@ -898,7 +1082,7 @@
           },
           "answer": "B",
           "explanation": "The correct answer is B (Grass chopper machine).",
-          "number": 47
+          "number": 59
         },
         {
           "original_number": 2,
@@ -912,7 +1096,7 @@
           },
           "answer": "D",
           "explanation": "The correct answer is D (Portable milking machine).",
-          "number": 48
+          "number": 60
         },
         {
           "original_number": 3,
@@ -926,7 +1110,7 @@
           },
           "answer": "B",
           "explanation": "The correct answer is B (Manual manure scraper).",
-          "number": 49
+          "number": 61
         },
         {
           "original_number": 4,
@@ -940,7 +1124,7 @@
           },
           "answer": "D",
           "explanation": "The correct answer is D (Wheelbarrow).",
-          "number": 50
+          "number": 62
         },
         {
           "original_number": 5,
@@ -954,7 +1138,7 @@
           },
           "answer": "C",
           "explanation": "The correct answer is C (Fencer graft).",
-          "number": 51
+          "number": 63
         },
         {
           "original_number": 6,
@@ -968,7 +1152,7 @@
           },
           "answer": "D",
           "explanation": "The correct answer is D (Sickle).",
-          "number": 52
+          "number": 64
         },
         {
           "original_number": 7,
@@ -982,7 +1166,7 @@
           },
           "answer": "B",
           "explanation": "The correct answer is B (Rake).",
-          "number": 53
+          "number": 65
         },
         {
           "original_number": 8,
@@ -996,7 +1180,7 @@
           },
           "answer": "B",
           "explanation": "The correct answer is B (Pitchfork).",
-          "number": 54
+          "number": 66
         },
         {
           "original_number": 9,
@@ -1010,7 +1194,7 @@
           },
           "answer": "B",
           "explanation": "The correct answer is B (Spade).",
-          "number": 55
+          "number": 67
         },
         {
           "original_number": 10,
@@ -1024,7 +1208,7 @@
           },
           "answer": "B",
           "explanation": "The correct answer is B (Shovel).",
-          "number": 56
+          "number": 68
         }
       ]
     },
@@ -1255,7 +1439,7 @@
             }
           ],
           "explanation": "Official anatomical conformation review diagram for dairy cattle (Parts 1 to 23).",
-          "number": 57
+          "number": 69
         }
       ]
     },
@@ -1366,7 +1550,7 @@
             }
           ],
           "explanation": "Mechanical and operational assembly components of a portable milking machine (Parts 1 to 10).",
-          "number": 58
+          "number": 70
         }
       ]
     },
@@ -1423,7 +1607,7 @@
             }
           ],
           "explanation": "Prolapse management consists of organ replacement, osmotic swelling reduction (salt/sugar), vulva retention suturing, and medical therapy.",
-          "number": 59
+          "number": 71
         },
         {
           "type": "identification",
@@ -1435,7 +1619,7 @@
             "Omphalitis"
           ],
           "explanation": "Navel ill is an infection of the umbilicus in newborn calves; severe cases can cause joint ill and death within 5 days.",
-          "number": 60
+          "number": 72
         },
         {
           "type": "identification",
@@ -1447,7 +1631,7 @@
             "Blood infection"
           ],
           "explanation": "Septicemia is a systemic blood infection that can cause rapid mortality in young calves.",
-          "number": 61
+          "number": 73
         },
         {
           "type": "identification",
@@ -1459,7 +1643,7 @@
             "Hypocalcemia"
           ],
           "explanation": "Milk fever (hypocalcemia) occurs shortly after calving due to the rapid drain of calcium into colostrum.",
-          "number": 62
+          "number": 74
         },
         {
           "type": "identification",
@@ -1471,7 +1655,7 @@
             "Downer cow"
           ],
           "explanation": "Downer cow syndrome results from prolonged recumbency, nerve compression, or slippery floor trauma.",
-          "number": 63
+          "number": 75
         },
         {
           "type": "identification",
@@ -1484,7 +1668,7 @@
             "Retained fetal membranes"
           ],
           "explanation": "Retained placenta is diagnosed when membranes fail to expel within 24–48 hours of parturition.",
-          "number": 64
+          "number": 76
         },
         {
           "type": "identification",
@@ -1498,7 +1682,7 @@
             "Cervical prolapse"
           ],
           "explanation": "Prolapse involves pelvic organ protrusion (vaginal, cervical, or uterine) through the vulva.",
-          "number": 65
+          "number": 77
         },
         {
           "type": "identification",
@@ -1511,7 +1695,7 @@
             "Traumatic reticulopericarditis"
           ],
           "explanation": "Hardware disease occurs when swallowed nails or wire pierce the reticulum wall.",
-          "number": 66
+          "number": 78
         },
         {
           "type": "multiple_choice",
@@ -1524,7 +1708,7 @@
           },
           "answer": "A",
           "explanation": "Bovine ephemeral fever is known as '3 days sickness' and presents with fever, drooling, and transient recumbency.",
-          "number": 67
+          "number": 79
         },
         {
           "type": "multiple_choice",
@@ -1537,7 +1721,7 @@
           },
           "answer": "A",
           "explanation": "Calf diarrhea results from microbial, environmental, nutritional, and colostrum issues, leading to loose bowel and dehydration.",
-          "number": 68
+          "number": 80
         },
         {
           "type": "multiple_choice",
@@ -1550,7 +1734,7 @@
           },
           "answer": "A",
           "explanation": "Agitated coughing, labored breathing, and nasal discharge indicate calf pneumonia, managed with proper ventilation and bedding hygiene.",
-          "number": 69
+          "number": 81
         },
         {
           "type": "multiple_choice",
@@ -1563,7 +1747,7 @@
           },
           "answer": "A",
           "explanation": "In Left Displaced Abomasum (LDA), the fourth stomach shifts to the left between the abdominal wall and the rumen.",
-          "number": 70
+          "number": 82
         },
         {
           "type": "multiple_choice",
@@ -1576,7 +1760,7 @@
           },
           "answer": "A",
           "explanation": "Foot rot and inter-digital dermatitis cause lameness and are managed via trimming and medicated foot baths.",
-          "number": 71
+          "number": 83
         },
         {
           "type": "multiple_choice",
@@ -1589,7 +1773,7 @@
           },
           "answer": "A",
           "explanation": "A permanent cylindrical rumen magnet placed in the reticulum captures ferromagnetic hardware.",
-          "number": 72
+          "number": 84
         },
         {
           "type": "multiple_choice",
@@ -1602,7 +1786,7 @@
           },
           "answer": "A",
           "explanation": "Endoparasites include roundworms, tapeworms, and protozoa; ectoparasites include ticks.",
-          "number": 73
+          "number": 85
         }
       ]
     },
@@ -1622,7 +1806,7 @@
             "cud"
           ],
           "explanation": "Answer: CUD.",
-          "number": 74
+          "number": 86
         },
         {
           "original_number": 8,
@@ -1638,7 +1822,7 @@
             "rumination"
           ],
           "explanation": "Answer: CUD CHEWING.",
-          "number": 75
+          "number": 87
         },
         {
           "original_number": 9,
@@ -1652,7 +1836,7 @@
             "chewing"
           ],
           "explanation": "Answer: MASTICATION.",
-          "number": 76
+          "number": 88
         },
         {
           "original_number": 10,
@@ -1665,7 +1849,7 @@
             "prehension"
           ],
           "explanation": "Answer: PREHENSION.",
-          "number": 77
+          "number": 89
         },
         {
           "original_number": 12,
@@ -1679,7 +1863,7 @@
             "first milk"
           ],
           "explanation": "Answer: COLOSTRUM.",
-          "number": 78
+          "number": 90
         },
         {
           "original_number": 13,
@@ -1694,7 +1878,7 @@
             "difficult birth"
           ],
           "explanation": "Answer: DYSTOCIA.",
-          "number": 79
+          "number": 91
         },
         {
           "original_number": 14,
@@ -1710,7 +1894,7 @@
             "calving"
           ],
           "explanation": "Answer: PARTURATION.",
-          "number": 80
+          "number": 92
         },
         {
           "original_number": 15,
@@ -1725,7 +1909,7 @@
             "weaning"
           ],
           "explanation": "Answer: SEPARATION.",
-          "number": 81
+          "number": 93
         },
         {
           "type": "identification",
@@ -1738,7 +1922,7 @@
             "Dairyfarming"
           ],
           "explanation": "Dairy farming or dairying encompasses breeding, raising, and utilizing dairy livestock for milk production.",
-          "number": 82
+          "number": 94
         },
         {
           "type": "identification",
@@ -1750,7 +1934,7 @@
             "Mammary gland"
           ],
           "explanation": "The udder is the pendulous mammary organ containing the mammary glands and teats.",
-          "number": 83
+          "number": 95
         },
         {
           "type": "identification",
@@ -1764,7 +1948,7 @@
             "Calf"
           ],
           "explanation": "A neonate is a newborn animal in need of immediate post-natal airway and colostrum care.",
-          "number": 84
+          "number": 96
         },
         {
           "type": "identification",
@@ -1775,7 +1959,7 @@
             "Regurgitation"
           ],
           "explanation": "Regurgitation is the reverse movement of cud from the stomach to the oral cavity during rumination.",
-          "number": 85
+          "number": 97
         },
         {
           "type": "multiple_choice",
@@ -1788,7 +1972,7 @@
           },
           "answer": "A",
           "explanation": "Lactation is milk synthesis and secretion; the standard dairy lactation cycle is 305 days.",
-          "number": 86
+          "number": 98
         },
         {
           "type": "multiple_choice",
@@ -1801,7 +1985,7 @@
           },
           "answer": "A",
           "explanation": "Gestation is the pregnancy duration between conception and birth, averaging 285 days in cattle.",
-          "number": 87
+          "number": 99
         },
         {
           "type": "multiple_choice",
@@ -1814,7 +1998,7 @@
           },
           "answer": "A",
           "explanation": "Calves require 2 litres of antibody-rich colostrum within 2 hours of birth and navel dipping with povidone iodine.",
-          "number": 88
+          "number": 100
         },
         {
           "type": "multiple_choice",
@@ -1827,7 +2011,7 @@
           },
           "answer": "A",
           "explanation": "Silage making is feed conservation through anaerobic fermentation of forage crops into lactic acid.",
-          "number": 89
+          "number": 101
         }
       ]
     }

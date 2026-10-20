@@ -11,10 +11,10 @@ window.DOCUMENTATION_ITEMS["data/navigation-items/milk-operation-part-2.js"] = {
   "data_path": "data/milk-operation-part-2-quiz/data.json",
   "header_container": {
     "title": "Milk Operation and Farm Management (Upcoming Exam)",
-    "description": "Comprehensive Upcoming Exam Review covering Dairy Cattle Breeds, Ruminant Digestion Stages, Basic Feed Nutrients, Silage Preparation, Farm Tools, Cattle Anatomy, Portable Milking Equipment, Cattle Diseases, and Dairy Terminology.",
+    "description": "Comprehensive 154-Point Upcoming Exam Review covering Dairy Cattle Breeds, Ruminant Digestion Stages, Basic Feed Nutrients, Silage Preparation, Farm Tools, Cattle Anatomy, Portable Milking Equipment, Cattle Diseases, and Dairy Terminology.",
     "badge_list": [
       { "icon_name": "school", "badge_label": "Dairy Science" },
-      { "icon_name": "verified", "badge_label": "142 Total Points" },
+      { "icon_name": "verified", "badge_label": "154 Total Points" },
       { "icon_name": "swap_vert", "badge_label": "Draggable Step Cards" },
       { "icon_name": "photo_library", "badge_label": "Interactive Diagrams" }
     ],

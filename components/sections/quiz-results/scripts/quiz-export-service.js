@@ -338,8 +338,8 @@ export function generateOfflineResultsHtml(exportData) {
         } else {
           optionsHtml = \`
             <div style="padding-left: 2rem; font-size: 0.95rem;">
-              <p>Your Answer: <strong>\${q.userAnswer}</strong></p>
-              <p style="color: var(--success);">Correct Answer: <strong>\${q.correctAnswer}</strong></p>
+              <p>Your Answer: <strong>\\\${q.userAnswer}</strong></p>
+              \\\${!q.isCorrect ? \`<p style="color: var(--success);">Correct Answer: <strong>\\\${q.correctAnswer}</strong></p>\` : ''}
             </div>
           \`;
         }
@@ -366,10 +366,18 @@ export function generateOfflineResultsHtml(exportData) {
           ? \`<div style="text-align:center;font-size:0.85rem;font-style:italic;color:var(--on-surface-variant);margin-bottom:0.5rem;">\${q.caption}</div>\`
           : '';
 
-        const explanationHtml = q.explanation
+        const cleanExp = String(q.explanation || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        const cleanQ = String(q.question || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        const shouldShowExplanation = Boolean(
+          q.explanation &&
+          q.type !== 'multi_part_diagram' &&
+          cleanExp !== cleanQ
+        );
+
+        const explanationHtml = shouldShowExplanation
           ? \`
             <details style="margin-top:0.75rem;background:var(--surface-highest);border-radius:0.5rem;padding:0.75rem 1rem;">
-              <summary style="font-weight:600;color:var(--primary);cursor:pointer;">💡 Step-by-Step Explanation</summary>
+              <summary style="font-weight:600;color:var(--primary);cursor:pointer;">💡 Explanation</summary>
               <div style="margin-top:0.5rem;line-height:1.6;font-size:0.95rem;white-space:pre-line;">\${q.explanation}</div>
             </details>
           \`

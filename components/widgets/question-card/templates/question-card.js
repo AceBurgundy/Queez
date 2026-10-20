@@ -323,7 +323,6 @@ export class QuestionCard extends Component {
               type="text"
               class="question-card__diagram-item-input"
               data-item-id="${String(subItem.id)}"
-              placeholder="${`Enter name for #${subItemIdentifier}...`}"
               value="${itemVal}"
               aria-label="${`Answer for #${subItemIdentifier}`}"
             />

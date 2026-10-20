@@ -45,7 +45,7 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
               "link": "queezes/milk-operation-part-2",
               "image_source": "data/milk-operation-part-2-quiz/assets/body-parts-of-cattle-question.jpg",
               "shrink": false,
-              "description": "Comprehensive 142-point Upcoming Exam Review covering Dairy Cattle Breeds, Ruminant Digestion Stages, Basic Feed Nutrients, Silage Preparation, Farm Tools, Cattle Anatomy, Portable Milking Equipment, Cattle Diseases, and Dairy Terminology."
+              "description": "Comprehensive 154-point Upcoming Exam Review covering Dairy Cattle Breeds, Ruminant Digestion Stages, Basic Feed Nutrients, Silage Preparation, Farm Tools, Cattle Anatomy, Portable Milking Equipment, Cattle Diseases, and Dairy Terminology."
             },
             {
               "title": "NAPOLCOM Entrance Examination",

@@ -192,7 +192,7 @@ export class QuizResultsReview extends Component {
       return html`
         <div class="quiz-review__text-answer-block">
           <p>Your Answer: <strong>${questionItem.userAnswer}</strong></p>
-          <p style="color: #4caf50;">Correct Answer: <strong>${questionItem.correctAnswer}</strong></p>
+          ${!questionItem.isCorrect ? html`<p style="color: #4caf50;">Correct Answer: <strong>${questionItem.correctAnswer}</strong></p>` : ""}
         </div>
       `;
     };
@@ -273,7 +273,6 @@ export class QuizResultsReview extends Component {
                     alt="Question Diagram for Question ${questionItem.number}"
                     loading="lazy"
                     title="Click to view full screen"
-                    onclick=${() => getImageViewer().open(resolvedImage, `Question ${questionItem.number} Diagram`)}
                   />
                 </div>
                 <div class="quiz-review__diagram-pane">
@@ -284,7 +283,6 @@ export class QuizResultsReview extends Component {
                     alt="Answer Key Diagram for Question ${questionItem.number}"
                     loading="lazy"
                     title="Click to view full screen"
-                    onclick=${() => getImageViewer().open(resolvedAnswerImage, `Question ${questionItem.number} Answer Key`)}
                   />
                 </div>
               </div>
@@ -298,7 +296,6 @@ export class QuizResultsReview extends Component {
                   alt="Illustration for Question ${questionItem.number}"
                   loading="lazy"
                   title="Click to view full screen"
-                  onclick=${() => getImageViewer().open(resolvedImage, `Question ${questionItem.number} Illustration`)}
                 />
               </div>
             `;
@@ -310,12 +307,23 @@ export class QuizResultsReview extends Component {
             : "";
 
           /** @type {string} */
-          const explanationMarkup = questionItem.explanation
+          const cleanExplanation = String(questionItem.explanation || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+          /** @type {string} */
+          const cleanQuestion = String(questionItem.question || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+          /** @type {boolean} */
+          const shouldRenderExplanation = Boolean(
+            questionItem.explanation &&
+            questionItem.type !== "multi_part_diagram" &&
+            cleanExplanation !== cleanQuestion
+          );
+
+          /** @type {string} */
+          const explanationMarkup = shouldRenderExplanation
             ? html`
               <details class="quiz-review__explanation">
                 <summary class="quiz-review__explanation-summary">
                   <span class="google-symbols notranslate quiz-review__explanation-icon">lightbulb</span>
-                  <span>Step-by-Step Explanation</span>
+                  <span>Explanation</span>
                 </summary>
                 <div class="quiz-review__explanation-content">
                   <p>${questionItem.explanation}</p>
