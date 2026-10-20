@@ -19,15 +19,19 @@ Strictly excludes:
 import os
 import sys
 import time
+import json
 import shutil
+import hashlib
 import argparse
 import subprocess
 from pathlib import Path
-from typing import List, Dict, Tuple, Set
+from typing import List, Dict, Tuple, Set, Optional
+from datetime import datetime, timezone
 
 # Base directories
 DEFAULT_QUEEZ_DATA = Path(r"D:/Documents/Programming/Languages/Javascript/Queez/data")
 DEFAULT_MIRROR_DATA = Path(r"D:/Conversations/queez/quizzes")
+DEFAULT_LEDGER_PATH = Path(".better_image_ledger.json")
 
 # Target subdirectories
 EXAM1_DIR_NAME = "milk-operation-quiz"
@@ -87,6 +91,16 @@ def find_agy_binary() -> str:
         return str(fallback_win)
     return "agy"
 
+def get_file_hash(path: Path) -> str:
+    """Calculates SHA256 hash of a file."""
+    if not path.is_file():
+        return ""
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        while chunk := f.read(65536):
+            h.update(chunk)
+    return h.hexdigest()
+
 def is_excluded_image(file_path: Path) -> Tuple[bool, str]:
     """
     Evaluates whether an image file is excluded based on:
@@ -105,10 +119,6 @@ def is_excluded_image(file_path: Path) -> Tuple[bool, str]:
         if pat in fname_lower:
             return True, f"Filename matched excluded pattern '{pat}'"
             
-    # Check if file is card-image or other non-exam assets if necessary
-    if fname_lower in {"card-image.png"}:
-        return True, "Excluded card badge image"
-        
     return False, ""
 
 def build_prompt(image_path: Path) -> str:
@@ -145,6 +155,24 @@ def discover_target_images(
                 
     return results
 
+def load_ledger(ledger_path: Path) -> Dict[str, dict]:
+    """Loads completion ledger from disk."""
+    if ledger_path.is_file():
+        try:
+            with open(ledger_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+def save_ledger(ledger: Dict[str, dict], ledger_path: Path):
+    """Saves completion ledger to disk."""
+    try:
+        with open(ledger_path, "w", encoding="utf-8") as f:
+            json.dump(ledger, f, indent=2, ensure_ascii=False)
+    except Exception as e:
+        print(f"  [Warning] Failed to write ledger: {e}", file=sys.stderr)
+
 def sync_to_mirror(source_file: Path, base_data_dir: Path, mirror_dir: Path) -> bool:
     """Syncs modified file to mirror directory if it exists."""
     try:
@@ -161,11 +189,18 @@ def run_image_enhancement(
     image_path: Path,
     agy_bin: str,
     backup: bool = False,
-    timeout: int = 180
+    timeout: float = 600.0
 ) -> Tuple[bool, str]:
     """
     Invokes `agy` CLI via subprocess with the fixed prompt.
+    Verifies that the image content was genuinely modified.
     """
+    if not image_path.is_file():
+        return False, f"Target image does not exist: {image_path}"
+
+    initial_hash = get_file_hash(image_path)
+    initial_mtime = image_path.stat().st_mtime
+
     if backup:
         bak_path = image_path.with_suffix(image_path.suffix + ".bak")
         if not bak_path.exists():
@@ -174,13 +209,13 @@ def run_image_enhancement(
     prompt = build_prompt(image_path)
     cmd = [agy_bin, "-p", prompt, "--dangerously-skip-permissions"]
 
-    initial_mtime = image_path.stat().st_mtime if image_path.exists() else 0
-
     try:
         proc = subprocess.run(
             cmd,
             capture_output=True,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             timeout=timeout,
             check=False
         )
@@ -189,12 +224,16 @@ def run_image_enhancement(
         if proc.returncode != 0:
             return False, f"agy exited with code {proc.returncode}: {output[:300]}"
 
-        # Check if file was modified
-        current_mtime = image_path.stat().st_mtime if image_path.exists() else 0
-        if current_mtime > initial_mtime:
+        # Verify genuine file modification by hash and timestamp
+        current_hash = get_file_hash(image_path)
+        current_mtime = image_path.stat().st_mtime
+
+        if current_hash != initial_hash and image_path.stat().st_size > 0:
             return True, "Image successfully updated."
+        elif current_mtime > initial_mtime and image_path.stat().st_size > 0:
+            return True, "Image updated (timestamp changed)."
         else:
-            return True, f"agy finished successfully (output: {output[:150]})."
+            return False, f"Image was not modified (output: {output[:150]})."
     except subprocess.TimeoutExpired:
         return False, f"Process timed out after {timeout} seconds."
     except Exception as e:
@@ -234,15 +273,38 @@ def main():
         help="Delay in seconds between calls for 15 RPM protection (default: 5.0)"
     )
     parser.add_argument(
+        "--timeout",
+        type=float,
+        default=600.0,
+        help="Timeout in seconds for agy subprocess (default: 600.0)"
+    )
+    parser.add_argument(
         "--backup",
         action="store_true",
         help="Create .bak copy before replacing original image"
     )
     parser.add_argument(
         "--sync",
-        action="store_true",
+        action=argparse.BooleanOptionalAction,
         default=True,
         help="Sync modified assets to conversation mirror directory (default: True)"
+    )
+    parser.add_argument(
+        "--resume",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Skip images already recorded as enhanced in ledger (default: True)"
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Force enhancement even if already recorded in ledger"
+    )
+    parser.add_argument(
+        "--ledger",
+        type=str,
+        default=str(DEFAULT_LEDGER_PATH),
+        help="Path to JSON progress ledger"
     )
     parser.add_argument(
         "--data-dir",
@@ -254,6 +316,8 @@ def main():
     args = parser.parse_args()
     data_dir = Path(args.data_dir)
     mirror_dir = DEFAULT_MIRROR_DATA
+    ledger_path = Path(args.ledger)
+    ledger = load_ledger(ledger_path)
 
     print("==================================================")
     print("           Queez Better Image Pipeline            ")
@@ -262,6 +326,9 @@ def main():
     print(f"Data Dir:      {data_dir}")
     print(f"Dry Run Mode:  {args.dry_run}")
     print(f"Pacing Delay:  {args.delay}s (15 RPM compliance)")
+    print(f"Timeout:       {args.timeout}s")
+    print(f"Resume Ledger: {args.resume} ({ledger_path})")
+    print(f"Sync Mirrors:  {args.sync}")
     print("--------------------------------------------------")
 
     # Discover images
@@ -278,8 +345,20 @@ def main():
     included_items = [(p, r) for p, excl, r in items if not excl]
     excluded_items = [(p, r) for p, excl, r in items if excl]
 
+    # Filter out already enhanced images if resume is enabled and not force
+    pending_items = []
+    already_done_items = []
+    for p, r in included_items:
+        key = str(p.resolve()).replace("\\", "/")
+        if args.resume and not args.force and key in ledger:
+            already_done_items.append((p, ledger[key]))
+        else:
+            pending_items.append((p, r))
+
     print(f"Total Discovered: {len(items)}")
     print(f"Eligible Images:  {len(included_items)}")
+    print(f"Already Enhanced: {len(already_done_items)}")
+    print(f"Pending To Run:   {len(pending_items)}")
     print(f"Excluded Images:  {len(excluded_items)}")
     print("--------------------------------------------------")
 
@@ -288,13 +367,20 @@ def main():
         for p, r in excluded_items:
             print(f"  [SKIP] {p.name:<35} -> Reason: {r}")
 
-        print("\n[ELIGIBLE CANDIDATE ASSETS]:")
-        candidate_sample = included_items if args.limit is None else included_items[:args.limit]
+        if already_done_items:
+            print("\n[ALREADY ENHANCED ASSETS]:")
+            for p, meta in already_done_items[:10]:
+                print(f"  [DONE] {p.parent.name}/{p.name} (Enhanced at {meta.get('completed_at')})")
+            if len(already_done_items) > 10:
+                print(f"  ... and {len(already_done_items) - 10} more already recorded.")
+
+        print("\n[PENDING CANDIDATE ASSETS]:")
+        candidate_sample = pending_items if args.limit is None else pending_items[:args.limit]
         for idx, (p, _) in enumerate(candidate_sample, 1):
             print(f"  [{idx:03d}/{len(candidate_sample):03d}] {p.parent.name}/{p.name}")
         
-        if args.limit and len(included_items) > args.limit:
-            print(f"  ... and {len(included_items) - args.limit} more images (capped by --limit {args.limit})")
+        if args.limit and len(pending_items) > args.limit:
+            print(f"  ... and {len(pending_items) - args.limit} more images (capped by --limit {args.limit})")
 
         print("\n[Dry Run Completed] No modifications or subprocess calls made.")
         return 0
@@ -303,11 +389,11 @@ def main():
     agy_bin = find_agy_binary()
     print(f"Using agy binary: {agy_bin}")
     
-    candidates = included_items if args.limit is None else included_items[:args.limit]
+    candidates = pending_items if args.limit is None else pending_items[:args.limit]
     total_candidates = len(candidates)
     
     if total_candidates == 0:
-        print("No eligible candidate images to process.")
+        print("No pending candidate images to process. Everything is up to date!")
         return 0
 
     print(f"\nBeginning execution for {total_candidates} images...")
@@ -322,13 +408,24 @@ def main():
         success, message = run_image_enhancement(
             image_path=img_path,
             agy_bin=agy_bin,
-            backup=args.backup
+            backup=args.backup,
+            timeout=args.timeout
         )
         elapsed = time.time() - start_time
 
         if success:
             success_count += 1
             print(f"  [SUCCESS] {message} ({elapsed:.1f}s)")
+            
+            # Record in ledger
+            key = str(img_path.resolve()).replace("\\", "/")
+            ledger[key] = {
+                "completed_at": datetime.now(timezone.utc).isoformat(),
+                "sha256": get_file_hash(img_path),
+                "file_size": img_path.stat().st_size
+            }
+            save_ledger(ledger, ledger_path)
+
             if args.sync:
                 synced = sync_to_mirror(img_path, data_dir, mirror_dir)
                 if synced:
@@ -348,6 +445,7 @@ def main():
     print(f"Total Processed: {total_candidates}")
     print(f"Successful:      {success_count}")
     print(f"Failed:          {failure_count}")
+    print(f"Previously Done: {len(already_done_items)}")
     print(f"Excluded:        {len(excluded_items)}")
     print("==================================================")
 
