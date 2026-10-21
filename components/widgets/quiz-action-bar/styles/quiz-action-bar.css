@@ -70,6 +70,16 @@
   box-shadow: none !important;
 }
 
+.quiz-action-bar__play-button--resume {
+  background-color: var(--md-sys-color-tertiary);
+  color: var(--md-sys-color-on-tertiary);
+}
+
+.quiz-action-bar__play-card--resume:hover .quiz-action-bar__play-button--resume {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
 /* Icon slot inside squircle */
 .bright-squircle__icon-slot {
   display: inline-flex;

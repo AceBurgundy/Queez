@@ -165,12 +165,15 @@ export function loadActiveSession(quizId) {
 
     /** @type {Object} */
     const session = JSON.parse(rawSessionJson);
+    /** @type {string} */
+    const baseSessionQuizId = (session && session.quizId)
+      ? String(session.quizId).split("::")[0]
+      : "";
     /** @type {boolean} */
     const sessionMatches = Boolean(
       session && (
         session.quizId === quizId ||
-        (session.quizId && quizId.startsWith(session.quizId)) ||
-        (session.quizId && session.quizId.startsWith(quizId))
+        baseSessionQuizId === quizId
       )
     );
     if (!session || !sessionMatches) {

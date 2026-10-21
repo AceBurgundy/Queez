@@ -117,6 +117,9 @@ export class QuizEngine extends Component {
     /** @type {ConfirmDialog} */
     this.confirmDialog = new ConfirmDialog();
 
+    /** @type {boolean} */
+    this.isStopped = false;
+
     /** @type {string} */
     this.examScope = savedSession?.examScope || examScope;
     /** @type {number} */
@@ -179,6 +182,9 @@ export class QuizEngine extends Component {
      * @returns {void}
      */
     const persistCurrentState = (status = "in_progress") => {
+      if (this.isStopped) {
+        return;
+      }
       saveActiveSession({
         quizId: this.quizId,
         examScope: this.examScope,
@@ -346,6 +352,27 @@ export class QuizEngine extends Component {
     };
 
     /**
+     * Cleanly tears down timers, dialogs, and persistence hooks when the engine is stopped or unmounted.
+     * @returns {void}
+     */
+    this.destroy = () => {
+      this.isStopped = true;
+      if (this.timerIntervalId) {
+        clearInterval(this.timerIntervalId);
+        this.timerIntervalId = null;
+      }
+      if (this.tabsComponent && typeof this.tabsComponent.detachStopButton === "function") {
+        this.tabsComponent.detachStopButton();
+      }
+      if (this.contextDrawer && typeof this.contextDrawer.unmounted === "function") {
+        this.contextDrawer.unmounted();
+      }
+      if (this.confirmDialog && typeof this.confirmDialog.unmounted === "function") {
+        this.confirmDialog.unmounted();
+      }
+    };
+
+    /**
      * Handles stopping the active examination after explicit user confirmation.
      * Discards active in-memory and persistent session states and returns to the initial view.
      * @returns {Promise<void>}
@@ -365,15 +392,7 @@ export class QuizEngine extends Component {
         return;
       }
 
-      if (this.timerIntervalId) {
-        clearInterval(this.timerIntervalId);
-        this.timerIntervalId = null;
-      }
-
-      if (this.tabsComponent && typeof this.tabsComponent.detachStopButton === "function") {
-        this.tabsComponent.detachStopButton();
-      }
-
+      this.destroy();
       clearActiveSession();
 
       if (typeof this.onStopExam === "function") {
@@ -1157,15 +1176,7 @@ export class QuizEngine extends Component {
     };
 
     this.unmounted = () => {
-      if (this.timerIntervalId) {
-        clearInterval(this.timerIntervalId);
-      }
-      if (this.contextDrawer && typeof this.contextDrawer.unmounted === "function") {
-        this.contextDrawer.unmounted();
-      }
-      if (this.confirmDialog && typeof this.confirmDialog.unmounted === "function") {
-        this.confirmDialog.unmounted();
-      }
+      this.destroy();
     };
   }
 }

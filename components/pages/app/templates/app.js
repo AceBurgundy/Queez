@@ -83,6 +83,8 @@ export class App extends Component {
     this.lastLoadedRoutePath = null;
     /** @type {number} */
     this.navigationTransactionId = 0;
+    /** @type {QuizEngine|null} */
+    this.currentActiveQuizEngine = null;
     /** @type {LoadingScreen} */
     this.loadingScreenComponent = new LoadingScreen();
     /** @type {Toast} */
@@ -492,6 +494,10 @@ export class App extends Component {
 
     /** @type {number} */
     const currentTransactionId = (++this.navigationTransactionId);
+    if (this.currentActiveQuizEngine && typeof this.currentActiveQuizEngine.destroy === "function") {
+      this.currentActiveQuizEngine.destroy();
+      this.currentActiveQuizEngine = null;
+    }
     const currentRoute = this.parseCurrentRoute();
     this.lastLoadedRoutePath = currentRoute.rawPath;
     this.activePathSignal.value = navigationPath;
@@ -718,12 +724,64 @@ export class App extends Component {
         /** @type {QuizResults|null} */
         let completedResultsComponent = null;
 
+        /**
+         * Updates both local and instance references to the active QuizEngine, tearing down any prior instance.
+         * @param {QuizEngine|null} nextEngineInstance
+         * @returns {void}
+         */
+        const setActiveQuizEngine = (nextEngineInstance) => {
+          if (
+            currentActiveQuizEngine &&
+            currentActiveQuizEngine !== nextEngineInstance &&
+            typeof currentActiveQuizEngine.destroy === "function"
+          ) {
+            currentActiveQuizEngine.destroy();
+          }
+          currentActiveQuizEngine = nextEngineInstance;
+          this.currentActiveQuizEngine = nextEngineInstance;
+        };
+
+        /**
+         * Restores and mounts an unfinished examination session only when explicitly requested by the user.
+         * @param {Object} savedSessionState
+         * @returns {void}
+         */
+        const resumeSavedSession = (savedSessionState) => {
+          if (!savedSessionState) {
+            return;
+          }
+          /** @type {string} */
+          const examScope = savedSessionState.examScope || "full";
+          /** @type {number} */
+          const sectionCategoryIndex = savedSessionState.sectionCategoryIndex ?? 0;
+          /** @type {Object|null} */
+          const restoredDeck = examScope === "section"
+            ? restoreSectionExamDeck(quizId, sanitizedQuestions, sectionBounds, sectionCategoryIndex)
+            : restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds);
+
+          mountQuizEngine({
+            examScope,
+            sectionCategoryIndex,
+            deck: restoredDeck,
+            savedSession: savedSessionState,
+            isTimed: savedSessionState.isTimed || false,
+            totalTimeSeconds: savedSessionState.totalTimeSeconds || 0,
+            startTime: savedSessionState.startTime || Date.now()
+          });
+        };
+
         // Factory: Create Full Mock Exam Action Bar (~1 Hour Deck) for Banner
         const createFullExamActionBar = () => {
           /** @type {number} */
           const maximumQuestionCount = sanitizedQuestions.length;
           /** @type {number} */
           const defaultQuestionCount = 1;
+          /** @type {{ session: Object|null }} */
+          const { session: latestSession } = loadActiveSession(quizId);
+          /** @type {boolean} */
+          const hasResumableSession = Boolean(
+            latestSession && (latestSession.status === "in_progress" || latestSession.status === "transition")
+          );
           return new QuizActionBar({
             questionsCount: maximumQuestionCount,
             maximumQuestionCount,
@@ -734,7 +792,15 @@ export class App extends Component {
             dialogTitle: "Start Mock Exam",
             dialogSubtitle: "Configure exam items and duration",
             isBanner: true,
+            hasActiveSession: hasResumableSession,
+            resumeButtonLabel: "Resume Exam",
+            onResumeQuiz: () => {
+              if (latestSession) {
+                resumeSavedSession(latestSession);
+              }
+            },
             onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
+              clearActiveSession();
               /** @type {Object} */
               const mockDeck = buildMockExamDeck({
                 quizId,
@@ -792,6 +858,7 @@ export class App extends Component {
             sectionIcon,
             questionRangeText,
             onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
+              clearActiveSession();
               /** @type {Object} */
               const sectionDeck = buildSectionExamDeck({
                 quizId,
@@ -839,7 +906,7 @@ export class App extends Component {
           const contentArea = document.getElementById("quizTabContentArea");
           if (!contentArea) return;
 
-          currentActiveQuizEngine = null;
+          setActiveQuizEngine(null);
 
           /** @type {HTMLElement|null} */
           const bannerBadges = document.getElementById("bannerBadgesContainer");
@@ -906,7 +973,7 @@ export class App extends Component {
               if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
                 tabsComponent.detachStopButton();
               }
-              currentActiveQuizEngine = null;
+              setActiveQuizEngine(null);
               renderInitialQuizView();
             }
           });
@@ -982,25 +1049,24 @@ export class App extends Component {
               });
             },
             onStopExam: () => {
+              quizEngine.destroy();
               clearActiveSession();
-              if (quizEngine.timerIntervalId) {
-                clearInterval(quizEngine.timerIntervalId);
-                quizEngine.timerIntervalId = null;
-              }
               if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
                 tabsComponent.detachStopButton();
               }
-              currentActiveQuizEngine = null;
+              setActiveQuizEngine(null);
               renderInitialQuizView(examScope === "section" ? sectionCategoryIndex : 0);
             }
           });
 
-          currentActiveQuizEngine = quizEngine;
+          setActiveQuizEngine(quizEngine);
           contentArea.innerHTML = quizEngine.toString();
           quizEngine.__mount?.();
 
           if (examScope === "section") {
             tabsComponent.activateTab(sectionCategoryIndex, false);
+          } else if (engineConfig.savedSession && typeof engineConfig.savedSession.activeCategoryIndex === "number") {
+            tabsComponent.activateTab(engineConfig.savedSession.activeCategoryIndex, false);
           }
           window.scrollTo({ top: 0, behavior: "smooth" });
         };
@@ -1012,7 +1078,7 @@ export class App extends Component {
          * @returns {void}
          */
         const renderInitialQuizView = (targetTabIndex = 0) => {
-          currentActiveQuizEngine = null;
+          setActiveQuizEngine(null);
           if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
             tabsComponent.detachStopButton();
           }
@@ -1097,68 +1163,13 @@ export class App extends Component {
             },
             onRetakeExam: () => {
               clearActiveSession();
-              currentActiveQuizEngine = null;
+              setActiveQuizEngine(null);
               renderInitialQuizView();
             }
           });
           initialContentHtml = completedResultsComponent.toString();
-        } else if (session && (session.status === "in_progress" || session.status === "transition")) {
-          /** @type {string} */
-          const examScope = session.examScope || "full";
-          /** @type {number} */
-          const sectionCategoryIndex = session.sectionCategoryIndex ?? 0;
-          /** @type {Object|null} */
-          const restoredDeck = examScope === "section"
-            ? restoreSectionExamDeck(quizId, sanitizedQuestions, sectionBounds, sectionCategoryIndex)
-            : restoreMockExamDeck(quizId, sanitizedQuestions, sectionBounds);
-
-          /** @type {Array<Object>} */
-          const activeQuestions = restoredDeck ? restoredDeck.questions : sanitizedQuestions;
-          /** @type {string} */
-          const activeEngineQuizId = restoredDeck ? restoredDeck.deckQuizId : quizId;
-          /** @type {Array<Object>} */
-          const activeEngineBounds = restoredDeck ? restoredDeck.sectionBounds : sectionBounds;
-
-          /** @type {QuizEngine} */
-          const quizEngine = new QuizEngine({
-            quizId: activeEngineQuizId,
-            questions: activeQuestions,
-            categories: tabList,
-            sectionBounds: activeEngineBounds,
-            savedSession: session,
-            examScope,
-            sectionCategoryIndex,
-            tabsComponent,
-            onCategoryChange: (categoryIndex) => {
-              tabsComponent.activateTab(categoryIndex, false);
-            },
-            onFinishExam: (userAnswers, finishMeta) => {
-              handleFinishExam(userAnswers, {
-                examScope: finishMeta?.examScope || examScope,
-                sectionCategoryIndex: finishMeta?.sectionCategoryIndex ?? sectionCategoryIndex,
-                deck: restoredDeck,
-                isTimed: quizEngine.isTimed,
-                totalTimeSeconds: quizEngine.totalTimeSeconds,
-                startTime: quizEngine.startTime
-              });
-            },
-            onStopExam: () => {
-              clearActiveSession();
-              if (quizEngine.timerIntervalId) {
-                clearInterval(quizEngine.timerIntervalId);
-                quizEngine.timerIntervalId = null;
-              }
-              if (tabsComponent && typeof tabsComponent.detachStopButton === "function") {
-                tabsComponent.detachStopButton();
-              }
-              currentActiveQuizEngine = null;
-              renderInitialQuizView(examScope === "section" ? sectionCategoryIndex : 0);
-            }
-          });
-          currentActiveQuizEngine = quizEngine;
-          initialContentHtml = quizEngine.toString();
         } else {
-          // Initial overview mode
+          // Always land on the Overview page first; never auto-start QuizEngine on route navigation.
           initialBannerActionBar = createFullExamActionBar();
           initialContentHtml = "";
           initialSectionBar = createSectionActionBar(0);

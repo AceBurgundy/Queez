@@ -111,6 +111,9 @@ export class QuizActionBar extends Component {
    * @param {number} [options.minimumQuestionCount=1] - Minimum questions allowed.
    * @param {number} [options.questionsCount] - Alias for maximumQuestionCount.
    * @param {number} [options.defaultQuestionsCount] - Alias for defaultQuestionCount.
+   * @param {boolean} [options.hasActiveSession=false] - Whether an unfinished session can be resumed.
+   * @param {string} [options.resumeButtonLabel="Resume Exam"] - Label for the resume button.
+   * @param {function(): void} [options.onResumeQuiz] - Callback triggered when resuming an active session.
    */
   constructor({
     onStartQuiz,
@@ -127,12 +130,21 @@ export class QuizActionBar extends Component {
     maximumQuestionCount,
     defaultQuestionCount,
     questionsCount,
-    defaultQuestionsCount
+    defaultQuestionsCount,
+    hasActiveSession = false,
+    resumeButtonLabel = "Resume Exam",
+    onResumeQuiz
   } = {}) {
     super();
 
     /** @type {function(Object): void|undefined} */
     this.onStartQuiz = onStartQuiz;
+    /** @type {boolean} */
+    this.hasActiveSession = Boolean(hasActiveSession);
+    /** @type {string} */
+    this.resumeButtonLabel = resumeButtonLabel;
+    /** @type {function(): void|undefined} */
+    this.onResumeQuiz = onResumeQuiz;
     /** @type {string} */
     this.buttonLabel = buttonLabel;
     /** @type {string} */
@@ -193,6 +205,32 @@ export class QuizActionBar extends Component {
       }
     };
 
+    /**
+     * Handles explicit resume of an unfinished session.
+     * @param {Event} [event]
+     * @returns {void}
+     */
+    const handleResumeClick = (event) => {
+      if (event) {
+        event.preventDefault();
+      }
+      if (typeof this.onResumeQuiz === "function") {
+        this.onResumeQuiz();
+      }
+    };
+
+    /**
+     * Handles keyboard activation of the resume button via Enter or Space.
+     * @param {KeyboardEvent} event
+     * @returns {void}
+     */
+    const handleResumeKeydown = (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        handleResumeClick(event);
+      }
+    };
+
     /** @type {string} */
     const containerClass = this.isBanner
       ? "quiz-action-bar quiz-action-bar--banner"
@@ -234,7 +272,32 @@ export class QuizActionBar extends Component {
     } else {
       this.template = html`
         <div class="${containerClass}" aria-label="Exam Launch Controls">
+          ${this.hasActiveSession
+            ? html`
+              <div
+                id="buttonResumeExam"
+                class="quiz-action-bar__play-card quiz-action-bar__play-card--resume"
+                data-action="resume-quiz"
+                role="button"
+                tabindex="0"
+                data-tooltip="Resume in-progress examination"
+                aria-label="${this.resumeButtonLabel}"
+                onclick=${handleResumeClick}
+                onkeydown=${handleResumeKeydown}
+              >
+                <div class="bright-squircle quiz-action-bar__play-button quiz-action-bar__play-button--resume" aria-hidden="true">
+                  <span class="bright-squircle__icon-slot bright-squircle__icon-slot--play">
+                    <span class="google-symbols notranslate">play_circle</span>
+                  </span>
+                </div>
+                <div class="quiz-action-bar__play-text-widget">
+                  <span class="quiz-action-bar__play-label">${this.resumeButtonLabel}</span>
+                </div>
+              </div>
+            `
+            : ""}
           <div
+            id="buttonStartExam"
             class="quiz-action-bar__play-card"
             data-action="play-quiz"
             role="button"

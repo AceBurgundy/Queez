@@ -2,7 +2,7 @@
   "schema_version": "quiz-data.v1",
   "id": "milk-operation-part-2",
   "title": "Milk Operation and Farm Management (Upcoming Exam)",
-  "subtitle": "Breeds, Digestion, Feed Nutrients, Silage, Farm Tools, Anatomy, Milking Equipment, Diseases & Terminology",
+  "subtitle": "Breeds, Digestion, Feed Nutrients, Silage, Farm Tools, Anatomy, Milking Equipment, Diseases, Terminology & Daily Routine Schedules",
   "publisher": "Dairy Farming & Livestock Technical Series",
   "instructions": [
     "Section I covers Different Breeds of Dairy Cattle (identification and multiple choice).",
@@ -14,6 +14,8 @@
     "Section VII contains an interactive mechanical diagram identifying the 10 components of the portable milking machine.",
     "Section VIII covers Common Diseases of Calves, Heifer and Cow, including prolapse management resequencing.",
     "Section IX covers Definition of Terms across dairy farming, calving, and digestive physiology.",
+    "Section X contains the Dairy Square Daily Routine Time Quiz matching 13 scheduled time windows to the routine diagram.",
+    "Section XI contains the Dairy Square Daily Routine Activity Quiz matching 13 daily farm tasks to the routine diagram.",
     "Identification inputs accept forgiving text: casing and punctuation differences are automatically resolved.",
     "Resequencing cards can be reordered by dragging or using the Move Up / Move Down buttons."
   ],
@@ -2012,6 +2014,342 @@
           "answer": "A",
           "explanation": "Silage making is feed conservation through anaerobic fermentation of forage crops into lactic acid.",
           "number": 101
+        }
+      ]
+    },
+    {
+      "id": "daily-routine-time-quiz",
+      "title": "Daily Routine Time Quiz",
+      "description": "Identify the corresponding scheduled time or time window for each numbered circle (1 to 13) in the Dairy Square daily farm routine.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "image": "assets/daily-routine-time-quiz.jpg",
+          "answer_image": "assets/dairy-square-daily-routine-original.jpg",
+          "caption": "Dairy Square Daily Routine — Scheduled Time Identification (Circles 1 to 13)",
+          "question": "Arrange the scheduled time windows to match the numbered circles (1 to 13) in the Dairy Square Daily Routine diagram:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "4:00 AM",
+              "type": "reorder_card",
+              "answer": "4:00 AM",
+              "accepted_answers": [
+                "4:00 AM",
+                "4:00AM",
+                "04:00 AM"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "5:00 AM – 7:30 AM",
+              "type": "reorder_card",
+              "answer": "5:00 AM – 7:30 AM",
+              "accepted_answers": [
+                "5:00 AM – 7:30 AM",
+                "5:00 AM - 7:30 AM",
+                "5:00AM - 7:30AM"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "7:30 AM – 8:00 AM",
+              "type": "reorder_card",
+              "answer": "7:30 AM – 8:00 AM",
+              "accepted_answers": [
+                "7:30 AM – 8:00 AM",
+                "7:30 AM - 8:00 AM",
+                "7:30AM - 8:00AM"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "8:00 AM – 9:00 AM",
+              "type": "reorder_card",
+              "answer": "8:00 AM – 9:00 AM",
+              "accepted_answers": [
+                "8:00 AM – 9:00 AM",
+                "8:00 AM - 9:00 AM",
+                "8:00AM - 9:00AM"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "9:00 AM – 10:00 AM",
+              "type": "reorder_card",
+              "answer": "9:00 AM – 10:00 AM",
+              "accepted_answers": [
+                "9:00 AM – 10:00 AM",
+                "9:00 AM - 10:00 AM",
+                "9:00AM - 10:00AM"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "text": "10:00 AM",
+              "type": "reorder_card",
+              "answer": "10:00 AM",
+              "accepted_answers": [
+                "10:00 AM",
+                "10:00AM"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "text": "11:00 AM",
+              "type": "reorder_card",
+              "answer": "11:00 AM",
+              "accepted_answers": [
+                "11:00 AM",
+                "11:00AM"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "text": "12:00 NN",
+              "type": "reorder_card",
+              "answer": "12:00 NN",
+              "accepted_answers": [
+                "12:00 NN",
+                "12:00NN",
+                "12:00 PM",
+                "12:00 Noon"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "text": "2:00 PM – 2:30 PM",
+              "type": "reorder_card",
+              "answer": "2:00 PM – 2:30 PM",
+              "accepted_answers": [
+                "2:00 PM – 2:30 PM",
+                "2:00 PM - 2:30 PM",
+                "2:00PM - 2:30PM"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "text": "2:30 PM – 4:00 PM",
+              "type": "reorder_card",
+              "answer": "2:30 PM – 4:00 PM",
+              "accepted_answers": [
+                "2:30 PM – 4:00 PM",
+                "2:30 PM - 4:00 PM",
+                "2:30PM - 4:00PM"
+              ]
+            },
+            {
+              "id": 11,
+              "label": "11",
+              "text": "4:00 PM",
+              "type": "reorder_card",
+              "answer": "4:00 PM",
+              "accepted_answers": [
+                "4:00 PM",
+                "4:00PM"
+              ]
+            },
+            {
+              "id": 12,
+              "label": "12",
+              "text": "8:00 PM",
+              "type": "reorder_card",
+              "answer": "8:00 PM",
+              "accepted_answers": [
+                "8:00 PM",
+                "8:00PM"
+              ]
+            },
+            {
+              "id": 13,
+              "label": "13",
+              "text": "8:30 PM – 10:00 PM",
+              "type": "reorder_card",
+              "answer": "8:30 PM – 10:00 PM",
+              "accepted_answers": [
+                "8:30 PM – 10:00 PM",
+                "8:30 PM - 10:00 PM",
+                "8:30PM - 10:00PM"
+              ]
+            }
+          ],
+          "explanation": "The Dairy Square daily schedule runs chronologically from 4:00 AM (Self Preparation) and 5:00 AM – 7:30 AM (Morning Milking, Cleaning, Feeding) through 8:30 PM – 10:00 PM (Night Observation Time).",
+          "number": 102
+        }
+      ]
+    },
+    {
+      "id": "daily-routine-activity-quiz",
+      "title": "Daily Routine Activity Quiz",
+      "description": "Identify the corresponding scheduled farm activity or task for each numbered circle (1 to 13) in the Dairy Square daily farm routine.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "image": "assets/daily-routine-activity-quiz.jpg",
+          "answer_image": "assets/dairy-square-daily-routine-original.jpg",
+          "caption": "Dairy Square Daily Routine — Scheduled Activity Identification (Circles 1 to 13)",
+          "question": "Arrange the scheduled farm activities to match the numbered circles (1 to 13) in the Dairy Square Daily Routine diagram:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Self Preparation",
+              "type": "reorder_card",
+              "answer": "Self Preparation",
+              "accepted_answers": [
+                "Self Preparation",
+                "Self-Preparation"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Milking, Cleaning, Feeding",
+              "type": "reorder_card",
+              "answer": "Milking, Cleaning, Feeding",
+              "accepted_answers": [
+                "Milking, Cleaning, Feeding",
+                "Milking Cleaning Feeding"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Breakfast",
+              "type": "reorder_card",
+              "answer": "Breakfast",
+              "accepted_answers": [
+                "Breakfast"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Rest",
+              "type": "reorder_card",
+              "answer": "Rest",
+              "accepted_answers": [
+                "Rest",
+                "Rest Period"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "Chopping Grass",
+              "type": "reorder_card",
+              "answer": "Chopping Grass",
+              "accepted_answers": [
+                "Chopping Grass",
+                "Grass Chopping"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "text": "Dry Feeding (4 Dairy Cows)",
+              "type": "reorder_card",
+              "answer": "Dry Feeding (4 Dairy Cows)",
+              "accepted_answers": [
+                "Dry Feeding (4 Dairy Cows)",
+                "Dry Feeding"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "text": "Cleaning",
+              "type": "reorder_card",
+              "answer": "Cleaning",
+              "accepted_answers": [
+                "Cleaning",
+                "Barn Cleaning"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "text": "Wet Feeding (All) / Lunch",
+              "type": "reorder_card",
+              "answer": "Wet Feeding (All) / Lunch",
+              "accepted_answers": [
+                "Wet Feeding (All) / Lunch",
+                "Wet Feeding / Lunch",
+                "Wet Feeding (All)"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "text": "Grass Feeding",
+              "type": "reorder_card",
+              "answer": "Grass Feeding",
+              "accepted_answers": [
+                "Grass Feeding",
+                "Forage Feeding"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "text": "Rest",
+              "type": "reorder_card",
+              "answer": "Rest",
+              "accepted_answers": [
+                "Rest",
+                "Rest Period"
+              ]
+            },
+            {
+              "id": 11,
+              "label": "11",
+              "text": "Milking, Cleaning, Feeding",
+              "type": "reorder_card",
+              "answer": "Milking, Cleaning, Feeding",
+              "accepted_answers": [
+                "Milking, Cleaning, Feeding",
+                "Milking Cleaning Feeding"
+              ]
+            },
+            {
+              "id": 12,
+              "label": "12",
+              "text": "Merienda",
+              "type": "reorder_card",
+              "answer": "Merienda",
+              "accepted_answers": [
+                "Merienda",
+                "Afternoon Snack"
+              ]
+            },
+            {
+              "id": 13,
+              "label": "13",
+              "text": "Observation Time",
+              "type": "reorder_card",
+              "answer": "Observation Time",
+              "accepted_answers": [
+                "Observation Time",
+                "Heat and Health Observation Time"
+              ]
+            }
+          ],
+          "explanation": "The 13 daily farm operations begin with Self Preparation (4:00 AM) and Morning Milking, Cleaning, Feeding (5:00 AM – 7:30 AM) and conclude with Merienda (8:00 PM) and Observation Time (8:30 PM – 10:00 PM).",
+          "number": 103
         }
       ]
     }
