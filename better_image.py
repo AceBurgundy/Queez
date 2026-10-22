@@ -62,8 +62,10 @@ MIN_PHOTO_AREA_RATIO = 0.35
 # Default AI model & prompt
 DEFAULT_MODEL = "Gemini 3.8 Flash (Low)"
 FIXED_USER_PROMPT = (
-    "Turn this image like it was taken at this moment (If photo) or it was "
-    "just exported from photoshop (if art) without changing its file size."
+    "If it is a photograph, make it look like it was taken by an expensive 4k camera. "
+    "If it is an art, diagram, or visual, make it look like it was recently exported from Photoshop. "
+    "Preserve all text labels, numbers, and line geometry exactly. "
+    "Only the quality of the image should change. No additional filters, assets, or watermarks."
 )
 FIXED_PROMPT_TEMPLATE = (
     FIXED_USER_PROMPT + ' Target image file to edit and replace in-place: "{image_path}".'
