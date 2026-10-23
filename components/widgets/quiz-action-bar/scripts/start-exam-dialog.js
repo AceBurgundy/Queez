@@ -185,8 +185,17 @@ const createDialogDom = ({
   itemStepperWrapElement.appendChild(wheelElement);
   itemStepperWrapElement.appendChild(stepperButtonsElement);
 
+  /** @type {HTMLButtonElement} */
+  const allItemsButtonElement = document.createElement("button");
+  allItemsButtonElement.type = "button";
+  allItemsButtonElement.className = "start-exam-dialog__all-items-button";
+  allItemsButtonElement.id = "startExamAllItemsButton";
+  allItemsButtonElement.textContent = "All Items";
+  allItemsButtonElement.title = `Set to full ${maximumQuestionCount} items`;
+
   itemsColumnElement.appendChild(itemLabelElement);
   itemsColumnElement.appendChild(itemStepperWrapElement);
+  itemsColumnElement.appendChild(allItemsButtonElement);
 
   // Column 2: Duration Controls
   /** @type {HTMLDivElement} */
@@ -299,10 +308,14 @@ const createDialogDom = ({
   captionElement.className = "start-exam-dialog__caption";
   captionElement.textContent = "No time limit (untimed)";
 
-  // Checkbox: "By number of items"
+  // Checkboxes Row: "By number of items" & "Randomize questions"
   /** @type {HTMLDivElement} */
-  const checkboxWrapElement = document.createElement("div");
-  checkboxWrapElement.className = "start-exam-dialog__checkbox-wrap";
+  const checkboxesRowElement = document.createElement("div");
+  checkboxesRowElement.className = "start-exam-dialog__checkboxes-row";
+
+  /** @type {HTMLDivElement} */
+  const linkCheckboxWrapElement = document.createElement("div");
+  linkCheckboxWrapElement.className = "start-exam-dialog__checkbox-wrap";
 
   /** @type {HTMLInputElement} */
   const linkCheckboxElement = document.createElement("input");
@@ -311,13 +324,35 @@ const createDialogDom = ({
   linkCheckboxElement.className = "start-exam-dialog__checkbox";
 
   /** @type {HTMLLabelElement} */
-  const checkboxLabelElement = document.createElement("label");
-  checkboxLabelElement.htmlFor = "startExamByItemCountCheckbox";
-  checkboxLabelElement.className = "start-exam-dialog__checkbox-label";
-  checkboxLabelElement.textContent = "By number of items";
+  const linkCheckboxLabelElement = document.createElement("label");
+  linkCheckboxLabelElement.htmlFor = "startExamByItemCountCheckbox";
+  linkCheckboxLabelElement.className = "start-exam-dialog__checkbox-label";
+  linkCheckboxLabelElement.textContent = "By number of items";
 
-  checkboxWrapElement.appendChild(linkCheckboxElement);
-  checkboxWrapElement.appendChild(checkboxLabelElement);
+  linkCheckboxWrapElement.appendChild(linkCheckboxElement);
+  linkCheckboxWrapElement.appendChild(linkCheckboxLabelElement);
+
+  /** @type {HTMLDivElement} */
+  const randomizeCheckboxWrapElement = document.createElement("div");
+  randomizeCheckboxWrapElement.className = "start-exam-dialog__checkbox-wrap";
+
+  /** @type {HTMLInputElement} */
+  const randomizeCheckboxElement = document.createElement("input");
+  randomizeCheckboxElement.type = "checkbox";
+  randomizeCheckboxElement.id = "startExamRandomizeCheckbox";
+  randomizeCheckboxElement.className = "start-exam-dialog__checkbox";
+
+  /** @type {HTMLLabelElement} */
+  const randomizeCheckboxLabelElement = document.createElement("label");
+  randomizeCheckboxLabelElement.htmlFor = "startExamRandomizeCheckbox";
+  randomizeCheckboxLabelElement.className = "start-exam-dialog__checkbox-label";
+  randomizeCheckboxLabelElement.textContent = "Randomize questions";
+
+  randomizeCheckboxWrapElement.appendChild(randomizeCheckboxElement);
+  randomizeCheckboxWrapElement.appendChild(randomizeCheckboxLabelElement);
+
+  checkboxesRowElement.appendChild(linkCheckboxWrapElement);
+  checkboxesRowElement.appendChild(randomizeCheckboxWrapElement);
 
   // Dialog Action Buttons
   /** @type {HTMLDivElement} */
@@ -342,7 +377,7 @@ const createDialogDom = ({
   dialogElement.appendChild(headerElement);
   dialogElement.appendChild(rowContainerElement);
   dialogElement.appendChild(captionElement);
-  dialogElement.appendChild(checkboxWrapElement);
+  dialogElement.appendChild(checkboxesRowElement);
   dialogElement.appendChild(actionsElement);
   scrimElement.appendChild(dialogElement);
 
@@ -351,12 +386,14 @@ const createDialogDom = ({
     wheelElement,
     itemsColumnElement,
     itemStepperWrapElement,
+    allItemsButtonElement,
     stepperUpButtonElement,
     stepperDownButtonElement,
     hoursInputElement,
     minutesInputElement,
     secondsInputElement,
     linkCheckboxElement,
+    randomizeCheckboxElement,
     captionElement,
     confirmButtonElement,
     cancelButtonElement,
@@ -458,12 +495,14 @@ export const openStartExamDialog = ({
     wheelElement,
     itemsColumnElement,
     itemStepperWrapElement,
+    allItemsButtonElement,
     stepperUpButtonElement,
     stepperDownButtonElement,
     hoursInputElement,
     minutesInputElement,
     secondsInputElement,
     linkCheckboxElement,
+    randomizeCheckboxElement,
     captionElement,
     confirmButtonElement,
     cancelButtonElement,
@@ -542,6 +581,65 @@ export const openStartExamDialog = ({
     updateCaption(captionElement, currentTimeState, currentQuestionCount);
   };
 
+  /** @type {number} */
+  let previousQuestionCount = currentQuestionCount;
+  /** @type {boolean} */
+  let isAllItemsActive = false;
+
+  /**
+   * Updates visual and accessibility state for the All Items toggle button.
+   * @param {boolean} isActive - Whether the button is engaged.
+   * @returns {void}
+   */
+  const updateAllItemsButtonState = (isActive) => {
+    isAllItemsActive = Boolean(isActive);
+    if (allItemsButtonElement) {
+      if (isAllItemsActive) {
+        allItemsButtonElement.classList.add("start-exam-dialog__all-items-button--active");
+        allItemsButtonElement.setAttribute("aria-pressed", "true");
+      } else {
+        allItemsButtonElement.classList.remove("start-exam-dialog__all-items-button--active");
+        allItemsButtonElement.setAttribute("aria-pressed", "false");
+      }
+    }
+  };
+
+  if (allItemsButtonElement) {
+    allItemsButtonElement.addEventListener("click", () => {
+      if (!isAllItemsActive) {
+        previousQuestionCount = currentQuestionCount;
+        currentQuestionCount = safeMaximum;
+        scrollWheelToCount(safeMaximum, true);
+        updateRowVisuals(currentQuestionCount);
+        updateAllItemsButtonState(true);
+        if (currentTimeState.linked) {
+          currentTimeState = onQuestionCountChanged(
+            currentTimeState,
+            currentQuestionCount
+          );
+          syncTimeInputsFromState();
+        }
+      } else {
+        const restoredCount = clampQuestionCount(
+          previousQuestionCount,
+          safeMinimum,
+          safeMaximum
+        );
+        currentQuestionCount = restoredCount;
+        scrollWheelToCount(restoredCount, true);
+        updateRowVisuals(currentQuestionCount);
+        updateAllItemsButtonState(false);
+        if (currentTimeState.linked) {
+          currentTimeState = onQuestionCountChanged(
+            currentTimeState,
+            currentQuestionCount
+          );
+          syncTimeInputsFromState();
+        }
+      }
+    });
+  }
+
   // Initial scroll position setup (without smooth animation)
   requestAnimationFrame(() => {
     scrollWheelToCount(currentQuestionCount, false);
@@ -575,6 +673,10 @@ export const openStartExamDialog = ({
       if (calculatedCount !== currentQuestionCount) {
         currentQuestionCount = calculatedCount;
         updateRowVisuals(currentQuestionCount);
+
+        if (isAllItemsActive && currentQuestionCount !== safeMaximum) {
+          updateAllItemsButtonState(false);
+        }
 
         if (currentTimeState.linked) {
           currentTimeState = onQuestionCountChanged(
@@ -905,7 +1007,11 @@ export const openStartExamDialog = ({
   // Actions
   confirmButtonElement.addEventListener("click", () => {
     /** @type {Object} */
-    const startResult = buildStartResult(currentQuestionCount, currentTimeState);
+    const startResult = buildStartResult(
+      currentQuestionCount,
+      currentTimeState,
+      Boolean(randomizeCheckboxElement?.checked)
+    );
     closeDialog();
     if (typeof onConfirm === "function") {
       onConfirm(startResult);

@@ -28,7 +28,8 @@ import {
   DEFAULT_MOCK_EXAM_QUESTION_COUNT,
   buildSectionExamDeck,
   restoreSectionExamDeck,
-  DEFAULT_SECTION_EXAM_QUESTION_COUNT
+  DEFAULT_SECTION_EXAM_QUESTION_COUNT,
+  shuffleInPlace
 } from "../../../sections/quiz-engine/scripts/mock-exam-sampler.js";
 
 css(import.meta, ["../styles/app.css"]);
@@ -799,7 +800,7 @@ export class App extends Component {
                 resumeSavedSession(latestSession);
               }
             },
-            onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
+            onStartQuiz: ({ isTimed, durationSeconds, questionCount, isRandomized = false }) => {
               clearActiveSession();
               /** @type {Object} */
               const mockDeck = buildMockExamDeck({
@@ -808,6 +809,10 @@ export class App extends Component {
                 sectionBounds,
                 questionBudget: questionCount
               });
+
+              if (isRandomized && Array.isArray(mockDeck?.questions)) {
+                shuffleInPlace(mockDeck.questions);
+              }
 
               mountQuizEngine({
                 examScope: "full",
@@ -857,7 +862,7 @@ export class App extends Component {
             sectionDescription,
             sectionIcon,
             questionRangeText,
-            onStartQuiz: ({ isTimed, durationSeconds, questionCount }) => {
+            onStartQuiz: ({ isTimed, durationSeconds, questionCount, isRandomized = false }) => {
               clearActiveSession();
               /** @type {Object} */
               const sectionDeck = buildSectionExamDeck({
@@ -867,6 +872,10 @@ export class App extends Component {
                 sectionIndex: tabIndex,
                 questionCount
               });
+
+              if (isRandomized && Array.isArray(sectionDeck?.questions)) {
+                shuffleInPlace(sectionDeck.questions);
+              }
 
               mountQuizEngine({
                 examScope: "section",

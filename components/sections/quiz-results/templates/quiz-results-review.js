@@ -307,14 +307,31 @@ export class QuizResultsReview extends Component {
             : "";
 
           /** @type {string} */
-          const cleanExplanation = String(questionItem.explanation || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+          const rawExplanation = typeof questionItem.explanation === "string" ? questionItem.explanation.trim() : "";
+          /** @type {string} */
+          const cleanExplanation = rawExplanation.toLowerCase().replace(/[^a-z0-9]/g, "");
           /** @type {string} */
           const cleanQuestion = String(questionItem.question || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+          /** @type {string} */
+          const cleanAnswer = String(questionItem.answer || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+          /** @type {boolean} */
+          const isPlaceholderExplanation = [
+            "none",
+            "na",
+            "noexplanation",
+            "noexplanationavailable",
+            "null",
+            "undefined"
+          ].includes(cleanExplanation);
+
           /** @type {boolean} */
           const shouldRenderExplanation = Boolean(
-            questionItem.explanation &&
+            rawExplanation.length > 0 &&
+            cleanExplanation.length > 0 &&
+            !isPlaceholderExplanation &&
             questionItem.type !== "multi_part_diagram" &&
-            cleanExplanation !== cleanQuestion
+            cleanExplanation !== cleanQuestion &&
+            cleanExplanation !== cleanAnswer
           );
 
           /** @type {string} */
@@ -326,7 +343,7 @@ export class QuizResultsReview extends Component {
                   <span>Explanation</span>
                 </summary>
                 <div class="quiz-review__explanation-content">
-                  <p>${questionItem.explanation}</p>
+                  <p>${rawExplanation}</p>
                 </div>
               </details>
             `

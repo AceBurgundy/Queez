@@ -171,9 +171,10 @@ export const formatSecondsToClockString = (totalSeconds) => {
  * Builds the final result payload for the onConfirm callback.
  * @param {number} questionCount - Selected question count.
  * @param {{ hours: number, minutes: number, seconds?: number, linked: boolean }} timeState - Final timer state.
- * @returns {{ isTimed: boolean, durationSeconds: number, formattedTime: string, questionCount: number }} Result payload.
+ * @param {boolean} [isRandomized=false] - Whether to shuffle questions.
+ * @returns {{ isTimed: boolean, durationSeconds: number, formattedTime: string, questionCount: number, isRandomized: boolean }} Result payload.
  */
-export const buildStartResult = (questionCount, timeState) => {
+export const buildStartResult = (questionCount, timeState, isRandomized = false) => {
   /** @type {number} */
   const safeCount = Math.max(1, Math.floor(Number(questionCount)) || 1);
   /** @type {number} */
@@ -189,6 +190,7 @@ export const buildStartResult = (questionCount, timeState) => {
     isTimed,
     durationSeconds: totalSeconds,
     formattedTime,
-    questionCount: safeCount
+    questionCount: safeCount,
+    isRandomized: Boolean(isRandomized)
   };
 };
