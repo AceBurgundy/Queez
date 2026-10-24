@@ -181,7 +181,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-guernsey.png",
+          "image": "assets/breed-guernsey.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the dairy cattle breed shown in the photograph:",
           "options": {},
@@ -196,7 +196,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-dairy-shorthorn.png",
+          "image": "assets/breed-dairy-shorthorn.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the dual-purpose dairy cattle breed shown in the photograph:",
           "options": {},
@@ -211,7 +211,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-ayrshire.png",
+          "image": "assets/breed-ayrshire.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the dairy cattle breed shown in the photograph:",
           "options": {},
@@ -227,7 +227,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-jersey.png",
+          "image": "assets/breed-jersey.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the dairy cattle breed shown in the photograph:",
           "options": {},
@@ -257,7 +257,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-holstein-friesian.png",
+          "image": "assets/breed-holstein-friesian.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the dairy cattle breed shown in the photograph:",
           "options": {},
@@ -303,7 +303,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-red-sindhi.png",
+          "image": "assets/breed-red-sindhi.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the tropical dairy cattle breed shown in the photograph:",
           "options": {},
@@ -319,7 +319,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-sahiwal.png",
+          "image": "assets/breed-sahiwal.jpg",
           "caption": "Dairy Cattle Breed — Visual Identification",
           "question": "Identify the tropical dairy cattle breed shown in the photograph:",
           "options": {},
@@ -349,7 +349,7 @@
         },
         {
           "type": "identification",
-          "image": "assets/breed-bos-indicus.png",
+          "image": "assets/breed-bos-indicus.jpg",
           "caption": "Cattle Species — Visual Identification",
           "question": "Identify the tropical cattle species shown in the photograph:",
           "options": {},
@@ -501,7 +501,7 @@
             "rumen",
             "paunch"
           ],
-          "explanation": "Answer: RUMEN.",
+          "explanation": "",
           "number": 27
         },
         {
@@ -515,7 +515,7 @@
             "reticulum",
             "honeycomb"
           ],
-          "explanation": "Answer: RETICULUM.",
+          "explanation": "",
           "number": 28
         },
         {
@@ -541,7 +541,7 @@
             "abomasum",
             "true stomach"
           ],
-          "explanation": "Answer: ABOMASUM.",
+          "explanation": "",
           "number": 30
         },
         {
@@ -556,7 +556,7 @@
             "large intestines",
             "colon"
           ],
-          "explanation": "Answer: LARGE INTESTINE.",
+          "explanation": "",
           "number": 31
         },
         {
@@ -569,7 +569,7 @@
             "LIVER",
             "liver"
           ],
-          "explanation": "Answer: LIVER.",
+          "explanation": "",
           "number": 32
         },
         {
@@ -643,7 +643,7 @@
             "proteins",
             "crude protein"
           ],
-          "explanation": "Answer: PROTEIN.",
+          "explanation": "",
           "number": 37
         },
         {
@@ -657,7 +657,7 @@
             "mineral",
             "minerals"
           ],
-          "explanation": "Answer: MINERALS.",
+          "explanation": "",
           "number": 38
         },
         {
@@ -669,7 +669,7 @@
           "accepted_answers": [
             "WATER"
           ],
-          "explanation": "Answer: WATER.",
+          "explanation": "",
           "number": 39
         },
         {
@@ -683,7 +683,7 @@
             "vitamin",
             "vitamins"
           ],
-          "explanation": "Answer: VITAMINS.",
+          "explanation": "",
           "number": 40
         },
         {
@@ -698,7 +698,7 @@
             "fats",
             "lipids"
           ],
-          "explanation": "Answer: FATS.",
+          "explanation": "",
           "number": 41
         },
         {
@@ -712,7 +712,7 @@
             "carbohydrate",
             "carbohydrates"
           ],
-          "explanation": "Answer: CARBOHYDRATE.",
+          "explanation": "",
           "number": 42
         },
         {
@@ -727,7 +727,7 @@
             "amino acid",
             "animo acid"
           ],
-          "explanation": "Answer: ANIMO ACID.",
+          "explanation": "",
           "number": 43
         },
         {
@@ -1083,7 +1083,7 @@
             "D": "Shredder"
           },
           "answer": "B",
-          "explanation": "The correct answer is B (Grass chopper machine).",
+          "explanation": "",
           "number": 59
         },
         {
@@ -1097,7 +1097,7 @@
             "D": "Portable milking machine"
           },
           "answer": "D",
-          "explanation": "The correct answer is D (Portable milking machine).",
+          "explanation": "",
           "number": 60
         },
         {
@@ -1111,7 +1111,7 @@
             "D": "Rinser"
           },
           "answer": "B",
-          "explanation": "The correct answer is B (Manual manure scraper).",
+          "explanation": "",
           "number": 61
         },
         {
@@ -1125,7 +1125,7 @@
             "D": "Wheelbarrow"
           },
           "answer": "D",
-          "explanation": "The correct answer is D (Wheelbarrow).",
+          "explanation": "",
           "number": 62
         },
         {
@@ -1139,7 +1139,7 @@
             "D": "Fencer blade"
           },
           "answer": "C",
-          "explanation": "The correct answer is C (Fencer graft).",
+          "explanation": "",
           "number": 63
         },
         {
@@ -1153,7 +1153,7 @@
             "D": "Sickle"
           },
           "answer": "D",
-          "explanation": "The correct answer is D (Sickle).",
+          "explanation": "",
           "number": 64
         },
         {
@@ -1167,7 +1167,7 @@
             "D": "Shovel"
           },
           "answer": "B",
-          "explanation": "The correct answer is B (Rake).",
+          "explanation": "",
           "number": 65
         },
         {
@@ -1181,7 +1181,7 @@
             "D": "Rake"
           },
           "answer": "B",
-          "explanation": "The correct answer is B (Pitchfork).",
+          "explanation": "",
           "number": 66
         },
         {
@@ -1195,7 +1195,7 @@
             "D": "Pitchfork"
           },
           "answer": "B",
-          "explanation": "The correct answer is B (Spade).",
+          "explanation": "",
           "number": 67
         },
         {
@@ -1209,7 +1209,7 @@
             "D": "Pitchfork"
           },
           "answer": "B",
-          "explanation": "The correct answer is B (Shovel).",
+          "explanation": "",
           "number": 68
         }
       ]
@@ -1440,7 +1440,7 @@
               ]
             }
           ],
-          "explanation": "Official anatomical conformation review diagram for dairy cattle (Parts 1 to 23).",
+          "explanation": "",
           "number": 69
         }
       ]
@@ -1551,7 +1551,7 @@
               ]
             }
           ],
-          "explanation": "Mechanical and operational assembly components of a portable milking machine (Parts 1 to 10).",
+          "explanation": "",
           "number": 70
         }
       ]
@@ -1807,7 +1807,7 @@
             "CUD",
             "cud"
           ],
-          "explanation": "Answer: CUD.",
+          "explanation": "",
           "number": 86
         },
         {
@@ -1823,7 +1823,7 @@
             "cud-chewing",
             "rumination"
           ],
-          "explanation": "Answer: CUD CHEWING.",
+          "explanation": "",
           "number": 87
         },
         {
@@ -1837,7 +1837,7 @@
             "mastication",
             "chewing"
           ],
-          "explanation": "Answer: MASTICATION.",
+          "explanation": "",
           "number": 88
         },
         {
@@ -1850,7 +1850,7 @@
             "PREHENSION",
             "prehension"
           ],
-          "explanation": "Answer: PREHENSION.",
+          "explanation": "",
           "number": 89
         },
         {
@@ -1864,7 +1864,7 @@
             "colostrum",
             "first milk"
           ],
-          "explanation": "Answer: COLOSTRUM.",
+          "explanation": "",
           "number": 90
         },
         {
@@ -1879,7 +1879,7 @@
             "difficult calving",
             "difficult birth"
           ],
-          "explanation": "Answer: DYSTOCIA.",
+          "explanation": "",
           "number": 91
         },
         {
@@ -1895,7 +1895,7 @@
             "parturation",
             "calving"
           ],
-          "explanation": "Answer: PARTURATION.",
+          "explanation": "",
           "number": 92
         },
         {
@@ -1910,7 +1910,7 @@
             "calf separation",
             "weaning"
           ],
-          "explanation": "Answer: SEPARATION.",
+          "explanation": "",
           "number": 93
         },
         {

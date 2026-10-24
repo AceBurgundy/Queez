@@ -314,6 +314,23 @@ export class QuizResultsReview extends Component {
           const cleanQuestion = String(questionItem.question || "").toLowerCase().replace(/[^a-z0-9]/g, "");
           /** @type {string} */
           const cleanAnswer = String(questionItem.answer || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+          /** @type {string} */
+          let cleanOptionAnswerText = "";
+          if (questionItem.options && typeof questionItem.options === "object") {
+            /** @type {string|undefined} */
+            const optionContent = questionItem.options[questionItem.answer];
+            if (typeof optionContent === "string") {
+              cleanOptionAnswerText = optionContent.toLowerCase().replace(/[^a-z0-9]/g, "");
+            }
+          }
+
+          // Strip common answer-announcing boilerplate prefixes and choice letters
+          /** @type {string} */
+          const strippedExplanation = cleanExplanation
+            .replace(/^(thecorrectansweris|correctansweris|theansweris|answeris|correctanswer|answer|ans)/, "")
+            .replace(/^[a-d]/, "");
+
           /** @type {boolean} */
           const isPlaceholderExplanation = [
             "none",
@@ -321,17 +338,38 @@ export class QuizResultsReview extends Component {
             "noexplanation",
             "noexplanationavailable",
             "null",
-            "undefined"
+            "undefined",
+            "notapplicable",
+            "nil"
           ].includes(cleanExplanation);
+
+          /** @type {boolean} */
+          const isAnswerEcho = Boolean(
+            cleanExplanation === cleanAnswer ||
+            cleanExplanation === cleanQuestion ||
+            (cleanOptionAnswerText.length > 0 && cleanExplanation === cleanOptionAnswerText) ||
+            (strippedExplanation.length > 0 && (
+              strippedExplanation === cleanAnswer ||
+              strippedExplanation === cleanOptionAnswerText
+            )) ||
+            strippedExplanation.length === 0
+          );
+
+          /** @type {boolean} */
+          const isDiagramMetadata = Boolean(
+            questionItem.type === "multi_part_diagram" ||
+            questionItem.answer === "DIAGRAM_MULTI_PART" ||
+            cleanExplanation.includes("reviewdiagramfordairycattle") ||
+            cleanExplanation.includes("assemblycomponentsofaportablemilkingmachine")
+          );
 
           /** @type {boolean} */
           const shouldRenderExplanation = Boolean(
             rawExplanation.length > 0 &&
             cleanExplanation.length > 0 &&
             !isPlaceholderExplanation &&
-            questionItem.type !== "multi_part_diagram" &&
-            cleanExplanation !== cleanQuestion &&
-            cleanExplanation !== cleanAnswer
+            !isAnswerEcho &&
+            !isDiagramMetadata
           );
 
           /** @type {string} */

@@ -366,12 +366,69 @@ export function generateOfflineResultsHtml(exportData) {
           ? \`<div style="text-align:center;font-size:0.85rem;font-style:italic;color:var(--on-surface-variant);margin-bottom:0.5rem;">\${q.caption}</div>\`
           : '';
 
-        const cleanExp = String(q.explanation || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-        const cleanQ = String(q.question || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        /** @type {string} */
+        const rawExplanationText = typeof q.explanation === "string" ? q.explanation.trim() : "";
+        /** @type {string} */
+        const cleanedExplanation = rawExplanationText.toLowerCase().replace(/[^a-z0-9]/g, "");
+        /** @type {string} */
+        const cleanedQuestionText = String(q.question || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+        /** @type {string} */
+        const cleanedAnswerText = String(q.answer || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+        /** @type {string} */
+        let cleanedOptionContent = "";
+        if (q.options && typeof q.options === "object") {
+          /** @type {string|undefined} */
+          const matchingOption = q.options[q.answer];
+          if (typeof matchingOption === "string") {
+            cleanedOptionContent = matchingOption.toLowerCase().replace(/[^a-z0-9]/g, "");
+          }
+        }
+
+        /** @type {string} */
+        const strippedPrefixExplanation = cleanedExplanation
+          .replace(/^(thecorrectansweris|correctansweris|theansweris|answeris|correctanswer|answer|ans)/, "")
+          .replace(/^[a-d]/, "");
+
+        /** @type {boolean} */
+        const isPlaceholder = [
+          "none",
+          "na",
+          "noexplanation",
+          "noexplanationavailable",
+          "null",
+          "undefined",
+          "notapplicable",
+          "nil"
+        ].includes(cleanedExplanation);
+
+        /** @type {boolean} */
+        const isEcho = Boolean(
+          cleanedExplanation === cleanedAnswerText ||
+          cleanedExplanation === cleanedQuestionText ||
+          (cleanedOptionContent.length > 0 && cleanedExplanation === cleanedOptionContent) ||
+          (strippedPrefixExplanation.length > 0 && (
+            strippedPrefixExplanation === cleanedAnswerText ||
+            strippedPrefixExplanation === cleanedOptionContent
+          )) ||
+          strippedPrefixExplanation.length === 0
+        );
+
+        /** @type {boolean} */
+        const isDiagram = Boolean(
+          q.type === 'multi_part_diagram' ||
+          q.answer === "DIAGRAM_MULTI_PART" ||
+          cleanedExplanation.includes("reviewdiagramfordairycattle") ||
+          cleanedExplanation.includes("assemblycomponentsofaportablemilkingmachine")
+        );
+
+        /** @type {boolean} */
         const shouldShowExplanation = Boolean(
-          q.explanation &&
-          q.type !== 'multi_part_diagram' &&
-          cleanExp !== cleanQ
+          rawExplanationText.length > 0 &&
+          cleanedExplanation.length > 0 &&
+          !isPlaceholder &&
+          !isEcho &&
+          !isDiagram
         );
 
         const explanationHtml = shouldShowExplanation
