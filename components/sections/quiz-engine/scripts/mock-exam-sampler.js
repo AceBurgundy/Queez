@@ -377,8 +377,8 @@ export const buildMockExamDeck = ({
     }
     return {
       deckQuizId: quizId,
-      questions,
-      sectionBounds,
+      questions: questions.map((question) => ({ ...question })),
+      sectionBounds: sectionBounds.map((bound) => ({ ...bound })),
       sourceNumbers: questions.map((question) => question.number),
       isSampled: false,
       examScope: "full"
@@ -541,49 +541,38 @@ export const buildSectionExamDeck = ({
   /** @type {number} */
   const effectiveCount = Math.max(1, Math.min(normalizedBudget, pool.length));
 
-  if (effectiveCount >= pool.length) {
-    if (typeof window !== "undefined" && window.localStorage) {
-      try {
-        window.localStorage.removeItem(ACTIVE_MOCK_DECK_STORAGE_KEY);
-      } catch (error) {
-        console.warn("Failed to clear active mock deck storage:", error);
-      }
-    }
-    return {
-      deckQuizId: quizId,
-      questions,
-      sectionBounds,
-      sourceNumbers: pool.map((question) => question.number),
-      isSampled: false,
-      examScope: "section",
-      sectionCategoryIndex: clampedSectionIndex
-    };
-  }
-
   /** @type {string} */
   const deckQuizId = `${quizId}::section${clampedSectionIndex}`;
-  /** @type {Record<string, Record<string, Array<number>>>>} */
-  const historyStore = loadMockExamHistory();
-  if (!historyStore[quizId]) {
-    historyStore[quizId] = {};
+  /** @type {Array<Object>} */
+  let selectedQuestions = [];
+
+  if (effectiveCount >= pool.length) {
+    selectedQuestions = pool.map((question) => ({ ...question }));
+  } else {
+    /** @type {Record<string, Record<string, Array<number>>>>} */
+    const historyStore = loadMockExamHistory();
+    if (!historyStore[quizId]) {
+      historyStore[quizId] = {};
+    }
+    /** @type {Record<string, Array<number>>} */
+    const quizHistory = historyStore[quizId];
+    /** @type {Array<number>} */
+    const pastServed = quizHistory[String(clampedSectionIndex)] || [];
+
+    const selectionResult = selectSectionQuestions(
+      pool,
+      effectiveCount,
+      pastServed,
+      randomSource
+    );
+    selectedQuestions = selectionResult.selected;
+
+    quizHistory[String(clampedSectionIndex)] = selectionResult.updatedServed;
+    saveMockExamHistory(historyStore);
   }
-  /** @type {Record<string, Array<number>>} */
-  const quizHistory = historyStore[quizId];
-  /** @type {Array<number>} */
-  const pastServed = quizHistory[String(clampedSectionIndex)] || [];
-
-  const { selected, updatedServed } = selectSectionQuestions(
-    pool,
-    effectiveCount,
-    pastServed,
-    randomSource
-  );
-
-  quizHistory[String(clampedSectionIndex)] = updatedServed;
-  saveMockExamHistory(historyStore);
 
   // Preserve relative order of selected questions from the source section
-  selected.sort(
+  selectedQuestions.sort(
     (firstQuestion, secondQuestion) =>
       firstQuestion.number - secondQuestion.number
   );
@@ -595,7 +584,7 @@ export const buildSectionExamDeck = ({
   /** @type {Array<number>} */
   const sourceNumbers = [];
 
-  selected.forEach((sourceQuestion, itemIndex) => {
+  selectedQuestions.forEach((sourceQuestion, itemIndex) => {
     /** @type {number} */
     const assignedNumber = itemIndex + 1;
     solutionNumberMapping[assignedNumber] = sourceQuestion.number;
@@ -650,7 +639,7 @@ export const buildSectionExamDeck = ({
     questions: deckQuestions,
     sectionBounds: deckBounds,
     sourceNumbers,
-    isSampled: true,
+    isSampled: effectiveCount < pool.length,
     examScope: "section",
     sectionCategoryIndex: clampedSectionIndex
   };
