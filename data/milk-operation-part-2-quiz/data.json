@@ -811,65 +811,65 @@
             {
               "id": 1,
               "label": "1",
-              "text": "Harvesting — Harvest forage crops such as Corn or Napier grass",
+              "text": "Harvesting — Harvest forage crops such as Corn or Napier grass at the proper vegetative stage",
               "type": "reorder_card",
-              "answer": "Harvesting — Harvest forage crops such as Corn or Napier grass",
+              "answer": "Harvesting — Harvest forage crops such as Corn or Napier grass at the proper vegetative stage",
               "accepted_answers": [
-                "Harvesting — Harvest forage crops such as Corn or Napier grass"
+                "Harvesting — Harvest forage crops such as Corn or Napier grass at the proper vegetative stage"
               ]
             },
             {
               "id": 2,
               "label": "2",
-              "text": "Chopping — Cut forage to 3/4 to 1 inch at 65%–75% moisture and verify with the hand squeeze test",
+              "text": "Chopping — Chop harvested forage into uniform lengths to facilitate tight packing and rapid fermentation",
               "type": "reorder_card",
-              "answer": "Chopping — Cut forage to 3/4 to 1 inch at 65%–75% moisture and verify with the hand squeeze test",
+              "answer": "Chopping — Chop harvested forage into uniform lengths to facilitate tight packing and rapid fermentation",
               "accepted_answers": [
-                "Chopping — Cut forage to 3/4 to 1 inch at 65%–75% moisture and verify with the hand squeeze test"
+                "Chopping — Chop harvested forage into uniform lengths to facilitate tight packing and rapid fermentation"
               ]
             },
             {
               "id": 3,
               "label": "3",
-              "text": "Filling the silage bag — Pack the chopped green forage into the plastic silage bag",
+              "text": "Filling the silage bag — Pack the chopped green forage evenly into the plastic silage bag",
               "type": "reorder_card",
-              "answer": "Filling the silage bag — Pack the chopped green forage into the plastic silage bag",
+              "answer": "Filling the silage bag — Pack the chopped green forage evenly into the plastic silage bag",
               "accepted_answers": [
-                "Filling the silage bag — Pack the chopped green forage into the plastic silage bag"
+                "Filling the silage bag — Pack the chopped green forage evenly into the plastic silage bag"
               ]
             },
             {
               "id": 4,
               "label": "4",
-              "text": "Compacting — Press down every 3 inches of added chopped forage to remove air and prevent decomposition",
+              "text": "Compacting — Press down chopped forage progressively in thin layers to expel oxygen and prevent spoilage",
               "type": "reorder_card",
-              "answer": "Compacting — Press down every 3 inches of added chopped forage to remove air and prevent decomposition",
+              "answer": "Compacting — Press down chopped forage progressively in thin layers to expel oxygen and prevent spoilage",
               "accepted_answers": [
-                "Compacting — Press down every 3 inches of added chopped forage to remove air and prevent decomposition"
+                "Compacting — Press down chopped forage progressively in thin layers to expel oxygen and prevent spoilage"
               ]
             },
             {
               "id": 5,
               "label": "5",
-              "text": "Sealing the bag — Seal the bag completely airtight so fermentation produces lactic acid and prevents mold",
+              "text": "Sealing the bag — Seal the bag completely airtight to initiate anaerobic fermentation and block aerobic microbes",
               "type": "reorder_card",
-              "answer": "Sealing the bag — Seal the bag completely airtight so fermentation produces lactic acid and prevents mold",
+              "answer": "Sealing the bag — Seal the bag completely airtight to initiate anaerobic fermentation and block aerobic microbes",
               "accepted_answers": [
-                "Sealing the bag — Seal the bag completely airtight so fermentation produces lactic acid and prevents mold"
+                "Sealing the bag — Seal the bag completely airtight to initiate anaerobic fermentation and block aerobic microbes"
               ]
             },
             {
               "id": 6,
               "label": "6",
-              "text": "Storage — Label and stack bags indoors, prevent animals from climbing on them, and inspect regularly for holes",
+              "text": "Storage — Stack bags securely indoors, protect from pest damage, and inspect regularly for punctures",
               "type": "reorder_card",
-              "answer": "Storage — Label and stack bags indoors, prevent animals from climbing on them, and inspect regularly for holes",
+              "answer": "Storage — Stack bags securely indoors, protect from pest damage, and inspect regularly for punctures",
               "accepted_answers": [
-                "Storage — Label and stack bags indoors, prevent animals from climbing on them, and inspect regularly for holes"
+                "Storage — Stack bags securely indoors, protect from pest damage, and inspect regularly for punctures"
               ]
             }
           ],
-          "explanation": "Bag silage preparation involves harvesting, chopping, filling, compacting every 3 inches, airtight sealing, and careful indoor storage.",
+          "explanation": "Bag silage preparation involves chronological harvesting, uniform chopping, thorough incremental compaction, airtight sealing, and secure indoor storage.",
           "number": 49
         },
         {
@@ -941,35 +941,35 @@
             {
               "id": 1,
               "label": "1",
-              "text": "Take a handful of freshly chopped forage",
+              "text": "Take a handful of freshly chopped forage directly from the harvest",
               "type": "reorder_card",
-              "answer": "Take a handful of freshly chopped forage",
+              "answer": "Take a handful of freshly chopped forage directly from the harvest",
               "accepted_answers": [
-                "Take a handful of freshly chopped forage"
+                "Take a handful of freshly chopped forage directly from the harvest"
               ]
             },
             {
               "id": 2,
               "label": "2",
-              "text": "Squeeze the handful of chopped forage tightly into a ball",
+              "text": "Squeeze the handful of forage firmly in your palm for 20 to 30 seconds to form a ball",
               "type": "reorder_card",
-              "answer": "Squeeze the handful of chopped forage tightly into a ball",
+              "answer": "Squeeze the handful of forage firmly in your palm for 20 to 30 seconds to form a ball",
               "accepted_answers": [
-                "Squeeze the handful of chopped forage tightly into a ball"
+                "Squeeze the handful of forage firmly in your palm for 20 to 30 seconds to form a ball"
               ]
             },
             {
               "id": 3,
               "label": "3",
-              "text": "Release your grip and observe whether the ball slowly falls apart (indicating 65%–75% ideal moisture)",
+              "text": "Release palm pressure and inspect the physical behavior and cohesion of the forage ball",
               "type": "reorder_card",
-              "answer": "Release your grip and observe whether the ball slowly falls apart (indicating 65%–75% ideal moisture)",
+              "answer": "Release palm pressure and inspect the physical behavior and cohesion of the forage ball",
               "accepted_answers": [
-                "Release your grip and observe whether the ball slowly falls apart (indicating 65%–75% ideal moisture)"
+                "Release palm pressure and inspect the physical behavior and cohesion of the forage ball"
               ]
             }
           ],
-          "explanation": "The hand moisture squeeze test: take a handful, squeeze into a ball, and release; forage that slowly falls apart is at the ideal 65%–75% moisture.",
+          "explanation": "The hand squeeze test estimates forage moisture prior to ensiling by assessing ball formation and cohesion upon releasing palm pressure.",
           "number": 51
         },
         {
