@@ -1031,15 +1031,15 @@
         },
         {
           "type": "multiple_choice",
-          "question": "When is prepared silage ready for feeding at a minimum, and how many days of curing produce optimum fermentation as a rule of thumb?",
+          "question": "What is the sequence of primary microbial and biochemical phases that occur during the anaerobic curing of silage?",
           "options": {
-            "A": "Ready in 7 days; 14 to 21 days for optimum fermentation",
-            "B": "Ready in at least 3 weeks (21 days); 60 to 70 days produces optimum fermentation",
-            "C": "Ready in 45 days; 120 days for optimum fermentation",
-            "D": "Ready immediately after sealing; 30 days for optimum fermentation"
+            "A": "Aerobic respiration phase (oxygen depletion) → Acid production phase (fermentation of sugars to lactic acid) → Stable preservation phase",
+            "B": "Immediate mold growth phase → Spoilage phase → Thermal dehydration phase",
+            "C": "Washing phase → Evaporative drying phase → Direct aerobic feeding phase",
+            "D": "Thermal heating phase → Carbon dioxide venting phase → Dehydration phase"
           },
-          "answer": "B",
-          "explanation": "Silage is usable after 21 days, but 60 to 70 days produces optimum lactic fermentation.",
+          "answer": "A",
+          "explanation": "Silage curing proceeds through initial oxygen depletion by plant respiration, anaerobic bacterial lactic fermentation lowering pH to <4.2, and the resulting stable preservation phase.",
           "number": 56
         },
         {

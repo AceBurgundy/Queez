@@ -1,7 +1,16 @@
 {
   "schema_version": "quiz-data.v1",
-  "id": "milk-operation-farm-management",
-  "title": "MILK OPERATION AND FARM MANAGEMENT",
+  "id": "milk-operation-quiz",
+  "title": "Milk Operation and Farm Management (Comprehensive Master Examination)",
+  "subtitle": "Complete 26-Section Master Bank: 620 Questions covering Theoretical Foundations, Applied Practicum, Visual Breed ID, Equipment Diagrams, Ration Math & Diagnostics",
+  "publisher": "Dairy Farming & Livestock Technical Series",
+  "instructions": [
+    "This comprehensive master examination consists of 26 modules containing 620 total questions.",
+    "Sections 1 through 12 cover theoretical and operational textbook foundations (Overview, Breeds & BCS, Breeding, Anatomy, Digestion, Nutrition, Forage, Silage, Housing, Calving, Diseases, Milking Equipment).",
+    "Sections 13 through 26 cover applied practicum, visual breed identification, interactive diagrams, clinical terminology, daily schedules, milking physics, ration math, and mastitis diagnostics.",
+    "Choose the best answer for multiple choice items, provide accurate text inputs for identification items, and drag or reorder sequence cards as indicated.",
+    "Answer all items thoroughly to evaluate your mastery across the complete dairy curriculum."
+  ],
   "sections": [
     {
       "id": "overview-history",
@@ -5794,13 +5803,3049 @@
         }
       ],
       "description": "Milking machines, sanitation procedures, milk hygiene, storage, cooling tanks, and dairy parlor equipment."
+    },
+    {
+      "id": "practicum-dairy-cattle-breeds",
+      "title": "Part II: Different Breeds of Dairy Cattle",
+      "description": "Characterization of Bos taurus vs. Bos indicus and specifications of primary temperate and tropical dairy breeds.",
+      "questions": [
+        {
+          "type": "identification",
+          "question": "Scientific name of the temperate cattle species characterized by having no humps, short legs, a broad rump, and highly developed milk production:",
+          "options": {},
+          "answer": "Bos taurus",
+          "accepted_answers": [
+            "Bos taurus",
+            "Bostaurus",
+            "Temperate cattle"
+          ],
+          "explanation": "Bos taurus cattle originate from temperate countries, are humpless, and are characterized by highly developed milk production.",
+          "number": 465
+        },
+        {
+          "type": "identification",
+          "question": "Scientific name of the tropical cattle species known for prominent humps, long legs, a sloping rump, heat resistance, and tolerance to diseases and parasites:",
+          "options": {},
+          "answer": "Bos indicus",
+          "accepted_answers": [
+            "Bos indicus",
+            "Bosindicus",
+            "Zebu"
+          ],
+          "explanation": "Bos indicus (zebu) cattle are widely distributed in tropical regions, possess a prominent hump, and have natural tolerance to heat and parasites.",
+          "number": 466
+        },
+        {
+          "type": "identification",
+          "question": "Dairy cattle breed originating from the Netherlands with distinctive black-and-white markings, the largest body weight (680–770 kg), and the highest annual milk yield (10,220 kg/year):",
+          "options": {},
+          "answer": "Holstein Friesian",
+          "accepted_answers": [
+            "Holstein Friesian",
+            "Holstein",
+            "Friesian"
+          ],
+          "explanation": "Holstein Friesian originates from the Netherlands and produces the highest milk yield of any dairy breed (10,220 kg/year).",
+          "number": 467
+        },
+        {
+          "type": "identification",
+          "question": "Smallest dairy cattle breed (400–450 kg) originating from Jersey Island, France, with a light brown coat and the highest milk fat content (4.8%), making its milk best used for cheese:",
+          "options": {},
+          "answer": "Jersey",
+          "accepted_answers": [
+            "Jersey",
+            "Jersey cow",
+            "Jersey cattle"
+          ],
+          "explanation": "Jersey cattle weigh 400–450 kg, produce milk with 4.8% fat and 3.7% protein, and are prized for cheesemaking.",
+          "number": 468
+        },
+        {
+          "type": "identification",
+          "question": "Dual-purpose (milk and beef) dairy breed originating from Switzerland with brown to light-gray markings that resists extreme solar radiation and yields ~9,900 kg milk/year:",
+          "options": {},
+          "answer": "Brown Swiss",
+          "accepted_answers": [
+            "Brown Swiss"
+          ],
+          "explanation": "Brown Swiss originates from Switzerland, serves dual-purpose milk and beef production, and withstands extreme solar radiation.",
+          "number": 469
+        },
+        {
+          "type": "identification",
+          "question": "Tropical zebu dairy breed originating from Gujarat, India, characterized by a mottled red, yellow, and white coat, heat resistance, and tolerance to tropical diseases:",
+          "options": {},
+          "answer": "Gyr",
+          "accepted_answers": [
+            "Gyr",
+            "Gir",
+            "Gyr/Gir"
+          ],
+          "explanation": "Gyr (or Gir) originates from Gujarat, India, and is well-adapted to tropical conditions with good udder conformation.",
+          "number": 470
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which dairy cattle breed originates from the Isle of Guernsey, France, has yellow to reddish-brown and white markings, produces 4.7% milk fat, and is noted for being a very efficient converter with calving ease?",
+          "options": {
+            "A": "Guernsey",
+            "B": "Ayrshire",
+            "C": "Dairy Shorthorn",
+            "D": "Jersey"
+          },
+          "answer": "A",
+          "explanation": "The Guernsey breed originates from the Isle of Guernsey, France, with 4.7% milk fat and a docile temperament.",
+          "number": 471
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which dual-purpose breed from Great Britain has white and roan markings, a body weight of 640–680 kg, and a high protein-to-fat ratio (4.0% fat, 3.5% protein)?",
+          "options": {
+            "A": "Guernsey",
+            "B": "Dairy Shorthorn",
+            "C": "Brown Swiss",
+            "D": "Red Sindhi"
+          },
+          "answer": "B",
+          "explanation": "Dairy Shorthorn originates from Great Britain and is used for both milk and beef with a high protein-to-fat ratio.",
+          "number": 472
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which breed originates from the County of Ayr, Scotland, features red and white markings, produces 7,700 kg/lactation, and is noted for strong legs, vigorous calves, and being free from genetic disease?",
+          "options": {
+            "A": "Dairy Shorthorn",
+            "B": "Brown Swiss",
+            "C": "Ayrshire",
+            "D": "Holstein Friesian"
+          },
+          "answer": "C",
+          "explanation": "Ayrshire originates from County of Ayr, Scotland, produces 7,700 kg milk per 305-day lactation, and possesses strong legs.",
+          "number": 473
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How does the Red & White Holstein differ in desirable characteristics from the black-and-white Holstein Friesian according to the module?",
+          "options": {
+            "A": "Red & White Holstein has a strong immune system and is resistant to heat, whereas Holstein Friesian is not resistant to heat and is susceptible to diseases",
+            "B": "Holstein Friesian has a stronger immune system and higher heat tolerance than Red & White Holstein",
+            "C": "Red & White Holstein is the smallest dairy breed, weighing only 350 kg",
+            "D": "Both breeds have identical heat tolerance and disease resistance"
+          },
+          "answer": "A",
+          "explanation": "The Red & White Holstein possesses a strong immune system and heat resistance, unlike the black-and-white Holstein Friesian.",
+          "number": 474
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which tropical dairy breed from Pakistan and India (weighing 350 kg and yielding 3,500 kg milk/year) has reddish-brown to deep red markings and is specifically highlighted for tick resistance, heat tolerance, and disease resistance?",
+          "options": {
+            "A": "Red Sindhi",
+            "B": "Gyr",
+            "C": "Holstein Friesian",
+            "D": "Guernsey"
+          },
+          "answer": "A",
+          "explanation": "Red Sindhi originates from Pakistan and India, yields 3,500 kg milk/year, and has notable tick and heat resistance.",
+          "number": 475
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which tropical dairy breed originating from Pakistan and India weighs 425 kg, yields 4,000 kg milk/year, and is prized for good maternal traits, high resistance to parasites, and a well-developed udder?",
+          "options": {
+            "A": "Ayrshire",
+            "B": "Sahiwal",
+            "C": "Jersey",
+            "D": "Brown Swiss"
+          },
+          "answer": "B",
+          "explanation": "Sahiwal cattle originate from Pakistan & India, produce 4,000 kg milk/year, and possess high parasite resistance.",
+          "number": 476
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-guernsey.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Guernsey",
+          "accepted_answers": [
+            "Guernsey",
+            "Guernsey cow",
+            "Guernsey cattle"
+          ],
+          "explanation": "The photograph displays a Guernsey dairy cow, characterized by yellow to reddish-brown and white markings and high milk fat content (4.7%).",
+          "number": 477
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-dairy-shorthorn.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dual-purpose dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Dairy Shorthorn",
+          "accepted_answers": [
+            "Dairy Shorthorn",
+            "Shorthorn",
+            "Dairy Shorthorn cattle"
+          ],
+          "explanation": "The photograph displays a Dairy Shorthorn cow, originating from Great Britain with white and roan markings, used for both milk and beef.",
+          "number": 478
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-ayrshire.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Ayrshire",
+          "accepted_answers": [
+            "Ayrshire",
+            "Aryshire",
+            "Ayrshire cow",
+            "Ayrshire cattle"
+          ],
+          "explanation": "The photograph displays an Ayrshire dairy cow from County of Ayr, Scotland, featuring red and white markings and excellent udder conformation.",
+          "number": 479
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-jersey.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Jersey",
+          "accepted_answers": [
+            "Jersey",
+            "Jersey cow",
+            "Jersey cattle"
+          ],
+          "explanation": "The photograph displays a Jersey dairy cow, originating from Jersey Island, France, characterized by a light brown coat and milk best used for cheese.",
+          "number": 480
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-brown-swiss.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dual-purpose dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Brown Swiss",
+          "accepted_answers": [
+            "Brown Swiss",
+            "Brown Swiss cow",
+            "Brown Swiss cattle"
+          ],
+          "explanation": "The photograph displays a Brown Swiss cow, originating from Switzerland with brown/light gray markings, known for resisting extreme solar radiation.",
+          "number": 481
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-holstein-friesian.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Holstein Friesian",
+          "accepted_answers": [
+            "Holstein Friesian",
+            "Holstein",
+            "Friesian"
+          ],
+          "explanation": "The photograph displays a Holstein Friesian cow from the Netherlands, known for black-and-white markings and the highest annual milk yield.",
+          "number": 482
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-red-and-white-holstein.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Red & White Holstein",
+          "accepted_answers": [
+            "Red & White Holstein",
+            "Red and White Holstein",
+            "Red Holstein"
+          ],
+          "explanation": "The photograph displays a Red & White Holstein cow from the Netherlands, characterized by red and white markings, heat resistance, and a strong immune system.",
+          "number": 483
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-gyr.png",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the tropical zebu dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Gyr",
+          "accepted_answers": [
+            "Gyr",
+            "Gir",
+            "Gyr/Gir",
+            "Gir cattle"
+          ],
+          "explanation": "The photograph displays a Gyr (Gir) zebu dairy cow from Gujarat, India, characterized by mottled red, yellow, and white coloring, drooping ears, and a prominent hump.",
+          "number": 484
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-red-sindhi.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the tropical dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Red Sindhi",
+          "accepted_answers": [
+            "Red Sindhi",
+            "Sindhi",
+            "Red Sindhi cow",
+            "Red Sindhi cattle"
+          ],
+          "explanation": "The photograph displays a Red Sindhi zebu dairy cow from Pakistan & India, characterized by a reddish-brown to deep red coat, heat tolerance, and tick resistance.",
+          "number": 485
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-sahiwal.jpg",
+          "caption": "Dairy Cattle Breed — Visual Identification",
+          "question": "Identify the tropical dairy cattle breed shown in the photograph:",
+          "options": {},
+          "answer": "Sahiwal",
+          "accepted_answers": [
+            "Sahiwal",
+            "Sahiwal cow",
+            "Sahiwal cattle"
+          ],
+          "explanation": "The photograph displays a Sahiwal zebu cow from Pakistan & India, characterized by a reddish-brown coat, high parasite resistance, and well-developed udder.",
+          "number": 486
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-bos-taurus.png",
+          "caption": "Cattle Species — Visual Identification",
+          "question": "Identify the temperate cattle species shown in the photograph:",
+          "options": {},
+          "answer": "Bos taurus",
+          "accepted_answers": [
+            "Bos taurus",
+            "Bostaurus",
+            "Temperate cattle"
+          ],
+          "explanation": "The photograph displays Bos taurus, characterized by being humpless, having a large head and neck, broad rump, shorter legs, and high milk production.",
+          "number": 487
+        },
+        {
+          "type": "identification",
+          "image": "assets/breed-bos-indicus.jpg",
+          "caption": "Cattle Species — Visual Identification",
+          "question": "Identify the tropical cattle species shown in the photograph:",
+          "options": {},
+          "answer": "Bos indicus",
+          "accepted_answers": [
+            "Bos indicus",
+            "Bosindicus",
+            "Zebu cattle",
+            "Zebu"
+          ],
+          "explanation": "The photograph displays Bos indicus, characterized by a prominent thoracic hump, long legs, sloping rump, and natural heat and parasite resistance.",
+          "number": 488
+        }
+      ]
+    },
+    {
+      "id": "practicum-ruminant-digestion",
+      "title": "Part II: Digestion Process of Ruminants",
+      "description": "Sequential steps of ruminant digestion, stomach compartment anatomy, and lower tract absorption.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "question": "Arrange the chronological steps of the ruminant digestion process in the correct order from initial feed gathering to final lower tract absorption:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Prehension and Mastication — Gathering feed using the tongue and lips and chewing into smaller particles",
+              "type": "reorder_card",
+              "answer": "Prehension and Mastication — Gathering feed using the tongue and lips and chewing into smaller particles",
+              "accepted_answers": [
+                "Prehension and Mastication — Gathering feed using the tongue and lips and chewing into smaller particles"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Swallowing — Rapidly swallowing feed through the esophagus guided by the tongue (saliva contains no enzymes)",
+              "type": "reorder_card",
+              "answer": "Swallowing — Rapidly swallowing feed through the esophagus guided by the tongue (saliva contains no enzymes)",
+              "accepted_answers": [
+                "Swallowing — Rapidly swallowing feed through the esophagus guided by the tongue (saliva contains no enzymes)"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Rumen and Reticulum Fermentation — Microbial digestion in the paunch and particle sorting/trapping at the rumen-reticulum junction",
+              "type": "reorder_card",
+              "answer": "Rumen and Reticulum Fermentation — Microbial digestion in the paunch and particle sorting/trapping at the rumen-reticulum junction",
+              "accepted_answers": [
+                "Rumen and Reticulum Fermentation — Microbial digestion in the paunch and particle sorting/trapping at the rumen-reticulum junction"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Rumination (Cud-Chewing) — Regurgitating partly digested cud back to the mouth while resting to re-chew and re-swallow",
+              "type": "reorder_card",
+              "answer": "Rumination (Cud-Chewing) — Regurgitating partly digested cud back to the mouth while resting to re-chew and re-swallow",
+              "accepted_answers": [
+                "Rumination (Cud-Chewing) — Regurgitating partly digested cud back to the mouth while resting to re-chew and re-swallow"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "Omasum and Abomasum Processing — Grinding feed particles and absorbing moisture in the book, followed by gastric juice digestion in the true stomach",
+              "type": "reorder_card",
+              "answer": "Omasum and Abomasum Processing — Grinding feed particles and absorbing moisture in the book, followed by gastric juice digestion in the true stomach",
+              "accepted_answers": [
+                "Omasum and Abomasum Processing — Grinding feed particles and absorbing moisture in the book, followed by gastric juice digestion in the true stomach"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "text": "Intestinal Absorption — Absorbing proteins, fats, and carbohydrates in the small intestine and water in the large intestine",
+              "type": "reorder_card",
+              "answer": "Intestinal Absorption — Absorbing proteins, fats, and carbohydrates in the small intestine and water in the large intestine",
+              "accepted_answers": [
+                "Intestinal Absorption — Absorbing proteins, fats, and carbohydrates in the small intestine and water in the large intestine"
+              ]
+            }
+          ],
+          "explanation": "The ruminant digestive cycle proceeds from prehension/mastication to swallowing, rumen/reticulum microbial fermentation, rumination/regurgitation, omasum grinding/abomasum enzymatic digestion, and intestinal absorption.",
+          "number": 489
+        },
+        {
+          "type": "reorder_cards",
+          "question": "Arrange the four stomach compartments of a ruminant in the exact anatomical order through which ingested feed passes:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Rumen (\"Paunch\" — first and largest compartment lined with millions of papillae)",
+              "type": "reorder_card",
+              "answer": "Rumen (\"Paunch\" — first and largest compartment lined with millions of papillae)",
+              "accepted_answers": [
+                "Rumen (\"Paunch\" — first and largest compartment lined with millions of papillae)"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Reticulum (\"Honeycomb\" — pouch-like network that traps foreign objects and collects small particles)",
+              "type": "reorder_card",
+              "answer": "Reticulum (\"Honeycomb\" — pouch-like network that traps foreign objects and collects small particles)",
+              "accepted_answers": [
+                "Reticulum (\"Honeycomb\" — pouch-like network that traps foreign objects and collects small particles)"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Omasum (\"Book\" — heavy, hard organ with many internal leaves/folds that grinds feed and absorbs moisture)",
+              "type": "reorder_card",
+              "answer": "Omasum (\"Book\" — heavy, hard organ with many internal leaves/folds that grinds feed and absorbs moisture)",
+              "accepted_answers": [
+                "Omasum (\"Book\" — heavy, hard organ with many internal leaves/folds that grinds feed and absorbs moisture)"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Abomasum (\"True Stomach\" — glandular compartment that secretes gastric juices)",
+              "type": "reorder_card",
+              "answer": "Abomasum (\"True Stomach\" — glandular compartment that secretes gastric juices)",
+              "accepted_answers": [
+                "Abomasum (\"True Stomach\" — glandular compartment that secretes gastric juices)"
+              ]
+            }
+          ],
+          "explanation": "Feed flows anatomically from the Rumen to the Reticulum, then into the Omasum, and finally through the Abomasum.",
+          "number": 490
+        },
+        {
+          "original_number": 19,
+          "type": "identification",
+          "question": "The first and largest part of the stomach of ruminants.",
+          "options": {},
+          "answer": "RUMEN",
+          "accepted_answers": [
+            "RUMEN",
+            "rumen",
+            "paunch"
+          ],
+          "explanation": "",
+          "number": 491
+        },
+        {
+          "original_number": 18,
+          "type": "identification",
+          "question": "A pouch-like structure with tissues forms a network like a honeycomb.",
+          "options": {},
+          "answer": "RETICULUM",
+          "accepted_answers": [
+            "RETICULUM",
+            "reticulum",
+            "honeycomb"
+          ],
+          "explanation": "",
+          "number": 492
+        },
+        {
+          "type": "identification",
+          "question": "The third stomach compartment, nicknamed the \"book\", which is a heavy, hard organ with many folds or leaves that grinds feed particles further and absorbs moisture:",
+          "options": {},
+          "answer": "OMASUM",
+          "accepted_answers": [
+            "Omasum",
+            "Book"
+          ],
+          "explanation": "The omasum ('book') has multiple muscular laminae (leaves) that grind feed and extract water.",
+          "number": 493
+        },
+        {
+          "original_number": 20,
+          "type": "identification",
+          "question": "It is also called as \"true stomach\".",
+          "options": {},
+          "answer": "ABOMASUM",
+          "accepted_answers": [
+            "ABOMASUM",
+            "abomasum",
+            "true stomach"
+          ],
+          "explanation": "",
+          "number": 494
+        },
+        {
+          "original_number": 17,
+          "type": "identification",
+          "question": "It is where water primary absorbed.",
+          "options": {},
+          "answer": "LARGE INTESTINE",
+          "accepted_answers": [
+            "LARGE INTESTINE",
+            "large intestine",
+            "large intestines",
+            "colon"
+          ],
+          "explanation": "",
+          "number": 495
+        },
+        {
+          "original_number": 16,
+          "type": "identification",
+          "question": "A major site for metabolism of nutrients.",
+          "options": {},
+          "answer": "LIVER",
+          "accepted_answers": [
+            "LIVER",
+            "liver"
+          ],
+          "explanation": "",
+          "number": 496
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In which part of the lower digestive tract are proteins, fats, and carbohydrates that leave the abomasum primarily absorbed?",
+          "options": {
+            "A": "Rumen",
+            "B": "Small intestine",
+            "C": "Large intestine",
+            "D": "Gall bladder"
+          },
+          "answer": "B",
+          "explanation": "Proteins, fats, and carbohydrates leaving the abomasum are primarily absorbed in the small intestine.",
+          "number": 497
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which accessory digestive organ secretes buffers and enzymes directly into the small intestine?",
+          "options": {
+            "A": "Pancreas",
+            "B": "Liver",
+            "C": "Gall bladder",
+            "D": "Spleen"
+          },
+          "answer": "A",
+          "explanation": "The pancreas secretes digestive enzymes and buffers into the small intestine.",
+          "number": 498
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How does the saliva of ruminants differ from that of monogastric (non-ruminant) animals during initial feeding and swallowing?",
+          "options": {
+            "A": "Ruminant saliva contains high concentrations of salivary amylase to break down fiber",
+            "B": "Ruminant saliva does not contain digestive enzymes, and ruminants swallow feed rapidly without chewing it adequately at first",
+            "C": "Ruminant saliva is strongly acidic to sterilize forages before entering the rumen",
+            "D": "Ruminants do not produce any saliva until rumination begins"
+          },
+          "answer": "B",
+          "explanation": "Ruminant saliva lacks digestive enzymes; feed is swallowed rapidly during initial eating and chewed thoroughly later during rumination.",
+          "number": 499
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary function of the rumen-reticulum junction in the ruminant stomach?",
+          "options": {
+            "A": "To secrete hydrochloric acid and gastric enzymes into the omasum",
+            "B": "To permanently store ingested hardware and stones",
+            "C": "To prevent large feed particles from passing through to the 3rd chamber and help push food back to the esophagus for rumination",
+            "D": "To absorb water and concentrated minerals"
+          },
+          "answer": "C",
+          "explanation": "The rumen-reticulum junction prevents coarse particles from entering the omasum and assists in pushing cud back to the esophagus.",
+          "number": 500
+        }
+      ]
+    },
+    {
+      "id": "practicum-basic-feed-nutrients",
+      "title": "Part II: Basic Feed Nutrients",
+      "description": "Proteins, minerals, water, vitamins, fats, carbohydrates, and dietary requirements in dairy nutrition.",
+      "questions": [
+        {
+          "original_number": 1,
+          "type": "identification",
+          "question": "It is the basic feed nutrients essential for maintenance, growth, and milk production.",
+          "options": {},
+          "answer": "PROTEIN",
+          "accepted_answers": [
+            "PROTEIN",
+            "protein",
+            "proteins",
+            "crude protein"
+          ],
+          "explanation": "",
+          "number": 501
+        },
+        {
+          "original_number": 2,
+          "type": "identification",
+          "question": "It is the basic feed nutrients needed for bone and teeth formation, hormone actions, enzyme activation and water every day.",
+          "options": {},
+          "answer": "MINERALS",
+          "accepted_answers": [
+            "MINERALS",
+            "mineral",
+            "minerals"
+          ],
+          "explanation": "",
+          "number": 502
+        },
+        {
+          "original_number": 3,
+          "type": "identification",
+          "question": "It is the basic feed nutrients required in the largest amount by the dairy cow.",
+          "options": {},
+          "answer": "WATER",
+          "accepted_answers": [
+            "WATER"
+          ],
+          "explanation": "",
+          "number": 503
+        },
+        {
+          "original_number": 4,
+          "type": "identification",
+          "question": "Nutrients that are organic compounds needed in minute amounts that are essentials for life.",
+          "options": {},
+          "answer": "VITAMINS",
+          "accepted_answers": [
+            "VITAMINS",
+            "vitamin",
+            "vitamins"
+          ],
+          "explanation": "",
+          "number": 504
+        },
+        {
+          "original_number": 5,
+          "type": "identification",
+          "question": "Nutrients that added to the diets to increase energy density. Energy contents are 2.25 times greater than carbohydrates?",
+          "options": {},
+          "answer": "FATS",
+          "accepted_answers": [
+            "FATS",
+            "fat",
+            "fats",
+            "lipids"
+          ],
+          "explanation": "",
+          "number": 505
+        },
+        {
+          "original_number": 6,
+          "type": "identification",
+          "question": "It is the common source of energy in ruminants.",
+          "options": {},
+          "answer": "CARBOHYDRATE",
+          "accepted_answers": [
+            "CARBOHYDRATE",
+            "carbohydrate",
+            "carbohydrates"
+          ],
+          "explanation": "",
+          "number": 506
+        },
+        {
+          "original_number": 11,
+          "type": "identification",
+          "question": "These are the building blocks of cow's life.",
+          "options": {},
+          "answer": "ANIMO ACID",
+          "accepted_answers": [
+            "Amino Acid",
+            "ANIMO ACID",
+            "amino acid",
+            "animo acid"
+          ],
+          "explanation": "",
+          "number": 507
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How many times greater is the energy content of fats compared to carbohydrates in cattle diets?",
+          "options": {
+            "A": "1.5 times",
+            "B": "2.25 times",
+            "C": "3.0 times",
+            "D": "4.25 times"
+          },
+          "answer": "B",
+          "explanation": "Fats provide 2.25 times more energy density than carbohydrates.",
+          "number": 508
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How much water does a lactating dairy cow require each day at minimum, and how should it be provided?",
+          "options": {
+            "A": "20 to 30 liters; twice daily after milking",
+            "B": "45 to 50 liters; restricted to morning feedings",
+            "C": "85 to 90 liters; provided ad libitum (freely available)",
+            "D": "150 to 200 liters; only mixed with molasses"
+          },
+          "answer": "C",
+          "explanation": "A lactating dairy cow requires at least 85–90 liters of water daily, provided ad libitum.",
+          "number": 509
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Under normal conditions, which vitamins are synthesized by microorganisms in the rumen of dairy cattle?",
+          "options": {
+            "A": "Vitamins A and D",
+            "B": "Vitamins K and B-complex",
+            "C": "Vitamins C and E",
+            "D": "Vitamins A and E"
+          },
+          "answer": "B",
+          "explanation": "Rumen microorganisms synthesize vitamins K and B-complex under normal physiological conditions.",
+          "number": 510
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which vitamin is necessary for the absorption and metabolism of calcium and phosphorus, and can be formed as cholecalciferol (D3) by solar irradiation of the skin?",
+          "options": {
+            "A": "Vitamin A",
+            "B": "Vitamin B-complex",
+            "C": "Vitamin D",
+            "D": "Vitamin K"
+          },
+          "answer": "C",
+          "explanation": "Vitamin D is essential for calcium and phosphorus regulation and can be synthesized in skin exposed to sunlight.",
+          "number": 511
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which of the following correctly pairs a Macro mineral with a Micro mineral in dairy cattle nutrition according to the module?",
+          "options": {
+            "A": "Macro mineral: Calcium; Micro mineral: Cobalt",
+            "B": "Macro mineral: Iron; Micro mineral: Phosphorus",
+            "C": "Macro mineral: Zinc; Micro mineral: Magnesium",
+            "D": "Macro mineral: Copper; Micro mineral: Sodium"
+          },
+          "answer": "A",
+          "explanation": "Calcium is classified as a macro mineral, while Cobalt is classified as a micro mineral.",
+          "number": 512
+        }
+      ]
+    },
+    {
+      "id": "practicum-silage-making",
+      "title": "Part II: Silage Making",
+      "description": "Bag and bunker silage procedures, moisture testing, compaction protocols, and fermentation quality assessment.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "question": "Arrange the steps in Bag Silage Making in the correct chronological sequence from harvest to storage:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Harvesting — Harvest forage crops such as Corn or Napier grass at the proper vegetative stage",
+              "type": "reorder_card",
+              "answer": "Harvesting — Harvest forage crops such as Corn or Napier grass at the proper vegetative stage",
+              "accepted_answers": [
+                "Harvesting — Harvest forage crops such as Corn or Napier grass at the proper vegetative stage"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Chopping — Chop harvested forage into uniform lengths to facilitate tight packing and rapid fermentation",
+              "type": "reorder_card",
+              "answer": "Chopping — Chop harvested forage into uniform lengths to facilitate tight packing and rapid fermentation",
+              "accepted_answers": [
+                "Chopping — Chop harvested forage into uniform lengths to facilitate tight packing and rapid fermentation"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Filling the silage bag — Pack the chopped green forage evenly into the plastic silage bag",
+              "type": "reorder_card",
+              "answer": "Filling the silage bag — Pack the chopped green forage evenly into the plastic silage bag",
+              "accepted_answers": [
+                "Filling the silage bag — Pack the chopped green forage evenly into the plastic silage bag"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Compacting — Press down chopped forage progressively in thin layers to expel oxygen and prevent spoilage",
+              "type": "reorder_card",
+              "answer": "Compacting — Press down chopped forage progressively in thin layers to expel oxygen and prevent spoilage",
+              "accepted_answers": [
+                "Compacting — Press down chopped forage progressively in thin layers to expel oxygen and prevent spoilage"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "Sealing the bag — Seal the bag completely airtight to initiate anaerobic fermentation and block aerobic microbes",
+              "type": "reorder_card",
+              "answer": "Sealing the bag — Seal the bag completely airtight to initiate anaerobic fermentation and block aerobic microbes",
+              "accepted_answers": [
+                "Sealing the bag — Seal the bag completely airtight to initiate anaerobic fermentation and block aerobic microbes"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "text": "Storage — Stack bags securely indoors, protect from pest damage, and inspect regularly for punctures",
+              "type": "reorder_card",
+              "answer": "Storage — Stack bags securely indoors, protect from pest damage, and inspect regularly for punctures",
+              "accepted_answers": [
+                "Storage — Stack bags securely indoors, protect from pest damage, and inspect regularly for punctures"
+              ]
+            }
+          ],
+          "explanation": "Bag silage preparation involves chronological harvesting, uniform chopping, thorough incremental compaction, airtight sealing, and secure indoor storage.",
+          "number": 513
+        },
+        {
+          "type": "reorder_cards",
+          "question": "Arrange the steps in Bunker-Type Silage Making in the correct sequential order:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Harvesting the forage crop",
+              "type": "reorder_card",
+              "answer": "Harvesting the forage crop",
+              "accepted_answers": [
+                "Harvesting the forage crop"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Chopping the harvested forage to standard cut size",
+              "type": "reorder_card",
+              "answer": "Chopping the harvested forage to standard cut size",
+              "accepted_answers": [
+                "Chopping the harvested forage to standard cut size"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Filling the bunker silo with chopped forage",
+              "type": "reorder_card",
+              "answer": "Filling the bunker silo with chopped forage",
+              "accepted_answers": [
+                "Filling the bunker silo with chopped forage"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Compacting the forage manually (with tampers) or mechanically (with a tractor)",
+              "type": "reorder_card",
+              "answer": "Compacting the forage manually (with tampers) or mechanically (with a tractor)",
+              "accepted_answers": [
+                "Compacting the forage manually (with tampers) or mechanically (with a tractor)"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "Covering with heavy plastic sheeting and sealing tightly (weighting down with used tyres)",
+              "type": "reorder_card",
+              "answer": "Covering with heavy plastic sheeting and sealing tightly (weighting down with used tyres)",
+              "accepted_answers": [
+                "Covering with heavy plastic sheeting and sealing tightly (weighting down with used tyres)"
+              ]
+            }
+          ],
+          "explanation": "Bunker silage making requires harvesting, chopping, filling the bunker, thorough compaction (manual or tractor), and covering/sealing with weighted plastic sheets.",
+          "number": 514
+        },
+        {
+          "type": "reorder_cards",
+          "question": "Arrange the steps of the Hand Method (Squeeze Test) used to estimate chopped forage moisture prior to ensiling:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Take a handful of freshly chopped forage directly from the harvest",
+              "type": "reorder_card",
+              "answer": "Take a handful of freshly chopped forage directly from the harvest",
+              "accepted_answers": [
+                "Take a handful of freshly chopped forage directly from the harvest"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Squeeze the handful of forage firmly in your palm for 20 to 30 seconds to form a ball",
+              "type": "reorder_card",
+              "answer": "Squeeze the handful of forage firmly in your palm for 20 to 30 seconds to form a ball",
+              "accepted_answers": [
+                "Squeeze the handful of forage firmly in your palm for 20 to 30 seconds to form a ball"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Release palm pressure and inspect the physical behavior and cohesion of the forage ball",
+              "type": "reorder_card",
+              "answer": "Release palm pressure and inspect the physical behavior and cohesion of the forage ball",
+              "accepted_answers": [
+                "Release palm pressure and inspect the physical behavior and cohesion of the forage ball"
+              ]
+            }
+          ],
+          "explanation": "The hand squeeze test estimates forage moisture prior to ensiling by assessing ball formation and cohesion upon releasing palm pressure.",
+          "number": 515
+        },
+        {
+          "type": "identification",
+          "question": "During silage fermentation, sugars present in the fodder are converted into which organic acid that acts as a natural preservative and fermentable energy source for rumen microbes?",
+          "options": {},
+          "answer": "LACTIC ACID",
+          "accepted_answers": [
+            "Lactic acid",
+            "Lactic"
+          ],
+          "explanation": "Anaerobic bacteria convert plant sugars into lactic acid, which preserves the silage and lowers pH.",
+          "number": 516
+        },
+        {
+          "type": "identification",
+          "question": "What is the recommended standard cut size (in inches) when chopping Corn or Napier forage for silage making?",
+          "options": {},
+          "answer": "3/4 TO 1 INCH",
+          "accepted_answers": [
+            "3/4 to 1 inch",
+            "3/4-1 inch",
+            "3/4 to 1",
+            "0.75 to 1 inch",
+            "3/4 inch to 1 inch"
+          ],
+          "explanation": "Chopping forage to 3/4 to 1 inch facilitates tight compaction and optimal anaerobic fermentation.",
+          "number": 517
+        },
+        {
+          "type": "identification",
+          "question": "At every how many inches of added chopped forage is it best to compact the silage during bag filling to remove trapped air?",
+          "options": {},
+          "answer": "3 INCHES",
+          "accepted_answers": [
+            "3 inches",
+            "Three inches",
+            "3",
+            "Every 3 inches"
+          ],
+          "explanation": "Compacting every 3 inches ensures that air pockets are completely eliminated.",
+          "number": 518
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the ideal moisture content of harvested forage for silage making, and what hand-squeeze result confirms it is ready to be ensiled?",
+          "options": {
+            "A": "40%–50% moisture; the ball shatters instantly into dust",
+            "B": "50%–60% moisture; water drips continuously from the fingers",
+            "C": "65%–75% moisture; the squeezed forage ball slowly falls apart upon release",
+            "D": "80%–90% moisture; the ball stays tightly compressed without breaking"
+          },
+          "answer": "C",
+          "explanation": "Forage at 65%–75% moisture slowly falls apart upon release, indicating readiness for ensiling.",
+          "number": 519
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the sequence of primary microbial and biochemical phases that occur during the anaerobic curing of silage?",
+          "options": {
+            "A": "Aerobic respiration phase (oxygen depletion) → Acid production phase (fermentation of sugars to lactic acid) → Stable preservation phase",
+            "B": "Immediate mold growth phase → Spoilage phase → Thermal dehydration phase",
+            "C": "Washing phase → Evaporative drying phase → Direct aerobic feeding phase",
+            "D": "Thermal heating phase → Carbon dioxide venting phase → Dehydration phase"
+          },
+          "answer": "A",
+          "explanation": "Silage curing proceeds through initial oxygen depletion by plant respiration, anaerobic bacterial lactic fermentation lowering pH to <4.2, and the resulting stable preservation phase.",
+          "number": 520
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which set of characteristics describes Good Quality Silage compared to Bad Silage?",
+          "options": {
+            "A": "Color: bright, light green-yellow or green-brown; Texture: breaks slowly into two when tightly squeezed; Odor: sweet-sour pleasant smell",
+            "B": "Color: dark green to dark brown; Texture: water drips continuously; Odor: putrid or manure smell",
+            "C": "Color: jet black with white mold; Texture: shatters into dry dust; Odor: strong ammonia smell",
+            "D": "Color: pale white; Texture: greasy slime; Odor: rancid butter smell"
+          },
+          "answer": "A",
+          "explanation": "Good silage is light green-yellow to green-brown, breaks slowly into two when squeezed, and has a pleasant sweet-sour aroma.",
+          "number": 521
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which of the following is a recommended practice when feeding silage to dairy cattle and maintaining stored silage?",
+          "options": {
+            "A": "Introduce silage rapidly in full rations on day one, and leave feed bunks uncleaned",
+            "B": "Slowly introduce silage to the animals, clean feed bunks after feeding to prevent spoilage, re-seal opened silage, and repack bags with holes",
+            "C": "Mix silage with wet manure to stimulate bacterial activity, and stack bags uncovered outdoors",
+            "D": "Allow animals to walk over sealed silage bags to maintain compaction"
+          },
+          "answer": "B",
+          "explanation": "Gradual diet introduction, cleaning feed bunks, re-sealing storage faces, and repairing bag punctures prevent contamination and spoilage.",
+          "number": 522
+        }
+      ]
+    },
+    {
+      "id": "practicum-farm-tools",
+      "title": "Part II: Farm Tools",
+      "description": "Essential equipment for forage preparation, stall cleaning, post hole digging, and material transport.",
+      "questions": [
+        {
+          "original_number": 1,
+          "type": "multiple_choice",
+          "question": "______ is a piece of equipment used to cut grass and other fodder (like straw and corn stalks) into smaller pieces. It's used in agriculture to prepare feed for livestock, making it easier for animals to eat and digest?",
+          "options": {
+            "A": "Grass cutter",
+            "B": "Grass chopper machine",
+            "C": "Mower",
+            "D": "Shredder"
+          },
+          "answer": "B",
+          "explanation": "",
+          "number": 523
+        },
+        {
+          "original_number": 2,
+          "type": "multiple_choice",
+          "question": "It is a portable equipment/machine and used for collecting milk from cows and goats?",
+          "options": {
+            "A": "Milking machine",
+            "B": "Milk collector",
+            "C": "Modern collector",
+            "D": "Portable milking machine"
+          },
+          "answer": "D",
+          "explanation": "",
+          "number": 524
+        },
+        {
+          "original_number": 3,
+          "type": "multiple_choice",
+          "question": "What kind of tool used to clear out lumps of manure for easy rinsing?",
+          "options": {
+            "A": "Manual scraper",
+            "B": "Manual manure scraper",
+            "C": "Wheel manure scraper",
+            "D": "Rinser"
+          },
+          "answer": "B",
+          "explanation": "",
+          "number": 525
+        },
+        {
+          "original_number": 4,
+          "type": "multiple_choice",
+          "question": "What tool used variety of things such as moving feeds to the barn or collecting manure and other waste out of the barn?",
+          "options": {
+            "A": "Wheel cart",
+            "B": "Manual scrapper",
+            "C": "Manure scrapper",
+            "D": "Wheelbarrow"
+          },
+          "answer": "D",
+          "explanation": "",
+          "number": 526
+        },
+        {
+          "original_number": 5,
+          "type": "multiple_choice",
+          "question": "What kind of tool used for post hole digging?",
+          "options": {
+            "A": "Fencer sword",
+            "B": "Fencer hole",
+            "C": "Fencer graft",
+            "D": "Fencer blade"
+          },
+          "answer": "C",
+          "explanation": "",
+          "number": 527
+        },
+        {
+          "original_number": 6,
+          "type": "multiple_choice",
+          "question": "What tool used for harvesting or reaping grain crops or cutting succulent forage mainly for feeding livestock, either freshly cut or dried as hay?",
+          "options": {
+            "A": "Sword",
+            "B": "Blade",
+            "C": "Shaver",
+            "D": "Sickle"
+          },
+          "answer": "D",
+          "explanation": "",
+          "number": 528
+        },
+        {
+          "original_number": 7,
+          "type": "multiple_choice",
+          "question": "What kind of tool used for scooping, scraping, gathering, and leveling materials such as soil, mulch, or leaves?",
+          "options": {
+            "A": "Spade",
+            "B": "Rake",
+            "C": "Pitchfork",
+            "D": "Shovel"
+          },
+          "answer": "B",
+          "explanation": "",
+          "number": 529
+        },
+        {
+          "original_number": 8,
+          "type": "multiple_choice",
+          "question": "What kind of tool used to lift and pitch or throw loose materials such as hay, straw, manure, or leaves?",
+          "options": {
+            "A": "Shovel",
+            "B": "Pitchfork",
+            "C": "Spade",
+            "D": "Rake"
+          },
+          "answer": "B",
+          "explanation": "",
+          "number": 530
+        },
+        {
+          "original_number": 9,
+          "type": "multiple_choice",
+          "question": "What kind of tool used for digging straight-edged holes or trenches, slicing, and lifting sod, and edging flower beds or lawns?",
+          "options": {
+            "A": "Rake",
+            "B": "Spade",
+            "C": "Shovel",
+            "D": "Pitchfork"
+          },
+          "answer": "B",
+          "explanation": "",
+          "number": 531
+        },
+        {
+          "original_number": 10,
+          "type": "multiple_choice",
+          "question": "What tool used to dig as well as to move loose, granular materials like (Dirt, gravel, and grain) from one spot to another?",
+          "options": {
+            "A": "Spade",
+            "B": "Shovel",
+            "C": "Rake",
+            "D": "Pitchfork"
+          },
+          "answer": "B",
+          "explanation": "",
+          "number": 532
+        }
+      ]
+    },
+    {
+      "id": "interactive-cattle-anatomy",
+      "title": "Part II: Body Parts of Cattle",
+      "description": "Interactive callout diagram identifying the 23 external anatomical regions and conformation points of dairy cattle.",
+      "questions": [
+        {
+          "original_number": 1,
+          "type": "multi_part_diagram",
+          "question": "Identify the anatomical body parts of dairy cattle indicated by numbers 1 to 23 on the diagram:",
+          "image": "assets/body-parts-of-cattle-question.jpg",
+          "answer_image": "assets/body-parts-of-cattle-answer.jpg",
+          "caption": "Figure 1: External Anatomical Regions and Conformation Points of Dairy Cattle",
+          "options": {},
+          "answer": "DIAGRAM_MULTI_PART",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "type": "identification",
+              "answer": "Tail head",
+              "accepted_answers": [
+                "Tail head",
+                "tailhead"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "type": "identification",
+              "answer": "Pin",
+              "accepted_answers": [
+                "Pin"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "type": "identification",
+              "answer": "Hook",
+              "accepted_answers": [
+                "Hook"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "type": "identification",
+              "answer": "Paralumbar fossa",
+              "accepted_answers": [
+                "Paralumbar fossa"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "type": "identification",
+              "answer": "Loin",
+              "accepted_answers": [
+                "Loin"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "type": "identification",
+              "answer": "Shoulder",
+              "accepted_answers": [
+                "Shoulder"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "type": "identification",
+              "answer": "Crest",
+              "accepted_answers": [
+                "Crest"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "type": "identification",
+              "answer": "Poll",
+              "accepted_answers": [
+                "Poll"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "type": "identification",
+              "answer": "Forehead",
+              "accepted_answers": [
+                "Forehead",
+                "forehead"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "type": "identification",
+              "answer": "Muzzle",
+              "accepted_answers": [
+                "Muzzle"
+              ]
+            },
+            {
+              "id": 11,
+              "label": "11",
+              "type": "identification",
+              "answer": "Elbow",
+              "accepted_answers": [
+                "Elbow"
+              ]
+            },
+            {
+              "id": 12,
+              "label": "12",
+              "type": "identification",
+              "answer": "Dewlap",
+              "accepted_answers": [
+                "Dewlap"
+              ]
+            },
+            {
+              "id": 13,
+              "label": "13",
+              "type": "identification",
+              "answer": "Brisket",
+              "accepted_answers": [
+                "Brisket"
+              ]
+            },
+            {
+              "id": 14,
+              "label": "14",
+              "type": "identification",
+              "answer": "Knee",
+              "accepted_answers": [
+                "Knee"
+              ]
+            },
+            {
+              "id": 15,
+              "label": "15",
+              "type": "identification",
+              "answer": "Hoof",
+              "accepted_answers": [
+                "Hoof"
+              ]
+            },
+            {
+              "id": 16,
+              "label": "16",
+              "type": "identification",
+              "answer": "Heart girth",
+              "accepted_answers": [
+                "Heart girth"
+              ]
+            },
+            {
+              "id": 17,
+              "label": "17",
+              "type": "identification",
+              "answer": "Stifle",
+              "accepted_answers": [
+                "Stifle"
+              ]
+            },
+            {
+              "id": 18,
+              "label": "18",
+              "type": "identification",
+              "answer": "Udder",
+              "accepted_answers": [
+                "Udder"
+              ]
+            },
+            {
+              "id": 19,
+              "label": "19",
+              "type": "identification",
+              "answer": "Teat",
+              "accepted_answers": [
+                "Teat"
+              ]
+            },
+            {
+              "id": 20,
+              "label": "20",
+              "type": "identification",
+              "answer": "Hock",
+              "accepted_answers": [
+                "Hock"
+              ]
+            },
+            {
+              "id": 21,
+              "label": "21",
+              "type": "identification",
+              "answer": "Switch",
+              "accepted_answers": [
+                "Switch"
+              ]
+            },
+            {
+              "id": 22,
+              "label": "22",
+              "type": "identification",
+              "answer": "Dewclaw",
+              "accepted_answers": [
+                "Dewclaw",
+                "dew claw"
+              ]
+            },
+            {
+              "id": 23,
+              "label": "23",
+              "type": "identification",
+              "answer": "Heel",
+              "accepted_answers": [
+                "Heel"
+              ]
+            }
+          ],
+          "explanation": "",
+          "number": 533
+        }
+      ]
+    },
+    {
+      "id": "interactive-milking-machine",
+      "title": "Part II: Parts of Portable Milking Machine",
+      "description": "Interactive callout diagram identifying the 10 mechanical components and assemblies of a portable milking machine.",
+      "questions": [
+        {
+          "original_number": 2,
+          "type": "multi_part_diagram",
+          "question": "Identify the operational and mechanical components of the portable milking machine indicated by numbers 1 to 10 on the diagram:",
+          "image": "assets/portable-milking-machine-question.jpg",
+          "answer_image": "assets/portable-milking-machine-answer.jpg",
+          "caption": "Figure 2: Component Breakdown of Portable Single/Double-Bucket Milking Machine",
+          "options": {},
+          "answer": "DIAGRAM_MULTI_PART",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "type": "identification",
+              "answer": "Milk Collector",
+              "accepted_answers": [
+                "Milk Collector"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "type": "identification",
+              "answer": "Milk Cup",
+              "accepted_answers": [
+                "Milk Cup"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "type": "identification",
+              "answer": "Milk Tank",
+              "accepted_answers": [
+                "Milk Tank"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "type": "identification",
+              "answer": "Milk Tube",
+              "accepted_answers": [
+                "Milk Tube"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "type": "identification",
+              "answer": "Barometer",
+              "accepted_answers": [
+                "Barometer"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "type": "identification",
+              "answer": "Pulsator",
+              "accepted_answers": [
+                "Pulsator"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "type": "identification",
+              "answer": "Air Pressure Regulating Valve",
+              "accepted_answers": [
+                "Air Pressure Regulating Valve"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "type": "identification",
+              "answer": "Vacuum Pump",
+              "accepted_answers": [
+                "Vacuum Pump"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "type": "identification",
+              "answer": "Motor",
+              "accepted_answers": [
+                "Motor"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "type": "identification",
+              "answer": "Wheel",
+              "accepted_answers": [
+                "Wheel"
+              ]
+            }
+          ],
+          "explanation": "",
+          "number": 534
+        }
+      ]
+    },
+    {
+      "id": "practicum-cattle-diseases",
+      "title": "Part II: Common Diseases of Calves, Heifer and Cow",
+      "description": "Infectious, metabolic, reproductive, and parasite disorders in calves, heifers, and adult dairy cows.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "question": "Arrange the steps in the Management of Pelvic/Uterine Prolapse in the correct clinical sequence:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Replacement of the prolapsed organ back into its normal position",
+              "type": "reorder_card",
+              "answer": "Replacement of the prolapsed organ back into its normal position",
+              "accepted_answers": [
+                "Replacement of the prolapsed organ back into its normal position"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Apply a hypertonic salt or sugar solution to reduce tissue swelling",
+              "type": "reorder_card",
+              "answer": "Apply a hypertonic salt or sugar solution to reduce tissue swelling",
+              "accepted_answers": [
+                "Apply a hypertonic salt or sugar solution to reduce tissue swelling"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Suture the vulva (retention sutures) if necessary to prevent re-prolapse",
+              "type": "reorder_card",
+              "answer": "Suture the vulva (retention sutures) if necessary to prevent re-prolapse",
+              "accepted_answers": [
+                "Suture the vulva (retention sutures) if necessary to prevent re-prolapse"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Administer anti-inflammatory drugs and antibiotics",
+              "type": "reorder_card",
+              "answer": "Administer anti-inflammatory drugs and antibiotics",
+              "accepted_answers": [
+                "Administer anti-inflammatory drugs and antibiotics"
+              ]
+            }
+          ],
+          "explanation": "Prolapse management consists of organ replacement, osmotic swelling reduction (salt/sugar), vulva retention suturing, and medical therapy.",
+          "number": 535
+        },
+        {
+          "type": "identification",
+          "question": "A common disease in calves characterized by swelling of the navel caused by an infection, with pus and transudate leaking from the navel, joint swelling, fever, and death within 5 days in severe cases:",
+          "options": {},
+          "answer": "NAVEL ILL",
+          "accepted_answers": [
+            "Navel ill",
+            "Omphalitis"
+          ],
+          "explanation": "Navel ill is an infection of the umbilicus in newborn calves; severe cases can cause joint ill and death within 5 days.",
+          "number": 536
+        },
+        {
+          "type": "identification",
+          "question": "A severe condition in calves defined as an infection of the blood, presenting with fever, stunted growth, inappetence, lethargy, and sudden death:",
+          "options": {},
+          "answer": "SEPTICEMIA",
+          "accepted_answers": [
+            "Septicemia",
+            "Blood infection"
+          ],
+          "explanation": "Septicemia is a systemic blood infection that can cause rapid mortality in young calves.",
+          "number": 537
+        },
+        {
+          "type": "identification",
+          "question": "A metabolic disorder in dairy cows (medically termed hypocalcemia) caused by a low level of blood calcium within 24 hours or 2–3 days after calving:",
+          "options": {},
+          "answer": "MILK FEVER",
+          "accepted_answers": [
+            "Milk fever",
+            "Hypocalcemia"
+          ],
+          "explanation": "Milk fever (hypocalcemia) occurs shortly after calving due to the rapid drain of calcium into colostrum.",
+          "number": 538
+        },
+        {
+          "type": "identification",
+          "question": "The inability of a cow to rise due to muscle and nerve damage caused by prolonged recumbency, slippery flooring (\"split cow\"), malnutrition, or limb injuries:",
+          "options": {},
+          "answer": "DOWNER COW SYNDROME",
+          "accepted_answers": [
+            "Downer cow syndrome",
+            "Downer cow"
+          ],
+          "explanation": "Downer cow syndrome results from prolonged recumbency, nerve compression, or slippery floor trauma.",
+          "number": 539
+        },
+        {
+          "type": "identification",
+          "question": "The retention of the fetal membranes for 24–48 hours or more after calving, treated mechanically by manual removal or hormonally with Oxytocin:",
+          "options": {},
+          "answer": "RETAINED PLACENTA",
+          "accepted_answers": [
+            "Retained placenta",
+            "Retained fetal membrane",
+            "Retained fetal membranes"
+          ],
+          "explanation": "Retained placenta is diagnosed when membranes fail to expel within 24–48 hours of parturition.",
+          "number": 540
+        },
+        {
+          "type": "identification",
+          "question": "A reproductive disorder in which one or more organs in the pelvis (vaginal, cervical, or uterine) slip down from their normal position and bulge into or out of the vagina:",
+          "options": {},
+          "answer": "PROLAPSE",
+          "accepted_answers": [
+            "Prolapse",
+            "Uterine prolapse",
+            "Vaginal prolapse",
+            "Cervical prolapse"
+          ],
+          "explanation": "Prolapse involves pelvic organ protrusion (vaginal, cervical, or uterine) through the vulva.",
+          "number": 541
+        },
+        {
+          "type": "identification",
+          "question": "Also known as Bovine traumatic reticulopericarditis, this disease is caused by the ingestion of sharp metal or foreign objects that irritate and penetrate the lining of the reticulum:",
+          "options": {},
+          "answer": "HARDWARE DISEASE",
+          "accepted_answers": [
+            "Hardware disease",
+            "Bovine traumatic reticulopericarditis",
+            "Traumatic reticulopericarditis"
+          ],
+          "explanation": "Hardware disease occurs when swallowed nails or wire pierce the reticulum wall.",
+          "number": 542
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which viral/vector-borne disease of heifers and cows is commonly called \"3 days sickness\", presenting with fever, drooling, and recumbency followed by recovery after about 3 days?",
+          "options": {
+            "A": "Ephemeral fever",
+            "B": "Septicemia",
+            "C": "Milk fever",
+            "D": "Foot rot"
+          },
+          "answer": "A",
+          "explanation": "Bovine ephemeral fever is known as '3 days sickness' and presents with fever, drooling, and transient recumbency.",
+          "number": 543
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What are the primary causes and characteristic clinical signs of Calf Diarrhea according to the module?",
+          "options": {
+            "A": "Causes: bacterial/viral pathogens, dirty pen/cold weather, bad milk/diet change, stress, and insufficient colostrum; Signs: loose bowel, stained caudal area, dehydration, fever, and lethargy",
+            "B": "Causes: pure vitamin deficiency; Signs: dry cough and blindness",
+            "C": "Causes: high roughage diet; Signs: bloat and constipation",
+            "D": "Causes: excessive milk fat; Signs: hard clods of manure with no fever"
+          },
+          "answer": "A",
+          "explanation": "Calf diarrhea results from microbial, environmental, nutritional, and colostrum issues, leading to loose bowel and dehydration.",
+          "number": 544
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which clinical sign is specifically noted for Calf Respiratory Problems when the calf is startled or agitated, and what environmental measures help control it?",
+          "options": {
+            "A": "Coughing (especially when startled or agitated), labored breathing, and nasal discharge; managed by isolating the sick animal, reducing overcrowding, replacing bedding, proper ventilation, and antibiotic therapy",
+            "B": "Sneezing only during nighttime; managed by restricting fluid intake",
+            "C": "Continuous drooling with high fever; managed by walking through a foot bath",
+            "D": "Loss of horns and hair; managed by spraying cold water"
+          },
+          "answer": "A",
+          "explanation": "Agitated coughing, labored breathing, and nasal discharge indicate calf pneumonia, managed with proper ventilation and bedding hygiene.",
+          "number": 545
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does the clinical abbreviation LDA stand for in dairy cattle, and what anatomical shift occurs?",
+          "options": {
+            "A": "Left Displaced Abomasum — the abomasum shifts from its normal right-ventral position to the left side between the body wall and the rumen",
+            "B": "Lateral Distended Abomasum — the abomasum rotates into the pelvic canal",
+            "C": "Lower Digestive Acidosis — the rumen pH drops below 4.0",
+            "D": "Left Dorsal Atrophy — the rumen wall shrinks due to starvation"
+          },
+          "answer": "A",
+          "explanation": "In Left Displaced Abomasum (LDA), the fourth stomach shifts to the left between the abdominal wall and the rumen.",
+          "number": 546
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which two specific hoof diseases are highlighted as common causes of lameness in dairy cattle, and how are they managed?",
+          "options": {
+            "A": "Foot rot and Inter-digital dermatitis; managed through foot care/trimming and a medicated foot bath",
+            "B": "Navel ill and Septicemia; managed by oral electrolytes",
+            "C": "Sole fracture and Hip dislocation; managed with body harnesses",
+            "D": "Laminitis and Bloat; managed with trocarization"
+          },
+          "answer": "A",
+          "explanation": "Foot rot and inter-digital dermatitis cause lameness and are managed via trimming and medicated foot baths.",
+          "number": 547
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What preventive device is administered orally to cattle to attract swallowed nails and wires and prevent Hardware Disease?",
+          "options": {
+            "A": "Rumen magnet",
+            "B": "Trocar and cannula",
+            "C": "Balling gun",
+            "D": "Esophageal tube"
+          },
+          "answer": "A",
+          "explanation": "A permanent cylindrical rumen magnet placed in the reticulum captures ferromagnetic hardware.",
+          "number": 548
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How are cattle parasites classified on Page 58 of the module?",
+          "options": {
+            "A": "Endoparasites (Roundworms, Tapeworms, Protozoa) and Ectoparasites (Ticks)",
+            "B": "Endoparasites (Ticks and Lice) and Ectoparasites (Roundworms)",
+            "C": "Internal parasites (Ticks only) and External parasites (Tapeworms only)",
+            "D": "All parasites are classified exclusively as blood protozoa"
+          },
+          "answer": "A",
+          "explanation": "Endoparasites include roundworms, tapeworms, and protozoa; ectoparasites include ticks.",
+          "number": 549
+        }
+      ]
+    },
+    {
+      "id": "dairy-terminology-glossary",
+      "title": "Part II: Definition of Terms",
+      "description": "Essential terminology of dairy husbandry, calving, rumination physiology, and milk production.",
+      "questions": [
+        {
+          "original_number": 7,
+          "type": "identification",
+          "question": "Partly digest food returned from the first stomach of ruminants to the mouth for further chewing.",
+          "options": {},
+          "answer": "CUD",
+          "accepted_answers": [
+            "CUD",
+            "cud"
+          ],
+          "explanation": "",
+          "number": 550
+        },
+        {
+          "original_number": 8,
+          "type": "identification",
+          "question": "It is the process by which the cow regurgitates previously consumed feed and chews further?",
+          "options": {},
+          "answer": "CUD CHEWING",
+          "accepted_answers": [
+            "CUD CHEWING",
+            "cud chewing",
+            "chewing cud",
+            "cud-chewing",
+            "rumination"
+          ],
+          "explanation": "",
+          "number": 551
+        },
+        {
+          "original_number": 9,
+          "type": "identification",
+          "question": "Is the chewing and grinding of food into smaller particles?",
+          "options": {},
+          "answer": "MASTICATION",
+          "accepted_answers": [
+            "MASTICATION",
+            "mastication",
+            "chewing"
+          ],
+          "explanation": "",
+          "number": 552
+        },
+        {
+          "original_number": 10,
+          "type": "identification",
+          "question": "Is the act of gathering food using the tongue and lips and moves it into the mouth?",
+          "options": {},
+          "answer": "PREHENSION",
+          "accepted_answers": [
+            "PREHENSION",
+            "prehension"
+          ],
+          "explanation": "",
+          "number": 553
+        },
+        {
+          "original_number": 12,
+          "type": "identification",
+          "question": "It is so called cow's \"passport to life\"?",
+          "options": {},
+          "answer": "COLOSTRUM",
+          "accepted_answers": [
+            "COLOSTRUM",
+            "colostrum",
+            "first milk"
+          ],
+          "explanation": "",
+          "number": 554
+        },
+        {
+          "original_number": 13,
+          "type": "identification",
+          "question": "It is the abnormality or difficulty in giving birth of cow.",
+          "options": {},
+          "answer": "DYSTOCIA",
+          "accepted_answers": [
+            "DYSTOCIA",
+            "dystocia",
+            "difficult calving",
+            "difficult birth"
+          ],
+          "explanation": "",
+          "number": 555
+        },
+        {
+          "original_number": 14,
+          "type": "identification",
+          "question": "It is the act of giving birth.",
+          "options": {},
+          "answer": "PARTURATION",
+          "accepted_answers": [
+            "Parturition",
+            "PARTURATION",
+            "parturition",
+            "parturation",
+            "calving"
+          ],
+          "explanation": "",
+          "number": 556
+        },
+        {
+          "original_number": 15,
+          "type": "identification",
+          "question": "It is an act of separating the calf attachment from the mother.",
+          "options": {},
+          "answer": "SEPARATION",
+          "accepted_answers": [
+            "SEPARATION",
+            "separation",
+            "calf separation",
+            "weaning"
+          ],
+          "explanation": "",
+          "number": 557
+        },
+        {
+          "type": "identification",
+          "question": "A branch of agriculture that encompasses the breeding, raising and utilization of dairy animals for the production of milk and various dairy products processed from it:",
+          "options": {},
+          "answer": "DAIRY FARMING",
+          "accepted_answers": [
+            "Dairy farming",
+            "Dairying",
+            "Dairyfarming"
+          ],
+          "explanation": "Dairy farming or dairying encompasses breeding, raising, and utilizing dairy livestock for milk production.",
+          "number": 558
+        },
+        {
+          "type": "identification",
+          "question": "A large pendulous organ consisting of two or more mammary glands enclosed in a common envelope and each provided with a single teat:",
+          "options": {},
+          "answer": "UDDER",
+          "accepted_answers": [
+            "Udder",
+            "Mammary gland"
+          ],
+          "explanation": "The udder is the pendulous mammary organ containing the mammary glands and teats.",
+          "number": 559
+        },
+        {
+          "type": "identification",
+          "question": "The technical term defined in the Calving and Calf Management module for a newborn animal:",
+          "options": {},
+          "answer": "NEONATE",
+          "accepted_answers": [
+            "Neonate",
+            "Newborn animal",
+            "Newborn",
+            "Calf"
+          ],
+          "explanation": "A neonate is a newborn animal in need of immediate post-natal airway and colostrum care.",
+          "number": 560
+        },
+        {
+          "type": "identification",
+          "question": "The normal physiological process in cows of returning partly digested feed from the stomach to the mouth for further chewing:",
+          "options": {},
+          "answer": "REGURGITATION",
+          "accepted_answers": [
+            "Regurgitation"
+          ],
+          "explanation": "Regurgitation is the reverse movement of cud from the stomach to the oral cavity during rumination.",
+          "number": 561
+        },
+        {
+          "type": "multiple_choice",
+          "question": "According to the Definition of Terms on Page 42, what is Lactation, and what is the standard duration of the Lactation period after calving?",
+          "options": {
+            "A": "Lactation is the process of making milk; the standard lactation period is 305 days",
+            "B": "Lactation is the period of pregnancy; the standard duration is 285 days",
+            "C": "Lactation is the process of rumination; the standard duration is 60 days",
+            "D": "Lactation is the dry period; the standard duration is 365 days"
+          },
+          "answer": "A",
+          "explanation": "Lactation is milk synthesis and secretion; the standard dairy lactation cycle is 305 days.",
+          "number": 562
+        },
+        {
+          "type": "multiple_choice",
+          "question": "According to the Definition of Terms on Page 42, what is Gestation, and what is its standard duration in dairy cattle?",
+          "options": {
+            "A": "Gestation is the period of time between conception and birth; standard is 285 days",
+            "B": "Gestation is the time between calving and peak milk; standard is 305 days",
+            "C": "Gestation is the period of estrus; standard is 21 days",
+            "D": "Gestation is the weaning duration; standard is 60 days"
+          },
+          "answer": "A",
+          "explanation": "Gestation is the pregnancy duration between conception and birth, averaging 285 days in cattle.",
+          "number": 563
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How much colostrum (\"passport to life\") must be given to a newborn calf within the first two hours of life, and what antiseptic is used to dip the navel?",
+          "options": {
+            "A": "2 litres of colostrum within the first 2 hours of life; povidone iodine for navel disinfection",
+            "B": "500 ml of colostrum within 24 hours; isopropyl alcohol for navel dipping",
+            "C": "5 litres of whole milk; hydrogen peroxide for navel dipping",
+            "D": "1 litre of water; chlorhexidine for navel dipping"
+          },
+          "answer": "A",
+          "explanation": "Calves require 2 litres of antibody-rich colostrum within 2 hours of birth and navel dipping with povidone iodine.",
+          "number": 564
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the definition of Silage making according to Page 33 of the module?",
+          "options": {
+            "A": "A method of conserving animal feed by fermenting forage crops (such as Corn and Napier) for times when less animal feed is available",
+            "B": "Sun-drying green grass until moisture drops below 10% to make dry baled hay",
+            "C": "Boiling corn kernels into a concentrated mash for dry cows",
+            "D": "A chemical treatment using urea to dissolve tough crop residues"
+          },
+          "answer": "A",
+          "explanation": "Silage making is feed conservation through anaerobic fermentation of forage crops into lactic acid.",
+          "number": 565
+        }
+      ]
+    },
+    {
+      "id": "interactive-daily-routine-time",
+      "title": "Part II: Daily Routine Time Quiz",
+      "description": "Identify the corresponding scheduled time or time window for each numbered circle (1 to 13) in the Dairy Square daily farm routine.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "image": "assets/daily-routine-time-quiz.jpg",
+          "answer_image": "assets/dairy-square-daily-routine-original.jpg",
+          "caption": "Dairy Square Daily Routine — Scheduled Time Identification (Circles 1 to 13)",
+          "question": "Arrange the scheduled time windows to match the numbered circles (1 to 13) in the Dairy Square Daily Routine diagram:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "4:00 AM",
+              "type": "reorder_card",
+              "answer": "4:00 AM",
+              "accepted_answers": [
+                "4:00 AM",
+                "4:00AM",
+                "04:00 AM"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "5:00 AM – 7:30 AM",
+              "type": "reorder_card",
+              "answer": "5:00 AM – 7:30 AM",
+              "accepted_answers": [
+                "5:00 AM – 7:30 AM",
+                "5:00 AM - 7:30 AM",
+                "5:00AM - 7:30AM"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "7:30 AM – 8:00 AM",
+              "type": "reorder_card",
+              "answer": "7:30 AM – 8:00 AM",
+              "accepted_answers": [
+                "7:30 AM – 8:00 AM",
+                "7:30 AM - 8:00 AM",
+                "7:30AM - 8:00AM"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "8:00 AM – 9:00 AM",
+              "type": "reorder_card",
+              "answer": "8:00 AM – 9:00 AM",
+              "accepted_answers": [
+                "8:00 AM – 9:00 AM",
+                "8:00 AM - 9:00 AM",
+                "8:00AM - 9:00AM"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "9:00 AM – 10:00 AM",
+              "type": "reorder_card",
+              "answer": "9:00 AM – 10:00 AM",
+              "accepted_answers": [
+                "9:00 AM – 10:00 AM",
+                "9:00 AM - 10:00 AM",
+                "9:00AM - 10:00AM"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "text": "10:00 AM",
+              "type": "reorder_card",
+              "answer": "10:00 AM",
+              "accepted_answers": [
+                "10:00 AM",
+                "10:00AM"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "text": "11:00 AM",
+              "type": "reorder_card",
+              "answer": "11:00 AM",
+              "accepted_answers": [
+                "11:00 AM",
+                "11:00AM"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "text": "12:00 NN",
+              "type": "reorder_card",
+              "answer": "12:00 NN",
+              "accepted_answers": [
+                "12:00 NN",
+                "12:00NN",
+                "12:00 PM",
+                "12:00 Noon"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "text": "2:00 PM – 2:30 PM",
+              "type": "reorder_card",
+              "answer": "2:00 PM – 2:30 PM",
+              "accepted_answers": [
+                "2:00 PM – 2:30 PM",
+                "2:00 PM - 2:30 PM",
+                "2:00PM - 2:30PM"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "text": "2:30 PM – 4:00 PM",
+              "type": "reorder_card",
+              "answer": "2:30 PM – 4:00 PM",
+              "accepted_answers": [
+                "2:30 PM – 4:00 PM",
+                "2:30 PM - 4:00 PM",
+                "2:30PM - 4:00PM"
+              ]
+            },
+            {
+              "id": 11,
+              "label": "11",
+              "text": "4:00 PM",
+              "type": "reorder_card",
+              "answer": "4:00 PM",
+              "accepted_answers": [
+                "4:00 PM",
+                "4:00PM"
+              ]
+            },
+            {
+              "id": 12,
+              "label": "12",
+              "text": "8:00 PM",
+              "type": "reorder_card",
+              "answer": "8:00 PM",
+              "accepted_answers": [
+                "8:00 PM",
+                "8:00PM"
+              ]
+            },
+            {
+              "id": 13,
+              "label": "13",
+              "text": "8:30 PM – 10:00 PM",
+              "type": "reorder_card",
+              "answer": "8:30 PM – 10:00 PM",
+              "accepted_answers": [
+                "8:30 PM – 10:00 PM",
+                "8:30 PM - 10:00 PM",
+                "8:30PM - 10:00PM"
+              ]
+            }
+          ],
+          "explanation": "The Dairy Square daily schedule runs chronologically from 4:00 AM (Self Preparation) and 5:00 AM – 7:30 AM (Morning Milking, Cleaning, Feeding) through 8:30 PM – 10:00 PM (Night Observation Time).",
+          "number": 566
+        }
+      ]
+    },
+    {
+      "id": "interactive-daily-routine-activities",
+      "title": "Part II: Daily Routine Activity Quiz",
+      "description": "Identify the corresponding scheduled farm activity or task for each numbered circle (1 to 13) in the Dairy Square daily farm routine.",
+      "questions": [
+        {
+          "type": "reorder_cards",
+          "image": "assets/daily-routine-activity-quiz.jpg",
+          "answer_image": "assets/dairy-square-daily-routine-original.jpg",
+          "caption": "Dairy Square Daily Routine — Scheduled Activity Identification (Circles 1 to 13)",
+          "question": "Arrange the scheduled farm activities to match the numbered circles (1 to 13) in the Dairy Square Daily Routine diagram:",
+          "options": {},
+          "answer": "REORDER_CARDS",
+          "items": [
+            {
+              "id": 1,
+              "label": "1",
+              "text": "Self Preparation",
+              "type": "reorder_card",
+              "answer": "Self Preparation",
+              "accepted_answers": [
+                "Self Preparation",
+                "Self-Preparation"
+              ]
+            },
+            {
+              "id": 2,
+              "label": "2",
+              "text": "Milking, Cleaning, Feeding",
+              "type": "reorder_card",
+              "answer": "Milking, Cleaning, Feeding",
+              "accepted_answers": [
+                "Milking, Cleaning, Feeding",
+                "Milking Cleaning Feeding"
+              ]
+            },
+            {
+              "id": 3,
+              "label": "3",
+              "text": "Breakfast",
+              "type": "reorder_card",
+              "answer": "Breakfast",
+              "accepted_answers": [
+                "Breakfast"
+              ]
+            },
+            {
+              "id": 4,
+              "label": "4",
+              "text": "Rest",
+              "type": "reorder_card",
+              "answer": "Rest",
+              "accepted_answers": [
+                "Rest",
+                "Rest Period"
+              ]
+            },
+            {
+              "id": 5,
+              "label": "5",
+              "text": "Chopping Grass",
+              "type": "reorder_card",
+              "answer": "Chopping Grass",
+              "accepted_answers": [
+                "Chopping Grass",
+                "Grass Chopping"
+              ]
+            },
+            {
+              "id": 6,
+              "label": "6",
+              "text": "Dry Feeding (4 Dairy Cows)",
+              "type": "reorder_card",
+              "answer": "Dry Feeding (4 Dairy Cows)",
+              "accepted_answers": [
+                "Dry Feeding (4 Dairy Cows)",
+                "Dry Feeding"
+              ]
+            },
+            {
+              "id": 7,
+              "label": "7",
+              "text": "Cleaning",
+              "type": "reorder_card",
+              "answer": "Cleaning",
+              "accepted_answers": [
+                "Cleaning",
+                "Barn Cleaning"
+              ]
+            },
+            {
+              "id": 8,
+              "label": "8",
+              "text": "Wet Feeding (All) / Lunch",
+              "type": "reorder_card",
+              "answer": "Wet Feeding (All) / Lunch",
+              "accepted_answers": [
+                "Wet Feeding (All) / Lunch",
+                "Wet Feeding / Lunch",
+                "Wet Feeding (All)"
+              ]
+            },
+            {
+              "id": 9,
+              "label": "9",
+              "text": "Grass Feeding",
+              "type": "reorder_card",
+              "answer": "Grass Feeding",
+              "accepted_answers": [
+                "Grass Feeding",
+                "Forage Feeding"
+              ]
+            },
+            {
+              "id": 10,
+              "label": "10",
+              "text": "Rest",
+              "type": "reorder_card",
+              "answer": "Rest",
+              "accepted_answers": [
+                "Rest",
+                "Rest Period"
+              ]
+            },
+            {
+              "id": 11,
+              "label": "11",
+              "text": "Milking, Cleaning, Feeding",
+              "type": "reorder_card",
+              "answer": "Milking, Cleaning, Feeding",
+              "accepted_answers": [
+                "Milking, Cleaning, Feeding",
+                "Milking Cleaning Feeding"
+              ]
+            },
+            {
+              "id": 12,
+              "label": "12",
+              "text": "Merienda",
+              "type": "reorder_card",
+              "answer": "Merienda",
+              "accepted_answers": [
+                "Merienda",
+                "Afternoon Snack"
+              ]
+            },
+            {
+              "id": 13,
+              "label": "13",
+              "text": "Observation Time",
+              "type": "reorder_card",
+              "answer": "Observation Time",
+              "accepted_answers": [
+                "Observation Time",
+                "Heat and Health Observation Time"
+              ]
+            }
+          ],
+          "explanation": "The 13 daily farm operations begin with Self Preparation (4:00 AM) and Morning Milking, Cleaning, Feeding (5:00 AM – 7:30 AM) and conclude with Merienda (8:00 PM) and Observation Time (8:30 PM – 10:00 PM).",
+          "number": 567
+        }
+      ]
+    },
+    {
+      "id": "milking-system-engineering",
+      "title": "Part II: Milking System Engineering & Parlor Operations",
+      "description": "Operating vacuum thresholds, pulsation rates and ratios, oxytocin lag times, liner maintenance, and parlor wash protocols.",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended operational vacuum level range for a high-line pipeline milking system?",
+          "options": {
+            "A": "32 to 36 kPa (9.5 to 10.5 inHg)",
+            "B": "38 to 40 kPa (11.2 to 11.8 inHg)",
+            "C": "42 to 46 kPa (12.5 to 13.5 inHg)",
+            "D": "50 to 55 kPa (15.0 to 16.5 inHg)"
+          },
+          "answer": "C",
+          "explanation": "High-line pipeline systems require 42 to 46 kPa (12.5 to 13.5 inHg) to overcome milk lift elevation, whereas low-line systems operate at 38 to 40 kPa.",
+          "number": 568
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary physiological consequence of running a milking system at excessively high vacuum levels (>48 kPa)?",
+          "options": {
+            "A": "Complete failure of milk letdown due to lack of oxytocin",
+            "B": "Severe teat-end hyperkeratosis, ringing, and teat barrel vascular congestion",
+            "C": "Rapid bacterial colonization in the bulk milk tank",
+            "D": "Excessive cooling of milk inside the receiver jar"
+          },
+          "answer": "B",
+          "explanation": "Excessive vacuum draws blood and fluid into teat tissue, causing congestion, edema, and rough teat-end calluses (hyperkeratosis) that predispose teats to mastitis.",
+          "number": 569
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What problem commonly occurs when the milking system vacuum falls below the recommended operating threshold (<38 kPa)?",
+          "options": {
+            "A": "Severe udder edema and burst blood vessels",
+            "B": "Teat cup liner slip, frequent cluster drop-off, and slow or incomplete milk evacuation",
+            "C": "Acidification of milk inside the claw",
+            "D": "Overheating of the vacuum pump electric motor"
+          },
+          "answer": "B",
+          "explanation": "Inadequate vacuum reduces the friction holding teat cups in place, leading to liner slip, teat cup drop-off, and prolonged, incomplete milking.",
+          "number": 570
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the standard pulsation rate range used in modern bovine milking machines?",
+          "options": {
+            "A": "20 to 30 cycles per minute",
+            "B": "35 to 45 cycles per minute",
+            "C": "55 to 65 cycles per minute",
+            "D": "80 to 95 cycles per minute"
+          },
+          "answer": "C",
+          "explanation": "A pulsation rate of 55 to 65 cycles per minute provides optimal balance between milk flow rate and teat massage frequency.",
+          "number": 571
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In milking machine terminology, what does a pulsation ratio of 60:40 signify?",
+          "options": {
+            "A": "60% of milk comes from the front quarters and 40% from the rear quarters",
+            "B": "The teat cup liner is open (milking phase) for 60% of the cycle and collapsed (massage phase) for 40%",
+            "C": "The pipeline contains 60% liquid milk and 40% atmospheric air",
+            "D": "The wash cycle requires 60% hot water and 40% chemical detergent"
+          },
+          "answer": "B",
+          "explanation": "The pulsation ratio represents the proportion of time the liner spends in the expanded milking phase versus the collapsed massage phase during each cycle.",
+          "number": 572
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is the massage (rest) phase of the milking cycle physiologically necessary for the cow?",
+          "options": {
+            "A": "It allows oxytocin to travel from the pituitary gland to the udder",
+            "B": "It compresses the teat end to relieve venous congestion and restore blood and lymph circulation",
+            "C": "It sanitizes the teat surface with disinfectant vapor",
+            "D": "It cools the teat skin to prevent thermal irritation"
+          },
+          "answer": "B",
+          "explanation": "During the collapse phase, the rubber liner presses against the teat end, forcing accumulated blood and lymph upward and preventing tissue congestion.",
+          "number": 573
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended minimum contact dwell time for a germicidal pre-milking teat dip before it is wiped off?",
+          "options": {
+            "A": "5 seconds",
+            "B": "10 seconds",
+            "C": "30 seconds",
+            "D": "120 seconds"
+          },
+          "answer": "C",
+          "explanation": "A pre-milking teat dip requires at least 30 seconds of active surface contact to achieve sufficient bacterial kill before being wiped clean and dry.",
+          "number": 574
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which of the following is the PRIMARY purpose of forestripping 3 to 4 streams of milk from each quarter prior to cluster attachment?",
+          "options": {
+            "A": "To completely empty the cisternal milk pool before vacuum application",
+            "B": "To detect abnormal milk (clots, flakes, discoloration) and expel foremilk containing the highest bacterial concentration",
+            "C": "To lubricate the inside of the rubber teat cup liners",
+            "D": "To determine the exact butterfat percentage of the herd"
+          },
+          "answer": "B",
+          "explanation": "Forestripping checks each quarter for clinical mastitis signs (flakes, clots, watery milk) while flushing out bacteria colonizing the teat canal.",
+          "number": 575
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the ideal physiological lag time between initial tactile teat preparation (stripping/cleaning) and milking cluster attachment?",
+          "options": {
+            "A": "10 to 20 seconds",
+            "B": "60 to 90 seconds",
+            "C": "3 to 5 minutes",
+            "D": "8 to 10 minutes"
+          },
+          "answer": "B",
+          "explanation": "Tactile stimulation triggers oxytocin release from the pituitary gland, which reaches peak blood concentration at the udder myoepithelial cells within 60 to 90 seconds.",
+          "number": 576
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What happens if a milking unit is attached immediately (<20 seconds) after teat wiping without allowing for oxytocin lag time?",
+          "options": {
+            "A": "The cow produces double the daily milk yield",
+            "B": "Bimodal milk flow occurs, causing transient overmilking on empty teats before alveolar milk reaches the cistern",
+            "C": "The milk automatically ferments inside the claw piece",
+            "D": "The vacuum regulator shuts off automatically"
+          },
+          "answer": "B",
+          "explanation": "Premature attachment evacuates cisternal milk quickly, followed by a flow cessation (bimodal curve) where high vacuum pulls on empty teats until alveolar letdown commences.",
+          "number": 577
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Under what milk flow rate threshold should Automatic Cluster Removers (ACRs) detach the milking unit to prevent harmful overmilking?",
+          "options": {
+            "A": "0.05 kg/min",
+            "B": "0.2 to 0.4 kg/min",
+            "C": "1.0 to 1.5 kg/min",
+            "D": "2.0 to 2.5 kg/min"
+          },
+          "answer": "B",
+          "explanation": "Modern ACRs detach the cluster when milk flow drops below 0.2 to 0.4 kg/min, protecting teat tissues from vacuum damage caused by overmilking.",
+          "number": 578
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What proportion of the teat surface must be covered when applying post-milking barrier teat dip?",
+          "options": {
+            "A": "Only the teat orifice at the very tip",
+            "B": "The lower half of the teat only",
+            "C": "At least 75% to 100% of the entire teat barrel",
+            "D": "The entire udder floor including hair"
+          },
+          "answer": "C",
+          "explanation": "Post-milking dipping must cover the entire teat barrel (at least 75%–100%) to kill pathogens left after milking and form a protective physical barrier while the teat sphincter remains open.",
+          "number": 579
+        },
+        {
+          "type": "multiple_choice",
+          "question": "At what starting temperature should hot water enter the milking system during the main detergent wash cycle?",
+          "options": {
+            "A": "40°C to 50°C",
+            "B": "55°C to 65°C",
+            "C": "75°C to 85°C",
+            "D": "95°C to 100°C"
+          },
+          "answer": "C",
+          "explanation": "The alkaline detergent wash must begin at 75°C to 85°C to melt butterfat and optimize chemical cleaning across pipelines.",
+          "number": 580
+        },
+        {
+          "type": "multiple_choice",
+          "question": "During the hot alkaline wash cycle, why must the wash solution be drained before its temperature drops below 45°C?",
+          "options": {
+            "A": "Below 45°C, chlorine gas evaporates rapidly",
+            "B": "Emulsified butterfat and milk solids begin to redeposit onto stainless steel and rubber pipeline surfaces",
+            "C": "Cold water causes stainless steel pipes to crack",
+            "D": "The wash pump cannot circulate water below 45°C"
+          },
+          "answer": "B",
+          "explanation": "If wash water cools below 45°C, suspended milk fat hardens and redeposits on surfaces, creating stubborn greasy films and milkstone.",
+          "number": 581
+        },
+        {
+          "type": "multiple_choice",
+          "question": "As a standard preventive maintenance protocol, after how many cow milkings should rubber teat cup liners be replaced?",
+          "options": {
+            "A": "Every 500 milkings",
+            "B": "Every 1,000 milkings",
+            "C": "Every 2,500 milkings (or 6 months, whichever comes first)",
+            "D": "Every 10,000 milkings"
+          },
+          "answer": "C",
+          "explanation": "Repeated stretching and exposure to butterfat and sanitizers degrade rubber elasticity, micro-cracking liners and harboring bacteria after approximately 2,500 milkings.",
+          "number": 582
+        }
+      ]
+    },
+    {
+      "id": "dairy-nutrition-and-calculations",
+      "title": "Part II: Dairy Cattle Nutrition & Practical Ration Calculations",
+      "description": "Dry matter intake formulas, roughage-to-concentrate balancing, water requirement calculations, and metabolic disorder prevention.",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the standard rule of thumb for estimating the daily Dry Matter Intake (DMI) capacity of a lactating dairy cow?",
+          "options": {
+            "A": "1.0% to 1.5% of body weight",
+            "B": "3.0% to 3.5% of body weight",
+            "C": "5.0% to 6.0% of body weight",
+            "D": "8.0% to 10.0% of body weight"
+          },
+          "answer": "B",
+          "explanation": "Lactating cows consume approximately 3.0% to 3.5% of their total body weight in dry matter daily to support maintenance and lactation.",
+          "number": 583
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Calculate the daily Dry Matter Intake (DMI) requirement for a 500 kg Holstein-Friesian crossbred cow consuming 3.2% of her body weight:",
+          "options": {
+            "A": "10.0 kg DM",
+            "B": "16.0 kg DM",
+            "C": "22.5 kg DM",
+            "D": "32.0 kg DM"
+          },
+          "answer": "B",
+          "explanation": "Calculation: 500 kg × 0.032 = 16.0 kg dry matter per day.",
+          "number": 584
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Fresh Napier grass contains 20% Dry Matter (DM) and 80% moisture. If a dairy cow requires 14 kg of Dry Matter from this grass daily, how many kilograms of fresh green forage must be harvested and fed?",
+          "options": {
+            "A": "28 kg",
+            "B": "45 kg",
+            "C": "70 kg",
+            "D": "140 kg"
+          },
+          "answer": "C",
+          "explanation": "Calculation: 14 kg DM ÷ 0.20 DM content = 70 kg of fresh green Napier grass.",
+          "number": 585
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Whole-plant corn silage contains 35% Dry Matter. If a cow is offered 30 kg of fresh corn silage in the feed bunk, how much Dry Matter is she actually receiving from this portion?",
+          "options": {
+            "A": "7.0 kg DM",
+            "B": "10.5 kg DM",
+            "C": "15.0 kg DM",
+            "D": "21.0 kg DM"
+          },
+          "answer": "B",
+          "explanation": "Calculation: 30 kg fresh silage × 0.35 DM = 10.5 kg dry matter.",
+          "number": 586
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended baseline forage-to-concentrate ratio (on a dry matter basis) for maintaining healthy rumen pH and adequate milk fat synthesis in lactating dairy cattle?",
+          "options": {
+            "A": "20:80 forage to concentrate",
+            "B": "40:60 forage to concentrate",
+            "C": "60:40 (or at least 50:50) forage to concentrate",
+            "D": "90:10 forage to concentrate"
+          },
+          "answer": "C",
+          "explanation": "Maintaining at least 50% to 60% dietary dry matter from effective fiber (forage) ensures proper chewing, salivation, and rumen buffering to synthesize acetate for milk fat.",
+          "number": 587
+        },
+        {
+          "type": "multiple_choice",
+          "question": "When supplementing dairy concentrates based on milk production, what is the standard operational guideline for feeding commercial concentrate beyond basal maintenance?",
+          "options": {
+            "A": "1 kg concentrate for every 1 kg of milk produced",
+            "B": "1 kg concentrate for every 2.5 to 3.0 kg of milk produced",
+            "C": "1 kg concentrate for every 6.0 to 8.0 kg of milk produced",
+            "D": "5 kg concentrate fixed per cow regardless of milk yield"
+          },
+          "answer": "B",
+          "explanation": "Commercial dairy concentrate is formulated to support approximately 2.5 to 3.0 kg of milk production per 1 kg of concentrate fed above maintenance requirements.",
+          "number": 588
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A lactating cow produces 18 kg of milk daily. Her basal forage diet supports maintenance plus 6 kg of milk. Using the standard ratio of 1 kg concentrate per 3 kg milk, how much concentrate should she be fed daily?",
+          "options": {
+            "A": "2 kg",
+            "B": "4 kg",
+            "C": "6 kg",
+            "D": "8 kg"
+          },
+          "answer": "B",
+          "explanation": "Calculation: Production supported by concentrate = 18 kg - 6 kg = 12 kg milk. Concentrate required = 12 kg ÷ 3 kg/kg = 4.0 kg concentrate daily.",
+          "number": 589
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What critical physiological condition arises when dairy cows are fed excessive rapidly fermentable starch concentrates, driving rumen pH below 5.5?",
+          "options": {
+            "A": "Abomasal Impaction",
+            "B": "Subacute Rumen Acidosis (SARA)",
+            "C": "Infectious Bovine Keratoconjunctivitis",
+            "D": "Traumatic Pericarditis"
+          },
+          "answer": "B",
+          "explanation": "Overfeeding starchy grains causes lactic acid and volatile fatty acid surges, dropping rumen pH below 5.5, damaging rumen papillae, and causing SARA and laminitis.",
+          "number": 590
+        },
+        {
+          "type": "multiple_choice",
+          "question": "As a standard physiological benchmark, how much drinking water does a lactating dairy cow consume per liter of milk produced, in addition to her maintenance water needs?",
+          "options": {
+            "A": "0.5 to 1.0 liter",
+            "B": "1.5 to 2.0 liters",
+            "C": "4.0 to 5.0 liters",
+            "D": "10.0 to 12.0 liters"
+          },
+          "answer": "C",
+          "explanation": "Milk consists of approximately 87% water; cows require 4 to 5 liters of fresh water per liter of milk produced to cover milk secretion and physiological losses.",
+          "number": 591
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If a mature dairy cow requires 40 liters of water for basal maintenance and produces 22 liters of milk per day, what is her estimated total daily water intake (at 4.5 liters per liter of milk)?",
+          "options": {
+            "A": "62 liters",
+            "B": "99 liters",
+            "C": "139 liters",
+            "D": "220 liters"
+          },
+          "answer": "C",
+          "explanation": "Calculation: Production water = 22 L milk × 4.5 L/L = 99 liters. Total water = 40 L maintenance + 99 L production = 139 liters per day.",
+          "number": 592
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended linear water trough drinking space per cow in loose housing to prevent dominant cows from guarding water sources?",
+          "options": {
+            "A": "2 to 3 cm per cow",
+            "B": "8 to 10 cm per cow",
+            "C": "25 to 30 cm per cow",
+            "D": "50 cm per cow"
+          },
+          "answer": "B",
+          "explanation": "Ensuring 8 to 10 cm of clean trough perimeter per cow guarantees adequate water access immediately following milking when 30% to 50% of daily water is consumed.",
+          "number": 593
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the ideal dietary Calcium to Phosphorus (Ca:P) ratio in complete lactating dairy cattle rations?",
+          "options": {
+            "A": "1:2",
+            "B": "1:1",
+            "C": "2:1 (or between 1.5:1 and 2:1)",
+            "D": "5:1"
+          },
+          "answer": "C",
+          "explanation": "A Ca:P ratio of approximately 2:1 optimizes mineral absorption and bone mineralization while preventing secondary nutritional hyperparathyroidism.",
+          "number": 594
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What dietary strategy during the late dry period (pre-calving close-up ration) is used to prime the cow's hormonal mechanisms and prevent Milk Fever (hypocalcemia) at calving?",
+          "options": {
+            "A": "Maximizing calcium-rich legume forage in unlimited quantities",
+            "B": "Feeding a low-calcium ration or Dietary Cation-Anion Difference (DCAD) diet with negative ionic balance",
+            "C": "Feeding high concentrations of urea and sulfur",
+            "D": "Completely withholding drinking water for 24 hours prior to calving"
+          },
+          "answer": "B",
+          "explanation": "Negative DCAD or low pre-calving dietary calcium triggers parathyroid hormone secretion and bone calcium mobilization before lactation demands surge.",
+          "number": 595
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What metabolic disorder occurs in early lactation when extreme negative energy balance forces excessive mobilization of body fat stores, overwhelming the liver?",
+          "options": {
+            "A": "Hypomagnesemia (Grass Tetany)",
+            "B": "Ketosis (Acetonemia)",
+            "C": "Enzootic Bovine Leukosis",
+            "D": "Rinderpest"
+          },
+          "answer": "B",
+          "explanation": "Severe negative energy balance mobilizes adipose non-esterified fatty acids (NEFAs); incomplete hepatic beta-oxidation produces excessive ketone bodies (acetoacetate, beta-hydroxybutyrate).",
+          "number": 596
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which distinctive physical symptom is frequently observed in cows suffering from clinical Ketosis?",
+          "options": {
+            "A": "Loud barking cough and frothy nasal discharge",
+            "B": "Sweet, fruity acetone odor on the cow's breath and in her milk, accompanied by sudden drop in milk yield and appetite",
+            "C": "High fever exceeding 41.5°C and bloody diarrhea",
+            "D": "Swollen, hot knee joints and horn deformities"
+          },
+          "answer": "B",
+          "explanation": "Excess ketone bodies volatilize in the lungs, creating a recognizable sweet, chloroform- or nail polish remover-like acetone aroma on the breath.",
+          "number": 597
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What nutritional deficiency triggers Grass Tetany (Hypomagnesemia) in cows grazing rapidly growing, lush spring pastures?",
+          "options": {
+            "A": "Inadequate dietary Magnesium, often exacerbated by high Potassium levels interfering with absorption",
+            "B": "Acute lack of dietary Sodium Chloride",
+            "C": "Severe Vitamin A deficiency in green forage",
+            "D": "Excessive dietary Crude Fiber"
+          },
+          "answer": "A",
+          "explanation": "Fast-growing lush grasses have low magnesium and high potassium content; excess potassium inhibits ruminal magnesium transport, provoking acute hypomagnesemic tetany.",
+          "number": 598
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary role of Neutral Detergent Fiber (NDF) in ruminant nutrition evaluation?",
+          "options": {
+            "A": "It measures only the inorganic mineral ash content",
+            "B": "It represents total structural cell wall fiber (cellulose, hemicellulose, lignin) that dictates gut fill and dry matter intake capacity",
+            "C": "It indicates the concentration of soluble sugars and starch",
+            "D": "It measures total non-protein nitrogen in silage"
+          },
+          "answer": "B",
+          "explanation": "NDF measures total plant cell wall material; high NDF forage takes longer to ferment, filling the rumen and physically capping dry matter intake capacity.",
+          "number": 599
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary functional difference between Acid Detergent Fiber (ADF) and Neutral Detergent Fiber (NDF)?",
+          "options": {
+            "A": "ADF contains hemicellulose while NDF does not",
+            "B": "ADF represents the least digestible fiber fraction (cellulose and lignin) and correlates negatively with forage digestibility and energy content",
+            "C": "ADF is purely synthetic protein added to commercial dairy feed",
+            "D": "ADF only exists in grain concentrates"
+          },
+          "answer": "B",
+          "explanation": "ADF isolates cellulose and indigestible lignin (excluding hemicellulose); as ADF percentage rises, forage energy density (TDN) and digestibility decrease.",
+          "number": 600
+        }
+      ]
+    },
+    {
+      "id": "reproduction-calves-and-mastitis",
+      "title": "Part II: Reproduction Timelines, Calf Milestones & Mastitis Diagnostics",
+      "description": "Estrus detection, the AM-PM breeding rule, colostrum Brix criteria, weaning benchmarks, CMT diagnostic scoring, and heat stress indices.",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the normal physiological duration of the bovine estrus cycle (from one standing heat to the next)?",
+          "options": {
+            "A": "10 to 14 days",
+            "B": "18 to 24 days (average 21 days)",
+            "C": "28 to 32 days",
+            "D": "45 to 60 days"
+          },
+          "answer": "B",
+          "explanation": "The bovine estrous cycle averages 21 days, with a normal physiological range of 18 to 24 days in cycling dairy cows and heifers.",
+          "number": 601
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How long does the actual standing heat (estrus) phase typically last in dairy cattle?",
+          "options": {
+            "A": "2 to 4 hours",
+            "B": "12 to 18 hours",
+            "C": "3 to 4 days",
+            "D": "7 days"
+          },
+          "answer": "B",
+          "explanation": "Standing estrus (the window where a cow willingly stands to be mounted) typically lasts 12 to 18 hours in dairy cows, though high producers may show shorter standing times.",
+          "number": 602
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Under the standard AM-PM Rule for artificial insemination, when should a cow first observed in standing heat at 7:00 AM be bred?",
+          "options": {
+            "A": "Immediately at 7:15 AM",
+            "B": "Late afternoon or evening on that same day (between 4:00 PM and 7:00 PM)",
+            "C": "The following evening (36 hours later)",
+            "D": "Exactly 5 days after the observation"
+          },
+          "answer": "B",
+          "explanation": "The AM-PM rule dictates that cows first seen standing in the morning (AM) should be inseminated late afternoon/evening (PM) of that same day to align with ovulation (which occurs ~10–14 hours after standing heat ends).",
+          "number": 603
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If a dairy heifer is detected in standing heat at 6:00 PM, when is the optimal window to inseminate her?",
+          "options": {
+            "A": "Early the following morning (AM)",
+            "B": "Exactly at midnight",
+            "C": "In the evening of the second day",
+            "D": "72 hours later"
+          },
+          "answer": "A",
+          "explanation": "Under the AM-PM rule, animals detected in standing heat in the evening (PM) must be inseminated the following morning (AM).",
+          "number": 604
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the average gestation length for domestic dairy cattle (Bos taurus)?",
+          "options": {
+            "A": "150 days (5 months)",
+            "B": "210 days (7 months)",
+            "C": "283 days (approximately 9 months and 9 days)",
+            "D": "365 days (12 months)"
+          },
+          "answer": "C",
+          "explanation": "Dairy cattle gestation averages 283 days (typically 279 to 287 days depending on breed, parity, and calf gender).",
+          "number": 605
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the target duration for the dry period (rest period between lactation and next calving) in dairy herd management?",
+          "options": {
+            "A": "15 to 20 days",
+            "B": "45 to 60 days",
+            "C": "90 to 120 days",
+            "D": "180 days"
+          },
+          "answer": "B",
+          "explanation": "A 45 to 60-day dry period is critical for mammary involution, epithelial regeneration, and replenishment of body nutrient reserves prior to calving.",
+          "number": 606
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What minimum Brix percentage reading on an optical or digital refractometer confirms High-Quality bovine colostrum?",
+          "options": {
+            "A": "At least 10% Brix",
+            "B": "At least 15% Brix",
+            "C": "At least 22% Brix (equivalent to >50 mg/mL IgG)",
+            "D": "At least 35% Brix"
+          },
+          "answer": "C",
+          "explanation": "A refractometer reading of 22% Brix or higher correlates reliably with maternal colostrum immunoglobulin concentration exceeding 50 g/L (50 mg/mL) of IgG.",
+          "number": 607
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Within how many hours after birth must a newborn calf receive its first feeding of clean, high-quality maternal colostrum?",
+          "options": {
+            "A": "Within the first 2 hours",
+            "B": "Between 12 and 18 hours",
+            "C": "After 24 hours of fasting",
+            "D": "On day 3 of life"
+          },
+          "answer": "A",
+          "explanation": "The newborn calf's intestinal enterocytes absorb intact macromolecular immunoglobulins via non-selective pinocytosis; this gut permeability drops drastically after 6 hours and closes completely by 24 hours.",
+          "number": 608
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How much colostrum should a newborn dairy calf receive in its first feeding relative to its body weight?",
+          "options": {
+            "A": "2% of body weight (approx. 0.8 L)",
+            "B": "5% of body weight (approx. 2 L)",
+            "C": "10% of body weight (approx. 3.5 to 4.0 liters for a 35–40 kg calf)",
+            "D": "25% of body weight (approx. 10 L)"
+          },
+          "answer": "C",
+          "explanation": "Feeding 10% of body weight (typically 3.5 to 4 liters) within 2 hours delivers the necessary 150–200 g of IgG required to achieve successful passive transfer of immunity.",
+          "number": 609
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What antiseptic solution is globally recommended for dipping newborn calf navel cords to prevent navel ill and systemic septicemia?",
+          "options": {
+            "A": "1% household bleach solution",
+            "B": "7% tincture of iodine",
+            "C": "Cold clean tap water",
+            "D": "70% rubbing alcohol"
+          },
+          "answer": "B",
+          "explanation": "A 7% strong tincture of iodine acts as both an antimicrobial barrier and a desiccant, promoting rapid drying and closure of the umbilical cord stump.",
+          "number": 610
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What nutritional milestone must a dairy calf achieve before it can be safely and completely weaned from milk?",
+          "options": {
+            "A": "The calf reaches 6 months of age regardless of intake",
+            "B": "Consuming at least 1.0 to 1.5 kg of solid calf starter grain daily for 3 consecutive days",
+            "C": "Consuming only fresh water and coarse rice straw",
+            "D": "Reaching double its birth length"
+          },
+          "answer": "B",
+          "explanation": "Weaning readiness requires consuming 1.0 to 1.5 kg of starter grain daily for 3 consecutive days, which stimulates butyrate production and ruminal papillae development.",
+          "number": 611
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the optimal age window for disbudding (dehorning) dairy calves using a hot-iron cautery tool?",
+          "options": {
+            "A": "Within the first 2 to 4 weeks of life",
+            "B": "At 6 to 8 months of age",
+            "C": "After the horn attaches firmly to the skull at 1 year",
+            "D": "Only after the first calving"
+          },
+          "answer": "A",
+          "explanation": "Disbudding is easiest, least painful, and has the fewest complications when performed at 2 to 4 weeks before the horn bud fuses to the frontal bone.",
+          "number": 612
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In the California Mastitis Test (CMT), what chemical reaction between the reagent and milk produces gel formation?",
+          "options": {
+            "A": "The reagent freezes the milk fats into butter lumps",
+            "B": "The detergent lyses white blood cell (somatic cell) membranes, releasing cellular DNA that forms a viscous slime or gel",
+            "C": "The reagent turns milk sugars into alcohol",
+            "D": "Acid precipitation of whey proteins"
+          },
+          "answer": "B",
+          "explanation": "CMT reagent contains an alkyl aryl sulfonate surfactant that ruptures somatic cell membranes; DNA strands uncoil and cross-link into a gelatinous mesh in proportion to the cell count.",
+          "number": 613
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What somatic cell count (SCC) range corresponds to a California Mastitis Test (CMT) score of Negative (no thickening, homogenous liquid)?",
+          "options": {
+            "A": "Below 200,000 somatic cells per milliliter",
+            "B": "400,000 to 800,000 cells/mL",
+            "C": "1,500,000 to 3,000,000 cells/mL",
+            "D": "Above 10,000,000 cells/mL"
+          },
+          "answer": "A",
+          "explanation": "Healthy, uninfected mammary quarters yield a Negative CMT reaction with zero precipitate, indicating a somatic cell count below 200,000 cells/mL.",
+          "number": 614
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What visual reaction in the California Mastitis Test paddle indicates a Score of 1 (Slight/Moderate Mastitis)?",
+          "options": {
+            "A": "Milk remains completely fluid and watery",
+            "B": "Distinct gel formation forms upon swirling, but dissolves completely when swirling stops, with no central dome formation",
+            "C": "Solid hard rubber ball that cannot be poured out",
+            "D": "Liquid turns bright neon green with boiling bubbles"
+          },
+          "answer": "B",
+          "explanation": "A CMT Score of 1 exhibits definite thickening with swirling, but does not form a persistent central jelly dome, correlating to 400,000–1,500,000 cells/mL.",
+          "number": 615
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What visual reaction in the CMT paddle indicates a Score of 3 (Heavy Mastitis, SCC >5,000,000 cells/mL)?",
+          "options": {
+            "A": "Homogenous purple liquid with zero friction",
+            "B": "Immediate heavy gelatinous mass forming a pronounced central dome that adheres to the bottom of the paddle cup",
+            "C": "Light powdery sediment at the rim",
+            "D": "Clear watery separation like curd and whey"
+          },
+          "answer": "B",
+          "explanation": "A Score of 3 reaction forms an almost solid, viscous jelly mass that pulls away from the paddle rim and heaps into a central mound.",
+          "number": 616
+        },
+        {
+          "type": "multiple_choice",
+          "question": "At what Temperature-Humidity Index (THI) threshold do high-producing dairy cattle begin to experience Mild Heat Stress?",
+          "options": {
+            "A": "THI 50",
+            "B": "THI 68",
+            "C": "THI 85",
+            "D": "THI 100"
+          },
+          "answer": "B",
+          "explanation": "Modern lactating cows generate significant metabolic heat; heat stress begins at a Temperature-Humidity Index (THI) of 68, causing respiration rates to elevate and dry matter intake to soften.",
+          "number": 617
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which clinical sign is the earliest observable physiological indicator that a dairy cow is suffering from heat stress?",
+          "options": {
+            "A": "Severe lameness on both hind feet",
+            "B": "Elevated respiration rate exceeding 60 breaths per minute, accompanied by standing rather than lying in cubicles",
+            "C": "Immediate shedding of all body hair",
+            "D": "Protrusion of the third eyelid"
+          },
+          "answer": "B",
+          "explanation": "Respiration rates climbing above 60 breaths/min and reluctance to lie down (standing to maximize body surface air cooling) are the primary signs of bovine heat stress.",
+          "number": 618
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What are the standard dimensions for a comfortable adult Holstein dairy cow free-stall (cubicle)?",
+          "options": {
+            "A": "0.8 m width × 1.5 m length",
+            "B": "1.2 m width × 2.4 m length",
+            "C": "2.0 m width × 4.0 m length",
+            "D": "0.5 m width × 1.0 m length"
+          },
+          "answer": "B",
+          "explanation": "A standard adult cow free-stall requires approximately 1.2 meters in width and 2.4 meters in total length to allow natural lunging and rising space without brisket entrapment.",
+          "number": 619
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How many hours per day should a lactating dairy cow ideally spend lying down resting in clean, dry stalls to optimize udder blood flow and rumination?",
+          "options": {
+            "A": "2 to 4 hours per day",
+            "B": "6 to 8 hours per day",
+            "C": "12 to 14 hours per day",
+            "D": "20 to 22 hours per day"
+          },
+          "answer": "C",
+          "explanation": "Dairy cows require 12 to 14 hours of daily resting time; lying down increases blood flow through the pudic artery to the mammary gland by ~30%, directly driving milk synthesis.",
+          "number": 620
+        }
+      ]
     }
-  ],
-  "subtitle": "PREPARE • PRACTICE • MASTER",
-  "publisher": "DAIRYSQUARE",
-  "instructions": [
-    "1. Read each question carefully before selecting your answer.",
-    "2. Choose the best answer from the four choices: A, B, C, or D.",
-    "3. Answer all items. Do not leave any question unanswered."
   ]
 }
