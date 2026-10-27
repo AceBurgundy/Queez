@@ -5806,7 +5806,7 @@
     },
     {
       "id": "practicum-dairy-cattle-breeds",
-      "title": "Part II: Different Breeds of Dairy Cattle",
+      "title": "Different Breeds of Dairy Cattle",
       "description": "Characterization of Bos taurus vs. Bos indicus and specifications of primary temperate and tropical dairy breeds.",
       "questions": [
         {
@@ -6151,7 +6151,7 @@
     },
     {
       "id": "practicum-ruminant-digestion",
-      "title": "Part II: Digestion Process of Ruminants",
+      "title": "Digestion Process of Ruminants",
       "description": "Sequential steps of ruminant digestion, stomach compartment anatomy, and lower tract absorption.",
       "questions": [
         {
@@ -6412,7 +6412,7 @@
     },
     {
       "id": "practicum-basic-feed-nutrients",
-      "title": "Part II: Basic Feed Nutrients",
+      "title": "Basic Feed Nutrients",
       "description": "Proteins, minerals, water, vitamins, fats, carbohydrates, and dietary requirements in dairy nutrition.",
       "questions": [
         {
@@ -6583,7 +6583,7 @@
     },
     {
       "id": "practicum-silage-making",
-      "title": "Part II: Silage Making",
+      "title": "Silage Making",
       "description": "Bag and bunker silage procedures, moisture testing, compaction protocols, and fermentation quality assessment.",
       "questions": [
         {
@@ -6853,7 +6853,7 @@
     },
     {
       "id": "practicum-farm-tools",
-      "title": "Part II: Farm Tools",
+      "title": "Farm Tools",
       "description": "Essential equipment for forage preparation, stall cleaning, post hole digging, and material transport.",
       "questions": [
         {
@@ -7000,7 +7000,7 @@
     },
     {
       "id": "interactive-cattle-anatomy",
-      "title": "Part II: Body Parts of Cattle",
+      "title": "Body Parts of Cattle",
       "description": "Interactive callout diagram identifying the 23 external anatomical regions and conformation points of dairy cattle.",
       "questions": [
         {
@@ -7231,7 +7231,7 @@
     },
     {
       "id": "interactive-milking-machine",
-      "title": "Part II: Parts of Portable Milking Machine",
+      "title": "Parts of Portable Milking Machine",
       "description": "Interactive callout diagram identifying the 10 mechanical components and assemblies of a portable milking machine.",
       "questions": [
         {
@@ -7342,7 +7342,7 @@
     },
     {
       "id": "practicum-cattle-diseases",
-      "title": "Part II: Common Diseases of Calves, Heifer and Cow",
+      "title": "Common Diseases of Calves, Heifer and Cow",
       "description": "Infectious, metabolic, reproductive, and parasite disorders in calves, heifers, and adult dairy cows.",
       "questions": [
         {
@@ -7578,7 +7578,7 @@
     },
     {
       "id": "dairy-terminology-glossary",
-      "title": "Part II: Definition of Terms",
+      "title": "Definition of Terms",
       "description": "Essential terminology of dairy husbandry, calving, rumination physiology, and milk production.",
       "questions": [
         {
@@ -7803,7 +7803,7 @@
     },
     {
       "id": "interactive-daily-routine-time",
-      "title": "Part II: Daily Routine Time Quiz",
+      "title": "Daily Routine Time Quiz",
       "description": "Identify the corresponding scheduled time or time window for each numbered circle (1 to 13) in the Dairy Square daily farm routine.",
       "questions": [
         {
@@ -7976,7 +7976,7 @@
     },
     {
       "id": "interactive-daily-routine-activities",
-      "title": "Part II: Daily Routine Activity Quiz",
+      "title": "Daily Routine Activity Quiz",
       "description": "Identify the corresponding scheduled farm activity or task for each numbered circle (1 to 13) in the Dairy Square daily farm routine.",
       "questions": [
         {
@@ -8139,7 +8139,7 @@
     },
     {
       "id": "milking-system-engineering",
-      "title": "Part II: Milking System Engineering & Parlor Operations",
+      "title": "Milking System Engineering & Parlor Operations",
       "description": "Operating vacuum thresholds, pulsation rates and ratios, oxytocin lag times, liner maintenance, and parlor wash protocols.",
       "questions": [
         {
@@ -8341,7 +8341,7 @@
     },
     {
       "id": "dairy-nutrition-and-calculations",
-      "title": "Part II: Dairy Cattle Nutrition & Practical Ration Calculations",
+      "title": "Dairy Cattle Nutrition & Practical Ration Calculations",
       "description": "Dry matter intake formulas, roughage-to-concentrate balancing, water requirement calculations, and metabolic disorder prevention.",
       "questions": [
         {
@@ -8582,7 +8582,7 @@
     },
     {
       "id": "reproduction-calves-and-mastitis",
-      "title": "Part II: Reproduction Timelines, Calf Milestones & Mastitis Diagnostics",
+      "title": "Reproduction Timelines, Calf Milestones & Mastitis Diagnostics",
       "description": "Estrus detection, the AM-PM breeding rule, colostrum Brix criteria, weaning benchmarks, CMT diagnostic scoring, and heat stress indices.",
       "questions": [
         {
