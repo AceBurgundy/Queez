@@ -2,7 +2,7 @@
   "schema_version": "quiz-data.v1",
   "id": "milk-operation-part-2",
   "title": "Milk Operation and Farm Management (Upcoming Exam)",
-  "subtitle": "Breeds, Digestion, Feed Nutrients, Silage, Farm Tools, Anatomy, Milking Equipment, Diseases, Terminology & Daily Routine Schedules",
+  "subtitle": "Breeds, Digestion, Feed Nutrients, Silage, Farm Tools, Anatomy, Milking Equipment, Diseases, Terminology, Schedules, Milking Physics, Rations & Diagnostics",
   "publisher": "Dairy Farming & Livestock Technical Series",
   "instructions": [
     "Section I covers Different Breeds of Dairy Cattle (identification and multiple choice).",
@@ -16,6 +16,9 @@
     "Section IX covers Definition of Terms across dairy farming, calving, and digestive physiology.",
     "Section X contains the Dairy Square Daily Routine Time Quiz matching 13 scheduled time windows to the routine diagram.",
     "Section XI contains the Dairy Square Daily Routine Activity Quiz matching 13 daily farm tasks to the routine diagram.",
+    "Section XII covers Milking System Engineering & Parlor Operations (vacuum dynamics, pulsation, sanitation).",
+    "Section XIII covers Dairy Cattle Nutrition & Practical Ration Calculations (DMI calculations, roughage-to-concentrate balancing, water needs).",
+    "Section XIV covers Reproduction Timelines, Calf Milestones & Mastitis Diagnostics (AM-PM rule, colostrum Brix thresholds, CMT grading, THI heat stress).",
     "Identification inputs accept forgiving text: casing and punctuation differences are automatically resolved.",
     "Resequencing cards can be reordered by dragging or using the Move Up / Move Down buttons."
   ],
@@ -2350,6 +2353,716 @@
           ],
           "explanation": "The 13 daily farm operations begin with Self Preparation (4:00 AM) and Morning Milking, Cleaning, Feeding (5:00 AM – 7:30 AM) and conclude with Merienda (8:00 PM) and Observation Time (8:30 PM – 10:00 PM).",
           "number": 103
+        }
+      ]
+    },
+    {
+      "id": "milking-system-engineering",
+      "title": "Milking System Engineering & Parlor Operations",
+      "description": "Operating vacuum thresholds, pulsation rates and ratios, oxytocin lag times, liner maintenance, and parlor wash protocols.",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended operational vacuum level range for a high-line pipeline milking system?",
+          "options": {
+            "A": "32 to 36 kPa (9.5 to 10.5 inHg)",
+            "B": "38 to 40 kPa (11.2 to 11.8 inHg)",
+            "C": "42 to 46 kPa (12.5 to 13.5 inHg)",
+            "D": "50 to 55 kPa (15.0 to 16.5 inHg)"
+          },
+          "answer": "C",
+          "explanation": "High-line pipeline systems require 42 to 46 kPa (12.5 to 13.5 inHg) to overcome milk lift elevation, whereas low-line systems operate at 38 to 40 kPa.",
+          "number": 104
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary physiological consequence of running a milking system at excessively high vacuum levels (>48 kPa)?",
+          "options": {
+            "A": "Complete failure of milk letdown due to lack of oxytocin",
+            "B": "Severe teat-end hyperkeratosis, ringing, and teat barrel vascular congestion",
+            "C": "Rapid bacterial colonization in the bulk milk tank",
+            "D": "Excessive cooling of milk inside the receiver jar"
+          },
+          "answer": "B",
+          "explanation": "Excessive vacuum draws blood and fluid into teat tissue, causing congestion, edema, and rough teat-end calluses (hyperkeratosis) that predispose teats to mastitis.",
+          "number": 105
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What problem commonly occurs when the milking system vacuum falls below the recommended operating threshold (<38 kPa)?",
+          "options": {
+            "A": "Severe udder edema and burst blood vessels",
+            "B": "Teat cup liner slip, frequent cluster drop-off, and slow or incomplete milk evacuation",
+            "C": "Acidification of milk inside the claw",
+            "D": "Overheating of the vacuum pump electric motor"
+          },
+          "answer": "B",
+          "explanation": "Inadequate vacuum reduces the friction holding teat cups in place, leading to liner slip, teat cup drop-off, and prolonged, incomplete milking.",
+          "number": 106
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the standard pulsation rate range used in modern bovine milking machines?",
+          "options": {
+            "A": "20 to 30 cycles per minute",
+            "B": "35 to 45 cycles per minute",
+            "C": "55 to 65 cycles per minute",
+            "D": "80 to 95 cycles per minute"
+          },
+          "answer": "C",
+          "explanation": "A pulsation rate of 55 to 65 cycles per minute provides optimal balance between milk flow rate and teat massage frequency.",
+          "number": 107
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In milking machine terminology, what does a pulsation ratio of 60:40 signify?",
+          "options": {
+            "A": "60% of milk comes from the front quarters and 40% from the rear quarters",
+            "B": "The teat cup liner is open (milking phase) for 60% of the cycle and collapsed (massage phase) for 40%",
+            "C": "The pipeline contains 60% liquid milk and 40% atmospheric air",
+            "D": "The wash cycle requires 60% hot water and 40% chemical detergent"
+          },
+          "answer": "B",
+          "explanation": "The pulsation ratio represents the proportion of time the liner spends in the expanded milking phase versus the collapsed massage phase during each cycle.",
+          "number": 108
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is the massage (rest) phase of the milking cycle physiologically necessary for the cow?",
+          "options": {
+            "A": "It allows oxytocin to travel from the pituitary gland to the udder",
+            "B": "It compresses the teat end to relieve venous congestion and restore blood and lymph circulation",
+            "C": "It sanitizes the teat surface with disinfectant vapor",
+            "D": "It cools the teat skin to prevent thermal irritation"
+          },
+          "answer": "B",
+          "explanation": "During the collapse phase, the rubber liner presses against the teat end, forcing accumulated blood and lymph upward and preventing tissue congestion.",
+          "number": 109
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended minimum contact dwell time for a germicidal pre-milking teat dip before it is wiped off?",
+          "options": {
+            "A": "5 seconds",
+            "B": "10 seconds",
+            "C": "30 seconds",
+            "D": "120 seconds"
+          },
+          "answer": "C",
+          "explanation": "A pre-milking teat dip requires at least 30 seconds of active surface contact to achieve sufficient bacterial kill before being wiped clean and dry.",
+          "number": 110
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which of the following is the PRIMARY purpose of forestripping 3 to 4 streams of milk from each quarter prior to cluster attachment?",
+          "options": {
+            "A": "To completely empty the cisternal milk pool before vacuum application",
+            "B": "To detect abnormal milk (clots, flakes, discoloration) and expel foremilk containing the highest bacterial concentration",
+            "C": "To lubricate the inside of the rubber teat cup liners",
+            "D": "To determine the exact butterfat percentage of the herd"
+          },
+          "answer": "B",
+          "explanation": "Forestripping checks each quarter for clinical mastitis signs (flakes, clots, watery milk) while flushing out bacteria colonizing the teat canal.",
+          "number": 111
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the ideal physiological lag time between initial tactile teat preparation (stripping/cleaning) and milking cluster attachment?",
+          "options": {
+            "A": "10 to 20 seconds",
+            "B": "60 to 90 seconds",
+            "C": "3 to 5 minutes",
+            "D": "8 to 10 minutes"
+          },
+          "answer": "B",
+          "explanation": "Tactile stimulation triggers oxytocin release from the pituitary gland, which reaches peak blood concentration at the udder myoepithelial cells within 60 to 90 seconds.",
+          "number": 112
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What happens if a milking unit is attached immediately (<20 seconds) after teat wiping without allowing for oxytocin lag time?",
+          "options": {
+            "A": "The cow produces double the daily milk yield",
+            "B": "Bimodal milk flow occurs, causing transient overmilking on empty teats before alveolar milk reaches the cistern",
+            "C": "The milk automatically ferments inside the claw piece",
+            "D": "The vacuum regulator shuts off automatically"
+          },
+          "answer": "B",
+          "explanation": "Premature attachment evacuates cisternal milk quickly, followed by a flow cessation (bimodal curve) where high vacuum pulls on empty teats until alveolar letdown commences.",
+          "number": 113
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Under what milk flow rate threshold should Automatic Cluster Removers (ACRs) detach the milking unit to prevent harmful overmilking?",
+          "options": {
+            "A": "0.05 kg/min",
+            "B": "0.2 to 0.4 kg/min",
+            "C": "1.0 to 1.5 kg/min",
+            "D": "2.0 to 2.5 kg/min"
+          },
+          "answer": "B",
+          "explanation": "Modern ACRs detach the cluster when milk flow drops below 0.2 to 0.4 kg/min, protecting teat tissues from vacuum damage caused by overmilking.",
+          "number": 114
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What proportion of the teat surface must be covered when applying post-milking barrier teat dip?",
+          "options": {
+            "A": "Only the teat orifice at the very tip",
+            "B": "The lower half of the teat only",
+            "C": "At least 75% to 100% of the entire teat barrel",
+            "D": "The entire udder floor including hair"
+          },
+          "answer": "C",
+          "explanation": "Post-milking dipping must cover the entire teat barrel (at least 75%–100%) to kill pathogens left after milking and form a protective physical barrier while the teat sphincter remains open.",
+          "number": 115
+        },
+        {
+          "type": "multiple_choice",
+          "question": "At what starting temperature should hot water enter the milking system during the main detergent wash cycle?",
+          "options": {
+            "A": "40°C to 50°C",
+            "B": "55°C to 65°C",
+            "C": "75°C to 85°C",
+            "D": "95°C to 100°C"
+          },
+          "answer": "C",
+          "explanation": "The alkaline detergent wash must begin at 75°C to 85°C to melt butterfat and optimize chemical cleaning across pipelines.",
+          "number": 116
+        },
+        {
+          "type": "multiple_choice",
+          "question": "During the hot alkaline wash cycle, why must the wash solution be drained before its temperature drops below 45°C?",
+          "options": {
+            "A": "Below 45°C, chlorine gas evaporates rapidly",
+            "B": "Emulsified butterfat and milk solids begin to redeposit onto stainless steel and rubber pipeline surfaces",
+            "C": "Cold water causes stainless steel pipes to crack",
+            "D": "The wash pump cannot circulate water below 45°C"
+          },
+          "answer": "B",
+          "explanation": "If wash water cools below 45°C, suspended milk fat hardens and redeposits on surfaces, creating stubborn greasy films and milkstone.",
+          "number": 117
+        },
+        {
+          "type": "multiple_choice",
+          "question": "As a standard preventive maintenance protocol, after how many cow milkings should rubber teat cup liners be replaced?",
+          "options": {
+            "A": "Every 500 milkings",
+            "B": "Every 1,000 milkings",
+            "C": "Every 2,500 milkings (or 6 months, whichever comes first)",
+            "D": "Every 10,000 milkings"
+          },
+          "answer": "C",
+          "explanation": "Repeated stretching and exposure to butterfat and sanitizers degrade rubber elasticity, micro-cracking liners and harboring bacteria after approximately 2,500 milkings.",
+          "number": 118
+        }
+      ]
+    },
+    {
+      "id": "dairy-nutrition-and-calculations",
+      "title": "Dairy Cattle Nutrition & Practical Ration Calculations",
+      "description": "Dry matter intake formulas, roughage-to-concentrate balancing, water requirement calculations, and metabolic disorder prevention.",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the standard rule of thumb for estimating the daily Dry Matter Intake (DMI) capacity of a lactating dairy cow?",
+          "options": {
+            "A": "1.0% to 1.5% of body weight",
+            "B": "3.0% to 3.5% of body weight",
+            "C": "5.0% to 6.0% of body weight",
+            "D": "8.0% to 10.0% of body weight"
+          },
+          "answer": "B",
+          "explanation": "Lactating cows consume approximately 3.0% to 3.5% of their total body weight in dry matter daily to support maintenance and lactation.",
+          "number": 119
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Calculate the daily Dry Matter Intake (DMI) requirement for a 500 kg Holstein-Friesian crossbred cow consuming 3.2% of her body weight:",
+          "options": {
+            "A": "10.0 kg DM",
+            "B": "16.0 kg DM",
+            "C": "22.5 kg DM",
+            "D": "32.0 kg DM"
+          },
+          "answer": "B",
+          "explanation": "Calculation: 500 kg × 0.032 = 16.0 kg dry matter per day.",
+          "number": 120
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Fresh Napier grass contains 20% Dry Matter (DM) and 80% moisture. If a dairy cow requires 14 kg of Dry Matter from this grass daily, how many kilograms of fresh green forage must be harvested and fed?",
+          "options": {
+            "A": "28 kg",
+            "B": "45 kg",
+            "C": "70 kg",
+            "D": "140 kg"
+          },
+          "answer": "C",
+          "explanation": "Calculation: 14 kg DM ÷ 0.20 DM content = 70 kg of fresh green Napier grass.",
+          "number": 121
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Whole-plant corn silage contains 35% Dry Matter. If a cow is offered 30 kg of fresh corn silage in the feed bunk, how much Dry Matter is she actually receiving from this portion?",
+          "options": {
+            "A": "7.0 kg DM",
+            "B": "10.5 kg DM",
+            "C": "15.0 kg DM",
+            "D": "21.0 kg DM"
+          },
+          "answer": "B",
+          "explanation": "Calculation: 30 kg fresh silage × 0.35 DM = 10.5 kg dry matter.",
+          "number": 122
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended baseline forage-to-concentrate ratio (on a dry matter basis) for maintaining healthy rumen pH and adequate milk fat synthesis in lactating dairy cattle?",
+          "options": {
+            "A": "20:80 forage to concentrate",
+            "B": "40:60 forage to concentrate",
+            "C": "60:40 (or at least 50:50) forage to concentrate",
+            "D": "90:10 forage to concentrate"
+          },
+          "answer": "C",
+          "explanation": "Maintaining at least 50% to 60% dietary dry matter from effective fiber (forage) ensures proper chewing, salivation, and rumen buffering to synthesize acetate for milk fat.",
+          "number": 123
+        },
+        {
+          "type": "multiple_choice",
+          "question": "When supplementing dairy concentrates based on milk production, what is the standard operational guideline for feeding commercial concentrate beyond basal maintenance?",
+          "options": {
+            "A": "1 kg concentrate for every 1 kg of milk produced",
+            "B": "1 kg concentrate for every 2.5 to 3.0 kg of milk produced",
+            "C": "1 kg concentrate for every 6.0 to 8.0 kg of milk produced",
+            "D": "5 kg concentrate fixed per cow regardless of milk yield"
+          },
+          "answer": "B",
+          "explanation": "Commercial dairy concentrate is formulated to support approximately 2.5 to 3.0 kg of milk production per 1 kg of concentrate fed above maintenance requirements.",
+          "number": 124
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A lactating cow produces 18 kg of milk daily. Her basal forage diet supports maintenance plus 6 kg of milk. Using the standard ratio of 1 kg concentrate per 3 kg milk, how much concentrate should she be fed daily?",
+          "options": {
+            "A": "2 kg",
+            "B": "4 kg",
+            "C": "6 kg",
+            "D": "8 kg"
+          },
+          "answer": "B",
+          "explanation": "Calculation: Production supported by concentrate = 18 kg - 6 kg = 12 kg milk. Concentrate required = 12 kg ÷ 3 kg/kg = 4.0 kg concentrate daily.",
+          "number": 125
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What critical physiological condition arises when dairy cows are fed excessive rapidly fermentable starch concentrates, driving rumen pH below 5.5?",
+          "options": {
+            "A": "Abomasal Impaction",
+            "B": "Subacute Rumen Acidosis (SARA)",
+            "C": "Infectious Bovine Keratoconjunctivitis",
+            "D": "Traumatic Pericarditis"
+          },
+          "answer": "B",
+          "explanation": "Overfeeding starchy grains causes lactic acid and volatile fatty acid surges, dropping rumen pH below 5.5, damaging rumen papillae, and causing SARA and laminitis.",
+          "number": 126
+        },
+        {
+          "type": "multiple_choice",
+          "question": "As a standard physiological benchmark, how much drinking water does a lactating dairy cow consume per liter of milk produced, in addition to her maintenance water needs?",
+          "options": {
+            "A": "0.5 to 1.0 liter",
+            "B": "1.5 to 2.0 liters",
+            "C": "4.0 to 5.0 liters",
+            "D": "10.0 to 12.0 liters"
+          },
+          "answer": "C",
+          "explanation": "Milk consists of approximately 87% water; cows require 4 to 5 liters of fresh water per liter of milk produced to cover milk secretion and physiological losses.",
+          "number": 127
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If a mature dairy cow requires 40 liters of water for basal maintenance and produces 22 liters of milk per day, what is her estimated total daily water intake (at 4.5 liters per liter of milk)?",
+          "options": {
+            "A": "62 liters",
+            "B": "99 liters",
+            "C": "139 liters",
+            "D": "220 liters"
+          },
+          "answer": "C",
+          "explanation": "Calculation: Production water = 22 L milk × 4.5 L/L = 99 liters. Total water = 40 L maintenance + 99 L production = 139 liters per day.",
+          "number": 128
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the recommended linear water trough drinking space per cow in loose housing to prevent dominant cows from guarding water sources?",
+          "options": {
+            "A": "2 to 3 cm per cow",
+            "B": "8 to 10 cm per cow",
+            "C": "25 to 30 cm per cow",
+            "D": "50 cm per cow"
+          },
+          "answer": "B",
+          "explanation": "Ensuring 8 to 10 cm of clean trough perimeter per cow guarantees adequate water access immediately following milking when 30% to 50% of daily water is consumed.",
+          "number": 129
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the ideal dietary Calcium to Phosphorus (Ca:P) ratio in complete lactating dairy cattle rations?",
+          "options": {
+            "A": "1:2",
+            "B": "1:1",
+            "C": "2:1 (or between 1.5:1 and 2:1)",
+            "D": "5:1"
+          },
+          "answer": "C",
+          "explanation": "A Ca:P ratio of approximately 2:1 optimizes mineral absorption and bone mineralization while preventing secondary nutritional hyperparathyroidism.",
+          "number": 130
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What dietary strategy during the late dry period (pre-calving close-up ration) is used to prime the cow's hormonal mechanisms and prevent Milk Fever (hypocalcemia) at calving?",
+          "options": {
+            "A": "Maximizing calcium-rich legume forage in unlimited quantities",
+            "B": "Feeding a low-calcium ration or Dietary Cation-Anion Difference (DCAD) diet with negative ionic balance",
+            "C": "Feeding high concentrations of urea and sulfur",
+            "D": "Completely withholding drinking water for 24 hours prior to calving"
+          },
+          "answer": "B",
+          "explanation": "Negative DCAD or low pre-calving dietary calcium triggers parathyroid hormone secretion and bone calcium mobilization before lactation demands surge.",
+          "number": 131
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What metabolic disorder occurs in early lactation when extreme negative energy balance forces excessive mobilization of body fat stores, overwhelming the liver?",
+          "options": {
+            "A": "Hypomagnesemia (Grass Tetany)",
+            "B": "Ketosis (Acetonemia)",
+            "C": "Enzootic Bovine Leukosis",
+            "D": "Rinderpest"
+          },
+          "answer": "B",
+          "explanation": "Severe negative energy balance mobilizes adipose non-esterified fatty acids (NEFAs); incomplete hepatic beta-oxidation produces excessive ketone bodies (acetoacetate, beta-hydroxybutyrate).",
+          "number": 132
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which distinctive physical symptom is frequently observed in cows suffering from clinical Ketosis?",
+          "options": {
+            "A": "Loud barking cough and frothy nasal discharge",
+            "B": "Sweet, fruity acetone odor on the cow's breath and in her milk, accompanied by sudden drop in milk yield and appetite",
+            "C": "High fever exceeding 41.5°C and bloody diarrhea",
+            "D": "Swollen, hot knee joints and horn deformities"
+          },
+          "answer": "B",
+          "explanation": "Excess ketone bodies volatilize in the lungs, creating a recognizable sweet, chloroform- or nail polish remover-like acetone aroma on the breath.",
+          "number": 133
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What nutritional deficiency triggers Grass Tetany (Hypomagnesemia) in cows grazing rapidly growing, lush spring pastures?",
+          "options": {
+            "A": "Inadequate dietary Magnesium, often exacerbated by high Potassium levels interfering with absorption",
+            "B": "Acute lack of dietary Sodium Chloride",
+            "C": "Severe Vitamin A deficiency in green forage",
+            "D": "Excessive dietary Crude Fiber"
+          },
+          "answer": "A",
+          "explanation": "Fast-growing lush grasses have low magnesium and high potassium content; excess potassium inhibits ruminal magnesium transport, provoking acute hypomagnesemic tetany.",
+          "number": 134
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary role of Neutral Detergent Fiber (NDF) in ruminant nutrition evaluation?",
+          "options": {
+            "A": "It measures only the inorganic mineral ash content",
+            "B": "It represents total structural cell wall fiber (cellulose, hemicellulose, lignin) that dictates gut fill and dry matter intake capacity",
+            "C": "It indicates the concentration of soluble sugars and starch",
+            "D": "It measures total non-protein nitrogen in silage"
+          },
+          "answer": "B",
+          "explanation": "NDF measures total plant cell wall material; high NDF forage takes longer to ferment, filling the rumen and physically capping dry matter intake capacity.",
+          "number": 135
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary functional difference between Acid Detergent Fiber (ADF) and Neutral Detergent Fiber (NDF)?",
+          "options": {
+            "A": "ADF contains hemicellulose while NDF does not",
+            "B": "ADF represents the least digestible fiber fraction (cellulose and lignin) and correlates negatively with forage digestibility and energy content",
+            "C": "ADF is purely synthetic protein added to commercial dairy feed",
+            "D": "ADF only exists in grain concentrates"
+          },
+          "answer": "B",
+          "explanation": "ADF isolates cellulose and indigestible lignin (excluding hemicellulose); as ADF percentage rises, forage energy density (TDN) and digestibility decrease.",
+          "number": 136
+        }
+      ]
+    },
+    {
+      "id": "reproduction-calves-and-mastitis",
+      "title": "Reproduction Timelines, Calf Milestones & Mastitis Diagnostics",
+      "description": "Estrus detection, the AM-PM breeding rule, colostrum Brix criteria, weaning benchmarks, CMT diagnostic scoring, and heat stress indices.",
+      "questions": [
+        {
+          "type": "multiple_choice",
+          "question": "What is the normal physiological duration of the bovine estrus cycle (from one standing heat to the next)?",
+          "options": {
+            "A": "10 to 14 days",
+            "B": "18 to 24 days (average 21 days)",
+            "C": "28 to 32 days",
+            "D": "45 to 60 days"
+          },
+          "answer": "B",
+          "explanation": "The bovine estrous cycle averages 21 days, with a normal physiological range of 18 to 24 days in cycling dairy cows and heifers.",
+          "number": 137
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How long does the actual standing heat (estrus) phase typically last in dairy cattle?",
+          "options": {
+            "A": "2 to 4 hours",
+            "B": "12 to 18 hours",
+            "C": "3 to 4 days",
+            "D": "7 days"
+          },
+          "answer": "B",
+          "explanation": "Standing estrus (the window where a cow willingly stands to be mounted) typically lasts 12 to 18 hours in dairy cows, though high producers may show shorter standing times.",
+          "number": 138
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Under the standard AM-PM Rule for artificial insemination, when should a cow first observed in standing heat at 7:00 AM be bred?",
+          "options": {
+            "A": "Immediately at 7:15 AM",
+            "B": "Late afternoon or evening on that same day (between 4:00 PM and 7:00 PM)",
+            "C": "The following evening (36 hours later)",
+            "D": "Exactly 5 days after the observation"
+          },
+          "answer": "B",
+          "explanation": "The AM-PM rule dictates that cows first seen standing in the morning (AM) should be inseminated late afternoon/evening (PM) of that same day to align with ovulation (which occurs ~10–14 hours after standing heat ends).",
+          "number": 139
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If a dairy heifer is detected in standing heat at 6:00 PM, when is the optimal window to inseminate her?",
+          "options": {
+            "A": "Early the following morning (AM)",
+            "B": "Exactly at midnight",
+            "C": "In the evening of the second day",
+            "D": "72 hours later"
+          },
+          "answer": "A",
+          "explanation": "Under the AM-PM rule, animals detected in standing heat in the evening (PM) must be inseminated the following morning (AM).",
+          "number": 140
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the average gestation length for domestic dairy cattle (Bos taurus)?",
+          "options": {
+            "A": "150 days (5 months)",
+            "B": "210 days (7 months)",
+            "C": "283 days (approximately 9 months and 9 days)",
+            "D": "365 days (12 months)"
+          },
+          "answer": "C",
+          "explanation": "Dairy cattle gestation averages 283 days (typically 279 to 287 days depending on breed, parity, and calf gender).",
+          "number": 141
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the target duration for the dry period (rest period between lactation and next calving) in dairy herd management?",
+          "options": {
+            "A": "15 to 20 days",
+            "B": "45 to 60 days",
+            "C": "90 to 120 days",
+            "D": "180 days"
+          },
+          "answer": "B",
+          "explanation": "A 45 to 60-day dry period is critical for mammary involution, epithelial regeneration, and replenishment of body nutrient reserves prior to calving.",
+          "number": 142
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What minimum Brix percentage reading on an optical or digital refractometer confirms High-Quality bovine colostrum?",
+          "options": {
+            "A": "At least 10% Brix",
+            "B": "At least 15% Brix",
+            "C": "At least 22% Brix (equivalent to >50 mg/mL IgG)",
+            "D": "At least 35% Brix"
+          },
+          "answer": "C",
+          "explanation": "A refractometer reading of 22% Brix or higher correlates reliably with maternal colostrum immunoglobulin concentration exceeding 50 g/L (50 mg/mL) of IgG.",
+          "number": 143
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Within how many hours after birth must a newborn calf receive its first feeding of clean, high-quality maternal colostrum?",
+          "options": {
+            "A": "Within the first 2 hours",
+            "B": "Between 12 and 18 hours",
+            "C": "After 24 hours of fasting",
+            "D": "On day 3 of life"
+          },
+          "answer": "A",
+          "explanation": "The newborn calf's intestinal enterocytes absorb intact macromolecular immunoglobulins via non-selective pinocytosis; this gut permeability drops drastically after 6 hours and closes completely by 24 hours.",
+          "number": 144
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How much colostrum should a newborn dairy calf receive in its first feeding relative to its body weight?",
+          "options": {
+            "A": "2% of body weight (approx. 0.8 L)",
+            "B": "5% of body weight (approx. 2 L)",
+            "C": "10% of body weight (approx. 3.5 to 4.0 liters for a 35–40 kg calf)",
+            "D": "25% of body weight (approx. 10 L)"
+          },
+          "answer": "C",
+          "explanation": "Feeding 10% of body weight (typically 3.5 to 4 liters) within 2 hours delivers the necessary 150–200 g of IgG required to achieve successful passive transfer of immunity.",
+          "number": 145
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What antiseptic solution is globally recommended for dipping newborn calf navel cords to prevent navel ill and systemic septicemia?",
+          "options": {
+            "A": "1% household bleach solution",
+            "B": "7% tincture of iodine",
+            "C": "Cold clean tap water",
+            "D": "70% rubbing alcohol"
+          },
+          "answer": "B",
+          "explanation": "A 7% strong tincture of iodine acts as both an antimicrobial barrier and a desiccant, promoting rapid drying and closure of the umbilical cord stump.",
+          "number": 146
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What nutritional milestone must a dairy calf achieve before it can be safely and completely weaned from milk?",
+          "options": {
+            "A": "The calf reaches 6 months of age regardless of intake",
+            "B": "Consuming at least 1.0 to 1.5 kg of solid calf starter grain daily for 3 consecutive days",
+            "C": "Consuming only fresh water and coarse rice straw",
+            "D": "Reaching double its birth length"
+          },
+          "answer": "B",
+          "explanation": "Weaning readiness requires consuming 1.0 to 1.5 kg of starter grain daily for 3 consecutive days, which stimulates butyrate production and ruminal papillae development.",
+          "number": 147
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the optimal age window for disbudding (dehorning) dairy calves using a hot-iron cautery tool?",
+          "options": {
+            "A": "Within the first 2 to 4 weeks of life",
+            "B": "At 6 to 8 months of age",
+            "C": "After the horn attaches firmly to the skull at 1 year",
+            "D": "Only after the first calving"
+          },
+          "answer": "A",
+          "explanation": "Disbudding is easiest, least painful, and has the fewest complications when performed at 2 to 4 weeks before the horn bud fuses to the frontal bone.",
+          "number": 148
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In the California Mastitis Test (CMT), what chemical reaction between the reagent and milk produces gel formation?",
+          "options": {
+            "A": "The reagent freezes the milk fats into butter lumps",
+            "B": "The detergent lyses white blood cell (somatic cell) membranes, releasing cellular DNA that forms a viscous slime or gel",
+            "C": "The reagent turns milk sugars into alcohol",
+            "D": "Acid precipitation of whey proteins"
+          },
+          "answer": "B",
+          "explanation": "CMT reagent contains an alkyl aryl sulfonate surfactant that ruptures somatic cell membranes; DNA strands uncoil and cross-link into a gelatinous mesh in proportion to the cell count.",
+          "number": 149
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What somatic cell count (SCC) range corresponds to a California Mastitis Test (CMT) score of Negative (no thickening, homogenous liquid)?",
+          "options": {
+            "A": "Below 200,000 somatic cells per milliliter",
+            "B": "400,000 to 800,000 cells/mL",
+            "C": "1,500,000 to 3,000,000 cells/mL",
+            "D": "Above 10,000,000 cells/mL"
+          },
+          "answer": "A",
+          "explanation": "Healthy, uninfected mammary quarters yield a Negative CMT reaction with zero precipitate, indicating a somatic cell count below 200,000 cells/mL.",
+          "number": 150
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What visual reaction in the California Mastitis Test paddle indicates a Score of 1 (Slight/Moderate Mastitis)?",
+          "options": {
+            "A": "Milk remains completely fluid and watery",
+            "B": "Distinct gel formation forms upon swirling, but dissolves completely when swirling stops, with no central dome formation",
+            "C": "Solid hard rubber ball that cannot be poured out",
+            "D": "Liquid turns bright neon green with boiling bubbles"
+          },
+          "answer": "B",
+          "explanation": "A CMT Score of 1 exhibits definite thickening with swirling, but does not form a persistent central jelly dome, correlating to 400,000–1,500,000 cells/mL.",
+          "number": 151
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What visual reaction in the CMT paddle indicates a Score of 3 (Heavy Mastitis, SCC >5,000,000 cells/mL)?",
+          "options": {
+            "A": "Homogenous purple liquid with zero friction",
+            "B": "Immediate heavy gelatinous mass forming a pronounced central dome that adheres to the bottom of the paddle cup",
+            "C": "Light powdery sediment at the rim",
+            "D": "Clear watery separation like curd and whey"
+          },
+          "answer": "B",
+          "explanation": "A Score of 3 reaction forms an almost solid, viscous jelly mass that pulls away from the paddle rim and heaps into a central mound.",
+          "number": 152
+        },
+        {
+          "type": "multiple_choice",
+          "question": "At what Temperature-Humidity Index (THI) threshold do high-producing dairy cattle begin to experience Mild Heat Stress?",
+          "options": {
+            "A": "THI 50",
+            "B": "THI 68",
+            "C": "THI 85",
+            "D": "THI 100"
+          },
+          "answer": "B",
+          "explanation": "Modern lactating cows generate significant metabolic heat; heat stress begins at a Temperature-Humidity Index (THI) of 68, causing respiration rates to elevate and dry matter intake to soften.",
+          "number": 153
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which clinical sign is the earliest observable physiological indicator that a dairy cow is suffering from heat stress?",
+          "options": {
+            "A": "Severe lameness on both hind feet",
+            "B": "Elevated respiration rate exceeding 60 breaths per minute, accompanied by standing rather than lying in cubicles",
+            "C": "Immediate shedding of all body hair",
+            "D": "Protrusion of the third eyelid"
+          },
+          "answer": "B",
+          "explanation": "Respiration rates climbing above 60 breaths/min and reluctance to lie down (standing to maximize body surface air cooling) are the primary signs of bovine heat stress.",
+          "number": 154
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What are the standard dimensions for a comfortable adult Holstein dairy cow free-stall (cubicle)?",
+          "options": {
+            "A": "0.8 m width × 1.5 m length",
+            "B": "1.2 m width × 2.4 m length",
+            "C": "2.0 m width × 4.0 m length",
+            "D": "0.5 m width × 1.0 m length"
+          },
+          "answer": "B",
+          "explanation": "A standard adult cow free-stall requires approximately 1.2 meters in width and 2.4 meters in total length to allow natural lunging and rising space without brisket entrapment.",
+          "number": 155
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How many hours per day should a lactating dairy cow ideally spend lying down resting in clean, dry stalls to optimize udder blood flow and rumination?",
+          "options": {
+            "A": "2 to 4 hours per day",
+            "B": "6 to 8 hours per day",
+            "C": "12 to 14 hours per day",
+            "D": "20 to 22 hours per day"
+          },
+          "answer": "C",
+          "explanation": "Dairy cows require 12 to 14 hours of daily resting time; lying down increases blood flow through the pudic artery to the mammary gland by ~30%, directly driving milk synthesis.",
+          "number": 156
         }
       ]
     }
