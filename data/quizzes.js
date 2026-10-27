@@ -36,16 +36,7 @@ window.DOCUMENTATION_ITEMS["data/quizzes.js"] = {
               "link": "queezes/milk-operation-farm-management",
               "image_source": "data/milk-operation-quiz/assets/card-image.png",
               "shrink": false,
-              "description": "Comprehensive 464-item dairy farming certification examination covering 12 domains: History, Breeds, Reproduction, Anatomy, Nutrition, Silage, Facilities, Health, and Equipment."
-            },
-            {
-              "title": "Milk Operation and Farm Management (Upcoming Exam)",
-              "label": "Upcoming Exam",
-              "quiz_id": "milk-operation-part-2",
-              "link": "queezes/milk-operation-part-2",
-              "image_source": "data/milk-operation-part-2-quiz/assets/body-parts-of-cattle-question.jpg",
-              "shrink": false,
-              "description": "Comprehensive 180-point Upcoming Exam Review covering 11 domains: Dairy Cattle Breeds, Ruminant Digestion Stages, Basic Feed Nutrients, Silage Preparation, Farm Tools, Cattle Anatomy, Portable Milking Equipment, Cattle Diseases, Dairy Terminology, and Daily Routine Time & Activity Schedules."
+              "description": "Comprehensive 620-item dairy farming master certification examination covering 26 core and applied practicum modules: History, Breeds, Reproduction, Anatomy, Nutrition, Silage, Facilities, Health, Diseases, Milking Equipment, Calving, Record Keeping, Waste & Pasture Management, and Daily Routine Operations."
             },
             {
               "title": "NAPOLCOM Entrance Examination",
