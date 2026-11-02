@@ -198,19 +198,20 @@
         {
           "number": 16,
           "type": "multiple_choice",
-          "question": "So many ___________ I found in the library, now I’m ready to report.",
+          "question": "So much ___________ I found in the library, now I’m ready to report.",
           "options": {
             "A": "information",
             "B": "informations",
             "C": "infoes",
             "D": "infos"
           },
-          "answer": "B"
+          "answer": "A",
+          "explanation": "Information is an uncountable (mass) noun. It cannot be pluralized with '-s' and pairs with the non-count quantifier 'much' rather than 'many'."
         },
         {
           "number": 17,
           "type": "multiple_choice",
-          "question": "My grandpa always feed his flock of _______ early in the morning.",
+          "question": "My grandpa always feeds his flock of _______ early in the morning.",
           "options": {
             "A": "sheeps",
             "B": "sheep",
@@ -265,7 +266,8 @@
             "C": "uncertain",
             "D": "unaware"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "ambivalent"
         },
         {
           "number": 22,
@@ -277,7 +279,8 @@
             "C": "ugly",
             "D": "remarkable"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "ominous"
         },
         {
           "number": 23,
@@ -301,7 +304,8 @@
             "C": "unnecessary",
             "D": "avoidable"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "futile"
         },
         {
           "number": 25,
@@ -313,7 +317,8 @@
             "C": "gorgeous",
             "D": "rebellious"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "ostentatious"
         },
         {
           "number": 26,
@@ -325,7 +330,8 @@
             "C": "beautiful",
             "D": "colorful"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "grotesque"
         },
         {
           "number": 27,
@@ -337,7 +343,8 @@
             "C": "secret",
             "D": "unacceptable"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "clandestine"
         },
         {
           "number": 28,
@@ -349,7 +356,8 @@
             "C": "shinny",
             "D": "remarkable"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "fleeting"
         },
         {
           "number": 29,
@@ -361,7 +369,8 @@
             "C": "weird",
             "D": "bizarre"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "sordid"
         },
         {
           "number": 30,
@@ -373,7 +382,8 @@
             "C": "erotic",
             "D": "numb"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "Euphoria"
         },
         {
           "number": 31,
@@ -385,7 +395,8 @@
             "C": "blog",
             "D": "plot"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "blurb"
         },
         {
           "number": 32,
@@ -397,7 +408,8 @@
             "C": "maze",
             "D": "box"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "labyrinth"
         },
         {
           "number": 33,
@@ -409,7 +421,8 @@
             "C": "worldly",
             "D": "wealthy"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "mundane"
         },
         {
           "number": 34,
@@ -421,7 +434,8 @@
             "C": "hobby",
             "D": "route"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "penchant"
         },
         {
           "number": 35,
@@ -433,7 +447,8 @@
             "C": "updated",
             "D": "outdated"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "obsolete"
         },
         {
           "number": 36,
@@ -445,7 +460,8 @@
             "C": "kindly",
             "D": "sweetly"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "vivaciously"
         },
         {
           "number": 37,
@@ -457,7 +473,8 @@
             "C": "assertive",
             "D": "unclear"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "dogmatic"
         },
         {
           "number": 38,
@@ -469,7 +486,8 @@
             "C": "important",
             "D": "excessive"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "plethoric"
         },
         {
           "number": 39,
@@ -481,7 +499,8 @@
             "C": "puzzled",
             "D": "strategic"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "haphazard"
         },
         {
           "number": 40,
@@ -493,7 +512,8 @@
             "C": "plant some seeds",
             "D": "none of the above"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "spill the beans"
         },
         {
           "number": 41,
@@ -505,7 +525,8 @@
             "C": "accusing the wrong person",
             "D": "setting up an event in a tree"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "barking up the wrong tree"
         },
         {
           "number": 42,
@@ -529,7 +550,8 @@
             "C": "born into a very rich family",
             "D": "born very talkative"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "silver spoon in her mouth"
         },
         {
           "number": 44,
@@ -541,7 +563,8 @@
             "C": "doesn’t want to go bankrupt",
             "D": "none of the above"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "put all eggs in one basket"
         },
         {
           "number": 45,
@@ -553,7 +576,8 @@
             "C": "he feels like flying",
             "D": "he feels so handsome"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "butterflies on his stomach"
         },
         {
           "number": 46,
@@ -565,7 +589,8 @@
             "C": "bury the dead",
             "D": "forget the past quarrel"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "bury the hatchet"
         },
         {
           "number": 47,
@@ -577,7 +602,8 @@
             "C": "Don’t deal with your problems before they are solved.",
             "D": "All of the above."
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "don’t count your chickens before the eggs have hatched"
         },
         {
           "number": 48,
@@ -589,7 +615,8 @@
             "C": "joined the new trend and bought iphones",
             "D": "bought Android and Apple."
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "jumped on the bandwagon"
         },
         {
           "number": 49,
@@ -601,7 +628,8 @@
             "C": "magkaibigan",
             "D": "magka anak"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "naghihiramang suklay"
         },
         {
           "number": 50,
@@ -613,7 +641,8 @@
             "C": "paradox",
             "D": "criteria"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "PANACEA"
         },
         {
           "number": 51,
@@ -829,7 +858,8 @@
             "C": "If something costs a pretty penny, it is very precious.",
             "D": "If something costs a pretty penny, it is very unimportant."
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "A pretty penny"
         },
         {
           "number": 69,
@@ -841,7 +871,8 @@
             "C": "If someone comes out of their shell, they never stop being shy and withdrawn and become more friendly and sociable.",
             "D": "If someone comes in of their shell, they stop being shy and withdrawn and become more un friendly and unsociable."
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "Come out of your shell"
         },
         {
           "number": 70,
@@ -853,7 +884,8 @@
             "C": "If a person shows derring-do, they show great courage.",
             "D": "If a person shows derring-do, they show pettiness."
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "Derring-do"
         },
         {
           "number": 71,
@@ -865,7 +897,8 @@
             "C": "If you get into hot water, you get a bad day.",
             "D": "If you get into hot water, you get a burn skin."
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "Hot water"
         },
         {
           "number": 72,
@@ -877,7 +910,8 @@
             "C": "If you keep abreast of things, you stay informed about things.",
             "D": "If you keep abreast of things, you stay informed about life"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "Keep abreast"
         },
         {
           "number": 73,
@@ -889,7 +923,8 @@
             "B": "make the wrong decision",
             "D": "make a final decision"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "take the bull by the horns"
         },
         {
           "number": 74,
@@ -901,7 +936,8 @@
             "B": "sometimes does something wrong",
             "D": "never does what he wants"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "leads a dog's life"
         },
         {
           "number": 75,
@@ -913,7 +949,8 @@
             "B": "the one with a bad reputation",
             "D": "the one who never washes"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "black sheep of the family"
         },
         {
           "number": 76,
@@ -925,7 +962,8 @@
             "B": "it's going to rain",
             "D": "it's raining a little"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "it's raining cats and dogs"
         },
         {
           "number": 77,
@@ -937,7 +975,8 @@
             "B": "to make you lose money",
             "D": "to make you lose interest"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "to make a monkey out of you"
         },
         {
           "number": 78,
@@ -1613,7 +1652,8 @@
             "D": "buys"
           },
           "answer": "C",
-          "context_id": "ctx_cse_lascaux_caves"
+          "context_id": "ctx_cse_lascaux_caves",
+          "highlight": "pays heed to"
         },
         {
           "number": 133,
@@ -1652,7 +1692,8 @@
             "D": "draw"
           },
           "answer": "A",
-          "context_id": "ctx_cse_lascaux_caves"
+          "context_id": "ctx_cse_lascaux_caves",
+          "highlight": "depict"
         },
         {
           "number": 136,

@@ -17,7 +17,8 @@
             "C": "Impatient",
             "D": "Forgetful"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "diligent"
         },
         {
           "number": 2,
@@ -29,7 +30,8 @@
             "C": "Generous",
             "D": "Sufficient"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "abundant"
         },
         {
           "number": 3,
@@ -41,7 +43,8 @@
             "C": "Outdated",
             "D": "Expensive"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "obsolete"
         },
         {
           "number": 4,
@@ -53,7 +56,8 @@
             "C": "Ignore",
             "D": "Measure"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "mitigate"
         },
         {
           "number": 5,
@@ -65,7 +69,8 @@
             "C": "Noisy",
             "D": "Uncertain"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "prudent"
         },
         {
           "number": 6,
@@ -77,7 +82,8 @@
             "C": "Irrelevant",
             "D": "Hidden"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "credible"
         },
         {
           "number": 7,
@@ -89,7 +95,8 @@
             "C": "Easily distracted",
             "D": "Frequently late"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "meticulous"
         },
         {
           "number": 8,
@@ -101,7 +108,8 @@
             "C": "Lengthy",
             "D": "Uncertain"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "concise"
         },
         {
           "number": 9,
@@ -473,7 +481,8 @@
             "C": "Certain",
             "D": "Excited"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "reluctant"
         },
         {
           "number": 40,
@@ -485,7 +494,8 @@
             "C": "Temporary",
             "D": "Suggested"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "mandatory"
         },
         {
           "number": 41,
@@ -497,7 +507,8 @@
             "C": "Doubtful",
             "D": "Careless"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "reliable"
         },
         {
           "number": 42,
@@ -509,7 +520,8 @@
             "C": "Helpful",
             "D": "Calm"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "hostile"
         },
         {
           "number": 43,
@@ -521,7 +533,8 @@
             "C": "Difficult",
             "D": "Unclear"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "brief"
         },
         {
           "number": 44,
@@ -533,7 +546,8 @@
             "C": "Hidden",
             "D": "Rough"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "transparent"
         },
         {
           "number": 45,

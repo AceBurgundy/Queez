@@ -32,6 +32,8 @@ export class QuestionCard extends Component {
     this.number = questionPayload.number || 1;
     /** @type {string} */
     this.questionText = questionPayload.question || "";
+    /** @type {string} */
+    this.highlight = String(questionPayload.highlight || "").trim();
     /** @type {Record<string, string>|null} */
     this.options = questionPayload.options || null;
     /** @type {Array<Object>|null} */
@@ -356,12 +358,29 @@ export class QuestionCard extends Component {
         ${contextTemplate}
         <div class="question-card__header">
           <span class="question-card__number-badge">${this.number}</span>
-          <p id="${`q-stem-${this.number}`}" class="question-card__text">${this.questionText}</p>
+          <p id="${`q-stem-${this.number}`}" class="question-card__text">${this.renderQuestionStemContent()}</p>
         </div>
         ${imageTemplate}
         ${captionTemplate}
         ${bodyTemplate}
       </article>
+    `;
+  }
+
+  /**
+   * Safely renders question stem text, highlighting the designated target word if specified.
+   * @returns {import("lit-html").TemplateResult|string}
+   */
+  renderQuestionStemContent() {
+    if (!this.highlight || !this.questionText.includes(this.highlight)) {
+      return this.questionText;
+    }
+    /** @type {Array<string>} */
+    const parts = this.questionText.split(this.highlight);
+    return html`
+      ${parts.map((part, index) => html`
+        ${part}${index < parts.length - 1 ? html`<span class="question-card__highlight">${this.highlight}</span>` : ""}
+      `)}
     `;
   }
 }

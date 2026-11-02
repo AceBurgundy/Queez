@@ -83,8 +83,13 @@ export class QuizResultsReview extends Component {
 
         /** @type {Array<TemplateResult>} */
         const optionItemsMarkup = optionKeys.map((optionKey) => {
+          /** @type {string} */
+          const optionTextValue = typeof questionItem.options[optionKey] === "string" ? questionItem.options[optionKey] : "";
           /** @type {boolean} */
-          const isUserSelected = questionItem.userAnswer === optionKey;
+          const isUserSelected = questionItem.userAnswer === optionKey || (
+            Boolean(questionItem.userAnswer && optionTextValue) &&
+            questionItem.userAnswer.toLowerCase() === optionTextValue.toLowerCase()
+          );
           /** @type {boolean} */
           const isCorrectAnswer = questionItem.correctAnswer === optionKey;
 

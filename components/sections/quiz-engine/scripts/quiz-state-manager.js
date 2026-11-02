@@ -498,11 +498,34 @@ export function evaluateScoreTally(
       // Standard Multiple Choice
       totalQuestions += 1;
       /** @type {string} */
-      const userAnswer = String(answers[questionNumber] || "").trim().toUpperCase();
+      const rawUserAnswer = String(answers[questionNumber] || "").trim();
+      /** @type {string} */
+      let userAnswer = rawUserAnswer.toUpperCase();
       /** @type {string} */
       const correctAnswer = typeof solution === "string" ? solution : String(solution?.answer || "");
+      /** @type {Record<string, string>} */
+      const optionsMap = (questionItem && questionItem.options) || {};
+
+      // Resilient key resolution: If rawUserAnswer is not an option key, check if it matches an option value
+      if (optionsMap && !optionsMap[userAnswer]) {
+        /** @type {string|undefined} */
+        const inferredKey = Object.keys(optionsMap).find((key) => {
+          return normalizeIdentification(optionsMap[key]) === normalizeIdentification(rawUserAnswer);
+        });
+        if (inferredKey) {
+          userAnswer = inferredKey.toUpperCase();
+        }
+      }
+
+      /** @type {string} */
+      const correctOptionText = String(optionsMap[correctAnswer] || "").trim();
       /** @type {boolean} */
-      const isCorrect = Boolean(userAnswer && correctAnswer && userAnswer === correctAnswer);
+      let isCorrect = Boolean(userAnswer && correctAnswer && userAnswer === correctAnswer);
+
+      // Resilient fallback: Compare normalized user answer against normalized correct option text
+      if (!isCorrect && rawUserAnswer && correctOptionText) {
+        isCorrect = normalizeIdentification(rawUserAnswer) === normalizeIdentification(correctOptionText);
+      }
 
       if (isCorrect) {
         totalCorrect += 1;
