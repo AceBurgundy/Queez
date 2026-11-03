@@ -26,7 +26,8 @@
             "C": "I famished my stomach next time you treat me to a meal out.",
             "D": "I will bring lots of pizza, that’s a famish."
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "famish"
         },
         {
           "number": 2,
@@ -292,7 +293,8 @@
             "B": "uncertain",
             "C": "forgetful"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "inclined"
         },
         {
           "number": 24,
@@ -538,7 +540,8 @@
             "B": "got fired",
             "C": "met an accident"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "weak spot"
         },
         {
           "number": 43,
@@ -551,7 +554,7 @@
             "D": "born very talkative"
           },
           "answer": "C",
-          "highlight": "silver spoon in her mouth"
+          "highlight": "born with a silver spoon"
         },
         {
           "number": 44,
@@ -654,7 +657,8 @@
             "C": "disaster",
             "D": "assault"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "DEBACLE"
         },
         {
           "number": 52,
@@ -666,7 +670,8 @@
             "C": "tunog ng alon",
             "D": "tunog ng busina"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "LAGASAW"
         },
         {
           "number": 53,
@@ -678,7 +683,8 @@
             "C": "unawa",
             "D": "agimat"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "KABAL"
         },
         {
           "number": 54,
@@ -690,7 +696,8 @@
             "C": "handusay",
             "D": "harurot"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "HAGINIT"
         },
         {
           "number": 55,
@@ -702,7 +709,8 @@
             "C": "palaruan",
             "D": "dagat"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "DALAHIKAN"
         },
         {
           "number": 56,
@@ -714,7 +722,8 @@
             "C": "generosity",
             "D": "patience"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "FORBEARANCE"
         },
         {
           "number": 57,
@@ -726,7 +735,8 @@
             "C": "intelligence",
             "D": "sincerity"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "ALLEGIANCE"
         },
         {
           "number": 58,
@@ -738,7 +748,8 @@
             "C": "dirty",
             "D": "warm"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "GRUNGY"
         },
         {
           "number": 59,
@@ -750,7 +761,8 @@
             "C": "forbid",
             "D": "interpret"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "PROSCRIBE"
         },
         {
           "number": 60,
@@ -762,7 +774,8 @@
             "C": "hilaw",
             "D": "durog"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "HULAS"
         },
         {
           "number": 61,
@@ -774,7 +787,8 @@
             "C": "pustura",
             "D": "madalasin"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "DALAHIRA"
         },
         {
           "number": 62,
@@ -786,7 +800,8 @@
             "C": "santo",
             "D": "sulat"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "BARAL"
         },
         {
           "number": 63,
@@ -798,7 +813,8 @@
             "C": "malungkot na drama",
             "D": "makasaysayang tula"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "DULANG"
         },
         {
           "number": 64,
@@ -810,7 +826,8 @@
             "C": "iba-ibang kulay",
             "D": "buhol-buhol"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "GULA-GULANIT"
         },
         {
           "number": 65,
@@ -822,7 +839,8 @@
             "C": "pigtal",
             "D": "deposito"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "LAGAK"
         },
         {
           "number": 66,
@@ -834,7 +852,8 @@
             "C": "greasy",
             "D": "quarrelsome"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "CANTANKEROUS"
         },
         {
           "number": 67,
@@ -846,7 +865,8 @@
             "C": "disbelieve",
             "D": "investigate"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "PERAMBULATE"
         },
         {
           "number": 68,
@@ -924,7 +944,10 @@
             "D": "make a final decision"
           },
           "answer": "C",
-          "highlight": "take the bull by the horns"
+          "highlight": [
+            "take the bull by the horns",
+            "take the bull by the horns."
+          ]
         },
         {
           "number": 74,
@@ -950,7 +973,10 @@
             "D": "the one who never washes"
           },
           "answer": "B",
-          "highlight": "black sheep of the family"
+          "highlight": [
+            "black sheep of the family",
+            "black sheep of the family."
+          ]
         },
         {
           "number": 76,
@@ -963,7 +989,10 @@
             "D": "it's raining a little"
           },
           "answer": "C",
-          "highlight": "it's raining cats and dogs"
+          "highlight": [
+            "raining cats and dogs",
+            "it's raining cats and dogs."
+          ]
         },
         {
           "number": 77,
@@ -976,7 +1005,10 @@
             "D": "to make you lose interest"
           },
           "answer": "A",
-          "highlight": "to make a monkey out of you"
+          "highlight": [
+            "to make a monkey out of you",
+            "to make a monkey out of you."
+          ]
         },
         {
           "number": 78,
@@ -1099,7 +1131,8 @@
             "C": "Hideout",
             "D": "Reflection"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "Genuine : Authentic : : Mirage : _____"
         },
         {
           "number": 89,
@@ -1112,7 +1145,8 @@
             "D": "turpitude : introvert",
             "E": "injustice : lawyer"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "SECLUSION : HERMIT"
         },
         {
           "number": 90,
@@ -1125,7 +1159,8 @@
             "D": "anomaly : plausibility",
             "E": "cynic : melancholy"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "philanthropist : munificence"
         },
         {
           "number": 91,
@@ -1137,7 +1172,8 @@
             "C": "magical : impressive",
             "D": "steep : shallow"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "Vague : Nebulous : :"
         },
         {
           "number": 92,
@@ -1150,7 +1186,8 @@
             "D": "disallow : reject",
             "E": "distraught : calm"
           },
-          "answer": "E"
+          "answer": "E",
+          "highlight": "Diaphanous : Opaque"
         },
         {
           "number": 93,
@@ -1163,7 +1200,8 @@
             "D": "nail : hammer",
             "E": "fence : backyard"
           },
-          "answer": "E"
+          "answer": "E",
+          "highlight": "FRAME : PICTURE"
         },
         {
           "number": 94,
@@ -1176,7 +1214,8 @@
             "D": "think : relate",
             "E": "walk : run"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "SEARCH : FIND"
         },
         {
           "number": 95,
@@ -1189,7 +1228,8 @@
             "D": "supermarket : discount store",
             "E": "toys : games"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "PHARMACY : DRUGS"
         },
         {
           "number": 96,
@@ -1202,7 +1242,8 @@
             "D": "chapter : verse",
             "E": "cotton : bale"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "LAYER : TIER"
         },
         {
           "number": 97,
@@ -1215,7 +1256,8 @@
             "D": "autumn : harvest",
             "E": "agrarian : generous"
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "METROPOLITAN : URBAN"
         },
         {
           "number": 98,
@@ -1228,7 +1270,8 @@
             "D": "judge : courthouse",
             "E": "author : book"
           },
-          "answer": "D"
+          "answer": "D",
+          "highlight": "TEACHER : SCHOOL"
         },
         {
           "number": 99,
@@ -1241,7 +1284,8 @@
             "D": "boat : ocean",
             "E": "deck : house"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "CAR : GASOLINE"
         },
         {
           "number": 100,
@@ -1254,7 +1298,8 @@
             "D": "juggle : bounce",
             "E": "rain : drizzle"
           },
-          "answer": "E"
+          "answer": "E",
+          "highlight": "RUN: JOG"
         },
         {
           "number": 101,
@@ -1267,7 +1312,8 @@
             "D": "nose : face",
             "E": "old : new"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "RADIO : TELEVISION"
         },
         {
           "number": 102,
@@ -1280,7 +1326,8 @@
             "D": "mention : opinion",
             "E": "implode : building"
           },
-          "answer": "B"
+          "answer": "B",
+          "highlight": "TAILOR : SUIT"
         },
         {
           "number": 103,
@@ -1498,7 +1545,8 @@
             "C": "Forks, Washington",
             "D": "Twilight"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "The Twilight Saga"
         },
         {
           "number": 121,
@@ -1510,7 +1558,8 @@
             "C": "Confusion",
             "D": "Grief"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "Higher than the Rooftop"
         },
         {
           "number": 122,
@@ -1652,8 +1701,7 @@
             "D": "buys"
           },
           "answer": "C",
-          "context_id": "ctx_cse_lascaux_caves",
-          "highlight": "pays heed to"
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 133,
@@ -1692,8 +1740,7 @@
             "D": "draw"
           },
           "answer": "A",
-          "context_id": "ctx_cse_lascaux_caves",
-          "highlight": "depict"
+          "context_id": "ctx_cse_lascaux_caves"
         },
         {
           "number": 136,
@@ -1732,7 +1779,8 @@
             "D": "light"
           },
           "answer": "D",
-          "context_id": "ctx_cse_lascaux_caves"
+          "context_id": "ctx_cse_lascaux_caves",
+          "highlight": "EXCEPT"
         },
         {
           "number": 139,
@@ -4296,7 +4344,8 @@
             "B": "trade",
             "D": "commerce"
           },
-          "answer": "C"
+          "answer": "C",
+          "highlight": "primary social economic force?"
         },
         {
           "number": 342,

@@ -32,8 +32,20 @@ export class QuestionCard extends Component {
     this.number = questionPayload.number || 1;
     /** @type {string} */
     this.questionText = questionPayload.question || "";
+    /** @type {Array<string>} */
+    this.highlightTokens = [];
+    if (Array.isArray(questionPayload.highlight)) {
+      this.highlightTokens = questionPayload.highlight
+        .map((token) => String(token || "").trim())
+        .filter((token) => token.length > 0);
+    } else if (questionPayload.highlight && typeof questionPayload.highlight === "string") {
+      const trimmed = questionPayload.highlight.trim();
+      if (trimmed.length > 0) {
+        this.highlightTokens = [trimmed];
+      }
+    }
     /** @type {string} */
-    this.highlight = String(questionPayload.highlight || "").trim();
+    this.highlight = this.highlightTokens.join(", ");
     /** @type {Record<string, string>|null} */
     this.options = questionPayload.options || null;
     /** @type {Array<Object>|null} */
@@ -368,19 +380,42 @@ export class QuestionCard extends Component {
   }
 
   /**
-   * Safely renders question stem text, highlighting the designated target word if specified.
+   * Safely renders question stem text, highlighting designated target words as bold text if specified.
    * @returns {import("lit-html").TemplateResult|string}
    */
   renderQuestionStemContent() {
-    if (!this.highlight || !this.questionText.includes(this.highlight)) {
+    if (!this.highlightTokens || this.highlightTokens.length === 0 || !this.questionText) {
       return this.questionText;
     }
+
     /** @type {Array<string>} */
-    const parts = this.questionText.split(this.highlight);
+    const escapedTokens = this.highlightTokens
+      .map((token) => token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+      .sort((firstToken, secondToken) => secondToken.length - firstToken.length);
+
+    if (escapedTokens.length === 0) {
+      return this.questionText;
+    }
+
+    /** @type {RegExp} */
+    const highlightPattern = new RegExp(`(${escapedTokens.join("|")})`, "gi");
+
+    /** @type {Array<string>} */
+    const textSegments = this.questionText.split(highlightPattern);
+
+    if (textSegments.length <= 1) {
+      return this.questionText;
+    }
+
     return html`
-      ${parts.map((part, index) => html`
-        ${part}${index < parts.length - 1 ? html`<span class="question-card__highlight">${this.highlight}</span>` : ""}
-      `)}
+      ${textSegments.map((segment) => {
+        const isMatched = this.highlightTokens.some(
+          (token) => token.toLowerCase() === segment.toLowerCase()
+        );
+        return isMatched
+          ? html`<strong class="question-card__highlight">${segment}</strong>`
+          : segment;
+      })}
     `;
   }
 }

@@ -29,6 +29,7 @@
  * @property {Array<string>} [accepted_answers] - Optional accepted answer variants.
  * @property {string} [caption] - Optional image subtext or caption.
  * @property {string} [explanation] - Optional step-by-step solution derivation.
+ * @property {string|Array<string>} [highlight] - Optional target word or list of words to be rendered bold in the question stem.
  */
 
 /**
@@ -267,7 +268,8 @@ export const adaptQuizData = (portableDocument, dataPath = "", tabDefinitions = 
         ...(resolvedAnswerImage ? { answer_image: resolvedAnswerImage } : {}),
         ...(boundContext ? { context: boundContext } : {}),
         ...(sourceQuestion.caption ? { caption: sourceQuestion.caption } : {}),
-        ...(sourceQuestion.explanation ? { explanation: sourceQuestion.explanation } : {})
+        ...(sourceQuestion.explanation ? { explanation: sourceQuestion.explanation } : {}),
+        ...(sourceQuestion.highlight ? { highlight: sourceQuestion.highlight } : {})
       });
     }
   }

@@ -559,7 +559,8 @@
             "C": "The applicant was properly to follow the instructions.",
             "D": "The applicant properness followed the instructions."
           },
-          "answer": "A"
+          "answer": "A",
+          "highlight": "properly"
         }
       ],
       "description": "Vocabulary, grammar, sentence completion, reading comprehension, and paragraph organization."
